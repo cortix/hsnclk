@@ -770,3 +770,4 @@ think to fence off a particular distance
 * Tom didn't mean to hurt Mary's feelings. - Tom'un niyeti Mary'nin hislerini incitmek değildi.
 401. **chili :** kırmızı biber *very spicy/çok acı*
 402. **peper :** biber
+403. **novice :** acemi/çaylak
