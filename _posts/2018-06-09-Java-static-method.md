@@ -166,8 +166,10 @@ Böylece, statik alanlar ve sınıfların metotları, statik olmayan alanlara ve
 
 JDK 8'den önce HotSpot JVM, kalıcı Nesil(*Permanent  Generation*) olarak adlandırılan üçüncü bir nesle(*third generation*) sahipti. Statik yöntemler (aslında tüm yöntemler) ve bunun yanısıra statik değişkenler, heap alanına bitişik(*contiguous*) olan ``Permgen`` adında bir alanda tutulurdu. Kısaca bahsetmem gerekirse, bu alanda sınıf yöntem ve değişkenlerinin yanısıra, sınıfların JVM iç gösterimi(*internal representation*) ve meta verileri ve *interned strings*'ler yer almaktaydı. JDK 8 den sonra bu generation'ının yerini ``metaspace`` almıştır. ``Permgen``den farklı olarak bu alan Java Heap ile bitişik değildir(*Not contiguous*). Metaspace "native memory" den ayrılmıştır ve ``metaspace`` için maksimum alan kullanılabilir sistem hafızasıdır. Fakat bu ``MaxMetaspaceSize`` JVM seçeneği ile sınırlandırılabilir. Yalnız bu hafıza ``Permgen``de sınırlı idi.
 
+Referanslar:
 
-[ref1](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
-[ref2](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
-[ref3](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
-[ref4](https://www.coursera.org/learn/java-programming-design-principles/)
+1. [https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
+2. [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
+3. [https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
+4. [https://www.coursera.org/learn/java-programming-design-principles/](https://www.coursera.org/learn/java-programming-design-principles/)
+5. [OCA/OCP Java SE 7 Programmer I & II Study Guide (Exams 1Z0-803 & 1Z0-804)](https://www.amazon.com/Programmer-Study-1Z0-803-1Z0-804-Certification/dp/0071772006)
