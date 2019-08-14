@@ -25,7 +25,7 @@ toc_label: "SAYFA İÇERİĞİ"
 {: .notice}
 
 
-Birçok yerde ``static`` değiştiricisiyle karşılaşmışızdır. Hatta bu anahtar kelimeyi hem metodlar için hemde değişkenler için kullanmışızdır.
+Birçok yerde ``static`` değiştiricisiyle karşılaşmışızdır. Hatta bu anahtar kelimeyi hem metodlar için hem de değişkenler için kullanıyoruz.
 
 * Peki bu ne anlama geliyor?
 * Hangi durumlarda static anahtar kelimesini kullanmamız gerekir?
@@ -34,7 +34,7 @@ Birçok yerde ``static`` değiştiricisiyle karşılaşmışızdır. Hatta bu an
 ## Değişkenler
 
 
-**Dinamik Değişkenler-Instance Variables (Anlık değişkenler/Statik Olmayan Alanlar):** Aynı sınıf şablonundan birdizi nesne oluşturulduğunda, bunların her biri, ayrı ayrı kendi dinamik değişkenlerine sahiptir. Teknik olarak, nesneler, kendi durumlarını "statik olmayan alanlara", yani ``statik`` anahtar kelime olmadan beyan edilen alanlara depolar. Statik olmayan alanlar da ``Instance Variables/dinamik değişkenler`` olarak bilinir. Çünkü tuttuğu değerler bir sınıfın her örneğine, bir başka değişle her nesneye özgüdür;
+**Dinamik Değişkenler-Instance Variables (Anlık değişkenler/Statik Olmayan Alanlar):** Aynı sınıf şablonundan bir dizi nesne oluşturulduğunda, bunların her biri, ayrı ayrı kendi dinamik değişkenlerine sahiptir. Teknik olarak, nesneler, kendi durumlarını "statik olmayan alanlara", yani ``statik`` anahtar kelime olmadan beyan edilen alanlara depolar. Statik olmayan alanlar da ``Instance Variables/dinamik değişkenler`` olarak bilinir. Çünkü tuttuğu değerler bir sınıfın her örneğine, bir başka deyişle her nesneye özgüdür;
 
 **Sınıf Değişkenleri-Class Variables (Statik Alanlar):** Bazen, tüm nesneler için ortak olan değişkenlere sahip olmak istersiniz. Bu statik anahtar kelimesi ile gerçekleştirilir. Beyanında ``statik`` değiştiriciye sahip olan alanlara statik alanlar(*static fields*) veya sınıf değişkenleri(*class variables*) denir. Herhangi bir nesneden ziyade sınıfla ilişkilendirilirler. Sınıfın her örneği, bellekte sabit bir konumda bulunan bir sınıf değişkenini paylaşır. Herhangi bir nesne, bir sınıf değişkeninin değerini değiştirebilir, ancak sınıf değişkenleri, sınıfın bir örneğini oluşturmadan da manipüle edilebilir. Bu, derleyiciye, sınıfın kaç kez örneklendirildiğine bakılmaksızın, bu değişkenin tam olarak varlığını sürdüren bir kopyası olduğunu söyler. Buna ek olarak ``final`` anahtar kelimesinin eklenmesi değişkenin değerinin değişmeyeceği anlamına gelir.
 
@@ -49,7 +49,38 @@ static final double PI = 3.141592653589793;
 {% endhighlight %}
 
 **Yerel Değişkenler - Local Variables :**
-Bir nesne kendi durumunu *fields* larda nasıl sakladığı gibi, bir yöntem geçici durumunu yerel değişkenlerde saklar. Yerel bir değişkenin deklarasyon syntax'ı, bir field'ın deklarasyonuna benzerdir (örneğin, int num = 0;). Yerel olarak bir değişken belirten özel bir anahtar kelime yoktur; bu belirleme tamamen değişkenin beyan edildiği yerden yani bir yöntemin açılış ve kapanış parantezleri arasında gelir. Bu nedenle, yerel değişkenler yalnızca bildirildikleri yöntemlerle görülebilir; sınıfın geri kalanından erişilemezler.
+Bir nesne kendi durumunu *fields* larda nasıl sakladığı gibi, bir yöntem geçici durumunu yerel değişkenlerde saklar. Yerel bir değişkenin deklarasyon syntax'ı, bir field'ın deklarasyonuna benzerdir (örneğin, int num = 0;). Yerel olarak bir değişken belirten özel bir anahtar kelime yoktur; bu belirleme tamamen değişkenin beyan edildiği yerden yani bir yöntemin açılış ve kapanış parantezleri arasında gelir. Bu nedenle, yerel değişkenler yalnızca bildirildikleri yöntemlerle görülebilir; sınıfın geri kalanından erişilemezler. Yani sadece bir metodun içinde deklare edildiklerinden, onlara erişim de ilgili metod üzerinden olur.   
+
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=14&heapPrimitives=nevernest&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+
+Yukarıdaki [örnekte](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ne demek istediğimi sanırım daha net anlatabilirim. Dikkat edilecek olursa **InnerClas**'ın içinde iki tane **x** değişkeni var.  Bunlardan biri void *deneGor()* metoduna ait olan **x** değişkeni(yani yerel değişken), diğeri ise bir static olmayan dinamik bir değişken(yani instance variable). Ben burada *System.out.println(x)* yaparak x'i yazdırmak istiyorum.. Peki hangi **x** değişkenini yazdıracak dersiniz? Kod üzerinde *Back*, *Forward* butonlarını kullanarak kodun nasıl çalıştığını görebilirsiniz. Aslında burada, *deneGor* metodunun içindeki **x** yerel değişkenini ekrana basacaktır. Kısaca yaptığımız adımları gözden geçirelim.
+
+- ilk önce main metod içinde InnerClas sınıfının bir nesnesini yarattık.
+- Sonra bu nesneyi **c** değişkenine atadık.
+- **c** değişkeni sayesinde InnerClas içindeki metod ve dinamik değişkenlere artık ulaşabiliriz.
+- görüldüğü üzere **c** değişkeni *deneGor* metodunu çağırdı,
+- akabinde *deneGor* metodu ise kendi içindeki yerel değişkeni(local variable) olan **x**'i ekrana bastı.
+
+Eğer *System.out.println(x)* yerine *System.out.println(this.x)* yazmış olsaydık, yerel değişken(local variable) yerine ekrana instance variable olan x'i basacaktı. Java'da her zaman **this** anahtar sözcüğü instance variable'ı, yani nesnenin değişkenlerini niteler. Bu yüzden tanımları bilmekte yarar var. *this* anahtar sözcüğü kullanıldığında ise [sonuç](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=15&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) aşağıdaki gibi olacaktır.
+
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=15&heapPrimitives=nevernest&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+Yerel değişkenler(local variables) ile ilgili bir diğer önemli nokta ise şudur. Yerel değişkenleri tanımlarken erişim değiştiriciler(yani access modifiers) kullanamayız(final dışında). Access Modifiers'ları hatırlayacak olursak;
+
+■ public
+■ protected
+■ default
+■ private
+■ final
+
+<figure >
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09/illegal_start.png" alt="Illegal Start">
+  <figcaption>Görsel Jing'de hazırlanmıştır.</figcaption>
+</figure>
+
+Yukarıdaki görselde yerek değişkene bir erişim değiştirici uygulamaya çalıştım. Görüldüğü gibi derleme hatası aldım. Koda şu [linkten](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20private%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ulaşabilirsiniz.
+
 
 **Parametreler - Parameters :**
 Bir yönteme veya oluşturucuya(*constructor*) bilgi aktarmak için kullanılan argümanlar parametre olarak adlandırılır. Bir yöntem veya *constructor* için deklarasyon, bu yöntem veya *constructor* için bağımsız değişkenlerin sayısını ve türünü bildirir.
@@ -62,9 +93,10 @@ public String methodA(int num) {
 
 Yukarıdaki örnektede görüleceği üzere methodA'yı kullanabilmek için int tipinde bir sayıya ihtihacınız olduğu anlamına geliyor. Yani bu şartı sağlamadan bu metodu kullanamazsınız. Aksi halde derleme hatası ile karşılaşırsınız. Unutulmaması gereken en önemli şey, parametrelerin her zaman "alanlar(*fields*)" olarak değil "değişkenler(*variables*)" olarak sınıflandırılmasıdır.
 
+
 ## Static Anahtar Kelimesinin Ne Anlama Geldiğini Bir Örnekte İnceleyelim
 
-Java ile yazılmış en basit programda bile, isteğimiz dışında `static` ifadesini kullandığımız oluyor. Bunu devamlı kullandığımız main metodundan hatırlayabiliriz. ``main`` metodu ile ilgili detaylı bilgi için şu [linkteki](/java/Java-main-method/) yazımı okuyabilirsiniz.
+Java ile yazılmış en basit kod içinde bile, isteğimiz dışında bir `static` ifadesini kullandığımız oluyor. Bunu devamlı kullandığımız main metodundan hatırlayabiliriz. ``main`` metodu ile ilgili detaylı bilgi için şu [linkteki](/java/Java-main-method/) yazımı okuyabilirsiniz.
 
 {% highlight java %}
 public static void main(String[] args) {
@@ -73,7 +105,7 @@ public static void main(String[] args) {
 {% endhighlight %}
 
 
-Bu ifadeyi metod tanımlarken kullandığımızda, ilgili yöntemin genel anlamıyla bulunduğu sınıfa ait olduğu ve belirli başka bir örnekte olmadığı anlamına gelir. Bunun ne anlama geldiğini daha yakından görmek için, önce ilgili sınıfın her instance'ı için bir kopya olan statik olmayan(*non-static*) alanlara bakalım. Örnek olarak, bankacılık yazılımı yazdığınızı varsayalım. Bir banka hesabı için bir sınıf oluşturmaya ve alanları(*fields*), hesap bakiyesini ve hesap numarasını bildirmeye karar verdiniz.
+Bu ifadeyi metod tanımlarken kullandığımızda, ilgili yöntemin genel anlamıyla bulunduğu sınıfa ait olduğu ve belirli başka bir örnekte olmadığı anlamına gelir. Bunun ne anlama geldiğini daha yakından görmek için, önce ilgili sınıfın her bir instance'ı için bir kopya olan statik olmayan(*non-static*) alanlara bakalım. Örnek olarak, bankacılık ile ilgili bir yazılım hazırladığınızı varsayalım. Bir banka hesabı için bir sınıf oluşturmaya ve alanları(*fields*) için, hesap bakiyesi ve hesap numarası bildirmeye karar verdiniz.
 
 * non-static(instance) = her nesnede(in each object)
 
@@ -85,7 +117,7 @@ class BankaHesabi{
 }
 {% endhighlight %}
 
-Her bir farklı banka hesabının kendi hesap numarası ve kendi bakiyesi olması gerekmektedir. Bankanızda, bu sınıfın üç örneğini, veri depolamada üç hesap için oluşturduysanız, böyle görünebilir. Burada her bir örneğin kendi hesap numarası ve bakiyesinin nasıl olduğunu görebiliriz. Bu alanlar statik değildir ve her nesnede oluşurlar.
+Her bir farklı banka hesabının kendi hesap numarası ve kendi bakiyesi olması gerekmektedir. Bankanızda, bu sınıfın üç örneğini, veri depolamada üç hesap için oluşturduysanız, böyle görünebilir. Burada her bir örneğin kendi hesap numarası ve bakiyesinin nasıl olduğunu görebiliriz. **Bu alanlar statik değildir ve her nesne için ayrı ayrı oluşur.**
 
 | Kişiler | Hesap Numarası | Bakiye |
 |:--------|:-------:|--------:|
@@ -102,11 +134,21 @@ class BankaHesabi{
 }
 {% endhighlight %}
 
-Şimdi, bu yazılımı yazarken, atama yapmak için bir sonraki hesap numarasını takip etmek istediğinizi varsayalım. Böylece yeni bir hesap oluşturduğunuzda, ona hangi numarayı vereceğinizi bileceksiniz. Eklediğimiz alan yukarıda gösterildiği gibi olursa, bu sonraki hesap numarası için oluşturduğumuz örnek beklediğimiz gibi olmayabilir. Aşağıdaki kodu görüntüleyemiyorsanız lütfen [linke](https://goo.gl/x4udgN) tıklayınız.
+Şimdi, bu kodu yazarken, bir değişkende atama yapmak için bir önceki hesap numarasını takip etmek istediğinizi varsayalım. Böylece yeni bir hesap oluşturduğunuzda, ona hangi numarayı vereceğinizi bileceksiniz. Eklediğimiz alan yukarıda gösterildiği gibi olursa, bu sonraki hesap numarası için oluşturduğumuz örnek beklediğimiz gibi olmayabilir. Aşağıdaki kodu görüntüleyemiyorsanız lütfen [linke](https://goo.gl/x4udgN) tıklayınız.
 
 <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public%20class%20Banka%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20BankaHesabi%20a1%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%20%20BankaHesabi%20a2%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%20%20BankaHesabi%20a3%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20static%20class%20BankaHesabi%7B%0A%20%20%20%20%20%20int%20hesapNum%3B%0A%20%20%20%20%20%20double%20bakiye%3B%0A%20%20%20%20%20%20int%20sonHesapNum%3B%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20BankaHesabi%28%29%7B%0A%20%20%20%20%20%20%20%20hesapNum%20%3D%20sonHesapNum%3B%0A%20%20%20%20%20%20%20%20sonHesapNum%2B%2B%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=25&heapPrimitives=nevernest&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 Yukarıdaki kod bloğunda dikkat etmemiz gereken iki şey var. Birincisi yukarıda oluşturduğumuz *BankaHesabı* sınıfının önünde bulunan ``static`` anahtar kelimesidir. Burada sınıfı bu şekilde değiştirmemin sebebi hem static sınıfların kullanımını göstermek hemde static bir ifadenin bazı kurallarından bahsetmek olacaktır.
+
+Mesela bir kural şudur. Yukarıdaki gibi bir örnekte, inner olarak oluşturduğumuz sınıfı non-static yapamayız. Aksi halde şu şekilde bir hata alabiliriz.
+
+**Error: non-static variable this cannot be referenced from a static context**
+
+Çünkü main metodu static bir metodtur. Static bir durumda static değişkenler kullanmak zorundayız. Bu Java'nın kurallarından sadece biridir. Tabiki amacımız bu kuralları derinlemesine işlemek değil. Static ifadesiyle alakalı olduğu için değinmek istedim. Örneğe geri dönecek olursak, oluşturulan her bir nesne için instance variable'lar hep sıfırdan başlamaktadır. Ama biz sonHesapNum değişkeninin bir önceki hesap numarasını takip etmek istediğini ve onu baz alarak bir atama yapmasını sağlayacaktık. O zaman sonHesapNum değişkeni önüne static anahtarını koyabiliriz.
+
+<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public%20class%20Banka%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20BankaHesabi%20a1%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%20%20BankaHesabi%20a2%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%20%20BankaHesabi%20a3%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20static%20class%20BankaHesabi%7B%0A%20%20%20%20%20%20int%20hesapNum%3B%0A%20%20%20%20%20%20double%20bakiye%3B%0A%20%20%20%20%20%20static%20int%20sonHesapNum%3B%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20BankaHesabi%28%29%7B%0A%20%20%20%20%20%20%20%20hesapNum%20%3D%20sonHesapNum%3B%0A%20%20%20%20%20%20%20%20sonHesapNum%2B%2B%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=26&heapPrimitives=nevernest&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+Dikkat edilecek olursa **hesapNum** her yeni nesne için farklı bir rakam olarak gözükmektedir. *static* anahtarı ilgili değişkeni nesne değişkeni durumundan sınıf değişkeni durumuna geçirmiştir. Yani değişken nesneye bağlı değil, sınıfa bağlıdır. Ve ilgili sınıftan oluşturulan bütün nesneler için ortak bir değişken haline gelmiştir. Yukarıdaki [örnek](http://www.pythontutor.com/visualize.html#code=public%20class%20Banka%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20BankaHesabi%20a1%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%20%20BankaHesabi%20a2%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%20%20BankaHesabi%20a3%20%3D%20new%20BankaHesabi%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20static%20class%20BankaHesabi%7B%0A%20%20%20%20%20%20int%20hesapNum%3B%0A%20%20%20%20%20%20double%20bakiye%3B%0A%20%20%20%20%20%20static%20int%20sonHesapNum%3B%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20BankaHesabi%28%29%7B%0A%20%20%20%20%20%20%20%20hesapNum%20%3D%20sonHesapNum%3B%0A%20%20%20%20%20%20%20%20sonHesapNum%2B%2B%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=26&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) üzerinden gidecek olursak, ilk nesneyi oluşturduğumuzda **sonHesapNum** değişkenini bir arttırmıştık. İkinci nesnemizi oluşturduğumuzda ise bu değişken bir önceki hali ile yani bir arttırılmış hali ile yeni nesneyi ilklendirir. Ne demek istediğimi daha iyi anlamak için yukarıdaki kodu *Back* ve *Forward* butonlarını kullanarak ilerletmeye çalışın. **sonHesapNum** değişkeninin her bir nesne için sabit(yani her nesne oluşumunda sıfırlanmadığını) kaldığını göreceksiniz.
 
 ## Statik Yöntem ve Değişkenler ile Statik Olmayan Değişken ve Yöntemlerin Arasındaki Farklılıklar
 
