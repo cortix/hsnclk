@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise","default"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise","default"
 
 # Site Settings
 locale                   : "en-US"
@@ -130,6 +130,8 @@ author:
   weibo            :
   xing             :
   youtube          : https://www.youtube.com/channel/UCFjkZMWteNEzFmLcZ-jU11g?view_as=subscriber # "https://youtube.com/c/MichaelRoseDesign"
+  goodreads        : https://www.goodreads.com/hasancelik
+
 
 
 # Reading Files
