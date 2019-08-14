@@ -37,3 +37,7 @@ Phrasal Verbs
 * The firm built a model of the laboratory, so that the lab's future users could do a walk-through and make suggestions.
 13. **walk through:** to practise something, for example a performance, without an audience being present: Bir seyirci olmaksızın, örneğin bir performans uygulamak için: yani üzerinden geçmek, şöyle bir incelemek, inceleyerek gezmek
 * Let's just walk through the scene one more time.
+14. **set on fire:** yakmak, alevlendirmek
+* you set me on fire : beni yaktın.
+15. **come over:** ziyaret etmek
+* Would you like to come over ?
