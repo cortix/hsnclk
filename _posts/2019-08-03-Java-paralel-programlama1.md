@@ -35,35 +35,35 @@ Bir algoritma bir işlem sırasına sahiptir. Bunları **S1, S2, S3, S4** şekli
 Basit bir örnek ile başlamak gerekirse, integer içeren bir dizi olduğunu varsayalım. Amacımız array'in sahip olduğu elementlerin toplamını hesaplamak olsun. Şimdi bunu yapmanın bir yolu, onu iki yarıya bölmek ve alt yarı ile üst yarıdaki toplamı ayrı ayrı hesaplamak. Böylece ``SUM1 = alt yarının toplamı``, ``SUM2 = üst yarı toplamı`` olabilir. Sonra bu ikisini birleştirerek son toplamı alabiliriz.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/async-finish00.jpeg" alt="async-finish example">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish00.jpeg" alt="async-finish example">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Ektra bir işlem yapmaz isek, yukarıdaki adımlar sıralı bir şekilde ``sequential algorithm`` kullanılarak yapılır. Peki bunu paralel olarak nasıl yapabiliriz? Burada kullanacağımız notasyon asenkron(``async``) denilen bu kelimedir. Async'ın amacı, bir statement tarafından takip edilen `async` notasyonuna sahip ifadenin zaman uyumsuz olarak çalışması gerektiğidir. Görüleceği üzere SUM1 async olarak işaretlenmiştir. Bunun anlamı, bu hesaplama, SUM1(alt yarının toplamı), takip eden işlem ne olursa olsun asenkron olarak devam etmelidir. ASYNC olarak işaretli SUM1 işlemi, SUM2 işleminden önce de gerçekleşebilir, sonra da gerçekleşebilir, hatta paralel olarak da gerçekleşebilir.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/async-finish0.jpeg" alt="async-finish example">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish0.jpeg" alt="async-finish example">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Şimdi farzedelim ki bu iki işlem paralel olarak ilerliyor ve sonrasında SUM2'yi hesaplıyoruz; buradaki kilit nokta, ikisini bir araya getirmeden, yani SUM1 ve SUM2 yi toplamadan önce, bu "zaman uyumsuz(async)" görevin nihayete erip SUM1 değerini elde etmemiz gerekmektedir. Tam da bu noktada bu işlemi gerçekleştirebilmek için bitiş(``finish``) adında başka bir notasyonumuz vardır.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/async-finish1.jpeg" alt="async-finish example">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish1.jpeg" alt="async-finish example">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Bu yüzden finish'in arkasındaki temel fikir, çalışan bir dizi asenkron görev alabileceğiniz bir iş kapsamıdır. Görüleceği üzere async notasyonu sadece SUM1'i kapsarken, finish notasyonu hem SUM1 hem de SUM2'yi kapsamaktadır. Aslında finish scope'unun(kapsamının) sonunda bütün görevlerin tamamlanacağını garanti edersinir. Yani finish scope'unun içindeki asekron görevler dahil bütün görevler bitmeden bir sonraki işlem ele alınmaz. Artık SUM1 işleminin finish notasyonundan sonra uygun olacağından emin olabiliriz. finish notasyonundan sonra SUM1 ve SUM2 için toplama işlemi gerçekleştirebiliriz.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/async-finish2.jpeg" alt="async-finish example">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish2.jpeg" alt="async-finish example">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Yukarıdaki resimde de görüleceği üzere, eğer pentium dual bir işlemciye sahipseniz, işlemlerden biri(yani SUM1) core0 çekirdeğinde, işlemlerden diğeri(yani SUM2) core1 çekirdeğinde gerçekleşecektir. Dolayısıyla, buradaki prensibe bakarsanız, herhangi bir sıralı algoritmayı alabilir ve paralellik için fırsat gördüğümüz her yerde asyncs ile önek ekleyebiliriz.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/async-finish3.jpeg" alt="async-finish example">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish3.jpeg" alt="async-finish example">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 

@@ -31,14 +31,14 @@ toc_label: "SAYFA İÇERİĞİ"
 Şu ana kadar gördüklerimizi özetlemek gerekirse, aşağıdaki görsel yeterli olacaktır.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/async-finish4.jpeg" alt="async-finish example">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/async-finish4.jpeg" alt="async-finish example">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Aslında bu bölümde bunun gibi paralel programları modellemek için hesaplama grafiği(computation graph) adı verilen bir kavramı göstermek istiyorum.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/comp_graph1.jpeg" alt="computation graph example">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph1.jpeg" alt="computation graph example">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
@@ -66,14 +66,14 @@ Bu üç koşul geçerli olduğunda, erişimlerin sırası belirleyici değildir 
 Hesaplama grafiklerinin bir başka ilginç özelliği de, paralel programınızın performansını düşünmek için onları kullanabilmemizdir. Varsayalım ki, S1 ve S4, 1 birim zaman alacak, S3 ve S2 ise 10 birim zaman alacak iş yapsın.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/comp_graph2.jpeg" alt="computation graph performans ölçümü">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph2.jpeg" alt="computation graph performans ölçümü">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Performansla ilgili olarak çalışacağımız iki önemli ölçüm bulunmaktadır. İlki **WORK** olarak adlandırılır. Aslında bu sadece tüm düğümlerin yürütme zamanlarının toplamıdır. Yani bu durumda, 1 artı 10 artı 10 artı 1 olur. Yani 22. Gerçekten önemli olan başka bir ölçüm ise **SPAN** olarak adlandırılıyor. Ve bu en uzun yolun uzunluğudur. Programcılar ayrıca bunu *kritik yol uzunluğu* olarak da adlandırırlar.
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/comp_graph3.jpeg" alt="span : kritik yol uzunluğu">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph3.jpeg" alt="span : kritik yol uzunluğu">
   <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
