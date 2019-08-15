@@ -77,7 +77,7 @@ Yerel değişkenler(local variables) ile ilgili bir diğer önemli nokta ise şu
 ■ final
 
 <figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09/illegal_start.png" alt="Illegal Start">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/illegal_start.png" alt="Illegal Start">
   <figcaption>Görsel Jing'de hazırlanmıştır.</figcaption>
 </figure>
 
