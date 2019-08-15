@@ -46,10 +46,10 @@ Aslında bu bölümde bunun gibi paralel programları modellemek için hesaplama
 
 fork–join programları için, kenarları üç bölüme ayırmak yararlı olur:
 
-- Bir görevdeki adımların sırasını yakalayan **continue edges**.
-- Child task'ların ilk adımına bir fork işlemi bağlayan **fork edges**.
-- Bir görevin son adımını o görevdeki tüm *join* işlemlerine bağlayan **join edges**.
-Dolayısıyla, bu üç çeşit kenarla, bir paralel programın çalışmasını modelleyebileceğimizi görüyoruz. Bu yönlendirilmiş grafiğin her tepe noktası veya düğümü, bir adım olarak adlandırdığımız bir ardışık alt hesaplamayı temsil eder. Ve her edge bir sıralama kısıtlamasına karşılık gelir. Eğer fork ve join olmadan normal bir sıralı programa sahip olsaydınız, grafiğiniz sadece continue edge lere sahip düz bir çizgi olacaktı.
+- Bir görevdeki adımların sırasını yakalayan **continue edges**'ler',
+- Child task'ların ilk adımına bir fork işlemi bağlayan **fork edges**'ler'.
+- Bir görevin son adımını o görevdeki tüm *join* işlemlerine bağlayan **join edges**'ler'.
+Dolayısıyla, bu üç çeşit kenarla, bir paralel programın çalışmasını modelleyebileceğimizi görüyoruz. Bu yönlendirilmiş grafiğin her tepe noktası veya düğümü, bir adım olarak adlandırdığımız bir ardışık alt hesaplamayı temsil eder. Ve her edge bir sıralama kısıtlamasına karşılık gelir. Eğer fork ve join olmadan normal bir sıralı programa sahip olsaydınız, grafiğiniz sadece continue edge'lere sahip düz bir çizgi olurdu.
 
 ## Data Race Nedir?
 İş parçacığı Çözümleyicisi, çok iş parçacıklı bir işlem yürütülürken oluşan veri yarışlarını algılar. Bir veri yarışması şu durumlarda gerçekleşir:
@@ -58,7 +58,7 @@ Dolayısıyla, bu üç çeşit kenarla, bir paralel programın çalışmasını 
 - erişimlerin en az biri yazmak içindir ve
 - iş parçacığı bu belleğe erişimlerini denetlemek için özel kilitler kullanmaz.
 
-Bu üç koşul geçerli olduğunda, erişimlerin sırası belirleyici değildir ve hesaplama, o sıraya bağlı olarak çalıştırmadan farklı sonuçlar verebilir. Bazı veri yarışları iyi huylu olabilir (örneğin, hafıza erişimi meşgul beklemek için kullanıldığında), ancak programdaki birçok veri yarışları hatalıdır.
+Bu üç koşul geçerli olduğunda, erişimlerin sırası belirleyici değildir ve hesaplama, o sıraya bağlı olarak çalıştırmadan farklı sonuçlar verebilir. Bazı veri yarışları iyi huylu olabilir (örneğin, hafıza erişimi meşgul olarak beklemek için kullanıldığında), ancak programdaki birçok veri yarışları hatalıdır.
 
 Örneğin, eğer S3’te yanlışlıkla, S2’nin hesapladığı bazı toplamları okumaya çalıştığımızı farzedelim. Ve diyelim ki o esnada S2'de bu alan toplamına yazmaya başlıyoruz. İşte o zaman, okuma ve yazma işlemleri S2'de paralel gidebileceğinden ve haliyle S3'ün hesaplama grafiğinde S2 ile bir bağlantısı olmadığından dolayı bir hata alırız. Paralel programlamada bu çok zararlı bir tür hatadır. Buna **data race(yani veri yarışı)** denir.   
 
