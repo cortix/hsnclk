@@ -49,6 +49,7 @@ fork–join programları için, kenarları üç bölüme ayırmak yararlı olur:
 - Bir görevdeki adımların sırasını yakalayan **continue edges**'ler',
 - Child task'ların ilk adımına bir fork işlemi bağlayan **fork edges**'ler'.
 - Bir görevin son adımını o görevdeki tüm *join* işlemlerine bağlayan **join edges**'ler'.
+
 Dolayısıyla, bu üç çeşit kenarla, bir paralel programın çalışmasını modelleyebileceğimizi görüyoruz. Bu yönlendirilmiş grafiğin her tepe noktası veya düğümü, bir adım olarak adlandırdığımız bir ardışık alt hesaplamayı temsil eder. Ve her edge bir sıralama kısıtlamasına karşılık gelir. Eğer fork ve join olmadan normal bir sıralı programa sahip olsaydınız, grafiğiniz sadece continue edge'lere sahip düz bir çizgi olurdu.
 
 ## Data Race Nedir?
