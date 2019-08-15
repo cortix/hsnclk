@@ -1,7 +1,7 @@
 ---
-title: "Java Static Metodu"
+title: "Java Static Metodu, Değişkenler ve Parametreler"
 comments: true
-excerpt: "Java Static Metodu Nedir? Hangi Durumlarda Kullanılır?"
+excerpt: "Java Static Metodu Nedir? Hangi Durumlarda Kullanılır? Değişkenler ve Parametreler"
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
@@ -13,7 +13,9 @@ header:
 categories:
   - Java
 tags:
-  - main method
+  - static method
+  - değişkenler
+  - parametreler
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
