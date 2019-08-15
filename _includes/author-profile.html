@@ -121,6 +121,14 @@
         </li>
       {% endif %}
 
+      {% if author.goodreads %}
+        <li>
+          <a href="https://www.goodreads.com/{{ author.goodreads }}" itemprop="sameAs">
+            <i class="fab fa-goodreads-g" aria-hidden="true"></i> Goodreads
+          </a>
+        </li>
+      {% endif %}
+
       {% if author.tumblr %}
         <li>
           <a href="https://{{ author.tumblr }}.tumblr.com" itemprop="sameAs">
