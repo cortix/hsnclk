@@ -12,7 +12,7 @@ header:
   #cta_url: "https://unsplash.com"
 categories:
   - Java
-  - Effective Java
+  - Effective_Java 
 tags:
   - java
   - equals
