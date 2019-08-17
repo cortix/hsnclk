@@ -10,5 +10,7 @@ main:
     url: /year-archive/
   - title: "Kategori"
     url: /categories/
+  - title: "Tags"
+    url: /tags/  
   # - title: "Sitemap"
   #   url: /sitemap/
