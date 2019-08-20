@@ -90,11 +90,11 @@ Paralel programlar hakkında konuşurken çok ilginç bir diğer kavram ise hız
 
 Öyleyse bunu düşünelim. **T<sub>1</sub>** sıralı yürütme süresidir. **T<sub>P</sub>**, P işlemcide aldığımız yürütme süresidir. Ve bu oran, paralel versiyonun ne kadar hızlı çalışabildiğinin faktörü olacaktır. Bu yüzden, hızlanmanın P'ye küçük eşit olması gerektiğini görebiliyoruz.
 
-**SPEEDUP $$\le$$ P**
+**SPEEDUP $$\le$$ P** (Speedup(P) must be ≤ the number of processors P)
 
 Aynı şekilde, SPEEDUP aşağıdaki gibi de olmalı;
 
-**SPEEDUP $$\le$$ WORK/SPAN = IDEAL PARALLELISM**
+**SPEEDUP $$\le$$ WORK/SPAN = IDEAL PARALLELISM** (Speedup(P) must be ≤ the ideal parallelism, WORK/SPAN)
 
 Dolayısıyla, hızlanmanın elbette kaç işlemcinin mevcut olduğuna bağlı olduğunu, aynı zamanda ideal paralellik olan hesaplama grafiğinin bu gerçekten önemli özelliği ile sınırlandırıldığını görüyoruz.
 
