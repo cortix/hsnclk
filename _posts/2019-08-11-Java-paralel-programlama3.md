@@ -32,14 +32,14 @@ toc_label: "SAYFA İÇERİĞİ"
 
 <figure >
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/async-finish4.jpeg" alt="async-finish example">
-  <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
+  <figcaption>Şekil 1 - https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Aslında bu bölümde bunun gibi paralel programları modellemek için hesaplama grafiği(computation graph) adı verilen bir kavramı göstermek istiyorum.
 
 <figure >
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph1.jpeg" alt="computation graph example">
-  <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
+  <figcaption>Şekil 2 - https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Şekilde görüldüğü gibi S1'den sonra S2 *fork* edilerek yeni bir branch de çalışması sağlanıyor. S2'ye paralel olarak S1, S3 olarak yeni bir işleme devam ediyor. Buna **continue** işlemi denir. S3'ten sonra da aynı görev S4'te devam etmek istiyor. Ama burada bu *join* işlemi var. Bunun için **join edge** adı verilen farklı bir kenarımız var.
@@ -68,14 +68,14 @@ Hesaplama grafiklerinin bir başka ilginç özelliği de, paralel programınız�
 
 <figure >
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph2.jpeg" alt="computation graph performans ölçümü">
-  <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
+  <figcaption>Şekil 3 - https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Performansla ilgili olarak çalışacağımız iki önemli ölçüm bulunmaktadır. İlki **WORK** olarak adlandırılır. Aslında bu sadece tüm düğümlerin yürütme zamanlarının toplamıdır. Yani bu durumda, 1 artı 10 artı 10 artı 1 olur. Yani 22. Gerçekten önemli olan başka bir ölçüm ise **SPAN** olarak adlandırılıyor. Ve bu en uzun yolun uzunluğudur. Programcılar ayrıca bunu *kritik yol uzunluğu* olarak da adlandırırlar.
 
 <figure >
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph3.jpeg" alt="span : kritik yol uzunluğu">
-  <figcaption>https://www.lucidchart.com da hazırlanmıştır.</figcaption>
+  <figcaption>Şekil 4 - https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
 Bu iki ölçüm, programdaki paralellik hakkında akıl yürütmemize yardımcı olur. Örneğin bu iki ölçümü kullanarak **ideal parelellik** kavramını öğreneceğiz.
@@ -87,7 +87,7 @@ Bu iki ölçüm, programdaki paralellik hakkında akıl yürütmemize yardımcı
 
 Bu, hesaplama grafiğinde ne kadar paralellik olduğuna dair çok somut bir ölçü vermektedir. Sıralı bir allgoritma için, bu sadece 1 olacaktır, çünkü span ile work aynı olacaktır(herhangi bir çatallanma olmayacağından). İdeal paralellik, hesaplama grafiğinde düğümlerin paralel olarak yürütülmesinden elde edilebilecek hızlanma faktörü üzerindeki üst sınırdır. İdeal paralelliğin sadece paralel programın bir işlevi olduğunu ve fiziksel bilgisayarda mevcut olan gerçek paralelliğe bağlı olmadığını unutmayın.
 
-Referanslar :
+**Referanslar :**
 
 1. [https://docs.oracle.com/cd/E19205-01/820-0619/geojs/index.html](https://docs.oracle.com/cd/E19205-01/820-0619/geojs/index.html)
 2. [https://en.wikipedia.org/wiki/Asynchronous_method_invocation](https://en.wikipedia.org/wiki/Asynchronous_method_invocation)
