@@ -94,7 +94,7 @@ private static class ASum extends RecursiveAction {
 {% endhighlight %}
 
 
-Referanslar :
+**Referanslar :**
 
 1. [https://en.wikipedia.org/wiki/Sequential_algorithm](https://en.wikipedia.org/wiki/Sequential_algorithm)
 2. [https://en.wikipedia.org/wiki/Asynchronous_method_invocation](https://en.wikipedia.org/wiki/Asynchronous_method_invocation)
