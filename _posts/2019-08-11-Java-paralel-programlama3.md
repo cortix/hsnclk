@@ -42,9 +42,9 @@ Aslında bu bölümde bunun gibi paralel programları modellemek için hesaplama
   <figcaption>Şekil 2 - https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
-Şekilde görüldüğü gibi S1'den sonra S2 *fork* edilerek yeni bir branch de çalışması sağlanıyor. S2'ye paralel olarak S1, S3 olarak yeni bir işleme devam ediyor. Buna **continue** işlemi denir. S3'ten sonra da aynı görev S4'te devam etmek istiyor. Ama burada bu *join* işlemi var. Bunun için **join edge** adı verilen farklı bir kenarımız var.
+Şekilde görüldüğü gibi S<sub>1</sub>'den sonra S<sub>2</sub> *fork* edilerek yeni bir branch de çalışması sağlanıyor. S<sub>2</sub>'ye paralel olarak S<sub>1</sub>, S<sub>3</sub> olarak yeni bir işleme devam ediyor. Buna **continue** işlemi denir. S<sub>3</sub>'ten sonra da aynı görev S<sub>4</sub>'te devam etmek istiyor. Ama burada bu *join* işlemi var. Bunun için **join edge** adı verilen farklı bir kenarımız var.
 
-fork–join programları için, kenarları üç bölüme ayırmak yararlı olur:
+<u>Fork–join programları için, kenarları üç bölüme ayırmak yararlı olur:</u>
 
 - Bir görevdeki adımların sırasını yakalayan **continue edges**'ler',
 - Child task'ların ilk adımına bir fork işlemi bağlayan **fork edges**'ler'.
@@ -53,7 +53,7 @@ fork–join programları için, kenarları üç bölüme ayırmak yararlı olur:
 Dolayısıyla, bu üç çeşit kenarla, bir paralel programın çalışmasını modelleyebileceğimizi görüyoruz. Bu yönlendirilmiş grafiğin her tepe noktası veya düğümü, bir adım olarak adlandırdığımız bir ardışık alt hesaplamayı temsil eder. Ve her edge bir sıralama kısıtlamasına karşılık gelir. Eğer fork ve join olmadan normal bir sıralı programa sahip olsaydınız, grafiğiniz sadece continue edge'lere sahip düz bir çizgi olurdu.
 
 ## Data Race Nedir?
-İş parçacığı Çözümleyicisi, çok iş parçacıklı bir işlem yürütülürken oluşan veri yarışlarını algılar. Bir veri yarışması şu durumlarda gerçekleşir:
+İş parçacığı Çözümleyicisi, çok iş parçacıklı bir işlem yürütülürken oluşan veri yarışlarını algılar. <u>Bir veri yarışması şu durumlarda gerçekleşir:</u>
 
 - Tek bir işlemde iki veya daha fazla iş parçacığı aynı anda aynı bellek konumuna erişir ve
 - erişimlerin en az biri yazmak içindir ve
@@ -61,10 +61,10 @@ Dolayısıyla, bu üç çeşit kenarla, bir paralel programın çalışmasını 
 
 Bu üç koşul geçerli olduğunda, erişimlerin sırası belirleyici değildir ve hesaplama, o sıraya bağlı olarak çalıştırmadan farklı sonuçlar verebilir. Bazı veri yarışları iyi huylu olabilir (örneğin, hafıza erişimi meşgul olarak beklemek için kullanıldığında), ancak programdaki birçok veri yarışları hatalıdır.
 
-Örneğin, eğer S3’te yanlışlıkla, S2’nin hesapladığı bazı toplamları okumaya çalıştığımızı farzedelim. Ve diyelim ki o esnada S2'de bu alan toplamına yazmaya başlıyoruz. İşte o zaman, okuma ve yazma işlemleri S2'de paralel gidebileceğinden ve haliyle S3'ün hesaplama grafiğinde S2 ile bir bağlantısı olmadığından dolayı bir hata alırız. Paralel programlamada bu çok zararlı bir tür hatadır. Buna **data race(yani veri yarışı)** denir.   
+Örneğin, eğer S<sub>3</sub>’te yanlışlıkla, S<sub>2</sub>’nin hesapladığı bazı toplamları okumaya çalıştığımızı farzedelim. Ve diyelim ki o esnada S<sub>2</sub>'de bu alan toplamına yazmaya başlıyoruz. İşte o zaman, okuma ve yazma işlemleri S<sub>2</sub>'de paralel gidebileceğinden ve haliyle S<sub>3</sub>'ün hesaplama grafiğinde S<sub>2</sub> ile bir bağlantısı olmadığından dolayı bir hata alırız. Paralel programlamada bu çok zararlı bir tür hatadır. Buna **data race(yani veri yarışı)** denir.   
 
 ## Performans Ölçümü, Work, Span ve Ideal Paralellik
-Hesaplama grafiklerinin bir başka ilginç özelliği de, paralel programınızın performansını düşünmek için onları kullanabilmemizdir. Varsayalım ki, S1 ve S4, 1 birim zaman alacak, S3 ve S2 ise 10 birim zaman alacak iş yapsın.
+Hesaplama grafiklerinin bir başka ilginç özelliği de, paralel programınızın performansını düşünmek için onları kullanabilmemizdir. Varsayalım ki, S<sub>1</sub> ve S<sub>4</sub>, 1 birim zaman alacak, S<sub>3</sub> ve S<sub>2</sub> ise 10 birim zaman alacak iş yapsın.
 
 <figure >
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph2.jpeg" alt="computation graph performans ölçümü">
