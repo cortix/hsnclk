@@ -28,7 +28,7 @@ toc_label: "SAYFA İÇERİĞİ"
 
 ## Genel Bakış
 
-Bir önceki bölümde hesaplama grafiklerini görmüştük. Şimdi ise gerçek çok çekirdekli bilgisayarlarda nasıl haritalandıklarını görebiliriz. Bir önceki bölümde resmettiğimiz hesaplama grafiğini tekrar göz önüne getirelim ve her bir işleme bazı yürütme zamanlarını verelim. S6 dışında bütün işlemlere 1 birim çalışma zamanı verdiğimizi varsayalım. S6 ise 10 olsun.
+Bir önceki bölümde hesaplama grafiklerini görmüştük. Şimdi ise gerçek çok çekirdekli bilgisayarlarda nasıl haritalandıklarını görebiliriz. Bir önceki bölümde resmettiğimiz hesaplama grafiğini tekrar göz önüne getirelim ve her bir işleme bazı yürütme zamanlarını verelim. S<sub>6</sub> dışında bütün işlemlere 1 birim çalışma zamanı verdiğimizi varsayalım. S<sub>6</sub> ise 10 olsun.
 
 <figure >
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-12-Java-paralel-programlama4/comp_graph4.jpeg" alt="hesaplama grafiği">
@@ -50,25 +50,25 @@ Hesaplama grafiğindeki bu adımların aslında işlemcilerde nasıl zamanlandı
 </figure>
 
 
-Dolayısıyla, ne olursa olsun S1'in ilk önce gerçekleştirilmesi gerektiğini görüyoruz, çünkü grafiğin asıl amacı, sıralama ilişkilerini gösterir ve S1 işini bitirene kadar başka hiçbir şey çalışmaz. S1'i rastgele olarak P<sub>0</sub>'da başlattığımızı varsayalım. Sonrasında S2 ve S4 ve S6 hepsi çalıştırılabilir. Ama iki işlemci olduğu için 3 işlemden 2 sini seçmemiz gerekli.
+Dolayısıyla, ne olursa olsun S<sub>1</sub>'in ilk önce gerçekleştirilmesi gerektiğini görüyoruz, çünkü grafiğin asıl amacı, sıralama ilişkilerini gösterir ve S<sub>1</sub> işini bitirene kadar başka hiçbir şey çalışmaz. S<sub>1</sub>'i rastgele olarak P<sub>0</sub>'da başlattığımızı varsayalım. Sonrasında S<sub>2</sub> ve S<sub>4</sub> ve S<sub>6</sub> hepsi çalıştırılabilir. Ama iki işlemci olduğu için 3 işlemden 2 sini seçmemiz gerekli.
 
-Farzedelim ki, S2 ve S4'ü seçtik. P<sub>0</sub> S2 yi, P<sub>1</sub> ise S4'ü çalıştırdı. Şimdi S2 ve S4 birbirleriyle paralel olarak çalışıyorlar. Akabinde, P<sub>0</sub> S3'ü, P<sub>1</sub> ise S5'i hesaplama grafiğindeki gibi çalıştırmaya devam eder. Şimdi, bundan sonra S7'yi uygulayamıyoruz çünkü S6 hala bitirilmeyi bekliyor. Her iki işlemci de boşa çıktığı için ikisinden birinde S6 çalıştırılabilir. Farzedelim ki bu görevi P<sub>0</sub> aldı. Artık son işlem olan S7 ye geçebiliriz. Bunu da S6'da olduğu gibi boşta olan herhangi bir işlemci alabilir. Yine P<sub>0</sub>'ın aldığını varsayalım. Yukarıda görüldüğü üzere işlemciler üzerinde ilgili planlama yapıldı. Şimdi ise bu işlemcilerin çalışma zamanlarını üzerinde tekrar düşünebiliriz.
+Farzedelim ki, S<sub>2</sub> ve S<sub>4</sub>'ü seçtik. P<sub>0</sub> S<sub>2</sub> yi, P<sub>1</sub> ise S<sub>4</sub>'ü çalıştırdı. Şimdi S<sub>2</sub> ve S<sub>4</sub> birbirleriyle paralel olarak çalışıyorlar. Akabinde, P<sub>0</sub> S<sub>3</sub>'ü, P<sub>1</sub> ise S<sub>5</sub>'i hesaplama grafiğindeki gibi çalıştırmaya devam eder. Şimdi, bundan sonra S<sub>7</sub>'yi uygulayamıyoruz çünkü S<sub>6</sub> hala bitirilmeyi bekliyor. Her iki işlemci de boşa çıktığı için ikisinden birinde S<sub>6</sub> çalıştırılabilir. Farzedelim ki bu görevi P<sub>0</sub> aldı. Artık son işlem olan S<sub>7</sub> ye geçebiliriz. Bunu da S<sub>6</sub>'da olduğu gibi boşta olan herhangi bir işlemci alabilir. Yine P<sub>0</sub>'ın aldığını varsayalım. Yukarıda görüldüğü üzere işlemciler üzerinde ilgili planlama yapıldı. Şimdi ise bu işlemcilerin çalışma zamanlarını üzerinde tekrar düşünebiliriz.
 
 <figure >
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-12-Java-paralel-programlama4/multiprocessor2.png" alt="hesaplama grafiğinin işlemciler üzerinde gösterimi">
   <figcaption>Şekil 3 - https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
-Planlama bu şekilde olduğunda 2 işlemcideki çalışma süresini 14(yani T<sub>2</sub> = 14) olarak hesapladık. Dikkat edilecek olursa 2 adet de IDLE(atıl) slot göze çarpmaktadır. Yani bu slotların boşta olduğunu, yapacak bir işlerinin olmadığını göstermektedir. Ancak, grafiği programlamanın tek yolu bu değildir. Başka bir yaklaşım da izleyebiliriz. Çünkü S6 bir darboğaz oluşturuyor ve P1 işlemcisinin belirli durumlarda boşta(IDLE) kalmasına neden oluyor. Dolayısıyla, şimdi ikinci planlamadaki hedefimiz S6'yı mümkün olan en kısa sürede çalıştırmak olacaktır.
+Planlama bu şekilde olduğunda 2 işlemcideki çalışma süresini 14(yani T<sub>2</sub> = 14) olarak hesapladık. Dikkat edilecek olursa 2 adet de *IDLE*(atıl) slot göze çarpmaktadır. Yani bu slotların boşta olduğunu, yapacak bir işlerinin olmadığını göstermektedir. Ancak, grafiği programlamanın tek yolu bu değildir. Başka bir yaklaşım da izleyebiliriz. Çünkü S<sub>6</sub> bir darboğaz oluşturuyor ve P<sub>1</sub> işlemcisinin belirli durumlarda boşta(IDLE) kalmasına neden oluyor. Dolayısıyla, şimdi ikinci planlamadaki hedefimiz S<sub>6</sub>'yı mümkün olan en kısa sürede çalıştırmak olacaktır.
 
 <figure >
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-12-Java-paralel-programlama4/multiprocessor3.png" alt="hesaplama grafiğinin işlemciler üzerinde gösterimi">
   <figcaption>Şekil 4 - https://www.lucidchart.com da hazırlanmıştır.</figcaption>
 </figure>
 
-Bu planlama örneğinde S1'i yine ilk olarak başlatmak zorundayız. Tabii S1 başladığında P1 bir öncekinde olduğu gibi başlangıçta boş kalır. S1 işlemi bittiğinde, P0'da S6'yı önceliklendirebiliriz. Böylece S6, 10 birim zaman boyunca P0 üzerinde çalışırken,  P1'de S2, S3, S4, S5 işlemlerini rahatlıkla ele alabiliriz. Sıra önemli değil çünkü bunlar, hangi sırayla yapılırsa yapsınlar toplamda dört iş birimi ile çalışırlar. Yani 10 birim zamana sahip S6'yı düşünürsek, işlemlerini S6'dan önce bitirecekleri kesindir. S6'da işlemini sonlandırdıktan sonra S7'yi işleme alabiliriz. S7 herhangi bir işlemci de başlayabilir. Varsayalım ki P0'da başladı. Peki, şimdi bu planlama için yürütme süresi ne oldu?. Burada S1'in 1, S6'nın 10 ve S7'nin 1 birim süresi olduğu için toplamda 12 birim çalışma süresi olduğunu görüyoruz.
+Bu planlama örneğinde S<sub>1</sub>'i yine ilk olarak başlatmak zorundayız. Tabii S<sub>1</sub> başladığında P<sub>1</sub> bir öncekinde olduğu gibi başlangıçta boş kalır. S<sub>1</sub> işlemi bittiğinde, P<sub>0</sub>'da S<sub>6</sub>'yı önceliklendirebiliriz. Böylece S<sub>6</sub>, 10 birim zaman boyunca P<sub>0</sub> üzerinde çalışırken,  P<sub>1</sub>'de S<sub>2</sub>, S<sub>3</sub>, S<sub>4</sub>, S<sub>5</sub> işlemlerini rahatlıkla ele alabiliriz. Sıra önemli değil çünkü bunlar, hangi sırayla yapılırsa yapsınlar toplamda dört iş birimi ile çalışırlar. Yani 10 birim zamana sahip S<sub>6</sub>'yı düşünürsek, işlemlerini S<sub>6</sub>'dan önce bitirecekleri kesindir. S<sub>6</sub>'da işlemini sonlandırdıktan sonra S<sub>7</sub>'yi işleme alabiliriz. S<sub>7</sub> herhangi bir işlemci de başlayabilir. Varsayalım ki P<sub>0</sub>'da başladı. Peki, şimdi bu planlama için yürütme süresi ne oldu?. Burada S<sub>1</sub>'in 1, S<sub>6</sub>'nın 10 ve S<sub>7</sub>'nin 1 birim süresi olduğu için toplamda 12 birim çalışma süresi olduğunu görüyoruz.
 
-Dolayısıyla, bir öncekine kıyasla daha küçük bir yürütme zamanımız var. Bu nedenle, P kadar işlemcide yürütme süresinin bu tanımı aslında tasarlanan bu plana bağlıdır. Ancak bu yürütme süresi hakkında belirleyebileceğimiz belirli özellikler vardır. Birincisi, P --> 1'e eşit olsaydı ne olurdu? Eğer sadece 1 işlemcimiz olsaydı, T1'in --> WORK'e eşit olduğunu iddia edebilirdik. Bunu neden söylüyoruz? Çünkü bir işlemcide çalışıyorsanız, temel olarak bu işlemcinin, hesaplama grafiğindeki tüm işleri yapması gerekir. Bu işlem, tüm yürütme zamanlarını eklediğinizde elde ettiğiniz şeydir.
+Dolayısıyla, bir öncekine kıyasla daha küçük bir yürütme zamanımız var. Bu nedenle, P kadar işlemcide yürütme süresinin bu tanımı aslında tasarlanan bu plana bağlıdır. Ancak bu yürütme süresi hakkında belirleyebileceğimiz belirli özellikler vardır. Birincisi, P --> 1'e eşit olsaydı ne olurdu? Eğer sadece 1 işlemcimiz olsaydı, T<sub>1</sub>'in --> WORK'e eşit olduğunu iddia edebilirdik. Bunu neden söylüyoruz? Çünkü bir işlemcide çalışıyorsanız, temel olarak bu işlemcinin, hesaplama grafiğindeki tüm işleri yapması gerekir. Bu işlem, tüm yürütme zamanlarını eklediğinizde elde ettiğiniz şeydir.
 
 **P = 1 ---> T1 = WORK**
 
@@ -82,7 +82,7 @@ T1 = 16
 
 Düşünebileceğimiz diğer bir şey ise, pratikte olmasa da, sonsuz sayıda işlemcimiz olsaydı ne olurdu? Cevap daha önce öğrendiğimiz, yani hesaplama grafiğindeki en uzun yolun uzunluğunu temsil eden **SPAN** olurdu. Çünkü yeterli işlemcimiz varsa, en uzun yolda olmak ve kendinden sonra gelecek işlemleri beklemek dışında bir adım dahi beklemenin bir sebebi yoktur.
 
-Şekil 1'e bakacak olursak, başta hesaplama grafiğini çizdiğimizde 3 tane paralel çalışan işlemi düşünmüştük. İşlemin uzunluğu da haliyle bu dallanmalardan en son hangisi biterse ona göre belirlenir. Çünkü diğer işlemler önce bitse de, en son join işlemi yapılacağı zaman birbirlerini beklemek zorundalar. Paralel çalışak yeterli sayıda işlemcimiz olacağı için 3 dallanmaya da yeterli sayıda işlemci olacaktır. S3, S2'den sonra gelen bir işlem, S5 de S4'den sonra gelen bir işlem olduğu için onlar yeni bir işlemci de çalışmaz.
+Şekil 1'e bakacak olursak, başta hesaplama grafiğini çizdiğimizde 3 tane paralel çalışan işlemi düşünmüştük. İşlemin uzunluğu da haliyle bu dallanmalardan en son hangisi biterse ona göre belirlenir. Çünkü diğer işlemler önce bitse de, en son join işlemi yapılacağı zaman birbirlerini beklemek zorundalar. Paralel çalışak yeterli sayıda işlemcimiz olacağı için 3 dallanmaya da yeterli sayıda işlemci olacaktır. S<sub>3</sub>, S<sub>2</sub>'den sonra gelen bir işlem, S<sub>5</sub> de S<sub>4</sub>'den sonra gelen bir işlem olduğu için onlar yeni bir işlemci de çalışmaz.
 
 Yani sonsuz sayıda da işlemciniz olsa hesaplama grafiğine göre en fazla 3 tane dallanmanız olacaktır. Kısacası en son biten işlem size **SPAN** değerini de verecektir. Bu durumda ``SPAN 1+10+1 = 12`` olur. O halde, herhangi bir P sayıda işlemciye bakıldığında, aşağıdaki aralıkta olmamız gerektiğini biliyoruz;
 
@@ -96,7 +96,7 @@ Paralel programlar hakkında konuşurken çok ilginç bir diğer kavram ise hız
 
 **SPEEDUP = T<sub>1</sub> / T<sub>P</sub>**
 
-Öyleyse bunu düşünelim. **T<sub>1</sub>** sıralı yürütme süresidir. **T<sub>P</sub>**, P işlemcide aldığımız yürütme süresidir. Ve bu oran, paralel versiyonun ne kadar hızlı çalışabildiğinin faktörü olacaktır. Bu yüzden, hızlanmanın P'ye küçük eşit olması gerektiğini görebiliyoruz.
+Öyleyse bunu düşünelim. T<sub>1</sub> sıralı yürütme süresidir. T<sub>P</sub>, P işlemcide aldığımız yürütme süresidir. Ve bu oran, paralel versiyonun ne kadar hızlı çalışabildiğinin faktörü olacaktır. Bu yüzden, hızlanmanın P'ye küçük eşit olması gerektiğini görebiliyoruz.
 
 
 **SPEEDUP $$\le$$ P**
