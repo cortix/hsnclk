@@ -4,13 +4,13 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "..."
+  - title: "Kitap"
     url: /reviews/
   - title: "Yazılar"
     url: /year-archive/
   - title: "Kategori"
     url: /categories/
   - title: "Tags"
-    url: /tags/  
+    url: /tags/
   # - title: "Sitemap"
   #   url: /sitemap/
