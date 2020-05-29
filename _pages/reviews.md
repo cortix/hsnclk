@@ -15,7 +15,9 @@ entries_layout: grid
 classes: wide
 ---
 
-<h2>Posts</h2>
+<h2>Kitap Değerlendirmeleri</h2>
 {% for post in site.categories.Reviews %}
-  {% include archive-single.html %}
+  {% include archive-single.html type="grid"%}
 {% endfor %}
+
+<!-- type="grid" ekleyince post'lara thumnail ekleniyor. Bak: https://github.com/mmistakes/minimal-mistakes/issues/892 -->
