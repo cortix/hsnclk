@@ -34,14 +34,25 @@ $header-font-family: $sans-serif !default;
 $caption-font-family: $serif !default;
 
 /* type scale */
-$type-size-1: 2.441em !default; // ~39.056px
-$type-size-2: 1.953em !default; // ~31.248px
-$type-size-3: 1.563em !default; // ~25.008px
-$type-size-4: 1.25em !default; // ~20px
-$type-size-5: 1em !default; // ~16px
-$type-size-6: 0.75em !default; // ~12px
+$type-size-1: 2.441em !default; // ~39.056px başlık
+$type-size-2: 1.853em !default; // ~31.248px
+$type-size-3: 1em !default; // ~25.008px Posts by Category, Posts by Tags yazan başlıklar
+$type-size-4: 1em !default; // ~20px Kategorinin altındaki alt başlıklar Mesela Java tagı aldıntaki postların başlıkları
+$type-size-5: 1em !default; // ~16px 3 yerde kullanılıyor, İsmimim yazdığı başlık(hemen fotoğrağın altındaki yer), Previous/Next yazan butonlar bir de postun hemen altında YOU MAY ALSO ENJOY yazan yerin altındaki postların başlıkları, Posts by Tag veya Posts by Category nin altında herhangi bir tag veya categoriye tıkladığımızda aşağıdaki listede yer alan başlıklar(yalnız post başlıkları değil)
+$type-size-6: 0.85em !default; // ~12px İsmimim yazdığı başlığın altındaki paragraph
 $type-size-7: 0.6875em !default; // ~11px
 $type-size-8: 0.625em !default; // ~10px
+
+// $type-size-1: 2.441em !default; // ~39.056px
+// $type-size-2: 1.953em !default; // ~31.248px
+// $type-size-3: 1.563em !default; // ~25.008px
+// $type-size-4: 1.25em !default; // ~20px
+// $type-size-5: 1em !default; // ~16px
+// $type-size-6: 0.75em !default; // ~12px
+// $type-size-7: 0.6875em !default; // ~11px
+// $type-size-8: 0.625em !default; // ~10px
+
+//https://github.com/mmistakes/minimal-mistakes/issues/1352
 
 /*
    Colors
