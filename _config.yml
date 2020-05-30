@@ -12,22 +12,25 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise","default"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "hasancelik.org"
 title_separator          : "-"
+subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Hasan Çelik"
 description              : "Hasan Çelik's personal website."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 120
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : "hasancelik-org-3" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -37,22 +40,12 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
-  transforms:
-    email                : # "md5"
-  generatedFields:
-    date:
-      type               : # "date"
-      options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
+  staticman:
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
   siteKey                :
   secret                 :
@@ -105,33 +98,52 @@ author:
   bio              : "A software developer who likes to develop himself and is interested in music, philosophy, psychology, marketing, branding, history, economy and science at the same time."
   location         : "Ankara/Turkey"
   email            : "hsnclk1985@gmail.com"
-  uri              :
-  home             : # null (default), "absolute or relative url to link to author home"
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "cortix"
-  gitlab           :
-  google_plus      :
-  keybase          :
-  instagram        :
-  lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
-  tumblr           :
-  twitter          : "hsanclk"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : https://www.youtube.com/channel/UCFjkZMWteNEzFmLcZ-jU11g?view_as=subscriber # "https://youtube.com/c/MichaelRoseDesign"
-  goodreads        : "hasancelik"
-
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: "mailto:your.name@email.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/hsanclk"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cortix"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UCFjkZMWteNEzFmLcZ-jU11g?view_as=subscriber"
+    - label: "Goodreads"
+      icon: "fab fa-fw fa-goodreads-g"
+      url: "https://www.goodreads.com/user/show/88145705-hasan-elik"
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url:
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url:
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      # url:
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
+      # url:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url:
 
 
 # Reading Files
@@ -152,7 +164,6 @@ exclude:
   - Capfile
   - CHANGELOG
   - config
-  - Gemfile
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -189,15 +200,12 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
 
 
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
@@ -213,7 +221,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
+  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -221,7 +229,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
+  - jekyll-include-cache
 
 
 # Archives
@@ -232,8 +240,8 @@ whitelist:
 #  - Archive page should exist at path when using Liquid method or you can
 #    expect broken links (especially with breadcrumbs enabled)
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
@@ -254,7 +262,7 @@ tag_archive:
 
 
 # HTML Compression
-# - http://jch.penibelst.de/
+# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
@@ -272,5 +280,6 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
+      share: false
       related: true
+
