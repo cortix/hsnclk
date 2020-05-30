@@ -164,6 +164,7 @@ exclude:
   - Capfile
   - CHANGELOG
   - config
+  - Gemfile
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -200,6 +201,9 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
 
 # Sass/SCSS
@@ -280,6 +284,5 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: false
+      share: true
       related: true
-
