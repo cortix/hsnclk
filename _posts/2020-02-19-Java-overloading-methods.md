@@ -1,7 +1,7 @@
 ---
 title: "Java Metot Aşırı Yükleme(Overloading Methods)"
 comments: true
-excerpt: "Java Overloading Methods"
+excerpt: "Java'da aşırı yükleme ne anlama gelmektedir? Neden constructor'larda overloading metotlara ihtiyaç duyarız ve overload yaparken uymamız gereken bir kural var mıdır gibi soruları cevaplamaya çalışacağız."
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
@@ -13,7 +13,7 @@ header:
 categories:
   - Java
 tags:
-  - main method
+  - java overloading
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"

@@ -1,7 +1,7 @@
 ---
 title: "Java'da Nesneler İçin Hafıza Modeli 1"
 comments: true
-excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır?"
+excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır? Bu durumun net anlaşılması için nasıl simüle edebiliriz?"
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
