@@ -1,5 +1,5 @@
 ---
-title: "Java'da İlkel Veri Tipleri İçin Hafıza Modeli"
+title: "Java'da Hafıza Modeli 1 - İlkel Veri Tipleri"
 comments: true
 excerpt: "Java'da İlkel Veri Tipleri Bellekte Nasıl Saklanır? Bu durumun net anlaşılması için nasıl simüle edebiliriz?"
 header:
