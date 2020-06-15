@@ -1,7 +1,7 @@
 ---
 title: "Java'da Hafıza Modeli 4 - Kapsam(Scope)"
 comments: true
-excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır? Farklı Örnekler"
+excerpt: "Kapsam, değişkenin erişilebilir olduğu bölümüdür. Bu derste, Java hafıza modelini scope kavramını da dahil ederek bir bütün halinde ele alacağız."
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
