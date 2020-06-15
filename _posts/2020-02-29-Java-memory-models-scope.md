@@ -5,16 +5,15 @@ excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır? Farklı Örnekler"
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
-  overlay_image: /assets/images/unsplash-image-7.jpg
+  overlay_image: /assets/images/unsplash-image-33.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  caption: "Photo by [Denise Jans](https://unsplash.com/photos/RQ0_Fp2Hr2M) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
   - java-hafiza-yonetimi
-  - scope(kapsam)
 tags:
-  - Nesneler İçin Hafıza Modeli
+  - Scope(kapsam)
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -145,7 +144,7 @@ Burada ``this`` anahtar kelimesi ile ilgili ek bir bilgi vermek istiyorum. ``thi
 <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=class%20SampleTest%20%7B%0A%20%20%20%20public%20double%20x%3B%0A%20%20%20%20public%20int%20y%3B%0A%0A%20%20%20%20public%20SampleTest%28double%20xx,%20int%20yy%29%7B%0A%20%20%20%20%20%20%20%20this.x%20%3D%20xx%3B%0A%20%20%20%20%20%20%20%20this.y%20%3D%20yy%3B%0A%20%20%20%20%7D%0A%20%20%20%20//%20....%0A%7D%0A%0A%0Apublic%20class%20Sample%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20double%20x%20%3D%201.0%3B%0A%20%20%20%20%20%20%20%20SampleTest%20sample1%20%3D%20new%20SampleTest%28x,2%29%3B%0A%20%20%20%20%7D%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=3&heapPrimitives=nevernest&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
-> **Not:** Üye değişkenleri ingilizce olarak member variables veyahut instance variables olarak da geçer. Yani sınıftan üretilen herbir nesneye özel olan değişkenlerdir. 
+> **Not:** Üye değişkenleri ingilizce olarak member variables veyahut instance variables olarak da geçer. Yani sınıftan üretilen herbir nesneye özel olan değişkenlerdir.
 
 ## Referanslar
 * Bütün şekiller [https://www.lucidchart.com](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.

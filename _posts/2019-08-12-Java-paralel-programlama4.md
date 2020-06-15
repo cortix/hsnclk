@@ -5,9 +5,9 @@ excerpt: "Java Paralel Programlama - Çok İşlemci Zamanlama, Paralel Hızland�
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
-  overlay_image: /assets/images/unsplash-image-5.jpg
+  overlay_image: /assets/images/unsplash-image-38.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  caption: "Photo by [Erik Mclean](https://unsplash.com/photos/_QQ5L7Vrg6E) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
