@@ -5,9 +5,9 @@ excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır? Bu durumun net anlaşılma
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
-  overlay_image: /assets/images/unsplash-image-7.jpg
+  overlay_image: /assets/images/unsplash-image-36.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  caption: "Photo by [NASA](https://unsplash.com/photos/-hI5dX2ObAs) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
