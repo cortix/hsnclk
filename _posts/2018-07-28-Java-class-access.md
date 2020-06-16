@@ -122,6 +122,8 @@ public abstract interface MyInterface  {
 }
 {% endhighlight %}
 
+<!-- An interface is something that indicates that we're dealing with an abstract data type. It's like a promise between the Programmer and the person using the library's code.  -->
+
 Interface aslında bir sözleşmedir. Interface'ler herhangi bir sınıf tarafından ``implements`` anahtar kelimesi ile implement edilebilir. Özünde arayüzlerde  abstract'tır. Fakat interface deklarasyonunda abstract yazmanıza gerek yoktur. Yazmasanızda kullandığınız IDE'ler derleme anında interface'i abstract olarak görür. Ayrıca anstract sınıflarda olduğu gibi interface içinde de abstract metodlar tanımlanabilir. Fakat abstract bir sınıf hem soyut hem de soyut olmayan yöntemleri tanımlayabilse de, genel olarak bir interface(arayüz) sadece soyut yöntemlere sahiptir.
 
 **Java 8 itibariyle Interface yapısı**
