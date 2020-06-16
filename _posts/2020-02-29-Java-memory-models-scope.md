@@ -7,7 +7,7 @@ header:
   og_image: /assets/images/page-header-og-image.png
   overlay_image: /assets/images/unsplash-image-33.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Denise Jans](https://unsplash.com/photos/RQ0_Fp2Hr2M) on Unsplash"
+  caption: "Photo by [ian dooley](https://unsplash.com/photos/TevqnfbI0Zc) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
