@@ -74,7 +74,7 @@ public class Sample {
     }
 }
 ```
-Burada bir derleme hatası alırdık. Çünkü ``main`` yönteminin sahip olduğu kapsamda(scope) **x** değişkeni yoktur. Peki kapsam(scope) nedir? <u><i>Bir değişkenin kapsamı, değişkenin bir değere sahip olması için tanımlandığı alandır.</i></u> Görüldüğü üzere main metotu içerisinde x değişkeni tanımlanmadan, atama işlemi gerçekleştirilmeye çalışılmıştır. Aslında x değişkeninin SampleTest sınıfında tanımlandığını ve bir üye değişkeni(member variable) olduğunu az önce öğrenmiştik. Bu yüzden ona main metotu içinde bu şekilde erişemeyiz.
+Burada bir derleme hatası alırdık. Çünkü ``main`` yönteminin sahip olduğu kapsamda(scope) **x** değişkeni yoktur. Peki kapsam(scope) nedir? <u><i>Bir değişkenin kapsamı, değişkenin bir değere sahip olması için tanımlandığı ve aynı zamanda değişkenin erişilebilir olduğu alandır.</i></u> Görüldüğü üzere main metotu içerisinde x değişkeni tanımlanmadan, atama işlemi gerçekleştirilmeye çalışılmıştır. Aslında x değişkeninin SampleTest sınıfında tanımlandığını ve bir üye değişkeni(member variable) olduğunu az önce öğrenmiştik. Bu yüzden ona main metotu içinde bu şekilde erişemeyiz.
 
 <!-- Değişkenin kapsamı, kodda değişkenin belirli bir değere sahip olarak tanımlandığı alandır. -->
 <!-- The scope of a variable is the area in the code where it's defined to have a particular value. The scope is the area where it is defined to have a value. -->
