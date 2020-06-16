@@ -166,12 +166,30 @@ Böylece, statik alanlar ve sınıfların metotları, statik olmayan alanlara ve
 
 ## JVM static yöntem ve değişkenleri nasıl ve nerede saklar?
 
-JDK 8'den önce HotSpot JVM, kalıcı Nesil(*Permanent  Generation*) olarak adlandırılan üçüncü bir nesle(*third generation*) sahipti. Statik yöntemler (aslında tüm yöntemler) ve bunun yanısıra statik değişkenler, heap alanına bitişik(*contiguous*) olan ``Permgen`` adında bir alanda tutulurdu. Kısaca bahsetmem gerekirse, bu alanda sınıf yöntem ve değişkenlerinin yanısıra, sınıfların JVM iç gösterimi(*internal representation*) ve meta verileri ve *interned strings*'ler yer almaktaydı. JDK 8 den sonra bu generation'ının yerini ``metaspace`` almıştır. ``Permgen``den farklı olarak bu alan Java Heap ile bitişik değildir(*Not contiguous*). Metaspace "native memory" den ayrılmıştır ve ``metaspace`` için maksimum alan kullanılabilir sistem hafızasıdır. Fakat bu ``MaxMetaspaceSize`` JVM seçeneği ile sınırlandırılabilir. Yalnız bu hafıza ``Permgen``de sınırlı idi.
+JDK 8'den önce HotSpot JVM, kalıcı Nesil(*Permanent  Generation*) olarak adlandırılan üçüncü bir nesle(*third generation*) sahipti. Statik yöntemler (aslında tüm yöntemler) ve bunun yanısıra statik değişkenler, sınıf meta verileri heap alanına bitişik(*contiguous*) olan ``Permgen`` adında bir alanda tutulurdu. Kısaca bahsetmem gerekirse, bu alanda sınıf yöntem ve değişkenlerinin yanısıra, sınıfların JVM iç gösterimi(*internal representation*) ve meta verileri ve *interned strings*'ler yer almaktaydı. JDK 8 den sonra bu generation'ının yerini ``metaspace`` almıştır. ``Permgen``den farklı olarak bu alan Java Heap ile bitişik değildir(*Not contiguous*). Metaspace "native memory" den ayrılmıştır ve ``metaspace`` için maksimum alan kullanılabilir sistem hafızasıdır. Fakat bu ``MaxMetaspaceSize`` JVM seçeneği ile sınırlandırılabilir. Yalnız öncesinde bu hafıza ``Permgen``de sınırlı idi. Özetle JDK 8 öncesi ve sonrası olmak üzere iki farklı cevabımız bulunmaktadır.
+
+Daha detaylı bilgi almak isterseniz aşağıdaki referanslara göz gezdirebilirsiniz. 
 
 Referanslar:
 
-1. [https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
-2. [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
-3. [https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
-4. [https://www.coursera.org/learn/java-programming-design-principles/](https://www.coursera.org/learn/java-programming-design-principles/)
-5. [OCA/OCP Java SE 7 Programmer I & II Study Guide (Exams 1Z0-803 & 1Z0-804)](https://www.amazon.com/Programmer-Study-1Z0-803-1Z0-804-Certification/dp/0071772006)
+* [https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
+* [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
+* [https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
+* [https://www.coursera.org/learn/java-programming-design-principles/](https://www.coursera.org/learn/java-programming-design-principles/)
+* [OCA/OCP Java SE 7 Programmer I & II Study Guide (Exams 1Z0-803 & 1Z0-804)](https://www.amazon.com/Programmer-Study-1Z0-803-1Z0-804-Certification/dp/0071772006)
+* [https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html)
+* [https://docs.oracle.com/javase/specs/jvms/se8/jvms8.pdf](https://docs.oracle.com/javase/specs/jvms/se8/jvms8.pdf)
+* [https://docs.oracle.com/javase/specs/](https://docs.oracle.com/javase/specs/)
+* [https://www.youtube.com/watch?v=YujkxK3RfS0](https://www.youtube.com/watch?v=YujkxK3RfS0)
+* [About G1 Garbage Collector, Permanent Generation and Metaspace](https://blogs.oracle.com/poonam/about-g1-garbage-collector%2c-permanent-generation-and-metaspace/comment-submitted?cid=12f52320-ad77-4ead-b736-b88be15dc3d0)
+* [https://docs.oracle.com/javase/7/docs/webnotes/tsg/TSG-VM/html/memleaks.html](https://docs.oracle.com/javase/7/docs/webnotes/tsg/TSG-VM/html/memleaks.html)
+* [https://docs.oracle.com/javase/9/troubleshoot/JSTGD.pdf](https://docs.oracle.com/javase/9/troubleshoot/JSTGD.pdf)
+* [https://docs.oracle.com/javase/10/troubleshoot/troubleshoot-memory-leaks.htm#JSTGD266](https://docs.oracle.com/javase/10/troubleshoot/troubleshoot-memory-leaks.htm#JSTGD266)
+* [https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/considerations.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/considerations.html)
+* [https://www.slideshare.net/rgrebski/on-heap-cache-vs-offheap-cache-53098109](https://www.slideshare.net/rgrebski/on-heap-cache-vs-offheap-cache-53098109)
+* [What is a PermGen leak?](https://plumbr.io/blog/memory-leaks/what-is-a-permgen-leak)
+* [https://docs.oracle.com/javase/9/gctuning/toc.htm](https://docs.oracle.com/javase/9/gctuning/toc.htm)
+* [https://dzone.com/articles/java-memory-management](https://dzone.com/articles/java-memory-management)
+* [Java Virtual Machine Troubleshooting Course](https://apexapps.oracle.com/pls/apex/f?p=44785:50:113240267925965:::50:P50_COURSE_ID,P50_EVENT_ID:185,5777)
+* [Java 8: From PermGen to Metaspace](https://dzone.com/articles/java-8-permgen-metaspace)
+* [Permgen vs Metaspace in Java](https://www.baeldung.com/java-permgen-metaspace)
