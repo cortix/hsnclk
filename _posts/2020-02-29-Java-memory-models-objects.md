@@ -41,7 +41,7 @@ int deg1 = 1;
 SampleTest sample = new SampleTest(1,2);
 ```
 
-Yukarıdaki örneğimizde ilkel ve ilkel olmayan veri tiplerine birer örnek görmektesiniz. Bir önceki dersten `int` ilkel veri tipine aşinayız. İkinci satıda ise ilkel olmayan veri tipine bir örnek verilmiştir. `SampleTest` isminde bir sınıftan oluşturulmuş bir nesne ve o nesneyi temsil eden `sample` adında bir değişken!!!
+Yukarıdaki örneğimizde ilkel ve ilkel olmayan veri tiplerine birer örnek görmektesiniz. Bir önceki dersten `int` ilkel veri tipine aşinayız. İkinci satırda ise ilkel olmayan veri tipine bir örnek verilmiştir. `SampleTest` isminde bir sınıftan oluşturulmuş bir nesne ve o nesneyi temsil eden `sample` adında bir değişken!!!
 
 ## İlkel Olmayan Veri Türleri İçin Hafıza Modeli
 
@@ -85,15 +85,9 @@ Adım adım yukarıdaki kod bloğu nasıl çalışır, resmetmeye çalışalım;
   <figcaption></figcaption>
 </figure>
 
-* **3.satır:** Bu satırda işler biraz daha komplike bir hal almaya başlıyor. Aslında 1. satırda olduğu gibi bir atama işlemi var. Yalnız tek farkı; atanan değerin bir nesne olması. Burada `new` anahtar kelimesini kullanarak `SampleTest` sınıfından bir nesne yaratma ve yaratılan bu nesneyi de az önce oluşturduğumuz değişkene atama işlemi var. Şimdi burada gerçekleşen işlemleri teker teker ele alalım istiyorum. `new` anahtar kelimesini kullandığımızda Java'ya bilgisayarın hafızasında, heap denilen alanda özel bir alan oluşturmasını ve bu alanda yaratılan nesneyi saklamasını söylüyorsunuz. Yani `deg1` ve `sample1` değişkenlerini yarattığımız yığından(stack) farklı, özel bir birimden bahsediyorum. Sonuç olarak Java bu nesneyi heap'de bir lokasyona koyar ve bize sadece bu lokasyonun adresini verir. Tabii Java'nın, bu nesneyi oluşturmak için heap'de tam olarak nereyi seçtiğini bilmiyoruz. O yüzden bize verdiği adresle yetinmek zorundayız. Verilen adresin başında `@` işareti vardır. Bunu bir editörde debug modda deneyerek görebilirsiniz. Peki burada ne oluyor? Aslında Java heap'de yarattığı nesneyi sample1 kutusunun içine kopyalamak yerine, bu nesneye ulaşabilmek için stack'de yer alan bu değişkene bir referans verir. Başka bir deyişle, nesnenin heap içinde saklandığı yerin adresini sample1 değişkeninin kutusuna koyar. Bu, referans verme işlemi olarak adlandırılır. Yani **@** işareti ile başlayan sayı bir nevi heap'de yer alan objenin stack alanındaki referansıdır. Nesnelere referans türleri denmesinin sebebi de aslında budur. Burada küçük bir parantez açıp nesne türleri ve referans türleri arasındaki ufak farkı göstermek istiyorum. Yani heap alanındaki nesneleri stack alanında temsil etmelerinden ötürü ikisinin de aynı olduğunu düşünebilirsiniz. Ama referans ve nesne türleri de her zaman aynı olmayabilir. Aslında şunu söylemek istiyorum... Heap alanında oluşan nesnenin tipi ile, aynı nesneyi stack alanında temsil eden değişkenin, yani referansın tipi farklı olabilir. Böylelikle referans ve obje tiplerini de kendi içinde ayırmış olduk.. Aşağıdaki resimden daha net anlayabilirsiniz.
+* **3.satır:** Bu satırda işler biraz daha komplike bir hal almaya başlıyor. Aslında 1. satırda olduğu gibi bir atama işlemi var. Yalnız tek farkı; atanan değerin bir nesne olması. Burada `new` anahtar kelimesini kullanarak `SampleTest` sınıfından bir nesne yaratma ve yaratılan bu nesneyi de az önce oluşturduğumuz değişkene atama işlemi var. Şimdi burada gerçekleşen işlemleri teker teker ele alalım istiyorum. `new` anahtar kelimesini kullandığımızda Java'ya bilgisayarın hafızasında, heap denilen alanda özel bir alan oluşturmasını ve bu alanda yaratılan nesneyi saklamasını söylüyorsunuz. Yani `deg1` ve `sample1` değişkenlerini yarattığımız yığından(stack) farklı, özel bir birimden bahsediyorum. Sonuç olarak Java bu nesneyi heap'de bir lokasyona koyar ve bize sadece bu lokasyonun adresini verir. Tabii Java'nın, bu nesneyi oluşturmak için heap'de tam olarak nereyi seçtiğini bilmiyoruz. O yüzden bize verdiği adresle yetinmek zorundayız. Verilen adresin başında `@` işareti vardır. Bunu bir editörde debug modda deneyerek görebilirsiniz. Peki burada ne oluyor? Aslında Java heap'de yarattığı nesneyi sample1 kutusunun içine kopyalamak yerine, bu nesneye ulaşabilmek için stack'de yer alan bu değişkene bir referans verir. Başka bir deyişle, nesnenin heap içinde saklandığı yerin adresini sample1 değişkeninin kutusuna koyar. Bu, referans verme işlemi olarak adlandırılır. Yani **@** işareti ile başlayan sayı bir nevi heap'de yer alan objenin stack alanındaki referansıdır. Nesnelere referans türleri denmesinin sebebi de aslında budur.
 
-<figure style="width: 600px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/ref-obj-type.png" alt="referans ve obje tipi arasındaki fark">
-  <figcaption></figcaption>
-</figure>
-
-
-Açtığımız parantezi kapatıp kaldığımız yerden devam edebliriz. Bu referansı stack'da yer alan ``sample1`` değişkeninin içine yerleştirdiğimizi hayal edin. Aslında arka planda tam olarak buna benzer bir işlem olmaktadır.
+Bu referansı stack'da yer alan ``sample1`` değişkeninin içine yerleştirdiğimizi hayal edin. Aslında arka planda tam olarak buna benzer bir işlem olmaktadır.
 
 <figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample3.png" alt="async-variable">
@@ -143,9 +137,18 @@ Son satırda ise ``sample2.x = 5;`` sample2 değişkeninin referans aldığı ne
 
 Yukarıdaki kod bloğumuzun hafıza modeli kısaca bu şekildedir. Bu resmi bir sonraki ders **scope** konusu ile bir adım öteye taşıyacağız.
 
-## Sözlük
+### Referans ve Nesne Türleri
 
-* **statically-typed:** değişken tiplerinin açıkça bildirildiği ve derleme zamanında belirlendiği bir programlama dili karakteristiğidir. Bu, derleyicinin belirli bir değişkenin kendisinden istenen eylemleri gerçekleştirip gerçekleştiremeyeceğine karar vermesini sağlar.
+Burada küçük bir parantez açıp nesne türleri ve referans türleri arasındaki ufak farkı göstermek istiyorum. Yani heap alanındaki nesneleri stack alanında temsil etmelerinden ötürü ikisinin de aynı olduğunu düşünebilirsiniz. Ama referans ve nesne türleri de her zaman aynı olmayabilir. Aslında şunu söylemek istiyorum... Heap alanında oluşan nesnenin tipi ile, aynı nesneyi stack alanında temsil eden değişkenin, yani referansın tipi farklı olabilir. [Kalıtım](/java-hafiza-yonetimi/Java-inheritance3/) konusuna geçince bunun ne anlama geldiğini daha net anlayabilirsiniz.
+
+Aşağıdaki şekilden de görüleceği üzere referans ve obje tiplerinin neler olduğunu görüyorsunuz. [Hashmap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) sınıfı aslında Map arayüzünü(interface) uygular. [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) soyut bir sınıftır. Soyut sınıflar da ``new`` anahtar kelimesi ile oluşturulamazlar. İsterseniz deneyin!! Şu şekilde bir hata alırsınız. **'Map' is abstract; cannot be instantiated.** Abstract'ın kelime anlamı soyut, instantiated ise somutlaştırmadır. Yani bu hata mesajı bize, Map soyuttur, somutlaştırılamaz demek istemektedir.
+
+Özetle, soyut sınıflar heap alanında somut bir sınıf tarafından temsil edilmedikçe var olamazlar. HashMap ise somut(concrete) bir sınıftır.
+
+<figure style="width: 600px" class="align-center">
+ <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/ref-obj-type.png" alt="referans ve obje tipi arasındaki fark">
+ <figcaption></figcaption>
+</figure>
 
 
 ## Referanslar
