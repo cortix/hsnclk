@@ -11,7 +11,7 @@ header:
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
-  - Java
+  - java
 tags:
   - main metotu
 last_modified_at: 2018-06-06T15:12:19-04:00
@@ -26,13 +26,13 @@ toc_label: "SAYFA İÇERİĞİ"
 
 ## Genel Bakış
 
-Java'da yazılan bir program mutlaka ``main`` adlı bir yöntemle başlar. Programı çalıştırdığınızda, ``main`` yönteminin hangi sınıfta olduğunu belirtirsiniz. ``main`` yöntemi bu özel imza tipine sahip olmalıdır.
+Java'da yazılan bir program mutlaka ``main`` adlı bir yöntemle başlar. Programı çalıştırdığınızda, ``main`` yönteminin hangi sınıfta olduğunu belirtirsiniz. ``main`` yöntemi aşağıdaki gibi özel bir deklerasyona sahip olmalıdır.
 
 {% highlight java %}
 public static void main(String[] args)
 {% endhighlight %}
 
-``main`` metodu, programı başlatan kod tarafından çağrılması gerektiğinden herkese açık(*public*) olmalıdır. Bir sonraki kelime ``static``'dir. Bu, ``main`` yönteminin sınıfın her özel örneğinde yaşamadığı, aksine sınıfın bütünü için sadece bir tane olduğu anlamına gelir. Sonrasında ise ``void`` ifadesini görüyorsunuz. Bu metodun herhangi bir değer döndürmediği anlamına gelir. Ardından, yöntem adı olan ``main``'i göreceksiniz. Java, bir programı çalıştırabilmek için bu ismi kullanmanızı şart koşar. Bunun dışında bir isim veremezsiniz. Bu sebepten ötürü programı ayağa kaldırmak için main ismini veriyoruz. Bunun dışında bu metot bir de parametre olarak *String* bir dizi almıştır. Yani main isminin olması programı ayağa kaldırmak için yeterli değildir. Programı ayağa kaldırmak için Java'nın bizden beklediği bir metot imzası vardır. O da ``public static void main(String[] args)`` şeklindedir. Yani metot imzası;
+``main`` metodu, programı başlatan kod tarafından çağrılması gerektiğinden herkese açık(*public*) olmalıdır. Bir sonraki kelime ``static``'dir. Bu, ``main`` yönteminin sınıfın her özel örneğinde yaşamadığı, aksine sınıfın bütünü için sadece bir tane olduğu anlamına gelir. Sonrasında ise ``void`` ifadesini görüyorsunuz. Bu metodun herhangi bir değer döndürmediği anlamına gelir. Ardından, yöntem adı olan ``main``'i göreceksiniz. Java, bir programı çalıştırabilmek için bu ismi kullanmanızı şart koşar. Bunun dışında bir isim veremezsiniz. Bu sebepten ötürü programı ayağa kaldırmak için main ismini veriyoruz. Bunun dışında bu metot bir de parametre olarak *String* bir dizi almıştır. Yani main isminin olması programı ayağa kaldırmak için yeterli değildir. Programı ayağa kaldırmak için Java'nın bizden beklediği bir metot deklerasyonu vardır. O da ``public static void main(String[] args)`` şeklindedir. Yani metot deklerasyonu;
 
 * Hem ``public`` olacak,
 * Hem ``static`` olacak,
@@ -81,6 +81,7 @@ Statik anahtar sözcüğü, bir yönteme veya üye değişkenine uygulandığın
 ## Referanslar
 
 * [https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html)
+* [https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
 * [http://courses.cms.caltech.edu/cs11/material/java/donnie/java-main.html#:~:text=The%20classes%20in%20the%20java,num%20%3D%200%3B%20...](http://courses.cms.caltech.edu/cs11/material/java/donnie/java-main.html#:~:text=The%20classes%20in%20the%20java,num%20%3D%200%3B%20...)
 
 * [http://www.dickbaldwin.com/java/Java032.htm](http://www.dickbaldwin.com/java/Java032.htm)

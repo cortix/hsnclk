@@ -1,7 +1,7 @@
 ---
-title: "Java'da Kalıtım 1 - Kalıtımı Neden Kullanırız? En Temel Kalıtım Kuralları Nelerdir?"
+title: "Java'da Kalıtım 1 - Kalıtımı Neden Kullanırız? Kalıtımı Sağlamak İçin Asgari Hedefler Nelerdir?"
 comments: true
-excerpt: "Bu derste Java'daki kalıtım ve polimorfizm kavramlarını genel olarak ele alacak ve bununla birlikte en temel kalıtım kurallarının neler olduğunu işleyeceğiz."
+excerpt: "Bu derste Java'daki kalıtım ve polimorfizm kavramlarını genel olarak ele alacak ve bununla birlikte kalıtımı sağlamak için asgari hedeflerin neler olduğunu işleyeceğiz."
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
@@ -14,7 +14,7 @@ categories:
   - java-kalitim-polimorfizm
 tags:
   - spagetti kodlama
-  - kalıtım kuralları
+  - kalıtımı sağlamak için asgari hedefler
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -111,7 +111,7 @@ public class Faculty {
 ```
 Peki buradan ne gibi problemler çıkardı? Cevabınız, tutarlılıkla(consistency) veya bütün nesneleri tek bir veri yapısında saklama özelliğiyle ilgiliyse, doğru yoldasınız demektir. Şimdi her ikisinde de konuşalım. Buradaki problem aslında tam olarak şudur. Örneğin ``Person`` sınıfının kodunda değişiklik yapmak istediğinizde, bu değişiklikleri ``Student`` ve ``Faculty`` sınıflarına da uygulamamız gerekecektir. Peki bunu her seferinde kopyala-yapıştır şeklinde mi yapacağız? Böyle yaparsak ortak kodu **tutarlı** tutmak gerçekten zor olacak.
 
-Veyahut ``Person[]`` tipinde bir dizi oluşturmak istiyoruz. Bu dizinin öğrenci mi yoksa fakülte üyesi mi olduğuna nasıl karar vereceğim? Diyelim ki bunu sadece öğrenciler ve sadece fakülte üyeleri şeklinde iki farklı diziye ayırırsam ne olur? ``Student[]`` ve ``Faculty[]`` .... O zaman da kişileri temsil eden diziyi bir daha asla kullanamam. Sonuç olarak öğrenciler ve fakülte üyeleri için iki farklı dizi tutmam gerekecek. Tüm insanlar için tek bir veri yapısı tutmanın bir yolu olmadığını da görüyorum. Peki bu neden önemlidir? Yani sadece Person şeklinde tutmanın ne önemi olacak? Belkide amacımız, okuldaki insanları, öğrenci veya öğretim görevlisi ayrımı yapmadan tek bir çatı altında kayıt altına almak olabilirdi. Yalnız bu durumda bunu yapmak gerçekten zor olurdu. Öğrencileri potansiyel olarak sıralayabilirim, öğretim görevlilerini de sıralayabilirim, ama bunları nasıl birleştirebilirim? Esasen, bu iki örneğe bakarak ne yapmamız gerektiğini az çok anladık. Buradaki hedefler,
+Veyahut ``Person[]`` tipinde bir dizi oluşturmak istiyoruz. Bu dizinin öğrenci mi yoksa fakülte üyesi mi olduğuna nasıl karar vereceğim? Diyelim ki bunu sadece öğrenciler ve sadece fakülte üyeleri şeklinde iki farklı diziye ayırırsam ne olur? ``Student[]`` ve ``Faculty[]`` .... O zaman da kişileri temsil eden diziyi bir daha asla kullanamam. Sonuç olarak öğrenciler ve fakülte üyeleri için iki farklı dizi tutmam gerekecek. Tüm insanlar için tek bir veri yapısı tutmanın bir yolu olmadığını da görüyorum. Peki bu neden önemlidir? Yani sadece Person şeklinde tutmanın ne önemi olacak? Belkide amacımız, okuldaki insanları, öğrenci veya öğretim görevlisi ayrımı yapmadan tek bir çatı altında kayıt altına almak olabilirdi. Yalnız bu durumda bunu yapmak gerçekten zor olurdu. Öğrencileri potansiyel olarak sıralayabilirim, öğretim görevlilerini de sıralayabilirim, ama bunları nasıl birleştirebilirim? Esasen, bu iki örneğe bakarak ne yapmamız gerektiğini az çok anladık. Buradaki **hedefler**,
 
 1. Bütün ortak davranışları bir sınıfta tutmak,
 2. Farklı davranışa sahip olanları ise farklı sınıflara ayırmak
