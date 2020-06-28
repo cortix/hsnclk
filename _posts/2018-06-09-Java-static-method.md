@@ -11,7 +11,7 @@ header:
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
-  - Java
+  - java
 tags:
   - static metot
   - değişkenler
@@ -168,7 +168,7 @@ Böylece, statik alanlar ve sınıfların metotları, statik olmayan alanlara ve
 
 JDK 8'den önce HotSpot JVM, kalıcı Nesil(*Permanent  Generation*) olarak adlandırılan üçüncü bir nesle(*third generation*) sahipti. Statik yöntemler (aslında tüm yöntemler) ve bunun yanısıra statik değişkenler, sınıf meta verileri heap alanına bitişik(*contiguous*) olan ``Permgen`` adında bir alanda tutulurdu. Kısaca bahsetmem gerekirse, bu alanda sınıf yöntem ve değişkenlerinin yanısıra, sınıfların JVM iç gösterimi(*internal representation*) ve meta verileri ve *interned strings*'ler yer almaktaydı. JDK 8 den sonra bu generation'ının yerini ``metaspace`` almıştır. ``Permgen``den farklı olarak bu alan Java Heap ile bitişik değildir(*Not contiguous*). Metaspace "native memory" den ayrılmıştır ve ``metaspace`` için maksimum alan kullanılabilir sistem hafızasıdır. Fakat bu ``MaxMetaspaceSize`` JVM seçeneği ile sınırlandırılabilir. Yalnız öncesinde bu hafıza ``Permgen``de sınırlı idi. Özetle JDK 8 öncesi ve sonrası olmak üzere iki farklı cevabımız bulunmaktadır.
 
-Daha detaylı bilgi almak isterseniz aşağıdaki referanslara göz gezdirebilirsiniz. 
+Daha detaylı bilgi almak isterseniz aşağıdaki referanslara göz gezdirebilirsiniz.
 
 Referanslar:
 

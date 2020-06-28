@@ -11,7 +11,7 @@ header:
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
-  - Java
+  - java-paralel-programlama
 tags:
   - threads
   - paralel programlama
