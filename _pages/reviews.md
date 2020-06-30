@@ -16,7 +16,7 @@ classes: wide
 ---
 
 <h2>Kitap Değerlendirmeleri</h2>
-{% for post in site.categories.Reviews %}
+{% for post in site.categories.book-reviews %}
   {% include archive-single.html type="grid"%}
 {% endfor %}
 
