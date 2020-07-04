@@ -170,7 +170,7 @@ public class Sample {
 ```
 Yukarıdaki koda baktığımızda görünüşte bir sıkıntının olmadığını söyleyebilirsiniz. 3.satırda  ``SampleTest`` tipinde bir nesne yaratılıyor ve bu nesnenin ``calculate()`` metodu çağırılarak işlem yapılıyor. Buraya kadar her şey normal fakat 5.satırda bir fark var. Burada referans tipi olarak ``Object`` sınıfı tercih edilmiş. Aslında gayet normal diyebilirsiniz. Çünkü şunu biliyoruz ki java'da her şey bir nesnedir ve ``Object`` sınıfını miras alır. Bu yüzden de bu satırda herhangi bir derleme hatası almayız. Asıl sorun 6.satırda gerçekleşecektir. Çünkü Java derleme zamanında referans tiplerine bakar. Referans tipimiz olan ``Object`` sınıfının da ``calculate()`` isminde bir metodu olmadığı için derleme hatası(compile time error) alırız. Özetle java, çalışma zamanına(run-time) geçmeden heap alanında hangi nesneyi referans aldığını bilemez.
 
-İleriki konularda referans türüne göre derleme zamanında hangi kararların alındığı ve nesne türüne göre çalışma zamanında hangi kararların alındığı hakkında konuşacağız.
+İleriki konularda referans türüne göre derleme zamanında hangi kararların alındığı ve nesne türüne göre çalışma zamanında hangi kararların alındığı hakkında konuşacağız. Ama öncesinde bu konuyla çok bağlantılı olan bir konuyu ele alacağız. Statik ve dinamik türler nelerdir? Bundan sonraki derste bu konuyu ele almak istiyorum.
 
 ## Referanslar
 * [https://en.wikipedia.org/wiki/Is-a](https://en.wikipedia.org/wiki/Is-a)
