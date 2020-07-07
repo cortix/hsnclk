@@ -43,7 +43,16 @@ Tam da bu noktada, böyle bir planımız olmadığı halde, Object sınıfını 
 
 ## Java Nasıl Çalışır?
 
-Java programlama dilinde, tüm kaynak kodu önce ``.java`` uzantısıyla biten düz metin dosyalarında yazılır. Bu kod bir editör aracılığıyla yazdığımız java programlama dilidir ve okunabilir(human-readeble) bir koddur. Bu kaynak dosyalar daha sonra ``javac`` derleyicisi(compiler) tarafından ``.class`` dosyalarına derlenir. Bir ``.class`` dosyası, bilgisayar işlemcinize özgü makine kodu(native code) içermez; bunun yerine bunun yerine ``bytecodes`` içerir. ``bytecode`` Java Sanal Makinesi'nin(JVM) makine dilidir. JVM ise bu ``bytecode`` yorumlar(interpret). Daha sonrasında ``java`` başlatıcı aracı, uygulamanızı Java Virtual Machine örneğiyle çalıştırır.
+
+
+Java programlama dilinde, tüm kaynak kodu önce ``.java`` uzantısıyla biten düz metin dosyalarında yazılır. Bu kaynak kodu bir editör aracılığıyla yazdığımız java programlama dilidir ve okunabilir(human-readeble) bir koddur. Yalnız java ile yazılan bir uygulamanın JVM'de çalıştırılabilmesi için önce uygulamanın Java kaynak kodunu JVM'nin tanıdığı bir biçime dönüştürmesi gerekir.
+
+> Bu arada JVM'den kısaca bahsetmek istiyorum. Java Sanal Makinesi, Java programlama dilinin merkezinde yer alır. Aslında, Java Sanal Makinesi uygulamasını çalıştırmadan bir Java programını çalıştıramazsınız. Java Sanal Makinesi, aslında bir Java programını çalıştıran motorun adıdır ve taşınabilirliği, verimliliği ve güvenliği de dahil olmak üzere Java'nın birçok özelliğinin anahtarıdır.
+
+
+Kaldığımız yerden devam edecek olursak, bu kaynak dosyalar daha sonra ``javac`` derleyicisi(compiler) tarafından ``.class`` dosyalarına derlenir. ``javac`` gibi derleyiciler genellikle Java kaynak kodunu Java sınıfı(yani ``.class``) dosya biçiminde derlemek için kullanılır. Bir ``.class`` dosyası, bilgisayar işlemcinize özgü makine kodu(native code) içermez; bunun yerine bunun yerine ``bytecodes`` içerir. ``bytecode`` Java Sanal Makinesi'nin(JVM) makine dilidir. JVM ise bu ``bytecode`` yorumlar(interpret). Daha sonrasında ``java`` başlatıcı aracı, uygulamanızı Java Virtual Machine örneğiyle çalıştırır.
+
+> javac, Oracle'ın Java Geliştirme Kiti'nde (JDK) bulunan birincil bir Java derleyicisidir(compiler). Derleyici, Java dil şartnamesine (Java language specification-JLS) uygun kaynak kodunu kabul eder ve Java Sanal Makine Şartnamesi'ne (JVMS-Java Virtual Machine Specification) uygun Java bayt kodu üretir.
 
 <figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/getStarted-compiler.gif" alt="getStarted-compiler">
@@ -150,3 +159,5 @@ Sizce neden derleyicinin kodunuzu derlerken uyguladığı kuralları öğreniyor
 * [https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqd/index.html](https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqd/index.html)
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
 * [https://www.coursera.org/learn/object-oriented-java/lecture/QHiQe/core-compiler-rules-for-class-construction](https://www.coursera.org/learn/object-oriented-java/lecture/QHiQe/core-compiler-rules-for-class-construction)
+* [https://en.wikipedia.org/wiki/Javac](https://en.wikipedia.org/wiki/Javac)
+* [https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html)
