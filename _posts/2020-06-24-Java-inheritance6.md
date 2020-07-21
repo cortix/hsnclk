@@ -16,6 +16,9 @@ tags:
   - nesne oluşumu
   - Kurucu(constructor)
   - derleyici kuralları
+  - Java Virtual Machine(jvm)
+  - Javac
+
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -161,3 +164,4 @@ Sizce neden derleyicinin kodunuzu derlerken uyguladığı kuralları öğreniyor
 * [https://www.coursera.org/learn/object-oriented-java/lecture/QHiQe/core-compiler-rules-for-class-construction](https://www.coursera.org/learn/object-oriented-java/lecture/QHiQe/core-compiler-rules-for-class-construction)
 * [https://en.wikipedia.org/wiki/Javac](https://en.wikipedia.org/wiki/Javac)
 * [https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html)
+* JAVA Virtual Machine - Jon Meyer & Troy Downing
