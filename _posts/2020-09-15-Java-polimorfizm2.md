@@ -69,7 +69,7 @@ Bu sözün aslında altında yatan mantık çok açıktır. Çünkü bir kodu he
 2. **Derleme zamanında yayımlanan yöntem imzasını gerçek çalışma zamanı sınıfındaki uygun yöntemle eşleştirir:** Yukarıdaki örnekten yola çıkarsak, ``s.toString`` yapmaya çalıştığımızda, artık Java çalışma zamanında, **s**'in aslında bir Student nesnesi olduğunu bilir. Yani Student sınıfında toString yöntemini bulacak ve çalışma zamanında çalıştıracaktır.
 
     <figure style="width: 600px" class="align-center">
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml3.png" alt="polimorfizm">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4.png" alt="polimorfizm">
       <figcaption></figcaption>
     </figure>
 
