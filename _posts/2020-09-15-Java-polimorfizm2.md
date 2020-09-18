@@ -103,6 +103,6 @@ Yalnız koda baktığımızda bu metodun Student sınıfında bulunduğunu biliy
 * [Dynamic Class Loading Example](https://examples.javacodegeeks.com/core-java/dynamic-class-loading-example/)
 * [https://www.clear.rice.edu/comp310/JavaResources/dynamic_class_load.html](https://www.clear.rice.edu/comp310/JavaResources/dynamic_class_load.html)
 * [http://tutorials.jenkov.com/java-reflection/dynamic-class-loading-reloading.html](http://tutorials.jenkov.com/java-reflection/dynamic-class-loading-reloading.html)
-* https://dzone.com/articles/fully-dynamic-classes-with-asm
+* [https://dzone.com/articles/fully-dynamic-classes-with-asm](https://dzone.com/articles/fully-dynamic-classes-with-asm)
 * [https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
 * [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
