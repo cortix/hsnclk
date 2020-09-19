@@ -1,7 +1,7 @@
 ---
 title: "Java'da Polimorfizm 3 - Casting"
 comments: true
-excerpt: "Bu bölümde casting işleminin ne olduğuna ve hangi durumlarda bu işleme ihtiyaç duyulduğuna bakacağız."
+excerpt: "Bu bölümde casting işleminin ne olduğuna ve hangi durumlarda bu işleme ihtiyaç duyulduğuna bakacağız. Aynı zamanda bazı casting türleri hakkında bilgi verecek ve casting işleminin derleme ve çalışma zamanlarına etkileri hakkında konuşacağız."
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/page-header-og-image.png
@@ -15,6 +15,9 @@ categories:
 tags:
   - polimorfizm
   - casting
+  - Widening Casting
+  - Narrowing Casting
+  - instanceof
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -26,7 +29,7 @@ toc_label: "SAYFA İÇERİĞİ"
 {: .notice}
 
 
-Bazı durumlarda derleme ve çalışma zamanı kararlarını değiştirmek için derleyiciye yardım etmek gerekebilir. Bu gibi durumlarda casting işlemini uygularız. Ne demek istediğimi bir öndeki bölümde yarım bıraktığımız kod üzerinde göstermek istiyorum.
+Bazı durumlarda derleme ve çalışma zamanı kararlarını değiştirmek için derleyiciye yardım etmek gerekebilir. Bu gibi durumlarda casting işlemini uygularız. Ne demek istediğimi bir öndeki bölümde yarım bıraktığımız kod üzerinden göstermek istiyorum.
 
 <figure style="width: 200px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml1.png" alt="polimorfizm">
@@ -39,15 +42,17 @@ s.getSID();
 ```
 Şu şekilde bir hata alırız: ``Compile time error: Cannot resolve method 'getSID' in 'Person'``
 
-Hatırlayacağınız üzere derleme zamanında, derleyici SADECE referans tipini bildiğinden ve metot çağrıları için sadece referans tipinin sınıfına bakacağından, Person sınıfında getSID metodunu bulamayacaktır. Ama biz bu metodun Student sınıfında olduğunu biliyoruz. Student sınıfına da ancak **çalışma zamanında** erişebileceğimiz için, ya derleme zamanı hatasını almaya razı olacağız ya da derleyiciye bir **taahhüt** vererek bu metodun aslında Student sınıfında bulunduğunu söyleyeceğiz. Şayet 2. yöntemi seçersek, casting denen işlemi uygulamamız gerekmektedir.
+Hatırlayacağınız üzere derleme zamanında, derleyici **SADECE** referans tipini bildiğinden ve metot çağrıları için sadece referans tipinin sınıfına bakacağından, Person sınıfında ``getSID`` metodunu bulamayacaktır. Ama biz bu metodun Student sınıfında olduğunu biliyoruz. Student sınıfına da ancak **çalışma zamanında** erişebileceğimiz için, ya derleme zamanı hatasını almaya razı olacağız ya da derleyiciye bir **taahhüt** vererek bu metodun aslında Student sınıfında bulunduğunu söyleyeceğiz. Şayet 2. yöntemi seçersek, casting denen işlemi uygulamamız gerekmektedir.
 
 Öncelikli olarak casting çeşitleri hakkında bilgi vermek istiyorum. Sonrasında yukarıdaki sorunun çözümünü ele alırız.
 
-1. Widening(genişletme) Casting (otomatik olarak gerçekleşir) - daha küçük bir türü daha büyük bir türe dönüştürme işlemine denir.
+1. **Widening(genişletme) Casting (otomatik olarak gerçekleşir)** - daha küçük bir türü daha büyük bir türe dönüştürme işlemine denir.
 
     * ``byte`` -> ``short`` -> ``char`` -> ``int`` -> ``long`` -> ``float`` -> ``double``
     *  Subclass -> Superclass
-    *  Superclass ref = new Subclass(); gibi veyahut
+    *  Superclass ref = new Subclass();
+
+    gibi veyahut
 
     ```java
     public class TestClass {
@@ -62,7 +67,7 @@ Hatırlayacağınız üzere derleme zamanında, derleyici SADECE referans tipini
     ```
     Dikkat ederseniz ekstra bir şey yazmadan java otomatik olarak int türünü double türüne dönüştürdü.
 
-2. Narrowing(daraltma) Casting (elle belirtmeniz gerekmektedir) - daha büyük bir türü daha küçük boyutlu bir türe dönüştürme işlemidir.
+2. **Narrowing(daraltma) Casting (elle belirtmeniz gerekmektedir)** - daha büyük bir türü daha küçük boyutlu bir türe dönüştürme işlemidir.
 
     * ``double`` -> ``float`` -> ``long`` -> ``int`` -> ``char`` -> ``short`` -> ``byte``
     * Superclass -> Subclass
@@ -80,7 +85,7 @@ Hatırlayacağınız üzere derleme zamanında, derleyici SADECE referans tipini
     }
     ```
 
-    Burada da sampleDouble değişkeni bir double olduğu için int türünü daraltırken daraltacağınız türü bu şekilde (int) cast ettiğinizi belirtmeniz gerekmektedir.
+    Burada da sampleDouble değişkeni bir double olduğu için, bu türü int türünü daraltırken daraltacağınız türü bu şekilde (int) cast ettiğinizi belirtmeniz gerekmektedir. Yani bu casting türünde elle uygulayacağınız türü belirtmeniz gerekmektedir.
 
     Bu casting türünde(bu, bölümün ta en başta verdiğimiz örnek oluyor) çok dikkatli olmamız gerekmektedir. Çünkü bunu yaparak bir nevi derleyiciye size güvenmesini söylüyorsunuz. **"Derleyici bana güvenmen gerekiyor, çünkü bunun çalışma zamanında bir Alt Sınıf referansı olacağını biliyorum," diyorsunuz.**
 
@@ -117,9 +122,12 @@ if(s instanceof Student){
 ```
 ``s instanceof Student`` anlamı ``s`` Student sınıfının bir örneği midir? şeklinde bir soru soruyorsunuz.. Diğer bir şekilde ifade edecek olursak, ``s`` çalışma zamanında Student ile bir ilişki içinde mi? Yalnız bu operatörün çalışma zamanında test ettiğini unutmayın.
 
+Özet geçecek olursak, polimorfizm konusunun derleme zamanı ve çalışma zamanı kararlarını alırken nasıl önemli olduğunu daha net gördük.
+
 
 
 ## Referanslar
 * [https://www.w3schools.com/java/java_type_casting.asp](https://www.w3schools.com/java/java_type_casting.asp)
 * [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html)
+* [https://docs.oracle.com/en/java/javase/14/language/pattern-matching-instanceof-operator.html](https://docs.oracle.com/en/java/javase/14/language/pattern-matching-instanceof-operator.html)
 * [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
