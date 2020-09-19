@@ -43,50 +43,46 @@ Hatırlayacağınız üzere derleme zamanında, derleyici SADECE referans tipini
 
 Öncelikli olarak casting çeşitleri hakkında bilgi vermek istiyorum. Sonrasında yukarıdaki sorunun çözümünü ele alırız.
 
-* Widening(genişletme) Casting (otomatik olarak gerçekleşir) - daha küçük bir türü daha büyük bir türe dönüştürme işlemine denir.
+1. Widening(genişletme) Casting (otomatik olarak gerçekleşir) - daha küçük bir türü daha büyük bir türe dönüştürme işlemine denir.
 
-``byte`` -> ``short`` -> ``char`` -> ``int`` -> ``long`` -> ``float`` -> ``double``
+    * ``byte`` -> ``short`` -> ``char`` -> ``int`` -> ``long`` -> ``float`` -> ``double``
+    *  Subclass -> Superclass
+    *  Superclass ref = new Subclass(); gibi veyahut
 
-Subclass -> Superclass
+    ```java
+    public class TestClass {
+      public static void main(String[] args) {
+        int sampleInt = 2;
+        double sampleDouble = sampleInt; // otomatik casting: int'den double'a
 
-Superclass ref = new Subclass(); gibi veyahut
+        System.out.println(sampleInt);      // Çıktı 2
+        System.out.println(sampleDouble);   // Çıktı 2.0
+      }
+    }
+    ```
+    Dikkat ederseniz ekstra bir şey yazmadan java otomatik olarak int türünü double türüne dönüştürdü.
 
-```java
-public class TestClass {
-  public static void main(String[] args) {
-    int sampleInt = 2;
-    double sampleDouble = sampleInt; // otomatik casting: int'den double'a
+2. Narrowing(daraltma) Casting (elle belirtmeniz gerekmektedir) - daha büyük bir türü daha küçük boyutlu bir türe dönüştürme işlemidir.
 
-    System.out.println(sampleInt);      // Çıktı 2
-    System.out.println(sampleDouble);   // Çıktı 2.0
-  }
-}
-```
-Dikkat ederseniz ekstra bir şey yazmadan java otomatik olarak int türünü double türüne dönüştürdü.
+    * ``double`` -> ``float`` -> ``long`` -> ``int`` -> ``char`` -> ``short`` -> ``byte``
+    * Superclass -> Subclass
+    * Subclass ref = (Subclass) superRef;
 
-* Narrowing(daraltma) Casting (elle belirtmeniz gerekmektedir) - daha büyük bir türü daha küçük boyutlu bir türe dönüştürme işlemidir.
+    ```java
+    public class TestClass {
+      public static void main(String[] args) {
+        double sampleDouble = 2.66;
+        int sampleInt = (int) sampleDouble; // Manuel casting: double'dan int'e
 
-``double`` -> ``float`` -> ``long`` -> ``int`` -> ``char`` -> ``short`` -> ``byte``
+        System.out.println(sampleDouble);   // Çıktı 2.66
+        System.out.println(sampleInt);      // Çıktı 2
+      }
+    }
+    ```
 
-Superclass -> Subclass
+    Burada da sampleDouble değişkeni bir double olduğu için int türünü daraltırken daraltacağınız türü bu şekilde (int) cast ettiğinizi belirtmeniz gerekmektedir.
 
-Subclass ref = (Subclass) superRef;
-
-```java
-public class TestClass {
-  public static void main(String[] args) {
-    double sampleDouble = 2.66;
-    int sampleInt = (int) sampleDouble; // Manuel casting: double'dan int'e
-
-    System.out.println(sampleDouble);   // Çıktı 2.66
-    System.out.println(sampleInt);      // Çıktı 2
-  }
-}
-```
-
-Burada da sampleDouble değişkeni bir double olduğu için int türünü daraltırken daraltacağınız türü bu şekilde (int) cast ettiğinizi belirtmeniz gerekmektedir.
-
-Bu casting türünde(bu, bölümün ta en başta verdiğimiz örnek oluyor) çok dikkatli olmamız gerekmektedir. Çünkü bunu yaparak bir nevi derleyiciye size güvenmesini söylüyorsunuz. **"Derleyici bana güvenmen gerekiyor, çünkü bunun çalışma zamanında bir Alt Sınıf referansı olacağını biliyorum," diyorsunuz.**
+    Bu casting türünde(bu, bölümün ta en başta verdiğimiz örnek oluyor) çok dikkatli olmamız gerekmektedir. Çünkü bunu yaparak bir nevi derleyiciye size güvenmesini söylüyorsunuz. **"Derleyici bana güvenmen gerekiyor, çünkü bunun çalışma zamanında bir Alt Sınıf referansı olacağını biliyorum," diyorsunuz.**
 
 Şimdi en baştaki soruya geri dönelim. Şayet ilgili metot çağırma işlemini şu şekilde yaparsam derleme zamanındaki sorunu çözmüş olurum.
 
