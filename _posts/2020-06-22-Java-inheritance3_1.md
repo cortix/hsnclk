@@ -63,8 +63,6 @@ data = 10;
 data = "Hello World!";
 ```
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=data%20%3D%2010%3B%0Adata%20%3D%20%22Hello%20World!%22%3B&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
-
 Çalışma zamanında bir değişkenin türü kontrol edilirse bu, dinamik tip bir dil olarak adlandırılır. Dinamik olarak yazılan dillerde, değişkenlerin veri türlerini bildirmenize gerek yoktur. Yani java'da olduğu gibi referans türü diye bir şey yoktur. Yukarıdaki ifade de, öncesinde bir sayı atanandan aynı değişkene, bu sefer **string** bir değer atanıyor. Program başarıyla hatasız yürütülecektir. Bu, dinamik tip programlama dillerinin karakteristiğidir. Yani bütün olay çalışma zamanında gerçekleşir.
 
 Dinamik tip dillerde değişkenler nesnelere, çalışma zamanında atama ifadeleriyle bağlanır ve programın yürütülmesi sırasında aynı değişkenleri farklı türdeki nesnelere bağlamak mümkündür. Bir sonraki bölüm zaten statik ve dinamik bağlama konusu olacak. Burada hangi durumlarda statik bağlama, hangi durumlarda dinamik bağlama tercih edilir, ona bakacağız.
@@ -96,7 +94,7 @@ a = "Hello"
 a = a + 10;
 ```
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=a%20%3D%20%22Hello%22%0Aa%20%3D%20a%20%2B%2010%3B&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=2&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+Hata mesajını canlı görüntülemek için koda bu [link](http://www.pythontutor.com/visualize.html#code=a%20%3D%20%22Hello%22%0Aa%20%3D%20a%20%2B%2010%3B&cumulative=false&curInstr=2&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false) üzerinden de bakabilirsiniz.
 
 Görüleceği üzere ``a`` değişkeni, **string** bir değer olmasına rağmen bir sayı ile toplanılmaya çalışılıyor. Sonuç olarak **TypeError: must be str, not int** şeklinde bir hata ile karşılaşıyoruz. Bu bize, her ne kadar dinamik bir tip olsa da çalışma zamanında içsel bir denetimin olduğunu gösterir. Gerçi java bu denetimi daha en başında yani derleme zamanında bize söyler. Bu yüzden;
 * Java, static ve strong-typed bir dildir.
@@ -111,7 +109,7 @@ var a = "5" + 2;
 var b = 2;
 ```
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=var%20a%20%3D%20%225%22%20%2B%202%3B%0Avar%20b%20%3D%202%3B&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=2&heapPrimitives=nevernest&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+Canlı görüntülemek için koda bu [link](http://www.pythontutor.com/javascript.html#code=var%20a%20%3D%20%225%22%20%2B%202%3B%0Avar%20b%20%3D%202%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D) üzerinden de bakabilirsiniz.
 
 Görüleceği üzere ``a`` değişkeni bir **string** ve bir **sayı** ile toplanılmaya çalışılıyor. Sonuç olarak ``a`` değişkeni, **strong-typed** bir dil olan python'da olduğu gibi hata vermiyor ve "52" şeklinde bir sonucu karşımıza çıkıyor. Ama benzer şeyi python yapmamıza izin vermemişti. Çünkü tırnak içine aldığımız değeri python **string** olarak algılayıp ona göre bir işlem yapmaya çalışır. Bu yüzden bu tarz dillere **weakly-typed**(zayıf tip) diller denir.
 
