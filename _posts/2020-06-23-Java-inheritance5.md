@@ -106,6 +106,4 @@ Nesneleri oluştururken, alt sınıf kurucuları, üst sınıf kurucularını hi
 ## Referanslar
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
 * [OCA Java SE 8 Programmer I Exam Guide (Exams 1Z0-808)](https://www.amazon.com/Java-Programmer-Guide-Exams-1Z0-808/dp/1260011399)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/C1mcK/core-visibility-modifiers](https://www.coursera.org/learn/object-oriented-java/lecture/C1mcK/core-visibility-modifiers)
-* [https://www.coursera.org/learn/object-oriented-java/discussions/weeks/4/threads/Y2Z1KsI6EeemsxIeSdRoqg/replies/uQnB5cgsEeemkhJKRD6SRA](https://www.coursera.org/learn/object-oriented-java/discussions/weeks/4/threads/Y2Z1KsI6EeemsxIeSdRoqg/replies/uQnB5cgsEeemkhJKRD6SRA)
-* https://www.coursera.org/learn/object-oriented-java/discussions/weeks/4/threads/rjslR6OMEee1fxJ_AEil0g
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

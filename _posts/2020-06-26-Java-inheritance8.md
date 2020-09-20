@@ -113,6 +113,4 @@ Benzer şekilde main metodu içinde bulunan kod bloğu çalıştırılmak istend
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
 * [https://www.javatpoint.com/this-keyword](https://www.javatpoint.com/this-keyword)
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/MqukN/core-variable-initialization-in-a-class-hierarchy](https://www.coursera.org/learn/object-oriented-java/lecture/MqukN/core-variable-initialization-in-a-class-hierarchy)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/GafmM/concept-challenge-inheritance-constructors-1](https://www.coursera.org/learn/object-oriented-java/lecture/GafmM/concept-challenge-inheritance-constructors-1)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/YKQqC/concept-challenge-inheritance-constructors-2](https://www.coursera.org/learn/object-oriented-java/lecture/YKQqC/concept-challenge-inheritance-constructors-2)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

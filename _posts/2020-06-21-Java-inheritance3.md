@@ -132,9 +132,41 @@ Sonuç olarak aşağıdaki iki atama işlemi derleme zamanı hatası alır.
 f = q;
 int m = p.getID();
 ```
-Aşağıda deneyerek görebilirsiniz. Derleme hatası aldığımız yerleri yorum satırı içine aldığımı farkedeceksiniz. Yorum satırını kaldırıp deneyebilirsiniz.
+Aşağıda kodu bu [linke](http://pythontutor.com/java.html#code=public%20class%20TestFaculty%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20Student%20s%20%3D%20new%20Student%28%29%3B%0A%20%20%20%20%20%20Person%20p%20%3D%20new%20Person%28%29%3B%0A%20%20%20%20%20%20Person%20q%20%3D%20new%20Person%28%29%3B%0A%20%20%20%20%20%20Faculty%20f%20%3D%20new%20Faculty%28%29%3B%0A%20%20%20%20%20%20Object%20o%20%3D%20new%20Faculty%28%29%3B%0A%0A%20%20%20%20%20%20String%20n%20%3D%20s.getName%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20p%20%3D%20s%3B%0A%20%20%20%20%20%20%20%20%20%20//int%20m%20%3D%20p.getID%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20//f%20%3D%20q%3B%0A%20%20%20%20%20%20%20%20%20%20o%20%3D%20s%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%0A%20%20%20%20class%20Person%20%7B%0A%20%20%20%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20%20%20%20public%20String%20getName%28%29%20%7Breturn%20name%3B%7D%0A%20%20%20%20%7D%0A%0A%20%20%20%20class%20Student%20extends%20Person%20%7B%0A%20%20%20%20%20%20%20%20private%20int%20id%3B%0A%20%20%20%20%20%20%20%20public%20int%20getID%28%29%20%7Breturn%20id%3B%7D%0A%20%20%20%20%7D%0A%0A%20%20%20%20class%20Faculty%20extends%20Person%20%7B%0A%20%20%20%20%20%20%20%20private%20String%20id%3B%0A%20%20%20%20%20%20%20%20public%20String%20getID%28%29%20%7Breturn%20id%3B%7D%0A%20%20%7D&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ulaşarak da görüntüleyebilirsiniz. Derleme hatası aldığımız yerleri yorum satırı içine aldığımı farkedeceksiniz. Yorum satırını kaldırıp siz de deneyebilirsiniz.
 
-<iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public%20class%20TestFaculty%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20Student%20s%20%3D%20new%20Student%28%29%3B%0A%20%20%20%20%20%20Person%20p%20%3D%20new%20Person%28%29%3B%0A%20%20%20%20%20%20Person%20q%20%3D%20new%20Person%28%29%3B%0A%20%20%20%20%20%20Faculty%20f%20%3D%20new%20Faculty%28%29%3B%0A%20%20%20%20%20%20Object%20o%20%3D%20new%20Faculty%28%29%3B%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20String%20n%20%3D%20s.getName%28%29%3B%0A%20%20%20%20%20%20p%20%3D%20s%3B%0A%20%20%20%20%20%20//int%20m%20%3D%20p.getID%28%29%3B%20%0A%20%20%20%20%20%20//f%20%3D%20q%3B%20%0A%20%20%20%20%20%20o%20%3D%20s%3B%0A%20%20%20%20%7D%0A%7D%0A%0Aclass%20Person%20%7B%0A%20%20%20%20private%20String%20name%3B%0A%20%20%20%20public%20String%20getName%28%29%20%7Breturn%20name%3B%7D%0A%7D%0A%0Aclass%20Student%20extends%20Person%20%7B%0A%20%20%20%20private%20int%20id%3B%0A%20%20%20%20public%20int%20getID%28%29%20%7Breturn%20id%3B%7D%0A%7D%0A%0Aclass%20Faculty%20extends%20Person%20%7B%0A%20%20%20%20private%20String%20id%3B%0A%20%20%20%20public%20String%20getID%28%29%20%7Breturn%20id%3B%7D%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+```java
+public class TestFaculty {
+    public static void main(String[] args) {
+      Student s = new Student();
+      Person p = new Person();
+      Person q = new Person();
+      Faculty f = new Faculty();
+      Object o = new Faculty();
+
+      String n = s.getName();
+	      p = s;
+	      //int m = p.getID();
+	      //f = q;
+	      o = s;
+	    }
+	}
+
+	class Person {
+	    private String name;
+	    public String getName() {return name;}
+	}
+
+	class Student extends Person {
+	    private int id;
+	    public int getID() {return id;}
+	}
+
+	class Faculty extends Person {
+	    private String id;
+	    public String getID() {return id;}
+	}
+```
+
 
 ## Derleme Zamanı ve Çalışma Zamanı Kararları
 
@@ -177,4 +209,4 @@ Yukarıdaki koda baktığımızda görünüşte bir sıkıntının olmadığın�
 * [https://www.w3resource.com/java-tutorial/inheritance-composition-relationship.php](https://www.w3resource.com/java-tutorial/inheritance-composition-relationship.php)
 * [https://www.baeldung.com/java-inheritance-composition](https://www.baeldung.com/java-inheritance-composition)
 * [https://docs.oracle.com/javase/tutorial/java/generics/inheritance.html](https://docs.oracle.com/javase/tutorial/java/generics/inheritance.html)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/h75Dw/core-reference-vs-object-type](https://www.coursera.org/learn/object-oriented-java/lecture/h75Dw/core-reference-vs-object-type)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

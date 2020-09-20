@@ -337,9 +337,6 @@ Reference by Passing, "calling-function" daki bir argümanın adresini "called f
 Referans yoluyla geçirme, değişkenin bellek adresinin metoda iletildiği anlamına gelir. -->
 
 
-
-
-
 ## Referanslar
 
 * [https://blog.penjee.com/passing-by-value-vs-by-reference-java-graphical/](https://blog.penjee.com/passing-by-value-vs-by-reference-java-graphical/)

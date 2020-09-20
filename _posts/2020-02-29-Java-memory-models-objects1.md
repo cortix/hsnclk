@@ -143,19 +143,6 @@ Son satırda ise sample2 değişkeninin x ve y değerlerini ekrana yazdırma iş
 20, 4
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Referanslar
 * Bütün şekiller [https://www.lucidchart.com](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.
 * [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
@@ -164,7 +151,7 @@ Son satırda ise sample2 değişkeninin x ve y değerlerini ekrana yazdırma iş
 * [https://www.baeldung.com/java-primitives](https://www.baeldung.com/java-primitives)
 * [https://www.baeldung.com/java-stack-heap](https://www.baeldung.com/java-stack-heap)
 * [https://dzone.com/articles/stack-vs-heap-understanding-java-memory-allocation](https://dzone.com/articles/stack-vs-heap-understanding-java-memory-allocation)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/lYYTz/concept-challenge-memory-models-2](https://www.coursera.org/learn/object-oriented-java/lecture/lYYTz/concept-challenge-memory-models-2)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
 * [https://www.journaldev.com/4098/java-heap-space-vs-stack-memory](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 * [https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation](https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation)
 * [https://www.journaldev.com/797/what-is-java-string-pool](https://www.journaldev.com/797/what-is-java-string-pool)

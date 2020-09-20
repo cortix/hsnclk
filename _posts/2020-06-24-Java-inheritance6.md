@@ -161,7 +161,7 @@ Sizce neden derleyicinin kodunuzu derlerken uyguladığı kuralları öğreniyor
 * [http://www.cs.cmu.edu/~jcarroll/15-100-s05/supps/basics/history.html](http://www.cs.cmu.edu/~jcarroll/15-100-s05/supps/basics/history.html)
 * [https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqd/index.html](https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqd/index.html)
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/QHiQe/core-compiler-rules-for-class-construction](https://www.coursera.org/learn/object-oriented-java/lecture/QHiQe/core-compiler-rules-for-class-construction)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
 * [https://en.wikipedia.org/wiki/Javac](https://en.wikipedia.org/wiki/Javac)
 * [https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html)
 * JAVA Virtual Machine - Jon Meyer & Troy Downing
