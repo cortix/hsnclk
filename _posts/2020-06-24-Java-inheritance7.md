@@ -114,4 +114,4 @@ Sonuç olarak değişken ilklendirme kısmını da hallettiğimize göre, Java'd
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
 * [https://www.javatpoint.com/this-keyword](https://www.javatpoint.com/this-keyword)
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/MqukN/core-variable-initialization-in-a-class-hierarchy](https://www.coursera.org/learn/object-oriented-java/lecture/MqukN/core-variable-initialization-in-a-class-hierarchy)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

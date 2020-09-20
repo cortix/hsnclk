@@ -122,7 +122,7 @@ deg1 = 12 , deg2 = 5
 ## Referanslar
 
 * Bütün şekiller [https://www.lucidchart.com](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.
-* [https://www.coursera.org/lecture/object-oriented-java/core-drawing-memory-models-with-primitive-data-H0TCb](https://www.coursera.org/lecture/object-oriented-java/core-drawing-memory-models-with-primitive-data-H0TCb)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
 * [https://www.w3schools.com/java/java_data_types.asp](https://www.w3schools.com/java/java_data_types.asp)
 * [https://www.baeldung.com/java-initialization](https://www.baeldung.com/java-initialization)
 * [https://www.baeldung.com/java-primitives](https://www.baeldung.com/java-primitives)

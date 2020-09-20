@@ -159,7 +159,7 @@ Aşağıdaki şekilden de görüleceği üzere referans ve obje tiplerinin neler
 * [https://www.baeldung.com/java-primitives](https://www.baeldung.com/java-primitives)
 * [https://www.baeldung.com/java-stack-heap](https://www.baeldung.com/java-stack-heap)
 * [https://dzone.com/articles/stack-vs-heap-understanding-java-memory-allocation](https://dzone.com/articles/stack-vs-heap-understanding-java-memory-allocation)
-* [https://www.coursera.org/lecture/object-oriented-java/core-drawing-memory-models-with-primitive-data-H0TCb](https://www.coursera.org/lecture/object-oriented-java/core-drawing-memory-models-with-primitive-data-H0TCb)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
 * [https://www.journaldev.com/4098/java-heap-space-vs-stack-memory](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 * [https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation](https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation)
 * [https://www.journaldev.com/797/what-is-java-string-pool](https://www.journaldev.com/797/what-is-java-string-pool)

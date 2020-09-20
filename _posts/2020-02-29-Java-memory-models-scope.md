@@ -139,7 +139,7 @@ Constructor parametre olarak aldığı **xx** ve **yy** değişkenlerini nesneni
   <figcaption>Lucidchart'da hazırlanmıştır</figcaption>
 </figure>
 
-Burada ``this`` anahtar kelimesi ile ilgili ek bir bilgi vermek istiyorum. ``this`` opsiyoneldir. Siz belirtmeseniz de Java arka planda mantıksal bir çıkarım yaparak bu işlemi sizin yerinize zaten gerçekleştirir. Aşağıdaki kodu ``this`` anahtar kelimesi olmadan güncellemeyi deneyebilirsiniz. 
+Burada ``this`` anahtar kelimesi ile ilgili ek bir bilgi vermek istiyorum. ``this`` opsiyoneldir. Siz belirtmeseniz de Java arka planda mantıksal bir çıkarım yaparak bu işlemi sizin yerinize zaten gerçekleştirir. Aşağıdaki kodu ``this`` anahtar kelimesi olmadan güncellemeyi deneyebilirsiniz.
 
 ```java
 class SampleTest {
@@ -169,7 +169,7 @@ class SampleTest {
 * [https://docs.oracle.com/javase/specs/jls/se8/html/jls-6.html#jls-6.3](https://docs.oracle.com/javase/specs/jls/se8/html/jls-6.html#jls-6.3)
 * [https://www.journaldev.com/4098/java-heap-space-vs-stack-memory](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 * [https://www.iitk.ac.in/esc101/05Aug/tutorial/java/nutsandbolts/scope.html](https://www.iitk.ac.in/esc101/05Aug/tutorial/java/nutsandbolts/scope.html)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/mqFZ3/core-introduction-to-scope](https://www.coursera.org/learn/object-oriented-java/lecture/mqFZ3/core-introduction-to-scope)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
 * [http://archive.oreilly.com/oreillyschool/courses/csharp2/csharp214.html](http://archive.oreilly.com/oreillyschool/courses/csharp2/csharp214.html)
 * [https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/ScopedMemory.html](https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/ScopedMemory.html)
 * [https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/MemoryArea.html](https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/MemoryArea.html)

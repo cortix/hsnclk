@@ -118,3 +118,8 @@ Veyahut ``Person[]`` tipinde bir dizi oluşturmak istiyoruz. Bu dizinin öğrenc
 3. Tüm bu nesneleri tek bir veri yapısında tutmak.
 
 İşin güzel yanı bütün bunları kalıtım ile yapabiliriz.
+
+
+## Referanslar
+* [https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

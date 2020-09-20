@@ -217,4 +217,4 @@ Sonuç yine aynı olacaktır. Sebebi polimorfizmdir. Neden böyle olduğunu bu b
 * [https://en.wikipedia.org/wiki/Method_overriding](https://en.wikipedia.org/wiki/Method_overriding)
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
 * [https://www.javatpoint.com/super-keyword](https://www.javatpoint.com/super-keyword)
-* [https://www.coursera.org/learn/object-oriented-java/lecture/SS15B/core-method-overriding](https://www.coursera.org/learn/object-oriented-java/lecture/SS15B/core-method-overriding)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

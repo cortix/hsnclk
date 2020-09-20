@@ -157,3 +157,7 @@ Cinsiyet değişkeni genel bir değişken olduğundan Person sınıfında olmas�
 </figure>
 
 Dersin başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonuncuyu ise bir sonraki derste ele alacağız.
+
+## Referanslar
+* [https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
+* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
