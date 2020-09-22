@@ -90,6 +90,13 @@ Aslında ilk bakışta kodun çalışacağını düşünebiliriz. Ama çalışma
 
 Yalnız koda baktığımızda bu metodun Student sınıfında bulunduğunu biliyoruz. Peki bizim bu bildiğimizi derleyicinin bilmesini nasıl sağlarız. Bunun yöntemi **casting**'dir. Bir sonraki ders bu konu üzerine konuşacağız.
 
+## Özet
+Polimorfizm konusundan bahsederken sıklıkla derleme ve çalışma zamanı kararlarından bahsettik. Aslında polimorfizmi tanımsal olarak rahatlıkla ikiye ayırabiliriz.
+
+1. Statik veya derleme zamanı polimorfizmi
+2. Dinamik veya çalışma zamanı polimorfizmi
+
+Anlaşılacağı üzere statik polimorfizm derleme zamanında gerçekleşirken, dinamik polimorfizm çalışma zamanında gerçekleşir.
 
 ## Referanslar
 * [https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html](https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html)
