@@ -99,7 +99,7 @@ Student 1 Person 1 Undergrad 2
 
 ## ÖZET
 
-* ``super`` anahtar kelimesi ile yapılan çağrılar derleme zamanında bağlanır. Java ``super`` çağrısının bulunduğu sınıfı derleme zamanında haritalar ve doğrudan ``super`` çağrısının yapıldığı metodu bir üst sınıfta arar.
+* ``super`` anahtar kelimesi ile yapılan çağrıların bağlanması(vehahut haritalanması da diyebiliriz) derleme zamanında gerçekleşir. Java ``super`` çağrısının bulunduğu sınıfı derleme zamanında haritalar ve doğrudan ``super`` çağrısının yapıldığı metodu bir üst sınıfta arar.
 * ``this`` anahtar kelimesi ile yapılan metot çağrıları ise çalışma zamanında bağlanır. Yani Java aslında, çalışma zamanında nesnenin gerçek türünü kullanacaktır.
 
 
