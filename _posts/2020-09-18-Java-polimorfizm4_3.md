@@ -1,5 +1,5 @@
 ---
-title: "Java'da Polimorfizm 4.2 - Dinamik Bağlanma Örnek"
+title: "Java'da Polimorfizm 4.3 - Dinamik Bağlanma Örnek"
 comments: true
 excerpt: "Bu bölümde, dinamik bağlanmayla ilgili bir örnek verecek, konunun daha iyi anlaşılmasını sağlayacağız "
 header:
