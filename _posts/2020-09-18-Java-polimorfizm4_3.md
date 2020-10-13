@@ -31,43 +31,9 @@ Bu bölümde Java'da dinamik bağlanmayı bir örnekle pekiştireceğiz. Önceki
 
 ## Örnek
 
-```java
-public class Person {
-    private String name;
-    public Person(String name){
-        this.name = name;
-    }
-    public  boolean isReady(int num){
-        return num<1;
-    }
-    public String toString(){
-        return name;
-    }
-    public void status(int num){
-        if (this.isReady(num)){
-            System.out.println("I am ready: "+this);
-        }else{
-            System.out.println("I am NOT ready: "+this);
-        }
-    }
-    public static void main(String[] args) {
-        Person p = new Student("Hasan");
-        p.status(1);
-    }
-}
-```
+<script src="https://gist.github.com/cortix/f98aeec7543ade829c8a9ad4f1611f32.js"></script>
 
-```java
-public class Student extends Person {
-    public Student(String name){
-        super(name);
-    }
-    @Override
-    public boolean isReady(int num){
-        return num>0;
-    }
-}
-```
+<script src="https://gist.github.com/cortix/0ff89c934e5886b8fdab890b98a31c8e.js"></script>
 
 
 ``p`` bir Person referansı olsa da, başvurduğu asıl nesne çalışma zamanında Student sınıfına ait olacaktır. Yani ``p.status(1)`` çağrısını yaptığımızda status metodunu çağırmak için Java'nın ilk bakacağı yer Student sınıfı olacaktır. Fakat Student sınıfında böyle bir metodun olmadığını görüyoruz. Fakat Student sınıfı Person sınıfını miras aldığı için, Java bir de Person sınıfına bakacaktır. Person sınıfında status metodunu bulduk. Kaldığımız yerden devam edebiliriz.
@@ -92,15 +58,7 @@ Aslında javanın neden bu şekilde bir isimlendirme yaptığından şu makalele
 
 Kısaca özet geçecek olursam, java, doğrudan nesneyi yazdırmak istediğimizde Object sınıfının ``toString`` metodunu çağırır.
 
-```java
-public class Object{
-  //other methods
-  public String toString() {
-        return getClass().getName() + "@" + Integer.toHexString(hashCode());
-    }
-  //other codes
-}
-```
+<script src="https://gist.github.com/cortix/23b3359e32a428f861f322d6167e3bd0.js"></script>
 
 metodun içeriğine baktığımızda döndürülen ifade **sınıfın ismi + @ simgesi + integerdan oluşan bir takım sayı** şeklindedir. Yalnız biz Person sınıfında bu metodu aşağıdaki şekilde geçersiz kıldığımız(override) için;
 
