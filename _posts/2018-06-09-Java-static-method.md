@@ -8,6 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-42.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Peter Oslanec](https://unsplash.com/photos/AsTuH7M7ImY) on Unsplash"
+  video:
+    id: G3TiGvRXc9Y
+    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -25,6 +28,10 @@ toc_label: "SAYFA İÇERİĞİ"
 
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
+
+Merhabalar arkadaşlar, blog yazımı okumadan önce aşağıdaki videoyu izlemenizi öneririm. Bu konuda yeni yazılımcıların çok sıkıntı yaşadığını bildiğim için detaylı bir eğitim videosu hazırlamaya karar verdim. Umarım kafanızdaki sorulara cevap verebilirim. Şimdiden iyi seyirler.
+
+{% include video id="G3TiGvRXc9Y" provider="youtube" %}
 
 
 Birçok yerde ``static`` değiştiricisiyle karşılaşmışızdır. Hatta bu anahtar kelimeyi hem metodlar için hem de değişkenler için kullanıyoruz.
