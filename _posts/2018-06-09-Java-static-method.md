@@ -39,6 +39,7 @@ Birçok yerde ``static`` değiştiricisiyle karşılaşmışızdır. Hatta bu an
 * Peki bu ne anlama geliyor?
 * Hangi durumlarda static anahtar kelimesini kullanmamız gerekir?
 * JVM static yöntem ve değişkenleri nasıl ve nerede saklar?
+* **Non-static method '' cannot be referenced from a static context** hatasını neden alıyoruz? (Cevabı videonun içinde)
 
 ## Değişkenler
 
