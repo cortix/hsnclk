@@ -9,7 +9,7 @@ header:
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"
   video:
-    id: G3TiGvRXc9Y
+    id: cR9uwtMQt-g
     provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
@@ -35,4 +35,4 @@ Merhabalar arkadaşlar, bu blog yazımı video içerik oluşturarak hazırlamak 
 
 Bir konuyu anlayabilmek için önce kafada doğru bir tanıma oturtmanın, o konuyu öğrenmenin başlıca koşulu olduğunu her zaman düşünmüşümdür. Özellikle yazılım öğrenirken arka planda gerçekleşen işlemleri tasvir edebilmek gerçekten çok önemlidir. Bu konuda yeni yazılımcıların çok sıkıntı yaşadığını bildiğim için detaylı bir eğitim videosu hazırlamaya karar verdim. Umarım kafanızdaki birçok soruya cevap verebilirim. Şimdiden iyi seyirler.
 
-{% include video id="G3TiGvRXc9Y" provider="youtube" %}
+{% include video id="cR9uwtMQt-g" provider="youtube" %}
