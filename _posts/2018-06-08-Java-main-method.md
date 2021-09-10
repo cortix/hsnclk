@@ -8,6 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-41.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Jon Tyson](https://unsplash.com/photos/FlHdnPO6dlw) on Unsplash"
+  video:
+    id: cR9uwtMQt-g
+    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -33,6 +36,10 @@ public static void main(String[] args)
 {% endhighlight %}
 
 ``main`` metodu, programı başlatan kod tarafından çağrılması gerektiğinden herkese açık(*public*) olmalıdır. Bir sonraki kelime ``static``'dir. Bu, ``main`` yönteminin sınıfın her özel örneğinde yaşamadığı, aksine sınıfın bütünü için sadece bir tane olduğu anlamına gelir. Sonrasında ise ``void`` ifadesini görüyorsunuz. Bu metodun herhangi bir değer döndürmediği anlamına gelir. Ardından, yöntem adı olan ``main``'i göreceksiniz. Java, bir programı çalıştırabilmek için bu ismi kullanmanızı şart koşar. Bunun dışında bir isim veremezsiniz. Bu sebepten ötürü programı ayağa kaldırmak için main ismini veriyoruz. Bunun dışında bu metot bir de parametre olarak *String* bir dizi almıştır. Yani main isminin olması programı ayağa kaldırmak için yeterli değildir. Programı ayağa kaldırmak için Java'nın bizden beklediği bir metot deklerasyonu vardır. O da ``public static void main(String[] args)`` şeklindedir. Yani metot deklerasyonu;
+
+Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu videoyu özellikle izlemenizi öneririm.
+
+{% include video id="cR9uwtMQt-g" provider="youtube" %}
 
 * Hem ``public`` olacak,
 * Hem ``static`` olacak,
