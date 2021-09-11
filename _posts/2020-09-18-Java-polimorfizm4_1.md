@@ -57,7 +57,73 @@ Statik, yani erken bağlanma, derleme zamanında meydana gelen olayları ifade e
 
 Derleyici, bu yöntemlerin geçersiz kılınamayacağını bilir. Aynı zamanda bu yöntemlere yerel sınıf(local class) nesnesi tarafından erişilebileceğinin de farkındadır. Bu nedenle derleyici "yerel sınıfın" nesnesini belirlemekte herhangi bir zorluk yaşamaz. Bu tür yöntemlerin bağlanmalarının "statik" olmasının nedeni budur. **Çünkü statik bağlanma daha iyi bir performans sağlar.**
 
+### Dolaylı final yöntemler(implicit final methods) ve metot saklama(method hiding)
+Bir üst sınıfta bulunan `final` metot, bu üst sınıfı miras alan bir alt sınıf tarafından kesinlikle **override**(geçersiz kılma) edilemez. Bu, `final` yöntem implementasyonunun hiyerarşideki, doğrudan ve dolaylı tüm alt sınıflar tarafından kullanılacağını garanti eder. Aynı zamanda `private` olarak deklare edilmiş metotlar da, bir alt sınıfta bunları **override** etmek mümkün olmadığından dolaylı olarak(implicitly) `final` sayılır. Bu arada `statik` yöntemler de geçersiz kılınamayacağından(yani override edilemeyeceğinden), dolaylı olarak `final`'dır'. Evet garip geldiğinin farkındayım. Çünkü `static` yöntemler override edilmeye çalışıldığında aslında gerçekleşen metot saklama(method hiding) olayıdır. Bir alt sınıf, üst sınıftaki bir `static` yöntemle aynı imzaya sahip bir `static` yöntem tanımlarsa, alt sınıftaki yöntem, üst sınıftaki yöntemi gizler.
 
+Statik bir yöntemi gizleme ve bir örnek(instance) yöntemini geçersiz kılma arasındaki farkın önemli sonuçları vardır:
+
+Birincisi, çağrılan, override edilmiş instance metodun versiyonu her zaman alt sınıfta olandır.
+İkincisi, çağrılan, saklanmış static metodun versiyonu ise üst sınıftan mı yoksa alt sınıftan mı çağrıldığına bağlıdır.
+
+Aşağıdaki kodla bu iki durumu izah etmek istiyorum.
+
+```java
+public class Animal {
+    public static void testClassMethod() {
+        System.out.println("The static method in Animal");
+    }
+    public void testInstanceMethod() {
+        System.out.println("The instance method in Animal");
+    }
+}
+```
+
+```java
+public class Cat extends Animal {
+    public static void testClassMethod() {
+        System.out.println("The static method in Cat");
+    }
+    public void testInstanceMethod() {
+        System.out.println("The instance method in Cat");
+    }
+
+    public static void main(String[] args) {
+        Cat myCat = new Cat(); //1
+        Animal myAnimal = myCat; //2
+
+        Animal.testClassMethod(); //3
+        myAnimal.testInstanceMethod(); //4
+
+        myAnimal.testClassMethod(); //5
+        myCat.testClassMethod(); //6
+
+        Animal.testClassMethod(); //7
+        Cat.testClassMethod(); //8
+    }
+}
+```
+
+**Cat** sınıfı görüleceği üzere **Animal** sınıfı içindeki instance metodunu geçersiz kılıyor ve **Animal** sınıfı içindeki statik yöntemi, aynı metot deklerasyonunu yapmak suretiyle gizliyor. Buradan sonraki aşamaları kod üzerinde belirttiğim numaralarla göstermek istiyorum..
+
+1. `main` metodu içinde de bir **Cat** objesi yaratılıyor.
+2. yaratılan **Cat** objesinin `myCat` referansının değeri, **Animal** tipindeki `myAnimal` referansına veriliyor. Hatırlarsanız compatible(yani kalıtsal olarak uygun) tiplerle, objeleri stack'te temsil edebiliyorduk.. Aslında buradaki önemli husus şu, `myCat` referansının tipi **Cat** olduğundan, hem **Cat** sınıfı özelindeki hem de Cat'in miras aldığı üst sınıflar olan **Animal** ve **Object** sınıfı özelindeki public metot ve değişkenleri görebiliyorduk. Yalnız `myAnimal` referansının tipi **Animal** olduğu için, sadece **Animal**, ve **Animal** sınıfının dolaylı(implicitly) olarak `extends` ettiği **Object** sınıfındaki public metot ve değişkenler görülebilir olacaktır(Override edilmiş olanlar ayrı!!!). Çünkü **override** edilmiş bir metot varsa polimorfizm gereği, gerekli implementasyon her zaman alt sınıfın ezilmiş bu metoduna iletilir. Her neyse ufak bir hatırlatmadan sonra devam edebiliriz.
+3. Burada Animal sınıfı üzerinden, sınıfa ait bir statik metot olan `testClassMethod()` una erişiliyor. Statik metotlar sınıfa ait oldukları için sınıf üzerinden erişim her zaman daha doğru olacaktır. Ama instance'lar üzerinden de erişilebilir. Çünkü statik konteks bütün objelerle ortak paylaşılır. Özetle burada anlatılmak istenen şu! `testClassMethod()` metodu alt sınıf olan **Cat** sınıfında override edilmiş gibi **gözükse de**(aslında geçersiz kılınmıyor) aslında burada gerçekleşen metot saklama olayıdır. Hatırlarsanız, normalde polimorfizm gereği, ilgili implementasyon override edilen alt sınıfa devrediliyordu. statik metotlarda ise durum farklı!! statik metotlarda, bu metodu kim çağırıyorsa o sınıfın statik metodu görünür olur. Diğeri ise saklanır. Sonuç olarak `Animal.testClassMethod();` Animal sınıfının statik metodu çağrıldığı için, konsola bu metodun döndürdüğü şey yazılacaktır. Çıktıları aşağıdaki görebilirsiniz.
+4. Burada ise **Animal** sınıfının bir instance metodunu(statik olmayan metotlar) görüyorsunuz. Bu `testInstanceMethod()` metodu alt sınıf olan **Cat** sınıfında override edildiği için polimorfizm gereği implementasyon bu sınıfın, yani **Cat** sınıfının `testInstanceMethod()` una aktarılır. Metodu nereden çağırdığınızın bir önemi yoktur ki burada ilgili metot, Animal tipindeki myAnimal referansı üzerinden çağrılıyor. Ki normalde Animal sınıfının özelindeki metotları görmemiz gerekiyordu ama bir istisna dışında demiştik. O da neydi? override edilen metotlar dışında!!! Burada da overide edilen bir metot olduğu için mecburen implementasyonu alt sınıfa aktarmak durumundayız. Özetle ekrana Cat sınıfındaki instance metodun implementasyonu yazılacaktır.
+5. Bu satırda yine statik metoda bir erişim var.. Daha önce dediğim gibi statik metoda hangi sınıf üzerinden eriştiğiniz önemlidir. Birinden biri gizlenecektir. Burada erişim Animal tipindeki myAnimal referansı üzerinden bir erişim sağlanıyor. Bu referans hatırlarsanız 2. satırda myCat referasının tuttuğu objeye bağlanıyordu. Yani özetle instance üzerinden bir erişim sağlanıyor. Doğrudan sınıf üzerinden değil!! Her neyse myAnimal'ın tipi Animal olduğu için, bu referans ilk olarak Animal özelindeki metotları görecektir. Çağrılan bu metot instance bir metot olmadığı için polimorfik düşünmemize gerek yok. Çağrılan metot statik bir metot olduğu için, çağrıldığı sınıfın statik metodu gözükecek, bu sınıfı miras alan Cat sınıftaki statik benzeri olan metot ise gizlenecektir. Özetle Animal sınıfındaki statik metodun logic'i çalışacaktır.
+6. Bu satırda ise myCat referansı üzerinden, yani yine bir instance üzerinden statik metoda erişim gerçekleşmektedir. Ama bu sefer myCat referansının tipi Cat olduğu için Cat sınıfındaki statik testClassMethod() metodu çalışacak, Animal sınıfındaki testClassMethod() metodu gizlenecektir.
+7. Bu satırda ise statik metoda erişimi olması gerektiği gibi sınıf üzerinden yapıyoruz. Çünkü doğru olan sınıf üzerinden erişmektir. Çünkü statik konteks her ne kadar instance'lar ile ortak paylaşılsa da sınıfa aittir. Her neyse burada statik metoda erişim Animal üzerinden gerçekleştiği için, bu sınıf içindeki testClassMethod() statik metodu çalışacak, Cat sınıfındaki gizlenecektir.
+8. Bu satırda ise Cat sınıfı üzerinden statik metoda erişildiğinden, bu sınıftaki testClassMethod() statik metodu çalışacak, Animal sınıfındaki testClassMethod() metodu gizlenecektir.
+
+
+
+```
+The static method in Animal //1
+The instance method in Cat //2
+The static method in Animal //3
+The static method in Cat //4
+The static method in Animal //5
+The static method in Cat //6
+```
 ## Dinamik/Geç Bağlanma (Dynamic/Late Binding)
 
 Geç bağlanma(late binding), çalışma zamanına(run-time) kadar çözümlenmeyen işlev çağrılarını ifade eder. Geç bağlanma veya başka bir ifadeyle dinamik bağlanmada, derleyici çağrılacak yönteme karar vermez. Sanal(virtual) fonksiyonlar geç bağlanmayı sağlamak için kullanılır. Bu arada java'da sanal(virtual) fonksiyonlar var mıdır?
