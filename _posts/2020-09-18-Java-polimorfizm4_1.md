@@ -215,7 +215,7 @@ Görüleceği üzere statik metotlar statik bağlanmaya maruz kalırlar. ``isEle
 
 
 
-## Statik Bağlanmada Field Erişimi
+## Statik Bağlanmada Field Erişimi (Örnek 1)
 
 
 Statik bağlanmada **field** erişimini örnek üzerinden anlatmaya çalışacağım;
@@ -262,7 +262,41 @@ Son satır, aslında erişilmeye çalışılan field'ın, başvurulan nesnenin �
   <figcaption></figcaption>
 </figure>
 
-Neden derleme zamanında overloading(aşırı yükleme) yapılabilmesine rağmen overriding(geçersiz kılma) yapılamıyor olabilir? Aslında şöyle düşünebiliriz.
+## Generic Öncesi ve Sonrası Dönemde Çalışma ve Derleme Zamanı Polimorfizmi
+
+Aslında bu bölümde konuyu farklı açıdan ele almaya çalışacağım. Yani generic türler öncesinde ve sonrasında statik ve dinamik bağlanma nasıl gerçekleşiyordu. Yine örnek üzerinden ilerlemenin faydası var.
+
+Generic kavramı hayatımıza Java SE 5'ten sonra girmiştir. Haliyle java'nın ilk sürümünden bu sürüme kadar işlerimizi generic'siz bir şekilde halletmeye çalışıyorduk. Her neyse, ilk örneğimiz bize generic olmadan gerçekleşen bir kod örneğini gösteriyor. Görüleceği üzere Test sınıfı hem String hem de Integer tipinde iki değeri saklamaya çalışıyor. Diyelim ki Test sınıfının setValue metodu deklare edildiğinde buna müsade etsin. Yani bu metodun deklarasyonunun şu şekilde olduğunu hayal edin.
+```java
+public void setValue(Object value){
+  this.value = value;
+}
+```
+Sonrasında bu değerleri dışarı çıkarmak istediğimizde her seferinde test etmemiz gerekecek. Buradaki **instanceof** anahtarı çalışma zamanında nesnenin dinamik türünün ne olduğunu sorgular. Eğer if clause ile doğru nesneyi bulursak, downcasting yaparak doğru nesneye işaret ettiğimizi söyleyebiliriz. Görüleceği üzere hem instanceof hem de downcasting gibi iki işlemi yapmak durumunda kalıyoruz. Özetle generic öncesinde çalışma zamanı polimorfizmi vardı. Yani gerçek nesnenin tipini çalışma zamanında görebiliyorduk.
+
+```java
+Test test = new Test();
+test.setValue(new String("Hello World"));
+test.setValue(new Integer(3));
+
+Object value = test.getValue();
+if (value instanceof String) {
+  String s = (String)value;
+}
+if (value instanceof Integer) {
+  Integer i = (Integer)value;
+}
+```
+Yalnız generic sonrasında bu durum değişti. Yani derleme zamanında gerçek nesnenin tipini belirleme imkanı sunuldu. Örneğimizden de anlaşılacağı üzere Test sınıfının sadece String tipinde değerler saklayacağını deklare ediyoruz. Böylelikle derleme zamanı tür güvenliğini sağlamış oluyoruz.
+
+```java
+Test<String> test = new Test<>();
+test.setValue("Hello World");
+test.setValue(3); // compile time error occurs
+```
+3.satırda int bir değer eklemeye çalıştığımızda daha derleme zamanında hata alırız. Bu da bize generic türlerin derleme zamanı polimorfizmi uyguladığını gösterir.
+
+Başka bir örnek daha paylaşmak istiyorum. 
 
 ```java
 public void sample(List<String> list) {
@@ -281,6 +315,8 @@ List<String> s3 = new Vector<String>();
 Peki sorulması gereken soru şu? Bu List arayüzü hangi somut sınıfı temsil ediyor? ArrayList? LinkedList?  Derleme zamanında bunu bilme şansımız var mı? Şu ana kadar öğrendiklerimizden yola çıkacak olursak, List arayüzünün somut türünün ne olduğunu derleme sırasında bilmenin bir yolu yoktur. Yalnızca çalışma zamanında öğrenebilirsiniz. Dolayısıyla, size() yönteminden hangi somut sınıftan çağrılacağına yalnızca çalışma zamanında karar verilebilir.
 
 -----
+
+## Statik Bağlanmada Field Erişimi (Örnek 2)
 
 Alanlara(fields) erişmek için örnek yöntemlerin(instance methods) kullanıldığı benzer bir örneği ele alacak olursak;
 
@@ -337,3 +373,6 @@ Son satır, erişilen yöntemin, başvurulan nesnenin çalışma zamanı sınıf
 * [What is Virtual Method](http://net-informations.com/faq/oops/virtual.htm)
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
 * [https://stackoverflow.com/questions/32422923/why-does-java-bind-variables-at-compile-time](https://stackoverflow.com/questions/32422923/why-does-java-bind-variables-at-compile-time)
+* [https://www.amazon.com/Java-Programmers-Deitel-Developer-Paul/dp/0132821540](Java for Programmers 2nd Edition Deitel Developer Series)
+* [https://www.amazon.com/Oracle-Certified-Professional-Programmer-1Z0-809/dp/1484218353](Oracle Certified Professional Java SE 8 Programmer Exam 1Z0-809)
+* [https://docs.oracle.com/javase/tutorial/java/IandI/override.html](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)
