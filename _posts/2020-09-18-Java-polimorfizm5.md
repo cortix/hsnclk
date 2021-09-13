@@ -28,7 +28,7 @@ toc_label: "SAYFA İÇERİĞİ"
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-Aslında **abstract sınıf** ve **interface** özünde ikisi de soyut kavramlardır. Tabii aralarında hem kullanım hem de yapısal bazı farklılıklar bulunmaktadır. Bu derste de bu farklılıkları ele alacağız. Ek olarak şu [makaleme](/java/Java-class-access/) de bakmanızı öneririm. Abstract sınıf ve interface konularına orada da değinmiştim. 
+Aslında **abstract sınıf** ve **interface** özünde ikisi de soyut kavramlardır. Tabii aralarında hem kullanım hem de yapısal bazı farklılıklar bulunmaktadır. Bu derste de bu farklılıkları ele alacağız. Ek olarak şu [makaleme](/java/Java-class-access/) de bakmanızı öneririm. Abstract sınıf ve interface konularına orada da değinmiştim.
 
 Normalde bir üst sınıfım ve onu miras alan bir alt sınıfım oluyordu. Burada yapmak istediğim şey aslında yine kalıtımı bazı kısıtlamalar getirerek uygulamak olacak. Hemen bir örnek vermek istiyorum.
 
@@ -46,7 +46,7 @@ Yalnız yukarıdaki örnekte ben Person sınıfıyla bir obje oluşturabiliyorum
 * Referans tipi olarak yine üst sınıfı kullanabileyim ama gerçek nesne için beni alt sınıflarda obje oluşturmaya zorlasın....
 * Benzer davranışları üst sınıfta tutup, farklı davranışları alt sınıflara özel kılacak soyut metotlar oluşturmak...
 
-Bunların hepsini tek bir sınıfta yapmak için abstract sınıf kullanırız. Bir sınıfı **abstract** yapmak için, ilgili sınıfın içindeki tek bir metodunu **abstract** anahtar kelimesi ile işaretlememiz yeterlidir. İlgili sınıf sırf tek bir metot **abstract** anahtar kelimesine sahip olduğu için otomatikman **abstract**(yani soyut) olur. Ve bu sınıfın abstract metotlarını onu miras alan sınıflar override etmek zorunda kalır. Aslında bu, alt sınıfları belirli yöntemlere sahip olmaya zorlamanın güzel bir yoludur.
+Bunların hepsini tek bir sınıfta yapmak için abstract sınıf kullanırız. Bir sınıfı **abstract** yapmak için, ilgili sınıfın içindeki tek bir metodunu **abstract** anahtar kelimesi ile işaretlememiz yeterlidir. Ama sınıfın **abstract** olması için **abstract** metodu olmasına da gerek yoktur. Doğrudan **public abstract class** şeklinde beyan edebilirsiniz. Ama bir metot bile **abstract** olursa, sınıf otomatikman **abstract**(yani soyut) olur. Ve bu sınıfın abstract metotlarını onu miras alan sınıflar override etmek zorunda kalır. Aslında bu, alt sınıfları belirli yöntemlere sahip olmaya zorlamanın güzel bir yoludur.
 
 ```java
 public abstract class Person {
@@ -54,7 +54,7 @@ public abstract class Person {
 }
 ```
 
-**ÖNEMLİ NOT:** Abstract yapılan sınıfın objesi oluşturulamaz.. Ancak ve ancak onu miras alan bir concrete(somut) sınıf ile bir nesne(obje) oluşturabiliriz.
+**ÖNEMLİ NOT:** Abstract yapılan sınıfın objesi oluşturulamaz.. Ancak ve ancak onu miras alan bir concrete(somut) sınıf ile bir nesne(obje) oluşturabiliriz. Yalnız şöyle bir durum olabilir. Abstract sınıflar birbirlerini extends edebilir. Haliyle abstract metot bu sınıflarda uygulanmak zorunda olmayacağından, concrete sınıfla ilk karşılaşılan yerde bu abstract metot uygulanacaktır. 
 
 **public abstract void doWork()** metodu, onu ezen(override) alt sınıflar tarafından kullanılabilir. Yani ilgili metodu işlevsel hale getirecek, yine nesnesini oluşturabildiğimiz somut(concrete) sınıflar olacaktır.
 
