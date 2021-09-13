@@ -54,7 +54,7 @@ public abstract class Person {
 }
 ```
 
-**ÖNEMLİ NOT:** Abstract yapılan sınıfın objesi oluşturulamaz.. Ancak ve ancak onu miras alan bir concrete(somut) sınıf ile bir nesne(obje) oluşturabiliriz. Yalnız şöyle bir durum olabilir. Abstract sınıflar birbirlerini extends edebilir. Haliyle abstract metot bu sınıflarda uygulanmak zorunda olmayacağından, concrete sınıfla ilk karşılaşılan yerde bu abstract metot uygulanacaktır. 
+**ÖNEMLİ NOT:** Abstract yapılan sınıfın objesi oluşturulamaz.. Ancak ve ancak onu miras alan bir concrete(somut) sınıf ile bir nesne(obje) oluşturabiliriz. Yalnız şöyle bir durum olabilir. Abstract sınıflar birbirlerini extends edebilir. Haliyle abstract metot bu sınıflarda uygulanmak zorunda olmayacağından, concrete sınıfla ilk karşılaşılan yerde bu abstract metot uygulanacaktır.
 
 **public abstract void doWork()** metodu, onu ezen(override) alt sınıflar tarafından kullanılabilir. Yani ilgili metodu işlevsel hale getirecek, yine nesnesini oluşturabildiğimiz somut(concrete) sınıflar olacaktır.
 
@@ -70,6 +70,8 @@ Bazı durumlarda ikisini birden miras almak istemezsiniz.. Sadece arayüzü(inte
 Örneğimize geri dönecek olursak, abstract(soyut) bir sınıfın az önce bahsettiğimiz varsayıma uygun olduğuna gerçekten inanıyorum. Ancak, `Person` sınıfında ortak bir kodunuz olmadığını varsayalım. O zaman interface kullanmak mantıklı bir tercih olacaktır. Bir interface bize alt sınıfları bir yönteme sahip olmaya zorlama, ``Person person = new Person();`` olduğu gibi gerçek `Person` nesnelerine sahip olmayı durdurma yeteneği verirken, Person sınıfı gibi üst sınıfların(parent class) referanslarına sahip olmaya devam etme imkanı verecektir.
 
 Arayüzler(interface) sadece gerekli metodları tanımlar ve sınıflar aslında birden çok arayüzden miras alabilir(bu miras alma işlemini **implements** anahtar kelimesi ile gerçekleştiririz. Yani **extends** değil!!!).
+
+> Arayüzlerin(Interfaces) çıkış amacı aslında çoklu kalıtımı java'da mümkün kılmaktır. Çünkü Java sadece tek bir sınıfı miras alabilmemize izin verir. Bunu aşmanın yolu interface'lerdir.  
 
 Hepsi tek bir sınıf içinde olmak üzere, bir sınıf sadece bir tane **abstract sınıfı** miras alabilirken, birden çok **interface**'i miras alabilir.
 
@@ -130,6 +132,22 @@ Yukarıdaki kod bloklarından da anlaşılacağı üzere bir sınıf sadece tek 
 
 
 Abstract sınıfla interface her ne kadar ikisi de soyut kavramını temsil etseler de miras verdikleri sınıflar arasındaki organik bağ tam olarak aynı sayılmaz. Farklı bir örnekten yola çıkacak olursak, `Animal` isminde bir sınıf ile `Dog` isminde sınıfın arasındaki organik bağ, `Dog` sınıfının implement ettiği `public interface Comparable<T>` arayüzü arasındaki organik bağdan farklıdır. Yani bir köpeğin sadece bir tane üst familyası olabilir. Ama `Comparable` arayüzünü miras aldığı gibi birden fazla farklı davranışa sahip olabilir. Arayüzleri, ilgili sınıfa kalıtım hiyerarşisi dışında özellikler vermek için kullanıyoruz da diyebiliriz. Tabii ki bu durum yine sizin hayal gücünüze kalmış bir şey!!!
+
+## Interface'lere Java 8 ile Gelen Yenilikler
+
+Java 8 öncesinde interface'ler içinde concrete metotlara sahip değildik. Interface'ler sadece instance metotlara, yani public abstract metotlara ve statik final constant'lara sahipti. Java 8 ile beraber default ve statik metotlara da sahip olma imkanı bulduk.. Bu metotlar concrete metotlardır. Sonrasında Java 9'da prive ve private static metotlar da concrete metotlara eklenmiş oldu. Özetle interface içinde 6 farklı şeye sahibiz. Bunlar;
+
+* static final değişkenler(yani constant'lar)
+* public abstract metotlar,
+* default metotlar(concrete)
+* static metotlar(concrete)
+* private metotlar(concrete)
+* private static metotlar(concrete)
+
+Interface'ler içinde instance (yani public abstract) metotlara izin varken, instance değişkenlere interface'ler içinde izin yoktur. Sadece constant'lara izin vardır.
+
+Aslında constant'lar statik oldukları için interface'e ait olacaklardır. Aynı durum statik metotlar için de geçerlidir. Yani hiçbir şekilde bir conflict(yani çakışma) oluşturmazlar. private olanlar zaten interface içinde görünür olacakları için onlar da bir conflict oluşturmazlar. Fakat default metotlar başka bir interface'de benzer bir default metot ile çakışma halinde abstract metot gibi davranır ve bu interface'leri implement eden sınıf tarafından override edilmek zorunda bırakılır. Haliyle polimorfizm aracılığı ile her zaman implementasyon alt sınıfta olacağı için conflict ortadan kalkacaktır. Tabii ki bir conflict oluşturmadığı takdirde sorun da olmayacaktır.
+
 
 ### Özet
 
