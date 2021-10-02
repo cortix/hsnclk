@@ -69,6 +69,8 @@ Yukarıdaki resimde de görüleceği üzere, eğer pentium dual bir işlemciye s
 
 Paralel olarak çalışmasını istediğiniz işlemlerin bulunduğu yere bir ``finish`` scope'u ekleyin. Yukarıdaki örnekteki gibi S<sub>2</sub>, S<sub>3</sub>, S<sub>4</sub> birbirleriyle paralel olarak çalışacaktır. Fakat S<sub>5</sub> işlemi, ``finish`` scope'u tamamlanıncaya kadar bekleyecektir.
 
+**Not :** Bu bölümde gördüğümüz **async** ve **finish** notasyonları eğitsel ve gösterimsel kavramlardır. Fakat Java’daki karşılıkları tabii ki bu şekilde değildir. Bir sonraki bölümde ise aynı konseptin Java’daki karşılıklarına bakacağız.  
+
 ## Özet
 Bu bölümde bir array kullanarak görev oluşturma(*task creation*) ve görev sonlandırma(*task termination*) konseplerini öğrendik.
 
