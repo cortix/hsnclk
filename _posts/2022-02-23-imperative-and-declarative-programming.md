@@ -47,7 +47,7 @@ In the above example, we can easily understand what this code does.
 
 **What is it doing :** it is trying to find a special name in the array.
 
-**How is it doing :** it is doing by using a traditional for-loop. It defines a variable in the body of the for-loop and does this by incrementing it one at a time and comparing it to the name it is looking for.
+**How is it doing :** it is doing by using a standard for-loop. It defines a variable in the for-loop and does this by incrementing it one at a time and comparing it to the name it is looking for.
 
 In summary, we show step by step *how we do* the necessary actions while finding this name(*what we do*).
 
