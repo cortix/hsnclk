@@ -1,7 +1,7 @@
 ---
 title: "Imperative and Declarative Style Programming"
 comments: true
-excerpt: "In this article, I am going to try to explain the difference between imperative and declarative style programming"
+excerpt: "In this article I am going to try to explain the difference between imperative and declarative style programming"
 header:
   teaser: "assets/images/equality.png"
   #og_image: /assets/images/page-header-og-image.png
@@ -23,7 +23,7 @@ toc_label: "CONTENT"
 
 
 
-**IMPORTANT :** The notes that I took for myself. I hope they will help you too.. Each resource that I used is added as reference at the end of the page.
+**IMPORTANT :** The notes that I took for myself. I hope they will help you, too. Each resource that I used is added as reference at the end of the page.
 {: .notice}
 
 ## Imperative Style Programming
