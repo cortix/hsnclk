@@ -30,9 +30,9 @@ toc_label: "CONTENT"
 
 According to the wiki definition, **imperative programming style** focuses on describing how a program operates. Actually it sounds good but not very descriptive. I have found a better one at a live event I attended via O'reilly.
 
-According to Venkat Subramaniam, Imperative Style Programming tells us **what a program do and also how to do it**. I want to summarize this definition like Venkat did ->
+According to Venkat Subramaniam, Imperative Style Programming tells us **what a program does and also how it does it**. I want to summarize this definition like Venkat did ->
 
-### What to do - How to do
+### What to do - How to do it
 
 For instance;
 
@@ -48,17 +48,17 @@ In the above example, we can easily understand what this code does.
 
 **What is it doing :** it is trying to find a special name in the array.
 
-**How is it doing :** it is doing by using a standard for-loop. It defines a variable in the for-loop and does this by incrementing it one at a time and comparing it to the name it is looking for.
+**How is it doing it? :** it is doing it by using a standard for-loop. It defines a variable in the for-loop and does this by incrementing it one at a time and comparing it to the name it is looking for.
 
-In summary, we show step by step *how we do* the necessary actions while finding this name(*what we do*).
+In summary, we show step by step *how we do* the necessary actions to find this name(*what we do*).
 
 ## Declarative Style Programming
 
 The declarative programming style focuses on what the program should accomplish without specifying all the details of how the program should achieve the result. Again according to Venkat;
 
-It tells us **what a program do but not how to do it**. Again, I would like to summarize this definition like this ->
+It tells us **what a program does but not how to do it**. Again, I would like to summarize this definition like this ->
 
-### What to do - NOT How to do
+### What to do - NOT How to do it
 
 For instance;
 
@@ -70,11 +70,11 @@ if (listNames.contains("hasan")) {
 ```
 **What is it doing :** well, it is trying to find a special name in the array like previous one.
 
-**NOT "how is it doing" :** The difference out of the imperative programming style, declarative style hides the details of "**how to do**" parts. As you can see, *contains* method does whole jobs for us and hides the complexity.
+**NOT "how is it doing it" :** The difference out of the imperative programming style, declarative style hides the details of "**how to do**" parts. As you can see, the *contains* method does the whole job for us and hides the complexity.
 
 ## An example to show the difference
 
-Actually, standard and enhanced for loops are good examples to show difference between imperative and declarative style programming.  
+Actually, standard and enhanced for loops are good examples to show the difference between imperative and declarative style programming.  
 
 In both cases, it's obvious what we're going to do. Our goal is to print the elements of the array to the console. What about "**how to do**" parts???
 
