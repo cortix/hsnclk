@@ -3,7 +3,7 @@ title: "Higher Order Functions"
 comments: true
 excerpt: "In this article, I am going to try to explain what the higher-order functions are, first-class citizen and first-class function"
 header:
-  teaser: "assets/images/equality.png"
+  teaser: "/assets/images/2022-02-25-higher-order-functions/higher.jpeg"
   #og_image: /assets/images/page-header-og-image.png
   og_image: /assets/images/2022-02-25-higher-order-functions/higher.jpeg
   overlay_image: /assets/images/2022-02-25-higher-order-functions/higher_f.jpeg
