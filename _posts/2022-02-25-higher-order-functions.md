@@ -68,7 +68,7 @@ Thread t1 = new Thread(new Runnable() {
 t1.start();
 ```
 
-In the above example, we pass a `Runnable` object to the `Thread` constructor. In here, an **object** treat as *first-class citizen*.
+In the above example, we pass a `Runnable` object to the `Thread` constructor. In here, an **object** treats as *first-class citizen*.
 
 ```java
 Thread t2 = new Thread( () -> System.out.println("Another thread"));
@@ -76,7 +76,7 @@ Thread t2 = new Thread( () -> System.out.println("Another thread"));
 t2.start();
 ```
 
-But, we can treat functions or codes as *first class citizens* as well. In this example we passed a **function** which is *anonymous* as an argument to the `Thread` constructor. This makes it *higher order function* because it receives another function as its parameter.
+But, we can treat functions or codes as *first class citizens* as well. In this example we pass a **function** which is *anonymous* as an argument to the `Thread` constructor. This makes it *higher order function* because it receives another function as its parameter.
 
 
 
