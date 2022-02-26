@@ -8,7 +8,7 @@ header:
   og_image: /assets/images/2022-02-25-higher-order-functions/higher.jpeg
   overlay_image: /assets/images/2022-02-25-higher-order-functions/higher_f.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"
+  caption: "Photo by [Etienne Girardet](https://unsplash.com/photos/Xh6BpT-1tXo) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
