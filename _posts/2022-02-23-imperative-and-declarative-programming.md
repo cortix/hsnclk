@@ -3,7 +3,7 @@ title: "Imperative and Declarative Style Programming"
 comments: true
 excerpt: "In this article I am going to try to explain the difference between imperative and declarative style programming"
 header:
-  teaser: "assets/images/equality.png"
+  teaser: "assets/images/2022-02-23-imperative-and-declarative-programming/imp.jpeg"
   #og_image: /assets/images/page-header-og-image.png
   og_image: /assets/images/2022-02-23-imperative-and-declarative-programming/imp.jpeg
   overlay_image: /assets/images/unsplash-image-60.jpeg
