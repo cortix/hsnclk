@@ -74,7 +74,7 @@ if (listNames.contains("hasan")) {
 
 ## An example to show the difference
 
-Actually, standard and enhanced for loops are good examples to show the difference between imperative and declarative style programming.  
+In which classification should we evaluate **enhanced** and **standard** for loops? Let's brainstorm together...
 
 In both cases, it's obvious what we're going to do. Our goal is to print the elements of the array to the console. What about "**how to do**" parts???
 
@@ -86,6 +86,8 @@ In both cases, it's obvious what we're going to do. Our goal is to print the ele
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-02-23-imperative-and-declarative-programming/forloops.png" alt="for loops example">
   <figcaption>Figure 1 - created by me by using https://www.lucidchart.com </figcaption>
 </figure>
+
+There is only one point I would like to draw attention to. Although the **enhanced for loop** header is more declarative than the **standard for loop**, imperative style code can still be written in both loop bodies. For this reason, it would be more accurate to say that the *enhanced for loop* is **more declarative** than the *standard for loop* but it is not 100% declarative.
 
 ## Reference:
 * [https://en.wikipedia.org/wiki/Imperative_programming](https://en.wikipedia.org/wiki/Imperative_programming)
