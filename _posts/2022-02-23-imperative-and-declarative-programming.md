@@ -72,7 +72,7 @@ if (listNames.contains("hasan")) {
 
 **NOT "how is it doing it" :** The difference out of the imperative programming style, declarative style hides the details of "**how to do**" parts. As you can see, the *contains* method does the whole job for us and hides the complexity.
 
-## An example to show the difference
+## Comparison of enhanced and standard loops in terms of programming styles
 
 In which classification should we evaluate **enhanced** and **standard** for loops? Let's brainstorm together...
 
@@ -87,7 +87,14 @@ In both cases, it's obvious what we're going to do. Our goal is to print the ele
   <figcaption>Figure 1 - created by me by using https://www.lucidchart.com </figcaption>
 </figure>
 
-There is only one point I would like to draw attention to. Although the **enhanced for loop** header is more declarative than the **standard for loop**, imperative style code can still be written in both loop bodies. For this reason, it would be more accurate to say that the *enhanced for loop* is **more declarative** than the *standard for loop* but it is not 100% declarative.
+Actually both the **standard for loop** *(for i = 0...)* and the **enhanced for loop** *(for var x : ...)* are **imperative style**. The **enhanced for loop** is really a wrapper around
+`iterator.hasNext()` and `iterator.next()`. Furthermore, from the **enhanced for loop** we can do `break` and `continue` with an if condition, and that is where we see the **imperative** nature being
+enhanced clearly.
+
+> ENHANCED for loop is more declarative than the STANDARD for loop
+
+We can say that the enhanced for loop moves the needle towards **declarative style**. However, it is not entirely in the land of **declarative style**. Both the **standard loop** and the **enhanced loops** are external iterators which are **imperative** in nature. In both the loops we control the flow using if `break` or if `continue`. We do a little bit less of the controlling in enhanced for loop compared to the standard for loop. Nevertheless both allow for imperative control.
+
 
 ## Reference:
 * [https://en.wikipedia.org/wiki/Imperative_programming](https://en.wikipedia.org/wiki/Imperative_programming)
