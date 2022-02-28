@@ -1,5 +1,5 @@
 ---
-title: "Imperative and Declarative Style Programming"
+title: "Imperative and Declarative Style Programming (Programming Style Part 1)"
 comments: true
 excerpt: "In this article I am going to try to explain the difference between imperative and declarative style programming"
 header:
