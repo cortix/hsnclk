@@ -1,5 +1,5 @@
 ---
-title: "Higher Order Functions"
+title: "Higher Order Functions (Programming Style Part 2)"
 comments: true
 excerpt: "In this article, I am going to try to explain what the higher-order functions are, first-class citizen and first-class function"
 header:
@@ -76,7 +76,7 @@ Thread t2 = new Thread( () -> System.out.println("Another thread"));
 t2.start();
 ```
 
-But, we can treat functions or codes as *first class citizens* as well. In this example we pass a **function** which is *anonymous* as an argument to the `Thread` constructor. This makes it *higher order function* because it receives another function as its parameter.
+But, we can treat functions or codes as *first class citizens* as well. In this example we pass a **function** which is *lambda expression*(anonymous) as an argument to the `Thread` constructor. This makes it *higher order function* because it receives another function as its parameter.
 
 
 
