@@ -27,7 +27,7 @@ toc_label: "CONTENT"
 **IMPORTANT :** The notes that I took for myself. I hope they will help you too.. Each resource that I used is added as reference at the end of the page.
 {: .notice}
 
-First things first, we have to know some definitions to understand higher order functions. I would to like to start with the term of "**first-class citizen**"
+First things first, we have to know some definitions to understand higher order functions. I would like to start with the term of "**first-class citizen**"
 
 ## First-class citizen
 
