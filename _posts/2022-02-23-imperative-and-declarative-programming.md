@@ -52,6 +52,10 @@ In the above example, we can easily understand what this code does.
 
 In summary, we show step by step *how we do* the necessary actions to find this name(*what we do*).
 
+### Note:
+
+At the core of the familiar imperative style are **mutability** and **command-driven** programming. We create variables or objects and modify their state along the way. We also provide detailed commands or instructions to execute, such as create a loop index, increment its value, check if we reached the end, update the nth element of an array, and so on.
+
 ## Declarative Style Programming
 
 The declarative programming style focuses on what the program should accomplish without specifying all the details of how the program should achieve the result. Again according to Venkat;
@@ -88,7 +92,7 @@ In both cases, it's obvious what we're going to do. Our goal is to print the ele
 </figure>
 
 Actually both the **standard for loop** *(for i = 0...)* and the **enhanced for loop** *(for var x : ...)* are **imperative style**. The **enhanced for loop** is really a wrapper around
-`iterator.hasNext()` and `iterator.next()`. Furthermore, from the **enhanced for loop** we can do `break` and `continue` with an if condition, and that is where we see the **imperative** nature being
+`iterator.hasNext()` and `iterator.next()`. That is, under the hood this form of iteration uses the `Iterator` interface and calls into its `hasNext` and `next` methods. Furthermore, from the **enhanced for loop** we can do `break` and `continue` with an if condition, and that is where we see the **imperative** nature being
 enhanced clearly.
 
 > ENHANCED for loop is more declarative than the STANDARD for loop
@@ -100,3 +104,4 @@ We can say that the enhanced for loop moves the needle towards **declarative sty
 * [https://en.wikipedia.org/wiki/Imperative_programming](https://en.wikipedia.org/wiki/Imperative_programming)
 * [https://en.wikipedia.org/wiki/Declarative_programming](https://en.wikipedia.org/wiki/Declarative_programming)
 * [Understanding Functional Programming - Venkat Subramaniam](https://learning.oreilly.com/live-events/understanding-functional-programming/0636920457435/0636920058831/)
+* [Functional Programming in Java](https://learning.oreilly.com/library/view/functional-programming-in/9781941222690/)
