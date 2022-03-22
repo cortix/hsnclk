@@ -287,6 +287,3 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar:
-        - text: >
-            [![img](/assets/images/180x150-standard.png)](https://brave.com/has097)
