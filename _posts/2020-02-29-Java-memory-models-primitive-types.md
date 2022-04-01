@@ -61,7 +61,7 @@ String a2 = "hello";
 String a3 = new String("hello");
 ```
 
-<figure style="width: 150px" class="align-center">
+<figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/string-interning.png" alt="string-interning">
   <figcaption></figcaption>
 </figure>
