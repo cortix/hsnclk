@@ -17,6 +17,8 @@ tags:
   - extends
   - miras alma
   - kalıtımı sağlamak için asgari hedefler
+  - gizli değişken
+  - gölge değişken
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -80,18 +82,18 @@ public class Faculty extends Person {
 ```
 
 
-Görüleceği üzere ortak değişkenimiz olan name, sadece üst sınıfımız olan Person sınıfında yer almaktadır. Extend kelimesininin kelime anlamı genişletmektir. Yalnız programlama jargonundaki tam karşılı ise miras almaktır. Yani Student ve Faculty sınıflarını Person sınıfına extends ettiğimizde aslında Person sınıfını miras almış oluruz.
+Görüleceği üzere ortak değişkenimiz olan **name**, sadece üst sınıfımız olan **Person** sınıfında yer almaktadır. **Extend** anahtar kelimesinin anlamı genişletmektir. Yalnız programlama jargonundaki tam karşılı ise **miras almaktır**. Yani **Student** ve **Faculty** sınıflarını **Person** sınıfına `extends` ettiğimizde aslında **Person** sınıfını miras almış oluruz.
 
-Böylelikle Person sınıfımız bizim base/super/parent sınıfımız olurken, Student ve Faculty sınıfları ise ana sınıftan türeyen derived/subclass/child olur.  
+Böylelikle **Person** sınıfımız bizim *base/super/parent* sınıfımız olurken, **Student** ve **Faculty** sınıfları ise ana sınıftan türeyen *derived/subclass/child* olur.  
 
 
 Peki Parent Sınıftan ne Miras Alınır?
 
-Tabii ki bütün özellikerini değil.
+Tabii ki bütün özelliklerini değil.
 
-* public örnek değişkenleri(instance variables
-* public metotları,
-* private örnek değişkenleri(instance variables)???? Aslında bir bakıma private instance variable'ları da bir bakıma extends ederiz. Ama nasıl olduğuyla ilgili detayı başka bir derste veririz.
+* `public` örnek değişkenleri(instance variables)
+* `public` metotları,
+* `private` örnek değişkenleri(instance variables)???? Aslında bir bakıma `private` instance variable'ları da bir bakıma `extends` ederiz. Ama nasıl olduğuyla ilgili detayı başka bir derste veririz.
 
 
 
@@ -110,7 +112,7 @@ public class Student extends Person {
 
 
 
-Gerçekten hala **name** adında bir Student değişkenine sahip olmanız gerekiyor mu? Aslında hayır... Buna gizli değişken veya gölge değişken de denir ve bu hangi değişkeni, hangi name değişkeninden bahsettiğinizi fark etmek zordur. Student mı yoksa Person mı???? Yani aslında buna sahip olmazsınız, çünkü onu otomatik olarak Person'dan miras aldınız.Yalnız ufak bir sorun var. public olmayan değişkenlere erişim sadece public metodlar üzerinden sağlanabilir. getter ve setter metodlar buna güzel bir örnektir.
+Gerçekten hala **name** adında bir **Student** üye değişkenine sahip olmanız gerekiyor mu? Aslında hayır... Buna **gizli değişken** veya **gölge değişken** de denir ve bu hangi değişkeni, hangi **name** üye değişkeninden bahsettiğinizi fark etmek zordur. **Student** mı yoksa **Person** mı???? Yani aslında buna sahip olmazsınız, çünkü onu otomatik olarak Person'dan miras aldınız. Yalnız ufak bir sorun var. `public` olmayan değişkenlere erişim sadece `public` metodlar üzerinden sağlanabilir. **getter** ve **setter** metodlar buna güzel bir örnektir.
 
 
 ``` java
@@ -147,9 +149,9 @@ Kalıtım hiyerarşisi şu şekildedir.
 
 * Gender(Cinsiyet)
 
-Diyelim ki yukarıdaki 2 değişkeni bu sınıflara eklemek istiyorsunuz. Sizce hangisi hangi sınıfa daha uygun olur? Örneğin Student sınıfına ait olup ama Faculty sınıfında olmayan değişken ne olabilir? Aynı soruyu Faculty sınıfına ait olup ama Student sınıfında olmayan şeklinde tersten de sorabiliriz.
+Diyelim ki yukarıdaki 3 değişkeni bu sınıflara eklemek istiyorsunuz. Sizce hangisi hangi sınıfa daha uygun olur? Örneğin **Student** sınıfına ait olup ama **Faculty** sınıfında olmayan değişken ne olabilir? Aynı soruyu **Faculty** sınıfına ait olup ama **Student** sınıfında olmayan şeklinde tersten de sorabiliriz.
 
-Cinsiyet değişkeni genel bir değişken olduğundan Person sınıfında olması daha doğru olacaktır. Ama maaş ve not ortalaması değişkenleri biraz daha spesifiktir. Yani öğrencinin maaş alamayacağını ve öğretim görevlilerinin ise not ortalamasına sahip olamayacağını biliyoruz. Bu yüzden bu değişkenleri bu sınıflara özel olarak tanımlayabiliriz.
+Cinsiyet değişkeni genel bir değişken olduğundan **Person** sınıfında olması daha doğru olacaktır. Ama maaş ve not ortalaması değişkenleri biraz daha spesifiktir. Yani öğrencinin maaş alamayacağını ve öğretim görevlilerinin ise not ortalamasına sahip olamayacağını biliyoruz. Bu yüzden bu değişkenleri bu sınıflara özel olarak tanımlayabiliriz.
 
 <figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2.png" alt="uml diagram">
