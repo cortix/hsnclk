@@ -8,6 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-12.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [NOAA](https://unsplash.com/photos/sDCG1hTV8mI) on Unsplash"
+  video:
+    id: cR9uwtMQt-g
+    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -25,7 +28,7 @@ toc_label: "SAYFA İÇERİĞİ"
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-Aşağıdaki sorularda bir önceki derslerde öğrendiklerimizi pekiştirmeye çalışacağız.
+Aşağıdaki sorularda bir önceki derslerde öğrendiklerimizi pekiştirmeye çalışacağız. Lütfen önce koda bakarak kendiniz çözmeye çalışın. Bu çok daha yararlı bir egzersizdir. IDE kullanarak çözmeye çalışmak kodun çalışma mantığını anlamanıza yardımcı olmaz. Kalem kağıt kullanabilirsiniz.
 
 ## Örnek 1
 
@@ -54,7 +57,7 @@ public class Person {
 }
 ```
 
-Yukarıdaki kod bloğununda önceki derslerden alışık olduğumuz Person ve Student sınıfları yer almaktadır. Aşağıdaki main metodu içinde yer alan kod çalıştırılmak istendiğinde komut ekranında nasıl bir çıktı ile karşılaşırız?
+Yukarıdaki kod bloğununda önceki derslerden alışık olduğumuz **Person** ve **Student** sınıfları yer almaktadır. Aşağıdaki `main` metodu içinde yer alan kod çalıştırılmak istendiğinde komut ekranında nasıl bir çıktı ile karşılaşırız?
 
 ```java
 public static void main(String[] args) {
@@ -67,9 +70,9 @@ public static void main(String[] args) {
 * Argümanlı kurucu ise ``this("Student");`` çağrısından aldığı **"Student"** isimli string argümanı, argümanlı kurucunun ilk satırında yer alan ``super(n);`` çağrısı ile ``Person`` sınıfının argümanlı kurucusuna taşır.
 * Person kurucusunun ilk satırı her ne kadar ``this.name = n;`` olsada biz biliyoruz ki derleyici buraya bir ``super();`` çarğısı ekleyecektir. Çünkü önceki derslerden de bildiğimiz üzere derleyici kurallarından [3.kural,](/java-kalitim-polimorfizm/Java-inheritance6/#kural-3) kurucunun 1. satırında ya aynı sınıf kurucusunu çağıran bir **this(args<sub>opt</sub>)** ifadesi olacak ya da bir üst sınıf kurucusunu çağıran bir **super(args<sub>opt</sub>)** ifadesi olacak diyordu. Bunların ikiside yoksa java derleyicisi ``super();`` çağrısını ekleyeceğini belirtiyordu. Bu sebepten ötürü biz görmesek de java arka planda bu çağrıyı yapar. Amaç Object sınıfına kadar ulaşıp, oradan değişkenleri ilklendirerek geri dönmek.
 * Person kurucusu içinde taşınan bu argüman, ``Person`` sınıfı üye değişkenine ``this.name = n;`` atandıktan sonra, ``System.out.println("1");`` ile komut satırı ekranına **"1"** yazdırılır.
-* ``Person`` kurucusu ile işimiz bitince, bu kurucuya nereden ulaştıysak oraya geri dönmemiz gerekecektir. Bu kurucuya ``Student`` sınıfının argümanlı constructor'ından geldiğimizi biliyoruz. Orada kaldığımız satırdan devam ederiz. Karşımıa bir ``System.out.println("3");`` işlemi daha çıkmaktadır. Ekrana sonuç olarak **"3"** yazdırılır.
+* ``Person`` kurucusu ile işimiz bitince, bu kurucuya nereden ulaştıysak oraya geri dönmemiz gerekecektir. Bu kurucuya ``Student`` sınıfının argümanlı constructor'ından geldiğimizi biliyoruz. Orada kaldığımız satırdan devam ederiz. Karşımıza bir ``System.out.println("3");`` işlemi daha çıkmaktadır. Ekrana sonuç olarak **"3"** yazdırılır.
 
-* Bu kurucuda da işimiz bittiğine göre buradan çıkmamız gerekecektir. O halde bu kurucuya nereden geldiğimize bakarız. Hatırlayacak olursak bu kurucuya ``Student`` sınıfının argümansız kurucusundan gelmiştik. Burada da yarım kalan bir işlemimiz bizi beklemektedir. ``System.out.println("2");`` satırı ile ekrana **"2"** yazdırırız ve main metodu içinde başladığımız yere geri döneriz.
+* Bu kurucuda da işimiz bittiğine göre buradan çıkmamız gerekecektir. O halde bu kurucuya nereden geldiğimize bakarız. Hatırlayacak olursak bu kurucuya ``Student`` sınıfının argümansız kurucusundan gelmiştik. Burada da yarım kalan bir işlemimiz bizi beklemektedir. ``System.out.println("2");`` satırı ile ekrana **"2"** yazdırırız ve `main` metodu içinde başladığımız yere geri döneriz.
 * Sonuç olarak ekrana **1, 3, 2** yazdırılır.
 
 ## Örnek 2
@@ -102,12 +105,16 @@ public static void main(String[] args) {
 }
 ```
 
-Benzer şekilde main metodu içinde bulunan kod bloğu çalıştırılmak istendiğinde hangi sonucu alırız.
+Benzer şekilde `main` metodu içinde bulunan kod bloğu çalıştırılmak istendiğinde hangi sonucu alırız.
 
 * Benzer şekilde ``new Student();`` kodu ile ``Student`` sınıfının argümansız kurucusu çağrılmaktadır. Student kurucusu içinde ``this.setName("Student");`` ifadesi ile karşılaşmaktayız. Her ne kadar ``this.setName("Student");`` satırı ile ilk olarak karşılaşsak da biliyoruz ki derleyici bizim yerimize arka planda ``super();`` çağrısını kurucunun ilk satırına ekleyecektir. Çünkü önceki derslerden de bildiğimiz üzere derleyici kurallarından [3.kural,](/java-kalitim-polimorfizm/Java-inheritance6/#kural-3) kurucunun 1. satırında ya aynı sınıf kurucusunu çağıran bir **this(args<sub>opt</sub>)** ifadesi olacak ya da bir üst sınıf kurucusunu çağıran bir **super(args<sub>opt</sub>)** ifadesi olacak diyordu. Bunların ikiside yoksa  java derleyicisi ``super();`` çağrısını ekleyeceğini belirtiyordu. Bu sebepten ötürü biz görmesek de java arka planda bu çağrıyı yapar.
 * Yalnız şöyle bir sorun var. Student sınıfının bir üst sınıfı, yani miras aldığı sınıf olan Person sınıfı argümansız bir kurucuya **sahip değildir.** Bu sebepten ötürü derleme hatası alırız.
 
-> **Not:** Son soruda  Java derleyicisi arka planda neden bir argümansız kurucu eklemedi diye düşünebilirsiniz. Sebebi şudur: Hali hazırda argüman alan bir kurucunuz varsa Java'nın bizim için bir tane eklemeyeceği ortaya çıkmaktadır. Bu durumda derleme hatası almak istemiyorsak, argümansız kurucuyu bizim elle eklememiz gerekmektedir.
+> **Not:** Son soruda Java derleyicisi arka planda neden bir argümansız kurucu eklemedi diye düşünebilirsiniz. Sebebi şudur: Hali hazırda argüman alan bir kurucunuz varsa, compiler insiyatifi size bırakır. Bu durumda derleme hatası almak istemiyorsak, argümansız kurucuyu ek olarak bizim elle eklememiz gerekmektedir.
+
+**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
+
+{% include video id="cR9uwtMQt-g" provider="youtube" %}
 
 ## Referanslar
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
