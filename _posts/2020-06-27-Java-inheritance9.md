@@ -16,6 +16,7 @@ tags:
   - overriding metot
   - geçersiz kılma
   - ezici metot
+  - polimorfizm
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -34,18 +35,18 @@ Kalıtım hakkında ilk konuşmaya başladığımızda üç hedefimiz vardı. Ov
 2. Farklı davranışa sahip olanları ise farklı sınıflara ayırmak
 3. Tüm bu nesneleri tek bir veri yapısında tutmak.
 
-Örneğin bir yöntemi geçersiz kılmazsak 1.maddeyi uygularız. Üst sınıfımızda bir yöntem varsa, ortak olan bu kodu doğrudan kullanırız. Ancak, alt sınıflarımızın farklı davranmasını istiyorsak, tek yapmamız gereken ortak olan bir yöntemi geçersiz kılmaktır. Sonuç olarak metotları geçersiz kıldığımızda bir nevi farklı davranışlara sahip olurlar. Bu sayede de 2.maddemizi uygulamış oluruz. Sonuncu madde olan ve bir sonraki derste göreceğimiz polimorfizm konusu ile de tüm nesnelerimizin tek bir veri yapısında olmasına ve yine de uygun yöntemi çağırabilmemize izin verdiğini göreceğiz. Yani polimorfizm uygulasak da yine de geçersiz kılınan objenin metoduna ulaşıldığını göreceksiniz. Söylenenlerin bir kısmının havada kaldığının farkındayım.
+Örneğin bir yöntemi geçersiz kılmazsak 1.maddeyi uygularız. Üst sınıfımızda bir yöntem varsa, ortak olan bu kodu doğrudan kullanırız. Ancak, alt sınıflarımızın farklı davranmasını istiyorsak, tek yapmamız gereken ortak olan bir yöntemi geçersiz kılmaktır. Sonuç olarak metotları geçersiz kıldığımızda bir nevi farklı davranışlara sahip olurlar. Bu sayede de 2.maddemizi uygulamış oluruz. Sonuncu madde olan ve bir sonraki derste göreceğimiz polimorfizm konusu ile de tüm nesnelerimizin tek bir veri yapısında olmasına ve yine de uygun yöntemi çağırabilmemize izin verdiğini göreceğiz. **Yani polimorfizm uygulasak da yine de geçersiz kılınan objenin metoduna ulaşıldığını göreceksiniz.** Söylenenlerin bir kısmının havada kaldığının farkındayım.
 
 ## Overriding(Ezici) Metotlar
 
-Bu arada, programlama öğrenen bir çok kişinin aşırı yükleme metotları(Overloading) ile eçersiz kılma metotlarını(overriding) karıştırması gerçekten yaygındır, bu yüzden aşırı yükleme ve geçersiz kılma hakkında hızlı bir şekilde konuşmak istiyorum.
+Bu arada, programlama öğrenen bir çok kişinin aşırı yükleme metotları(overloading) ile geçersiz kılma metotlarını(overriding) karıştırması gerçekten yaygındır, bu yüzden aşırı yükleme ve geçersiz kılma konularına hızlı bir şekilde değinmek istiyorum.
 
 * **Overloading metotlar:** Eğer bir sınıf aynı yöntem adına, farklı parametrelerle sahip ise overloading metotlara sahip demektir. Bu, aynı sınıf içindeki farklı bir yöntem imzasıdır. Bir sonraki ders bununla ilgili konuşacağız.
 
 * **Overriding metotlar:** Burada ise aynı yöntem imzasına sahip bir alt sınıfınız vardır, yani aynı metot ismi ve üst sınıfla aynı parametreler anlamına gelir. Fakat metot gövdesi değiştirilir. Özetle bir metot geçersiz(override) kılındığında, aslında şunu yapmış oluyorsunuz. Bir sınıfın miras aldığı sınıfta bulunan bir metodun yaptığı işlem(yani metot gövdesi), artık bu sınıfta(yani miras alan sınıfta) farklı bir şeklinde yorumlanacaktır.
 
 ### Metot İmzası ve Metot deklarasyonu Arasındaki Farklar
-Burada aklınıza şu soru gelebilir. Metot imzası nedir? Aslında ben bu soruyu, metot imzası ve metot deklerasyonu arasında ne gibi farklar vardır? şeklinde biraz genişletmek istiyorum. [Java main metodu](/java/Java-main-method/) başlıklı yazımı okuduğunuzda, metot deklerasyonu hakkında fikir sahibi olabilirsiniz.
+Burada aklınıza şu soru gelebilir. Metot imzası nedir? Aslında ben bu soruyu, metot imzası ve metot deklerasyonu arasında ne gibi farklar vardır? şeklinde biraz genişletmek istiyorum. [Java main metodu](/java/Java-main-method/) başlıklı yazımı okuduğunuzda, metot deklarasyonu hakkında fikir sahibi olabilirsiniz.
 
 #### Metot deklarasyonu:
 Aşağıda tipik bir yöntem deklarasyon örneğidir:
@@ -80,7 +81,7 @@ resultNumbers(int , int )
 ## Overriding(Ezici) Metot Örnekleri
 ### Örnek 1
 
-İlk örneğimiz ``Object`` sınıfının kendisine bakmak olacak. Bu üst sınıfta ``toString`` adında bir yöntemimiz bulunmaktadır. ``toString`` yöntemi bir nesnenin içeriğini veya dize temsilini yazdırır. Nesne sınıfında olduğu için Java'daki tüm nesneler onu geçersiz kılabilir.
+İlk örneğimiz ``Object`` sınıfının kendisine bakmak olacak. Bu üst sınıfta ``toString`` adında bir yöntemimiz bulunmaktadır. ``toString`` yöntemi bir nesnenin içeriğini(sahip olduğu state'i, yani instance değişkenlerinin tuttuğu değerler) veya dize temsilini yazdırır. Nesne sınıfında olduğu için Java'daki tüm nesneler ``toString`` yöntemini geçersiz kılabilir.
 
 <figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override1.png" alt="override method">
@@ -105,16 +106,18 @@ public class Person {
 }
 ```
 
-Yukarıdaki kod bloğunda örneğin Object sınıfından geçersiz kıldığımız(override) ``toString()`` yöntemini, ``getName()`` getter yöntemini döndürecek şekilde ezdik. Dönüş tipi ``String`` olan farklı bir şey de döndürebilirdik. Bu tamamen size bağlı..
+Yukarıdaki kod bloğunda örneğin **Object** sınıfından geçersiz kıldığımız(override) ``toString()`` yöntemini, ``getName()`` getter yöntemini döndürecek şekilde ezdik. Dönüş tipi ``String`` olan farklı bir şey de döndürebilirdik. Bu tamamen size bağlı..
 
 ```java
 Person p = new Person("Hasan");
 System.out.println(p.toString());
 ```
 
-Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gibi bunu ekrana yazdırmak istiyorsunuz... ``toString()`` metodu ``Object`` sınıfının toString metodunu çağırmayacaktır. Çünkü bu metodu ezdiğimiz için, çağrılan ``toString()`` metodu, ``Person`` sınıfındaki olacaktır. Sonuç olarak ekrana **"Hasan"** yazdırılır.
+Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gibi bunu ekrana yazdırmak istiyorsunuz... ``toString()`` metodu ``Object`` sınıfının toString metodunu çağırmayacaktır. Çünkü bu metodu ezdiğimiz için, çağrılan ``toString()`` metodu, ``Person`` sınıfındaki olacaktır. Sonuç olarak ekrana **"Hasan"** yazdırılır. Aslında burada biraz da polimorfizm devreye girer. Polimorfizm konusu overriding konusu ile iç içe bir konudur ve beraber değerlendirmek çok önemlidir. Polimorfizm konusuna henüz girmedik ama **Robert C. Martin**'in polimorfizm için yaptığı şu tanımı sizinle paylaşmak istiyorum.
 
-> **Not:** Bu arada **println** yönteminin olduğu yerde **toString()** yöntemini çağırmak gereksizdir. Çünkü **println** yöntemi bu yöntemi zaten otomatik olarak çağırır. Ynni **System.out.println(p);** yazmamız yeterlidir.
+> The lowest implementation of the method down the hierarchy is automatically invoked that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşideki en düşük uygulaması otomatik olarak çağrılır, bu JAVA'daki polimorfizmin tanımıdır.)
+
+> **Not:** Bu arada **println** yönteminin olduğu yerde **toString()** yöntemini çağırmak gereksizdir. Çünkü **println** yöntemi bu yöntemi zaten otomatik olarak çağırır. Yani **System.out.println(p);** yazmamız yeterlidir.
 
 ### Örnek 2
 
