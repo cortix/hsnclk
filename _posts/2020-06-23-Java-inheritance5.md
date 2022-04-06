@@ -60,6 +60,8 @@ Sınıf yükleme ile nesne oluşturma aynı şey gibi gözükebilir ama aynı de
 
 > Sınıf yüklendikten sonra o sınıftan defalarca obje oluşturabilirsiniz.
 
+**Not:** Bir sonraki [ders](/java-kalitim-polimorfizm/Java-inheritance6/) bu konuyla ilgili birkaç bilgi daha vereceğim.
+
 ## Nesne Oluşturma
 
  Bu işlemin nasıl gerçekleştiğini anlamak için adım adım ilerlememizde yarar var.
@@ -106,7 +108,7 @@ Ve sonra ``Student()`` kurucusuna geri döner ve ``Student`` ile ilişkili deği
   <figcaption></figcaption>
 </figure>
 
-Bu süreç boyunca aslında tüm bu değişkenleri başlattık, hatta nesneye kadar gidip geri döndük. Aslında içten dışa ilklendirmeden bunu kastediyorduk.
+Bu süreç boyunca aslında tüm bu değişkenleri başlattık, hatta nesneye kadar gidip geri döndük. Aslında içten dışa ilklendirmeden bunu kastediyorduk. Ama değişken ilklendirirken de izlenilen kuralları bilmemiz gerekecek o yüzden bu dersten 2 ders sonrasında bu [kuralları](/java-kalitim-polimorfizm/Java-inheritance7/) ele alacağız. Sabırla ilelemenizi öneririm.
 
 <figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance5/hierarchy5.png" alt="hierarchy">
@@ -115,7 +117,7 @@ Bu süreç boyunca aslında tüm bu değişkenleri başlattık, hatta nesneye ka
 
 Burada şu soruyu sorabilirsiniz. ``Object`` sınıfını ``extends`` etmediğimiz halde java bunu nasıl biliyor? Bir sonraki bölümde bunun cevabını bulmaya çalışalım. Bu arada burada anlattıklarım belki kafanızda tam oturmamış olabilir. O yüzden aşağıdaki videoyu izlemenizi şiddetle öneririm.
 
-Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım.
+**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım.
 
 {% include video id="cR9uwtMQt-g" provider="youtube" %}
 
