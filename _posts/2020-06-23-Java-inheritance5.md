@@ -8,6 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-47.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Tamas Tuzes-Katai](https://unsplash.com/photos/LzpTVcfTBE8) on Unsplash"
+  video:
+    id: cR9uwtMQt-g
+    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -45,7 +48,21 @@ Aşağıdaki şekilde gördüğünüz kod bloğundaki ``new`` ahantar kelimesi a
   <figcaption></figcaption>
 </figure>
 
- Konumuza geri dönecek olursak, burada ``Student`` kurucusunun yaptığı, öğrenciyle ilişkili değişkenleri başlatmaktır. Ve bunu yapmanın yolu aslında içten dışa doğru yol almaktır. Çünkü nesneler içten dışa doğru oluşturulurlar. Hiyerarşiye göre ``Object`` sınıfına kadar gider ve sonra başladığınız sınıfa geri dönersiniz. Geri döndükçe ilgili tüm değişkenleri başlatırsınız(yani ilklendirirsiniz, yani atama işlemlerini yaparsınız:)). Bu işlemin nasıl gerçekleştiğini anlamak için adım adım ilerlememizde yarar var.
+ Konumuza geri dönecek olursak, burada ``Student`` kurucusunun yaptığı, öğrenciyle ilişkili değişkenleri başlatmaktır. Ve bunu yapmanın yolu aslında içten dışa doğru yol almaktır. Çünkü nesneler içten dışa doğru oluşturulurlar. Hiyerarşiye göre ``Object`` sınıfına kadar gider ve sonra başladığınız sınıfa geri dönersiniz. Geri döndükçe ilgili tüm değişkenleri başlatırsınız(yani ilklendirirsiniz, yani atama işlemlerini yaparsınız:)).
+
+## Sınıf Yükleme
+
+Sınıf yükleme ile nesne oluşturma aynı şey gibi gözükebilir ama aynı değildir.
+
+ > Herbir sınıf heap alanına statik metot ve değişkenleriyle bir kez yüklenir. Ama statik bu değişkenler sonrasında güncellenebilir. Yüklemek ile güncellemeyi karıştırmayalım. Statik bu metot ve değişkenler, statik initializers olarak da bilinir. Sınıfın hafızası olarak da düşünebilirsiniz. Sınıftan yaratılan bütün objelerle ortak paylaşıldığı için bu tanımlama kullanılır.
+
+ Ama şunu bilmekte de yarar var. Bir bir sınıftan bir nesne oluşturmadan önce, sınıfın kendisi statik değişken ve metotlarıyla beraber tek seferliğine heap alanına yüklenir. Bu örnekten yola çıkarsak, **Student** sınıfından bir obje oluşturmaya teşebbüs ettiğimizde daha `new` anahtar kelimesine(yani obje oluşturmaya) odaklanmadan önce, **Student** sınıfının miras aldığı bir sınıfın olup olmadığına bakılır. Herhangi bir işlem yapmadan **Person** sınıfına gideriz. Aynı soruyu **Person** sınıfı için de sorarız. **Person** sınıfının miras aldığı bir sınıf var mı? Görünüşte yok. Ama biliyoruz ki dolaylı olarak **Object** sınıfını miras alıyor. O yüzden hiçbir işlem yapmadan **Object** sınıfına gideriz. Sonrasında ise **Object** sınıfının statik metot ve değişkenleri(varsa) heap alanına yüklenir. Sonra **Person** sınıfına geri döner ve aynı işlemleri burada da yaparız. Yani **Person** sınıfının statik metot ve değişkenleri(varsa) heap alanına yüklenir. Son olarak **Student** sınıfına geri döner ve aynı işlemleri burada da yaparız. Yani **Student** sınıfının statik metot ve değişkenleri(varsa) heap alanına yüklenir. Bu işlemler yani sınıf yükleme işlemleri bittikten sonra ``new`` operatörü ile bir obje oluşturma işlemine geçeriz. Buradaki işlemler de sınıf yüklerken yaptığımıza benzerdir. Önce miras aldığı sınıfların(ta ki Object sınıfına kadar) instance metot ve değişkenleri(yani statik olmayanlar) bu objenin içinde ilklendirilir. En son **Student** sınıfınınkiler ilklendirilir ve obje oluşturma işlemi biter. Aşağıda sadece obje oluşturma kısmı resmedilmiştir. Ama öncesinde sınıfların heap'e yüklendiğini bilmeniz gerekmektedir. (Bu kısmın iyice anlaşılabilmesi için sayfanın sonunda hazırladığım bir videoyu bulacaksınız. Bu video konunun daha iyi anlaşılmasına yardımcı olacaktır.)
+
+> Sınıf yüklendikten sonra o sınıftan defalarca obje oluşturabilirsiniz.
+
+## Nesne Oluşturma
+
+ Bu işlemin nasıl gerçekleştiğini anlamak için adım adım ilerlememizde yarar var.
 
   ``new`` operatörü ile bir obje alanı(boşluğu) yarattık. Sonrasında ise bu alana(boşluğa) constructor aracılığı ile girdik. Aşağıdaki şekilde görebilirsiniz.
 
@@ -96,7 +113,11 @@ Bu süreç boyunca aslında tüm bu değişkenleri başlattık, hatta nesneye ka
   <figcaption></figcaption>
 </figure>
 
-Burada şu soruyu sorabilirsiniz. ``Object`` sınıfını ``extends`` etmediğimiz halde java bunu nasıl biliyor? Bir sonraki bölümde bunun cevabını bulmaya çalışalım.
+Burada şu soruyu sorabilirsiniz. ``Object`` sınıfını ``extends`` etmediğimiz halde java bunu nasıl biliyor? Bir sonraki bölümde bunun cevabını bulmaya çalışalım. Bu arada burada anlattıklarım belki kafanızda tam oturmamış olabilir. O yüzden aşağıdaki videoyu izlemenizi şiddetle öneririm.
+
+Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım.
+
+{% include video id="cR9uwtMQt-g" provider="youtube" %}
 
 ## Özet
 

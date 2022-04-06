@@ -43,18 +43,18 @@ Burada ele alacağımız değiştiriciler ``public`` ve ``private`` ile beraber 
 2. **protected:** Şayet bu değiştiriye sahipseniz, 3 şekilde erişim sağlanabilir.
   * Birinci: aynı sınıf erişiminden kasıt, sınıfın içinde bulunan bir metot veya constructor içinden doğrudan erişimdir.
   * İkinci: aynı paket erişiminden kastımız ise, aşağıdaki şekillerde de göreceğiniz gibi, oluşturduğunuz sınıfları gruplamak için yapılan bir klasörlerin içinden yapılan erişimdir. Yani bu paket içinde olan sınıflar bu değiştiriciye sahip metot ve değişkenlere erişebilir.
-  * Üçüncü ise herhangi bir alt sınıftan erişimdir. Alt sınıflar bir sınıfı miras alırsa(extends), miras aldığı sınıfın alt sınıfı olurlar ve belirli kurallar etrafında bu değiştiriciye sahip metot ve değişkenlere erişim haklarını elde ederler.
+  * Üçüncü ise herhangi bir alt sınıftan erişimdir. Alt sınıflar bir sınıfı miras alırsa(extends), miras aldığı sınıfın alt sınıfı olurlar ve belirli kurallar etrafında bu değiştiriciye sahip metot ve değişkenlere **paket dışından** da erişim haklarını elde ederler.
 3. **package(default):** Bu değiştiriciye sahip olduğunuzda, alt sınıftan erişim hakkını kaybedersiniz. <u><i>Yalnız şu detayı belirtmekte yarar var. Eğer alt sınıf aynı paketin içinde ise yine erişim mümkündür.</i></u> Bunun dışında tıpkı protected değiştiricide olduğu gibi, aynı paket ve aynı sınıftan erişim yine vardır.
-4. **private:** Bu değiştirici ile dış dünyadan bağlantı bir bakıma kesilir. Yani sadece aynı sınıf içinden erişim mümkün olur. Sınıf dışı erişimi delmek için yine sınıf içinde oluşturulan public getter ve setter metotlardan yararlanılır. Aslında bu, daha temiz kod yazımı için geliştirilen yöntemlerden biridir. Böylelikle sınıf üye değişkenlerinin bir nevi gizliliği sağlanmış olur.
+4. **private:** Bu değiştirici ile dış dünyadan bağlantı bir bakıma kesilir. Yani sadece aynı sınıf içinden erişim mümkün olur. Sınıf dışı erişimi delmek için yine sınıf içinde oluşturulan public getter ve setter metotlardan yararlanılır. Aslında bu, daha temiz kod yazımı için geliştirilen yöntemlerden biridir. Böylelikle sınıf üye değişkenlerinin bir nevi gizliliği sağlanmış olur.(Yalnız **java reflection api** ile private gizliliği de delinebilir. Yani çok da güvenli sayılmayabilirsiniz. Tabii ki bunun da belli başlı önlemleri vardır.)
 
-> **Not:** Çok gerekmekmediği sürece protected ve package(default) değiştiriciler tavsiye edilmez. private ve public değiştiricilerin kullanılması tavsiye edilir. Hatta sınıf içi üye değişkenlerinin private erişime sahip olması ve metotların public olması çoğu zaman önerilir. Sınıf içi private metotlar genellikle yardımcı(helper) metot olarak adlandırılır.
+> **Not:** Çok gerekmediği sürece protected ve package(default) değiştiriciler tavsiye edilmez. private ve public değiştiricilerin kullanılması tavsiye edilir. Hatta sınıf içi üye değişkenlerinin private erişime sahip olması ve metotların public olması çoğu zaman önerilir. Sınıf içi private metotlar genellikle yardımcı(helper) metot olarak adlandırılır.
 
 
 ### Örnek
 
 Aşağıdaki şekil sınıflar arası hiyerarşiyi ve aynı zamanda rasgele oluşturulmuş bir tasarımı göstermektedir. Buradaki amacımız sadece ``Sample`` sınıfı içinde bulununan üye değişkenlerin görünürlük seviyelerini göstermek olacak.
 
-Aşağıda 5 farklı sınıf arasında oluşturulmuş bir tasarımı görmektesiniz. Bunlardan ``Sub1`` ve ``Sub2`` sınıfları, ``Sample`` sınıfına doğrudan organik olarak bağlıdır. Çünkü görüleceği üzere ``extends`` anahtar kelimesi ile bu sınıfı miras aldıklarını görüyoruz. Yalnız ``Sub1`` sınıfının paket içinde ``Sub2`` sınıfının ise paket dışında olduğuna dikkat edin. Bunun yanı sıra ``Other1`` ve ``Other2`` isimli sınıflarımız da mevcuttur. ``Other1`` sınıfının ``Sample`` sınıfı ile aynı pakette olmasının dışında hiçbir organik bağ bulunmamaktadır. Aslında aynı pakette bulunmak da doğrudan bir bağ anlamına gelmez. Ama görünürlük kuralları çerçevesinde bu sınıfın bazı haklara sahip olacağını bize söyler. ``Other2`` sınıfı ise ne paket içinde ne de ``Sample`` sınıfı ile doğrudan bir bağ içindedir.
+Aşağıda 5 farklı sınıf arasında oluşturulmuş bir tasarımı görmektesiniz. Bunlardan ``Sub1`` ve ``Sub2`` sınıfları, ``Sample`` sınıfına doğrudan organik olarak bağlıdır. Çünkü görüleceği üzere ``extends`` anahtar kelimesi ile bu sınıfı miras aldıklarını görüyoruz. Yalnız ``Sub1`` sınıfının paket içinde ``Sub2`` sınıfının ise paket dışında olduğuna dikkat edin. Bunun yanı sıra ``Other1`` ve ``Other2`` isimli sınıflarımız da mevcuttur. ``Other1`` sınıfının ``Sample`` sınıfı ile aynı pakette olmasının dışında hiçbir organik bağı bulunmamaktadır. Aslında aynı pakette bulunmak da doğrudan bir bağ anlamına gelmez. Ama görünürlük kuralları çerçevesinde bu sınıfın bazı haklara sahip olacağını bize söyler. ``Other2`` sınıfı ise ne paket içinde ne de ``Sample`` sınıfı ile doğrudan bir bağ içindedir.
 
 <figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access1.png" alt="extends">
@@ -93,7 +93,7 @@ Görüleceği üzere ``Sample`` sınıfı içinde bulunan ``x`` üye değişkeni
   <figcaption></figcaption>
 </figure>
 
-> **ÖNEMLİ:** Erişimden bahsederken bir yandan da doğru kodlama ve tasarım tekniklerinden bahsetmek doğru olacaktır. Örneğin, sırf aynı pakette olduğu için **Other1** sınıfı neden **y** değişkenine erişebiliyor? Bu gerçekten mantıklı mı?  Yani böyle bir tasarım yapmamız doğru olur muydu? Genel olarak, bu tarz bir yaklaşım iyi bir tasarım oluşturmaz ve bu yüzden çok gerekmedikçe **protected** değiştiricisinin kullanılması önerilmez.
+> **ÖNEMLİ:** Erişimden bahsederken bir yandan da doğru kodlama ve tasarım tekniklerinden bahsetmek doğru olacaktır. Örneğin, sırf aynı pakette olduğu için **Other1** sınıfı neden **y** değişkenine erişebiliyor? Bu gerçekten mantıklı mı?  Yani böyle bir tasarım yapmamız doğru olur muydu? Genel olarak, bu tarz bir yaklaşım iyi bir tasarım oluşturmaz ve bu yüzden çok gerekmedikçe **protected** değiştiricisinin kullanılması önerilmez. Tabii ki gerektiği durumlar da vardır.
 
 
 ## Package(default) Erişim
@@ -106,7 +106,7 @@ Burada odaklanacağımız değişken ise ``package`` değiştiricisine sahip ``z
   <figcaption></figcaption>
 </figure>
 
-> **ÖNEMLİ:** Burada da tıpkı **protected** erişimde olduğu gibi **Other1** sınıfı **Sample** ile bir organik bağı olmadığı halde sırf aynı pakette olduğu için **z** değişkenine erişim hakkı elde edebiliyor. Az önceki soruyu yinelemek istiyorum. Bu gerçekten doğru bir tasarım mı? **protected** erişimde olduğu gibi bu tarz bir yaklaşım da iyi bir tasarım oluşturmaz ve bu yüzden çok gerekmedikçe **package(default)** değiştiricisinin kullanılması önerilmez.
+> **ÖNEMLİ:** Burada da tıpkı **protected** erişimde olduğu gibi **Other1** sınıfı **Sample** ile bir organik bağı olmadığı halde sırf aynı pakette olduğu için **z** değişkenine erişim hakkı elde edebiliyor. Az önceki soruyu yinelemek istiyorum. Bu gerçekten doğru bir tasarım mı? **protected** erişimde olduğu gibi bu tarz bir yaklaşım da iyi bir tasarım oluşturmaz ve bu yüzden çok gerekmedikçe **package(default)** değiştiricisinin kullanılması önerilmez. Tabii ki gerektiği durumlar da vardır.
 
 ## Private Erişim
 
