@@ -8,6 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-49.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Vino Li](https://unsplash.com/photos/_xvuM4kAIHM) on Unsplash"
+  video:
+    id: cR9uwtMQt-g
+    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -75,7 +78,7 @@ Derleyici kurallarından **3.kuralı** hatırlayacak olursak, <u><i>kurucunun il
   <figcaption></figcaption>
 </figure>
 
-Şimdi hem üst sınıf kurucumu doğru bir şekilde çağırabiliyorum hem de üye değişkenimi başlatabiliyorum.
+Şimdi hem üst sınıf kurucumu doğru bir şekilde çağırabiliyorum hem de üye değişkenimi başlatabiliyorum. Buradan aslında şu çıkarımı da yapabilirsiniz. Bir sınıftan bir objeyi oluşturmadan veyahut sınıfın kendisini yüklemeden önce derleyici hep bir üst sınıfın sorunlarını çözmemiz için bizi zorlar.
 
 Şimdi benzer değişiklikleri Student sınıfında değişkenleri başlatmak için yapalım istiyorum.  Dersin başında Student ve Person sınıflarının derleyici kuralları kapsamında nasıl değiştiğini gösteren 2 şekil göstermiştim. Person sınıfını az önce ele aldığımız için şimdi Student sınıfına odaklanacağız. Hatırlarsanız, derleyici arka planda bizim yerimize eklediği kurucu ve kurucu içindeki super(); üst sınıf çağısırını yapmıştı. Şimdi bu varsayılan(default) Student kurucusunu ele alıp, üzerinde biraz değişiklikler yapacağım. Haliyle değişiklik yapacağımız için bu kurucunun artık bize özel bir kurucu olacağını unutmayın. Bildiğiniz gibi derleyici, sınıf içinde bir kurucu olmadığı zaman müdahele ediyordu.
 
@@ -98,16 +101,22 @@ Derleyici kurallarından **3.kuralı** hatırlayacak olursak, <u><i>kurucunun il
   <figcaption></figcaption>
 </figure>
 
-Daha iyi bir yaklaşım sizce var mı? Evet var.. Çünkü Student sınıfının içinde, argümalı bir kurucu içinden zaten superclass çağrısı yapılıyor. Tekrardan benzer bir çağrı yapmanın gereği yoktur. Bu gibi durumlarda, aynı sınıf kurucularımı kullanabilirim. Belki de aynı sınıf kurucularımdan biri, tam olarak bu isteğime dayalı bir talebi karşılıyordur. Aşağıdaki kodda yaptığımı değişiklik görüleceği üzere, üst sınıf çağrımız olan ``super("Student");`` çağrısını this("Student") yapmak oldu. Burada ``this`` kullanarak **bulunduğumuz sınıfın kurucusunu(constructor)** kastettiğimizi anlamışsınızdır.
+Daha iyi bir yaklaşım sizce var mı? Evet var.. Çünkü Student sınıfının içinde, argümanlı bir kurucu içinden zaten superclass çağrısı yapılıyor. Tekrardan benzer bir çağrı yapmanın gereği yoktur. Bu gibi durumlarda, aynı sınıf kurucularımı kullanabilirim. Belki de aynı sınıf kurucularımdan biri, tam olarak bu isteğime dayalı bir talebi karşılıyordur. Aşağıdaki kodda yaptığım değişiklik görüleceği üzere, üst sınıf çağrımız olan ``super("Student");`` çağrısını `this("Student")` yapmak oldu. Burada ``this`` kullanarak **bulunduğumuz sınıfın kurucusunu(constructor)** kastettiğimizi anlamışsınızdır.
 
 <figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init6.png" alt="değişken ilklendirme">
   <figcaption></figcaption>
 </figure>
 
- Bazı durumlarda bu tarz sınıf içi kuruculara ihtiyaç duyulabilir. Örneğin ``Person`` sınıfının ilklendirmesini dışarıdan gelen parametrelerle değil de kendiniz belirlemek isteyebilirsiniz. Örneğin argümanlı kurucunuzu ``private`` yapıp, bu kurucuya erişimi sadece argümansız kurucuyla yapabildiğinizi hayal edin. Bu gibi durumlarda this("") çağrısı ile sınıf içi bir kurucuya erişebilirsiniz.
+Bazı durumlarda bu tarz sınıf içi kuruculara ihtiyaç duyulabilir. Örneğin ``Person`` sınıfının ilklendirmesini dışarıdan gelen parametrelerle değil de kendiniz belirlemek isteyebilirsiniz. Örneğin argümanlı kurucunuzu ``private`` yapıp, bu kurucuya erişimi sadece argümansız kurucuyla yapabildiğinizi hayal edin. Bu gibi durumlarda **this("")** çağrısı ile sınıf içi bir kurucuya erişebilirsiniz.
+
+Bu arada **this("")** ile **this.name** kullanımı arasında fark vardır. İlkinde kurucuyu çağırdığınızı belirtiyorsunuz. İkincisinde ise mevcut nesne üzerinde işlem yaptığınızı ifade ediyorsunuz.
 
 Sonuç olarak değişken ilklendirme kısmını da hallettiğimize göre, Java'da nesne oluşturmanın nasıl gerçekleştiğini bir bütün olarak görüyorsunuz.
+
+**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
+
+{% include video id="cR9uwtMQt-g" provider="youtube" %}
 
 
 ## Referanslar

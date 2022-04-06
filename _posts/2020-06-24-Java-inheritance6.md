@@ -8,6 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-48.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Daniel Salgado](https://unsplash.com/photos/1eTc_d3sdHs) on Unsplash"
+  video:
+    id: cR9uwtMQt-g
+    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -148,9 +151,13 @@ public class Student extends Person {
 
 Bu süreçleri derleyici sizden bağımsız bir şekilde arka planda gerçekleştirecektir. Ama sürecin nasıl ilerlediğini bilmekte yarar.
 
-Şu ana kadar gerçekleştirdiğimiz şeyler kurucuları alt sınıftan hiyerarşinin üst sınıfı olan Object'e kadar götürdük oldu ama hatırlarsanız geri dönerken üye değişkenleri ilklendiriyorduk. Henüz üye değişkenlerini ilklendirmedik(initialize). Bir sonraki ders bu konuyu ele alacağız.
+Şu ana kadar gerçekleştirdiğimiz şeyler kurucuları alt sınıftan hiyerarşinin üst sınıfı olan Object'e kadar götürmek oldu. Fakat, hatırlarsanız geri dönerken üye değişkenleri ilklendiriyorduk. Henüz üye değişkenlerini ilklendirmedik(initialize). Bir sonraki ders bu konuyu ele alacağız.
 
 Sizce neden derleyicinin kodunuzu derlerken uyguladığı kuralları öğreniyoruz? Çünkü kodda hata ayıklamak için bir noktada bunları bilmeniz gerekebilir. Kodunuzu daha iyi anlamanıza yardımcı olmak ve daha da önemlisi, bu kuralları bilmediğinizde süreci çözümsüzlüğe götürecek hataları ayıklayabilmeniz için bu ayrıntılara dalıyoruz. Örneğin bu kuralları bilmediğinizde, şu şekilde kafa karıştırıcı bir soru aklınızda kalabilir. Ben default bir üst sınıf constructor çağırmadım, neden bu kod yürütülüyor? Bir sonraki ders biraz daha detaya gireceğiz.
+
+**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
+
+{% include video id="cR9uwtMQt-g" provider="youtube" %}
 
 ## Referanslar
 * [https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html](https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html)
