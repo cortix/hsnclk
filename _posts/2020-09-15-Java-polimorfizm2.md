@@ -55,40 +55,41 @@ Bu sözün aslında altında yatan mantık çok açıktır. Çünkü bir kodu he
     </figure>
 
 
-3. **Derleyici bir yöntem imzası çıkarır:** Sonrasında derleme zamanında gerçekleşen bir diğer şey, çalışma zamanında yürütülecek parametresiz bir toString yöntemi imzasının derleyici tarafından yayımlanmasıdır.
-
-    <figure style="width: 600px" class="align-center">
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml3.png" alt="polimorfizm">
-      <figcaption></figcaption>
-    </figure>
-
-
 ## Çalışma Zamanı Kuralları
 
-1. **Çalışma zamanında, ilgili yöntemi bulmak için java, nesnenin çalışma zamanı türünü izler**
-2. **Derleme zamanında yayımlanan yöntem imzasını gerçek çalışma zamanı sınıfındaki uygun yöntemle eşleştirir:** Yukarıdaki örnekten yola çıkarsak, ``s.toString`` yapmaya çalıştığımızda, artık Java çalışma zamanında, **s**'in aslında bir Student nesnesi olduğunu bilir. Yani Student sınıfında toString yöntemini bulacak ve çalışma zamanında çalıştıracaktır.
+1. **Çalışma zamanında, ilgili yöntemin geçersiz kılınıp kılınmadığına bakar** Şayet geçersiz kılınmışsa, doğrudan geçersiz kılınan yöntemi çalıştırır. Yani bu örnekte yöntemin geçersiz kılındığını görüyoruz. O yüzden çalışma zamanında **Student** sınıfının ``toString`` metodu çalışacaktır.
 
-    <figure style="width: 600px" class="align-center">
-      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4.png" alt="polimorfizm">
-      <figcaption></figcaption>
-    </figure>
+<figure style="width: 600px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml3.png" alt="polimorfizm">
+  <figcaption></figcaption>
+</figure>
 
-Aslında polimorfizm derleme zamanı ve çalışma zamanı polimorfizmi olarak ikiye ayırabiliriz. Derleme zamanında alınan kararlar sonucu gerçekleşen bağlanmalara statik/erken bağlanma(static or early binding), çalışma zamanında alınan kararlar sonucu gerçekleşen bağlanmalara da dinamik/geç bağlanma(dynamic or late binding) denir. Bununla ilgili aslında ayrı bir bölüm açmayı planlıyorum. Çünkü burada bahsedilenlerin dışında da değineceğim bilgiler var.
+2. İlgili yöntem **geçersiz kılınmamışsa**, referans tipinin sınıfındaki yöntem neyse aynen onu kullanır. Bu kısım çok önemlidir. Çünkü, çalışma zamanında da olsak şayet ortada bir geçersiz kılma işlemi **yoksa** referans türü neyse o baz alınır. Farzedelim ki yukarıdaki örnek şu şekilde olsaydı(Student sınıfına odaklanmanızı istiyorum. Dikkat ederseniz ``toString`` metodu override edilmemiş)
+
+<figure style="width: 600px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4.png" alt="polimorfizm">
+  <figcaption></figcaption>
+</figure>
+
+``s.toString`` yazarak metodu çağırmaya çalıştığımızda, **Person** sınıfındaki ``toString`` metodu çalışacaktır.
+
+
+Aslında polimorfizm, **derleme zamanı** ve **çalışma zamanı polimorfizmi** olarak ikiye ayırabiliriz. Derleme zamanında alınan kararlar sonucu gerçekleşen bağlanmalara **statik/erken bağlanma(static or early binding)**, çalışma zamanında alınan kararlar sonucu gerçekleşen bağlanmalara da **dinamik/geç bağlanma(dynamic or late binding)** denir. Bununla ilgili aslında ayrı bir bölüm açmayı planlıyorum. Çünkü burada bahsedilenlerin dışında da değineceğim bilgiler var.
 
 Şimdi yukarıdaki kuralları düşünerek aşağıdaki soruya cevap bulmaya çalışalım.
 
 ## Örnek
 
-Bu sefer s referansı ile getSID() metoduna ulaşmaya çalışacağız. Yukarıda yazdığım için tekrardan Student ve Person sınıflarını yazma gereği duymadım. Göreceğiniz üzere bu metot Student sınıfının içinde yer almaktadır. Sizce bu kod çalışır mı?
+Bu sefer **s** referansı ile **getSID()** metoduna ulaşmaya çalışacağız. Yukarıda yazdığım için tekrardan **Student** ve **Person** sınıflarını yazma gereği duymadım. Göreceğiniz üzere bu metot **Student** sınıfının içinde yer almaktadır. Sizce bu kod çalışır mı?
 
 ```java
 Person s = new Student("Hasan", 1234);
 s.getSID();
 ```
 
-Aslında ilk bakışta kodun çalışacağını düşünebiliriz. Ama çalışma zamanı dışında bir de derleme zamanı kararlarına uymamız gerekmektedir. Sırayla ilerleyecek olursak kodun çalışması için ilk önce derleme zamanı kurallarını karşılaması gerekmektedir. Koda tekrar bakacak olursak, derleyici yalnızca Person içindeki yöntemleri bilecektir. Çünkü derleyiciye göre s bir Person referansıdır. Dolayısıyla, derleyici Person sınıfında ``getSID`` yöntemini bulmaya çalışacaktır. Fakat bu yöntemin Person sınıfında olmadığını biliyoruz. Bu sebepten ötürü bir derleme hatası alırız. Yani kodun çalışma zamanına geçme şansı olmayacaktır.
+Aslında ilk bakışta kodun çalışacağını düşünebiliriz. Ama çalışma zamanı dışında bir de derleme zamanı kararlarına uymamız gerekmektedir. Sırayla ilerleyecek olursak kodun çalışması için ilk önce derleme zamanı kurallarını karşılaması gerekmektedir. Koda tekrar bakacak olursak, derleyici yalnızca **Person** içindeki yöntemleri bilecektir. Çünkü derleyiciye göre **s** bir **Person** referansıdır. Dolayısıyla, derleyici **Person** sınıfında ``getSID`` yöntemini bulmaya çalışacaktır. Fakat bu yöntemin **Person** sınıfında olmadığını biliyoruz. Bu sebepten ötürü bir **derleme hatası** alırız. Yani kodun çalışma zamanına geçme şansı olmayacaktır.
 
-Yalnız koda baktığımızda bu metodun Student sınıfında bulunduğunu biliyoruz. Peki bizim bu bildiğimizi derleyicinin bilmesini nasıl sağlarız. Bunun yöntemi **casting**'dir. Bir sonraki ders bu konu üzerine konuşacağız.
+Yalnız koda baktığımızda bu metodun **Student** sınıfında bulunduğunu biliyoruz. Peki bizim bu bildiğimizi derleyicinin bilmesini nasıl sağlarız. Bunun yöntemi **casting**'dir. Bir sonraki ders bu konu üzerine konuşacağız.
 
 ## Özet
 Polimorfizm konusundan bahsederken sıklıkla derleme ve çalışma zamanı kararlarından bahsettik. Aslında polimorfizmi tanımsal olarak rahatlıkla ikiye ayırabiliriz.
