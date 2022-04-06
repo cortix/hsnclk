@@ -17,6 +17,7 @@ tags:
   - geçersiz kılma
   - ezici metot
   - polimorfizm
+  - Robert C. Martin
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
