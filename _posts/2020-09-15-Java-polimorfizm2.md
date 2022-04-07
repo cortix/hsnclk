@@ -79,16 +79,14 @@ Yukarıdaki örnekte bir adet **Person**, bir adet de **Student** sınıfımız 
       <figcaption></figcaption>
     </figure>
 
-**ÖNEMLİ NOT :** Buraya kadar olanlar ilgili yöntem(yani ``toString`` metodunu kastediyorum) **geçersiz kılınmışsa** gerçekleşecek şeylerdir. Çünkü ilgili yöntem geçersiz kılınmışsa, polimorfizm gereği doğrudan geçersiz kılınan yöntem çalıştırılır. Yani bu örnekte yöntemin geçersiz kılındığını görüyoruz. 
+    **ÖNEMLİ NOT :** Buraya kadar olanlar ilgili yöntem(yani ``toString`` metodunu kastediyorum) **geçersiz kılınmışsa** gerçekleşecek şeylerdir. Çünkü ilgili yöntem geçersiz kılınmışsa, polimorfizm gereği doğrudan geçersiz kılınan yöntem çalıştırılır. Yani bu örnekte yöntemin geçersiz kılındığını görüyoruz.
 
 3. Peki ilgili yöntem **geçersiz kılınmamışsa** ne olur? Bu durumda ise java çalışma zamanı sınıfında uygun bir yöntem bulamadığı için referans tipinin sınıfındaki yöntemle eşleşir. Bu kısım çok önemlidir. Farzedelim ki yukarıdaki örnek şu şekilde olsaydı(Student sınıfına odaklanmanızı istiyorum. Dikkat ederseniz ``toString`` metodu override edilmemiş)
-
-<figure style="width: 600px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4.png" alt="polimorfizm">
-  <figcaption></figcaption>
-</figure>
-
-``s.toString`` yazarak metodu çağırmaya çalıştığımızda, **Person** sınıfındaki ``toString`` metodu çalışacaktır.
+    <figure style="width: 600px" class="align-center">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4.png" alt="polimorfizm">
+      <figcaption></figcaption>
+    </figure>
+    ``s.toString`` yazarak metodu çağırmaya çalıştığımızda, **Person** sınıfındaki ``toString`` metodu çalışacaktır.
 
 
 Aslında polimorfizm, **derleme zamanı** ve **çalışma zamanı polimorfizmi** olarak ikiye ayırabiliriz. Derleme zamanında alınan kararlar sonucu gerçekleşen bağlanmalara **statik/erken bağlanma(static or early binding)**, çalışma zamanında alınan kararlar sonucu gerçekleşen bağlanmalara da **dinamik/geç bağlanma(dynamic or late binding)** denir. Bununla ilgili aslında ayrı bir bölüm açmayı planlıyorum. Çünkü burada bahsedilenlerin dışında da değineceğim bilgiler var.
@@ -131,3 +129,4 @@ Anlaşılacağı üzere statik polimorfizm derleme zamanında gerçekleşirken, 
 * [https://dzone.com/articles/fully-dynamic-classes-with-asm](https://dzone.com/articles/fully-dynamic-classes-with-asm)
 * [https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
 * [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [https://stackoverflow.com/questions/9223938/java-is-method-name-signature-resolution-done-statically-compile-time](https://stackoverflow.com/questions/9223938/java-is-method-name-signature-resolution-done-statically-compile-time)
