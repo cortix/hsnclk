@@ -14,6 +14,8 @@ categories:
   - java-kalitim-polimorfizm
 tags:
   - polimorfizm
+  - compile-time decision
+  - runtime decision
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -24,16 +26,21 @@ toc_label: "SAYFA İÇERİĞİ"
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
+Katıldığım online bir etkinlikte object-oriented nedir şeklinde sorulan bir soruya **Robert C. Martin** şu şekilde yanıt vermişti.
 
-Bu bölümde derleme zamanı ve çalışma zamanı kurallarına odaklanacağız. Ve bunu bir kez anladığınızda, polimorfizm ile ilişkili görünebilecek tüm sihir kaybolur.
+> "A language is object-oriented if it supports dynamic polymorphism" ("Bir dil, dinamik polimorfizmi destekliyorsa nesne yönelimlidir")
+
+Kısa ve öz bir tanım.
+
+Anlaşılacağı üzere polimorfizm nesne yönelimli bir dilin merkezindedir. Bu bölümde ise **derleme zamanı** ve **çalışma zamanı** kurallarına odaklanacağız. Ve bunu bir kez anladığınızda, polimorfizmin çalışma mantığını çok iyi anlayacağınızı temin ederim.
 
 > Derleyici gibi düşün, çalışma zamanı ortamı gibi davran (Rick Ord)
 
 Bu sözün aslında altında yatan mantık çok açıktır. Çünkü bir kodu her çalıştırdığımızda gerçekleşen iki şey vardır. Birincisi, bir derleyicinin yazdığınız kodu yorumlaması gerektiğidir. İkinci şey ise, çalışma zamanı ortamı bu yorumlanan alıntıyı çalıştırır. Polimorfizm hakkında düşüneceksek şayet bunları göz önüne almamız gerekmektedir. O halde, polimorfizm söz konusu olduğunda derleme zamanı kurallarına ve çalışma zamanı kurallarına bakarak devam edelim.
 
-## Derleme Zamanı Kuralları
+## Derleme Zamanı Kuralları(Compile-time Decision)
 
-1. **Derleyici SADECE referans tipini bilir:** (yani nesnenin çalışma zamanı tipini bilmez. Derleyicinin amacı, daha sonra çalışma zamanında yürütülecek olan bir yöntem imzası çıkarmaktır.)
+1. **Derleyici SADECE referans tipini bilir:** (yani derleyici nesnenin çalışma zamanı tipini bilmez. Derleyicinin amacı, daha sonra çalışma zamanında yürütülecek olan bir yöntem imzası çıkarmaktır.)
 
     <figure style="width: 200px" class="align-center">
       <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml1.png" alt="polimorfizm">
@@ -45,26 +52,36 @@ Bu sözün aslında altında yatan mantık çok açıktır. Çünkü bir kodu he
     s.toString();
     ```
 
-      Yukarıdaki örnekte bir adet Person, bir adet de Student sınıfımız bulunmaktadır.  Görüleceği üzere Person sınıf tipinde s referansımız Student nesnesine işaret ediyor. Planımız her ne kadar Student nesnesinde toString yöntemini çağırmak gibi görünse de(aslında bir bütün olarak baktığımızda öyle!), javanın kodu bu şekilde yorumlamadığını bilmemizde yarar var. Java kurallarını derleme ve çalışma zamanı olarak ikiye ayırır. Kurala göre de derleyicinin sadece Person referansını bildiğini unutmayalım. Yani derleme zamanında javanın bu koddan algıladığı tek şey s referansının bir Person olduğudur.
+Yukarıdaki örnekte bir adet **Person**, bir adet de **Student** sınıfımız bulunmaktadır.  Görüleceği üzere **Person** sınıf tipinde **s** referansımız, **Student** nesnesine işaret ediyor. Planımız her ne kadar **Student** nesnesinde `toString` yöntemini çağırmak gibi görünse de(aslında bir bütün olarak baktığımızda öyle!), javanın kodu bu şekilde yorumlamadığını bilmemizde yarar var. Java kurallarını derleme ve çalışma zamanı olarak ikiye ayırır. Kurala göre de derleyicinin sadece **Person** referansını bildiğini unutmayalım. Yani derleme zamanında javanın bu koddan algıladığı tek şey **s** referansının bir **Person** olduğudur.
 
-2. **Derleyici metot çağrıları için SADECE referans tipinin sınıfına bakar:** s referansı ile toString'i çağırmayı denediğinizde, java **derleme zamanında** ilk olarak Person sınıfına bakacak ve bu toString yöntemini bulacaktır.
+2. **Derleyici metot çağrıları için SADECE referans tipinin sınıfına bakar:** *s* referansı ile `toString`'i çağırmayı denediğinizde, java **derleme zamanında** ilk olarak **Person** sınıfına bakacak ve bu `toString` yöntemini bulacaktır.
 
     <figure style="width: 600px" class="align-center">
       <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml2.png" alt="polimorfizm">
       <figcaption></figcaption>
     </figure>
 
+3. **Derleyici bir yöntem imzası yayımlar:** Derleyicinin bir diğer amacı ise daha sonra çalışma zamanında yürütülecek olan bir **yöntem imzası** çıkarmaktır. Yani parametresiz bir toString yöntem imzası derleyici tarafından daha sonra çalışma zamanında yürütülmek üzere yayımlanır.
 
-## Çalışma Zamanı Kuralları
+    <figure style="width: 600px" class="align-center">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml3_0.png" alt="polimorfizm">
+      <figcaption></figcaption>
+    </figure>
 
-1. **Çalışma zamanında, ilgili yöntemin geçersiz kılınıp kılınmadığına bakar** Şayet geçersiz kılınmışsa, doğrudan geçersiz kılınan yöntemi çalıştırır. Yani bu örnekte yöntemin geçersiz kılındığını görüyoruz. O yüzden çalışma zamanında **Student** sınıfının ``toString`` metodu çalışacaktır.
 
-<figure style="width: 600px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml3.png" alt="polimorfizm">
-  <figcaption></figcaption>
-</figure>
+## Çalışma Zamanı Kuralları(Runtime Decision)
 
-2. İlgili yöntem **geçersiz kılınmamışsa**, referans tipinin sınıfındaki yöntem neyse aynen onu kullanır. Bu kısım çok önemlidir. Çünkü, çalışma zamanında da olsak şayet ortada bir geçersiz kılma işlemi **yoksa** referans türü neyse o baz alınır. Farzedelim ki yukarıdaki örnek şu şekilde olsaydı(Student sınıfına odaklanmanızı istiyorum. Dikkat ederseniz ``toString`` metodu override edilmemiş)
+1. **Çalışma zamanında, ilgili yöntemi bulmak için java, nesnenin çalışma zamanı türünü izler**
+2. **Derleme zamanında yayımlanan yöntem imzasını gerçek çalışma zamanı sınıfındaki uygun yöntemle eşleştirir:** Yukarıdaki örnekten yola çıkarsak, ``s.toString`` yapmaya çalıştığımızda java, artık çalışma zamanında **s**'in aslında bir **Student** nesnesi olduğunu bilir ve bu metodu ilk bu sınıfın içinde arar. Yukarıdaki koddan yola çıkarsak, java **Student** sınıfında ``toString`` yöntemini bulacak ve çalışma zamanında çalıştıracaktır.
+
+    <figure style="width: 600px" class="align-center">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4_0.png" alt="polimorfizm">
+      <figcaption></figcaption>
+    </figure>
+
+**ÖNEMLİ NOT :** Buraya kadar olanlar ilgili yöntem(yani ``toString`` metodunu kastediyorum) **geçersiz kılınmışsa** gerçekleşecek şeylerdir. Çünkü ilgili yöntem geçersiz kılınmışsa, polimorfizm gereği doğrudan geçersiz kılınan yöntem çalıştırılır. Yani bu örnekte yöntemin geçersiz kılındığını görüyoruz. 
+
+3. Peki ilgili yöntem **geçersiz kılınmamışsa** ne olur? Bu durumda ise java çalışma zamanı sınıfında uygun bir yöntem bulamadığı için referans tipinin sınıfındaki yöntemle eşleşir. Bu kısım çok önemlidir. Farzedelim ki yukarıdaki örnek şu şekilde olsaydı(Student sınıfına odaklanmanızı istiyorum. Dikkat ederseniz ``toString`` metodu override edilmemiş)
 
 <figure style="width: 600px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4.png" alt="polimorfizm">
