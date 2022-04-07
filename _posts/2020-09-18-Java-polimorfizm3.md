@@ -122,7 +122,7 @@ if(s instanceof Student){
 ```
 ``s instanceof Student`` anlamı ``s`` Student sınıfının bir örneği midir? şeklinde bir soru soruyorsunuz.. Diğer bir şekilde ifade edecek olursak, ``s`` çalışma zamanında Student ile bir ilişki içinde mi? Yalnız bu operatörün çalışma zamanında test ettiğini unutmayın.
 
-Özet geçecek olursak, polimorfizm konusunun derleme zamanı ve çalışma zamanı kararlarını alırken nasıl önemli olduğunu daha net gördük.
+Aslında polimorfizm uyguladığımızda casting yapmamıza da gerek kalmaz. Çünkü java çalışma zamanında hangi yöntemi uygulayacağını bilir. Bu yüzden bu bir tercih meselesidir.
 
 
 
