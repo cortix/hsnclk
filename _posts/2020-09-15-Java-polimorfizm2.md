@@ -51,8 +51,7 @@ Bu sözün aslında altında yatan mantık çok açıktır. Çünkü bir kodu he
     Person s = new Student("Hasan", 1111);
     s.toString();
     ```
-
-Yukarıdaki örnekte bir adet **Person**, bir adet de **Student** sınıfımız bulunmaktadır.  Görüleceği üzere **Person** sınıf tipinde **s** referansımız, **Student** nesnesine işaret ediyor. Planımız her ne kadar **Student** nesnesinde `toString` yöntemini çağırmak gibi görünse de(aslında bir bütün olarak baktığımızda öyle!), javanın kodu bu şekilde yorumlamadığını bilmemizde yarar var. Java kurallarını derleme ve çalışma zamanı olarak ikiye ayırır. Kurala göre de derleyicinin sadece **Person** referansını bildiğini unutmayalım. Yani derleme zamanında javanın bu koddan algıladığı tek şey **s** referansının bir **Person** olduğudur.
+    Yukarıdaki örnekte bir adet **Person**, bir adet de **Student** sınıfımız bulunmaktadır.  Görüleceği üzere **Person** sınıf tipinde **s** referansımız, **Student** nesnesine işaret ediyor. Planımız her ne kadar **Student** nesnesinde `toString` yöntemini çağırmak gibi görünse de(aslında bir bütün olarak baktığımızda öyle!), javanın kodu bu şekilde yorumlamadığını bilmemizde yarar var. Java kurallarını derleme ve çalışma zamanı olarak ikiye ayırır. Kurala göre de derleyicinin sadece **Person** referansını bildiğini unutmayalım. Yani derleme zamanında javanın bu koddan algıladığı tek şey **s** referansının bir **Person** olduğudur.
 
 2. **Derleyici metot çağrıları için SADECE referans tipinin sınıfına bakar:** *s* referansı ile `toString`'i çağırmayı denediğinizde, java **derleme zamanında** ilk olarak **Person** sınıfına bakacak ve bu `toString` yöntemini bulacaktır.
 
