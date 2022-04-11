@@ -45,6 +45,8 @@ Bir önceki ders ilk iki koşulu extends anahtar kelimesini kullanarak sağlamı
 
 Referans ve obje tipleri konusuna şu [derste](/java-hafiza-yonetimi/Java-memory-models-objects/#referans-ve-nesne-türleri) biraz değinmiştik. Devam etmeden önce göz gezdirmenizde yarar var.
 
+**NOT :** Bu arada referans tipleri, deklare edilen tipler(declared type) olarak da tanımlanır.
+
 Yukarıdaki şekili biraz yorumlamaya çalışalım istiyorum. Önceki derste belirttiğimiz gibi referans ve nesne türleri de her zaman aynı olmayabilir. Heap alanında oluşan nesnenin tipi ile, aynı nesneyi stack alanında temsil eden değişkenin, yani referansın tipi farklı olabilir. Yukarıdaki örnekte ``Person`` bir parent(ana) sınıftır. ``Student`` ve ``Faculty`` sınıfları ise birer child(çocuk) sınıftır ve Person sınıfını ``extends`` anahtar kelimesi ile miras almıştır. Bu sebepten ötürü stack alanında bulunan değişkenin/referansın tipini parent sınıf olan ``Person`` yapabiliriz. Bir üst sınıf olduğu için stack alanında ``Student`` ve ``Faculty`` sınıflarını temsil edebilir. Yalnız önceki derste verdiğimiz ``Map/HashMap`` ilişkisine benzetmeyin. Çünkü ``Map`` bir soyut sınıftır. ``Person`` sınıfı her ne kadar bir parent sınıf olsa da, somut bir sınıftır. ``Person`` sınıfını bu yüzden heap alanında somutlaştırabiliriz.
 
 
