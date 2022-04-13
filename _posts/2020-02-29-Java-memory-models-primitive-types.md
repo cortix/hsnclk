@@ -8,6 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-34.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Vincent van Zalinge](https://unsplash.com/photos/vUNQaTtZeOo) on Unsplash"
+  video:
+    id: jT06ibYdEXo
+    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -65,6 +68,10 @@ String a3 = new String("hello");
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/string-interning.png" alt="string-interning">
   <figcaption></figcaption>
 </figure>
+
+{% include video id="jT06ibYdEXo" provider="youtube" %}
+
+Arkadaşlar dilerseniz **string interning** ile alakalı hazırladığım bu videoya da göz gezdirebilirsiniz. Bu videoda **string interning**'in yanı sıra bu konuyla bağlantılı olduğunu düşündüğüm **2 konuyu** daha ele aldım. Bakmanızı öneririm.
 
 ## İlkel Veri Türleri İçin Hafıza Modeli
 
