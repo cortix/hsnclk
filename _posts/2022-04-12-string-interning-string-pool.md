@@ -1,5 +1,5 @@
 ---
-title: "Java'da Hafıza Modeli 7 - String Interning Nedir, String Pool Nedir, == ve equals Arasındaki Fark"
+title: "Java'da Hafıza Modeli 7 - String Interning Nedir, String Pool Nedir, == operatörü ve equals metodu Arasındaki Fark"
 comments: true
 excerpt: "Burada bu 3 sorunun yanıtını arayacağız."
 header:
@@ -35,8 +35,9 @@ toc_label: "CONTENT"
 Arkadaşlar bu bir video içerik. Birbiri ile bağlantılı olduğu için aşağıdaki 3 sorunun yanıtını tek bir videoda cevaplamak istedim.
 
 1. **String Interning** Nedir?
+  * **çift tırnak (" ")** ile oluşturulan string objesinin, **new** anahtar kelimesi kullanılarak oluşturulan string objesinden farkı nedir?
 2. **String Pool**, diğer ismiyle **string constant/intern pool** nedir ve neden vardır?
-3. **==** ve **equals** arasındaki fark nedir?
+3. **==** operatörü ve **equals** metodu arasındaki fark nedir?
 
 {% include video id="jT06ibYdEXo" provider="youtube" %}
 
