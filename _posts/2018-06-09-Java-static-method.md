@@ -33,6 +33,18 @@ Merhabalar arkadaşlar, blog yazımı okumadan önce aşağıdaki videoyu izleme
 
 {% include video id="cR9uwtMQt-g" provider="youtube" %}
 
+## Konu ile alakalı bir bilgilendirme
+
+Arkadaşlar, bu konu her ne kadar spesifik bir konu gibi gözükse de bir bağlam içerisinde konuyu ele almak çok daha önemlidir. Demek istediğim aslında statik nedir? sorusunu daha geniş bağlamda düşünmek gerekiyor. Bunun için statik olmayanlar değişken ve metotlar nedir? Statik ve statik olmayanlar hafızada nasıl saklanıyor gibi farklı soruları da beraberinde düşünmek gerekiyor. Bunun için aşağıdaki kategorik içeriklerime sırasıyla bakmanızı şiddetle öneriyorum.
+
+* **Java’da Hafıza Modeli** [serisi](/categories/#java-hafiza-yonetimi)
+* **Java’da Kalıtım ve Java’da Polimorfizm** [serisi](/categories/#java-kalitim-polimorfizm)
+
+Çünkü bağlamdan kopuk bir ilerle zayıf bir temel üzerine güçlü yapılar inşaa etmenize izin vermez. Bu sebepten ötürü üniversitelerde müfredatları belli bir sırayla almanız tavsiye edilir. Umarım yazılarımın bir faydası olur. Şimdiden iyi okumalar.
+
+## Statik nedir?
+
+**Statik** anahtar kelimesine sahip  bir değişken veyahut metot, aslında **sınıfa ait olan**, sınıftan yaratılan **objelere ait olmayan** anlamına gelir. Hatta **statik konteksi** sınıfın hafızası gibi düşünebilirsiniz. Bu konteks sınıftan yaratılan bütün objelerle ortak olarak paylaşılır. Haliyle sınıftan yaratılan objeler bu hafızaya doğrudan erişebilirken, statik konteksten(yani sınıfın bu hafızasından) ilgili objelere doğrudan erişim yoktur. Bu durumu yukarıdaki videoda çok net bir şekilde izah ettiğimi düşünüyorum. Dilerseniz oradan bakabilirsiniz.
 
 Birçok yerde ``static`` değiştiricisiyle karşılaşmışızdır. Hatta bu anahtar kelimeyi hem metodlar için hem de değişkenler için kullanıyoruz.
 
@@ -243,7 +255,7 @@ JDK 8'den önce HotSpot JVM, kalıcı Nesil(*Permanent  Generation*) olarak adla
 
 Daha detaylı bilgi almak isterseniz aşağıdaki referanslara göz gezdirebilirsiniz.
 
-Referanslar:
+## Referanslar:
 
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
 * [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
