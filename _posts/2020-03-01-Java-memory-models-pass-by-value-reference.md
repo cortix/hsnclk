@@ -194,7 +194,7 @@ Java üst düzey bir programlama dilidir. Bu, normal şartlar altında, bellekte
 
 Java'da da ilkel veri tipleri (int, double vb.) her zaman **değere göre iletilir**, yani bütün işlem aslında metoda geçirilen değişkenin değerin bir kopyası üzerinden gerçekleşir. C ve C++ üzerinden konuyu anlatırken oluşturduğumuz illüstrasyon burada da geçerlidir. Bu sebepten ötürü tekrardan resmetmek istemedim.
 
-Peki ilkel olmayanlar türler için(yani objeler için) bu durum sizce nasıl gerçekleşir? Java'da primitive türler için **pass by value** yaklaşımı olsa da, sezgisel olarak tüm nesneler için **pass-by-reference** yaklaşımı daha doğrudur.
+Peki ilkel olmayanlar türler için(yani objeler için) bu durum sizce nasıl gerçekleşir? Java'da primitive türler için **pass by value** yaklaşımı olsa da, **sezgisel olarak** tüm nesneler için **pass-by-reference** yaklaşımı birçok farklı kaynağa göre daha doğrudur. (Makalenin sonunda bu tanımlama için bir **önemli not** bulacaksınız. Orayı okumadan geçmemenizi öneririm. Çünkü oracle referans türleri için de **pass-by-value** ifadesini kullanıyor)
 
 
 ```java
@@ -222,7 +222,7 @@ Kodu online bir editör olan pythontutor'da çalıştırmak isterseniz, bu [link
 
 Görüleceği üzere ``someObject`` referansı **testMethod** yöntemine geçiriliyor. Dikkat ederseniz bu referans heap alanında bir objeyi işaret ediyor. Bu kodu çalıştırdığımızda, referansın **testMethod** yöntemi içinde çeşitli işlemlere maruz kaldığını göreceksiniz. Yalnız yöntemden çıktıktan sonra, bu referansın yönteme girmeden önce sahip olduğu değeri(burada primitive olmayan türlerde yani kompleks türlerde referansın tuttuğu değer aslında objenin id'sidir.) muhafaza ettiği de anlaşılıyor. Peki değişen tam olarak nedir ve burada **pass by value** ve **pass by reference** yaklaşımlarından hangisi uygulanıyor?
 
-Aslında yöntemin içine girildiğinde ``someObject`` referansının bir kopyası bu yönteme geçer. Bu *kopya-referans* da, orijinal referans gibi hafızada bir yer kaplar ve tıpkı orijinal referans gibi heap alanında **aynı objeye** işaret eder. Haliyle bir *kopya referans* da olsa, *kopya referans* üzerinde yapılan işlemler, referansın heap alanında işaret ettiği nesneyi de etkileyecektir. Ama referansın sahip olduğu değeri, yani heap alanında işaret ettiği nesnenin adresini(aslında bu başka dillerde adres olarak nitelendiği için adres ifadesini kullandım. Java tarafında bu adresten ziyade, objenin id'sidir.) etkilemeyecektir. Verilen örnekte kopya referansın(someObjectX) tuttuğu obje metota ilk geçirildiğinde orijinal referans ile aynı değeri tutmasına rağmen metot içinde yeni bir obje atanarak değişmiştir. Tabii ki bu değişim orijinal referansı etkilemez. Sanırım *orijinal referans* ve *kopya referans*'ın stack'de tuttuğu id'ler değişmediği için, java'da objeler(yani primitive olmayan türler) için **pass by value** yaklaşımının olduğu sanılır. Ama java'da objeler için **pass-by-reference** yaklaşımı daha doğrudur.
+Aslında yöntemin içine girildiğinde ``someObject`` referansının bir kopyası bu yönteme geçer. Bu *kopya-referans* da, orijinal referans gibi hafızada bir yer kaplar ve tıpkı orijinal referans gibi heap alanında **aynı objeye** işaret eder. Haliyle bir *kopya referans* da olsa, *kopya referans* üzerinde yapılan işlemler, referansın heap alanında işaret ettiği nesneyi de etkileyecektir. Ama referansın sahip olduğu değeri, yani heap alanında işaret ettiği nesnenin adresini(aslında bu başka dillerde adres olarak nitelendiği için adres ifadesini kullandım. Java tarafında bu adresten ziyade, objenin id'sidir.) etkilemeyecektir. Verilen örnekte kopya referansın(someObjectX) tuttuğu obje metota ilk geçirildiğinde orijinal referans ile aynı değeri tutmasına rağmen metot içinde yeni bir obje atanarak değişmiştir. Tabii ki bu değişim orijinal referansı etkilemez. Sanırım *orijinal referans* ve *kopya referans*'ın stack'de tuttuğu id'ler değişmediği için, java'da objeler(yani primitive olmayan türler) için **pass by value** yaklaşımının olduğu sanılır.(Makele sonundaki nota bakmanınız öneririm) Ama java'da objeler için **pass-by-reference** yaklaşımı daha doğrudur.
 
 Örneğin:
 
@@ -322,8 +322,11 @@ Farz edelim ki referansın heap alanıdaki adresi **121** rakamı olsun.
 
 Anlaşılacağı üzere, ``someObject`` referansı nesnenin kendisini tutmuyor, referansın değeri sadece nesneyi tanımlayan bir işaretçidir(yani nesnenin heap'deki adresidir). <u><i>121 sayısı aslında yönteme geçirilir</i></u>
 
-Özetle Java'da, ilkel veri tiplerinde geçişler **pass by value** şeklinde, referans tiplerinde ise **pass by reference** şeklinde gerçekleşir.
+**ÖNEMLİ NOT :** Aslında oracle'ın kendi dökümantasyonunda, referans türleri için de **pass-by-value** yaklaşımının olduğu yazılmaktadır. Oracle, metoda geçirilen referans türleri için **pass-by-value** tanımını şu şekilde izah etmektedir.
 
+> Reference data type parameters, such as objects, are also passed into methods by value. This means that when the method returns, the passed-in reference still references the same object as before. However, the values of the object's fields can be changed in the method, if they have the proper access level.
+
+"Metot dönüş yaptığında, metota geçirilen referansın halen eski objeyi işaret etmesi **pass-by-value** kullandığını göstermektedir", şeklinde bir ifadeyi göreceksiniz. Yani metoda geçirilen aslında kopya bir referans olduğu için bu söylenmektedir. Zaten yukarıda bunu izah etmiştim. Kopya referans, metot içerisinde başka bir objeye atansa bile, orijinal referans metot öncesindeki objeye işaret etmeye devam edecektir. Aslında birçok kaynak buna **sezgisel olarak** **pass-by-referans** olarak ifade eder. Bana kalırsa da bu tanım daha doğrudur. Tercihi yine de size bırakıyorum.
 
 
 ## Referanslar
@@ -333,3 +336,4 @@ Anlaşılacağı üzere, ``someObject`` referansı nesnenin kendisini tutmuyor, 
 * [https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzarg/cplr233.htm](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzarg/cplr233.htm)
 * [Pass by value vs. pass by reference](https://www.educative.io/edpresso/pass-by-value-vs-pass-by-reference#:~:text=Pass%20by%20value%20means%20that,not%20visible%20to%20the%20caller.&text=Changes%20made%20to%20the%20passed%20variable%20do%20not%20affect%20the%20actual%20value.)
 * [https://www.cs.virginia.edu/~jh2jf/courses/cs2110/java-pass-by-value.html#:~:text=Java%20is%20officially%20always%20pass,the%20reference%20for%20reference%20types.](https://www.cs.virginia.edu/~jh2jf/courses/cs2110/java-pass-by-value.html#:~:text=Java%20is%20officially%20always%20pass,the%20reference%20for%20reference%20types.)
+* [https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
