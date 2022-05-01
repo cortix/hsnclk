@@ -1,7 +1,7 @@
 ---
 title: "Yazılımcılar İçin Yabancı Dil Bariyeri (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Örenmenin Püf Noktaları)"
 comments: true
-excerpt: "Bu makalemde Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları, ara ara da kendi uyguladığım benzer yöntemleri sizinle paylaşmak istiyorum."
+excerpt: "Bu makalemde Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sizinle paylaşmak istiyorum."
 header:
   teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.jpeg"
   #og_image: /assets/images/page-header-og-image.png
@@ -34,7 +34,7 @@ toc_label: "CONTENT"
 
 Dil bariyeri özellikle yazılım geliştiriciler için çok önemli bir problem. Çünkü yazılım alanında türkçe kaynak bulmak gerçekten çok zor. Kaldı ki hızla gelişen teknoloji, mevcut kaynakların güncelliğini yitirmesi gibi etmenler düşünüldüğünde türkçe kaynak bulmak yerine yabancı dil öğrenmek daha akıllıca bir yatırım olacaktır. Takdir edersiniz ki dil öğrenmek de hiç o kadar kolay bir husus değildir. Özellikle belli bir yaştan sonra!!  
 
-Aşağıda sıraladığım maddeler **Johan Vandewalle**'in instagram sayfasından, <u>izin alınarak</u> alıntılanmıştır. Aşağıda doğrudan hocanın kendi ağzından kurduğu cümleleri paylaştım. Bu arada Johan Vandewalle'in **youtube kanalı** ve **instagram** hesabının linklerine, sayfanın sonunda referanslar bölümünden erişebilirsiniz. İyi okumalar.
+Aşağıda sıraladığım maddeler **Johan Vandewalle**'in instagram sayfasından, <u>izin alınarak</u> alıntılanmıştır. Aşağıda doğrudan hocanın kendi ağzından kurduğu cümleleri paylaştım. Bu arada Johan Vandewalle'in **youtube kanalı** ve **instagram** hesabının(**@johan.vandewalle**) linklerine, sayfanın sonunda referanslar bölümünden erişebilirsiniz. İyi okumalar.
 
 
 ## PÜF NOKTASI 1
