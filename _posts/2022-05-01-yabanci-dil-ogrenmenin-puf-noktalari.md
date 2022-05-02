@@ -520,6 +520,40 @@ Birkaç ay sonra TC Anvers Başkonsolosluğundan bir görevliyle birlikte Brüks
     </figure>
 
 
+## PÜF NOKTASI 33
+
+**Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin :** Öğrencilerime yabancı dilde bir kompozisyon yazdırdığımda onlara hep şu tavsiyeyi veririm: Düşüncelerinizi öncelikli olarak bildiğiniz kelimelerle ifade etmeye çalışın, kompozisyonunuzda sözlükten bulduğunuz, bilmediğiniz bir kelimeyi kullanmak her zaman risklidir.
+
+<figure style="width: 650px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-1.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
+  <figcaption>Dil öğrenmenin püf noktası 33</figcaption>
+</figure>
+
+Örnek olarak bir Türk öğrencinin "Avrupa'yı Asya'dan iki boğaz ayırır." cümlesini İngilizcede ifade etmek istediğini farz edelim. Oxford Türkçe-İngilizce sözlüğü "boğaz" için 11 karşılık verir (resim2 ). İlk gördüğü karşılığı kullanan öğrenci: "Two throats separate Europe from Asia." gibi hatalı bir cümle kurar. Daha dikkatli olan öğrenci "geo" ("coğrafya") kısaltmasını fark ederek uygun karşılığın o kısaltmayı izlediğini bekler. Böylece seçeneklerin sayısı 11'den 5'e iner. Kastedilen kavram ne dağla ne de nehirle ilgili olduğundan üç seçenek silinebilir, dolayısyla aranan karşılık büyük olasılıkla "channel" veya "strait(s)" olur. "Büyük olasılıkla" diyorum çünkü sadece sözlüğe dayanarak hiç emin olamayız. Sık sık aradığım yabancı kelimenin sözlüğün verdiği karşılıklar arasında bulunmadığına tanık olurum. Sözlükte bulduğunuz karşılık hiç bilmediğiniz bir kelimeyse onu mutlaka bir bağlamda görmeniz gerekir. Üç yöntem veriyorum:
+
+<figure style="width: 650px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-2.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
+  <figcaption>Dil öğrenmenin püf noktası 33</figcaption>
+</figure>
+
+1. Google ile yabancı karşılığa bağlamlar bulabilirsiniz (resim 3). Kurmakta olduğunuz cümleden bir parça girdiğinizde önce tahminler çıkar, bunlar yetmezse bağlamlara bir göz atabilirsiniz. Resimde kavramın bir tanımının da çıktığını görüyoruz. Bunları gözden geçirerek yabancı karşılığın uygun olup olmadığına karar verebilirsiniz.
+
+    <figure style="width: 650px" class="align-center">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-3.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
+      <figcaption>Dil öğrenmenin püf noktası 33</figcaption>
+    </figure>
+
+2. Sözlüğün yanında Glosbe.com gibi bir çeviri belleği de kullanabilirsiniz (resim 4). Çeviri bellekleri sadece kelimelerin değil, veri tabanında bulunan cümlelerin de karşılıklarını verir. Yabancı karşılıkların kullanıldığı bağlamlara bakarak işinize yarayan karşılığı seçebilirsiniz.
+
+    <figure style="width: 650px" class="align-center">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-4.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
+      <figcaption>Dil öğrenmenin püf noktası 33</figcaption>
+    </figure>
+
+3. Yine başka bir yöntem Vikipedi'de konuyla ilgili bulduğunuz bir makalenin dilini yabancı dile çevirmekle olur (resim 5). Bu yöntemlerin her biri aynı sonucu veriyor: En uygun karşılık "strait(s)" kelimesidir: "Two straits separate Europe from Asia." [link](https://www.instagram.com/p/CdCz2jXsHcP/)
+
+
+-----------------------
 
 Johan Vandewalle instagram sayfasından ve youtube kanalından daha fazla içeriğe ulaşabilirsiniz.
 
