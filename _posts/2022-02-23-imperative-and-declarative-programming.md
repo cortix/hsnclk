@@ -86,7 +86,7 @@ In both cases, it's obvious what we're going to do. Our goal is to print the ele
 
 **In the enhanced for loop;** A string variable, *name*, is declared to hold each element of the array. But we don't know **how** this loop does all these operations.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-02-23-imperative-and-declarative-programming/forloops.png" alt="for loops example">
   <figcaption>Figure 1 - created by me by using https://www.lucidchart.com </figcaption>
 </figure>
