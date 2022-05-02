@@ -32,12 +32,7 @@ Aslında **abstract sınıf** ve **interface** özünde ikisi de soyut kavramlar
 
 Normalde bir üst sınıfım ve onu miras alan bir alt sınıfım oluyordu. Burada yapmak istediğim şey aslında yine kalıtımı bazı kısıtlamalar getirerek uygulamak olacak. Hemen bir örnek vermek istiyorum.
 
-
-<figure style="width: 400px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm5/uml1.png" alt="inheritance">
-  <figcaption></figcaption>
-</figure>
-
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm5/uml1.png" alt="inheritance">
 
 Normalde bir sınıfı miras aldığımızda o sınıfın bütün davranışlarını da miras almış olurduk. Yani metotları ve özelliklerini(fields) kastediyorum. Alt sınıflar da eğer farklı bir şey yapmak isterlerse metotları kendilerine göre geçersiz kılabiliyorlardı.
 

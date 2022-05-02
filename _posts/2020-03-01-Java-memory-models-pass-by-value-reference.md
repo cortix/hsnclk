@@ -272,48 +272,29 @@ public static void testMethod(SomeObject someObjectX) {
 
 Farz edelim ki referansın heap alanıdaki adresi **121** rakamı olsun.
 
-<figure style="width: 350px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_1.png" alt="java object Variable">
-  <figcaption></figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_1.png" alt="java object Variable - java pass by value">
 
 * **1.satırda:** heap alanında ``new`` anahtar kelimesi yardımıyla bir ``SomeObject`` objesi yaratılır. Bu objeyi stack'da ``someObject`` referansı temsil etmektedir. Hayali verdiğimiz **121** rakamı(yani objenin heap alanıdaki adresi) bu referansa **değer** olarak geçirilir. (Bir üstteki şekil)
 
-<figure style="width: 350px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_2.png" alt="java object Variable">
-  <figcaption></figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_2.png" alt="java object Variable - java pass by value">
 
 * **2.satırda:** ise ``someObject`` referansı **testMethod** yöntemine geçer. Yani aslında bu referansın bir kopyası **testMethod** yöntemine geçecektir. (Bir üstteki şekil)
 
 * **4.satırda:** burada ``someObjectX`` isminde bir *kopya-referans* oluşturulur. Bu referans/değişken ``someObject`` referansında olduğu gibi **121** değerine sahiptir. Her ne kadar *kopya-referans* olsa da heap alanında yine aynı objeyi işaret edeceğini unutmayın. (Bir üstteki şekil)
 
-<figure style="width: 350px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_3.png" alt="java object Variable">
-  <figcaption></figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_3.png" alt="java object Variable - java pass by value">
 
 * **5.satırda:** ise ``someObjectX`` referansının heap alanında işaret ettiği nesnenin ``name`` özelliği(yani nesnenin üye değişkeni(instance variable)) **o1** olarak güncelleniyor. ``someObject`` referansı da heap'teki aynı nesneyi işaret ettiği için haliyle bu güncellemeden dolaylı yoldan etkilenmiş olur ama sahip olduğu değerde(yani **121**'de) bir değişiklik olmaz. (Bir üstteki şekil)
 
-<figure style="width: 350px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_4.png" alt="java object Variable">
-  <figcaption></figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_4.png" alt="java object Variable - java pass by value">
 
 * **6.satırda:** bu satırda yeni bir``SomeObject`` objesi yaratılır ve *kopya-referansımız* olan ``someObjectX`` referansı/değişkeni artık yeni yaratılan bu nesneyi işaret etmeye başlar. Burada bir başka değişen şey ise ``someObjectX`` referansının değeridir. Bu referans yeni objenin adresi olan **119** rakamını saklamaya başlar. Buna karşın ``someObject`` referansı ise hâlen **121** adresini(aslında java'da bunun adres değil id old. belirtmiştim.) muhafaza etmektedir. (Bir üstteki şekil)
 
-
-<figure style="width: 350px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_5.png" alt="java object Variable">
-  <figcaption></figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_5.png" alt="java object Variable - java pass by value">
 
 * **7.satırda:** 7.satırda ise ``someObjectX`` referansının işaret ettiği nesnenin ``name`` özelliği(yani nesnenin üye değişkeni) **o2** olarak güncellenmektedir. (Bir üstteki şekil)
 
-<figure style="width: 350px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_6.png" alt="java object Variable">
-  <figcaption></figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_6.png" alt="java object Variable - java pass by value">
 
 * **3.satırda:** Son olarak bir ek bilgi daha verecek olursak, **testMethod** yönteminden çıktıktan sonra, yani bu yöntemin kapsamı dışına çıktıktan sonra, ``someObjectX`` referansı yok olacak, bu referansın işaret ettiği nesne ise sahipsiz(yani referanssız) kaldığı için garbage collector'un inisiyatifine kalacaktır(garbage collector bu nesneyi gerekirse hemen de siler, ya da silmek için hazır bekletir). Sadece ``someObject`` referansı ve bu referansın işaret ettiği nesne kalacaktır. (Gerekli nesne temizleme işlemleri garbage collector tarafından gerekirse gerçekleştirilir.)
 

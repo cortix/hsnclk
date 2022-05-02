@@ -131,10 +131,7 @@ Java 8 itibariyle, sözleşme maddelerinin nasıl yapılacağını da belirleyeb
 
 * Bir Interface'in metodları, ``default`` veya ``static`` olarak bildirilmedikçe, dolaylı olarak ``public`` ve ``abstract``dır. Diğer bir deyişle, metod deklarasyonunda aslında ``public`` ve ``abstract`` değiştiricilerini yazmanıza gerek yoktur, derleyici yazılan metodları derleme anında ``public`` ve ``abstract`` olarak algılar. Aşağıdaki görselde ne demek istediğimi daha net anlayacaksınız. İlk kod bloğunu sizin yazdığınız varsayalım. Kodu yazdığınızda derleyici yazdığınız kodu 2. kod bloğundaki gibi algılar. 3. kod bloğunda ise bir interface sınıfını implement eden yani uygulayan bir sınıf ele alınmıştır. Görüleceği üzere bu sınıf interface'in bütün metodlarını uygulamak zorunda kalmıştır.
 
-<figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01.jpg" alt="interface example">
-  <figcaption>Görsel OCA Java SE 8 Programmer I Exam Guide (Exams 1Z0-808) kitabından alınmıştır.</figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01.jpg" alt="java interface example">
 
 * Bir interface'de tanımlanan tüm değişkenler(*variables*), ``public``, ``static`` ve ``final`` olmalıdır, diğer bir deyişle, interface instance variables değil, yalnızca constants(sabit) deklare edebilir.
 * Interface yöntemleri ``final``, ``strictfp`` veya ``native`` olarak işaretlenemez. Zaten ``final`` ve ``abstract`` yan yana düşünülemez.
@@ -169,17 +166,11 @@ Interface'in package access(*default access*) yerine herkese açık olmasını i
 
 Aşağıdaki beş metod deklarasyonu, kendi arayüzleri içinde beyan edildiyse, yasal ve özdeştir! Aşağıdaki metod deklarasyonları farklı gibi gözükse de hepsi aynıdır.
 
-<figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1.png" alt="interface example">
-  <figcaption>Intellij Idea Ide'sinden ekran görüntüsü</figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1.png" alt="java interface example">
 
 Ekran görüntüsünden de anlaşılacağı üzere Ide'miz kodu derlediğinde beyan edilen metodların aynı olduğunu bize söylemekte ve hata vermektedir. Birde dikkat ederseniz, public ve abstract olan kısımlar gri gösterilmektedir. Burada IDE bu anahtar kelimeleri yazmanıza gerek yok uyarısı yapmaktadır.
 
-<figure >
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2.png" alt="interface example">
-  <figcaption>Intellij Idea Ide'sinden ekran görüntüsü</figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2.png" alt="java interface example">
 
 
 

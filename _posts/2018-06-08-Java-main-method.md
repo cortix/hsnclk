@@ -54,10 +54,7 @@ Bu arada parametreleri normal metodlarda sıklıkla görüyoruz. Buradaki çalı
 ## Komut Satırı Argümanları(Command-Line Arguments)
 Komut satırı argümanlarından biraz bahsetmek istiyorum. Bir Java uygulaması, komut satırından istediğiniz sayıda argüman girişini kabul edebilir. Bu, kullanıcının uygulama başlatıldığında yapılandırma bilgilerini belirlemesini sağlar. Dikkat ederseniz ``main`` yönteminin parametre değişkenleri, yani ``args``ın veri tipi bir String dizisidir. Bu programın sadece string tipinde bir diziyi argüman olarak kabul edeceği anlamına gelmektedir.
 
-<figure style="width: 400px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/args.png" alt="command-line arguments">
-  <figcaption>Captured by using Jing</figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/args.png" alt="command-line arguments">
 
 Diyelim ki komut satırı argümanı olarak kullanmak istediğiniz bir şeyler olduğunu hayal edin. Aşağıdaki örnekte ``This is a sample text``  cümlesini komut satırı argümanı eklemek istiyorum. Aşağıdaki kodla bu cümleyi args parametresi olarak programımın içine dahil edebilirim. Sistem, zaten ``args`` parametresi yoksa, parametrenin olmadığını anlayıp sadece ``main`` metodunun içine odaklanır.
 
@@ -71,10 +68,7 @@ public class Sample {
 }
 ```
 
-<figure style="width: 400px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/result.png" alt="command-line arguments">
-  <figcaption>Captured by using Jing</figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/result.png" alt="command-line arguments">
 
 Görüleceği üzere komut satırı argümanlarını da kullanmak bir seçenektir.
 

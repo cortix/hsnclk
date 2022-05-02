@@ -38,10 +38,7 @@ Bir önceki ders ilk iki koşulu extends anahtar kelimesini kullanarak sağlamı
 
 ## Referans ve Nesne Türleri
 
-<figure style="width: 400px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.png" alt="uml diagram">
-  <figcaption></figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.png" alt="reference and object type - is-a relationship">
 
 Referans ve obje tipleri konusuna şu [derste](/java-hafiza-yonetimi/Java-memory-models-objects/#referans-ve-nesne-türleri) biraz değinmiştik. Devam etmeden önce göz gezdirmenizde yarar var.
 
@@ -172,10 +169,7 @@ public class TestFaculty {
 
 ## Derleme Zamanı ve Çalışma Zamanı Kararları
 
-<figure style="width: 400px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.png" alt="uml diagram">
-  <figcaption></figcaption>
-</figure>
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.png" alt="reference and object type - compile time decisions and runtime decisions">
 
 Stack ve heap alanında görselleştirdiklerimizden anlaşılacağı üzere referanslar ön tarafta gerçekleşen işlemleri, objeler ise arka tarafta gerçekleşen işlemleri temsil etmektedir. Ön taraf için derleme zamanı, arka taraf, yani merkezde olan işlemler için ise çalışma zamanını düşünebilirsiniz.
 
