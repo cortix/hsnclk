@@ -257,7 +257,7 @@ Son satır, aslında erişilmeye çalışılan field'ın, başvurulan nesnenin �
 
 >Alan erişimlerine yönelik bu dinamik arama eksikliği, programların basit uygulamalarla verimli bir şekilde çalıştırılmasına izin verir.
 
-<figure style="width: 700px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm4_1/1.png" alt="Static Binding for Field Access">
   <figcaption></figcaption>
 </figure>

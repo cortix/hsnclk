@@ -85,7 +85,7 @@ resultNumbers(int , int )
 
 İlk örneğimiz ``Object`` sınıfının kendisine bakmak olacak. Bu üst sınıfta ``toString`` adında bir yöntemimiz bulunmaktadır. ``toString`` yöntemi bir nesnenin içeriğini(sahip olduğu state'i, yani instance değişkenlerinin tuttuğu değerler) veya dize temsilini yazdırır. Nesne sınıfında olduğu için Java'daki tüm nesneler ``toString`` yöntemini geçersiz kılabilir.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override1.png" alt="override method">
   <figcaption></figcaption>
 </figure>
@@ -125,7 +125,7 @@ Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gib
 
 Şimdi yukarıdaki örneği ``Student`` sınıfını da işin içine dahil ederek güncelleyelim istiyorum.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override2.png" alt="override method">
   <figcaption></figcaption>
 </figure>
