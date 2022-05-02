@@ -125,7 +125,7 @@ Bu sayede ``myAge`` değişkeninin orijinal değeri olan **14** doğrudan deği�
 
 Sonuç olarak **pass by value**'da olduğu gibi değer, ayrı bir bloğa kopyalanmadı. Doğrudan orijinal değer üzerinde gerekli işlemler gerçekleşmiş oldu.
 
-<figure style="width: 700px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/4.png" alt="pass by reference">
   <figcaption>Kaynak:penjee.com</figcaption>
 </figure>
@@ -272,14 +272,14 @@ public static void testMethod(SomeObject someObjectX) {
 
 Farz edelim ki referansın heap alanıdaki adresi **121** rakamı olsun.
 
-<figure style="width: 500px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_1.png" alt="java object Variable">
   <figcaption></figcaption>
 </figure>
 
 * **1.satırda:** heap alanında ``new`` anahtar kelimesi yardımıyla bir ``SomeObject`` objesi yaratılır. Bu objeyi stack'da ``someObject`` referansı temsil etmektedir. Hayali verdiğimiz **121** rakamı(yani objenin heap alanıdaki adresi) bu referansa **değer** olarak geçirilir. (Bir üstteki şekil)
 
-<figure style="width: 500px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_2.png" alt="java object Variable">
   <figcaption></figcaption>
 </figure>
@@ -288,14 +288,14 @@ Farz edelim ki referansın heap alanıdaki adresi **121** rakamı olsun.
 
 * **4.satırda:** burada ``someObjectX`` isminde bir *kopya-referans* oluşturulur. Bu referans/değişken ``someObject`` referansında olduğu gibi **121** değerine sahiptir. Her ne kadar *kopya-referans* olsa da heap alanında yine aynı objeyi işaret edeceğini unutmayın. (Bir üstteki şekil)
 
-<figure style="width: 500px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_3.png" alt="java object Variable">
   <figcaption></figcaption>
 </figure>
 
 * **5.satırda:** ise ``someObjectX`` referansının heap alanında işaret ettiği nesnenin ``name`` özelliği(yani nesnenin üye değişkeni(instance variable)) **o1** olarak güncelleniyor. ``someObject`` referansı da heap'teki aynı nesneyi işaret ettiği için haliyle bu güncellemeden dolaylı yoldan etkilenmiş olur ama sahip olduğu değerde(yani **121**'de) bir değişiklik olmaz. (Bir üstteki şekil)
 
-<figure style="width: 500px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_4.png" alt="java object Variable">
   <figcaption></figcaption>
 </figure>
@@ -303,14 +303,14 @@ Farz edelim ki referansın heap alanıdaki adresi **121** rakamı olsun.
 * **6.satırda:** bu satırda yeni bir``SomeObject`` objesi yaratılır ve *kopya-referansımız* olan ``someObjectX`` referansı/değişkeni artık yeni yaratılan bu nesneyi işaret etmeye başlar. Burada bir başka değişen şey ise ``someObjectX`` referansının değeridir. Bu referans yeni objenin adresi olan **119** rakamını saklamaya başlar. Buna karşın ``someObject`` referansı ise hâlen **121** adresini(aslında java'da bunun adres değil id old. belirtmiştim.) muhafaza etmektedir. (Bir üstteki şekil)
 
 
-<figure style="width: 500px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_5.png" alt="java object Variable">
   <figcaption></figcaption>
 </figure>
 
 * **7.satırda:** 7.satırda ise ``someObjectX`` referansının işaret ettiği nesnenin ``name`` özelliği(yani nesnenin üye değişkeni) **o2** olarak güncellenmektedir. (Bir üstteki şekil)
 
-<figure style="width: 500px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_6.png" alt="java object Variable">
   <figcaption></figcaption>
 </figure>
@@ -333,7 +333,7 @@ Anlaşılacağı üzere, ``someObject`` referansı nesnenin kendisini tutmuyor, 
 
 * [https://blog.penjee.com/passing-by-value-vs-by-reference-java-graphical/](https://blog.penjee.com/passing-by-value-vs-by-reference-java-graphical/)
 * [https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-c/](https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-c/)
-* [https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzarg/cplr233.htm](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzarg/cplr233.htm)
+* [Pass by reference](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzarg/cplr233.htm)
 * [Pass by value vs. pass by reference](https://www.educative.io/edpresso/pass-by-value-vs-pass-by-reference#:~:text=Pass%20by%20value%20means%20that,not%20visible%20to%20the%20caller.&text=Changes%20made%20to%20the%20passed%20variable%20do%20not%20affect%20the%20actual%20value.)
-* [https://www.cs.virginia.edu/~jh2jf/courses/cs2110/java-pass-by-value.html#:~:text=Java%20is%20officially%20always%20pass,the%20reference%20for%20reference%20types.](https://www.cs.virginia.edu/~jh2jf/courses/cs2110/java-pass-by-value.html#:~:text=Java%20is%20officially%20always%20pass,the%20reference%20for%20reference%20types.)
+* [Is Java Pass-by-value?](https://www.cs.virginia.edu/~jh2jf/courses/cs2110/java-pass-by-value.html#:~:text=Java%20is%20officially%20always%20pass,the%20reference%20for%20reference%20types.)
 * [https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
