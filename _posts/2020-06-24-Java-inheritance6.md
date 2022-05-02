@@ -40,7 +40,7 @@ Aslında bu şekilde olmasının nedeni tamamen Java derleyici kurallarından ka
 
 Öncelikli olarak, bir önceki derste ne yaptığımızı ve en son nerede kaldığımız hatırlayalım istiyorum. Elimizde bir Student sınıfı vardı. Bu sınıf Person isimli bir başka sınıfı miras alıyordu. Person sınıfı ise biz belirlemesekte java tarafından Object sınıfını miras almaya maruz bırakılıyordu.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance5/hierarchy5.png" alt="hierarchy">
   <figcaption></figcaption>
 </figure>
@@ -60,7 +60,7 @@ Kaldığımız yerden devam edecek olursak, bu kaynak dosyalar daha sonra ``java
 
 > javac, Oracle'ın Java Geliştirme Kiti'nde (JDK) bulunan birincil bir Java derleyicisidir(compiler). Derleyici, Java dil şartnamesine (Java language specification-JLS) uygun kaynak kodunu kabul eder ve Java Sanal Makine Şartnamesi'ne (JVMS-Java Virtual Machine Specification) uygun Java bayt kodu üretir.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/getStarted-compiler.gif" alt="getStarted-compiler">
   <figcaption>Görsel oracle'ın kendi sitesinden alınmıştır.</figcaption>
 </figure>
@@ -71,7 +71,7 @@ Kaldığımız yerden devam edecek olursak, bu kaynak dosyalar daha sonra ``java
 
 Hatırlarsanız yukarıda, derleyici kurallarından bahsetmiştik. Peki bu karallar nelerdir? Az önce çizdiğimiz şeklin bir başka versiyonunu göstermek istiyorum.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/jvm.png" alt="java'nın çalışma şekli">
   <figcaption></figcaption>
 </figure>
@@ -84,7 +84,7 @@ Peki, Java derleyicisi ne yapıyor ve bu kurallar nelerdir? Yaptığı şey asl�
 
 Birinci kural: eğer bir üst sınıfınız yoksa, derleyici size bir tane verecektir. Bu sınıf da daha önce bahsettiğimiz ``Object`` sınıfıdır. Böylelikle Object sınıfının nereden geldiğini anlamış bulunuyoruz.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule1.png" alt="derleyici kural1">
   <figcaption></figcaption>
 </figure>
@@ -95,7 +95,7 @@ Birinci kural: eğer bir üst sınıfınız yoksa, derleyici size bir tane verec
 
 İkinci kural: eğer bir kurucunuz yoksa, Java derleyicisi size bir tane verecektir. Verilen kurucu varsayılan(default) bir kurucu olacağı için, argüman almaz.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule2.png" alt="derleyici kural2">
   <figcaption></figcaption>
 </figure>
@@ -109,7 +109,7 @@ Ve sonra tüm kurucularla(constructor) ilişkili başka bir kurallar dizisi uygu
 
 Şekilde görüldüğü gibi Java derleyicisi, ``Person`` sınıfının varsayılan(default) kurucusuna **super()** olarak tanımlanan bir çağrı ekleyecektir.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule3.png" alt="derleyici kural3">
   <figcaption></figcaption>
 </figure>
@@ -119,7 +119,7 @@ Ve sonra tüm kurucularla(constructor) ilişkili başka bir kurallar dizisi uygu
 
 Soldaki kod bloğu bizim yazdığımız kodu temsil etmektedir. Sağdaki ise derleyicinin bizim yazdıklarımızdan anladığıdır:) Yani **mavi bölümleri** derleyi kendi ekleyecektir.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule4.png" alt="derleyici kural">
   <figcaption></figcaption>
 </figure>
@@ -144,7 +144,7 @@ public class Student extends Person {
 }
 
 ```
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/student.png" alt="derleyici kural">
   <figcaption></figcaption>
 </figure>

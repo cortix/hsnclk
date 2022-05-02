@@ -71,7 +71,7 @@ Dinamik tip dillerde değişkenler nesnelere, çalışma zamanında atama ifadel
 
 > Yukarıdakilere ek olarak iki farklı gruptan daha bahsetmek istiyorum. Aslında dinamik ve statik tip diller de kendi içerisinde 2 farklı gruba ayrılır. Bunlar **strong-typed** ve **weakly-typed** dillerdir. Yalnız şunu belirtmekte yarar var. Statik olup, **strong-typed** veyahut **weakly-typed** olan da olabilir. Aynı şekilde dinamik olup **strong-typed** veyahut **weakly-typed** olan da olabilir. Aşağıdaki şekilde bu gruplamayı rahatlıkla görebilirsiniz.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.png" alt="static_dynamic_strong_weak_types map">
   <figcaption></figcaption>
 </figure>

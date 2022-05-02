@@ -38,7 +38,7 @@ Bir önceki ders ilk iki koşulu extends anahtar kelimesini kullanarak sağlamı
 
 ## Referans ve Nesne Türleri
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.png" alt="uml diagram">
   <figcaption></figcaption>
 </figure>
@@ -172,7 +172,7 @@ public class TestFaculty {
 
 ## Derleme Zamanı ve Çalışma Zamanı Kararları
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.png" alt="uml diagram">
   <figcaption></figcaption>
 </figure>

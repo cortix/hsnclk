@@ -41,12 +41,12 @@ Muhtemelen bir kurucuda daha önce bir değişken başlattınız(yani ilklendird
 
 Geçtiğimiz derslerde verdiğimiz örnek sınıflar olan ``Person`` ve ``Student`` sınıflarını bu derste de kullanalım istiyorum.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/student.png" alt="derleyici kural">
   <figcaption></figcaption>
 </figure>
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule4.png" alt="derleyici kural">
   <figcaption></figcaption>
 </figure>
@@ -83,28 +83,28 @@ Derleyici kurallarından **3.kuralı** hatırlayacak olursak, <u><i>kurucunun il
 
 Şimdi benzer değişiklikleri Student sınıfında değişkenleri başlatmak için yapalım istiyorum.  Dersin başında Student ve Person sınıflarının derleyici kuralları kapsamında nasıl değiştiğini gösteren 2 şekil göstermiştim. Person sınıfını az önce ele aldığımız için şimdi Student sınıfına odaklanacağız. Hatırlarsanız, derleyici arka planda bizim yerimize eklediği kurucu ve kurucu içindeki super(); üst sınıf çağısırını yapmıştı. Şimdi bu varsayılan(default) Student kurucusunu ele alıp, üzerinde biraz değişiklikler yapacağım. Haliyle değişiklik yapacağımız için bu kurucunun artık bize özel bir kurucu olacağını unutmayın. Bildiğiniz gibi derleyici, sınıf içinde bir kurucu olmadığı zaman müdahele ediyordu.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init3.png" alt="değişken ilklendirme">
   <figcaption></figcaption>
 </figure>
 
 ``Student`` kurucusunun içinde, ``Person`` kurucusunda yaptığımız gibi benzer ilklendirme işlemini yapalım istiyorum. Eş zamanlı olarak bu kodu bir editörde denediğinizi varsayarak, alacağınız derleme hatalarını birlikte irdeleyebiliriz. İlk gözüme çarpan ``Person`` sınıfının içinde argümansız bir kurucunun olmayışı!! İkincisi ise ``name`` üye değişkeninin ``private`` olması... Hatırlarsanız ``private`` değişkenlere **getter** ve **setter** yöntemlerle erişebiliyorduk. Yalnız ``Person`` sınıfında ``public`` olan bir **getter/setter** yöntemin olmadığını görüyorum. Peki bu durumda ne yapabiliriz? Yani **getter** ve **setter** olmadan ``name`` isimli üye değişkenini nasıl ilklendirebiliriz? Aşağıdaki gibi bir düzenleme ile bu mümkün...
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init4.png" alt="değişken ilklendirme">
   <figcaption></figcaption>
 </figure>
 
 Şimdi Student sınıfına tamamen keyfi olarak bir argümansız kurucu eklemek istiyorum. Person sınıfında argümansız bir kurucu olmadığı için super("Student") çağrımızın içine bir string eklemem gerekiyor. ``name`` değişkenini ilklendirebilmek için **"Student"** isminde varsayılan bir değer ekliyorum. Bu kod bu şekilde çalışır.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init5.png" alt="değişken ilklendirme">
   <figcaption></figcaption>
 </figure>
 
 Daha iyi bir yaklaşım sizce var mı? Evet var.. Çünkü Student sınıfının içinde, argümanlı bir kurucu içinden zaten superclass çağrısı yapılıyor. Tekrardan benzer bir çağrı yapmanın gereği yoktur. Bu gibi durumlarda, aynı sınıf kurucularımı kullanabilirim. Belki de aynı sınıf kurucularımdan biri, tam olarak bu isteğime dayalı bir talebi karşılıyordur. Aşağıdaki kodda yaptığım değişiklik görüleceği üzere, üst sınıf çağrımız olan ``super("Student");`` çağrısını `this("Student")` yapmak oldu. Burada ``this`` kullanarak **bulunduğumuz sınıfın kurucusunu(constructor)** kastettiğimizi anlamışsınızdır.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init6.png" alt="değişken ilklendirme">
   <figcaption></figcaption>
 </figure>
