@@ -138,7 +138,7 @@ Kalıtım hiyerarşisi şu şekildedir.
 
 
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1.png" alt="uml diagram">
   <figcaption></figcaption>
 </figure>
@@ -153,7 +153,7 @@ Diyelim ki yukarıdaki 3 değişkeni bu sınıflara eklemek istiyorsunuz. Sizce 
 
 Cinsiyet değişkeni genel bir değişken olduğundan **Person** sınıfında olması daha doğru olacaktır. Ama maaş ve not ortalaması değişkenleri biraz daha spesifiktir. Yani öğrencinin maaş alamayacağını ve öğretim görevlilerinin ise not ortalamasına sahip olamayacağını biliyoruz. Bu yüzden bu değişkenleri bu sınıflara özel olarak tanımlayabiliriz.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2.png" alt="uml diagram">
   <figcaption></figcaption>
 </figure>

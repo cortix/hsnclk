@@ -34,7 +34,7 @@ Kalıtımın önceki derslerinde ``public`` ve ``private`` değiştiricilerini k
 
 Burada ele alacağımız değiştiriciler ``public`` ve ``private`` ile beraber şunlardır;
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access.png" alt="access modifiers">
   <figcaption></figcaption>
 </figure>
@@ -56,21 +56,21 @@ Aşağıdaki şekil sınıflar arası hiyerarşiyi ve aynı zamanda rasgele olu�
 
 Aşağıda 5 farklı sınıf arasında oluşturulmuş bir tasarımı görmektesiniz. Bunlardan ``Sub1`` ve ``Sub2`` sınıfları, ``Sample`` sınıfına doğrudan organik olarak bağlıdır. Çünkü görüleceği üzere ``extends`` anahtar kelimesi ile bu sınıfı miras aldıklarını görüyoruz. Yalnız ``Sub1`` sınıfının paket içinde ``Sub2`` sınıfının ise paket dışında olduğuna dikkat edin. Bunun yanı sıra ``Other1`` ve ``Other2`` isimli sınıflarımız da mevcuttur. ``Other1`` sınıfının ``Sample`` sınıfı ile aynı pakette olmasının dışında hiçbir organik bağı bulunmamaktadır. Aslında aynı pakette bulunmak da doğrudan bir bağ anlamına gelmez. Ama görünürlük kuralları çerçevesinde bu sınıfın bazı haklara sahip olacağını bize söyler. ``Other2`` sınıfı ise ne paket içinde ne de ``Sample`` sınıfı ile doğrudan bir bağ içindedir.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access1.png" alt="extends">
   <figcaption></figcaption>
 </figure>
 
 Şekilde okla belirtilen aslında uml diagram gösteriminde ``extends`` anahtar kelimesini temsil etmektedir.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access2.png" alt="extends">
   <figcaption></figcaption>
 </figure>
 
 Bu şekilde ise paketi görebilmeniz için ön plana çıkardım. Hangi sınıfların paket içinde kaldığına dikkat edin istiyorum.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access3.png" alt="extends">
   <figcaption></figcaption>
 </figure>
@@ -79,7 +79,7 @@ Bu şekilde ise paketi görebilmeniz için ön plana çıkardım. Hangi sınıfl
 
 Görüleceği üzere ``Sample`` sınıfı içinde bulunan ``x`` üye değişkeni ``public`` değiştiricisine sahiptir. Burada sınıfları renkli bırakmamdaki sebep, ``x`` değişkenine hangi sınıfların erişebileceğini göstermektektir. Görüleceği üzere bu değişken hem paket içinden hem paket dışından, hem de alt sınıflardan erişime açıktır.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/public_access.png" alt="public_access modifier">
   <figcaption></figcaption>
 </figure>
@@ -88,7 +88,7 @@ Görüleceği üzere ``Sample`` sınıfı içinde bulunan ``x`` üye değişkeni
 
 Şimdi ise ``protected`` değiştiricisine sahip ``y`` üye değişkenine odaklanmanızı istiyorum. Burada ``Other2`` sınıfı dışında bütün sınıflar renkli gösterilmiştir. Kuralımız, hem aynı sınıftan, hem paket içinden hem de alt sınıflardan erişimi mümkün kılıyordu. ``Other1`` ve ``Sub1`` aynı paket içinde olduğundan bu değişkene erişim söz konusudur. ``Sub1`` aynı zamanda çifte hakka sahiptir. Çünkü bu sınıf, ``Sample`` sınıfının bir alt sınıfıdır. Yani Sample sınıfını miras alır. Sub2 ise sadece bir alt sınıf olduğu için bu erişim hakkını elde etmiştir. Fakat ``Other2`` sınıfı ne aynı pakette bulunmakta ne de bir alt sınıf olmaktadır. Bu yüzden ``y`` değişkenine erişimi yoktur.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/protected_access.png" alt="protected_access modifier">
   <figcaption></figcaption>
 </figure>
@@ -101,7 +101,7 @@ Görüleceği üzere ``Sample`` sınıfı içinde bulunan ``x`` üye değişkeni
 Burada odaklanacağımız değişken ise ``package`` değiştiricisine sahip ``z`` üye değişkenidir. Bu değiştirici kodlanırken, değişkenin önüne ``package`` ve ``default`` yazılmazlar. Boş bırakıldıklarında java bunların ``package(default)`` zaten olduğunu bilir. Bu erişimin bir diğer ismi de ``package-private`` olarak da geçer. Bu erişimdeki kural, aynı sınıf ve aynı pakette olma koşuludur. Görüleceği üzere ``Sub2`` sınıfı bir alt sınıf olmasına rağmen aynı pakette olmadığı için erişim hakkını kaybetmiştir. ``Sub1`` ve ``Other1`` ise ``Sample`` ile aynı pakette olduğundan bu değişkene erişim hakkına sahiptirler.
 
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/package_access.png" alt="package_access modifier">
   <figcaption></figcaption>
 </figure>
@@ -112,7 +112,7 @@ Burada odaklanacağımız değişken ise ``package`` değiştiricisine sahip ``z
 
 Görüleceği üzere sadece aynı sınıftan erişim mümkündür. ``private`` erişim çok kullanılan bir tasarım tekniğidir.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/private_access.png" alt="private_access modifier">
   <figcaption></figcaption>
 </figure>

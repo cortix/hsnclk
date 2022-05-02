@@ -80,7 +80,7 @@ Adım adım yukarıdaki kod bloğu nasıl çalışır, resmetmeye çalışalım;
 
 * **2.satır:** Aslında ikinci satırda yaptığımız işlemin birinci satırda olandan bir farklı yok. `sample1` isminde bir değişken oluşturup, onun için de özel bir kutu çizeceğiz. Sadece değişkenin tipi `int` yerine `SampleTest` isminde bir sınıf olduğunu unutmayalım.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample2.png" alt="async-variable">
   <figcaption></figcaption>
 </figure>
@@ -89,14 +89,14 @@ Adım adım yukarıdaki kod bloğu nasıl çalışır, resmetmeye çalışalım;
 
 Bu referansı stack'da yer alan ``sample1`` değişkeninin içine yerleştirdiğimizi hayal edin. Aslında arka planda tam olarak buna benzer bir işlem olmaktadır.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample3.png" alt="async-variable">
   <figcaption></figcaption>
 </figure>
 
 Bu id'yi silip okla göstermek istiyorum. Bu ok az önceki **@** işareti ile başlayan id'nin ne anlama geldiğini resmetmektedir. Gerçekte **id** ile gösterim daha doğrudur. Ama okla yaptığımız gösterim, arka planda olanı daha net anlamanıza yardımcı olacağını düşünüyorum. Bu ok aslında **sample1** değişkeninin/referansının heap'te ne tuttuğunu bize işaret etmektedir. Yani aşağıdaki gibi bir sonuç bizi beklemektedir.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample4.png" alt="async-variable">
   <figcaption></figcaption>
 </figure>
@@ -117,7 +117,7 @@ public class SampleTest{
 
 Heap alanında nesne yaratıldığında tıpkı stack alanında yaptığımız gibi nesnenin içinde de nesnenin sahip olduğu değişkenleri temsil eden iki tane kutu çizeceğiz. Bu kutular nesne yaratıldığında, nesnenin **x ve y değerlerini** saklayacaktır. İlk paylaştığımız kod bloğunun 3.satırında ``new SampleTest(1,2);`` görüldüğü üzere 2 parametre almaktadır. Bu parametreler aslında bu x ve y değerlerini ilklendirmek için nesne yaratıldığında tanımlanmıştır. Constructor(yapılandırıcı) scope'unun nasıl oluştuğu ile ilgili örneğe scope'lara giriş konusunda değiniriz. Burada böyle bir constructor olduğunu varsayarak bu değerleri heap alanında oluşturduğumuz nesne içindeki değişken kutucuklarına ekleyeceğim. Yani şöyle bir şeyle karşılaşırız.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample5.png" alt="async-variable">
   <figcaption></figcaption>
 </figure>
@@ -126,7 +126,7 @@ Heap alanında nesne yaratıldığında tıpkı stack alanında yaptığımız g
 * **4.satır:**
 Bu adımda ``SampleTest sample2 = new SampleTest(3,4);`` 3. adımdakine benzer şekilde heap alanında tekrardan yeni bir nesne yaratıyoruz. Aynı zamanda stack alanında da sample2 isminde yeni bir değişken/referans oluşturuyoruz. Sonrasında bu referansa bu nesnenin id'sini veriyoruz. **@** işareti ile başlayan id yerine yine okla gösterimi tercih edeceğim.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample6.png" alt="async-variable">
   <figcaption></figcaption>
 </figure>
@@ -134,7 +134,7 @@ Bu adımda ``SampleTest sample2 = new SampleTest(3,4);`` 3. adımdakine benzer �
 * **5.satır**
 Son satırda ise ``sample2.x = 5;`` **sample2** referansının işaret ettiği nesnenin **x** değişkenine yeni bir değerin atanması işlemi vardır. Yani **sample2** referansının işaret ettiği nesneye gidip ilgili değeri değiştireceğiz.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample7.png" alt="async-variable">
   <figcaption></figcaption>
 </figure>
@@ -151,7 +151,7 @@ Aşağıdaki şekilden de görüleceği üzere referans ve nesne(obje) tiplerini
 
 **NOT :** Bu arada referans tipleri, deklare edilen tipler(declared type) olarak da tanımlanır.
 
-<figure style="width: 600px" class="align-center">
+<figure style="width: 400px" class="align-center">
  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/ref-obj-type.png" alt="referans ve obje tipi arasındaki fark">
  <figcaption></figcaption>
 </figure>
