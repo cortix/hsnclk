@@ -124,11 +124,11 @@ Tam da referans ve nesne tipleri arasındaki farkı öğrenmişken bu tanımlar�
 
 ## Referanslar
 
-* [https://inst.eecs.berkeley.edu/~cs61bl/su15/materials/guides/static-dynamic.pdf](https://inst.eecs.berkeley.edu/~cs61bl/su15/materials/guides/static-dynamic.pdf)
+* [Static vs. Dynamic Type](https://inst.eecs.berkeley.edu/~cs61bl/su15/materials/guides/static-dynamic.pdf)
 * [Dynamic typing vs. static typing](https://docs.oracle.com/cd/E57471_01/bigData.100/extensions_bdd/src/cext_transform_typing.html#:~:text=First%2C%20dynamically%2Dtyped%20languages%20perform,type%20checking%20at%20compile%20time.&text=If%20a%20script%20written%20in,the%20errors%20have%20been%20fixed.)
-* [https://howtoprogramwithjava.com/dynamic-typing-vs-static-typing/](https://howtoprogramwithjava.com/dynamic-typing-vs-static-typing/)
-* [https://stackoverflow.com/questions/20504714/difference-between-dynamic-and-static-type-assignments-in-java/20505326](https://stackoverflow.com/questions/20504714/difference-between-dynamic-and-static-type-assignments-in-java/20505326)
-* [https://www.oracle.com/technical-resources/articles/javase/dyntypelang.html](https://www.oracle.com/technical-resources/articles/javase/dyntypelang.html)
-* [https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing](https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing)
-* [https://android.jlelse.eu/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b](https://android.jlelse.eu/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b)
-* [http://www.pythontutor.com/](http://www.pythontutor.com/)
+* [Static Typing vs Dynamic Typing](https://howtoprogramwithjava.com/dynamic-typing-vs-static-typing/)
+* [Difference between Dynamic and Static type assignments in Java](https://stackoverflow.com/questions/20504714/difference-between-dynamic-and-static-type-assignments-in-java/20505326)
+* [New JDK 7 Feature: Support for Dynamically Typed Languages in the Java Virtual Machine](https://www.oracle.com/technical-resources/articles/javase/dyntypelang.html)
+* [What is the supposed productivity gain of dynamic typing?](https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing)
+* [What is the supposed productivity gain of dynamic typing?](https://android.jlelse.eu/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b)
+* [VISUALIZE CODE EXECUTION Python Tutor](http://www.pythontutor.com/)

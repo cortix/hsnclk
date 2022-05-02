@@ -296,7 +296,7 @@ test.setValue(3); // compile time error occurs
 ```
 3.satırda int bir değer eklemeye çalıştığımızda daha derleme zamanında hata alırız. Bu da bize generic türlerin derleme zamanı polimorfizmi uyguladığını gösterir.
 
-Başka bir örnek daha paylaşmak istiyorum. 
+Başka bir örnek daha paylaşmak istiyorum.
 
 ```java
 public void sample(List<String> list) {
@@ -357,22 +357,22 @@ Son satır, erişilen yöntemin, başvurulan nesnenin çalışma zamanı sınıf
 
 ## Referanslar
 
-* [https://www.geeksforgeeks.org/difference-between-early-and-late-binding-in-java/](https://www.geeksforgeeks.org/difference-between-early-and-late-binding-in-java/)
-* [https://www.baeldung.com/java-static-dynamic-binding](https://www.baeldung.com/java-static-dynamic-binding)
+* [Difference between Early and Late Binding in Java](https://www.geeksforgeeks.org/difference-between-early-and-late-binding-in-java/)
+* [Static and Dynamic Binding in Java](https://www.baeldung.com/java-static-dynamic-binding)
 * [Virtual Function in Java](https://medium.com/@namangupta01/virtual-function-in-java-vs-c-d75874d23#:~:text=In%20object%2Doriented%20programming%2C%20a,to%20provide%20the%20polymorphic%20behavior.)
-* [https://docs.oracle.com/javase/specs/jls/se13/html/jls-15.html#d5e25867](https://docs.oracle.com/javase/specs/jls/se13/html/jls-15.html#d5e25867)
-* [https://www.geeksforgeeks.org/static-vs-dynamic-binding-in-java/](https://www.geeksforgeeks.org/static-vs-dynamic-binding-in-java/)
-* [https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString()](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString())
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
-* [https://docs.oracle.com/javase/6/docs/api/java/util/List.html](https://docs.oracle.com/javase/6/docs/api/java/util/List.html)
-* [https://docs.oracle.com/javase/specs/jls/se6/html/classes.html](https://docs.oracle.com/javase/specs/jls/se6/html/classes.html)
-* [https://www.baeldung.com/java-static-dynamic-binding](https://www.baeldung.com/java-static-dynamic-binding)
-* [https://stackoverflow.com/questions/19017258/static-vs-dynamic-binding-in-java](https://stackoverflow.com/questions/19017258/static-vs-dynamic-binding-in-java)
-* [https://www.baeldung.com/java-polymorphism](https://www.baeldung.com/java-polymorphism)
+* [Static Binding for Field Access](https://docs.oracle.com/javase/specs/jls/se13/html/jls-15.html#d5e25867)
+* [Static vs Dynamic Binding in Java](https://www.geeksforgeeks.org/static-vs-dynamic-binding-in-java/)
+* [toString metodu](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString())
+* [Using the this Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
+* [Interface List](https://docs.oracle.com/javase/6/docs/api/java/util/List.html)
+* [Classes](https://docs.oracle.com/javase/specs/jls/se6/html/classes.html)
+* [Static and Dynamic Binding in Java](https://www.baeldung.com/java-static-dynamic-binding)
+* [Static Vs. Dynamic Binding in Java](https://stackoverflow.com/questions/19017258/static-vs-dynamic-binding-in-java)
+* [Polymorphism in Java](https://www.baeldung.com/java-polymorphism)
 * [Virtual Function in Java vs. C++](https://medium.com/@namangupta01/virtual-function-in-java-vs-c-d75874d23#:~:text=In%20object%2Doriented%20programming%2C%20a,to%20provide%20the%20polymorphic%20behavior.)
 * [What is Virtual Method](http://net-informations.com/faq/oops/virtual.htm)
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
-* [https://stackoverflow.com/questions/32422923/why-does-java-bind-variables-at-compile-time](https://stackoverflow.com/questions/32422923/why-does-java-bind-variables-at-compile-time)
-* [https://www.amazon.com/Java-Programmers-Deitel-Developer-Paul/dp/0132821540](Java for Programmers 2nd Edition Deitel Developer Series)
-* [https://www.amazon.com/Oracle-Certified-Professional-Programmer-1Z0-809/dp/1484218353](Oracle Certified Professional Java SE 8 Programmer Exam 1Z0-809)
-* [https://docs.oracle.com/javase/tutorial/java/IandI/override.html](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)
+* [Local Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+* [Why does Java bind variables at compile time?](https://stackoverflow.com/questions/32422923/why-does-java-bind-variables-at-compile-time)
+* [Java for Programmers 2nd Edition Deitel Developer Series](https://www.amazon.com/Java-Programmers-Deitel-Developer-Paul/dp/0132821540)
+* [Oracle Certified Professional Java SE 8 Programmer Exam 1Z0-809](https://www.amazon.com/Oracle-Certified-Professional-Programmer-1Z0-809/dp/1484218353)
+* [Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)

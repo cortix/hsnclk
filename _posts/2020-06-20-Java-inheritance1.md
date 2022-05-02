@@ -121,5 +121,5 @@ Veyahut ``Person[]`` tipinde bir dizi oluşturmak istiyoruz. Bu dizinin öğrenc
 
 
 ## Referanslar
-* [https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

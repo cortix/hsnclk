@@ -160,15 +160,15 @@ Sizce neden derleyicinin kodunuzu derlerken uyguladığı kuralları öğreniyor
 {% include video id="cR9uwtMQt-g" provider="youtube" %}
 
 ## Referanslar
-* [https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html](https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html)
-* [https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings](https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)
-* [https://en.wikipedia.org/wiki/Java_virtual_machine](https://en.wikipedia.org/wiki/Java_virtual_machine)
-* [https://www.cs.cornell.edu/courses/JavaAndDS/files/howJavaWorks.pdf](https://www.cs.cornell.edu/courses/JavaAndDS/files/howJavaWorks.pdf)
-* [https://www2.cs.duke.edu/courses/cps108/fall99/slides/slides14.pdf](https://www2.cs.duke.edu/courses/cps108/fall99/slides/slides14.pdf)
-* [http://www.cs.cmu.edu/~jcarroll/15-100-s05/supps/basics/history.html](http://www.cs.cmu.edu/~jcarroll/15-100-s05/supps/basics/history.html)
-* [https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqd/index.html](https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqd/index.html)
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
-* [https://en.wikipedia.org/wiki/Javac](https://en.wikipedia.org/wiki/Javac)
-* [https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html)
+* [About the Java Technology](https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html)
+* [List of Java bytecode instructions](https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)
+* [Java virtual machine](https://en.wikipedia.org/wiki/Java_virtual_machine)
+* [How	Java	Works](https://www.cs.cornell.edu/courses/JavaAndDS/files/howJavaWorks.pdf)
+* [How	Java	Works](https://www2.cs.duke.edu/courses/cps108/fall99/slides/slides14.pdf)
+* [How	Java	Works](http://www.cs.cmu.edu/~jcarroll/15-100-s05/supps/basics/history.html)
+* [Java Programming Environment and the Java Runtime Environment (JRE)](https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqd/index.html)
+* [Declaring Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [javac](https://en.wikipedia.org/wiki/Javac)
+* [javac](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javac.html)
 * JAVA Virtual Machine - Jon Meyer & Troy Downing

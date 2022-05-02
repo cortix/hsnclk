@@ -44,5 +44,5 @@ Arkadaşlar bu bir video içerik. Birbiri ile bağlantılı olduğu için aşağ
 Daha önceki [makalelerimin](/java-hafiza-yonetimi/Java-memory-models-primitive-types/#string-interning) birinde string interning kavramına değinmiştim. Dilerseniz o makaleyi de inceleyebilirsiniz. Yalnız bu video daha detaylı olduğu ve 3 konuyu da ele aldığı için daha yararlı olacağını düşünüyorum.
 
 ## Reference:
-* [https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#intern()](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#intern())
-* [https://en.wikipedia.org/wiki/String_interning](https://en.wikipedia.org/wiki/String_interning)
+* [String intern](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#intern())
+* [String interning](https://en.wikipedia.org/wiki/String_interning)

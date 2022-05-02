@@ -20,6 +20,7 @@ tags:
   - Kurucu(constructor)
   - derleyici kuralları
   - değişken ilklendirme
+  - this keyword in Java
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -117,7 +118,7 @@ Benzer şekilde `main` metodu içinde bulunan kod bloğu çalıştırılmak iste
 {% include video id="cR9uwtMQt-g" provider="youtube" %}
 
 ## Referanslar
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
-* [https://www.javatpoint.com/this-keyword](https://www.javatpoint.com/this-keyword)
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Using the this Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
+* [this keyword in Java](https://www.javatpoint.com/this-keyword)
+* [Declaring Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

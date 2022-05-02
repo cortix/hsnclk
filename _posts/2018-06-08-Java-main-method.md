@@ -87,12 +87,11 @@ Statik anahtar sözcüğü, bir yönteme veya üye değişkenine uygulandığın
 
 ## Referanslar
 
-* [https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html)
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
-* [http://courses.cms.caltech.edu/cs11/material/java/donnie/java-main.html#:~:text=The%20classes%20in%20the%20java,num%20%3D%200%3B%20...](http://courses.cms.caltech.edu/cs11/material/java/donnie/java-main.html#:~:text=The%20classes%20in%20the%20java,num%20%3D%200%3B%20...)
-
-* [http://www.dickbaldwin.com/java/Java032.htm](http://www.dickbaldwin.com/java/Java032.htm)
-* [https://www.cs.colostate.edu/helpdocs/eclipseCommLineArgs.html](https://www.cs.colostate.edu/helpdocs/eclipseCommLineArgs.html)
-* [http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/09/command-args.html](http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/09/command-args.html)
+* [Command-Line Arguments](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html)
+* [Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+* [Java Program Invocation and Command-Line Arguments](http://courses.cms.caltech.edu/cs11/material/java/donnie/java-main.html#:~:text=The%20classes%20in%20the%20java,num%20%3D%200%3B%20...)
+* [Command-Line Arguments](http://www.dickbaldwin.com/java/Java032.htm)
+* [How To Use Command Line Arguments in Eclipse](https://www.cs.colostate.edu/helpdocs/eclipseCommLineArgs.html)
+* [The command line arguments of a Java program](http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/09/command-args.html)
 
 <!-- reference : 126.5-71/69.5 ref25 -->

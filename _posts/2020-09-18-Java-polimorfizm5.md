@@ -155,8 +155,8 @@ Yani bir sınıf hiyerarşisini tasarlamaya çalışırken bunu bir arayüz mü 
 
 ### Referanslar
 
-* [https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)
-* [https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html)
-* [https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString()](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString())
-* [https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Interface Comparator](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)
+* [Interface Comparable](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html)
+* [toString metodu](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString())
+* [Abstract Methods and Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

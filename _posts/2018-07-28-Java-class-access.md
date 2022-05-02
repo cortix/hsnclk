@@ -185,5 +185,5 @@ Ekran görüntüsünden de anlaşılacağı üzere Ide'miz kodu derlediğinde be
 
 Referanslar :  
 
-1. [https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
+1. [Declaring Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html)
 2. [OCA Java SE 8 Programmer I Exam Guide (Exams 1Z0-808)](https://www.amazon.com/Java-Programmer-Guide-Exams-1Z0-808/dp/1260011399)

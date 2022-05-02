@@ -89,4 +89,4 @@ Yukarıdaki örnek için hangi overloading methodlar uygun olur?
 Daha önce de belirttiğimiz gibi, yalnızca parametre listesini değiştirerek overloading yapabilirsiniz. Dönüş türünün tek başına değiştirilmesi yönteme overloading yaptırmak için yeterli değildir, çünkü dönüş türü yöntem imzasının bir parçası değildir (yalnızca yöntem adı ve parametre listesi yöntem imzasındadır). Bu yüzden 1. seçenek overloading için geçerli değildir. 2. ve 3. seçenek ise overloading için geçerlidir. Farklı bir parametre listesine ve aynı yöntem adına sahip olmak, aşırı yöntem yüklemesidir.
 
 ## Referanslar
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+* [Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
