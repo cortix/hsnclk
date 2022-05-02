@@ -243,7 +243,7 @@ Ezberlemeyi kolaylaştıran tanınmış bir teknik ise dizileri şarkıya çevir
 
 ## PÜF NOKTASI 19
 
-Yabancı dil öğrenen başka kişilerin çalışma yönteminden ilham alın: Çok dil bilen her kişinin mutlaka bir çalışma yöntemi var, bu paylaşımda kendi yöntemimden söz etmek istiyorum. Şimdiye kadar öğrendiğim 50 civarında dilin arasından hâlen üç tanesine odaklanıyorum.
+**Yabancı dil öğrenen başka kişilerin çalışma yönteminden ilham alın :** Çok dil bilen her kişinin mutlaka bir çalışma yöntemi var, bu paylaşımda kendi yöntemimden söz etmek istiyorum. Şimdiye kadar öğrendiğim 50 civarında dilin arasından hâlen üç tanesine odaklanıyorum.
 
 <figure style="width: 650px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/19.png" alt="Dil öğrenmenin püf noktası 19 - Yabancı dil öğrenen başka kişilerin çalışma yönteminden ilham alın">
@@ -357,28 +357,28 @@ Kurs başarılı olunca da Gent Üniversitesi Yabancı Diller Merkezi'nin müdü
 
 <figure style="width: 650px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/25-7.png" alt="Dil öğrenmenin püf noktası 25 - Öğrendiğiniz yabancı dili başkalarına öğretmeye başlayın">
-  <figcaption>Dil öğrenmenin püf noktası 25</figcaption>
+  <figcaption>Dil öğrenmenin püf noktası 25 - resim 1</figcaption>
 </figure>
 
 **Öğrendiğiniz yabancı dili başkalarına öğretmeye başlayın (Bölüm 3/3) :** 1993'te, nikâhımızdan yarım yıl önce, Linda'yla birlikte Oriëntaal vzw Doğu Dilleri ve Kültürleri Öğretim Merkezi'ni kurduk. Merkez'in bünyesinde 15 yıl boyunca Linda'yla ben Türkçe ve Arapça dersleri düzenledik ve verdik. Ayrıca birlikte "Haydi Türkçe Konuşalım 1 ve 2" adlı Türkçe ders kitaplarımızı hazırladık. 90'lı yılların sonlarına doğru Merkez'imizin Gent, Brüksel ve Anvers'te olmak üzere toplam 200 öğrencisi vardı. (20/03 tarihli PÜF NOKTASI 08'de bu dönemden iki resim görebilirsiniz.)
 
 <figure style="width: 650px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/25-6.png" alt="Dil öğrenmenin püf noktası 25 - Öğrendiğiniz yabancı dili başkalarına öğretmeye başlayın">
-  <figcaption>Dil öğrenmenin püf noktası 25</figcaption>
+  <figcaption>Dil öğrenmenin püf noktası 25 - resim 2</figcaption>
 </figure>
 
 2006'da Gent Üniversite Koleji Mütercim-Tercümanlık Fakültesi bir Türkçe Bölümü kurmaya karar verdi. Bu, Belçika'nın Flaman Bölgesi'nde bir ilkti. Bölgemizde daha önce akademik düzeyde Türkçe okutulmamıştı. Bölümü sıfırdan inşa etmek görevi ve bölüm başkanlığı bana verildi. Türkçe Bölümümüze ilk yıl 33 öğrenci yazıldı (1. ve 2. resme bakın). Yeni iş arkadaşlarım da oldu, bazılarını okul işe aldı, bazılarını TC Brüksel Büyükelçiliği Eğitim Müşavirliği bize okutman olarak tahsis etti. İlk ekibimiz Ömer Hoca, Baykal Hoca ve benden ibaretti (3. resim). Ekim 2013'te Flaman Bölgesi Eğitim Bakanlığının kararıyla Mütercim-Tercümanlık ve İletişim bölümümüz Gent Üniversitesi Edebiyat ve Felsefe Fakültesi'nin bünyesine alındı. 4. resim Prof. Dr. Selçuk Şirin'in 15/03/22'de bölümümüze yaptığı ziyaret sırasında çekildi. Soldan sağa: Şener Uğurlu (Belçika Türk Dili Enstitüsü Başkanı), Prof. Dr. Selçuk Şirin, Ebru Hoca, ben, Sevdağ Hoca ve Feyza Hoca.
 
 <figure style="width: 650px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/25-8.png" alt="Dil öğrenmenin püf noktası 25 - Öğrendiğiniz yabancı dili başkalarına öğretmeye başlayın">
-  <figcaption>Dil öğrenmenin püf noktası 25</figcaption>
+  <figcaption>Dil öğrenmenin püf noktası 25 - resim 3</figcaption>
 </figure>
 
 Gent Üniversitesi Mütercim-Tercümanlık ve İletişim bölümünde Türkçeyi seçen öğrenciler genel içerikli derslerin yanısıra mecburi ders olarak Hollandacayı okuyor ve bir de İngilizce, Fransızca, Almanca grubundan üçüncü bir dil seçiyor. Hollandaca dışındaki iki dil aynı seviyede okutuluyor, ders saatleri, krediler bakımından aralarında hiçbir ayrım yapılmıyor. Üç yıllık bachelor eğitimini bitirenler Sözlü Çevirmenlik, Yazılı Çevirmenlik, Çok Dilli İletişim ve Dil Öğretmenliği yüksek lisanslarından birini seçiyor. Mezunlarımız iş bulmakta güçlük çekmiyor, ülkemizde yüksek düzeyde hem Türkçeyi hem de başka bir iki yabancı dil bilenlere ihtiyaç var (Son) [link](https://www.instagram.com/p/CcXcbomsECe/)
 
 <figure style="width: 650px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/25-5.png" alt="Dil öğrenmenin püf noktası 25 - Öğrendiğiniz yabancı dili başkalarına öğretmeye başlayın">
-  <figcaption>Dil öğrenmenin püf noktası 25</figcaption>
+  <figcaption>Dil öğrenmenin püf noktası 25 - resim 4</figcaption>
 </figure>
 
 ## PÜF NOKTASI 26
@@ -526,33 +526,36 @@ Birkaç ay sonra TC Anvers Başkonsolosluğundan bir görevliyle birlikte Brüks
 
 <figure style="width: 650px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-1.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
-  <figcaption>Dil öğrenmenin püf noktası 33</figcaption>
+  <figcaption>Dil öğrenmenin püf noktası 33 - resim 1</figcaption>
 </figure>
 
-Örnek olarak bir Türk öğrencinin "Avrupa'yı Asya'dan iki boğaz ayırır." cümlesini İngilizcede ifade etmek istediğini farz edelim. Oxford Türkçe-İngilizce sözlüğü "boğaz" için 11 karşılık verir (resim2 ). İlk gördüğü karşılığı kullanan öğrenci: "Two throats separate Europe from Asia." gibi hatalı bir cümle kurar. Daha dikkatli olan öğrenci "geo" ("coğrafya") kısaltmasını fark ederek uygun karşılığın o kısaltmayı izlediğini bekler. Böylece seçeneklerin sayısı 11'den 5'e iner. Kastedilen kavram ne dağla ne de nehirle ilgili olduğundan üç seçenek silinebilir, dolayısyla aranan karşılık büyük olasılıkla "channel" veya "strait(s)" olur. "Büyük olasılıkla" diyorum çünkü sadece sözlüğe dayanarak hiç emin olamayız. Sık sık aradığım yabancı kelimenin sözlüğün verdiği karşılıklar arasında bulunmadığına tanık olurum. Sözlükte bulduğunuz karşılık hiç bilmediğiniz bir kelimeyse onu mutlaka bir bağlamda görmeniz gerekir. Üç yöntem veriyorum:
+Örnek olarak bir Türk öğrencinin "**Avrupa'yı Asya'dan iki boğaz ayırır.**" cümlesini İngilizcede ifade etmek istediğini farz edelim. Oxford Türkçe-İngilizce sözlüğü "boğaz" için 11 karşılık verir (resim2 ). İlk gördüğü karşılığı kullanan öğrenci: "**Two throats separate Europe from Asia.**" gibi hatalı bir cümle kurar. Daha dikkatli olan öğrenci "**geo**" ("coğrafya") kısaltmasını fark ederek uygun karşılığın o kısaltmayı izlediğini bekler. Böylece seçeneklerin sayısı 11'den 5'e iner. Kastedilen kavram ne dağla ne de nehirle ilgili olduğundan üç seçenek silinebilir, dolayısıyla aranan karşılık büyük olasılıkla "**channel**" veya "**strait(s)**" olur. "Büyük olasılıkla" diyorum çünkü sadece sözlüğe dayanarak hiç emin olamayız. Sık sık aradığım yabancı kelimenin sözlüğün verdiği karşılıklar arasında bulunmadığına tanık olurum. Sözlükte bulduğunuz karşılık hiç bilmediğiniz bir kelimeyse onu mutlaka bir bağlamda görmeniz gerekir. Üç yöntem veriyorum:
 
 <figure style="width: 650px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-2.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
-  <figcaption>Dil öğrenmenin püf noktası 33</figcaption>
+  <figcaption>Dil öğrenmenin püf noktası 33 - resim 2</figcaption>
 </figure>
 
 1. Google ile yabancı karşılığa bağlamlar bulabilirsiniz (resim 3). Kurmakta olduğunuz cümleden bir parça girdiğinizde önce tahminler çıkar, bunlar yetmezse bağlamlara bir göz atabilirsiniz. Resimde kavramın bir tanımının da çıktığını görüyoruz. Bunları gözden geçirerek yabancı karşılığın uygun olup olmadığına karar verebilirsiniz.
 
     <figure style="width: 650px" class="align-center">
       <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-3.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
-      <figcaption>Dil öğrenmenin püf noktası 33</figcaption>
+      <figcaption>Dil öğrenmenin püf noktası 33 - resim 3</figcaption>
     </figure>
 
-2. Sözlüğün yanında Glosbe.com gibi bir çeviri belleği de kullanabilirsiniz (resim 4). Çeviri bellekleri sadece kelimelerin değil, veri tabanında bulunan cümlelerin de karşılıklarını verir. Yabancı karşılıkların kullanıldığı bağlamlara bakarak işinize yarayan karşılığı seçebilirsiniz.
+2. Sözlüğün yanında [Glosbe.com](https://glosbe.com/) gibi bir **çeviri belleği** de kullanabilirsiniz (resim 4). Çeviri bellekleri sadece kelimelerin değil, veri tabanında bulunan cümlelerin de karşılıklarını verir. Yabancı karşılıkların kullanıldığı bağlamlara bakarak işinize yarayan karşılığı seçebilirsiniz.
 
     <figure style="width: 650px" class="align-center">
       <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-4.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
-      <figcaption>Dil öğrenmenin püf noktası 33</figcaption>
+      <figcaption>Dil öğrenmenin püf noktası 33 - resim 4</figcaption>
     </figure>
 
 3. Yine başka bir yöntem Vikipedi'de konuyla ilgili bulduğunuz bir makalenin dilini yabancı dile çevirmekle olur (resim 5). Bu yöntemlerin her biri aynı sonucu veriyor: En uygun karşılık "strait(s)" kelimesidir: "Two straits separate Europe from Asia." [link](https://www.instagram.com/p/CdCz2jXsHcP/)
 
-
+    <figure style="width: 650px" class="align-center">
+      <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/33-5.png" alt="Dil öğrenmenin püf noktası 33 - Anadilinizden yabancı dile çeviren sözlükte bulduğunuz kelimeyi mutlaka bağlamında kontrol edin">
+      <figcaption>Dil öğrenmenin püf noktası 33 - resim 5</figcaption>
+    </figure>
 -----------------------
 
 Johan Vandewalle instagram sayfasından ve youtube kanalından daha fazla içeriğe ulaşabilirsiniz.
