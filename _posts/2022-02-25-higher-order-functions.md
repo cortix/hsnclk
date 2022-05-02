@@ -81,8 +81,8 @@ But, we can treat functions or codes as *first class citizens* as well. In this 
 
 
 ## Reference:
-* [https://en.wikipedia.org/wiki/First-class_citizen](hhttps://en.wikipedia.org/wiki/First-class_citizen)
-* [https://en.wikipedia.org/wiki/First-class_function](https://en.wikipedia.org/wiki/First-class_function)
-* [https://en.wikipedia.org/wiki/Higher-order_function](https://en.wikipedia.org/wiki/Higher-order_function)
-* [https://en.wikipedia.org/wiki/Anonymous_function](https://en.wikipedia.org/wiki/Anonymous_function)
+* [First-class citizen](https://en.wikipedia.org/wiki/First-class_citizen)
+* [First-class function](https://en.wikipedia.org/wiki/First-class_function)
+* [Higher-order function](https://en.wikipedia.org/wiki/Higher-order_function)
+* [Anonymous function](https://en.wikipedia.org/wiki/Anonymous_function)
 * [Understanding Functional Programming - Venkat Subramaniam](https://learning.oreilly.com/live-events/understanding-functional-programming/0636920457435/0636920058831/)

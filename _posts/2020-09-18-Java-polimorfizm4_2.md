@@ -105,10 +105,10 @@ Student 1 Person 1 Undergrad 2
 
 
 ## Referanslar
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
-* [https://docs.oracle.com/javase/specs/jls/se13/html/jls-15.html#d5e25867](https://docs.oracle.com/javase/specs/jls/se13/html/jls-15.html#d5e25867)
-* [https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString()](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString())
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
-* [https://docs.oracle.com/javase/6/docs/api/java/util/List.html](https://docs.oracle.com/javase/6/docs/api/java/util/List.html)
-* [https://docs.oracle.com/javase/specs/jls/se6/html/classes.html](https://docs.oracle.com/javase/specs/jls/se6/html/classes.html)
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Static Binding for Field Access](https://docs.oracle.com/javase/specs/jls/se13/html/jls-15.html#d5e25867)
+* [toString metodu](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#toString())
+* [Using the this Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
+* [Interface List](https://docs.oracle.com/javase/6/docs/api/java/util/List.html)
+* [Classes](https://docs.oracle.com/javase/specs/jls/se6/html/classes.html)
+* [Local Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)

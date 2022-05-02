@@ -569,6 +569,6 @@ Johan Vandewalle instagram sayfasından ve youtube kanalından daha fazla içeri
 ## Reference:
 * [Johan Vandewalle'nin Instagram hesabı--> @johan.vandewalle](https://www.instagram.com/johan.vandewalle/)
 * [Johan Vandewalle'nin Youtube hesabı](https://www.youtube.com/channel/UCPqrL6dI-bhCnR0W5Hg9Y_Q)
-* [https://tr.wikipedia.org/wiki/Johan_Vandewalle](https://tr.wikipedia.org/wiki/Johan_Vandewalle)
+* [Johan Vandewalle Wiki](https://tr.wikipedia.org/wiki/Johan_Vandewalle)
 * [Selçuk Şirin'in youtube kanalındaki ilgili video](https://www.youtube.com/watch?v=3OZzMbDHr14)
 * [Trt Arşiv](https://twitter.com/trtarsiv/status/1359794565327241223?lang=en)

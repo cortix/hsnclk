@@ -145,7 +145,7 @@ deg1 = 12 , deg2 = 5
 ## Referanslar
 
 * Bütün şekiller [https://www.lucidchart.com](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
-* [https://www.w3schools.com/java/java_data_types.asp](https://www.w3schools.com/java/java_data_types.asp)
-* [https://www.baeldung.com/java-initialization](https://www.baeldung.com/java-initialization)
-* [https://www.baeldung.com/java-primitives](https://www.baeldung.com/java-primitives)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Java Data Types](https://www.w3schools.com/java/java_data_types.asp)
+* [A Guide to Creating Objects in Java](https://www.baeldung.com/java-initialization)
+* [Introduction to Java Primitives](https://www.baeldung.com/java-primitives)

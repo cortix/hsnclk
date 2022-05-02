@@ -18,6 +18,7 @@ tags:
   - ezici metot
   - polimorfizm
   - Robert C. Martin
+  - Super Keyword in Java
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -217,8 +218,8 @@ Sonuç yine aynı olacaktır. Sebebi polimorfizmdir. Neden böyle olduğunu bu b
 
 
 ## Referanslar
-* [https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--)
-* [https://en.wikipedia.org/wiki/Method_overriding](https://en.wikipedia.org/wiki/Method_overriding)
-* [https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
-* [https://www.javatpoint.com/super-keyword](https://www.javatpoint.com/super-keyword)
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [toString method](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--)
+* [Method overriding](https://en.wikipedia.org/wiki/Method_overriding)
+* [Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+* [Super Keyword in Java](https://www.javatpoint.com/super-keyword)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

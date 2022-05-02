@@ -207,8 +207,8 @@ Yukarıdaki koda baktığımızda görünüşte bir sıkıntının olmadığın�
 İleriki konularda referans türüne göre derleme zamanında hangi kararların alındığı ve nesne türüne göre çalışma zamanında hangi kararların alındığı hakkında konuşacağız. Ama öncesinde bu konuyla çok bağlantılı olan bir konuyu ele alacağız. Statik ve dinamik türler nelerdir? Bundan sonraki derste bu konuyu ele almak istiyorum.
 
 ## Referanslar
-* [https://en.wikipedia.org/wiki/Is-a](https://en.wikipedia.org/wiki/Is-a)
-* [https://www.w3resource.com/java-tutorial/inheritance-composition-relationship.php](https://www.w3resource.com/java-tutorial/inheritance-composition-relationship.php)
-* [https://www.baeldung.com/java-inheritance-composition](https://www.baeldung.com/java-inheritance-composition)
-* [https://docs.oracle.com/javase/tutorial/java/generics/inheritance.html](https://docs.oracle.com/javase/tutorial/java/generics/inheritance.html)
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Is-a](https://en.wikipedia.org/wiki/Is-a)
+* [Inheritance (IS-A) vs. Composition (HAS-A) Relationship](https://www.w3resource.com/java-tutorial/inheritance-composition-relationship.php)
+* [Inheritance and Composition (Is-a vs Has-a relationship) in Java](https://www.baeldung.com/java-inheritance-composition)
+* [Generics, Inheritance, and Subtypes](https://docs.oracle.com/javase/tutorial/java/generics/inheritance.html)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

@@ -127,7 +127,7 @@ Aslında polimorfizm uyguladığımızda casting yapmamıza da gerek kalmaz. Ç�
 
 
 ## Referanslar
-* [https://www.w3schools.com/java/java_type_casting.asp](https://www.w3schools.com/java/java_type_casting.asp)
-* [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html)
-* [https://docs.oracle.com/en/java/javase/14/language/pattern-matching-instanceof-operator.html](https://docs.oracle.com/en/java/javase/14/language/pattern-matching-instanceof-operator.html)
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Java Type Casting](https://www.w3schools.com/java/java_type_casting.asp)
+* [Equality, Relational, and Conditional Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html)
+* [Pattern Matching for the instanceof Operator](https://docs.oracle.com/en/java/javase/14/language/pattern-matching-instanceof-operator.html)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)

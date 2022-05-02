@@ -101,7 +101,7 @@ We can say that the enhanced for loop moves the needle towards **declarative sty
 
 
 ## Reference:
-* [https://en.wikipedia.org/wiki/Imperative_programming](https://en.wikipedia.org/wiki/Imperative_programming)
-* [https://en.wikipedia.org/wiki/Declarative_programming](https://en.wikipedia.org/wiki/Declarative_programming)
+* [Imperative programming](https://en.wikipedia.org/wiki/Imperative_programming)
+* [Declarative programming](https://en.wikipedia.org/wiki/Declarative_programming)
 * [Understanding Functional Programming - Venkat Subramaniam](https://learning.oreilly.com/live-events/understanding-functional-programming/0636920457435/0636920058831/)
 * [Functional Programming in Java](https://learning.oreilly.com/library/view/functional-programming-in/9781941222690/)

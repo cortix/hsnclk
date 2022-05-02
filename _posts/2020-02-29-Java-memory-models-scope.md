@@ -166,12 +166,11 @@ class SampleTest {
 
 ## Referanslar
 * Bütün şekiller [https://www.lucidchart.com](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.
-* [https://docs.oracle.com/javase/specs/jls/se8/html/jls-6.html#jls-6.3](https://docs.oracle.com/javase/specs/jls/se8/html/jls-6.html#jls-6.3)
-* [https://www.journaldev.com/4098/java-heap-space-vs-stack-memory](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
-* [https://www.iitk.ac.in/esc101/05Aug/tutorial/java/nutsandbolts/scope.html](https://www.iitk.ac.in/esc101/05Aug/tutorial/java/nutsandbolts/scope.html)
-* [https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
-* [http://archive.oreilly.com/oreillyschool/courses/csharp2/csharp214.html](http://archive.oreilly.com/oreillyschool/courses/csharp2/csharp214.html)
-* [https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/ScopedMemory.html](https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/ScopedMemory.html)
-* [https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/MemoryArea.html](https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/MemoryArea.html)
-* [https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/HeapMemory.html](https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/HeapMemory.html)
+* [6.3. Scope of a Declaration](https://docs.oracle.com/javase/specs/jls/se8/html/jls-6.html#jls-6.3)
+* [Java Heap Space vs Stack – Memory Allocation in Java](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
+* [Scope](https://www.iitk.ac.in/esc101/05Aug/tutorial/java/nutsandbolts/scope.html)
+* [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Class ScopedMemory](https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/ScopedMemory.html)
+* [Class MemoryArea](https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/MemoryArea.html)
+* [Class HeapMemory](https://docs.oracle.com/javase/realtime/doc_2.2u1/release/rtsj-docs/javax/realtime/HeapMemory.html)
 * Real-Time Java Platform Programming
