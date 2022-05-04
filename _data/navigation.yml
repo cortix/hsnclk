@@ -6,6 +6,8 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Books"
     url: /reviews/
+  - title: "Advices"
+    url: /recommends/
   - title: "Articles"
     url: /year-archive/
   - title: "Categories"
