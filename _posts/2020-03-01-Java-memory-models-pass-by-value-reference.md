@@ -23,6 +23,15 @@ toc_label: "SAYFA İÇERİĞİ"
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
+## Konu ile alakalı bir bilgilendirme
+
+Arkadaşlar, bu konu her ne kadar spesifik bir konu gibi gözükse de bir bağlam içerisinde konuyu ele almak çok daha önemlidir. Bunun için aşağıdaki kategorik içeriklerime sırasıyla bakmanızı şiddetle öneriyorum.
+
+* **Java’da Hafıza Modeli** [serisi](/categories/#java-hafiza-yonetimi)
+* **Java’da Kalıtım ve Java’da Polimorfizm** [serisi](/categories/#java-kalitim-polimorfizm)
+
+Çünkü bağlamdan kopuk bir ilerle zayıf bir temel üzerine güçlü yapılar inşaa etmenize izin vermez. Bu sebepten ötürü üniversitelerde müfredatları belli bir sırayla almanız tavsiye edilir. Umarım yazılarımın bir faydası olur. Şimdiden iyi okumalar.
+
 ## Değişken Geçirme(Passing a Variable)
 
 **"Değişken geçirme"** terimi, bir metot daha önce tanımladığınız bir değişkenle çağrıldığında kullanılır.
@@ -44,7 +53,7 @@ Programlama dilleri metotlara parametre aktarılırken 2 farklı yaklaşım kull
 
 Basitleştirmek için, hafızayı yan yana sıralanmış bloklar olarak düşünebilirsiniz. Ve her bir bloğun da veri saklayan bir alanı temsil ettiğini hayal edin. **Gri rakamlar** herbir bloğun hafızadaki adresini, **mavi** ve **kırmızı** rakamlar ise bu hafıza bloklarında saklanan gerçek değerleri temsil etmektedir.
 
-## Pass by Value (C ve C++ dillerinde)
+## Pass by Value Nedir? (C ve C++ dillerinde)
 
 *"Pass by Value"* yaklaşımı uygulandığında, metotun içine aldığı parametrenin değeri, belleğin başka bir yerine kopyalanır. Şayet metodun değişkenine erişmek veyahut bu değişkeni değiştirmek isterseniz, yalnızca kopyaya erişilir/değiştirilir, orijinal değere dokunulmaz. Aşağıdaki örnekte ``myAge`` değişkeninin orijinal değeri **106** nolu blokta saklanmaktadır ve bu değer **14**'tür. Bu değerin ``calBirthYear`` metoduna geçen kopyasının değeri ise **152** nolu blokta tutulmaktadır.
 
@@ -87,7 +96,7 @@ int increaseAge(int age) {
 
 Görüleceği üzere **myAge** değeri ancak bu şekilde değişir. 15 olarak bu değer güncellenir.
 
-## Pass by Reference (C ve C++ dillerinde)
+## Pass by Reference Nedir? (C ve C++ dillerinde)
 
 Referans ile geçirme, değişkenin hafıza adresinin ilgili metoda iletildiği anlamına gelir. Yani hafızada ilgili değişkenin değerini saklayan bloğun adresi, metoda geçirilir.
 
