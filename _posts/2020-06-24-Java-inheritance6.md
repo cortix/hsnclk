@@ -1,6 +1,6 @@
 ---
 title: "Java'da Kalıtım 6 - Sınıf İnşası için Derleyici Kuralları"
-comments: true
+comments: false
 excerpt: "Bu derste Java'da sınıf inşaası sırasında derleyicinin yazdığımız kodu nasıl modifiye edip Jvm'e gönderdiğinden ve belli başlı derleyici kurallarından bahsedeceğiz. Bunun yanı sıra Java'nın arka planda nasıl çalıştığını da ele alacağız."
 header:
   teaser: "assets/images/equality.png"
@@ -8,9 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-48.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Daniel Salgado](https://unsplash.com/photos/1eTc_d3sdHs) on Unsplash"
-  video:
-    id: cR9uwtMQt-g
-    provider: youtube
+#  video:
+#    id: cR9uwtMQt-g
+#    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -129,9 +129,9 @@ Bu süreçleri derleyici sizden bağımsız bir şekilde arka planda gerçekleş
 
 Sizce neden derleyicinin kodunuzu derlerken uyguladığı kuralları öğreniyoruz? Çünkü kodda hata ayıklamak için bir noktada bunları bilmeniz gerekebilir. Kodunuzu daha iyi anlamanıza yardımcı olmak ve daha da önemlisi, bu kuralları bilmediğinizde süreci çözümsüzlüğe götürecek hataları ayıklayabilmeniz için bu ayrıntılara dalıyoruz. Örneğin bu kuralları bilmediğinizde, şu şekilde kafa karıştırıcı bir soru aklınızda kalabilir. Ben default bir üst sınıf constructor çağırmadım, neden bu kod yürütülüyor? Bir sonraki ders biraz daha detaya gireceğiz.
 
-**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
+**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
 
-{% include video id="cR9uwtMQt-g" provider="youtube" %}
+<!-- {% include video id="cR9uwtMQt-g" provider="youtube" %} -->
 
 ## Referanslar
 * [About the Java Technology](https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html)

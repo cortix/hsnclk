@@ -1,6 +1,6 @@
 ---
 title: "Java Paralel Programlama - Bölüm 3"
-comments: true
+comments: false
 excerpt: "Java Paralel Programlama - Computation Graphs, Work, Span"
 header:
   teaser: "assets/images/equality.png"

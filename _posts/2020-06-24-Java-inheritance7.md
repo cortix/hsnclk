@@ -1,6 +1,6 @@
 ---
 title: "Java'da Kalıtım 7 - Sınıf Hiyerarşisinde Değişken İlklendirme"
-comments: true
+comments: false
 excerpt: "Nesneleri oluştururken, bulunduğumuz alt sınıf kurucuları, hiyerarşik sırada en üstte bulunan Object sınıfına ulaşana kadar içten dışa doğru çağrıldığından bahsetmiştik. Bu derste ise en dıştaki sınıfın üye değişkenlerinden başlayıp, bulunduğumuz sınıfa kadar üye değişkenlerinin nasıl ilklendirildiğini göreceğiz."
 header:
   teaser: "assets/images/equality.png"
@@ -8,9 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-49.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Vino Li](https://unsplash.com/photos/_xvuM4kAIHM) on Unsplash"
-  video:
-    id: cR9uwtMQt-g
-    provider: youtube
+#  video:
+#    id: cR9uwtMQt-g
+#    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -99,9 +99,9 @@ Bu arada **this("")** ile **this.name** kullanımı arasında fark vardır. İlk
 
 Sonuç olarak değişken ilklendirme kısmını da hallettiğimize göre, Java'da nesne oluşturmanın nasıl gerçekleştiğini bir bütün olarak görüyorsunuz.
 
-**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
+**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
 
-{% include video id="cR9uwtMQt-g" provider="youtube" %}
+<!-- {% include video id="cR9uwtMQt-g" provider="youtube" %} -->
 
 
 ## Referanslar

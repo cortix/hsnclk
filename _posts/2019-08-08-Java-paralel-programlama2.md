@@ -1,6 +1,6 @@
 ---
 title: "Java Paralel Programlama - Bölüm 2"
-comments: true
+comments: false
 excerpt: "Java Paralel Programlama - Java Fork/Join Framework"
 header:
   teaser: "assets/images/equality.png"

@@ -1,6 +1,6 @@
 ---
 title: "Java'da Polimorfizm 1 - Amaç?"
-comments: true
+comments: false
 excerpt: "Java'da polimorfizm ne anlama gelmektedir ve neden polimorfizme ihtiyaç duyarız?"
 header:
   teaser: "assets/images/equality.png"

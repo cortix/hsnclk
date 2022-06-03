@@ -1,6 +1,6 @@
 ---
 title: "Java'da Kalıtım 1 - Kalıtımı Neden Kullanırız? Kalıtımı Sağlamak İçin Asgari Şartlar Nelerdir?"
-comments: true
+comments: false
 excerpt: "Bu derste Java'daki kalıtım ve polimorfizm kavramlarını genel olarak ele alacak ve bununla birlikte kalıtımı sağlamak için asgari hedeflerin neler olduğunu işleyeceğiz."
 header:
   teaser: "assets/images/equality.png"

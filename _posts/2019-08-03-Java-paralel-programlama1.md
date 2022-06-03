@@ -1,6 +1,6 @@
 ---
 title: "Java Paralel Programlama - Bölüm 1"
-comments: true
+comments: false
 excerpt: "Java Paralel Programlama - Görev oluşturma ve sonlandırma kavramları(Async, Finish)"
 header:
   teaser: "assets/images/equality.png"

@@ -1,6 +1,6 @@
 ---
 title: "Java'da Polimorfizm 2 - İzlenecek Kurallar Nelerdir?"
-comments: true
+comments: false
 excerpt: "Java'da aşırı yükleme ne anlama gelmektedir? Neden constructor'larda overloading metotlara ihtiyaç duyarız ve overload yaparken uymamız gereken bir kural var mıdır gibi soruları cevaplamaya çalışacağız."
 header:
   teaser: "assets/images/equality.png"

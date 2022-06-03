@@ -8,9 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-12.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [NOAA](https://unsplash.com/photos/sDCG1hTV8mI) on Unsplash"
-  video:
-    id: cR9uwtMQt-g
-    provider: youtube
+#  video:
+#    id: cR9uwtMQt-g
+#    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -113,9 +113,9 @@ Benzer şekilde `main` metodu içinde bulunan kod bloğu çalıştırılmak iste
 
 > **Not:** Son soruda Java derleyicisi arka planda neden bir argümansız kurucu eklemedi diye düşünebilirsiniz. Sebebi şudur: Hali hazırda argüman alan bir kurucunuz varsa, compiler insiyatifi size bırakır. Bu durumda derleme hatası almak istemiyorsak, argümansız kurucuyu ek olarak bizim elle eklememiz gerekmektedir.
 
-**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim videosunda, main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
+**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
 
-{% include video id="cR9uwtMQt-g" provider="youtube" %}
+<!-- {% include video id="cR9uwtMQt-g" provider="youtube" %} -->
 
 ## Referanslar
 * [Using the this Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)

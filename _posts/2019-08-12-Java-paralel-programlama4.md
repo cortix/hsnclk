@@ -1,6 +1,6 @@
 ---
 title: "Java Paralel Programlama - Bölüm 4"
-comments: true
+comments: false
 excerpt: "Java Paralel Programlama - Çok İşlemci Zamanlama, Paralel Hızlandırma"
 header:
   teaser: "assets/images/equality.png"
