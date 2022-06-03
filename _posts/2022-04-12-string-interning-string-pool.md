@@ -1,6 +1,6 @@
 ---
 title: "Java'da Hafıza Modeli 7 - String Interning Nedir, String Pool Nedir, == operatörü ve equals metodu Arasındaki Fark"
-comments: true
+comments: false
 excerpt: "Burada bu 3 sorunun yanıtını arayacağız."
 header:
   teaser: "/assets/images/2022-04-12-string-interning-string-pool/img.jpeg"

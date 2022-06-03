@@ -31,7 +31,6 @@ toc_label: "SAYFA İÇERİĞİ"
 
 Merhabalar arkadaşlar, blog yazımı okumadan önce şu youtube [videosunu](https://www.youtube.com/watch?v=cR9uwtMQt-g) izlemenizi öneririm. Bu konuda yeni yazılımcıların çok sıkıntı yaşadığını bildiğim için detaylı bir eğitim videosu hazırlamaya karar verdim. Umarım kafanızdaki sorulara cevap verebilirim. Şimdiden iyi seyirler.
 
-<!-- {% include video id="cR9uwtMQt-g" provider="youtube" %} -->
 
 ## Konu ile alakalı bir bilgilendirme
 
