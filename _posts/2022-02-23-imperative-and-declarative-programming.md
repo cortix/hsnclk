@@ -1,6 +1,6 @@
 ---
 title: "Imperative and Declarative Style Programming (Programming Style Part 1)"
-comments: true
+comments: false
 excerpt: "In this article I am going to try to explain the difference between imperative and declarative style programming"
 header:
   teaser: "assets/images/2022-02-23-imperative-and-declarative-programming/imp.jpeg"

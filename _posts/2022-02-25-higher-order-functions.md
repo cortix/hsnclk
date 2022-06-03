@@ -1,6 +1,6 @@
 ---
 title: "Higher Order Functions (Programming Style Part 2)"
-comments: true
+comments: false
 excerpt: "In this article, I am going to try to explain what the higher-order functions are, first-class citizen and first-class function"
 header:
   teaser: "/assets/images/2022-02-25-higher-order-functions/higher.jpeg"

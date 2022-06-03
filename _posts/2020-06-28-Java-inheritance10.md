@@ -1,6 +1,6 @@
 ---
 title: "Java'da Kalıtım 10 - Overloading(Aşırı Yükleme) Metotlar"
-comments: true
+comments: false
 excerpt: "Java'da aşırı yükleme ne anlama gelmektedir? Neden constructor'larda overloading metotlara ihtiyaç duyarız ve overload yaparken uymamız gereken bir kural var mıdır gibi soruları cevaplamaya çalışacağız."
 header:
   teaser: "assets/images/equality.png"

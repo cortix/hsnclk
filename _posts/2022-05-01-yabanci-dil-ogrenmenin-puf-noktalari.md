@@ -1,6 +1,6 @@
 ---
 title: "Yazılımcılar İçin Yabancı Dil Bariyeri (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Örenmenin Püf Noktaları)"
-comments: true
+comments: false
 excerpt: "Bu makalemde Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sizinle paylaşmak istiyorum."
 header:
   teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.jpeg"
@@ -9,10 +9,10 @@ header:
   overlay_image: /assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/sincerely-media.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Sincerely Media](https://unsplash.com/photos/vcF5y2Edm6A) on Unsplash"
-  video:
-    id: 3OZzMbDHr14
-    id: MjU7jigkmMY
-    provider: youtube
+#  video:
+#    id: 3OZzMbDHr14
+#    id: MjU7jigkmMY
+#    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -451,8 +451,9 @@ Johan Vandewalle instagram sayfasından ve youtube kanalından daha fazla içeri
 
 
 ### YABANCI DİL ÖĞRENMENİN PÜF NOKTALARI konulu Johan Vandewalle söyleşisi
+İlgili söyleşiye şu [linkten](https://www.youtube.com/watch?v=MjU7jigkmMY) ulaşabilirsiniz.
 
-{% include video id="MjU7jigkmMY" provider="youtube" %}
+<!-- {% include video id="MjU7jigkmMY" provider="youtube" %} -->
 
 
 ## Reference:

@@ -1,6 +1,6 @@
 ---
 title: "Java Main Metodu"
-comments: true
+comments: false
 excerpt: "Bu bölümde; Java ile yazılmış bir program nasıl ayağa kalkar? Programı ayağa kaldıracak metot için gerekli asgari şartlar nelerdir? gibi soruları cevaplamaya çalışacağız"
 header:
   teaser: "assets/images/equality.png"

@@ -1,6 +1,6 @@
 ---
 title: "Java'da Polimorfizm 4.1 - Statik ve Dinamik Bağlanma 1"
-comments: true
+comments: false
 excerpt: "Bu derste hem Java'da statik ve dinamik bağlanma arasındaki farkları ele alacağız. Diğer bir ifade şekliyle derleme ve çalışma zamanı polimorfizmi olarak da bilinir. Bunun yanı sıra dolaylı final metotlar, metot saklamanın ne olduğu da bu ders içinde anlatılacaktır"
 header:
   teaser: "assets/images/equality.png"

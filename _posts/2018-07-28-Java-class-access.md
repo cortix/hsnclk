@@ -1,6 +1,6 @@
 ---
 title: "Java Sınıf Deklarasyonu ve Değiştiriciler"
-comments: true
+comments: false
 excerpt: "Java sınıf deklarasyonu nasıl yapılır? Değiştiriciler hakkında bilmeniz gerekenler nelerdir gibi soruları bu bölümde bulabilirsiniz."
 header:
   teaser: "assets/images/equality.png"
