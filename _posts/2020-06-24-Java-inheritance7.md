@@ -101,7 +101,7 @@ Sonuç olarak değişken ilklendirme kısmını da hallettiğimize göre, Java'd
 
 **Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
 
-<!-- {% include video id="cR9uwtMQt-g" provider="youtube" %} -->
+
 
 
 ## Referanslar

@@ -93,7 +93,6 @@ Burada şu soruyu sorabilirsiniz. ``Object`` sınıfını ``extends`` etmediğim
 
 **Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım.
 
-<!-- {% include video id="cR9uwtMQt-g" provider="youtube" %} -->
 
 ## Özet
 
