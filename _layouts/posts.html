@@ -1,7 +1,6 @@
 ---
 layout: archive
 ---
-{% include inarticleads/custom.html %}
 {{ content }}
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
