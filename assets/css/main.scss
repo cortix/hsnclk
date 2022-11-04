@@ -15,11 +15,13 @@ html {
   }
 
   @include breakpoint($large) {
-    font-size: 17px; // change to whatever
+    font-size: 15px; // change to whatever
   }
 
   @include breakpoint($x-large) {
-    font-size: 18px; // change to whatever
+    font-size: 15px; // change to whatever
   }
 }
 //https://github.com/mmistakes/minimal-mistakes/issues/1219
+//https://github.com/mmistakes/minimal-mistakes/issues/1184
+//https://github.com/mmistakes/minimal-mistakes/discussions/1352
