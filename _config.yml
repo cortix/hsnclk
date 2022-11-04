@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Hasan Çelik"
-  avatar           : "/assets/images/bio/hsnclk.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio/hc2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "A software developer who likes to develop himself and is interested in music, philosophy, psychology, marketing, branding, history, economy and science at the same time."
   location         : "Ankara/Turkey"
   email            : "hsnclk1985@gmail.com"
@@ -107,7 +107,7 @@ author:
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/hsanclk"
+      #url: "https://twitter.com/hsanclk"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
@@ -125,7 +125,7 @@ author:
       url: "https://www.goodreads.com/user/show/88145705-hasan-elik"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin-in"
-      url: "https://www.linkedin.com/in/hsncelik/"      
+      url: "https://www.linkedin.com/in/hsncelik/"
 # Site Footer
 footer:
   links:
