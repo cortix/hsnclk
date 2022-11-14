@@ -54,7 +54,7 @@ Hedefe doğru yaptığınız yolculukta bir öğretmen size rehberlik edebilir. 
 
 İkinci dönemin sonunda ise Türkiye'yi gezen bir turist kafilesine rehberlik yapabilecek düzeydeler: Gerektiğinde tarihî bir bina veya şehir hakkında turistik bilgiler verebilirler, hastalanan bir turiste doktorda, cüzdanı çalınan bir başka turiste karakolda tercümanlık yapabilirler. İkinci yılın başında büyük bir konsantrasyonla da olsa basitleştirilmemiş gerçek Türkçe metinler okumaya başlarlar, aynı yılın sonunda ise fazla güçlük çekmeden normal bir düzeyde bulunan Türkçe metinleri okurlar. Üçüncü yılda Erasmus ile Türkiye'ye giderek ilk dönemi bir Türk üniversitesinde okurlar, Türkçe açısından âdeta bir füze gibi uzaya fırlatılırlar. Gent'e döndüklerinde onları çok değişmiş buluyoruz.
 
-**Kıssadan hisse:** Her şeyin iyi olacağına güvenerek azim ve sabırla dil öğrenim yolculuğunuza devam edin, er geç hedefinize ulaşırsınız.
+**Kıssadan hisse:** Her şeyin iyi olacağına güvenerek azim ve sabırla dil öğrenim yolculuğunuza devam edin, er geç hedefinize ulaşırsınız. [link](https://www.instagram.com/p/CdPwmhXMCw6/)
 
 ### Yanlışlar - Doğrular
 
@@ -64,7 +64,7 @@ Hedefe doğru yaptığınız yolculukta bir öğretmen size rehberlik edebilir. 
 
 **"En kolay öğrendiği dil Fince oldu, Finceyi bir günde öğrendi":** Şimdiye kadar en çok zorlandığım dil Fince oldu, bir buçuk yıldır yoğun şekilde öğreniyorum. "Bir gün"e gelince, bir gazeteciye "**Bir gün Fince öğrendikten sonra Helsinki şehrinde dolaşırken etrafıma baktığımda belirli bir dil engelini aşmış olduğumu hissettim**" demiştim, "**Finceyi bir günde öğrendi**" manşetini koydu. Demek istediğimi başka bir örnekle anlatayım: Arap veya Kiril (Rus) alfabesini kolaylıkla bir günde öğrenebilirsiniz. O güne başlamadan önce Kahire'de ya da Moskova'da dolaşın ve tabelalara bakın, bir de aynısını o günün sonunda yapın, büyük bir fark hissedeceksiniz.
 
-**"İnsanlara kendi dilleri dışında başka bir dille hitap etmeyi büyük bir saygısızlık olarak görüyor":** Ben "saygısızlık" kelimesini hiç kullanmadım, "saygı" kelimesini kullandım. Muhatabınızın ana dilini biliyorsanız ona o dili konuşarak saygı ifade edebilirsiniz. Bilmiyorsanız tabii ki başka bir dilde konuşacaksınız, bunda saygısızlık yok. "Günah" kelimesini kullandığım doğru, şu anlamda kullandım: Bir dili öğrenirken bir anadili konuşucusuyla karşılaştığınızda bu konuşma fırsatından yararlanmalısınız, bunu yapmazsanız âdeta günaha girmiş gibi olursunuz.
+**"İnsanlara kendi dilleri dışında başka bir dille hitap etmeyi büyük bir saygısızlık olarak görüyor":** Ben "saygısızlık" kelimesini hiç kullanmadım, "saygı" kelimesini kullandım. Muhatabınızın ana dilini biliyorsanız ona o dili konuşarak saygı ifade edebilirsiniz. Bilmiyorsanız tabii ki başka bir dilde konuşacaksınız, bunda saygısızlık yok. "Günah" kelimesini kullandığım doğru, şu anlamda kullandım: Bir dili öğrenirken bir anadili konuşucusuyla karşılaştığınızda bu konuşma fırsatından yararlanmalısınız, bunu yapmazsanız âdeta günaha girmiş gibi olursunuz. [link](https://www.instagram.com/p/CdU3BvZs3CG/)
 
 ## PÜF NOKTASI 36
 
@@ -84,7 +84,7 @@ Ders kitabınızdaki bilgileri tamamlayın. Marjlarda açıklamalar, ek bilgiler
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/36-4.png" alt="Dil öğrenmenin püf noktası 36 - Ders kitabınızı boyama kitabına çevirerek onu kolay hazmedilir hâle getirin">
 
-Öğrendiğiniz bir dili hayatınızın belirli bir döneminde aktif tutamayabilirsiniz. O zaman dilin uykuya dalmasına izin verin. Yıllar sonra dili tekrar uyandırırken bütün bu renkler, işaretlemeler, eklenen yorumlar ve bilgiler dili tekrar öğrenme sürecinizi çok kolaylaştıracak ve hızlandıracak.
+Öğrendiğiniz bir dili hayatınızın belirli bir döneminde aktif tutamayabilirsiniz. O zaman dilin uykuya dalmasına izin verin. Yıllar sonra dili tekrar uyandırırken bütün bu renkler, işaretlemeler, eklenen yorumlar ve bilgiler dili tekrar öğrenme sürecinizi çok kolaylaştıracak ve hızlandıracak. [link](https://www.instagram.com/p/CdZ53hDsY3I/)
 
 ## PÜF NOKTASI 37
 
@@ -94,7 +94,7 @@ Ders kitabınızdaki bilgileri tamamlayın. Marjlarda açıklamalar, ek bilgiler
 
 **Önemli bir nokta da şu:** Özellikle yabancı dili doğru konuştuğunuz zaman hem saygı gösterirsiniz hem de saygı görürsünüz. Hata yapmaktan korkmanıza gerek olmadığı hâlde yine de fazla hata yapmamaya gayret etmelisiniz, dilinize özen göstermelisiniz ve tanımadığınız insanlarla kibar konuşmaya çalışmalısınız. Kendi ders pratiğimden bir örnek vereyim: İlk Türkçe dersimde öğrencilerime "Nasılsınız?" - "İyiyim, teşekkür ederim." tabirlerini öğretmiştim. Bir sonraki dersin başında Belçikalı bir kız öğrenci dedi ki "**Türk arkadaşım bana 'Nasılsınız'ın kullanılmadığını söyledi, 'Naberlan?'ı kullanmamı söyledi.**" Ben de bu tabirin kullanıldığını ama kibar olmadığını söyledim, Türkiye'de bir polisle karşılaştığında ona 'Naberlan?' diye hitap etmemesini tavsiye ettim.
 
-Bazı insanlar eriştikleri yabancı dil düzeyi temel iletişim ihtiyaçlarını karşılar karşılamaz daha fazla ilerlemeye motivasyonlarını kaybeder, daha fazla çaba sarf etmek istemezler. Düşük bir dil düzeyiyle yetinerek yarım yamalak bir dille meramlarını anlatırlar. Böyle bir dil kullanımı çarşı pazarda alışveriş yaparken yeterli olabilir ama başka durumlarda (haşa) "eğitimsiz" ve "kültürsüz" izlenimi vererek sözünü ettiğim saygının görülmemesine yol açabilir. Ana dili konuşucuları tecrübeleri sayesinde bir yabancıdan genelde nasıl bir dil düzeyi bekleyebildiklerini de biliyorlar, duyduklarını bununla karşılaştırabilirler.
+Bazı insanlar eriştikleri yabancı dil düzeyi temel iletişim ihtiyaçlarını karşılar karşılamaz daha fazla ilerlemeye motivasyonlarını kaybeder, daha fazla çaba sarf etmek istemezler. Düşük bir dil düzeyiyle yetinerek yarım yamalak bir dille meramlarını anlatırlar. Böyle bir dil kullanımı çarşı pazarda alışveriş yaparken yeterli olabilir ama başka durumlarda (haşa) "eğitimsiz" ve "kültürsüz" izlenimi vererek sözünü ettiğim saygının görülmemesine yol açabilir. Ana dili konuşucuları tecrübeleri sayesinde bir yabancıdan genelde nasıl bir dil düzeyi bekleyebildiklerini de biliyorlar, duyduklarını bununla karşılaştırabilirler. [link](https://www.instagram.com/p/Cde_gMGjbyo/)
 
 ## PÜF NOKTASI 38
 
@@ -119,6 +119,8 @@ Daha çok sanal alemde yaşıyorsanız bilgisayarınızda ya da cep telefonunuzd
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/38-6.jpg" alt="Dil öğrenmenin püf noktası 38 - Sizi dili öğrenmeye teşvik eden görsel, işitsel ve duyusal bir ortam yaratın">
 
+[link](https://www.instagram.com/p/CdhrHECj6Pn/)
+
 ## PÜF NOKTASI 39
 
 **Erken yaştan başlayarak bir ana dili konuşucusundan yabancı dil öğrenin:** "Hocam, çocuğum hangi yaştan itibaren yabancı dil öğrenmeye başlayabilir?" sorusunu bana yönelten çok oldu. Çocuklarda ana dili ve yabancı dil edinimi alanında uzmanlığım olmadığı için bu soruya cevap vermekte zorlanıyordum. Sorunun cevabını ise **Prof. Dr. Selçuk Şirin** (@selcuksirin, #selçukşirin) "**Yetişin Çocuklar!**" kitabında çok açık bir şekilde veriyor: "**3-4 yaşlarında hatta daha erken**".
@@ -131,7 +133,7 @@ Daha çok sanal alemde yaşıyorsanız bilgisayarınızda ya da cep telefonunuzd
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/39-2.png" alt="Dil öğrenmenin püf noktası 39 - Erken yaştan başlayarak bir ana dili konuşucusundan yabancı dil öğrenin">
 
-Sadece ana dili konuşucuları bu register'lerin hepsini bilebilir ve onlara hâkim olabilir. 3-4 yaşlarında veya daha erken yaşta bir çocukla iletişim kurarken nasıl bir İngilizce kullanacağınızı okuldaki İngilizce derslerinizde öğrenmezsiniz. Siz kendiniz veya eşiniz yabancı dilde ana dili konuşucusysanız sorun yok. Durum böyle değilse ailenizin dışında çocuğunuzla oynayarak ona yabancı dili öğretebilecek bir ana dili konuşucusu arayabilirsiniz.
+Sadece ana dili konuşucuları bu register'lerin hepsini bilebilir ve onlara hâkim olabilir. 3-4 yaşlarında veya daha erken yaşta bir çocukla iletişim kurarken nasıl bir İngilizce kullanacağınızı okuldaki İngilizce derslerinizde öğrenmezsiniz. Siz kendiniz veya eşiniz yabancı dilde ana dili konuşucusysanız sorun yok. Durum böyle değilse ailenizin dışında çocuğunuzla oynayarak ona yabancı dili öğretebilecek bir ana dili konuşucusu arayabilirsiniz. [link](https://www.instagram.com/p/CdkdNYsIHjr/)
 
 
 ## PÜF NOKTASI 40
@@ -156,7 +158,7 @@ O zaman sınavın diğer sayfalarını gözden geçirin. Sınav kâğıtlarında
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/40-5.jpg" alt="Dil öğrenmenin püf noktası 40 - Muhatabınızın ağzından kullanabileceğiniz kelime ve yapıları çalın">
 
-Bu "**çalma**" işini bir keresinde biraz abartmıştım. 1993 yılında Türkçe öğrencilerimle birlikte bir Kazakistan, Kırgızistan ve Özbekistan gezisi yaptık. Yerli organizasyonlardan kişiler bize her yerde kendi anadillerinde izahat verdiler. Resimlerde gördüğünüz gibi bu konuşmaların çoğunu teybe kaydederdim. Amacım bu kayıtları daha sonra tekrar dinleyerek onlardan yararlı kelime ve yapıları çıkarmaktı.
+Bu "**çalma**" işini bir keresinde biraz abartmıştım. 1993 yılında Türkçe öğrencilerimle birlikte bir Kazakistan, Kırgızistan ve Özbekistan gezisi yaptık. Yerli organizasyonlardan kişiler bize her yerde kendi anadillerinde izahat verdiler. Resimlerde gördüğünüz gibi bu konuşmaların çoğunu teybe kaydederdim. Amacım bu kayıtları daha sonra tekrar dinleyerek onlardan yararlı kelime ve yapıları çıkarmaktı. [link](https://www.instagram.com/p/Cdpe3LTML9f/)
 
 ## PÜF NOKTASI 41
 
@@ -168,7 +170,7 @@ Bazen de yeni öğrendiğim bir dilde hayatımdaki ilk konuşma pratiğimi taksi
 
 **Konuşma pratiği yapma açısından çok yararlı başka bir meslek kuaförlük.** Dün oturduğum Aalst kentinde saçlarımı kestirmek için kuaföre gittim. Kuaför hanımla konuşmaya başladım. Konu mesleğime gelince Gent Üniversitesi'nde Türkçe okuttuğumu söyledim. Kuaför hanım "**Ben Boşnak'ım**" dedi, "**Biz Boşnaklar Türkleri atalarımız olarak görüyoruz. Türk dizilerini altyazılı izlediğimiz için birkaç tane Türkçe kelime de öğrendim.**" dedi, "**Aşkım kelimesi gibi**". Ben de Boşnakçaya çok yakın olan Sırpça-Hırvatçayı 35 yıl önce öğrendiğimi ve bazı kelimeleri hatırladığımı söyledim: "**Dobar dan!**" (Merhaba!), "**Hvala lijepo!**" (Teşekkür ederim!), "**Ne razumijem.**" (Anlamıyorum.) gibi. Dükkândan ayrılırken de kuaför hanıma "**Do viđenja!**" (Görüşmek üzere!) dedim. Bir dahaki sefer kuaföre gitmeden önce mutlaka Boşnakça birkaç cümle ezberleyeceğim, Boşnakça kısa bir sohbet yaparız.
 
-Şimdi siz değerli takipçilerime bir sorum var. Taksi şoförleriyle kuaförlerden başka, mesleklerini icra ederken, işlerine ara vermeden, müşterileriyle bol bol konuşma imkânı olan ne gibi meslek sahipleri biliyorsunuz? Bu sohbetler doğrudan doğruya ödediğiniz bir şey olmamalı, yani avukat ve öğretmen iyi örnek değil.
+Şimdi siz değerli takipçilerime bir sorum var. Taksi şoförleriyle kuaförlerden başka, mesleklerini icra ederken, işlerine ara vermeden, müşterileriyle bol bol konuşma imkânı olan ne gibi meslek sahipleri biliyorsunuz? Bu sohbetler doğrudan doğruya ödediğiniz bir şey olmamalı, yani avukat ve öğretmen iyi örnek değil. [link](https://www.instagram.com/p/Cdr-xSlo7IH/)
 
 ## PÜF NOKTASI 42
 
@@ -182,7 +184,13 @@ Bazen de yeni öğrendiğim bir dilde hayatımdaki ilk konuşma pratiğimi taksi
 
 **Bazı dillerde yeni yeni kavramlarla karşılaşırsınız:** isimlerde cins (**eril, dişil, yansız**) gibi, fiillerde görünüş (**tamamlanmış, tamamlanmamış**) gibi. Bazı dillerin sözvarlığı sizinkinden tamamen farklı, hiç ortak kelime yok.
 
-**Psikolojik faktör:** Motivasyon ve ilginizin yüksek olması, dile yüksek bir statü tanımanız, onu güzel ve onu konuşan halkı sempatik bulmanız, o dili sizin için daha kolay yapar.
+**Psikolojik faktör:** Motivasyon ve ilginizin yüksek olması, dile yüksek bir statü tanımanız, onu güzel ve onu konuşan halkı sempatik bulmanız, o dili sizin için daha kolay yapar. [link](https://www.instagram.com/p/Cd4_K0VM0pW/)
+
+### Bir Fars Atasözü
+
+**Bir Fars atasözü:** "Zeban-i cedid, zindegi-yi cedid". **Anlamı:** "Yeni bir dil, yeni bir hayat." [link](https://www.instagram.com/p/Cd7b-zls-4A/)
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/fars.png" alt="Dil öğrenmenin püf noktası 42 - Bir Fars atasözü - Zeban-i cedid, zindegi-yi cedid, Yeni bir dil, yeni bir hayat.">
 
 ## PÜF NOKTASI 43
 
@@ -190,7 +198,7 @@ Bazen de yeni öğrendiğim bir dilde hayatımdaki ilk konuşma pratiğimi taksi
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/43.png" alt="Dil öğrenmenin püf noktası 43 - Farklı diller konuşan kişilerin katıldığı etkinliklere gidin">
 
-Bütün Türk devletlerinin ve Tacikistan'ın büyükelçileriyle tekrar görüşme veya tanışma fırsatı bulduk. Bunlardan başka Sudan ve Laos büyükelçileriyle ve çeşitli büyükelçiliklere bağlı kişilerle de konuşabildik. Resepsiyon benim için âdeta 1987'de kazandığım **Bâbil Dil Yarışması**'nın bir tekrarı gibiydi, bir akşamda dokuz farklı dil konuşma fırsatı buldum: Azerbaycanca, Türkçe, Özbekçe, Farsça, Arapça, Rusça, Fransızca, İngilizce ve Hollandaca.
+Bütün Türk devletlerinin ve Tacikistan'ın büyükelçileriyle tekrar görüşme veya tanışma fırsatı bulduk. Bunlardan başka Sudan ve Laos büyükelçileriyle ve çeşitli büyükelçiliklere bağlı kişilerle de konuşabildik. Resepsiyon benim için âdeta 1987'de kazandığım **Bâbil Dil Yarışması**'nın bir tekrarı gibiydi, bir akşamda dokuz farklı dil konuşma fırsatı buldum: Azerbaycanca, Türkçe, Özbekçe, Farsça, Arapça, Rusça, Fransızca, İngilizce ve Hollandaca. [link](https://www.instagram.com/p/Cd_Vf9EsJSa/)
 
 ## PÜF NOKTASI 44
 
@@ -210,6 +218,8 @@ Yanlış anlaşılmalara yol açan bu tür kelimelere hep dikkat etmelisiniz. Ya
 * Takside: Durun, ben ineceğim.
 * Bizim odamız dördüncü katta.
 * Öğrenciler için bir etkinlik düzenleyeceğiz.
+
+[link](https://www.instagram.com/p/CeDQAZfMDFD/)
 
 ## PÜF NOKTASI 45
 
@@ -231,7 +241,7 @@ O dönemde dillerine 4454 saat çalışmış, yani gün başına 9 saat 46 dakik
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/45-5.jpg" alt="Dil öğrenmenin püf noktası 45 - (50, 100, 150 dil nasıl bilinir?) Bunu hiperpoliglotlardan öğrenin">
 
-Tarihteki en ünlü hiperpoliglotlardan biri de **Kardinal Mezzofanti** (resim 5). Kaynaklar 71 yabancı dil “bildiği”ni aktarıyor. Michael Erard, Mezzofantinin dillerinde eriştiği seviyeleri bir grafikte gösteriyor (resim 6). Bu grafik düz bir çizgi değil, gittikçe inen bir eğri. Hiperpolglotların gerçeği bu.
+Tarihteki en ünlü hiperpoliglotlardan biri de **Kardinal Mezzofanti** (resim 5). Kaynaklar 71 yabancı dil “bildiği”ni aktarıyor. Michael Erard, Mezzofantinin dillerinde eriştiği seviyeleri bir grafikte gösteriyor (resim 6). Bu grafik düz bir çizgi değil, gittikçe inen bir eğri. Hiperpolglotların gerçeği bu. [link](https://www.instagram.com/p/CeIabxYMt1q/)
 
 ## PÜF NOKTASI 46
 
@@ -241,7 +251,7 @@ Tarihteki en ünlü hiperpoliglotlardan biri de **Kardinal Mezzofanti** (resim 5
 
 Eşimle ben yurt dışında seyahat ederken yeni bir şehre geldiğimizde ilk iş olarak sahafların yerlerini tespit edip onlara uğrarız. Eşim genellikle tekrar ciltleyebileceği eski, yıpranmış ama değerli kitaplar arar, ben de dille ilgili kaç kitap varsa hepsini gözden geçiririm. **Defalarca görmüşümdür:** bir yabancı dil öğrenme kitabı, ilk on sayfasında kelimelerin altı çizilmiş, yorumlar, çeviriler v.s. eklenmiş ama kalan kısmında bir şey yok. Belli ki eski sahibi dili öğrenmeye başlamış ama gayet çabuk bu işten vazgeçmiş.
 
-Tek başınıza çalışmanın gerektirdiği displini sağlayamazsanız bir öğretmenin verdiği bir dil kursuna yazılabilirsiniz. Bu kez her şeyi öğretmeniniz ve dil okulunuz düzenler, ama yine de öğrenim sürecinizle ilgili her sorumluluktan kurtulmazsınız. Derse gitmek, derse aktif bir şekilde katılmak, ders saatlerinin dışında dersinize çalışmak size düşer. 35 yıl boyunca yetişkinlere Türkçe dersi veren biri olarak çok iyi biliyorum: Yeteri kadar çalışmayan öğrenciler derslere ne kadar devam ederlerse etsinler ilerlemek yerine gerilerler. Ben ders verirken kapıları açmak bana, içeri girmek ise öğrencilere düşerdi.
+Tek başınıza çalışmanın gerektirdiği displini sağlayamazsanız bir öğretmenin verdiği bir dil kursuna yazılabilirsiniz. Bu kez her şeyi öğretmeniniz ve dil okulunuz düzenler, ama yine de öğrenim sürecinizle ilgili her sorumluluktan kurtulmazsınız. Derse gitmek, derse aktif bir şekilde katılmak, ders saatlerinin dışında dersinize çalışmak size düşer. 35 yıl boyunca yetişkinlere Türkçe dersi veren biri olarak çok iyi biliyorum: Yeteri kadar çalışmayan öğrenciler derslere ne kadar devam ederlerse etsinler ilerlemek yerine gerilerler. Ben ders verirken kapıları açmak bana, içeri girmek ise öğrencilere düşerdi. [link](https://www.instagram.com/p/CeMMp7TMCLj/)
 
 ## PÜF NOKTASI 47
 
@@ -273,7 +283,7 @@ Kitapçığı tekrar dikti, kapağını Türk bayrağının rengini simgeleyen k
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/47-8.png" alt="Dil öğrenmenin püf noktası 47 - Konuşma kılavuzlarındaki sözcük ve ibareleri ezberleyin">
 
-Büyük bir titizlik ve sayısız saat süren bir çalışma gerektiren başka eserlerinden de birkaç örnek katıyorum. Eşim ciltleme sanatını İKA Mechelen ve CVO Gent okullarında öğreniyor, gördüğünüz gibi dersler korona döneminde de devam etti.
+Büyük bir titizlik ve sayısız saat süren bir çalışma gerektiren başka eserlerinden de birkaç örnek katıyorum. Eşim ciltleme sanatını İKA Mechelen ve CVO Gent okullarında öğreniyor, gördüğünüz gibi dersler korona döneminde de devam etti. [link](https://www.instagram.com/p/CeSsWOpsk3X/)
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/47-9.png" alt="Dil öğrenmenin püf noktası 47 - Konuşma kılavuzlarındaki sözcük ve ibareleri ezberleyin">
 
@@ -295,7 +305,7 @@ Savaş ilk mektubunda kendini Hollandaca tanıtırken: “**Türkiye’de bir er
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/48-4.jpg" alt="Dil öğrenmenin püf noktası 48 - İyi bir öğretmen bulun">
 
-Sözünü ettiğim yardımsever rahip beni 1977 Ocak ayında Brüksel’de Türkçe ve Türk kültürü öğretmeni olarak çalışan Erdal Ökten Bey’le tanıştırdı. Bana Türkçe konusunda yardımcı olmaya hazırdı. O zamandan başlayarak düzenli olarak ayda bir gün, genellikle bir pazar günü, trenle Brugge’den Brüksel’e gider, bütün günümü Erdal Bey, eşi Aysel Hanım ve çocukları Atilla, Çiğdem ve Füsun’un (resim 1) yanında geçirirdim. Bol bol Türkçe konuşurduk, bütün sorularıma cevap alırdım. Her defasında felekten bir gün çalardım.
+Sözünü ettiğim yardımsever rahip beni 1977 Ocak ayında Brüksel’de Türkçe ve Türk kültürü öğretmeni olarak çalışan Erdal Ökten Bey’le tanıştırdı. Bana Türkçe konusunda yardımcı olmaya hazırdı. O zamandan başlayarak düzenli olarak ayda bir gün, genellikle bir pazar günü, trenle Brugge’den Brüksel’e gider, bütün günümü Erdal Bey, eşi Aysel Hanım ve çocukları Atilla, Çiğdem ve Füsun’un (resim 1) yanında geçirirdim. Bol bol Türkçe konuşurduk, bütün sorularıma cevap alırdım. Her defasında felekten bir gün çalardım. [link](https://www.instagram.com/p/CeXxRhxDOXv/)
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/48-5.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 48 - İyi bir öğretmen bulun">
 
@@ -320,7 +330,7 @@ Günümüzde insanların dil öğrenimindeki ilerleyişlerini ölçmek için en 
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/49-3.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 49 - Ulaşılacak dil düzeylerini ve onların özelliklerini bilin">
 
-Resim 4’teki **Itchy Feet** karikatürü başka bir şekilde tanımlanan düzeyler kullandığı hâlde (**başlangıç düzeyi, sohbet edebilme düzeyi, akıcı konuşabilme düzeyi**) aynı gerçeği yansıtıyor. Düzeylerin arasındaki yükseklik farkı hep büyür. Bu özelliğe dilin diğer alanlarında da rastlanır. Öğreniminiz ilerledikçe aynı ilerlemeyi kaydetmek için hep daha uzun bir süre çalışmanız, hep daha çok gayret sarf etmeniz gerekir.
+Resim 4’teki **Itchy Feet** karikatürü başka bir şekilde tanımlanan düzeyler kullandığı hâlde (**başlangıç düzeyi, sohbet edebilme düzeyi, akıcı konuşabilme düzeyi**) aynı gerçeği yansıtıyor. Düzeylerin arasındaki yükseklik farkı hep büyür. Bu özelliğe dilin diğer alanlarında da rastlanır. Öğreniminiz ilerledikçe aynı ilerlemeyi kaydetmek için hep daha uzun bir süre çalışmanız, hep daha çok gayret sarf etmeniz gerekir. [link](https://www.instagram.com/p/Cea0EwOsckl/)
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/49-4.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 49 - Ulaşılacak dil düzeylerini ve onların özelliklerini bilin">
 
@@ -363,7 +373,7 @@ Resim 7 (**Ermeni alfabesi**): Arap ve Yunan harfleriyle yazılan Türkçenin ya
 
 Resim 8 (**Ermeni alfabesi**): Örnekteki alfabe Ermeni alfabesi ama dil yine Türkçe: Ahd-i Atik’ten Luka İncili’nin başlangıcı. Metni alfabe tablosunun yardımıyla sökün.
 
-Bu gibi ön hazırlıklardan sonra yabancı alfabenin yabancı dilde kullanımını daha kolay öğrenirsiniz, çünkü alfabe sizin için artık tamamen yabancı değil.
+Bu gibi ön hazırlıklardan sonra yabancı alfabenin yabancı dilde kullanımını daha kolay öğrenirsiniz, çünkü alfabe sizin için artık tamamen yabancı değil. [link](https://www.instagram.com/p/CefdBGvM1sm/)
 
 ## PÜF NOKTASI 51
 
@@ -380,7 +390,7 @@ Becerilere gelince, genelde dört dil becerisi ayırt edilmekte: “**konuşma**
 - Yazma becerisini ancak yazma pratiği yaparak kazanabilirsiniz.
 - Okuma becerisini ancak okuma pratiği yaparak kazanabilirsiniz.
 
-Okullarda ve dil kurslarında genellikle her dört beceri eşit oranda okutulmakta. Oysa yabancı dili kendi kendinize öğrenirseniz, hangi beceriye öncelik tanıyacağınıza kendiniz karar vererek pratiğinizi o yönde yapabilirsiniz.
+Okullarda ve dil kurslarında genellikle her dört beceri eşit oranda okutulmakta. Oysa yabancı dili kendi kendinize öğrenirseniz, hangi beceriye öncelik tanıyacağınıza kendiniz karar vererek pratiğinizi o yönde yapabilirsiniz. [link](https://www.instagram.com/p/Cekjoq4D2_U/)
 
 ## PÜF NOKTASI 52
 
@@ -394,7 +404,7 @@ Her dil komşu dillerden kelime ve yapılar alarak etkilenir. Bazen de bir dilde
 
 Yakın akraba olan iki dil öğrendiğinizde bunları karıştırmak tehlikesi yüksek olur. O zaman bu dillerden birini ana dili olarak konuşanlara diğerini öğreten bir ders kitabı bulun. Böyle bir kitap iki dilin arasındaki farklılıkları vurgular. Örneğin: İtalyanca bilirseniz İspanyolca öğrenmek için İtalyanlar için hazırlanan bir İspanyolca ders kitabı kullanabilirsiniz.
 
-Belirli bir dili öğrenirken birden fazla yardımcı dil de kullanabilirsiniz. Örneğin ben Azerbaycanca öğrenirken, **Azerbaycanca-Türkçe, Azerbaycanca-Fransızca, Rusça-Azerbaycanca** sözlükler, İngilizce hazırlanan bir Azerbaycanca ders kitabı ve Rusça-Azerbaycanca bir konuşma kılavuzu kullanıyorum. Yardımcı dillerimi de ilerletmiş oluyorum.
+Belirli bir dili öğrenirken birden fazla yardımcı dil de kullanabilirsiniz. Örneğin ben Azerbaycanca öğrenirken, **Azerbaycanca-Türkçe, Azerbaycanca-Fransızca, Rusça-Azerbaycanca** sözlükler, İngilizce hazırlanan bir Azerbaycanca ders kitabı ve Rusça-Azerbaycanca bir konuşma kılavuzu kullanıyorum. Yardımcı dillerimi de ilerletmiş oluyorum. [link](https://www.instagram.com/p/CenRI0Hs12U/)
 
 ## PÜF NOKTASI 53
 
@@ -414,7 +424,7 @@ Dildeki her bir unsurun anlam ve işlevi en iyisi dilin bütünü içinde anlaş
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/53-4.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 53 - Öğrendiğiniz yabancı dilin dilbilgisinde ilk turunuzu atın">
 
-Örnek olarak 100 dersten oluşan bir **ASSIMIL** kitabını alalım. ASSIMIL’in prensibi günde bir tane dersi bitirmeniz. Ben ise dille bir ilk tanışma için **günde 10 ders çalışarak ASSIMIL kitabını 10 gün içinde bitirmeye çalışırım**. Bu on günün sonunda elbette ki kitaptaki her ayrıntıyı hafızamda tuttuğumu söyleyemem, ancak dile genel bir bakış edinmiş olduğum kesin. Bu ilk hızlı turdan sonra kitabı ikinci defa baştan sonuna kadar incelerim, bu sefer daha detaylı ve dolayısıyla daha yavaş çalışırım. Tekrar sonuna ulaşınca kitabı üçüncü defa okurum, ancak bu kez kitabın **son dersinden başlarım ve geriye doğru giderek ilk derse** dönerim.
+Örnek olarak 100 dersten oluşan bir **ASSIMIL** kitabını alalım. ASSIMIL’in prensibi günde bir tane dersi bitirmeniz. Ben ise dille bir ilk tanışma için **günde 10 ders çalışarak ASSIMIL kitabını 10 gün içinde bitirmeye çalışırım**. Bu on günün sonunda elbette ki kitaptaki her ayrıntıyı hafızamda tuttuğumu söyleyemem, ancak dile genel bir bakış edinmiş olduğum kesin. Bu ilk hızlı turdan sonra kitabı ikinci defa baştan sonuna kadar incelerim, bu sefer daha detaylı ve dolayısıyla daha yavaş çalışırım. Tekrar sonuna ulaşınca kitabı üçüncü defa okurum, ancak bu kez kitabın **son dersinden başlarım ve geriye doğru giderek ilk derse** dönerim. [link](https://www.instagram.com/p/CescdUfM4LU/)
 
 ## PÜF NOKTASI 54
 
@@ -436,7 +446,7 @@ Dildeki her bir unsurun anlam ve işlevi en iyisi dilin bütünü içinde anlaş
 
 - **sağlık:** beyni dinç tutabilmek ve Alzheimer hastalığını erteleyebilmek
 
-- **dilbilim:** yeni dil yapıları, yeni alfabe ve yazılar keşfedebilmek, yeni dil aileleriyle tanışabilmek, akraba olan dillerin benzerlik ve farklılıklarını tespit edebilmek. Dilbilim araştırmaları yapabilmek, çeşitli dilleri karşılaştırabilmek ve etkileşimini inceleyebilmek.
+- **dilbilim:** yeni dil yapıları, yeni alfabe ve yazılar keşfedebilmek, yeni dil aileleriyle tanışabilmek, akraba olan dillerin benzerlik ve farklılıklarını tespit edebilmek. Dilbilim araştırmaları yapabilmek, çeşitli dilleri karşılaştırabilmek ve etkileşimini inceleyebilmek. [link](https://www.instagram.com/p/Ce-dQxAMrxf/)
 
 ## PÜF NOKTASI 55
 
@@ -459,7 +469,7 @@ Kelimeleri çalışırken bu aynılık ve benzerliklere dikkat edin, onlar hakk�
 
 **(Fince ä = Türkçe açık e; Fince y = Türkçe ü; Fince çift ünlü = uzun ünlü)**
 
-Devamı var, bir sonraki gönderimde **2. tekniği** açıklayacağım.
+Devamı var, bir sonraki gönderimde **2. tekniği** açıklayacağım. [link](https://www.instagram.com/p/CfDnohaMkNE/)
 
 
 ## PÜF NOKTASI 56
@@ -481,7 +491,7 @@ Aynı şekilde “**Fince askare = Türkçe iş**” denkliğini “**Asker bir 
 
 Tablodaki son üç örnek bir çeşit ara durum oluşturuyor. Bunlarda anlam aynı olmadığı hâlde yine de anlamların arasında bir ilişki, belirli bir benzerlik bulunmakta. Böyle durmularda hem birinci, hem de ikinci tekniği uygulayabilirsiniz: benzerlikleri zihninize kaydetmek ya da destekleyici bir cümle veya ibare kurmak.
 
-Devamı var, bir sonraki gönderide **3. tekniği** açıklayacağım.
+Devamı var, bir sonraki gönderide **3. tekniği** açıklayacağım. [link](https://www.instagram.com/p/CfIptj5Dm67/)
 
 
 ## PÜF NOKTASI 57
@@ -497,11 +507,11 @@ Fincede tıpkı Almanca ve Hollandacada da olduğu gibi **birleşik kelimeler** 
 
 Başka bir deyişle, birinci örnekteki "**elokuva**" (film) kelimesini tek başına öğreneceğinize onu bileşenleriyle birlikte öğrenip üç kelime olarak hafızanıza kaydedin: "**elokuva**", "**elo**" (hayat) ve "**kuva**" (resim). İlk bakışta biraz çelişkili göründüğü hâlde birbiriyle bağlantılı bu üç kelimeyi birlikte hafızanızda tutmak birleşik kelimeyi bir tek kelime gibi hafızanızda tutmaktan daha kolay gelecek. Bu örnekte destekleyici cümle olarak "**Film hayatta olan bir resim gibi.**" cümlesini kullanabilirsiniz.
 
-Devamı var, bir sonraki gönderimde **4. tekniği** açıklayacağım.
+Devamı var, bir sonraki gönderimde **4. tekniği** açıklayacağım. [link](https://www.instagram.com/p/CfNzz5GD1Zk/)
 
 ### Macarca denemeleri
 
-**Jó reggelt!** Gent trenini bekliyorum. Birinci sınıflar bugün Türkçe sınavına katılıyorlar. Ben tekrar gözetmenlik yapacağım. Bu arada tren yolculuklarımda Macarca öğrenmeye başladım. **Elli yıl önce Türkçeye uyguladığım bir tekniği şimdi Macarcaya uyguluyorum:** hiç gramere bakmadan bir konuşma kılavuzunu başından sonuna kadar okumak. Bakalım nasıl bir sonuç verecek. **Viszonlátásra!**
+**Jó reggelt!** Gent trenini bekliyorum. Birinci sınıflar bugün Türkçe sınavına katılıyorlar. Ben tekrar gözetmenlik yapacağım. Bu arada tren yolculuklarımda Macarca öğrenmeye başladım. **Elli yıl önce Türkçeye uyguladığım bir tekniği şimdi Macarcaya uyguluyorum:** hiç gramere bakmadan bir konuşma kılavuzunu başından sonuna kadar okumak. Bakalım nasıl bir sonuç verecek. **Viszonlátásra!** [link](https://www.instagram.com/p/CfGInLJo0-k/)
 
 ### MACARCAYI KEŞFEDERKEN
 
@@ -511,7 +521,7 @@ Geçen çarşamba günü düzenli bir şekilde Macarca öğrenmeye başladım. B
 
 Kılavuzda verilen telaffuz Hollandaca konuşucularına kolay gelen bir yaklaşma. Macarca cümleleri yüksek sesle okurken telaffuzumu hep Duna TV'den duyduğum telaffuza benzetmeye çalışıyorum. TV dinlerken yazıdaki **kısa a**'ların **[o]** gibi, uzun **á**'ların ise açık **[e]** gibi okunduğunu, **gy**'lerin de Türkçedeki **[c]**'den biraz daha yumuşak telaffuz edildiğini fark ettim. Seyrettiğim her Macarca programdan sonra telaffuzumu biraz düzeltiyorum. Yüksek sesle okuyarak ağzımı Macarca kelimelerin fonolojik yapısına da alıştırıyorum. TV izlerken kılavuzda öğrendiğim bazı kelimelere rastladığım gibi TV'de duyduğum bazı kelimeleri daha sonra kılavuzda okuyorum.
 
-Kılavuzdaki cümleleri birbirleriyle karşılaştırarak Macarca cümledeki kelimelerin Hollandaca cümledeki hangi kelimelere tekabül ettiğini anlıyorum. Hem sıkça kullanılan kalıplara dikkat ediyorum, hem de kelimeleri karşılaştırarak çeşitli yapım ve çekim eklerini tespit ediyorum. Kılavuzu ikinci kez okuduğumda çoğu cümlelerin dilbilgisi yapısını anlar hâle geldiğimi de fark ettim. Beni şimdiye kadar en çok şaşırtan şey, Macarcanın **morfolojik** yapısının Türkçeninkine, **sentaksik** yapısının ise Almancanınkine benzediği. Okuduklarımı hafızamda tutmak için gönderilerimde açıkladığım teknikleri de devamlı olarak uyguluyorum. Bu şekilde gramere bakmadan sadece kılavuzdaki cümleleri inceleyerek ve TV izleyerek Macarcayı öğrenmek bir dilbilimci için çok zevkli bir keşif yolculuğuna çıkmak gibi.
+Kılavuzdaki cümleleri birbirleriyle karşılaştırarak Macarca cümledeki kelimelerin Hollandaca cümledeki hangi kelimelere tekabül ettiğini anlıyorum. Hem sıkça kullanılan kalıplara dikkat ediyorum, hem de kelimeleri karşılaştırarak çeşitli yapım ve çekim eklerini tespit ediyorum. Kılavuzu ikinci kez okuduğumda çoğu cümlelerin dilbilgisi yapısını anlar hâle geldiğimi de fark ettim. Beni şimdiye kadar en çok şaşırtan şey, Macarcanın **morfolojik** yapısının Türkçeninkine, **sentaksik** yapısının ise Almancanınkine benzediği. Okuduklarımı hafızamda tutmak için gönderilerimde açıkladığım teknikleri de devamlı olarak uyguluyorum. Bu şekilde gramere bakmadan sadece kılavuzdaki cümleleri inceleyerek ve TV izleyerek Macarcayı öğrenmek bir dilbilimci için çok zevkli bir keşif yolculuğuna çıkmak gibi. [link](https://www.instagram.com/p/CfR8NE3rPmx/)
 
 ### MACARİSTAN VE MACARCA 01
 
@@ -521,7 +531,7 @@ Sevgili takipçilerim, geçen haftalarda eşim Linda'yla ben tatilimizi Macarist
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/57-2.png" class="align-center" alt="Dil öğrenmenin püf noktası 57 - MACARCAYI Öğrenme">
 
-**MACARCA: Avrupa'da sondan eklemeli ve ünlü uyumuna sahip üç önemli dil konuşulmakta:** Türkçe, Fince ve Macarca. Türkçenin yazım sisteminde **"bir ses = bir harf"** ilkesi genel olarak uygulanırken, Macarcada bu ilke sadece ünlülerle için geçerli: kısa ünlüler **a, o, u, e, i, ö, ü** Türkçedeki gibi yazılır, uzun ünlülerde uzunluk aksanla gösterilir: **á, ó, ú, é, í, ő, ű**. Türkçe **ı sesi** Macarcada hiç yok. Ünsüzlerin yazımında ise herhangi bir ek işaret kullanılmamakta. Doğrudan doğruya temel Latin harfleriyle ifade edilemeyen ünsüzler için harf kombinasyonları kullanılmakta. En çok göze çarpanlar şunlar: **gy** [Türkçe c'ye benzer bir ses], **cs** [Türkçe ç] ve **zs** [Türkçe j]. Ayrıca Macarcada **s harfi** Türkçe **ş sesi** için kullanıldığından Macarlar Türkçe **s sesini** ifade etmek yeni bir harf kombinasyonu bulmak zorunda kalmışlar: **sz**.
+**MACARCA: Avrupa'da sondan eklemeli ve ünlü uyumuna sahip üç önemli dil konuşulmakta:** Türkçe, Fince ve Macarca. Türkçenin yazım sisteminde **"bir ses = bir harf"** ilkesi genel olarak uygulanırken, Macarcada bu ilke sadece ünlülerle için geçerli: kısa ünlüler **a, o, u, e, i, ö, ü** Türkçedeki gibi yazılır, uzun ünlülerde uzunluk aksanla gösterilir: **á, ó, ú, é, í, ő, ű**. Türkçe **ı sesi** Macarcada hiç yok. Ünsüzlerin yazımında ise herhangi bir ek işaret kullanılmamakta. Doğrudan doğruya temel Latin harfleriyle ifade edilemeyen ünsüzler için harf kombinasyonları kullanılmakta. En çok göze çarpanlar şunlar: **gy** [Türkçe c'ye benzer bir ses], **cs** [Türkçe ç] ve **zs** [Türkçe j]. Ayrıca Macarcada **s harfi** Türkçe **ş sesi** için kullanıldığından Macarlar Türkçe **s sesini** ifade etmek yeni bir harf kombinasyonu bulmak zorunda kalmışlar: **sz**. [link](https://www.instagram.com/p/CguYrkzIFUv/)
 
 ### MACARİSTAN VE MACARCA 02
 
@@ -540,9 +550,9 @@ Anlatmaya devam ediyoruz.
 - a ház-ai-nk = ev-ler-imiz
 - a ház-ai-nk-ban = ev-ler-imiz-de
 
-Macarcanın ek sisteminde bulunan bir "**tutarsızlık**" son iki örnekte görülüyor: **-ak** çoğul eki iyelik eklerinden önce **-ai** şekline bürünür. Macarcada "**olmak**" kavramını ifade eden bir ekeylem yok, dolayısıyla Turkçe "**ev-ler-imiz-de-ymiş-siniz**" ibaresinin Macarcada bir tek kelime ile yazılabilen karşılığı yok.
+Macarcanın ek sisteminde bulunan bir "**tutarsızlık**" son iki örnekte görülüyor: **-ak** çoğul eki iyelik eklerinden önce **-ai** şekline bürünür. Macarcada "**olmak**" kavramını ifade eden bir ekeylem yok, dolayısıyla Turkçe "**ev-ler-imiz-de-ymiş-siniz**" ibaresinin Macarcada bir tek kelime ile yazılabilen karşılığı yok. [link](https://www.instagram.com/p/Cg03w_NIXOm/)
 
-### MACARİSTAN VE MACARCA 04
+### MACARİSTAN VE MACARCA 03
 
 <!-- Bu gönderideki fotoğraflar Avusturya sınırına yakın Sopron kentinde ve çevresinde ve Slovakya sınırına yakın Győr kentinde çekildi. -->
 
@@ -556,7 +566,9 @@ Macarcanın ek sisteminde bulunan bir "**tutarsızlık**" son iki örnekte gör�
 
 Kılavuzdan sonra bir Macarca grameri okuyunca anladım. **(1)** ve **(2)**'de gösterildiği gibi Macarcada fiilin her kipi için iki tür kişi iki varmış. "**-em**" eki "**belirtili çekim**" denen birinci türden bir kişi ekiymiş ve bu çekim sadece cümlenin nesnesi belirtili olduğunda kullanılırmış ("**az epret**" = "**çileğ-i**" *belirtili nesne*). "**-ek**" eki ise "*belirtisiz çekim*" denilen ikinci türden bir kişi ekiymiş ve nesne belirtisiz olduğunda ya da hiç bulunmadığında kullanılırmış ("**gitározni = gitar çalmak**" Macarcada belirtisiz sayılırmış.) Beni hayrette bırakan bu **belirtili çekim - belirtisiz çekim ayrımı** Macarcada fiil çekimi tablolarındaki fiil şekillerinin sayısının ikiye katlanmasına neden oluyor.
 
-**(3)**'e gelince şöyle bir açıklama buldum: Yukarıda anlattığım "**-em**" ve "**-ek**" kişi ekleri "**ben**" anlamına gelirken, "**-lek**" eki "**ben seni**" veya "**ben sizi**" anlamına geliyormuş. Yani aynı zamanda hem özneye hem de nesneye işaret eden bir kişi ekiymiş. Macarcada yalnız "**1. tekil kişi + 2. tekil/çoğul kişi**" için böyle bir ek varmış, ama öğrendiğime göre bazı dillerde kişi adıllarının her kombinasyonu için varmış.
+**(3)**'e gelince şöyle bir açıklama buldum: Yukarıda anlattığım "**-em**" ve "**-ek**" kişi ekleri "**ben**" anlamına gelirken, "**-lek**" eki "**ben seni**" veya "**ben sizi**" anlamına geliyormuş. Yani aynı zamanda hem özneye hem de nesneye işaret eden bir kişi ekiymiş. Macarcada yalnız "**1. tekil kişi + 2. tekil/çoğul kişi**" için böyle bir ek varmış, ama öğrendiğime göre bazı dillerde kişi adıllarının her kombinasyonu için varmış. [link](https://www.instagram.com/p/Cg_GbfroTc1/)
+
+### MACARİSTAN VE MACARCA 04
 
 <!-- **MACARİSTAN VE MACARCA 04:** Bu gönderinin resim kısmını tamamen Győr kentinin 17 kilometre güneyinde bulunan Pannonhalma Manastırı'na ayırıyorum.
 
@@ -578,7 +590,7 @@ Oysa Macarcanın beni en çok şaşırtan özelliği, ("**accusative**" diye adl
 
 Bu kelimeleri analiz ettiğimizde iki kısımdan oluştuğunu görüyoruz. Birinci kısım kök olarak kullanılan ad durumu eki, ikinci kısım bu ad durumu ekine gelen bir iyelik eki. Çok ilginç! Türkçeye aynı mantık uygulansaydı "**ben-de, sen-de, o-nda,...**" yerine "**de-m, de-n, de-si,...**" denirdi.
 
-"**-nél/nál**" örneğinde ek şekliyle kök şekli arasında tam bir benzerlik var. Başka ad durumlarında bunların arasında küçük ya da büyük farklar olabilir, örneğin: "**-ban/-ben**" eki ve "**benn-**" kökü, "**-ból/-ből**" eki ve "**belől-**" kökü, "**-on/-en/-ön/-n**" eki ve "**rajt-**" kökü.
+"**-nél/nál**" örneğinde ek şekliyle kök şekli arasında tam bir benzerlik var. Başka ad durumlarında bunların arasında küçük ya da büyük farklar olabilir, örneğin: "**-ban/-ben**" eki ve "**benn-**" kökü, "**-ból/-ből**" eki ve "**belől-**" kökü, "**-on/-en/-ön/-n**" eki ve "**rajt-**" kökü. [link](https://www.instagram.com/p/ChEa_RrgXaw/)
 
 ### MACARİSTAN VE MACARCA 05
 
@@ -592,7 +604,7 @@ MACARİSTAN: (1-3) Tuna nehri, (4-5) Estergon kalesi ve bazilikası, (6-7) Viseg
 
 2. **bir niteliği belli, iki niteliği açık bırakılan ek ünlüsü:** Türkçede çok yaygın olan "**ı/u/i/ü/ tipi**" (Türkçe örn. **-sın/-sun/-sin/-sün**) Macarcada yok, ancak Macarcada gayet ilginç bir "**o/e/ö tipi**" var (Macarca örn. **-hoz/-hez/-höz**). Bu tip Türkçede yok, ama Macarcada **a'lı** şekil **(*-haz)** eksik olmasaydı konuşulan Türkmenceyle konuşulan Kazakçada bulunan **"a/o/e/ö"** tipinin aynısı olurdu (örn. **-lar/-lor/-ler/-lör**). İşin garip tarafı Macarcada "**o/e/ö tipi**"nden olan bir ek ünlüsü ekin başında bulunan bir yardımcı ünlü olursa (örn. **-(o)t -(e)t/-(ö)t**), bu ünlü bazı kelimelerden sonra (İngilizcede bu kelime grubuna "**lowering stems**" denir) "**a/e tipi**"nden bir ünlüye dönüşür (örn. **-(a)t/-(e)t)**. Macarcanın bu kuralı beni gerçekten hayrette bıraktı.
 
-Son olarak: Macarcanın ünlü sisteminde bir "**ı**" ünlüsü yok. Belki bunun etkisiyle "**i, í**" ve "**e, é**" ünlüleri Macarcada kalınlık/incelik bakımından **nötr** sayılır, yani onlardan sonra gelen eklerde hem kalın hem de ince ünlüler kullanılabilir.
+Son olarak: Macarcanın ünlü sisteminde bir "**ı**" ünlüsü yok. Belki bunun etkisiyle "**i, í**" ve "**e, é**" ünlüleri Macarcada kalınlık/incelik bakımından **nötr** sayılır, yani onlardan sonra gelen eklerde hem kalın hem de ince ünlüler kullanılabilir. [link](https://www.instagram.com/p/ChJm4wpo7np/)
 
 ### MACARİSTAN VE MACARCA 06 - SON
 
@@ -602,7 +614,7 @@ MACARİSTAN: (1) Gödöllő treninde Macarca çalışırken, (2-3) sevilen İmpa
 
 **MACARCA:** Beni hayrete düşüren bir başka özellik, Macarca fiillerdeki **zengin önek sistemi** oldu. Macarca **sonek kullanımı** bakımından Tükçe ve Finceden pek farklı değil. Buna rağmen Türkçe ve Fincenin tersine Macarca fiillerde çok gelişmiş bir önek sistemi buluyoruz. Başvurduğum bir gramer **63 farklı** Macarca önek veriyor. Bu önekler, anlamları ve davranışları bakımından Macarcanın komşu dili olan **Almancadaki öneklere** çok benziyor. Almancadaki birçok önek gibi fiil kökünden ayrılabilirler ve hatta cümlede fiilden sonra gelebilirler. Fiillerde önek kullanan diğer Avrupa dillerindeki gibi Macarcada da öneklerle soneklerin işlevleri çok farklı. Bu önekler Türkçede soneklere değil, ayrı kelimeler olan fiillere ve zarflara tekabül eder.
 
-Örneğin Macarca "**ki-húz**" fiili, anlam ve yapı bakımından tıpkı Almanca "**aus-ziehen**", Hollandaca "**uit-trekken**", İngilizce (Latinceden miras kalan) "**ex-tract**" ve Rusça "**из-влекать**" gibi. Bu örneklerde kullanılan önekler Türkçe "**çık(ar)mak**" fiiline tekabül ediyor, fiil kökleri ise "**çekmek**" anlamını ifade ediyor. Örneklerin hepsi Türkçeye "**çekerek çıkarmak**" ya da "**çekip çıkarmak**" şeklinde çevrilebilir. Çıkardığım sonuç şu: Bir dilin zengin bir sonek sistemine sahip olması zengin bir önek sistemi geliştirmesine mani değil.
+Örneğin Macarca "**ki-húz**" fiili, anlam ve yapı bakımından tıpkı Almanca "**aus-ziehen**", Hollandaca "**uit-trekken**", İngilizce (Latinceden miras kalan) "**ex-tract**" ve Rusça "**из-влекать**" gibi. Bu örneklerde kullanılan önekler Türkçe "**çık(ar)mak**" fiiline tekabül ediyor, fiil kökleri ise "**çekmek**" anlamını ifade ediyor. Örneklerin hepsi Türkçeye "**çekerek çıkarmak**" ya da "**çekip çıkarmak**" şeklinde çevrilebilir. Çıkardığım sonuç şu: Bir dilin zengin bir sonek sistemine sahip olması zengin bir önek sistemi geliştirmesine mani değil. [link](https://www.instagram.com/p/ChO8UTPgtIe/)
 
 ## PÜF NOKTASI 58
 
@@ -622,7 +634,7 @@ Birinci tabloda gördüğunüz gibi türemiş kelimeyle tabanın arasındaki anl
 
 Hayal gücünüze dayanarak şekilce benzeşen bu kelimelerin arasında sözde bir anlamsal bağ ifade eden destekleyici cümleler uydurabilirsiniz. Yine de olayı zihninizde görselleşirmekte büyük yarar var. Örneğin "**kukko**" (**horoz**) ve "**kukka**" (**çiçek**) kelimeleri aynı kelime ailesine mensup değil ama yine de "**Horoz gagasında bir çiçek tutuyor.**" cümlesini uydurarak aralarında bir bağ kurabilirsiniz.
 
-**(Fince ä = Türkçe açık e; Fince y = Türkçe ü; Fince çift ünlü = uzun ünlü)**
+**(Fince ä = Türkçe açık e; Fince y = Türkçe ü; Fince çift ünlü = uzun ünlü)** [link](https://www.instagram.com/p/CfTASnmMQG8/)
 
 ## PÜF NOKTASI 59
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/59-1.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 59 - Zihin harıtası kullanarak kelimelerin arasında anlamsal bağlar kurun ve onları anlamlarına göre gruplandırın">
@@ -647,7 +659,7 @@ Düğümleri birbirlerine bağlayan dallar kavramların arasındaki anlamsal ba�
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/59-6.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 59 - Zihin harıtası kullanarak kelimelerin arasında anlamsal bağlar kurun ve onları anlamlarına göre gruplandırın">
 
-En önemlisi sözvarlığınızdaki kelimeleri anlam bakımından birbirine bağlamanız. Bu şekilde konuşurken düşündüğünüz bir kelime otomatik olarak ona bağlı olan diğer kelimeleri aklınıza getirecek.
+En önemlisi sözvarlığınızdaki kelimeleri anlam bakımından birbirine bağlamanız. Bu şekilde konuşurken düşündüğünüz bir kelime otomatik olarak ona bağlı olan diğer kelimeleri aklınıza getirecek. [link](https://www.instagram.com/p/CfYLkpKszRj/)
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/59-7.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 59 - Zihin harıtası kullanarak kelimelerin arasında anlamsal bağlar kurun ve onları anlamlarına göre gruplandırın">
 
@@ -661,7 +673,7 @@ Gençliğimde Türkçe öğrenirken cuma akşamları sık sık aynı şehirde ot
 
 Bu tekniği yabancı dili konuşma becerinizin değerlendirildiği sözlü sınavlara da uygulayabilirsiniz. Çok iyi ifade edebildiğiniz bir konu varsa ve o konu size sorulan soruyla uzaktan veya yakından bağlantılıysa sohbeti o yöne kaydırabilirsiniz.
 
-Resimdeki heykel meşhur **Flaman yazar Louis Paul Boon**'u (1912-1979) gösteriyor. Nobel Edebiyat ödülüne aday da gösterilen bu yazarın doğduğu ev **Aalst**'ta oturduğumuz caddede bulunuyor.
+Resimdeki heykel meşhur **Flaman yazar Louis Paul Boon**'u (1912-1979) gösteriyor. Nobel Edebiyat ödülüne aday da gösterilen bu yazarın doğduğu ev **Aalst**'ta oturduğumuz caddede bulunuyor. [link](https://www.instagram.com/p/Ch1KIiVIqxq/)
 
 ## PÜF NOKTASI 61
 
@@ -679,7 +691,7 @@ Aynı maddenin açıklama kısmında bilinmeyen ama anlamı tekrar bağlamdan ç
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/61-3.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 61 - Açıklamalı tek dilli sözlükler kullanın">
 
-Açıklamalı tek dilli sözlükler her zaman işinize yaramayabilir. Bazen açıklamalar gayet uzun olabilir ve okunması çok zaman isteyebilir, bazen de çiçek türleri, balık türleri konusunda olduğu gibi açıklama ne kadar ayrıntılı olursa olsun yabancı kelimenin anadilinizde tam olarak hangi kelimeye tekabül ettiğini tahmin etmekte zorlanabilirsiniz. O zaman iki dilli bir sözlük kelimeyi çevirerek sorunu hemen halleder.
+Açıklamalı tek dilli sözlükler her zaman işinize yaramayabilir. Bazen açıklamalar gayet uzun olabilir ve okunması çok zaman isteyebilir, bazen de çiçek türleri, balık türleri konusunda olduğu gibi açıklama ne kadar ayrıntılı olursa olsun yabancı kelimenin anadilinizde tam olarak hangi kelimeye tekabül ettiğini tahmin etmekte zorlanabilirsiniz. O zaman iki dilli bir sözlük kelimeyi çevirerek sorunu hemen halleder. [link](https://www.instagram.com/p/Ch6ZK-TMYkp/)
 
 ## PÜF NOKTASI 62
 
@@ -691,7 +703,7 @@ Bence canlı rehber olması çok önemli. Birçok müzede kullanılan sesli rehb
 
 Bazı durumlarda birden fazla yabancı dilinizi aynı zamanda ilerletme fırsatına da kavuşabilirsiniz. Örneğin Bruges şehrinin kanallarında küçük teknelerle turlar yapılır. Teknenin sürücüsü de olan rehber art arda Hollandaca, Fransızca , İngilizce ve Almancada açıklama veriyor. Biz bu turları yaparken her dört açıklamayı dikkatle dinleriz. **Gelecekte gerçekleştirmek istediğim planlardan biri de şu:** bir hafta içinde sırayla Kopenhag'da Danca, Malmö'de İsveççe ve Oslo'da Norveççe yapılan rehberli turlara katılmak. Resmi açıdan üç ayrı dil sayılan bu dilleri bir tek dilin farklı aksanlarıymış gibi algılamak istiyorum.
 
-Bu işin rehberli turlarla sınırlı kalmasına gerek yok. Çeşitli konular hakkında yabancı dilde yapılan konferanslara, panellere gidebilirsiniz. Gençliğimde Türkçemi ilerletmek için camilerde vaaz dinlemeye gittiğim de oldu. Sinema ve tiyatro gösterileri de akla gelebilir, ancak tecrübeme göre onlarda konuşma hızının normalden daha yüksek olması anlamanızı zorlaştırabilir.
+Bu işin rehberli turlarla sınırlı kalmasına gerek yok. Çeşitli konular hakkında yabancı dilde yapılan konferanslara, panellere gidebilirsiniz. Gençliğimde Türkçemi ilerletmek için camilerde vaaz dinlemeye gittiğim de oldu. Sinema ve tiyatro gösterileri de akla gelebilir, ancak tecrübeme göre onlarda konuşma hızının normalden daha yüksek olması anlamanızı zorlaştırabilir. [link](https://www.instagram.com/p/CiE3Ynlswxl/)
 
 ### AZERBAYCAN VE AZERBAYCAN DİLİ 01
 
@@ -707,7 +719,7 @@ Bu işin rehberli turlarla sınırlı kalmasına gerek yok. Çeşitli konular ha
 * G yerine g (ince) veya ğ (kalın): sevgi, yanğın
 * Ğ yerine y (ince) veya ğ (kalın): çiçək > mənim çiçəyim, uşaq > mənim uşağım (çocuğum)
 
-Kelime sonundaki **b, d, g, c** ünsüzleri tonsuzlaşmaz: **kitab, yurd, rəng, gənc**; ekleme sırasında "**Fıstıkçı Şahap**" kuralı da uygulanmaz: **etdik** (**yaptık**), **çörəkdə** (**ekmekte**).
+Kelime sonundaki **b, d, g, c** ünsüzleri tonsuzlaşmaz: **kitab, yurd, rəng, gənc**; ekleme sırasında "**Fıstıkçı Şahap**" kuralı da uygulanmaz: **etdik** (**yaptık**), **çörəkdə** (**ekmekte**). [link](https://www.instagram.com/p/CirfMHUg33T/)
 
 ### AZERBAYCAN VE AZERBAYCAN DİLİ 02
 
@@ -721,7 +733,7 @@ Kelime sonundaki **b, d, g, c** ünsüzleri tonsuzlaşmaz: **kitab, yurd, rəng,
 - Bazı kelimelerde iki ünsüz yer degiştirir (**göçüşme**): **körpü**, **torpaq**, **əskik** (**eksik**), **irəli** (**ileri**) gibi.
 - Bazı kelimelerin başındaki **y sesi** düşer: **üz** (**yüz**), **itirmək** (**yitirmek**), **il** (**yıl**), **ulduz** (**yıldız**) gibi
 - "**ev**" ses kombinasyonu "**öv**"e dönuşür, aynı şekilde "**av**" ses kombinasyonu "**ov**"a dönüşür: **dövr, lövhə, dövlət, mövcud, tövsiyyə etmək, ovçu (avcı), alov** gibi
-- Bazı kelimelerde **ü** yerine **ö** kullanılır: **böyük, möhtəşəm, mömin, təvazö** gibi.
+- Bazı kelimelerde **ü** yerine **ö** kullanılır: **böyük, möhtəşəm, mömin, təvazö** gibi. [link](https://www.instagram.com/p/CiwWWfyIg_-/)
 
 ### AZERBAYCAN VE AZERBAYCAN TÜRKÇESİ 03
 
@@ -733,7 +745,7 @@ Kelime sonundaki **b, d, g, c** ünsüzleri tonsuzlaşmaz: **kitab, yurd, rəng,
 - Türkiye Türkçesiyle karşılaştırıldığında yine karşımıza üç grup çıkar: **1)** hem şekil olarak hem de anlam olarak Türkiye Türkçesinde de bulunan kelimeler, **2)** şekil olarak Türkiye Türkçesinde de bulunan ama farklı anlamda kullanılan kelimeler ("**sahte dostlar**"), **3)** Türkiye Türkçesinde bulunmayan kelimeler.
 - Rusça yoluyla Batı dillerinden alınan kelimeler çoğu zaman "**uluslararası kelime**" niteliğindedir: **prezident (başkan)**, **kommunikasiya (iletişim)**, **region (yöre)** gibi.
 - "**Sahte dostlar**" (**yalancı eşdeğerler**) en çok dikkat edilmesi gereken kelimelerdir, çünkü yanlış anlamalara yol açabilirler: **dayanmaq (durmak)**, **tapmaq (bulmak)**, **təşkil etmək (düzenlemek)**, **subay (bekâr)**, **pis (kötü)**, **yaz (ilkbahar)**, **düşmək (inmek)** gibi.
-- Arapça-Farsça asıllı kelimelerin oranı Türkiye Türkçesindekinden daha yüksektir. Dil Devrimi'nde özleştirilen pek çok Arapça-Farsça asıllı kelime Azerbaycan Türkçesinde yaşamaya devam ediyor: **vəziyyət (durum), tətbiq etmək (uygulamak), nazir (bakan)** gibi.
+- Arapça-Farsça asıllı kelimelerin oranı Türkiye Türkçesindekinden daha yüksektir. Dil Devrimi'nde özleştirilen pek çok Arapça-Farsça asıllı kelime Azerbaycan Türkçesinde yaşamaya devam ediyor: **vəziyyət (durum), tətbiq etmək (uygulamak), nazir (bakan)** gibi. [link](https://www.instagram.com/p/Ci1hzMDI-iT/)
 
 ### AZERBAYCAN VE AZERBAYCAN TÜRKÇESİ 04
 
@@ -748,7 +760,7 @@ AZERBAYCAN: (1) Bir hafta boyunca bize en güzel şekilde mihmandarlık yapan Ta
 - 1. çoğul = -(y)ik: Biz türk-ük, azərbaycanlı-yıq, Bakıda yaşayır-ıq, gələcəy-ik,...
 
 Konuşma dilinde **2. çoğul kişiye** ait iyelik ve **ek eylem** eklerindeki "**n**" düşer, bunun sonucu olarak ek kısalır:
-- **Adınız nə?** okunuşu: [**Adız nə?**], **Kefiniz necə?** [**Kefiz necə?**] (**Keyfiniz nasıl?**), **Necəsiniz?** [**Necəsiz?**] (**Nasılsınız?**), **Harada yaşayırsınız?** [**Harada yaşayırsız?**] (**Nerede oturuyorsunuz?**), **Xoş gəldiniz!** [**Xoş gəldiz!**]. **Gördünüzmü?** [**Gördüzmü?**].
+- **Adınız nə?** okunuşu: [**Adız nə?**], **Kefiniz necə?** [**Kefiz necə?**] (**Keyfiniz nasıl?**), **Necəsiniz?** [**Necəsiz?**] (**Nasılsınız?**), **Harada yaşayırsınız?** [**Harada yaşayırsız?**] (**Nerede oturuyorsunuz?**), **Xoş gəldiniz!** [**Xoş gəldiz!**]. **Gördünüzmü?** [**Gördüzmü?**]. [link](https://www.instagram.com/p/Ci63v5jIIcI/)
 
 ### AZERBAYCAN VE AZERBAYCAN TÜRKÇESİ 05
 
@@ -772,6 +784,8 @@ Azerbaycan Türkçesinde **belirtme durumu ekinde** koruyucu ünsüz olarak "**y
 - Mən ən çox Qəbələ-ni sevirəm. (Ben en çok Kebele'yi seviyorum).
 - Qapı-nı örtün! (Kapı-yı kapatın!)
 
+[link](https://www.instagram.com/p/Ci_76DvodWu/)
+
 ### AZERBAYCAN VE AZERBAYCAN TÜRKÇESİ 06
 
 <!-- AZERBAYCAN: (1-5) Bakü'ye yakın bulunan 14. yüzyılın ortalarına ait Ramana Kasrı. (6-10) Kabalaka kazıları ve Kabalaka şehir kapısı. Kabalaka şehri (şimdiki Qəbələ) Kafkas Albaniyası Devleti'nin (M.Ö 1. yüzyıl - M.S. 9. yüzyıl) başkentiydi. -->
@@ -781,7 +795,7 @@ Azerbaycan Türkçesinde **belirtme durumu ekinde** koruyucu ünsüz olarak "**y
 - Türkiye Türkçesindeki **-(i)yor eki** Azerbaycan Türkçesinde hiç kullanılmıyor. Şimdiki zaman onun yerine **-(y)ir** ekiyle ifade ediliyor: **bil-ir-əm, istə-yir-əm, başla-yır-san, unud-ur, gör-ür-ük** gibi. Olumsuzu **-mir** (< -məyir) ile yapılıyor: **bil-mir-əm, istə-mir-əm, başla-mır-san, unut-mur, gör-mür-ük** gibi.
 - Geniş zaman eki de farklı: Türkiye Türkçesindeki **-(e/i)r ekinin** yerine Azerbaycan Türkçesinde **-(y)ər eki** kullanılıyor: **bil-ər-əm, istə-yər-əm, başla-yar-san, unud-ar, gör-ər-ik** gibi. Olumsuz şekline gelince, **2. ve 3. kişilerde** zaman eki olarak **-məz**, 1. kişilerde **-mər** kullanılıyor: **bil-mər-əm, istə-mər-əm, başla-maz-san, unut-maz, gör-mər-ik** gibi.
 - Türkiye Türkçesinde **-(y)ip eki** sadece ulaç eki vazifesini görürken Azerbaycan Türkçesindeki **-(y)ib eki** geçmiş zaman eki olarak da kullanılıyor. Gazete başlıkları: **Britaniya Kraliçası II Elizabet vəfat edib. III Charles kral elan edilib. Baş nazirlər görüşüblər**.
-- **Not:** **-miş** ve **-məz** zaman eklerinin son ünsüzü 2. kişi ekleri **-sən** ve **-siniz**'den önce düşebilir. Daha önce açıkladığım gibi **-siniz** eki **-siz** şeklinde kısaltılabilir. Örnekler: **almışsan > almısan**; **xoş gəlmişsiniz > xoş gəlmisiniz**, **xoş gelmisiz**; **görməzsən > görməsən**; **görməzsiniz > görməsiniz, görməsiz**.
+- **Not:** **-miş** ve **-məz** zaman eklerinin son ünsüzü 2. kişi ekleri **-sən** ve **-siniz**'den önce düşebilir. Daha önce açıkladığım gibi **-siniz** eki **-siz** şeklinde kısaltılabilir. Örnekler: **almışsan > almısan**; **xoş gəlmişsiniz > xoş gəlmisiniz**, **xoş gelmisiz**; **görməzsən > görməsən**; **görməzsiniz > görməsiniz, görməsiz**. [link](https://www.instagram.com/p/CjDpja_I5OP/)
 
 ### AZERBAYCAN VE AZERBAYCAN TÜRKÇESİ 07
 
@@ -801,7 +815,7 @@ Azerbaycan Türkçesinde söylenen en güzel ama aynı zamanda en acı şarkıla
 
 > Hər bir dərddən olar yaman ayrılıq
 
-**(yatmaq = uyumak; neyləyim = ne yapayım; çatmaq = yetişmek, kavuşmak)**
+**(yatmaq = uyumak; neyləyim = ne yapayım; çatmaq = yetişmek, kavuşmak)**. [link](https://www.instagram.com/p/CjHuCLoIjLL/)
 
 ### AZERBAYCAN VE AZERBAYCAN TÜRKÇESİ 08
 
@@ -819,6 +833,8 @@ Son örnekte görüldüğü gibi Türkiye Türkçesinde **-dik** ekinin kullanı
 - İstəyirəm ki, mənə kömək edəsiniz.
 - Çox şadam ki, Sizinle tanış oldum.
 
+[link](https://www.instagram.com/p/CjMwJ_don5p/)
+
 ### AZERBAYCAN VE AZERBAYCAN TÜRKÇESİ 09
 
 <!-- AZERBAYCAN: Azerbaycan Milli Halı Müzesi'nin deniz kenarındaki yeni binası 2014 yılında inşa edildi. Tasarımı Avusturyalı mimar Franz Janz'a ait olan bina dürülü bir halı andırıyor. -->
@@ -831,7 +847,7 @@ Son örnekte görüldüğü gibi Türkiye Türkçesinde **-dik** ekinin kullanı
 
 - "**İsə**"nin kısaltılmış şekli olan "**-sə**" eki de "**mi**" eki gibi Azerbaycan Türkçesinde kişi eklerinden sonra gelir. Örnekler: **Mən xəstəyəmsə, bu, ailə üzvlərimə də keçə bilər (Ben hastaysam...)**. **Başqa detallar bilirsinizsə, yazın. Mümkündürsə, paylaşın lütfən. Səhv etmirəmsə (yanılmıyorsam) Siz mənimlə həmyaşsınız**. **Mən "yox" demişəmsə, belə də olmalıdır. Qız qalasını görməmisənsə onu sənə göstərərik**.
 
-- Soru kelimelerine "**-sə**" eki eklenerek belgisiz zamir, sıfat ve zarf yapılır. Bu ek ad durumu eklerinden sonra gelir. Örnekler: **Çamadanı kim-sə gətirib (Bavulu biri, bir kimse getirmiş)**. **O, kim-ə-sə məktup yazır (birine, bir kimseye)**. **Bu, kim-in-sə gözündən qaçmayıb (birinin, bir kimsenin). O kim-dən-sə pul alıb (birinden, bir kimseden para almış). O, burada kim-i-sə axtarır (birini, bir kimseyi arıyor). Dirsəyim nə-yə-sə dəydi (bir şeye). Bu insandan nə-yi-sə gizlətmək qeyri-mümkündür (bir şeyi). Daha önce biz hara-da-sa rastlaşmışıq (bir yerde)?**
+- Soru kelimelerine "**-sə**" eki eklenerek belgisiz zamir, sıfat ve zarf yapılır. Bu ek ad durumu eklerinden sonra gelir. Örnekler: **Çamadanı kim-sə gətirib (Bavulu biri, bir kimse getirmiş)**. **O, kim-ə-sə məktup yazır (birine, bir kimseye)**. **Bu, kim-in-sə gözündən qaçmayıb (birinin, bir kimsenin). O kim-dən-sə pul alıb (birinden, bir kimseden para almış). O, burada kim-i-sə axtarır (birini, bir kimseyi arıyor). Dirsəyim nə-yə-sə dəydi (bir şeye). Bu insandan nə-yi-sə gizlətmək qeyri-mümkündür (bir şeyi). Daha önce biz hara-da-sa rastlaşmışıq (bir yerde)?**. [link](https://www.instagram.com/p/CjSDg_agjOo/)
 
 ### AZERBAYCAN VE AZERBAYCAN TÜRKÇESİ 10 - SON
 
@@ -851,7 +867,7 @@ AZERBAYCAN: Azerbaycan'ın sonsuz alevlerini simgeleyen Alov qüllələri (Alev 
 - Etməli olduğum hər şeyi etdim. (etmək = yapmak)
 - Oxumalı olduğumuz otuz kitabın siyahısı budur. (siyahı = liste)
 
-Bu "**Azerbaycan ve Azerbaycan Türkçesi**" serimizden zevk aldığınızı ümit ediyoruz. İlk defa Macaristan gezimize uyguladığımız bu "ülke ve dil" yaklaşımını ileride yine başka ülkelere ve dillere genişletmeyi planlıyoruz.
+Bu "**Azerbaycan ve Azerbaycan Türkçesi**" serimizden zevk aldığınızı ümit ediyoruz. İlk defa Macaristan gezimize uyguladığımız bu "ülke ve dil" yaklaşımını ileride yine başka ülkelere ve dillere genişletmeyi planlıyoruz. [link](https://www.instagram.com/p/CjZ2ku1ApTL/)
 
 ## PÜF NOKTASI 63
 
@@ -859,7 +875,7 @@ Bu "**Azerbaycan ve Azerbaycan Türkçesi**" serimizden zevk aldığınızı üm
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/63.png" class="align-center" alt="Dil öğrenmenin püf noktası 63 - Daha önce okuduğunuz bir kitabı yabancı dilde okuyun">
 
-Bu kitapları daha önce başka dillerde okuduğum için hikâyelerini, planlarını biliyordum. Onun için Belçika'ya döndükten sonra hiç çeviri kullanmadan ve hiç sözlüğe başvurmadan bu kitapları rahatlıkla okuyabildim. İçlerindeki yeni kelimelerin bir kısmını anlamlarını bağlamdan tahmin ederek öğrenebildim, diğer kısmının anlamını ise söz konusu kelimeler metinde defalarca tekrarlandığı hâlde yarı anladığımı ya da hiç anlamadığımı itiraf etmek zorundayım, ancak yine de genel bilançoyu olumlu buluyorum. Yeni kelimelerin anlamlarını sözlükten arasaydım okuma hızım çok düşerdi ve bu okuma materyallerini bu kadar kısa bir zaman içinde bitiremezdim. Bu kitapları sadece bir giriş olarak görüyorum, ileride Azerbaycan Türkçesinde yazılan en önemli edebî eserlerden bazılarını da okumak istiyorum.
+Bu kitapları daha önce başka dillerde okuduğum için hikâyelerini, planlarını biliyordum. Onun için Belçika'ya döndükten sonra hiç çeviri kullanmadan ve hiç sözlüğe başvurmadan bu kitapları rahatlıkla okuyabildim. İçlerindeki yeni kelimelerin bir kısmını anlamlarını bağlamdan tahmin ederek öğrenebildim, diğer kısmının anlamını ise söz konusu kelimeler metinde defalarca tekrarlandığı hâlde yarı anladığımı ya da hiç anlamadığımı itiraf etmek zorundayım, ancak yine de genel bilançoyu olumlu buluyorum. Yeni kelimelerin anlamlarını sözlükten arasaydım okuma hızım çok düşerdi ve bu okuma materyallerini bu kadar kısa bir zaman içinde bitiremezdim. Bu kitapları sadece bir giriş olarak görüyorum, ileride Azerbaycan Türkçesinde yazılan en önemli edebî eserlerden bazılarını da okumak istiyorum. [link](https://www.instagram.com/p/Cjr0oHwoCvV/)
 
 ## PÜF NOKTASI 64
 
@@ -871,7 +887,7 @@ Türkçenin mantıklı yapısı beni hep büyüleyegelmiştir. Bu mantıklı yap
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/64-2.jpg" class="align-center" alt="Dil öğrenmenin püf noktası 64 - Yabancı dilde kitap okurken dikkatinizi çeken yapıları not edin">
 
-Aynı tekniği aşağı yukarı 45 yıl önce Türkiye Türkçesi öğrenirken de uygulamıştım. **Geoffrey Lewis**'in **Turkish Grammar kitabında** "**X'DIr + 3. tekil kişi fiil**" şeklindeki yapı (örn: bir kıyamettir koptu) dikkatimi çekince okuduğum Türkçe kitaplardan örnek toplamaya başlamıştım. Sonucu Resim 2'de görüyorsunuz.
+Aynı tekniği aşağı yukarı 45 yıl önce Türkiye Türkçesi öğrenirken de uygulamıştım. **Geoffrey Lewis**'in **Turkish Grammar kitabında** "**X'DIr + 3. tekil kişi fiil**" şeklindeki yapı (örn: bir kıyamettir koptu) dikkatimi çekince okuduğum Türkçe kitaplardan örnek toplamaya başlamıştım. Sonucu Resim 2'de görüyorsunuz. [link](https://www.instagram.com/p/CkKoJm_oPiM/)
 
 ## PÜF NOKTASI 65
 
@@ -879,7 +895,7 @@ Aynı tekniği aşağı yukarı 45 yıl önce Türkiye Türkçesi öğrenirken d
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/65.png" class="align-center" alt="Dil öğrenmenin püf noktası 65 - Yabancı dilde verilen bir çiçek düzenleme kursuna yazılın">
 
-Yetişkin olarak da yabancı dilde verilen herhangi bir kursa yazılarak bu yöntemden yararlanabilirsiniz. Bu kurs resimlerdeki gibi bir çiçek düzenleme kursu olabilir, ama ilginizi çekerse söz gelimi bir fotoğrafçılık veya yemek kursu da olabilir. Yabancı dilde kurs izlemek olanağına özellikle yabancı bir ülkede yaşıyorsanız ve o ülkenin dilini öğreniyorsanız kavuşabilirsiniz, çünkü o takdirde uygun bir kurs bulmakta zorluk çekmezsiniz.
+Yetişkin olarak da yabancı dilde verilen herhangi bir kursa yazılarak bu yöntemden yararlanabilirsiniz. Bu kurs resimlerdeki gibi bir çiçek düzenleme kursu olabilir, ama ilginizi çekerse söz gelimi bir fotoğrafçılık veya yemek kursu da olabilir. Yabancı dilde kurs izlemek olanağına özellikle yabancı bir ülkede yaşıyorsanız ve o ülkenin dilini öğreniyorsanız kavuşabilirsiniz, çünkü o takdirde uygun bir kurs bulmakta zorluk çekmezsiniz. [link](https://www.instagram.com/p/Ck5FpXPoNo4/)
 
 <!-- Bu gönderideki resimler için eşim Linda'ya teşekkür ederim. Resimler bu haftasonu komşu şehrimiz olan Dendermonde şehrinin Belediye Sarayında düzenlenen çiçek düzenleme sergisinde çekildi. -->
 
