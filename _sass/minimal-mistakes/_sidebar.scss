@@ -344,4 +344,12 @@
     margin-right: initial;
   }
 }
-
+/*
+   Back To Top Button
+   ========================================================================== */
+.sidebar__top {
+  position: fixed;
+  bottom: 1.5em;
+  right: 2em;
+  z-index: 10;
+}
