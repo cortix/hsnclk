@@ -50,14 +50,15 @@ public static void main(String[] args)
 
 {% include video id="cR9uwtMQt-g" provider="youtube" %}
 ---
-Hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), **main metodunu** da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu videoyu özellikle izlemenizi öneririm.
+Hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), **main metodunu** da kapsayan bir örnek kod üzerinde, **statik** ve **statik olmayan** değişken ve metotların hafıza yönetim modelini ele aldım. Bu videoyu özellikle izlemenizi öneririm.
 
+Konumuza geri dönecek olursak, **main** metot deklerasyonu;
 
-* Hem ``public`` olacak,
-* Hem ``static`` olacak,
-* Hem ``void`` dönecek,
-* Hem ismi ``main`` olacak,
-* Hem de ``String[]`` tipinde bir diziyi parametre olarak alacaktır.
+* Hem **public** olacak,
+* Hem **static** olacak,
+* Hem **void** dönecek,
+* Hem ismi **main** olacak,
+* Hem de **String[]** tipinde bir <u>diziyi</u> parametre olarak alacaktır.
 
 Bu arada parametreleri normal metodlarda sıklıkla görüyoruz. Buradaki çalışma prensibi de onlardan farklı değildir. Buradaki <u>parametre</u> programa **komut satırı argümanlarını** sunar. Programı çalıştırdığınızda, bu diziye hangi **string**'lerin geçirileceğini belirtebilirsiniz. Komut satırı argümanlarını **main** olarak kullanmak isterseniz, kodu yeniden derlemeden programın hangi dosyayı okuyabileceğini değiştirebilirsiniz.
 
