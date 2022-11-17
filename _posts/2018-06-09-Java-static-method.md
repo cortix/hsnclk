@@ -8,9 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-42.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Peter Oslanec](https://unsplash.com/photos/AsTuH7M7ImY) on Unsplash"
-#  video:
-#    id: cR9uwtMQt-g
-#    provider: youtube
+  video:
+    id: cR9uwtMQt-g
+    provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -22,6 +22,7 @@ tags:
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 
@@ -29,48 +30,100 @@ toc_label: "SAYFA İÇERİĞİ"
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-Merhabalar arkadaşlar, blog yazımı okumadan önce şu youtube [videosunu](https://www.youtube.com/watch?v=cR9uwtMQt-g) izlemenizi öneririm. Bu konuda yeni yazılımcıların çok sıkıntı yaşadığını bildiğim için detaylı bir eğitim videosu hazırlamaya karar verdim. Umarım kafanızdaki sorulara cevap verebilirim. Şimdiden iyi seyirler.
+Merhabalar arkadaşlar, blog yazımı okumadan önce aşağıdaki youtube [videomu](https://www.youtube.com/watch?v=cR9uwtMQt-g) izlemenizi öneririm. Bu konuda naçizane öğrendiklerimi sizlerle paylaşmak için detaylı bir video hazırlamaya karar verdim. Umarım kafanızdaki sorulara cevap verebilirim. Şimdiden iyi seyirler.
+
+{% include video id="cR9uwtMQt-g" provider="youtube" %}
 
 
 ## Konu ile alakalı bir bilgilendirme
 
-Arkadaşlar, bu konu her ne kadar spesifik bir konu gibi gözükse de bir bağlam içerisinde konuyu ele almak çok daha önemlidir. Demek istediğim aslında statik nedir? sorusunu daha geniş bağlamda düşünmek gerekiyor. Bunun için statik olmayanlar değişken ve metotlar nedir? Statik ve statik olmayanlar hafızada nasıl saklanıyor gibi farklı soruları da beraberinde düşünmek gerekiyor. Bunun için aşağıdaki kategorik içeriklerime sırasıyla bakmanızı şiddetle öneriyorum.
+Arkadaşlar, bu konu her ne kadar spesifik bir konu gibi gözükse de bir bağlam içerisinde konuyu ele almak çok daha önemlidir. Yani, **statik nedir**? sorusunu daha geniş bağlamda düşünmemiz gerekiyor. Bunun için **statik olmayan** <u>değişken ve metotlar nedir</u>? **Statik** ve **statik olmayan** <u> değişkenler hafızada nasıl saklanır</u>? gibi farklı soruları da beraberinde düşünmemiz elzemdir. Bunun için aşağıdaki içeriklerime sırasıyla bakmanızı öneriyorum.
 
 * **Java’da Hafıza Modeli** [serisi](/categories/#java-hafiza-yonetimi)
 * **Java’da Kalıtım ve Java’da Polimorfizm** [serisi](/categories/#java-kalitim-polimorfizm)
 
-Çünkü bağlamdan kopuk bir ilerle zayıf bir temel üzerine güçlü yapılar inşaa etmenize izin vermez. Bu sebepten ötürü üniversitelerde müfredatları belli bir sırayla almanız tavsiye edilir. Umarım yazılarımın bir faydası olur. Şimdiden iyi okumalar.
 
-## Statik nedir?
+## Java'da Statik nedir?
 
-**Statik** anahtar kelimesine sahip  bir değişken veyahut metot, aslında **sınıfa ait olan**, sınıftan yaratılan **objelere ait olmayan** anlamına gelir. Hatta **statik konteksi** sınıfın hafızası gibi düşünebilirsiniz. Bu konteks sınıftan yaratılan bütün objelerle ortak olarak paylaşılır. Haliyle sınıftan yaratılan objeler bu hafızaya doğrudan erişebilirken, statik konteksten(yani sınıfın bu hafızasından) ilgili objelere doğrudan erişim yoktur. Bu durumu yukarıdaki videoda çok net bir şekilde izah ettiğimi düşünüyorum. Dilerseniz oradan bakabilirsiniz.
+**Statik** anahtar kelimesine sahip  bir değişken veyahut metot, aslında **sınıfa ait olan**, sınıftan yaratılan **objelere ait olmayan** anlamına gelir. Hatta **statik konteksi** sınıfın hafızası gibi düşünebilirsiniz. Bu **konteks** sınıftan yaratılan bütün objelerle ortak olarak paylaşılır. Haliyle sınıftan yaratılan objeler bu hafızaya doğrudan erişebilirken, **statik konteksten(yani sınıfın bu hafızasından)** ilgili objelere <u>doğrudan erişim yoktur</u>. Bu durumu yukarıdaki videoda çok net bir şekilde izah ettiğimi düşünüyorum. Dilerseniz oradan bakabilirsiniz.
 
 Birçok yerde ``static`` değiştiricisiyle karşılaşmışızdır. Hatta bu anahtar kelimeyi hem metodlar için hem de değişkenler için kullanıyoruz.
 
 * Peki bu ne anlama geliyor?
-* Hangi durumlarda static anahtar kelimesini kullanmamız gerekir?
-* JVM static yöntem ve değişkenleri nasıl ve nerede saklar?
+* Hangi durumlarda **static** anahtar kelimesini kullanmamız gerekir?
+* JVM **static** yöntem ve değişkenleri nasıl ve nerede saklar?
 * **Non-static method '' cannot be referenced from a static context** hatasını neden alıyoruz? (Cevabı videonun içinde)
 
-## Değişkenler
+## Java'da Değişkenler
 
 
-**Dinamik Değişkenler-Instance Variables (Anlık değişkenler/Statik Olmayan Alanlar):** Aynı sınıf şablonundan bir dizi nesne oluşturulduğunda, bunların her biri, ayrı ayrı kendi dinamik değişkenlerine sahiptir. Teknik olarak, nesneler, kendi durumlarını "statik olmayan alanlara", yani ``statik`` anahtar kelime olmadan beyan edilen alanlara depolar. Statik olmayan alanlar da ``Instance Variables/dinamik değişkenler`` olarak bilinir. Çünkü tuttuğu değerler bir sınıfın her örneğine, bir başka deyişle her nesneye özgüdür;
+### Java Örnek Değişkenleri
 
-**Sınıf Değişkenleri-Class Variables (Statik Alanlar):** Bazen, tüm nesneler için ortak olan değişkenlere sahip olmak istersiniz. Bu statik anahtar kelimesi ile gerçekleştirilir. Beyanında ``statik`` değiştiriciye sahip olan alanlara statik alanlar(*static fields*) veya sınıf değişkenleri(*class variables*) denir. Herhangi bir nesneden ziyade sınıfla ilişkilendirilirler. Sınıfın her örneği, bellekte sabit bir konumda bulunan bir sınıf değişkenini paylaşır. Herhangi bir nesne, bir sınıf değişkeninin değerini değiştirebilir, ancak sınıf değişkenleri, sınıfın bir örneğini oluşturmadan da manipüle edilebilir. Bu, derleyiciye, sınıfın kaç kez örneklendirildiğine bakılmaksızın, bu değişkenin tam olarak varlığını sürdüren bir kopyası olduğunu söyler. Buna ek olarak ``final`` anahtar kelimesinin eklenmesi değişkenin değerinin değişmeyeceği anlamına gelir.
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Örnek Değişkenlerinin Diğer Adları</h4>
+---
 
-{% highlight java %}
-static int num = 6;
-{% endhighlight %}
+* Örnek Değişkenleri
+* Dinamik Değişkenler
+* Instance Variables (ingilizce)
+* Anlık değişkenler
+* Statik Olmayan Alanlar
 
-Yukarıdaki ``static`` field örneğinde num adında bir değişken tanımlanmış ve 6 değeri bu değişkene atanmıştır. Bu static değere sahip sınıf üzerinden bu değere tekrar erişilmek istendiğinde bu değer tekrar alınır. Buna ek olarak bu değer istendiğinde değiştirilebilir. Aşağıdaki örnekte bunu daha detaylı anlatacağım. Bu ifadeye birde ``final`` anahtar kelimesi eklenirse bu ifade artık bellekte sabitlenir ve değişmez. Yani tek bir değerle ilklendirilebilir. ``final`` örneğine en güzel örnek pi sayısı olabilir. Bilindiği üzere pi sayısı sabittir ve değişmez. Kısacası ``static`` değiştiricisi, ``final`` değiştirici ile birlikte, sabitleri tanımlamak için de kullanılır.
+</div>
 
-{% highlight java %}
-static final double PI = 3.141592653589793;
-{% endhighlight %}
+Aynı <u>sınıf şablonundan bir dizi nesne oluşturulduğunda</u>, bunların her biri, ayrı ayrı kendi dinamik değişkenlerine sahiptir. Teknik olarak, nesneler, kendi durumlarını(yani ingilice **state** olarak ifade edilir) "**statik olmayan alanlara**", yani ``statik`` anahtar kelime olmadan beyan edilen alanlara depolar. Statik olmayan alanlar da **Instance Variables/dinamik değişkenler** olarak bilinir. Çünkü tuttuğu değerler bir sınıfın her örneğine, bir başka deyişle her nesneye özgüdür;
 
-**Yerel Değişkenler - Local Variables :**
-Bir nesne kendi durumunu *fields* larda nasıl sakladığı gibi, bir yöntem geçici durumunu yerel değişkenlerde saklar. Yerel bir değişkenin deklarasyon syntax'ı, bir field'ın deklarasyonuna benzerdir (örneğin, int num = 0;). Yerel olarak bir değişken belirten özel bir anahtar kelime yoktur; bu belirleme tamamen değişkenin beyan edildiği yerden yani bir yöntemin açılış ve kapanış parantezleri arasında gelir. Bu nedenle, yerel değişkenler yalnızca bildirildikleri yöntemlerle görülebilir; sınıfın geri kalanından erişilemezler. Yani sadece bir metodun içinde deklare edildiklerinden, onlara erişim de ilgili metod üzerinden olur.   
+
+
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Sınıf Şablonu</h4>
+---
+**Note :** Yukarıda **sınıf şablonu(blueprint)** derken kastettiğim aslında aşağıdaki gibi sıradan bir sınıf kodudur:
+
+Her sınıf kodu, sınıftan oluşturulacak objeler için bir taslak gibidir.
+
+```java
+public class SampleClass{
+  int x;
+  double y;
+  static int z;
+  ...
+}
+```
+
+Aşağıdaki resimden de anlaşılacağı üzere sınıf şablonundan yaratılan 3 obje içinde **statik olmayan alanlar** tutulur. Dikkat edecek olursanız her obje farklı **x** ve **y** değeri saklamaktadır. Bu farklı değişkenlere **objelerin state**'leri de denir. Objeden objeye değişiklik gösterdiği için **dinamik değişken** olarak da ifade edilir. Bu arada objeler yeşil renkle gösterilmektedir.
+
+</div>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-memory-management.png" alt="Java Memory Management">
+
+### Java Sınıf Değişkenleri
+
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Sınıf Değişkenlerinin Diğer Adları</h4>
+---
+
+* Sınıf Değişkenleri
+* Class Variables (ingilizce)
+* Statik Alanlar
+* Sınıfın hafızası (çünkü ilgili sınıftan yaratılan bütün objeler için ortak bir veritabanı gibi davranır.)
+
+**Statik alan** ise yukarıdaki resimde pembe renkle gösterilmektedir. Görüleceği üzere, sınıf şablonu içindeki **statik değişkenleri** içinde barındırmaktadır. Her obje için ortak oldukları için ve her objenin bu alana erişimi olduğu için **statik alan** olarak da ifade edilir. Yani sınıfın hafızasıdır.
+</div>
+
+
+Bazen, tüm nesneler için ortak olan değişkenlere sahip olmak istersiniz. Bu **statik** anahtar kelimesi ile gerçekleştirilir. Beyanında **statik** değiştiriciye sahip olan değişkenlere **statik alanlar(*static fields*)** veya **sınıf değişkenleri(*class variables*)** denir. Herhangi bir nesneden ziyade sınıfla ilişkilendirilirler. Sınıfın her örneği(yani objeler), bellekte sabit bir konumda bulunan bir **sınıf değişkenini** paylaşır.
+
+Herhangi bir nesne, bir sınıf değişkeninin değerini değiştirebilir, ancak statik alan içinden sınıfın bir örneğine erişim mümkün değildir.
+
+Buna ek olarak **final** anahtar kelimesinin eklenmesi değişkenin değerinin değişmeyeceği anlamına gelir.
+
+
+### Yerel Değişkenler - Local Variables
+
+Bir nesne kendi durumunu **alanlarda(fields)** sakladığı gibi, bir yöntem de geçici durumunu **yerel değişkenlerde** saklar. Yerel bir değişkenin deklarasyonu, bir örnek değişkeninin deklarasyonuna benzerdir (örneğin, `int num = 0;`). Yerel olarak bir değişken belirten özel bir anahtar kelime yoktur; <u>bu belirleme tamamen değişkenin beyan edildiği yerden yani bir yöntemin açılış ve kapanış parantezleri arasında gelir</u>. Bu nedenle, yerel değişkenler yalnızca bildirildikleri yöntemlerle görülebilir; sınıfın geri kalanından erişilemezler. Yani sadece bir metodun içinde deklare edildiklerinden, onlara erişim de ilgili metod üzerinden olur. Bu sebepten ötürü yerel değişkenlerin deklarasyonunda **erişim değiştiricileri(access modifier)** yoktur. Yani **(public, protected, private)** gibi anahtar kelimeleri yerel değişkenlerin deklarasyonunda göremezsiniz.
+
+
 
 ```java
 public class Deneme {
