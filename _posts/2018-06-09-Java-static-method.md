@@ -33,7 +33,7 @@ toc_sticky: true
 Merhabalar arkadaşlar, blog yazımı okumadan önce aşağıdaki youtube [videomu](https://www.youtube.com/watch?v=cR9uwtMQt-g) izlemenizi öneririm. Bu konuda naçizane öğrendiklerimi sizlerle paylaşmak için detaylı bir video hazırlamaya karar verdim. Umarım kafanızdaki sorulara cevap verebilirim. Şimdiden iyi seyirler.
 
 
-<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.png" alt="Java Memory Management"></a>
+<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp" alt="Java Memory Management"></a>
 
 
 ## Konu ile alakalı bir bilgilendirme
@@ -96,7 +96,7 @@ Aşağıdaki resimden de anlaşılacağı üzere sınıf şablonundan yaratılan
 
 </div>
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-memory-management.png" alt="Java Memory Management">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-memory-management.webp" alt="Java Memory Management">
 
 ### Java Sınıf Değişkenleri
 
@@ -180,7 +180,7 @@ Yerel değişkenler(local variables) ile ilgili bir diğer önemli nokta ise şu
 * private
 * final
 </div>
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/illegal_start.png" alt="Illegal Start of expression for local variables">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/illegal_start.webp" alt="Illegal Start of expression for local variables">
 
 Yukarıdaki görselde **yerel değişkene** bir **erişim değiştirici** uygulamaya çalıştım. Görüldüğü gibi derleme hatası aldım. Koda şu [linkten](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20private%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ulaşabilirsiniz.
 
@@ -304,7 +304,9 @@ Dikkat edilecek olursa **hesapNum** her yeni nesne için farklı bir rakam olara
 
 ## Statik Yöntem ve Değişkenler ile Statik Olmayan Değişken ve Yöntemlerin Arasındaki Farklılıklar
 
-Bir Java sanal makinesindeki (JVM) bir sınıfın kullanım ömrü, bir nesnenin kullanım ömrü ile birçok benzerliğe sahiptir. Bir nesne, statik olmayan değişkenlerinin değerleri ile temsil edilen bir duruma sahip olabildiği gibi, bir sınıf, sınıf değişkenlerinin değerleri ile temsil edilen bir duruma sahip olabilir. JVM, başlatma kodunu çalıştırmadan önce statik olmayan(*instance variables , non-static members*) değişkenleri varsayılan başlangıç ​​değerlerine ayarladığı gibi, aynı JVM, başlatma kodunu çalıştırmadan önce sınıf değişkenlerini varsayılan başlangıç ​​değerlerine ayarlar. Ve nesneler gibi sınıflarda, çalışan uygulama tarafından uzun süre başvurulmuyorsa, toplanan çöp durumunda olabilirler. Yine de, sınıflar ve nesneler arasında önemli farklılıklar vardır. Belki de en önemli fark, statik olmayan metodlar ile sınıf metodlarının çağrılma şeklidir: Statik olmayan yöntemler (çoğunlukla) dinamik olarak bağlıdır, ancak sınıf yöntemleri(yani static yöntemler) statik olarak bağlıdır. Üç özel durumda, statik olmayan yöntemler dinamik olarak bağlı değildir:
+Bir Java sanal makinesindeki (JVM) bir sınıfın kullanım ömrü, bir nesnenin kullanım ömrü ile birçok benzerliğe sahiptir. Bir nesne, statik olmayan değişkenlerinin değerleri ile temsil edilen bir duruma sahip olabildiği gibi, bir sınıf, sınıf değişkenlerinin değerleri ile temsil edilen bir duruma sahip olabilir. JVM, başlatma kodunu çalıştırmadan önce **statik olmayan(*instance variables , non-static members*)** değişkenleri varsayılan başlangıç ​​değerlerine ayarladığı gibi, aynı JVM, başlatma kodunu çalıştırmadan önce sınıf değişkenlerini varsayılan başlangıç ​​değerlerine ayarlar. Ve nesneler gibi sınıflarda, çalışan uygulama tarafından uzun süre başvurulmuyorsa, toplanan çöp durumunda olabilirler.
+
+Yine de, sınıflar ve nesneler arasında önemli farklılıklar vardır. Belki de en önemli fark, statik olmayan metodlar ile sınıf metodlarının çağrılma şeklidir: Statik olmayan yöntemler (çoğunlukla) **dinamik** olarak bağlıdır, ancak sınıf yöntemleri(yani static yöntemler) **statik** olarak bağlıdır. Üç özel durumda, statik olmayan yöntemler dinamik olarak bağlı değildir:
 
 * statik olmayan ``private``(özel) yöntemlerinin çağrılması,
 * kurucu yöntemlerinin çağrılması(constructor)

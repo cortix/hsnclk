@@ -8,9 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-41.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Jon Tyson](https://unsplash.com/photos/FlHdnPO6dlw) on Unsplash"
-  video:
-    id: cR9uwtMQt-g
-    provider: youtube
+  #video:
+  #  id: cR9uwtMQt-g
+  #  provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -48,7 +48,9 @@ public static void main(String[] args)
 
 şeklindedir.
 
-{% include video id="cR9uwtMQt-g" provider="youtube" %}
+
+<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp" alt="Java Memory Management"></a>
+
 ---
 Hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), **main metodunu** da kapsayan bir örnek kod üzerinde, **statik** ve **statik olmayan** değişken ve metotların hafıza yönetim modelini ele aldım. Bu videoyu özellikle izlemenizi öneririm.
 
@@ -68,7 +70,7 @@ Bu arada parametreleri normal metodlarda sıklıkla görüyoruz. Buradaki çalı
 
 Komut satırı argümanlarından biraz bahsetmek istiyorum. <u>Bir Java uygulaması, komut satırından istediğiniz sayıda argüman girişini kabul edebilir.</u> Bu, kullanıcının uygulama başlatıldığında yapılandırma bilgilerini belirlemesini sağlar. Dikkat ederseniz **main** yönteminin parametre değişkenleri, yani **args**'ın veri tipi bir **String** dizisidir. Bu programın sadece **string** tipinde bir diziyi argüman olarak kabul edeceği anlamına gelmektedir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/args.png" alt="command-line arguments">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/args.webp" alt="command-line arguments">
 
 Diyelim ki komut satırı argümanı olarak kullanmak istediğiniz bir şeyler olduğunu hayal edin. Aşağıdaki örnekte ``This is a sample text``  cümlesini komut satırı argümanı eklemek istiyorum. Aşağıdaki kodla bu cümleyi **args parametresi** olarak programımın içine dahil edebilirim. Sistem, zaten **args** parametresi yoksa, parametrenin olmadığını anlayıp sadece **main** metodunun içine odaklanır.
 
@@ -82,7 +84,7 @@ public class Sample {
 }
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/result.png" alt="command-line arguments">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/result.webp" alt="command-line arguments">
 
 Görüleceği üzere komut satırı argümanlarını da kullanmak bir seçenektir.
 
