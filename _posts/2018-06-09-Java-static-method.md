@@ -8,9 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-42.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Peter Oslanec](https://unsplash.com/photos/AsTuH7M7ImY) on Unsplash"
-  video:
-    id: cR9uwtMQt-g
-    provider: youtube
+  #video:
+    #id: cR9uwtMQt-g
+    #provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -32,7 +32,8 @@ toc_sticky: true
 
 Merhabalar arkadaşlar, blog yazımı okumadan önce aşağıdaki youtube [videomu](https://www.youtube.com/watch?v=cR9uwtMQt-g) izlemenizi öneririm. Bu konuda naçizane öğrendiklerimi sizlerle paylaşmak için detaylı bir video hazırlamaya karar verdim. Umarım kafanızdaki sorulara cevap verebilirim. Şimdiden iyi seyirler.
 
-{% include video id="cR9uwtMQt-g" provider="youtube" %}
+
+<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.png" alt="Java Memory Management"></a>
 
 
 ## Konu ile alakalı bir bilgilendirme
