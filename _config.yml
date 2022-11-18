@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Hasan Çelik"
-  avatar           : "/assets/images/bio/hc2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio/hc2.webp" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "A software developer who likes to develop himself and is interested in music, philosophy, psychology, marketing, branding, history, economy and science at the same time."
   location         : "Ankara/Turkey"
   email            : "hsnclk1985@gmail.com"
