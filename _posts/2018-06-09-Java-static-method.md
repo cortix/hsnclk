@@ -1,13 +1,13 @@
 ---
 title: "Java Static Metodu, Değişkenler ve Parametreler"
 comments: false
-excerpt: "Java Static Metodu Nedir? Hangi Durumlarda Kullanılır? Değişkenler ve Parametreler"
+excerpt: "Java Static Metodu Nedir? Hangi Durumlarda Kullanılır? Java'da Değişkenler ve Parametreler"
 header:
   teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
-  overlay_image: /assets/images/unsplash-image-42.jpg
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-58.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Peter Oslanec](https://unsplash.com/photos/AsTuH7M7ImY) on Unsplash"
+  caption: "Photo by [zero take](https://unsplash.com/photos/jSB9PWaxhXo) on Unsplash"
   #video:
     #id: cR9uwtMQt-g
     #provider: youtube
@@ -120,9 +120,9 @@ Herhangi bir nesne, bir sınıf değişkeninin değerini değiştirebilir, ancak
 Buna ek olarak **final** anahtar kelimesinin eklenmesi değişkenin değerinin değişmeyeceği anlamına gelir.
 
 
-### Yerel Değişkenler - Local Variables
+### Yerel Değişkenler (Local Variables)
 
-Bir nesne kendi durumunu **alanlarda(fields)** sakladığı gibi, bir yöntem de geçici durumunu **yerel değişkenlerde** saklar. Yerel bir değişkenin deklarasyonu, bir örnek değişkeninin deklarasyonuna benzerdir (örneğin, `int num = 0;`). Yerel olarak bir değişken belirten özel bir anahtar kelime yoktur; <u>bu belirleme tamamen değişkenin beyan edildiği yerden yani bir yöntemin açılış ve kapanış parantezleri arasında gelir</u>. Bu nedenle, yerel değişkenler yalnızca bildirildikleri yöntemlerle görülebilir; sınıfın geri kalanından erişilemezler. Yani sadece bir metodun içinde deklare edildiklerinden, onlara erişim de ilgili metod üzerinden olur. Bu sebepten ötürü yerel değişkenlerin deklarasyonunda **erişim değiştiricileri(access modifier)** yoktur. Yani **(public, protected, private)** gibi anahtar kelimeleri yerel değişkenlerin deklarasyonunda göremezsiniz.
+Bir nesne kendi durumunu **alanlarda(fields)** sakladığı gibi, bir yöntem de geçici durumunu **yerel değişkenlerde** saklar. Yerel bir değişkenin deklarasyonu, bir örnek değişkeninin deklarasyonuna benzerdir (örneğin, `int num = 0;`). Yerel olarak bir değişken belirten özel bir anahtar kelime yoktur; <u>bu belirleme tamamen değişkenin beyan edildiği yerden yani bir yöntemin açılış ve kapanış parantezleri arasında gelir</u>. Bu nedenle, yerel değişkenler yalnızca bildirildikleri yöntemlerle görülebilir; sınıfın geri kalanından erişilemezler. Yani sadece bir metodun içinde deklare edildiklerinden, onlara erişim de ilgili metod üzerinden olur.
 
 
 
@@ -142,7 +142,9 @@ public class Deneme {
 }
 ```
 
-Yukarıdaki [örnekte](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ne demek istediğimi sanırım daha net anlatabilirim. Dikkat edilecek olursa **InnerClas**'ın içinde iki tane **x** değişkeni var.  Bunlardan biri void *deneGor()* metoduna ait olan **x** değişkeni(yani yerel değişken), diğeri ise bir static olmayan dinamik bir değişken(yani instance variable). Ben burada *System.out.println(x)* yaparak x'i yazdırmak istiyorum.. Peki hangi **x** değişkenini yazdıracak dersiniz? Kod üzerinde *Back*, *Forward* butonlarını kullanarak kodun nasıl çalıştığını görebilirsiniz. Aslında burada, *deneGor* metodunun içindeki **x** yerel değişkenini ekrana basacaktır. Kısaca yaptığımız adımları gözden geçirelim.
+Yukarıdaki [örnekte](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ne demek istediğimi sanırım daha net anlatabilirim. Dikkat edilecek olursa **InnerClas**'ın içinde iki tane **x** değişkeni var.  Bunlardan biri `void` **deneGor()** metoduna ait olan **x** değişkeni(yani yerel değişken), diğeri ise bir **static olmayan** dinamik bir değişken(yani instance variable).
+
+Ben burada `System.out.println(x)` yaparak **x**'i yazdırmak istiyorum.. Peki hangi **x** değişkenini yazdıracak dersiniz? Kod üzerinde **Back**, **Forward** butonlarını kullanarak kodun nasıl çalıştığını görebilirsiniz. Aslında burada, **deneGor** metodunun içindeki **x** yerel değişkenini ekrana basacaktır. Kısaca yaptığımız adımları gözden geçirelim.
 
 - ilk önce main metod içinde InnerClas sınıfının bir nesnesini yarattık.
 - Sonra bu nesneyi **c** değişkenine atadık.
@@ -150,7 +152,7 @@ Yukarıdaki [örnekte](http://www.pythontutor.com/visualize.html#code=public%20c
 - görüldüğü üzere **c** değişkeni *deneGor* metodunu çağırdı,
 - akabinde *deneGor* metodu ise kendi içindeki yerel değişkeni(local variable) olan **x**'i ekrana bastı.
 
-Eğer *System.out.println(x)* yerine *System.out.println(this.x)* yazmış olsaydık, yerel değişken(local variable) yerine ekrana instance variable olan x'i basacaktı. Java'da her zaman **this** anahtar sözcüğü instance variable'ı, yani nesnenin değişkenlerini niteler. Bu yüzden tanımları bilmekte yarar var. *this* anahtar sözcüğü kullanıldığında ise [sonuç](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=15&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) aşağıdaki gibi olacaktır.
+Eğer `System.out.println(x)` yerine `System.out.println(this.x)` yazmış olsaydık, **yerel değişken(local variable)** yerine ekrana **instance variable** olan **x**'i basacaktı. Java'da her zaman **this** anahtar sözcüğü instance variable'ı, yani nesnenin değişkenlerini niteler. Bu yüzden tanımları bilmekte yarar var. **this** anahtar sözcüğü kullanıldığında ise [sonuç](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=15&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) aşağıdaki gibi olacaktır.
 
 ```java
 public class Deneme {
@@ -167,30 +169,43 @@ public class Deneme {
     }
 }
 ```
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Önemli Hatırlatma</h4>
+---
+Yerel değişkenler(local variables) ile ilgili bir diğer önemli nokta ise şudur. Yerel değişkenleri tanımlarken **erişim değiştiriciler(yani access modifiers)** kullanamayız(**final dışında**). Access Modifiers'ları hatırlayacak olursak;
 
-Yerel değişkenler(local variables) ile ilgili bir diğer önemli nokta ise şudur. Yerel değişkenleri tanımlarken erişim değiştiriciler(yani access modifiers) kullanamayız(final dışında). Access Modifiers'ları hatırlayacak olursak;
-
-■ public
-■ protected
-■ default
-■ private
-■ final
-
+* public
+* protected
+* default
+* private
+* final
+</div>
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/illegal_start.png" alt="Illegal Start of expression for local variables">
 
-Yukarıdaki görselde yerek değişkene bir erişim değiştirici uygulamaya çalıştım. Görüldüğü gibi derleme hatası aldım. Koda şu [linkten](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20private%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ulaşabilirsiniz.
+Yukarıdaki görselde **yerel değişkene** bir **erişim değiştirici** uygulamaya çalıştım. Görüldüğü gibi derleme hatası aldım. Koda şu [linkten](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20private%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ulaşabilirsiniz.
 
 
-**Parametreler - Parameters :**
+### Parametreler (Parameters)
 Bir yönteme veya oluşturucuya(*constructor*) bilgi aktarmak için kullanılan argümanlar parametre olarak adlandırılır. Bir yöntem veya *constructor* için deklarasyon, bu yöntem veya *constructor* için bağımsız değişkenlerin sayısını ve türünü bildirir.
+
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Parametre ve Argüman Arasındaki Fark</h4>
+---
+
+Aslında **parametre** ile **argüman** arasında da ufak bir **fark** vardır.
+
+* **Parametre** yöntem deklerasyonunda kullanılan, yani yöntem imzasının bir parçası olan şeydir. Yani aşağıdaki **num** tipi int olan bir parametredir.
+
+* **Argüman** ise bu metodu kullanmak istediğimizde yani metodu çağırdığımızda metodun içine aldığı değerdir. Örneğin bu metodun içine değer olarak **32** veya **44** int değerlerini aldığımızda bunlar aslında argüman olarak ifade edilir.
 
 {% highlight java %}
 public String methodA(int num) {
     // method body goes here
 }
 {% endhighlight %}
+</div>
 
-Yukarıdaki örnektede görüleceği üzere methodA'yı kullanabilmek için int tipinde bir sayıya ihtihacınız olduğu anlamına geliyor. Yani bu şartı sağlamadan bu metodu kullanamazsınız. Aksi halde derleme hatası ile karşılaşırsınız. Unutulmaması gereken en önemli şey, parametrelerin her zaman "alanlar(*fields*)" olarak değil "değişkenler(*variables*)" olarak sınıflandırılmasıdır.
+Yukarıdaki örnektede görüleceği üzere **methodA**'yı kullanabilmek için **int** tipinde bir sayıya ihtihacınız olduğu anlamına geliyor. Yani bu şartı sağlamadan bu metodu kullanamazsınız. Aksi halde derleme hatası ile karşılaşırsınız. Unutulmaması gereken en önemli şey, parametrelerin her zaman "alanlar(*fields*)" olarak değil "değişkenler(*variables*)" olarak sınıflandırılmasıdır.
 
 
 ## Static Anahtar Kelimesinin Ne Anlama Geldiğini Bir Örnekte İnceleyelim
