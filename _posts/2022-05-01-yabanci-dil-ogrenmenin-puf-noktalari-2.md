@@ -3,10 +3,10 @@ title: "Yazılımcılar İçin Yabancı Dil Bariyeri (50 Dil Bilen Johan Vandewa
 comments: false
 excerpt: "Bu makale Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sıraladığım paylaşımın devamıdır. "
 header:
-  teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.jpeg"
+  teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.webp"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.jpeg
-  overlay_image: /assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/sincerely-media.jpeg
+  og_image: /assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.webp
+  overlay_image: /assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/sincerely-media.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Sincerely Media](https://unsplash.com/photos/vcF5y2Edm6A) on Unsplash"
 #  video:
@@ -48,7 +48,7 @@ Aşağıda sıraladığım maddeler **Johan Vandewalle**'in instagram sayfasınd
 
 **Yabancı dili öğrenmekten vazgeçmeyin, hedefinize çok yaklaşmış olabilirsiniz:** Bu karikatürü yabancı dil öğrenenler için çok anlamlı buluyorum. Tecrübeme göre yeni bir dil öğrenmekte olduğunuz zaman hedefe kalan mesafeyi tahmin etmeniz çok zor, hatta imkânsız diyebiliriz. Bir de siz ilerledikçe hedefiniz de sizinle beraber yer değiştirir. Mesela önce basit sohbetler yapmayı öğrenmek istiyorsunuz, o noktaya yaklaşınca birden çıtayı yükselterek gazete de okuyabilmek istiyorsunuz, bir zaman sonra amacınız tekrar değişiyor: bu sefer roman da okuyabilmek istiyorsunuz. Bazen çıtayı yükselttiğinizin bilincinde bile değilsiniz, eski hedef(ler)inizi unutmuş gibisiniz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/35.png" alt="Dil öğrenmenin püf noktası 35 - Yabancı dili öğrenmekten vazgeçmeyin, hedefinize çok yaklaşmış olabilirsiniz">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/35.webp" width="100%" height="100%"  alt="Dil öğrenmenin püf noktası 35 - Yabancı dili öğrenmekten vazgeçmeyin, hedefinize çok yaklaşmış olabilirsiniz">
 
 Hedefe doğru yaptığınız yolculukta bir öğretmen size rehberlik edebilir. Ben mesela aşağı yukarı 30 yıldır öğrencilerimi hep aynı yoldan hedefe götürüyorum. Hedef, Türkçenin bütün önemli yapılarını ve önemli sözvarlığını öğrendikten sonra yine bir sözlüğün yardımıyla herhangi bir Türkçe (yazılı ya da sözlü) metni anlayabilmeleri ve kendilerini sözlü ya da yazılı olarak ifade edebilmeleri. Yolun her aşamasında çok net olarak öğrencilerimin nerede bulunduklarını biliyorum ve onlara anlatıyorum. Birinci dönemin sonunda bir Türkiye gezisinde karşılaştıkları en önemli durumlarda meramlarını anlatabilirler ve kendilerine söylenenleri anlayabilirler.
 
