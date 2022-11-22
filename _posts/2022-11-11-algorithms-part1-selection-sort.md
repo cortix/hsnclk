@@ -30,7 +30,7 @@ classes: wide
 ---
 The following card game simply explains how the **selection algorithm** works. The game is very simple; we want to sort the **scattered cards** <u>from smallest to largest</u> by comparing them with each other.
 
-To do this; first we need to start with the element in the **first position** and compare this element with other elements to find the **smallest** element. <u>If we find the smallest element in the part of the list other than the first position, we need to **swap** it with the first element.</u> Then we can continue the similar process up to the **2nd**, **3rd** ..... and till the **penultimate** element of the list, respectively.
+To do this; first we need to start with the element in the **first position** and compare this element with other elements to find the **smallest** element. <u>If we find the smallest element in the part of the list other than the first position, we need to <b>swap</b> it with the first element.</u> Then we can continue the similar process up to the **2nd**, **3rd** ..... and till the **penultimate** element of the list, respectively.
 
 <div class="notice--warning" markdown="1">
 <h4 class="no_toc"><i class="fas fa-comment"></i> Note:</h4>
