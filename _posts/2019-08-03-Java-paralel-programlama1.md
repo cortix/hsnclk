@@ -17,9 +17,10 @@ tags:
   - paralel programlama
   - fork/join
 last_modified_at: 2018-06-06T15:12:19-04:00
-toc: true
+toc: false
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
+classes: wide
 ---
 
 
@@ -34,7 +35,7 @@ Bilgisayar bilimlerinde, sıralı bir algoritma(**sequential algorithm**) veya s
 Bir algoritma bir işlem sırasına sahiptir. Bunları **S<sub>1</sub>, S<sub>2</sub>, S<sub>3</sub>, S<sub>4</sub>** şeklinde sıralayabiliriz. Çok çekirdekli işlemciler için paralel programlamanın arkasındaki temel fikir, bu adımlardan hangisinin birbirleriyle paralel çalışabileceğini belirlemektir. Kısacası asıl önemli olan bu paralelliklerinin nasıl koordine edilmesi gerektiğidir.
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Modifiers</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Örnek</h4>
 ---
 Basit bir örnek ile başlamak gerekirse, integer içeren bir dizi olduğunu varsayalım. Amacımız array'in sahip olduğu elementlerin toplamını hesaplamak olsun. Şimdi bunu yapmanın bir yolu, onu iki yarıya bölmek ve alt yarı ile üst yarıdaki toplamı ayrı ayrı hesaplamak. Böylece;
 
@@ -85,7 +86,7 @@ S3; // S1 ve S2 tamamlandıktan sonra iki kısmi toplamı birleştirir.
 {% endhighlight %}
 
 - Görev oluşturma(**task creation**) için zaman uyumsuz(**asenkron**) gösterimini öğrendik: ``async`` **S<sub>1</sub>** --> ``async`` notasyonu parent task'ın bir child task oluşturmasına sebep olur. ``async`` notasyonuna sahip task, parent task ile asenkron bir şekilde işleme alınır. Burada işlem parent task'ın öncesinde sonrasında veyahut parelel bir şekilde gerçekleşebilir.
-- ``finish`` notasyonunu kullanarak görev sonlandırma(*task termination*) gösterimini öğrendik. ``finish`` notasyonu, parent task'ın çalışmasını ve ``finish`` scope içinde oluşturulan tüm asenkron görevlerin tamamlanmasını bekler. ``async`` ve ``finish`` yapıları isteğe bağlı olarak yerleştirilmiş olabilir.
+- ``finish`` notasyonunu kullanarak görev sonlandırma(**task termination**) gösterimini öğrendik. ``finish`` notasyonu, parent task'ın çalışmasını ve ``finish`` scope içinde oluşturulan tüm asenkron görevlerin tamamlanmasını bekler. ``async`` ve ``finish`` yapıları isteğe bağlı olarak yerleştirilmiş olabilir.
 
 
 ## Referanslar :
