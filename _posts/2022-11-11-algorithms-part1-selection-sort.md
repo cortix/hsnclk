@@ -6,7 +6,7 @@ header:
   teaser: "/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.webp"
   #og_image: /assets/images/page-header-og-image.png
   og_image: /assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.webp
-  overlay_image: /assets/images/unsplash-image-58.jpeg
+  overlay_image: /assets/images/unsplash-image-58.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [zero take](https://unsplash.com/photos/jSB9PWaxhXo) on Unsplash"
   #cta_label: "More Info"
