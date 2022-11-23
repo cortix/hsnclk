@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 8 - Alıştırmalar"
 comments: true
 excerpt: "Bu bölümde şu ana kadar öğrendiklerimizi test etmek amacıyla birkaç tane örnek kod üzerinde çalışacağız."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-12.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [NOAA](https://unsplash.com/photos/sDCG1hTV8mI) on Unsplash"

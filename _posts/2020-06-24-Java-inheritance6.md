@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 6 - Sınıf İnşası için Derleyici Kuralları"
 comments: false
 excerpt: "Bu derste Java'da sınıf inşaası sırasında derleyicinin yazdığımız kodu nasıl modifiye edip Jvm'e gönderdiğinden ve belli başlı derleyici kurallarından bahsedeceğiz. Bunun yanı sıra Java'nın arka planda nasıl çalıştığını da ele alacağız."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-48.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Daniel Salgado](https://unsplash.com/photos/1eTc_d3sdHs) on Unsplash"
