@@ -5,7 +5,7 @@ excerpt: "Bu bölümde abstract sınıfları ve arayüzleri ele almak istiyorum.
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-58.jpeg
+  overlay_image: /assets/images/unsplash-image-58.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [zero take](https://unsplash.com/photos/jSB9PWaxhXo) on Unsplash"
   #cta_label: "More Info"
@@ -32,7 +32,7 @@ Aslında **abstract sınıf** ve **interface** özünde ikisi de soyut kavramlar
 
 Normalde bir üst sınıfım ve onu miras alan bir alt sınıfım oluyordu. Burada yapmak istediğim şey aslında yine kalıtımı bazı kısıtlamalar getirerek uygulamak olacak. Hemen bir örnek vermek istiyorum.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm5/uml1.png" alt="inheritance">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm5/uml1.webp"  width="100%" height="100%" loading="lazy" alt="inheritance">
 
 Normalde bir sınıfı miras aldığımızda o sınıfın bütün davranışlarını da miras almış olurduk. Yani metotları ve özelliklerini(fields) kastediyorum. Alt sınıflar da eğer farklı bir şey yapmak isterlerse metotları kendilerine göre geçersiz kılabiliyorlardı.
 

@@ -5,7 +5,7 @@ excerpt: "Bu bölümde casting işleminin ne olduğuna ve hangi durumlarda bu i�
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-54.jpg
+  overlay_image: /assets/images/unsplash-image-54.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Serge Kutuzov](https://unsplash.com/photos/_FPy-FUndok) on Unsplash"
   #cta_label: "More Info"
@@ -21,6 +21,7 @@ tags:
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 
@@ -31,10 +32,9 @@ toc_label: "SAYFA İÇERİĞİ"
 
 Bazı durumlarda derleme ve çalışma zamanı kararlarını değiştirmek için derleyiciye yardım etmek gerekebilir. Bu gibi durumlarda casting işlemini uygularız. Ne demek istediğimi bir öndeki bölümde yarım bıraktığımız kod üzerinden göstermek istiyorum.
 
-<figure style="width: 200px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml1.png" alt="polimorfizm">
-  <figcaption></figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml1.webp"  width="200px" height="100%" class="align-center" loading="lazy" alt="polimorfizm">
+
 
 ```java
 Person s = new Student("Hasan", 1111);
