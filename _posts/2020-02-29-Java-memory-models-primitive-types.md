@@ -40,18 +40,21 @@ int var = 1;
 //programlama dili diğer yedi ilkel veri türünü de destekler.
 //Bunları aşağıda görebilirsiniz.
 ```
-
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> İlkel Türler ve Referans Türleri</h4>
+---
 Veri türleri iki gruba ayrılır:
 * İlkel veri türleri
 * İlkel olmayan veri türleri String, Arrays(diziler) ve Classes(Sınıflar)
+</div>
 
-Örnek kod, programınıza "var" adlı bir alanın var olduğunu, sayısal verileri tuttuğunu ve başlangıç ​​değeri "1" olduğunu söyler. Bir alan, ilkel veya referans türünde(yani ilkel olmayanlar) olabilir. Sekiz ilkel tip vardır: *boolean* , *byte* , *char* , *short* , *long* , *float* ve *double*'dır. Bir referans türü, arabirimler(*interfaces*), diziler(*arrays*) ve *enumerated* türler dahil olmak üzere, doğrudan veya dolaylı bir `java.lang.Object` alt sınıfı olan herhangi bir şey olabilir.
+Örnek kod, programınıza "**var**" adlı bir alanın var olduğunu, sayısal verileri tuttuğunu ve başlangıç ​​değeri "**1**" olduğunu söyler. Bir alan, **ilkel** veya **referans türünde(yani ilkel olmayanlar)** olabilir. Sekiz ilkel tip vardır: **boolean** , **byte** , **char** , **short** , **long** , **float** ve **double**'dır. Bir referans türü, arabirimler(**interfaces**), diziler(**arrays**) ve **enumerated** türler dahil olmak üzere, doğrudan veya dolaylı bir `java.lang.Object` alt sınıfı olan herhangi bir şey olabilir.
 
-Java'da tanımlanan bu sekiz ilkel veri tipi nesne olarak kabul edilmez ve doğrudan yığın(*stack*) üzerinde depolanırlar. Fakat nesneler, ilkel veri tiplerinin aksine daha komplex veri tipleri olduğundan *heap* adı verilen özel bir alanda depolanırlar. Her ne kadar farklı hafıza birimleri olsa da heap de stack de bilgisayarın RAM'inde yer alır. Heap ve stack dışında da JVM tarafından ayrılan bölümler vardır. Yalnız bu makalenin konusu sadece bu ikisini içerdiği için diğerlerine girmeyeceğim.
+Java'da tanımlanan bu sekiz ilkel veri tipi nesne olarak kabul edilmez ve doğrudan yığın(**stack**) üzerinde depolanırlar. Fakat nesneler, ilkel veri tiplerinin aksine daha **kompleks veri tipleri** olduğundan **heap** adı verilen özel bir alanda depolanırlar. <u>Her ne kadar farklı hafıza birimleri olsa da heap de stack de bilgisayarın <b>RAM</b>'inde yer alır</u>. Heap ve stack dışında da JVM tarafından ayrılan bölümler vardır. Yalnız bu makalenin konusu sadece bu ikisini içerdiği için diğerlerine girmeyeceğim.
 
 Bu yazıdaki asıl amacım, java'da ilkel(primitive) tür ve ilkel olmayan türler olan nesne ve dizilerin hafızada nasıl oluştuğunu resmederek göstermeye çalışmaktır.
 
-İlkel tür, dil tarafından önceden tanımlanır ve ayrılmış(reserved keyword) bir anahtar sözcükle adlandırılır. (Yani int, double, short gibi...) İlkel değerler sahip olduğu durumu diğer ilkel değerlerle paylaşmaz.
+İlkel tür, dil tarafından önceden tanımlanır ve **ayrılmış(reserved keyword**) bir anahtar sözcükle adlandırılır. (Yani **int**, **double**, **short** gibi...) İlkel değerler sahip olduğu durumu diğer ilkel değerlerle paylaşmaz.
 
 ## String interning
 
