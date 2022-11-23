@@ -3,9 +3,9 @@ title: "Java'da Hafıza Modeli 1 - İlkel Veri Tipleri(Primitive Types)"
 comments: false
 excerpt: "Java'da İlkel Veri Tipleri Bellekte Nasıl Saklanır? Bu durumun net anlaşılması için nasıl simüle edebiliriz? String interning nedir?"
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
-  overlay_image: /assets/images/unsplash-image-34.jpg
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
+  overlay_image: /assets/images/unsplash-image-34.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Vincent van Zalinge](https://unsplash.com/photos/vUNQaTtZeOo) on Unsplash"
 #  video:
@@ -21,6 +21,7 @@ tags:
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 
@@ -54,9 +55,11 @@ Bu yazıdaki asıl amacım, java'da ilkel(primitive) tür ve ilkel olmayan türl
 
 ## String interning
 
-Yukarıda listelenen sekiz ilkel veri türüne ek olarak, Java programlama dili de `java.lang.String` sınıfı aracılığıyla karakter dizileri için özel destek sağlar. Karakter dizginizi çift tırnak içine almak otomatik olarak yeni bir String nesnesi oluşturur; örneğin, String s = "bu bir dizedir" ;. Dize nesneleri değiştirilemez, yani oluşturulduktan sonra değerleri değiştirilemez. String sınıfı teknik olarak ilkel bir veri türü değildir, ancak dil tarafından kendisine verilen özel destek göz önüne alındığında, muhtemelen bunu böyle düşünme eğiliminde olacaksınız. *String* objelerinin çift tırnak içerisinde gösterilme şekli sayesinde gereksiz string kalabalığından da kurtulmuş oluruz. Örneğin "`hello`" değerinde bir string oluşturulduktan sonra, tekrar benzer değeri tutan bir string objesini çift tırnak("") kullanarak oluşturmak istesek, java bu objenin daha önceden oluştuğunu bildiği ve alandan tasarruf sağlamak istediği için ilk oluşturulan "`hello`" objesini kullanır. Bu işleme "**string interning**" denir. Yalnız bu durum `new` anahtar kelimesini kullanarak oluşturulan String objeleri için geçerli değildir. `new` anahtar kelimesini kullanarak oluşturulan String objeleri heap hafıza alanında her defasında yeni obje oluşturmaya zorlar. Bu da basit text içeren string objeleri için ekonomik sayılmaz. String'in bu iki türlü kullanımından ötürü string objeleri primitive muamelesi görür. Ama özünde değildir. Bu arada String'in java heap memory alanında **string pool** adında özel bir alana sahip olduğu için onu başka blog yazılarında bahsedeceğim. Şimdilik böyle bir statüye sahip olduğunu bilmemiz yeterli olacaktır.
+Yukarıda listelenen **8 ilkel veri** türüne ek olarak, Java programlama dili de `java.lang.String` sınıfı aracılığıyla **karakter dizileri** için özel destek sağlar. <u>Karakter dizginizi çift tırnak içine almak otomatik olarak yeni bir String nesnesi oluşturur</u>; örneğin, `String s = "bu bir dizedir";`. <u>Dize nesneleri değiştirilemez, yani oluşturulduktan sonra değerleri değiştirilemez</u>. String sınıfı teknik olarak ilkel bir veri türü değildir, ancak dil tarafından kendisine verilen özel destek göz önüne alındığında, muhtemelen bunu böyle düşünme eğiliminde olacaksınız. *String* objelerinin **çift tırnak** içerisinde gösterilme şekli sayesinde gereksiz string kalabalığından da kurtulmuş oluruz.
 
-Aşağıdaki şekilde **string interning** olayının nasıl gerçekleştiğini görebilirsiniz. **a1** ve **a2** referansları, string çift tırnak kullanılarak oluşturulduğu için aynı objeyi işaret ederken, *new* anahtar kelimesi ile oluşturulan **a3** referansı ise farklı bir string objesini işaret etmektedir.
+Örneğin "`hello`" değerinde bir string oluşturulduktan sonra, <u>tekrar benzer değeri tutan bir string objesini <b>çift tırnak("")</b> kullanarak oluşturmak istesek</u>, java bu objenin daha önceden oluştuğunu bildiği ve alandan tasarruf sağlamak istediği için ilk oluşturulan "`hello`" objesini kullanır. Bu işleme "**string interning**" denir. <u>Yalnız bu durum <b>new</b> anahtar kelimesini kullanarak oluşturulan String objeleri için geçerli değildir.</u> `new` anahtar kelimesini kullanarak oluşturulan String objeleri heap hafıza alanında her defasında yeni obje oluşturmaya zorlar. Bu da basit text içeren string objeleri için ekonomik sayılmaz. String'in bu iki türlü kullanımından ötürü string objeleri primitive muamelesi görür. Ama özünde değildir. Bu arada String'in java heap memory alanında **string pool** adında özel bir alana sahip olduğu için onu başka blog yazılarında bahsedeceğim. Şimdilik böyle bir statüye sahip olduğunu bilmemiz yeterli olacaktır.
+
+Aşağıdaki şekilde **string interning** olayının nasıl gerçekleştiğini görebilirsiniz. **a1** ve **a2** referansları, string çift tırnak kullanılarak oluşturulduğu için aynı objeyi işaret ederken, **new** anahtar kelimesi ile oluşturulan **a3** referansı ise farklı bir string objesini işaret etmektedir.
 
 ```java
 String a1 = "hello";
@@ -64,7 +67,7 @@ String a2 = "hello";
 String a3 = new String("hello");
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/string-interning.png" alt="string interning">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/string-interning.webp"  width="100%" height="100%"  loading="lazy" alt="string interning">
 
 
 
@@ -87,7 +90,7 @@ Adım adım yukarıdaki kod bloğu nasıl çalışır, bunu resmetmeye çalışa
 
 <!-- 1.variable declaration: Draw a box and label it with the variable's name -->
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg1.png" alt="java variable assignment">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg1.webp"  width="250px" height="100%"  loading="lazy" alt="java variable assignment">
 
 > Bu kutuyu, hafızada primitive type(ilkel tür) için açılan boşluğu, yani alanı temsil ediyor gibi düşünebilirsiniz.
 
@@ -95,20 +98,20 @@ Adım adım yukarıdaki kod bloğu nasıl çalışır, bunu resmetmeye çalışa
 
 <!-- 2.variable assignment: put the value of the right hand side(RHS) into the box for the variable on the left hand side(LHS). -->
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg1-2.png" alt="java variable assignment">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg1-2.webp"  width="400px" height="100%"  loading="lazy" alt="java variable assignment">
 
 * **2.satır:** Kodun bir sonraki satırı ise atama komutudur(*assignment statement*). Burada da Java'ya şunu söylüyorsunuz. Java sağ tarafta bulunan değeri al(yani 5'i) ve sol tarafta bulunan değişkene(yani **deg1** olana) yerleştir(yani atama yap). Hafıza modelimize geri dönecek olursak, 5 sayısını alıp kutunun içine yerleştiriyor gibi düşünebiliriz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg2.png" alt="java variable assignment">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg2.webp"  width="250px" height="100%"  loading="lazy" alt="java variable assignment">
 
 * **3.satır:** Bu satırda, birinci satırda olduğu gibi yeni bir değişken tanımlıyoruz. Bu değişkenin ismini de **deg2** olarak etiketlediğimizi düşünelim. **deg1** için yaptıklarımızı aynen bunun içinde yapacağız. Bir kutu oluşturacak ve bu kutuyu **deg2** ismiyle etiketleyeceğiz.
 > Etiketlemekten kastım, aslında bir isim vereceğiz demek istiyorum. İngilizce label karşılığı etiketlemek olduğu için tercih ettim.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg2-2.png" alt="java variable assignment">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg2-2.webp"  width="400px" height="100%"  loading="lazy" alt="java variable assignment">
 
 * **4.satır:** Bu satır bir başka atama komutunun olduğu satırdır. Bir önceki atama işlemlerinden biraz daha farklı olduğunu görebilirsiniz. Çünkü işlemin sağ tarafında bulunan değer bir rakam değil, başka bir değişkendir. Burada bizden istenen, **deg1** değişkeninin sahip olduğu değerin aynısını **deg2** değişkenine de atamaktır. Bu durumu, **deg1** kutusunun içindeki değerin aynısını **deg2** kutusunun içine yapıştırarak  hafıza modelimizde resmedebiliriz. Resimden de görüleceği üzere **deg1** ve **deg2** değişkenleri aynı değeri saklamaya başladı. Dikkat edilecek olursa, bu iki değişken de tamamen farklı ve hiçbir şekilde birbirlerine bağlı değiller. Sadece geçici olarak aynı değeri saklıyorlar.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg1-3.png" alt="java variable assignment">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-primitive-types/deg1-3.webp"  width="400px" height="100%"  loading="lazy" alt="java variable assignment">
 
 * **5.satır:** Bu satırda bir başka atama komutu ile karşılaşıyoruz. Bu sefer **deg1** değişkenine 12 değerini atamamız isteniyor.
 Yani hafıza modelimizde düşünecek olursak: 12 değerini al ve **deg1** değişkeninin olduğu kutuya yerleştir. Yani bu, eski değerimiz olan 5'in yerini şimdi 12 alacak demektir. Dikkat ederseniz değişen sadece **deg1** değişkeni!! **deg2** değişkeni için yaptığımız bir işlem olmadı. Daha önce de belirttiğimiz üzere, bu iki değişken arasında aynı değeri tutmalarının dışında bir benzerlik ve bağlantı yok. Tesadüfen aynı değeri tutan iki değişken gibi düşünülebilir.  
