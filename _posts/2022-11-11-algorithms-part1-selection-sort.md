@@ -46,13 +46,13 @@ Finally, if you want to shuffle the cards again and restart the game, you can pr
 <iframe sandbox="allow-popups allow-same-origin allow-scripts allow-top-navigation" src="https://www.khanacademy.org/computer-programming/program/4808854910533632/embedded?embed=yes&amp;author=no&amp;editor=no&amp;width=688&amp;buttons=no&amp;settings=%7B%22sortType%22%3A%22selection%22%7D" class="perseus-scratchpad" allowfullscreen="" style="height: 450px; width: 100%; border-top-width: 0px;
 border-right-width: 0px;
 border-bottom-width: 0px;
-border-left-width: 0px;"></iframe>
+border-left-width: 0px;" title="Selection Sort Algorithm"></iframe>
 
 ## An Example of Selection Sort
 
 For example we have an unsorted list like this;
 
-<h1><span style="color: blue">9 - 4 - 3 - 1</span></h1>
+<h1><span style="black: blue">9 - 4 - 3 - 1</span></h1>
 {: .text-left}
 
 ### Our purpose
