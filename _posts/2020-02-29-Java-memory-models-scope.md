@@ -101,27 +101,27 @@ Yukarıdaki kod bloğunda gerçekleşenleri adım adım resmedecek olsak, öncek
 
 **m** değişkeni görüleceği üzere **main** yönteminin içinde yaratılmıştır. Bu da bize bu değişkenin **main** kapsamı(scope) içinde yaşayabileceğini ve bu metodunun dışında bir yerden erişilemeyeceğini söyler. Aşağıdaki şekilden de görüleceği üzere artık tanımladığımız değişkenleri bir de içinde bulundukları kapsamları(scope) belirterek çizmek istiyorum.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope1.webp"  width="100%" height="100%"  loading="lazy" alt="scope in java">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope1.webp"  width="400px" height="100%" class="align-center"  loading="lazy" alt="scope in java">
 
 Bir sonraki satırda **SampleTest** sınıfı tipinde bir değişkenimizi(yani referans) oluşturuyoruz. Dikkat ederseniz bu değişkenin de kapsamı **main** yöntemidir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope2.webp"  width="100%" height="100%"  loading="lazy" alt="scope in java">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope2.webp"  width="400px" height="100%" class="align-center"  loading="lazy" alt="scope in java">
 
 Şu ana kadar işlediklerimizi, yani scope dışında olan bölümleri önceki derslerde de görmüştük. **sample1** değişkeni/referansı bir **object type** değişkendir. **new** anahtar kelimesi ile bir nesne yaratılacağı sırada işler biraz karışmaktadır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope3.webp"  width="100%" height="100%"  loading="lazy" alt="scope in java">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope3.webp"  width="400px" height="100%" class="align-center"  loading="lazy" alt="scope in java">
 
 Görüleceği üzere **2 üye değişkeni** ile birlikte nesnemiz heap alanında oluşturulmuştur. <u>Üye değişkenleri her zaman nesnenin içinde ve heap alanında yer alırlar.</u> Nesne oluşturulurken ilk etapda ilgili sınıfın constructor yöntemi çağrılır ve bu üye değişkenleri ilklendirilir(initialize). İlklendirilmekten kasıt değişken atama işlemidir. Bu ilklendirme işlemini de kurucunun aldığı parametreler sayesinde gerçekleştiririz. **Kurucu(constructor)** çağrılırken şu şekilde bir işlem gerçekleşir. Bir yandan ilgili sınıfı da görmekte yarar var.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope4.webp"  width="100%" height="100%"  loading="lazy" alt="scope in java">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope4.webp"  width="400px" height="100%" class="align-center"  loading="lazy" alt="scope in java">
 
 Constructor parametre olarak aldığı **xx** ve **yy** değişkenlerini nesnenin üye değişkenleri olan **x** ve **y** değişkenlerini ilklendirmek için kullanır. Constructor'un içindeki **this** anahtar kelimesi heap alanındaki ilgili nesneyi temsil etmektedir. Oku takip ederek üye değişkenlerinin nasıl ilklendirildiğini görebilirsiniz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope5.webp"  width="100%" height="100%"  loading="lazy" alt="scope in java">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope5.webp"  width="400px" height="100%" class="align-center"  loading="lazy" alt="scope in java">
 
 Şimdi, **constructor** ile işimiz bitti. Peki constructor kapsamına ne olacak? Bir yöntem sona erdiğinde kapsamı da kaybolur. Böylece tüm bu yerel değişkenler, parametreler kaybolur. Onları bir daha asla kullanamazsınız. Yani içinde sahip olduğu her şey kapsamın yaşam ömrü kadardır. Kurucunun kapsamı silindikten sonra **main** yönteminin kapsamına geri dönebiliriz. Son olarak **sample1** değişkenine heap alanındaki nesnenin referansı verilir. Böylece kodda yer alan bütün adımları teker teker gerçekleştirmiş olduk.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope6.webp"  width="100%" height="100%"  loading="lazy" alt="scope in java">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-scope/scope6.webp"  width="400px" height="100%" class="align-center"  loading="lazy" alt="scope in java">
 
 
 Burada **this** anahtar kelimesi ile ilgili ek bir bilgi vermek istiyorum. **this** opsiyoneldir. Siz belirtmeseniz de Java arka planda mantıksal bir çıkarım yaparak bu işlemi sizin yerinize zaten gerçekleştirir. Aşağıdaki kodu **this** anahtar kelimesi olmadan güncellemeyi deneyebilirsiniz.
@@ -150,7 +150,8 @@ class SampleTest {
 > **Not:** Üye değişkenleri ingilizce olarak **member variables** veyahut **instance variables** olarak da geçer. Yani sınıftan üretilen herbir nesneye özel olan değişkenlerdir.
 
 ## Referanslar
-* Bütün şekiller [https://www.lucidchart.com](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.
+
+* Bütün şekiller [lucidchart](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.
 * [6.3. Scope of a Declaration](https://docs.oracle.com/javase/specs/jls/se8/html/jls-6.html#jls-6.3)
 * [Java Heap Space vs Stack – Memory Allocation in Java](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 * [Scope](https://www.iitk.ac.in/esc101/05Aug/tutorial/java/nutsandbolts/scope.html)

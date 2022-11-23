@@ -5,7 +5,7 @@ excerpt: "Aslında bu bölümde anlatılacaklar şu ana kadar öğrendiklerimizi
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-33.jpg
+  overlay_image: /assets/images/unsplash-image-33.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [ian dooley](https://unsplash.com/photos/TevqnfbI0Zc) on Unsplash"
   #cta_label: "More Info"
@@ -18,6 +18,7 @@ tags:
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
@@ -25,12 +26,10 @@ toc_label: "SAYFA İÇERİĞİ"
 
 ## Konu ile alakalı bir bilgilendirme
 
-Arkadaşlar, bu konu her ne kadar spesifik bir konu gibi gözükse de bir bağlam içerisinde konuyu ele almak çok daha önemlidir. Bunun için aşağıdaki kategorik içeriklerime sırasıyla bakmanızı şiddetle öneriyorum.
+Arkadaşlar, bu konu her ne kadar spesifik bir konu gibi gözükse de bir bağlam içerisinde konuyu ele almak çok daha önemlidir. Yani, **statik nedir**? sorusunu daha geniş bağlamda düşünmemiz gerekiyor. Bunun için **statik olmayan** <u>değişken ve metotlar nedir</u>? **Statik** ve **statik olmayan** <u> değişkenler hafızada nasıl saklanır</u>? gibi farklı soruları da beraberinde düşünmemiz elzemdir. Bunun için aşağıdaki içeriklerime sırasıyla bakmanızı öneriyorum.
 
 * **Java’da Hafıza Modeli** [serisi](/categories/#java-hafiza-yonetimi)
 * **Java’da Kalıtım ve Java’da Polimorfizm** [serisi](/categories/#java-kalitim-polimorfizm)
-
-Çünkü bağlamdan kopuk bir ilerle zayıf bir temel üzerine güçlü yapılar inşaa etmenize izin vermez. Bu sebepten ötürü üniversitelerde müfredatları belli bir sırayla almanız tavsiye edilir. Umarım yazılarımın bir faydası olur. Şimdiden iyi okumalar.
 
 ## Değişken Geçirme(Passing a Variable)
 
@@ -46,26 +45,23 @@ Programlama dilleri metotlara parametre aktarılırken 2 farklı yaklaşım kull
 
 Önceki derslerde ilkel ve ilkel olmayan tiplerin hafızada nerelerde ve nasıl saklandığını zaten bildiğinizi varsayarak, hibrit bir hafıza şekli ile bu durumu anlatmak istiyorum. Buradaki amaç heap ve stack gibi hafıza birimlerine etraflıca girmeden konuyu daha genel bir çerçeveden ele almaktır.
 
-<figure style="width: 200px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/1.png" alt="how memory works">
-  <figcaption>Kaynak:penjee.com</figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/1.webp"   width="200px" height="100%" class="align-center" loading="lazy" alt="how memory works">
 
 Basitleştirmek için, hafızayı yan yana sıralanmış bloklar olarak düşünebilirsiniz. Ve her bir bloğun da veri saklayan bir alanı temsil ettiğini hayal edin. **Gri rakamlar** herbir bloğun hafızadaki adresini, **mavi** ve **kırmızı** rakamlar ise bu hafıza bloklarında saklanan gerçek değerleri temsil etmektedir.
 
 ## Pass by Value Nedir? (C ve C++ dillerinde)
 
-*"Pass by Value"* yaklaşımı uygulandığında, metotun içine aldığı parametrenin değeri, belleğin başka bir yerine kopyalanır. Şayet metodun değişkenine erişmek veyahut bu değişkeni değiştirmek isterseniz, yalnızca kopyaya erişilir/değiştirilir, orijinal değere dokunulmaz. Aşağıdaki örnekte ``myAge`` değişkeninin orijinal değeri **106** nolu blokta saklanmaktadır ve bu değer **14**'tür. Bu değerin ``calBirthYear`` metoduna geçen kopyasının değeri ise **152** nolu blokta tutulmaktadır.
+**"Pass by Value"** yaklaşımı uygulandığında, metotun içine aldığı parametrenin değeri, belleğin başka bir yerine kopyalanır. Şayet metodun değişkenine erişmek veyahut bu değişkeni değiştirmek isterseniz, yalnızca kopyaya erişilir/değiştirilir, orijinal değere dokunulmaz. Aşağıdaki örnekte ``myAge`` değişkeninin orijinal değeri **106** nolu blokta saklanmaktadır ve bu değer **14**'tür. Bu değerin ``calBirthYear`` metoduna geçen kopyasının değeri ise **152** nolu blokta tutulmaktadır.
 
 ```java
 int myAge = 14;
 calBirthYear(myAge);
 ```
 
-<figure style="width: 350px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/2.png" alt="pass by value">
-  <figcaption>Kaynak:penjee.com</figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/2.webp"   width="350px" height="100%" class="align-center" loading="lazy" alt="pass by value">
+
 
 Şayet bir işlem yapılmak istendiğinde gerekli işlem orijinal değere değil, kopyalanan değere uygulanır. Aslında bunun izahını bir önceki bölüm olan scope(kapsam) konusunda farklı bir şekilde ele almıştık.
 
@@ -78,7 +74,7 @@ int calBirthYear(int age) {
 }
 ```
 
-Peki, *pass by value* yaklaşımı uygulandığında, metot kapsamı dışındaki değişkeni nasıl değiştiririz? Bir değişkeni değere göre iletirken, kaynak değişkeni güncellemenin tek yolu metodun dönen değerini kullanmaktır. Bu, metot dışında yalnızca bir değerin değiştirilebileceği anlamına gelir.
+Peki, "**pass by value**" yaklaşımı uygulandığında, metot kapsamı dışındaki değişkeni nasıl değiştiririz? Bir değişkeni değere göre iletirken, kaynak değişkeni güncellemenin tek yolu metodun dönen değerini kullanmaktır. Bu, metot dışında yalnızca bir değerin değiştirilebileceği anlamına gelir.
 
 ```java
 int myAge = 14;
@@ -89,16 +85,15 @@ int increaseAge(int age) {
 }
 ```
 
-<figure style="width: 200px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/3.png" alt="pass by value">
-  <figcaption>Kaynak:penjee.com</figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/3.webp"   width="200px" height="100%" class="align-center" loading="lazy" alt="pass by value">
+
 
 Görüleceği üzere **myAge** değeri ancak bu şekilde değişir. 15 olarak bu değer güncellenir.
 
 ## Pass by Reference Nedir? (C ve C++ dillerinde)
 
-Referans ile geçirme, değişkenin hafıza adresinin ilgili metoda iletildiği anlamına gelir. Yani hafızada ilgili değişkenin değerini saklayan bloğun adresi, metoda geçirilir.
+**Referans ile geçirme**, değişkenin hafıza adresinin ilgili metoda iletildiği anlamına gelir. Yani hafızada ilgili değişkenin değerini saklayan bloğun adresi, metoda geçirilir.
 
 
 **C++ programlama dili ile,**
@@ -128,20 +123,25 @@ int main() {
 
 Yukarıdaki örnek hem C hem de C++ ile gösterilmiştir. Konuyu **java** ile ele almadan önce farklı dillerde bu yaklaşımların nasıl gerçekleştiğini anlamak önemlidir.
 
-Önceki örneklerden de bildiğimiz üzere ``myAge`` değişkeni hafızada **106 nolu** blokta tutulmaktadır. Yani bu değişkenin hafızadaki adresi **106**'dır. Bu örneklerde de, bu değişkenin tuttuğu değer yerine, hafızadaki adresi olan **106** numarasının ``increaseAgeByRef`` metoduna geçirilmesi sağlanıyor. Anlaşılacağı üzere ``increaseAgeByRef`` metodu ``int`` tipinde, ``age`` isminde bir argüman aldığını deklare ediyor. C++ ve C gibi dillerde, değişkenin önünde **&** sembolü geldiğinde, girilen parametrenin hafızadaki adresine işaret ettiğini anlaşılır. Bu örnekte ``myAge`` değişkeninin adresinin **106** nolu blok olduğunu biliyoruz. Bu yüzden bu adresin işaret ettiği bloğun değeri üzerinde işlem yapılacağını anlayabiliriz. <u><i>Yalnız C programlama dilinde ekstra bir işaretçiye daha ihtiyacımız vardır.</i></u> Dikkat ederseniz C ile yazdığımız kodda, metot tanımı içinde, ``age`` değişkeninin hemen önünde bir **( * )** yıldız sembolü bulunmaktadır. Bu sembolün aslında bir anlamı vardır. **&** Sembolü bir değişkenin adresini gösterirken, **( * )** sembolü ise **bu adreste** depolanan *değeri* döndürür. Yani bir nevi **&** sembolünü tersine çevirir. Özetle adres yerine, adresin işaret ettiği bloktaki değeri verir.
+Önceki örneklerden de bildiğimiz üzere ``myAge`` değişkeni hafızada **106 nolu** blokta tutulmaktadır. Yani bu değişkenin hafızadaki adresi **106**'dır. Bu örneklerde de, bu değişkenin tuttuğu değer yerine, hafızadaki adresi olan **106** numarasının ``increaseAgeByRef`` metoduna geçirilmesi sağlanıyor. Anlaşılacağı üzere ``increaseAgeByRef`` metodu ``int`` tipinde, ``age`` isminde bir argüman aldığını deklare ediyor. C++ ve C gibi dillerde, değişkenin önünde **&** sembolü geldiğinde, girilen parametrenin hafızadaki adresine işaret ettiğini anlaşılır. Bu örnekte ``myAge`` değişkeninin adresinin **106** nolu blok olduğunu biliyoruz. Bu yüzden bu adresin işaret ettiği bloğun değeri üzerinde işlem yapılacağını anlayabiliriz.
+
+<u><i>Yalnız C programlama dilinde ekstra bir işaretçiye daha ihtiyacımız vardır.</i></u> Dikkat ederseniz C ile yazdığımız kodda, metot tanımı içinde, ``age`` değişkeninin hemen önünde bir **( * )** yıldız sembolü bulunmaktadır. Bu sembolün aslında bir anlamı vardır. **&** Sembolü bir değişkenin adresini gösterirken, **( * )** sembolü ise **bu adreste** depolanan *değeri* döndürür. Yani bir nevi **&** sembolünü tersine çevirir. Özetle adres yerine, adresin işaret ettiği bloktaki değeri verir.
 
 Bu sayede ``myAge`` değişkeninin orijinal değeri olan **14** doğrudan değiştirilmiş olur. Referansa göre geçirme sayesinde doğrudan orijinal değer üzerinde istediğimiz manipülasyonu yapabiliriz. Burada ``age`` ve ``myAge`` değişkenleri aynı adrese işaret ettiği için, ``age`` değişkeninin değerini değiştirmemiz ``myAge`` değişkenini de etkileyecektir. Burada **14** değerine **1** ekleniyor. Yani **106 nolu** blokta bulunan orijinal değeri **15** olarak güncelliyoruz.
 
 Sonuç olarak **pass by value**'da olduğu gibi değer, ayrı bir bloğa kopyalanmadı. Doğrudan orijinal değer üzerinde gerekli işlemler gerçekleşmiş oldu.
 
-<figure style="width: 350px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/4.png" alt="pass by reference">
-  <figcaption>Kaynak:penjee.com</figcaption>
-</figure>
 
-Referans ile geçirme yaklaşımı ile, metot parametresinde verilen birden fazla değişkeni değiştirmek mümkündür. Bu gibi durumlarda fonksiyon dönüş türünü **true** veya **false** şeklinde yaparak genel durumun başarılı/başarısız olduğunu belirten bir şey veyahut önemli bir değişken döndürülebilir.
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/4.webp" width="350px" height="100%" class="align-center" loading="lazy" alt="pass by reference">
 
-Örneğin;
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+---
+Referans ile geçirme yaklaşımı ile, metot parametresinde verilen birden fazla değişkeni değiştirmek mümkündür.
+
+Bu gibi durumlarda fonksiyon dönüş türünü **true** veya **false** şeklinde yaparak genel durumun başarılı/başarısız olduğunu belirten bir şey veyahut önemli bir değişken döndürülebilir.
+</div>
+**Örneğin;**
 
 
 **C programlama dili ile,**
@@ -189,11 +189,15 @@ int main() {
 ```
 Kodu bu [linkte](http://www.pythontutor.com/cpp.html#code=%23include%20%3Cstdio.h%3E%0A%0Abool%20calculate%28int%20%26c1,%20int%20%26c2,%20int%20%26c3%29%20%7B%0A%20%20%20%20c1%20%3D%20c1%20%2B%201%3B%0A%20%20%20%20c2%20%3D%20c2%20%2B%201%3B%0A%20%20%20%20c3%20%3D%20c3%20%2B%201%3B%0A%20%20%20%20return%20true%3B%0A%7D%0A%0Aint%20main%28%29%20%7B%0A%20%20int%20c1%20%3D%201%3B%0A%20%20int%20c2%20%3D%202%3B%0A%20%20int%20c3%20%3D%203%3B%0A%20%20calculate%28c1,c2,c3%29%3B%0A%20%20printf%28%22C1%20is%20%25d,%20C2%20is%20%25d%20and%20C3%20is%20%25d%5Cn%22,%20c1,%20c2,%20c3%29%3B%0A%20%20return%200%3B%0A%7D%0A%0A&curInstr=10&mode=display&origin=opt-frontend.js&py=cpp&rawInputLstJSON=%5B%5D) çalıştırabilirsiniz.
 
-
-Pass by reference veya pass by value'dan birini kullanmaya karar vermek için iki basit genel kural vardır:
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Basit Kural:</h4>
+---
+**Pass by reference** veya **pass by value**'dan birini kullanmaya karar vermek için iki basit genel kural vardır:
 
 * Bir işlev tek bir değer döndürüyorsa: **pass by value** kullanılabilir,
-* Bir işlev iki veya daha fazla farklı değer döndürüyorsa: **pass by reference** kullanmak daha isabetli olabilir. Son verdiğimiz iki örnek bu madde için uygundur. Dönüş türü boolean olan bir metot içinde birden fazla referans değeri değiştirilmektedir.  
+* Bir işlev iki veya daha fazla farklı değer döndürüyorsa: **pass by reference** kullanmak daha isabetli olabilir. Son verdiğimiz iki örnek bu madde için uygundur.
+Dönüş türü boolean olan bir metot içinde birden fazla referans değeri değiştirilmektedir.  
+</div>
 
 > **Not:** Referans yoluyla geçirme genellikle diziler veya obje gibi yapılar kullanılarak önlenebilir.
 
@@ -226,12 +230,16 @@ public class JSample {
 
 Kodu online bir editör olan pythontutor'da çalıştırmak isterseniz, bu [linki](http://www.pythontutor.com/java.html#code=public%20class%20JSample%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20SomeObject%20someObject%20%3D%20new%20SomeObject%28%22object%201%22%29%3B%0A%20%20%20%20%20%20System.out.println%28someObject%29%3B%0A%20%20%20%20%20%20testMethod%28someObject%29%3B%0A%20%20%20%20%20%20System.out.println%28someObject%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20testMethod%28SomeObject%20someObjectX%29%20%7B%0A%20%20%20%20%20%20%20%20someObjectX%20%3D%20new%20SomeObject%28%22object%202%22%29%3B%0A%20%20%20%20%7D%0A%7D%0A%20class%20SomeObject%20%7B%0A%20%20%20%20public%20SomeObject%28String%20x%29%7B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ziyaret edebilirsiniz.
 
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+---
+> Bir yönteme parametre olarak bir değer (veyahut nesneyi tutan bir referans) geçirirseniz, yöntemin dışında, atanan bu değeri tutan değişkenin değeri veyahut geçirilen bu şey bir nesneyi tutan **referans** ise, bu referansın tuttuğu obje aynı kalır(Çünkü referansın işaret ettiği objenin id'sinin bir kopyası bu metoda geçirilmiştir). Fakat referansın işaret ettiği objenin state'i(yani objenin instance variable'ları) istenilirse metot içinden değiştirilebilir..
 
-> Bir yönteme parametre olarak bir değer (veyahut nesneyi tutan bir referans) geçirirseniz, yöntemin dışında, atanan bu değeri tutan değişkenin değeri veyahut geçirilen bu şey bir nesneyi tutan referans ise, bu referansın tuttuğu obje aynı kalır(Çünkü referansın işaret ettiği objenin id'sinin bir kopyası bu metoda geçirilmiştir). Fakat referansın işaret ettiği objenin state'i(yani objenin instance variable'ları) istenilirse metot içinden değiştirilebilir..
+</div>
 
-Görüleceği üzere ``someObject`` referansı **testMethod** yöntemine geçiriliyor. Dikkat ederseniz bu referans heap alanında bir objeyi işaret ediyor. Bu kodu çalıştırdığımızda, referansın **testMethod** yöntemi içinde çeşitli işlemlere maruz kaldığını göreceksiniz. Yalnız yöntemden çıktıktan sonra, bu referansın yönteme girmeden önce sahip olduğu değeri(burada primitive olmayan türlerde yani kompleks türlerde referansın tuttuğu değer aslında objenin id'sidir.) muhafaza ettiği de anlaşılıyor. Peki değişen tam olarak nedir ve burada **pass by value** ve **pass by reference** yaklaşımlarından hangisi uygulanıyor?
+Görüleceği üzere **someObject** referansı **testMethod** yöntemine geçiriliyor. Dikkat ederseniz bu referans heap alanında bir objeyi işaret ediyor. Bu kodu çalıştırdığımızda, referansın **testMethod** yöntemi içinde çeşitli işlemlere maruz kaldığını göreceksiniz. Yalnız yöntemden çıktıktan sonra, bu referansın yönteme girmeden önce sahip olduğu değeri(burada primitive olmayan türlerde yani kompleks türlerde referansın tuttuğu değer aslında objenin id'sidir.) muhafaza ettiği de anlaşılıyor. Peki değişen tam olarak nedir ve burada **pass by value** ve **pass by reference** yaklaşımlarından hangisi uygulanıyor?
 
-Aslında yöntemin içine girildiğinde ``someObject`` referansının bir kopyası bu yönteme geçer. Bu *kopya-referans* da, orijinal referans gibi hafızada bir yer kaplar ve tıpkı orijinal referans gibi heap alanında **aynı objeye** işaret eder. Haliyle bir *kopya referans* da olsa, *kopya referans* üzerinde yapılan işlemler, referansın heap alanında işaret ettiği nesneyi de etkileyecektir. Ama referansın sahip olduğu değeri, yani heap alanında işaret ettiği nesnenin adresini(aslında bu başka dillerde adres olarak nitelendiği için adres ifadesini kullandım. Java tarafında bu adresten ziyade, objenin id'sidir.) etkilemeyecektir. Verilen örnekte kopya referansın(someObjectX) tuttuğu obje metota ilk geçirildiğinde orijinal referans ile aynı değeri tutmasına rağmen metot içinde yeni bir obje atanarak değişmiştir. Tabii ki bu değişim orijinal referansı etkilemez. Sanırım *orijinal referans* ve *kopya referans*'ın stack'de tuttuğu id'ler değişmediği için, java'da objeler(yani primitive olmayan türler) için **pass by value** yaklaşımının olduğu sanılır.(Makele sonundaki nota bakmanınız öneririm) Ama java'da objeler için **pass-by-reference** yaklaşımı daha doğrudur.
+Aslında yöntemin içine girildiğinde **someObject** referansının bir kopyası bu yönteme geçer. Bu **kopya-referans** da, orijinal referans gibi hafızada bir yer kaplar ve tıpkı orijinal referans gibi heap alanında **aynı objeye** işaret eder. Haliyle bir **kopya referans** da olsa, **kopya referans** üzerinde yapılan işlemler, referansın heap alanında işaret ettiği nesneyi de etkileyecektir. Ama referansın sahip olduğu değeri, yani heap alanında işaret ettiği nesnenin adresini(aslında bu başka dillerde adres olarak nitelendiği için adres ifadesini kullandım. Java tarafında bu adresten ziyade, objenin id'sidir.) etkilemeyecektir. Verilen örnekte **kopya referansın(someObjectX)** tuttuğu obje metota ilk geçirildiğinde orijinal referans ile aynı değeri tutmasına rağmen metot içinde yeni bir obje atanarak değişmiştir. Tabii ki bu değişim orijinal referansı etkilemez. Sanırım **orijinal referans** ve **kopya referans**'ın stack'de tuttuğu id'ler değişmediği için, java'da objeler(yani primitive olmayan türler) için **pass by value** yaklaşımının olduğu sanılır.(Makele sonundaki nota bakmanınız öneririm) Ama java'da objeler için **pass-by-reference** yaklaşımı daha doğrudur.
 
 Örneğin:
 
@@ -263,9 +271,9 @@ public class JSample {
 
 Kodu online bir editör olan pythontutor'da çalıştırmak isterseniz, bu [linki](http://www.pythontutor.com/java.html#code=public%20class%20JSample%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20SomeObject%20someObject%20%3D%20new%20SomeObject%28%22object%201%22%29%3B%0A%20%20%20%20%20%20System.out.println%28someObject%29%3B%0A%20%20%20%20%20%20testMethod%28someObject%29%3B%0A%20%20%20%20%20%20System.out.println%28someObject%29%3B%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20testMethod%28SomeObject%20someObject%29%20%7B%0A%20%20%20%20%20%20%20%20someObject.setName%28%22o1%22%29%3B%0A%20%20%20%20%20%20%20%20someObject%20%3D%20new%20SomeObject%28%22object%202%22%29%3B%0A%20%20%20%20%20%20%20%20someObject.setName%28%22o2%22%29%3B%0A%20%20%20%20%7D%0A%7D%0A%20class%20SomeObject%20%7B%0A%20%20%20private%20String%20name%3B%0A%20%20%20public%20SomeObject%28String%20x%29%7B%0A%20%20%20%20%20%20%0A%20%20%20%7D%0A%20%20%20%0A%20%20%20public%20void%20setName%28String%20name%29%7B%0A%20%20%20%20%20this.name%20%3D%20name%3B%0A%20%20%20%7D%0A%7D%0A%0A&cumulative=false&curInstr=28&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ziyaret edebilirsiniz.
 
-buradaki ``setName`` işlevi, ``someObject`` referansının değerini(biliyorsunuz tuttuğu değer objenin id'siydi) değil, referansın heap'te işaret ettiği nesnenin özelliğini/state'ini(property/field) değiştirir. Yani özellikten kasıt, ilgili nesnenin örnek değişkeni(instance variable) olan ``name`` değişkenidir. Bu arada ``someObject`` referansının değeri aynı kalır. Çünkü metoda geçirilen değişken aslında ``someObject`` değişkeninin bir kopyasıdır.
+buradaki **setName** işlevi, **someObject** referansının değerini(biliyorsunuz tuttuğu değer objenin id'siydi) değil, referansın heap'te işaret ettiği nesnenin özelliğini/state'ini(property/field) değiştirir. Yani özellikten kasıt, ilgili nesnenin örnek değişkeni(instance variable) olan **name** değişkenidir. Bu arada **someObject** referansının değeri aynı kalır. Çünkü metoda geçirilen değişken aslında **someObject** değişkeninin bir kopyasıdır.
 
-Aşağıdaki kod bloğu az önce vermiş olduğumuz örneğin hemen hemen aynısıdır. Sadece özellikle belirtmek için metot içine aldığımız parametreyi farklı göstermek için ismini ``someObjectX`` olarak değiştirdim. Yukarıdaki örnekte de bu değişikliği dilerseniz yapabilirsiniz.
+Aşağıdaki kod bloğu az önce vermiş olduğumuz örneğin hemen hemen aynısıdır. Sadece özellikle belirtmek için metot içine aldığımız parametreyi farklı göstermek için ismini **someObjectX** olarak değiştirdim. Yukarıdaki örnekte de bu değişikliği dilerseniz yapabilirsiniz.
 
 
 ```java
@@ -281,40 +289,47 @@ public static void testMethod(SomeObject someObjectX) {
 
 Farz edelim ki referansın heap alanıdaki adresi **121** rakamı olsun.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_1.png" alt="java object Variable - java pass by value">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_1.webp"   width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
 
-* **1.satırda:** heap alanında ``new`` anahtar kelimesi yardımıyla bir ``SomeObject`` objesi yaratılır. Bu objeyi stack'da ``someObject`` referansı temsil etmektedir. Hayali verdiğimiz **121** rakamı(yani objenin heap alanıdaki adresi) bu referansa **değer** olarak geçirilir. (Bir üstteki şekil)
+* **1.satırda:** heap alanında **new** anahtar kelimesi yardımıyla bir **someObject** objesi yaratılır. Bu objeyi stack'da **someObject** referansı temsil etmektedir. Hayali verdiğimiz **121** rakamı(yani objenin heap alanıdaki adresi) bu referansa **değer** olarak geçirilir. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_2.png" alt="java object Variable - java pass by value">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_2.webp"   width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
 
-* **2.satırda:** ise ``someObject`` referansı **testMethod** yöntemine geçer. Yani aslında bu referansın bir kopyası **testMethod** yöntemine geçecektir. (Bir üstteki şekil)
+* **2.satırda:** ise **someObject** referansı **testMethod** yöntemine geçer. Yani aslında bu referansın bir kopyası **testMethod** yöntemine geçecektir. (Bir üstteki şekil)
 
-* **4.satırda:** burada ``someObjectX`` isminde bir *kopya-referans* oluşturulur. Bu referans/değişken ``someObject`` referansında olduğu gibi **121** değerine sahiptir. Her ne kadar *kopya-referans* olsa da heap alanında yine aynı objeyi işaret edeceğini unutmayın. (Bir üstteki şekil)
+* **4.satırda:** burada **someObjectX** isminde bir **kopya-referans** oluşturulur. Bu referans/değişken **someObject** referansında olduğu gibi **121** değerine sahiptir. Her ne kadar **kopya-referans** olsa da heap alanında yine aynı objeyi işaret edeceğini unutmayın. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_3.png" alt="java object Variable - java pass by value">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_3.webp"   width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
 
-* **5.satırda:** ise ``someObjectX`` referansının heap alanında işaret ettiği nesnenin ``name`` özelliği(yani nesnenin üye değişkeni(instance variable)) **o1** olarak güncelleniyor. ``someObject`` referansı da heap'teki aynı nesneyi işaret ettiği için haliyle bu güncellemeden dolaylı yoldan etkilenmiş olur ama sahip olduğu değerde(yani **121**'de) bir değişiklik olmaz. (Bir üstteki şekil)
+* **5.satırda:** ise **someObjectX** referansının heap alanında işaret ettiği nesnenin **name** özelliği(yani nesnenin üye değişkeni(instance variable)) **o1** olarak güncelleniyor. **someObject** referansı da heap'teki aynı nesneyi işaret ettiği için haliyle bu güncellemeden dolaylı yoldan etkilenmiş olur ama sahip olduğu değerde(yani **121**'de) bir değişiklik olmaz. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_4.png" alt="java object Variable - java pass by value">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_4.webp"   width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
 
-* **6.satırda:** bu satırda yeni bir``SomeObject`` objesi yaratılır ve *kopya-referansımız* olan ``someObjectX`` referansı/değişkeni artık yeni yaratılan bu nesneyi işaret etmeye başlar. Burada bir başka değişen şey ise ``someObjectX`` referansının değeridir. Bu referans yeni objenin adresi olan **119** rakamını saklamaya başlar. Buna karşın ``someObject`` referansı ise hâlen **121** adresini(aslında java'da bunun adres değil id old. belirtmiştim.) muhafaza etmektedir. (Bir üstteki şekil)
+* **6.satırda:** bu satırda yeni bir**someObject** objesi yaratılır ve **kopya-referansımız** olan **someObjectX** referansı/değişkeni artık yeni yaratılan bu nesneyi işaret etmeye başlar. Burada bir başka değişen şey ise **someObjectX** referansının değeridir. Bu referans yeni objenin adresi olan **119** rakamını saklamaya başlar. Buna karşın **someObject** referansı ise hâlen **121** adresini(aslında java'da bunun adres değil id old. belirtmiştim.) muhafaza etmektedir. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_5.png" alt="java object Variable - java pass by value">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_5.webp"   width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
 
-* **7.satırda:** 7.satırda ise ``someObjectX`` referansının işaret ettiği nesnenin ``name`` özelliği(yani nesnenin üye değişkeni) **o2** olarak güncellenmektedir. (Bir üstteki şekil)
+* **7.satırda:** 7.satırda ise **someObjectX** referansının işaret ettiği nesnenin **name** özelliği(yani nesnenin üye değişkeni) **o2** olarak güncellenmektedir. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_6.png" alt="java object Variable - java pass by value">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_6.webp"   width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
 
-* **3.satırda:** Son olarak bir ek bilgi daha verecek olursak, **testMethod** yönteminden çıktıktan sonra, yani bu yöntemin kapsamı dışına çıktıktan sonra, ``someObjectX`` referansı yok olacak, bu referansın işaret ettiği nesne ise sahipsiz(yani referanssız) kaldığı için garbage collector'un inisiyatifine kalacaktır(garbage collector bu nesneyi gerekirse hemen de siler, ya da silmek için hazır bekletir). Sadece ``someObject`` referansı ve bu referansın işaret ettiği nesne kalacaktır. (Gerekli nesne temizleme işlemleri garbage collector tarafından gerekirse gerçekleştirilir.)
+* **3.satırda:** Son olarak bir ek bilgi daha verecek olursak, **testMethod** yönteminden çıktıktan sonra, yani bu yöntemin kapsamı dışına çıktıktan sonra, **someObjectX** referansı yok olacak, bu referansın işaret ettiği nesne ise sahipsiz(yani referanssız) kaldığı için garbage collector'un inisiyatifine kalacaktır(garbage collector bu nesneyi gerekirse hemen de siler, ya da silmek için hazır bekletir). Sadece **someObject** referansı ve bu referansın işaret ettiği nesne kalacaktır. (Gerekli nesne temizleme işlemleri garbage collector tarafından gerekirse gerçekleştirilir.)
 
-**NOT:** (Yalnız şunu belirtmek istiyorum. ``SomeObject`` objesi oluştururken constructor'a geçirdiğim "**object 1**" ve metot içindeki objede geçirilen "**object 2**" string değerlerini constructor içinde obje instance variable'larını ilklendirmek için kullanabilirdim. Sanırım başta öyle düşünüp sonrasında constructor içinde ilklendirmeyi unuttuğumdan öyle kalmış. Sadece belirtmek istedim. constructor içinde ilklendirmiş olsaydım, obje ilk oluştuğunda name instance variable'a karşılık gelen yer boş olmaz, bu değerlerle dolu olurdu. Sonrasını zaten biliyorsunuz. Bu boş olan yerlere **o1** ve **o2** değerleri geliyor.)
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Birtakım Notlar:</h4>
+---
+(Yalnız şunu belirtmek istiyorum. **someObject** objesi oluştururken constructor'a geçirdiğim "**object 1**" ve metot içindeki objede geçirilen "**object 2**" string değerlerini constructor içinde obje instance variable'larını ilklendirmek için kullanabilirdim. Sanırım başta öyle düşünüp sonrasında constructor içinde ilklendirmeyi unuttuğumdan öyle kalmış.
+
+Sadece belirtmek istedim. constructor içinde ilklendirmiş olsaydım, obje ilk oluştuğunda name instance variable'a karşılık gelen yer boş olmaz, bu değerlerle dolu olurdu. Sonrasını zaten biliyorsunuz. Bu boş olan yerlere **o1** ve **o2** değerleri geliyor.)
 
 
-Anlaşılacağı üzere, ``someObject`` referansı nesnenin kendisini tutmuyor, referansın değeri sadece nesneyi tanımlayan bir işaretçidir(yani nesnenin heap'deki adresidir). <u><i>121 sayısı aslında yönteme geçirilir</i></u>
+Anlaşılacağı üzere, **someObject** referansı nesnenin kendisini tutmuyor, referansın değeri sadece nesneyi tanımlayan bir işaretçidir(yani nesnenin heap'deki adresidir). <u><i>121 sayısı aslında yönteme geçirilir</i></u>
 
 **ÖNEMLİ NOT :** Aslında oracle'ın kendi dökümantasyonunda, referans türleri için de **pass-by-value** yaklaşımının olduğu yazılmaktadır. Oracle, metoda geçirilen referans türleri için **pass-by-value** tanımını şu şekilde izah etmektedir.
 
 > Reference data type parameters, such as objects, are also passed into methods by value. This means that when the method returns, the passed-in reference still references the same object as before. However, the values of the object's fields can be changed in the method, if they have the proper access level.
+
+</div>
 
 "Metot dönüş yaptığında, metota geçirilen referansın halen eski objeyi işaret etmesi **pass-by-value** kullandığını göstermektedir", şeklinde bir ifadeyi göreceksiniz. Yani metoda geçirilen aslında kopya bir referans olduğu için bu söylenmektedir. Zaten yukarıda bunu izah etmiştim. Kopya referans, metot içerisinde başka bir objeye atansa bile, orijinal referans metot öncesindeki objeye işaret etmeye devam edecektir. Aslında birçok kaynak buna **sezgisel olarak** **pass-by-referans** olarak ifade eder. Bana kalırsa da bu tanım daha doğrudur. Tercihi yine de size bırakıyorum.
 
@@ -322,6 +337,7 @@ Anlaşılacağı üzere, ``someObject`` referansı nesnenin kendisini tutmuyor, 
 ## Referanslar
 
 * [Passing by Value vs. by Reference Visual Explanation](https://blog.penjee.com/passing-by-value-vs-by-reference-java-graphical/)
+* İlk 4 resim [penjee](https://blog.penjee.com/passing-by-value-vs-by-reference-java-graphical/) sitesinden alıntılanmıştır.
 * [Passing By Pointer Vs Passing By Reference in C++](https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-c/)
 * [Pass by reference](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzarg/cplr233.htm)
 * [Pass by value vs. pass by reference](https://www.educative.io/edpresso/pass-by-value-vs-pass-by-reference#:~:text=Pass%20by%20value%20means%20that,not%20visible%20to%20the%20caller.&text=Changes%20made%20to%20the%20passed%20variable%20do%20not%20affect%20the%20actual%20value.)
