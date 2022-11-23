@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 9 - Overriding(Ezici) Metotlar"
 comments: false
 excerpt: "Bu bölümde overriding ve overloading metotların tanımlarını yapacak, ağırlıklı olarak overriding metotlar üzerine duracağız. Bunun yanı sıra metot imzası ve metot deklarasyonu arasındaki farklardan da bahsedeceğiz."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-50.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Makenzie Cooper](https://unsplash.com/photos/gl9kCw7y-pY) on Unsplash"

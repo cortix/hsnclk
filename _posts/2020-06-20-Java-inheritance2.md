@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 2- Extends"
 comments: false
 excerpt: "Bu derste Java'daki kalıtım ve polimorfizm kavramlarını ele almaya devam edeceğiz. Java'da extends anahtar kelimesinin ne anlama geldiğini ve kullanımını, superclass ve subclass kavramlarını, sınıf hiyerarşisinde UML diyagramı kullanımını göreceğiz. Bununla birlikte bir önceki derste belirlediğimiz kalıtımı sağlamak için asgari hedeflerin ilk ikisini ele alacağız."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-44.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Mitchell Luo](https://unsplash.com/photos/hhdxtwlaAsM) on Unsplash"

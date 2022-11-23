@@ -3,8 +3,8 @@ title: "Java'da Hafıza Modeli 6 - Java'da Statik ve Statik Olmayan Değişken v
 comments: false
 excerpt: "Java Statik ve Statik Olmayan Konteks Nedir? Java'da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi Nasıl Olur? gibi soruların cevabını vermeye çalışacağım."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-60.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"

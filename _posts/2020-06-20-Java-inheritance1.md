@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 1 - Kalıtımı Neden Kullanırız? Kalıtımı Sağla
 comments: false
 excerpt: "Bu derste Java'daki kalıtım ve polimorfizm kavramlarını genel olarak ele alacak ve bununla birlikte kalıtımı sağlamak için asgari hedeflerin neler olduğunu işleyeceğiz."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-43.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Franck V.](https://unsplash.com/photos/sVOF3ONKvfU) on Unsplash"

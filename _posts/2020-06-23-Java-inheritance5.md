@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 5 - Java'da Nesne Oluşturma"
 comments: false
 excerpt: "Bu derste Java'da Nesne oluşturma işlemini hafıza modeli konusunda işlemiştik. Bu konuyu tekrar gözden geçirmemizin nedeni, artık kalıtım konusunu bildiğimizden, şimdi nesnelerin gerçekte nasıl inşa edildiği hakkında daha fazla ayrıntı öğrenebiliriz."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-47.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Tamas Tuzes-Katai](https://unsplash.com/photos/LzpTVcfTBE8) on Unsplash"

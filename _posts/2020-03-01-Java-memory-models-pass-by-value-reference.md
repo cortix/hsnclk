@@ -3,8 +3,8 @@ title: "Java'da Hafıza Modeli 5 - Pass By Value / Pass By Reference"
 comments: false
 excerpt: "Aslında bu bölümde anlatılacaklar şu ana kadar öğrendiklerimizin bir tekrarı gibi düşünülebilir. Yalnız bu bölümde bu öğrendiklerimizi farklı programlama dilleri ile karşılaştırarak değerlendireceğiz. Metotlara parametre geçirilirken kullanılan 2 farklı yaklaşımı ele alacağız. Passing By Value/Passing By Reference(Değer veya Referans İle Parametre Geçirmek)"
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-33.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [ian dooley](https://unsplash.com/photos/TevqnfbI0Zc) on Unsplash"

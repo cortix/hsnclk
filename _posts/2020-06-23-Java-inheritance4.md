@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 4 - Görünürlük Değiştiricileri"
 comments: false
 excerpt: "Bu derste Java'daki public, protected, package(default), private değiştirici işaretlerini ele alacağız. Bu değiştiricilerin, java'da görünürlüğü nasıl etkilediği hakkında fikir sahibi olacaksınız"
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-46.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Toa Heftiba](https://unsplash.com/photos/8EF8GmQfGlg) on Unsplash"

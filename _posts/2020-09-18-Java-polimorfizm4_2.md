@@ -3,8 +3,8 @@ title: "Java'da Polimorfizm 4.2 - Statik ve Dinamik Bağlanma 2"
 comments: false
 excerpt: "Bu derste Java'da statik ve dinamik bağlanma arasındaki farkları ele almaya devam edecek, konunun daha iyi anlaşılması için farklı bir örneği ele alacağız."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-57.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Marina Montoya](https://unsplash.com/photos/GUi8uIw3JbQ) on Unsplash"

@@ -3,8 +3,8 @@ title: "Java'da Polimorfizm 4.3 - Dinamik Bağlanma Örnek"
 comments: false
 excerpt: "Bu bölümde, dinamik bağlanmayla ilgili bir örnek verecek, konunun daha iyi anlaşılmasını sağlayacağız "
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/page-header-og-image.png
+  teaser: "assets/images/equality.webp"
+  og_image: /assets/images/equality.webp
   overlay_image: /assets/images/unsplash-image-56.jpg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Quinton Coetzee](https://unsplash.com/photos/AOaDfdSly3g) on Unsplash"
