@@ -5,7 +5,7 @@ excerpt: "Bu bölümde overriding ve overloading metotların tanımlarını yapa
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-50.jpg
+  overlay_image: /assets/images/unsplash-image-50.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Makenzie Cooper](https://unsplash.com/photos/gl9kCw7y-pY) on Unsplash"
   #cta_label: "More Info"
@@ -22,6 +22,7 @@ tags:
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
@@ -66,7 +67,7 @@ Metot deklarasyonunun sahip olduğu minimum öğeler; metodun dönüş tipi, ism
 
 Fakat daha genel olarak, bir yöntem deklarasyonu sırasıyla altı bileşeni içerir:
 
-1. ``public``, ``private`` gibi değiştiriciler(modifiers),
+1. **public**, **private** gibi değiştiriciler(modifiers),
 2. Yöntemin dönüş türü — yöntem tarafından döndürülen değerin veri türü veya yöntem bir değer döndürmezse, ``void`` olarak tanımlanması,
 3. Yöntem ismi - yalnız alan(field) adları için kurallar yöntem adları için de geçerlidir, ancak kural biraz farklıdır,
 4. Parantez içindeki parametre listesi - parantez içine () alınmış veri türlerinden önce virgülle ayrılmış giriş parametreleri listesi, - herhangi bir parametre yoksa, boş parantez kullanmalısınız,
@@ -83,9 +84,9 @@ resultNumbers(int , int )
 ## Overriding(Ezici) Metot Örnekleri
 ### Örnek 1
 
-İlk örneğimiz ``Object`` sınıfının kendisine bakmak olacak. Bu üst sınıfta ``toString`` adında bir yöntemimiz bulunmaktadır. ``toString`` yöntemi bir nesnenin içeriğini(sahip olduğu state'i, yani instance değişkenlerinin tuttuğu değerler) veya dize temsilini yazdırır. Nesne sınıfında olduğu için Java'daki tüm nesneler ``toString`` yöntemini geçersiz kılabilir.
+İlk örneğimiz **Object** sınıfının kendisine bakmak olacak. Bu üst sınıfta ``toString`` adında bir yöntemimiz bulunmaktadır. ``toString`` yöntemi bir nesnenin içeriğini(sahip olduğu state'i, yani instance değişkenlerinin tuttuğu değerler) veya dize temsilini yazdırır. Nesne sınıfında olduğu için Java'daki tüm nesneler ``toString`` yöntemini geçersiz kılabilir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override1.png" alt="override method">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override1.webp"  width="100%" height="100%" loading="lazy" alt="override method">
 
 ```java
 public class Person {
@@ -105,14 +106,14 @@ public class Person {
 }
 ```
 
-Yukarıdaki kod bloğunda örneğin **Object** sınıfından geçersiz kıldığımız(override) ``toString()`` yöntemini, ``getName()`` getter yöntemini döndürecek şekilde ezdik. Dönüş tipi ``String`` olan farklı bir şey de döndürebilirdik. Bu tamamen size bağlı..
+Yukarıdaki kod bloğunda örneğin **Object** sınıfından geçersiz kıldığımız(override) ``toString()`` yöntemini, ``getName()`` getter yöntemini döndürecek şekilde ezdik. Dönüş tipi **String** olan farklı bir şey de döndürebilirdik. Bu tamamen size bağlı..
 
 ```java
 Person p = new Person("Hasan");
 System.out.println(p.toString());
 ```
 
-Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gibi bunu ekrana yazdırmak istiyorsunuz... ``toString()`` metodu ``Object`` sınıfının toString metodunu çağırmayacaktır. Çünkü bu metodu ezdiğimiz için, çağrılan ``toString()`` metodu, ``Person`` sınıfındaki olacaktır. Sonuç olarak ekrana **"Hasan"** yazdırılır. Aslında burada biraz da polimorfizm devreye girer. Polimorfizm konusu overriding konusu ile iç içe bir konudur ve beraber değerlendirmek çok önemlidir. Polimorfizm konusuna henüz girmedik ama **Robert C. Martin**'in polimorfizm için yaptığı şu tanımı sizinle paylaşmak istiyorum.
+Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gibi bunu ekrana yazdırmak istiyorsunuz... ``toString()`` metodu **Object** sınıfının toString metodunu çağırmayacaktır. Çünkü bu metodu ezdiğimiz için, çağrılan ``toString()`` metodu, **Person** sınıfındaki olacaktır. Sonuç olarak ekrana **"Hasan"** yazdırılır. Aslında burada biraz da polimorfizm devreye girer. Polimorfizm konusu overriding konusu ile iç içe bir konudur ve beraber değerlendirmek çok önemlidir. Polimorfizm konusuna henüz girmedik ama **Robert C. Martin**'in polimorfizm için yaptığı şu tanımı sizinle paylaşmak istiyorum.
 
 > The lowest implementation of the method down the hierarchy is automatically invoked that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşideki en düşük uygulaması otomatik olarak çağrılır, bu JAVA'daki polimorfizmin tanımıdır.)
 
@@ -120,13 +121,13 @@ Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gib
 
 ### Örnek 2
 
-Şimdi yukarıdaki örneği ``Student`` sınıfını da işin içine dahil ederek güncelleyelim istiyorum.
+Şimdi yukarıdaki örneği **Student** sınıfını da işin içine dahil ederek güncelleyelim istiyorum.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override2.png" alt="override method">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override2.webp"  width="100%" height="100%" loading="lazy" alt="override method">
 
-Görüleceği üzere ``toString()`` metodu ``Person`` sınıfında olduğu gibi tekrar geçersiz kılınmıştır. Burada, ``Person`` sınıfının ``toString()`` metodu için yaptığı yorumlamayı, ``Student`` sınıfı için tekrar yorumlayacağım, demek istiyorum.
+Görüleceği üzere ``toString()`` metodu **Person** sınıfında olduğu gibi tekrar geçersiz kılınmıştır. Burada, **Person** sınıfının ``toString()`` metodu için yaptığı yorumlamayı, **Student** sınıfı için tekrar yorumlayacağım, demek istiyorum.
 
-``Student`` sınıfı ``toString()`` metoduna ek olarak ``private`` değiştiricili, ``studentID`` isminde bir üye değişkenine bir de bu üye değişkenine dışarıdan ulaşımı sağlamak için ``public`` değiştiricili, ``getSID()`` isminde bir getter metoda sahiptir. Buradaki amacımız da Person sınıfında olduğu gibi ``toString`` yöntemini sınıf bilgilerini yazdırmak için kullanmak olacak. Yani özetle yapmak istediğim, bir öğrenci kimlik numarası ve ardından kişi hakkındaki bilgileri yazdırabilmektir.
+**Student** sınıfı ``toString()`` metoduna ek olarak **private** değiştiricili, ``studentID`` isminde bir üye değişkenine bir de bu üye değişkenine dışarıdan ulaşımı sağlamak için **public** değiştiricili, ``getSID()`` isminde bir getter metoda sahiptir. Buradaki amacımız da Person sınıfında olduğu gibi ``toString`` yöntemini sınıf bilgilerini yazdırmak için kullanmak olacak. Yani özetle yapmak istediğim, bir öğrenci kimlik numarası ve ardından kişi hakkındaki bilgileri yazdırabilmektir.
 
 ```java
 public class Student extends Person {
@@ -147,13 +148,13 @@ public class Student extends Person {
 }
 ```
 
-Buradaki ilk denememin bu şekilde olduğunu hayal edin. Hatırlarsanız, ``this`` anahtar sözcüğünü kullanarak sınıf içi yöntemlere ve değişkenlere ulaşabiliyordum. ``toString()`` yönteminde ``this`` anahtar sözcüğünü kullanarak **aynı sınıf** içinde bir getter yöntem olan ``getSID()``yöntemine, bir de **üst sınıf** getter yöntemi olan ``getName()`` yöntemine ulaşmışız. Peki üst sınıf için neden ``this`` anahtar kelimesini kullanıyoruz ve kullanmamıza rağmen neden hata almıyoruz? Nedeni aslında çok basit!!! Hatırlarsanız bir sınıfı miras aldığımızda, o sınıfın bütün ``public`` değişken ve yöntemlerini kullanabiliyorduk. ``public`` olmayanlara da yine public **getter** ve **setter** yöntemleri aracılığı ile erişim mümkündü... Burada da aslında tam olarak bu işlem oluyor. ``this`` anahtar kelimesi ``getName()`` yöntemini bulmak için önce mevcut sınıfa bakar. Şayet mevcut sınıfta bulamazsa, miras aldığı sınıfta bu yöntemi arar. Miras aldığımız sınıfta bu yöntemin olduğunu zaten biliyoruz. Bu sebepten ötürü kodumuz gayet normal çalışır ve hata almayız. <u><i>Peki bu yaklaşım, tasarımsal olarak doğru bir kodlama mıdır?</i></u> Diyelim ki ``Person`` sınıfı ile ilgilenen ayrı bir ekip var ve sürekli bu sınıfta bir güncelleme yapılıyor. ``Person`` sınıfında olduğu gibi ``Student`` sınıfında da ``toString()`` metodu sınıf hakkında bilgileri yazdırmak için kullanılıyor olsun. ``Person`` sınıfında şu şekilde değişiklikler yapıldığını hayal edelim;
+Buradaki ilk denememin bu şekilde olduğunu hayal edin. Hatırlarsanız, **this** anahtar sözcüğünü kullanarak sınıf içi yöntemlere ve değişkenlere ulaşabiliyordum. ``toString()`` yönteminde **this** anahtar sözcüğünü kullanarak **aynı sınıf** içinde bir getter yöntem olan ``getSID()``yöntemine, bir de **üst sınıf** getter yöntemi olan ``getName()`` yöntemine ulaşmışız. Peki üst sınıf için neden **this** anahtar kelimesini kullanıyoruz ve kullanmamıza rağmen neden hata almıyoruz? Nedeni aslında çok basit!!! Hatırlarsanız bir sınıfı miras aldığımızda, o sınıfın bütün **public** değişken ve yöntemlerini kullanabiliyorduk. **public** olmayanlara da yine public **getter** ve **setter** yöntemleri aracılığı ile erişim mümkündü... Burada da aslında tam olarak bu işlem oluyor. **this** anahtar kelimesi ``getName()`` yöntemini bulmak için önce mevcut sınıfa bakar. Şayet mevcut sınıfta bulamazsa, miras aldığı sınıfta bu yöntemi arar. Miras aldığımız sınıfta bu yöntemin olduğunu zaten biliyoruz. Bu sebepten ötürü kodumuz gayet normal çalışır ve hata almayız. <u><i>Peki bu yaklaşım, tasarımsal olarak doğru bir kodlama mıdır?</i></u> Diyelim ki **Person** sınıfı ile ilgilenen ayrı bir ekip var ve sürekli bu sınıfta bir güncelleme yapılıyor. **Person** sınıfında olduğu gibi **Student** sınıfında da ``toString()`` metodu sınıf hakkında bilgileri yazdırmak için kullanılıyor olsun. **Person** sınıfında şu şekilde değişiklikler yapıldığını hayal edelim;
 * ``name`` isimli üye değişkenini ``personName`` olarak güncellenmesi,
 * ``age`` isimli yeni bir üye değişkeni eklenmesi ...
 
-Aklıma gelenler şimdilik bu kadar. Bu gibi durumlarda haliyle ``Student`` sınıfında da bir takım değişikliklerin yapılması gerekebilir.  Birincisi, ``this.getName()`` olarak çağırdığınız ``Person`` **getter** metodunu, ``this.getPersonName()`` olarak çağırmak durumunda kalabilirsiniz... Veyahut ``Person`` sınıfındaki ``age`` isimli üye değişkeni için yeni bir **getter** yöntem yapıp, bu yöntemi ``Student`` sınıfının ``toString()`` metodunda çağırmaya çalışabilirsiniz. Kısacası yapılan her bir değişiklik için bir güncelleme gerekebilir. Bu şekilde ilerlemek yerine doğrudan üst sınıfın ``toString()`` yöntemini çağırsak ve gerekli değişiklikleri bu üst sınıfın ``toString()`` yönteminde yapsak sizce nasıl olur? ``Person`` sınıfı ekibi yaptığı değişiklikleri sadece ``toString()`` sınıfında bildirse, bu durum ``Student`` sınıfını tasarlayan ekibi ilgilendirir mi? Tabii ki hayır. ``Student`` sınıfı ``toString()`` metodu içinde yine ``Person`` sınıfının ``toString()`` yöntemi çağrılacağı için, ``Person``'da yapılan değişiklikleri etkilenmeden çağırmış olur.
+Aklıma gelenler şimdilik bu kadar. Bu gibi durumlarda haliyle **Student** sınıfında da bir takım değişikliklerin yapılması gerekebilir.  Birincisi, ``this.getName()`` olarak çağırdığınız **Person** **getter** metodunu, ``this.getPersonName()`` olarak çağırmak durumunda kalabilirsiniz... Veyahut **Person** sınıfındaki ``age`` isimli üye değişkeni için yeni bir **getter** yöntem yapıp, bu yöntemi **Student** sınıfının ``toString()`` metodunda çağırmaya çalışabilirsiniz. Kısacası yapılan her bir değişiklik için bir güncelleme gerekebilir. Bu şekilde ilerlemek yerine doğrudan üst sınıfın ``toString()`` yöntemini çağırsak ve gerekli değişiklikleri bu üst sınıfın ``toString()`` yönteminde yapsak sizce nasıl olur? **Person** sınıfı ekibi yaptığı değişiklikleri sadece ``toString()`` sınıfında bildirse, bu durum **Student** sınıfını tasarlayan ekibi ilgilendirir mi? Tabii ki hayır. **Student** sınıfı ``toString()`` metodu içinde yine **Person** sınıfının ``toString()`` yöntemi çağrılacağı için, **Person**'da yapılan değişiklikleri etkilenmeden çağırmış olur.
 
-Yani ``Student`` sınıfının içinde ``toString()`` metodunu aşağıdaki şekilde güncellersek, tasarımsal olarak daha şık olacaktır. Yaptığımız değişiklik görüleceği üzere ``this.getName()`` yerine ``super.toString();`` getirmek oldu.
+Yani **Student** sınıfının içinde ``toString()`` metodunu aşağıdaki şekilde güncellersek, tasarımsal olarak daha şık olacaktır. Yaptığımız değişiklik görüleceği üzere ``this.getName()`` yerine ``super.toString();`` getirmek oldu.
 
 ```java
  public String toString(){
@@ -195,7 +196,7 @@ alacağımız sonuç şu şekildedir.
 1234: Hasan
 ```
 
-Peki main metodu içinde ``s`` değişkenini, yani referansın tipini ``Person`` olarak değiştirirsek yine aynı sonucu mu alırız?
+Peki main metodu içinde ``s`` değişkenini, yani referansın tipini **Person** olarak değiştirirsek yine aynı sonucu mu alırız?
 
 ```java
 Person s = new Student("Hasan", 1234);
@@ -208,7 +209,7 @@ Sonuç yine aynı olacaktır. Sebebi polimorfizmdir. Neden böyle olduğunu bu b
 ```
 
 
-> **Hatırlatma:** ``this`` anahtar sözcüğü mevcut sınıfı temsil ederken, ``super`` anahtar sözcüğü üst sınıfı temsil eder.
+> **Hatırlatma:** **this** anahtar sözcüğü mevcut sınıfı temsil ederken, ``super`` anahtar sözcüğü üst sınıfı temsil eder.
 
 
 ## Referanslar

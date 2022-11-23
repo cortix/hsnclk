@@ -5,7 +5,7 @@ excerpt: "Bu derste Java'da sınıf inşaası sırasında derleyicinin yazdığ�
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-48.jpg
+  overlay_image: /assets/images/unsplash-image-48.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Daniel Salgado](https://unsplash.com/photos/1eTc_d3sdHs) on Unsplash"
 #  video:
@@ -25,6 +25,7 @@ tags:
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
@@ -40,7 +41,7 @@ Aslında bu şekilde olmasının nedeni tamamen Java derleyici kurallarından ka
 
 Öncelikli olarak, bir önceki derste ne yaptığımızı ve en son nerede kaldığımız hatırlayalım istiyorum. Elimizde bir Student sınıfı vardı. Bu sınıf Person isimli bir başka sınıfı miras alıyordu. Person sınıfı ise biz belirlemesekte java tarafından Object sınıfını miras almaya maruz bırakılıyordu.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance5/hierarchy5.png" alt="hierarchy">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance5/hierarchy5.webp"  width="100%" height="100%" loading="lazy" alt="hierarchy">
 
 Tam da bu noktada, böyle bir planımız olmadığı halde, Object sınıfını neden miras almak zorunda olduğumuzu sormuştuk. Dilerseniz bunun öncesinde java'nın nasıl çalıştığı hakkında bilgi sahibi olalım istiyorum.
 
@@ -55,7 +56,7 @@ Kaldığımız yerden devam edecek olursak, bu kaynak dosyalar daha sonra ``java
 
 > javac, Oracle'ın Java Geliştirme Kiti'nde (JDK) bulunan birincil bir Java derleyicisidir(compiler). Derleyici, Java dil şartnamesine (Java language specification-JLS) uygun kaynak kodunu kabul eder ve Java Sanal Makine Şartnamesi'ne (JVMS-Java Virtual Machine Specification) uygun Java bayt kodu üretir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/getStarted-compiler.gif" alt="get started compiler">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/getStarted-compiler.webp"  width="100%" height="100%" loading="lazy" alt="get started compiler">
 
 Çok basit şekliyle javanın çalışma şekli bu şekildedir. Hatta bunu bir editörde(Netbeans,Eclipse vb.) denemek yerine .java uzantılı bir dosya yaratarak deneyebilirsiniz.
 
@@ -63,7 +64,7 @@ Kaldığımız yerden devam edecek olursak, bu kaynak dosyalar daha sonra ``java
 
 Hatırlarsanız yukarıda, derleyici kurallarından bahsetmiştik. Peki bu karallar nelerdir? Az önce çizdiğimiz şeklin bir başka versiyonunu göstermek istiyorum.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/jvm.png" alt="java'nın çalışma şekli">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/jvm.webp"  width="100%" height="100%" loading="lazy" alt="java'nın çalışma şekli">
 
 Yukarıdaki şekilde odaklanmanızı istediğim bölüm aslında derleyicinin kod ekleme şartları kapsamında yaptığı eklemelerdir. Evet derleyici kodumuzu ``bytecode``'a çevirirken belli kurallar çerçevesinde çeşitli komut eklemeleri yapar. Biz burada bütün bu komut eklemelerinden bizim için önemli olan 3 tanesine bakacağız.
 
@@ -73,7 +74,7 @@ Peki, Java derleyicisi ne yapıyor ve bu kurallar nelerdir? Yaptığı şey asl�
 
 Birinci kural: eğer bir üst sınıfınız yoksa, derleyici size bir tane verecektir. Bu sınıf da daha önce bahsettiğimiz ``Object`` sınıfıdır. Böylelikle Object sınıfının nereden geldiğini anlamış bulunuyoruz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule1.png" alt="derleyici kural1">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule1.webp"  width="100%" height="100%" loading="lazy" alt="derleyici kural1">
 
 ``Person`` sınıfının ``Object`` sınıfını miras aldığını artık biliyoruz. Ama bu sınıflara ait "kurucuların" nereden çağrıldığını bilmiyoruz? O zaman şu soruyu sorabiliriz... ``Person()`` ve daha sonra ``Object()`` kurucularını nerede çağırdık? Yani ``Person()`` ya da ``Object()`` kurucusu olarak adlandırdığımız yer neresi?  2.kuralımızın ortaya çıktığı yer de tam olarak burasıdır.
 
@@ -81,7 +82,7 @@ Birinci kural: eğer bir üst sınıfınız yoksa, derleyici size bir tane verec
 
 İkinci kural: eğer bir kurucunuz yoksa, Java derleyicisi size bir tane verecektir. Verilen kurucu varsayılan(default) bir kurucu olacağı için, argüman almaz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule2.png" alt="derleyici kural2">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule2.webp"  width="100%" height="100%" loading="lazy" alt="derleyici kural2">
 
 ### Kural 3
 
@@ -92,13 +93,13 @@ Ve sonra tüm kurucularla(constructor) ilişkili başka bir kurallar dizisi uygu
 
 Şekilde görüldüğü gibi Java derleyicisi, ``Person`` sınıfının varsayılan(default) kurucusuna **super()** olarak tanımlanan bir çağrı ekleyecektir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule3.png" alt="derleyici kural3">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule3.webp"  width="100%" height="100%" loading="lazy" alt="derleyici kural3">
 
 ## Özet
 
 Soldaki kod bloğu bizim yazdığımız kodu temsil etmektedir. Sağdaki ise derleyicinin bizim yazdıklarımızdan anladığıdır:) Yani **mavi bölümleri** derleyi kendi ekleyecektir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule4.png" alt="derleyici kural">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/rule4.webp"  width="100%" height="100%" loading="lazy" alt="derleyici kural">
 
 ### Örnek
 
@@ -121,7 +122,7 @@ public class Student extends Person {
 
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/student.png" alt="derleyici kural">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance6/student.webp"  width="100%" height="100%" loading="lazy" alt="derleyici kural">
 
 Bu süreçleri derleyici sizden bağımsız bir şekilde arka planda gerçekleştirecektir. Ama sürecin nasıl ilerlediğini bilmekte yarar.
 
@@ -129,7 +130,13 @@ Bu süreçleri derleyici sizden bağımsız bir şekilde arka planda gerçekleş
 
 Sizce neden derleyicinin kodunuzu derlerken uyguladığı kuralları öğreniyoruz? Çünkü kodda hata ayıklamak için bir noktada bunları bilmeniz gerekebilir. Kodunuzu daha iyi anlamanıza yardımcı olmak ve daha da önemlisi, bu kuralları bilmediğinizde süreci çözümsüzlüğe götürecek hataları ayıklayabilmeniz için bu ayrıntılara dalıyoruz. Örneğin bu kuralları bilmediğinizde, şu şekilde kafa karıştırıcı bir soru aklınızda kalabilir. Ben default bir üst sınıf constructor çağırmadım, neden bu kod yürütülüyor? Bir sonraki ders biraz daha detaya gireceğiz.
 
-**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm. Aşağıdaki hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), main metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım. Bu video konunun daha iyi anlaşılmasını sağlayacaktır.
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+---
+**Not :** Hazırladığım **java'da kalıtım serisini** sıralı takip etmiyorsanız bazı şeyler havada kalacağı için aşağıdaki videoyu izlemenizi öneririm.
+
+Aşağıdaki hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), **main** metodunu da kapsayan bir örnek kod üzerinde, statik ve statik olmayan değişken ve metotların hafıza yönetim modelini ele aldım.
+</div>
 
 
 
