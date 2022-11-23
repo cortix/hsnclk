@@ -5,7 +5,7 @@ excerpt: "Bu derste hem Java'da statik ve dinamik bağlanma arasındaki farklar�
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-55.jpg
+  overlay_image: /assets/images/unsplash-image-55.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [majd altaifi](https://unsplash.com/photos/rVAvAxQSmGI) on Unsplash"
   #cta_label: "More Info"
@@ -27,6 +27,7 @@ tags:
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 
@@ -257,10 +258,9 @@ Son satır, aslında erişilmeye çalışılan field'ın, başvurulan nesnenin �
 
 >Alan erişimlerine yönelik bu dinamik arama eksikliği, programların basit uygulamalarla verimli bir şekilde çalıştırılmasına izin verir.
 
-<figure style="width: 400px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm4_1/1.png" alt="Static Binding for Field Access">
-  <figcaption></figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm4_1/1.webp"  width="400px" height="100%" class="align-center" loading="lazy" alt="Static Binding for Field Access">
+
 
 ## Generic Öncesi ve Sonrası Dönemde Çalışma ve Derleme Zamanı Polimorfizmi
 
