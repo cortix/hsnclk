@@ -5,7 +5,7 @@ excerpt: "Bu derste Java'da statik ve dinamik bağlanma arasındaki farkları el
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-57.jpg
+  overlay_image: /assets/images/unsplash-image-57.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Marina Montoya](https://unsplash.com/photos/GUi8uIw3JbQ) on Unsplash"
   #cta_label: "More Info"
@@ -33,10 +33,9 @@ toc_label: "SAYFA İÇERİĞİ"
 
 Şimdi aşağıdaki gibi bir sınıf hiyerarşimizin olduğunu düşünelim.
 
-<figure style="width: 200px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm4_2/uml1.png" alt="Static and Dynamic Binding">
-  <figcaption></figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm4_2/uml1.webp"  width="200px" height="100%" class="align-center" loading="lazy" alt="Static and Dynamic Binding">
+
 
 
 Görüleceği üzere **Person** sınıfı hiyerarşimizin en üstünde yer alan sınıf ve iki adet metodu bulunmakta. Onun hemen altında bu sınıfı miras alan bir **Student** sınıfımız var. Bu sınıf **Person** sınıfının 2 metodunu geçersiz kılmış(override). **Student** sınfını da **Undergrad** isimli başka bir sınıf miras alıyor ama bu sınıf **Student** sınıfının sadece ``method2()`` metodunu geçersiz kılıyor.

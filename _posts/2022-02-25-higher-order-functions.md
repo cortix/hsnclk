@@ -3,10 +3,10 @@ title: "Higher Order Functions (Programming Style Part 2)"
 comments: false
 excerpt: "In this article, I am going to try to explain what the higher-order functions are, first-class citizen and first-class function"
 header:
-  teaser: "/assets/images/2022-02-25-higher-order-functions/higher.jpeg"
+  teaser: "/assets/images/2022-02-25-higher-order-functions/higher.webp"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-02-25-higher-order-functions/higher.jpeg
-  overlay_image: /assets/images/2022-02-25-higher-order-functions/higher_f.jpeg
+  og_image: /assets/images/2022-02-25-higher-order-functions/higher.webp
+  overlay_image: /assets/images/2022-02-25-higher-order-functions/higher_f.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Etienne Girardet](https://unsplash.com/photos/Xh6BpT-1tXo) on Unsplash"
   #cta_label: "More Info"

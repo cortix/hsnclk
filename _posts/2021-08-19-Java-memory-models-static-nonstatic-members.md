@@ -5,7 +5,7 @@ excerpt: "Java Statik ve Statik Olmayan Konteks Nedir? Java'da Statik ve Statik 
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-60.jpeg
+  overlay_image: /assets/images/unsplash-image-60.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"
   video:

@@ -5,7 +5,7 @@ excerpt: "Bu derste Java'daki Referans ve Nesne Tipleri ele alacağız. Aynı za
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-45.jpg
+  overlay_image: /assets/images/unsplash-image-45.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Ricardo Gomez Angel](https://unsplash.com/photos/52NJbPMuGuU) on Unsplash"
   #cta_label: "More Info"
@@ -20,6 +20,7 @@ tags:
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
@@ -27,36 +28,45 @@ toc_label: "SAYFA İÇERİĞİ"
 
 ## Genel Bakış
 
-Buradaki amacımız, sınıflar arasındaki "is a" ilişkisinin ne anlama geldiğini anlamak ve bir önceki derste yarım bıraktığımız 3. koşulu yerine getirmek olacaktır.
+Buradaki amacımız, sınıflar arasındaki "**is-a**" ilişkisinin ne anlama geldiğini anlamak ve bir önceki derste yarım bıraktığımız **3. koşulu** yerine getirmek olacaktır.
 
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+---
 1. Bütün ortak davranışları bir sınıfta tutmak,
 2. Farklı davranışa sahip olanları ise farklı sınıflara ayırmak
 3. **Tüm bu nesneleri tek bir veri yapısında tutmak.**
+</div>
 
-Bir önceki ders ilk iki koşulu extends anahtar kelimesini kullanarak sağlamıştık. Ortak kodları parent sınıfta, farklı kodları ise child sınıflarda tutarak gerekli koşulları sağlamıştık. Şimdi ise 3. koşulu anlamaya çalışalım.
+Bir önceki ders ilk iki koşulu **extends** anahtar kelimesini kullanarak sağlamıştık. Ortak kodları **parent** sınıfta, farklı kodları ise **child** sınıflarda tutarak gerekli koşulları sağlamıştık. Şimdi ise 3. koşulu anlamaya çalışalım.
 
 
 ## Referans ve Nesne Türleri
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.png" alt="reference and object type - is-a relationship">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.webp" width="100%" height="100%"  loading="lazy" alt="reference and object type - is-a relationship">
 
 Referans ve obje tipleri konusuna şu [derste](/java-hafiza-yonetimi/Java-memory-models-objects/#referans-ve-nesne-türleri) biraz değinmiştik. Devam etmeden önce göz gezdirmenizde yarar var.
 
-**NOT :** Bu arada referans tipleri, deklare edilen tipler(declared type) olarak da tanımlanır.
+**NOT :** Bu arada referans tipleri, deklare edilen tipler(**declared type**) olarak da tanımlanır.
+{: .notice--success}
 
-Yukarıdaki şekili biraz yorumlamaya çalışalım istiyorum. Önceki derste belirttiğimiz gibi referans ve nesne türleri de her zaman aynı olmayabilir. Heap alanında oluşan nesnenin tipi ile, aynı nesneyi stack alanında temsil eden değişkenin, yani referansın tipi farklı olabilir. Yukarıdaki örnekte ``Person`` bir parent(ana) sınıftır. ``Student`` ve ``Faculty`` sınıfları ise birer child(çocuk) sınıftır ve Person sınıfını ``extends`` anahtar kelimesi ile miras almıştır. Bu sebepten ötürü stack alanında bulunan değişkenin/referansın tipini parent sınıf olan ``Person`` yapabiliriz. Bir üst sınıf olduğu için stack alanında ``Student`` ve ``Faculty`` sınıflarını temsil edebilir. Yalnız önceki derste verdiğimiz ``Map/HashMap`` ilişkisine benzetmeyin. Çünkü ``Map`` bir soyut sınıftır. ``Person`` sınıfı her ne kadar bir parent sınıf olsa da, somut bir sınıftır. ``Person`` sınıfını bu yüzden heap alanında somutlaştırabiliriz.
+Yukarıdaki şekili biraz yorumlamaya çalışalım istiyorum. Önceki derste belirttiğimiz gibi <u>referans ve nesne türleri de her zaman aynı olmayabilir</u>. Heap alanında oluşan nesnenin tipi ile, aynı nesneyi stack alanında temsil eden değişkenin, yani referansın tipi farklı olabilir. Yukarıdaki örnekte **Person** bir parent(ana) sınıftır. **Student** ve **Faculty** sınıfları ise birer child(çocuk) sınıftır ve Person sınıfını **extends** anahtar kelimesi ile miras almıştır.
+
+Bu sebepten ötürü stack alanında bulunan değişkenin/referansın tipini parent sınıf olan **Person** yapabiliriz. Bir üst sınıf olduğu için stack alanında **Student** ve **Faculty** sınıflarını temsil edebilir. Yalnız önceki derste verdiğimiz **Map/HashMap** ilişkisine benzetmeyin. Çünkü **Map** bir soyut sınıftır. **Person** sınıfı her ne kadar bir parent sınıf olsa da, somut bir sınıftır. **Person** sınıfını bu yüzden heap alanında somutlaştırabiliriz.
 
 
 ## IS-A İlişkisi
 
-**Is-a**'nin kelime anlamı doğrudan yoktur ama bildiğiniz gibi **is** yardımcı bir fiildir. İngilizce okunuşuyla **a** ise bir anlamındadır.
+**Is-a**'nin kelime anlamı doğrudan yoktur ama bildiğiniz gibi **is** yardımcı bir fiildir. İngilizce okunuşuyla **a** ise <u>bir anlamındadır</u>.
 
 * A Person **is a** Person : Bir kişi bir kişidir.
 * A Student **is a** Student : Bir öğrenci bir öğrencidir.
 * A Student **is a** Person : Bir öğrenci bir bireydir.
 * A Person **is a** Student : Bir birey bir öğrencidir.
 
-İlk üçü okunduğundan kulağa gayet mantıklı gelmektedir. Fakat sonuncusunda mantıksal bir gariplik vardır. Çünkü her bir birey bir öğrenci midir???? Öğretim görevlisi de olabilir. Bu sebepten ötürü sonuncu ilişki yanlıştır. Yani ``Student s = new Person();`` doğru bir ilişkiye sahip değildir. Bu cümleyi şu şekilde de okuyabilirsiniz. `new` anahtar kelimesi ile somutlaşan her bir **kişi(Person)** aslında bir **öğrenci(Student)** midir? Tabii ki değildir. Doğru ifade şekli tabii ki ``Person p = new Student();`` şeklinde olur. Veyahut ``Person p = new Faculty();`` şeklinde!!!
+İlk üçü okunduğundan kulağa gayet mantıklı gelmektedir. <u>Fakat sonuncusunda mantıksal bir gariplik vardır</u>. Çünkü her bir birey bir öğrenci midir???? Öğretim görevlisi de olabilir. Bu sebepten ötürü sonuncu ilişki yanlıştır. Yani ``Student s = new Person();`` doğru bir ilişkiye sahip değildir. Bu cümleyi şu şekilde de okuyabilirsiniz. **new** anahtar kelimesi ile somutlaşan her bir **kişi(Person)** aslında bir **öğrenci(Student)** midir? <u>Tabii ki değildir</u>.
+
+Doğru ifade şekli tabii ki ``Person p = new Student();`` şeklinde olur. Veyahut ``Person p = new Faculty();`` şeklinde!!!
 
 O halde somutlaştırdığımız her bir **Faculty** ve **Student** sınıfı nesnelerini, stack alanında **Person** sınıfını kullanarak temsil edebilirim.
 
@@ -114,16 +124,29 @@ public class TestFaculty {
 }
 ```
 
-* Önce hata alınmayanlardan başlayalım istiyorum. ``s`` değişkeninin(referansının) tipi ``Student`` sınıfıdır. ``Student`` sınıfı normalde ``getName()`` yöntemine sahip değildir fakat ``Person`` sınıfını miras aldığı için ``getName()`` metoduna ulaşabilir.
+* Önce hata alınmayanlardan başlayalım istiyorum. ``s`` değişkeninin(referansının) tipi **Student** sınıfıdır. **Student** sınıfı normalde ``getName()`` yöntemine sahip değildir fakat **Person** sınıfını miras aldığı için ``getName()`` metoduna ulaşabilir.
 
-* ``p = s;`` atama işlemini ele alacak olursak; ``p`` değişkeninin(referansının) tipi ``Person`` sınıfıdır. ``s`` değişkenini(referansını) zaten az önce ele almıştık. Burada yapılmak istenen şey, ``p`` değişkeninin(referansının) heap alanında temsil ettiği objeyi, ``s`` değişkeninin(referansının) heap alanında temsil ettiği obje ile değiştirmektir. Yani ``p`` referansı artık ``s`` referansının işaret ettiği objeyi işaret edecektir. Peki bu mümkün müdür? Hemen bakalım. Yapılmak istenen özünde şöyle bir işlemdir. ``Person p = new Student();`` Yani bir **is-a** ilişkisi vardır. **A Student is a Person**.... Bir öğrenci bir kişi midir? Cevap: Evet. Her bir öğrenci aslında bir kişidir. Bu yüzden bu atamada bir sakınca yoktur.(Bu arada okumayı soldan sağa yapmadığımızı farkettiğinizi umuyorum. Cümleye `new` anahtar kelimesinin olduğu yerden başladım. Yani ``new Student()`` bir Person mıdır? Kafanız karıştıysa sorabilirsiniz)
+* ``p = s;`` atama işlemini ele alacak olursak; ``p`` değişkeninin(referansının) tipi **Person** sınıfıdır. ``s`` değişkenini(referansını) zaten az önce ele almıştık. Burada yapılmak istenen şey, ``p`` değişkeninin(referansının) heap alanında temsil ettiği objeyi, ``s`` değişkeninin(referansının) heap alanında temsil ettiği obje ile değiştirmektir. Yani ``p`` referansı artık ``s`` referansının işaret ettiği objeyi işaret edecektir. Peki bu mümkün müdür? Hemen bakalım. Yapılmak istenen özünde şöyle bir işlemdir. ``Person p = new Student();`` Yani bir **is-a** ilişkisi vardır. **A Student is a Person**.... Bir öğrenci bir kişi midir? Cevap: Evet. Her bir öğrenci aslında bir kişidir. Bu yüzden bu atamada bir sakınca yoktur.(Bu arada okumayı soldan sağa yapmadığımızı farkettiğinizi umuyorum. Cümleye `new` anahtar kelimesinin olduğu yerden başladım. Yani ``new Student()`` bir Person mıdır? Kafanız karıştıysa sorabilirsiniz)
 
 
-* `int m = p.getID();` hata alırız, peki neden? Bildiğimiz gibi ``p`` değişkeninin tipi ``Person`` sınıfıdır. **Person** sınıfının da böyle bir metodu olmadığından hata mesajı alırız. Ama şunu söyleyebilirsiniz. İyi de biz bir önceki satırda ``p`` referansını/değişkenini artık heap alanında ``s`` referansının işaret ettiği **Student** objesine atamıştık. Artık sahip olması lazım!!!! diye düşünebilirsiniz. Evet tam olarak bunu yaptık. Fakat derleyici bunu bilmiyor. Derleyici bunu bir **Person** nesnesi olarak görüyor çünkü başlangıçta bu şekilde ayarlanmış. Derleyici **p**'nin bir **Student** referası olduğunu ancak çalışma zamanında(run-time) görecektir. <u><i>Çünkü **referanslar** ile ilgili kararlar derleme zamanında, **objeler/nesneler** ile ilgili kararlar ise çalışma zamanında alınır. Bu yüzden derleyici çalışma zamanına geçmeden **obje tiplerini** bilmeyecektir.</i></u> Programı daha çalıştırmadığımız için, derleme sırasında hata almış olacağız. Haliyle java **p** referasını halen bir **Person** olarak düşünecektir. Alınan hata şu şekildedir. **Cannot resolve method 'getID' in 'Person'.** Aslında derleme zamanında bu hata cast işlemi yapılarak çözülebilir. ``int m = ((Student) p).getID();`` yaptığımızda derleme hatasını bir bakıma engellemiş oluruz. Ama amacımız burada hatanın ne olduğunu göstermek, çözüm yolu aramak değil. Yani Hemen altta derleme zamanı ve çalışma zamanı kararları başlığı altında bu konuya biraz değineceğiz. Yalnız şunu da belirtmekte yarar var. Peki **p** referansı çalışma zamanına(runtime) geçtiğinde bu metodu görebilecek mi? Cevap hayır.. Çünkü bir obje heap alanında oluşturulduğunda hem nesne tipinin instance metot ve değişkenlerini hem de parent sınıflarının instance metot ve değişkenlerini saklar. Fakat parent sınıfın tipiyle stack'den heap'teki bu objeye erişmek istediğimizde, stack'teki bu referans sadece kendi instance metot ve değişkenlerini ve parent sınıflarının instance metot ve değişkenlerini görür. Yani kendi üstündeki parent sınıfların bütün özelliklerini görür ama altındakileri göremez. Her ne kadar çalışma zamanında buradaki bir durum olsa da.. İllaki görmek istiyorsanız cast işlemini uygulamanız gerekmektedir. (Aslında bunu da bir şekil üzerinde anlatmam gerekiyor.) Her neyse bu konuya şimdilik burada bir nokta koymak istiyorum.
+* `int m = p.getID();` hata alırız, peki neden? Bildiğimiz gibi ``p`` değişkeninin tipi **Person** sınıfıdır. **Person** sınıfının da böyle bir metodu olmadığından hata mesajı alırız. Ama şunu söyleyebilirsiniz. İyi de biz bir önceki satırda ``p`` referansını/değişkenini artık heap alanında ``s`` referansının işaret ettiği **Student** objesine atamıştık. Artık sahip olması lazım!!!! diye düşünebilirsiniz. Evet tam olarak bunu yaptık. Fakat derleyici bunu bilmiyor. Derleyici bunu bir **Person** nesnesi olarak görüyor çünkü başlangıçta bu şekilde ayarlanmış. Derleyici **p**'nin bir **Student** referası olduğunu ancak çalışma zamanında(run-time) görecektir. <u>Çünkü <b>referanslar</b> ile ilgili kararlar derleme zamanında, <b>objeler/nesneler</b> ile ilgili kararlar ise çalışma zamanında alınır. Bu yüzden derleyici çalışma zamanına geçmeden <b>obje tiplerini</b> bilmeyecektir.</u>
 
-* ``f = q;`` Şayet tekraradan **is-a** ilişkisinden yola çıkacak olursak, ``f`` değişkeni/referansı stack alanında ``Faculty`` tipinde bulunmaktadır. Heap alanında ise yine ``Faculty`` tipinde bir nesneye sahiptir. Ama burada ``f`` değişkeni, ``q`` değişkeninin referans aldığı nesneye eşitlenmek isteniyor. Bu arada ``q`` değişkeninin/referansının tipi ``Person`` sınıfıdır. Peki bu eşitleme mümkün mü? Yapılmak istenen özünde tam olarak şudur.. ``Faculty f = new Person();`` **is-a** ilişkisindeki karşılığı **A Person is a Faculty.**. Yani her bir kişi bir öğretim üyesi midir? Tabii ki hayır. Mantıksal açıdan bu zaten mümkün değildir. Ama şunu da belirtmek isterim. Burada bir derleme hatası alıyoruz. Alınan hata tam olarak şudur. **Error: java: incompatible types: Person cannot be converted to Faculty.** Yani java ilk olarak, çalışma zamanında heap alanında olacaklardan çok, derleme zamanında var olanlara bakar. Burada da bir ``Faculty`` ile bir ``Person`` sınıfının atama işlemi vardır. Tam tersi olsaydı, yani ``Person f = new  Faculty();`` her bir öğretim üyesi bir kişidir diyebilirdik ama bu şekilde bir atama burada söz konusu değildir.
+  Programı daha çalıştırmadığımız için, derleme sırasında hata almış olacağız. Haliyle java **p** referasını halen bir **Person** olarak düşünecektir. Alınan hata şu şekildedir. **Cannot resolve method 'getID' in 'Person'.** Aslında derleme zamanında bu hata cast işlemi yapılarak çözülebilir. ``int m = ((Student) p).getID();`` yaptığımızda derleme hatasını bir bakıma engellemiş oluruz. Ama amacımız burada hatanın ne olduğunu göstermek, çözüm yolu aramak değil. Yani Hemen altta derleme zamanı ve çalışma zamanı kararları başlığı altında bu konuya biraz değineceğiz.
 
-* ``o = s;`` atama işlemini ele alacak olursak; ``o`` değişkeninin tipi ``Object`` sınıfıdır. ``s`` değişkenini zaten az önce ele almıştık. Şu bilgiyi sanırım herkes vakıftır. Java'da her nesne bir objedir. Yani her nesne ``Object`` sınıfını miras alır. Yani ``Object`` sınıfını dolaylı olarak miras alır(``extends`` eder). **is-a** ilişkisinden yola çıkacak olursak, ``Object o = new Student();``  yani her bir öğrenci bir objedir diyebiliriz.
+  <div class="notice--success" markdown="1">
+  <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+  ---
+  Yalnız şunu da belirtmekte yarar var. Peki **p** referansı çalışma zamanına(runtime) geçtiğinde bu metodu görebilecek mi? Cevap hayır..
+
+  Çünkü bir obje heap alanında oluşturulduğunda <u>hem nesne tipinin instance değişkenlerini hem de parent sınıflarının instance değişkenlerini saklar</u>.
+
+  Fakat parent **sınıfın tipiyle stack'den heap'teki bu objeye erişmek istediğimizde**, stack'teki bu referans sadece kendi instance metot ve değişkenlerini ve parent sınıflarının instance metot ve değişkenlerini görür.
+
+  Yani kendi üstündeki parent sınıfların bütün özelliklerini görür ama altındakileri göremez. Her ne kadar çalışma zamanında buradaki bir durum olsa da.. İllaki görmek istiyorsanız cast işlemini uygulamanız gerekmektedir. (Aslında bunu da bir şekil üzerinde anlatmam gerekiyor.) Her neyse bu konuya şimdilik burada bir nokta koymak istiyorum.
+  </div>
+* ``f = q;`` Şayet tekraradan **is-a** ilişkisinden yola çıkacak olursak, ``f`` değişkeni/referansı stack alanında **Faculty** tipinde bulunmaktadır. Heap alanında ise yine **Faculty** tipinde bir nesneye sahiptir. Ama burada ``f`` değişkeni, ``q`` değişkeninin referans aldığı nesneye eşitlenmek isteniyor. Bu arada ``q`` değişkeninin/referansının tipi **Person** sınıfıdır. Peki bu eşitleme mümkün mü? Yapılmak istenen özünde tam olarak şudur.. ``Faculty f = new Person();`` **is-a** ilişkisindeki karşılığı **A Person is a Faculty.**. Yani her bir kişi bir öğretim üyesi midir? Tabii ki hayır. Mantıksal açıdan bu zaten mümkün değildir. Ama şunu da belirtmek isterim. Burada bir derleme hatası alıyoruz. Alınan hata tam olarak şudur. **Error: java: incompatible types: Person cannot be converted to Faculty.** Yani java ilk olarak, çalışma zamanında heap alanında olacaklardan çok, derleme zamanında var olanlara bakar. Burada da bir **Faculty** ile bir **Person** sınıfının atama işlemi vardır. Tam tersi olsaydı, yani ``Person f = new  Faculty();`` her bir öğretim üyesi bir kişidir diyebilirdik ama bu şekilde bir atama burada söz konusu değildir.
+
+* ``o = s;`` atama işlemini ele alacak olursak; ``o`` değişkeninin tipi ``Object`` sınıfıdır. ``s`` değişkenini zaten az önce ele almıştık. Şu bilgiyi sanırım herkes vakıftır. Java'da her nesne bir objedir. Yani her nesne ``Object`` sınıfını miras alır. Yani ``Object`` sınıfını dolaylı olarak miras alır(**extends** eder). **is-a** ilişkisinden yola çıkacak olursak, ``Object o = new Student();``  yani her bir öğrenci bir objedir diyebiliriz.
 
 Sonuç olarak aşağıdaki iki atama işlemi derleme zamanı hatası alır.
 
@@ -169,7 +192,7 @@ public class TestFaculty {
 
 ## Derleme Zamanı ve Çalışma Zamanı Kararları
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.png" alt="reference and object type - compile time decisions and runtime decisions">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.webp" width="100%" height="100%"  loading="lazy" alt="reference and object type - compile time decisions and runtime decisions">
 
 Stack ve heap alanında görselleştirdiklerimizden anlaşılacağı üzere referanslar ön tarafta gerçekleşen işlemleri, objeler ise arka tarafta gerçekleşen işlemleri temsil etmektedir. Ön taraf için derleme zamanı, arka taraf, yani merkezde olan işlemler için ise çalışma zamanını düşünebilirsiniz.
 

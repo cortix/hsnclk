@@ -5,7 +5,7 @@ excerpt: "Bu derste hem Java'da hem de diğer programlama dillerinde statik ve d
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-51.jpg
+  overlay_image: /assets/images/unsplash-image-51.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Maurits Bausenhart](https://unsplash.com/photos/w8nrcXz8pwk) on Unsplash"
   #cta_label: "More Info"
@@ -20,6 +20,7 @@ tags:
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
+toc_sticky: true
 ---
 
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
@@ -71,7 +72,7 @@ Dinamik tip dillerde değişkenler nesnelere, çalışma zamanında atama ifadel
 
 > Yukarıdakilere ek olarak iki farklı gruptan daha bahsetmek istiyorum. Aslında dinamik ve statik tip diller de kendi içerisinde 2 farklı gruba ayrılır. Bunlar **strong-typed** ve **weakly-typed** dillerdir. Yalnız şunu belirtmekte yarar var. Statik olup, **strong-typed** veyahut **weakly-typed** olan da olabilir. Aynı şekilde dinamik olup **strong-typed** veyahut **weakly-typed** olan da olabilir. Aşağıdaki şekilde bu gruplamayı rahatlıkla görebilirsiniz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.png" alt="static_dynamic_strong_weak_types map">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.webp" width="100%" height="100%" loading="lazy" alt="static_dynamic_strong_weak_types map">
 
 Bir dil şartnamesi, tür denetimi kurallarını(typing rules) şiddetle uyguluyorsa, süreç **"strong-typed"** olarak adlandırılır, uygulamıyorsa **"weakly-typed"** olarak adlandırılır.
 
