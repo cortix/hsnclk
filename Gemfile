@@ -8,3 +8,12 @@ gem "webrick"
 gem 'jekyll-scholar', group: :jekyll_plugins
 gem 'jekyll-figure'
 gem 'jekyll-latex-pdf'
+
+group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-gist"
+  gem "jekyll-feed"
+  gem "jemoji"
+  gem "jekyll-algolia"
+end
