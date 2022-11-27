@@ -16,6 +16,7 @@ header:
 categories:
   - java
 tags:
+  - java class
   - static metot
   - değişkenler
   - parametreler

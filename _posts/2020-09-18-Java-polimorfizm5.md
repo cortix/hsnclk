@@ -13,7 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - polimorfizm
+  - java polimorfizm
   - inheritance of implementation
   - inheritance of interface
   - abstract class

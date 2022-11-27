@@ -16,6 +16,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
+  - java inheritance
   - nesne oluşumu
   - Kurucu(constructor)
   - derleyici kuralları

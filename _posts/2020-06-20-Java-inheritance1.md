@@ -13,6 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
+  - java inheritance
   - spagetti kodlama
   - kalıtımı sağlamak için asgari hedefler
 last_modified_at: 2020-06-06T15:12:19-04:00

@@ -17,6 +17,7 @@ header:
 categories:
   - java-hafiza-yonetimi
 tags:
+  - java memory model
   - string interning
   - string pool
   - string constant pool

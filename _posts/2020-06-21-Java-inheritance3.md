@@ -13,6 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
+  - java inheritance
   - is-a ilişkisi
   - referans ve nesne tipleri
   - derleme ve çalışma zamanı kararları

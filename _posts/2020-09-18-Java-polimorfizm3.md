@@ -13,7 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - polimorfizm
+  - java polimorfizm
   - casting
   - Widening Casting
   - Narrowing Casting

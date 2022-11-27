@@ -13,6 +13,7 @@ header:
 categories:
   - java-hafiza-yonetimi
 tags:
+  - java memory model
   - Scope(kapsam)
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true

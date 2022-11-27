@@ -13,6 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
+  - java inheritance
   - static type(statik tip)
   - dynamic type(dinamik tip)
   - strong-typed
