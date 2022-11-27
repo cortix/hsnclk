@@ -13,8 +13,8 @@ header:
 categories:
   - java-paralel-programlama
 tags:
+  - java paralel programlama
   - threads
-  - paralel programlama
   - fork/join
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: false

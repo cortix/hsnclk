@@ -13,6 +13,7 @@ header:
 categories:
   - java
 tags:
+  - java class
   - sınıf deklarasyonu
   - değiştiriciler
 last_modified_at: 2018-06-06T15:12:19-04:00

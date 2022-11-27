@@ -14,6 +14,7 @@ header:
 categories:
   - algorithms
 tags:
+  - algorithms
   - selection Sort algorithm
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: false

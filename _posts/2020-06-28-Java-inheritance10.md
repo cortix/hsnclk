@@ -13,6 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
+  - java inheritance
   - overloading metot
   - aşırı yükleme
 last_modified_at: 2020-02-19T15:12:19-04:00

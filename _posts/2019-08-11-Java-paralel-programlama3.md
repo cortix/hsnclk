@@ -13,8 +13,8 @@ header:
 categories:
   - java-paralel-programlama
 tags:
+  - java paralel programlama
   - threads
-  - paralel programlama
   - fork/join
   - kritik yol uzunluğu
   - data race(veri yarışı)

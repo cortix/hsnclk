@@ -13,7 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - polimorfizm
+  - java polimorfizm
   - static/early binding(statik/erken bağlanma)
   - dynamic/late binding(dinamik/geç bağlanma)
   - overriding metot

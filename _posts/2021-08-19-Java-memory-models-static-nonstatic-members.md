@@ -16,6 +16,7 @@ header:
 categories:
   - java-hafiza-yonetimi
 tags:
+  - java memory model
   - static context
   - instance context
   - static context memory management

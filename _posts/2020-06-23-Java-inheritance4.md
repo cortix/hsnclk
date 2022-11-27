@@ -13,6 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
+  - java inheritance
   - değiştiriciler
   - public
   - private

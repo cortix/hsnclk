@@ -14,6 +14,7 @@ header:
 categories:
   - programming-style
 tags:
+  - programming-style
   - higher order functions
   - first-class citizens
   - first-class functions

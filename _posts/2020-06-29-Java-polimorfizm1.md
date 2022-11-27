@@ -13,6 +13,7 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
+  - java polimorfizm
   - polimorfizm
   - virtual method invocation
   - Robert C. Martin
