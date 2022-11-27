@@ -62,18 +62,16 @@ public class Person extends Object {
 Aşağıdaki kodda da görüleceği üzere Person kurucusunu, değişken ilklendirmeye olanak verecek şekilde değiştirdik. Yapıcıya(constructor) ``n`` isminde bir **String** argümanı ekledik. Daha sonra kurucu içinde sınıfın üye değişkenine bu argümanı ``this.name = n`` ifadesiyle atadık. <u>Yalnız burada derleyici bir hata verecektir.</u>
 
 
-<figure style="width: 300px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init1.webp"  width="100%" height="100%" loading="lazy" alt="değişken ilklendirme">
-  <figcaption></figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init1.webp"  width="300px" height="100%" class="align-center" loading="lazy" alt="değişken ilklendirme">
+
 
 
 Derleyici kurallarından **3.kuralı** hatırlayacak olursak, <u>kurucunun ilk satırı mutlaka aynı sınıf(same-class) yapıcısına veya bir üst sınıf(superclass) yapıcısına bir çağrı olmalıdır.</u> O halde ``super();`` çağrısının yerini değiştirerek bu sorunu çözebiliriz.
 
-<figure style="width: 300px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init2.webp"  width="100%" height="100%" loading="lazy" alt="değişken ilklendirme">
-  <figcaption></figcaption>
-</figure>
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-24-Java-inheritance7/var_init2.webp"  width="300px" height="100%" class="align-center" loading="lazy" alt="değişken ilklendirme">
+
 
 
 Şimdi hem üst sınıf kurucumu doğru bir şekilde çağırabiliyorum hem de üye değişkenimi başlatabiliyorum. Buradan aslında şu çıkarımı da yapabilirsiniz. Bir sınıftan bir objeyi oluşturmadan veyahut sınıfın kendisini yüklemeden önce derleyici hep bir üst sınıfın sorunlarını çözmemiz için bizi zorlar.
