@@ -1,6 +1,6 @@
 ---
 title: "Java'da Kalıtım 8 - Alıştırmalar"
-comments: true
+comments: false
 excerpt: "Bu bölümde şu ana kadar öğrendiklerimizi test etmek amacıyla birkaç tane örnek kod üzerinde çalışacağız."
 header:
   teaser: "assets/images/equality.webp"
