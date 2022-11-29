@@ -148,7 +148,7 @@ Soyut sınıflar **new** anahtar kelimesi ile oluşturulamazlar. Oluşturmaya ka
 
 
 ## Referanslar
-* Bütün şekiller [https://www.lucidchart.com](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.
+* Bütün şekiller [lucidchart](https://www.lucidchart.com)'da tarafımdan hazırlanmıştır.
 * [Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
 * [Java Data Types](https://www.w3schools.com/java/java_data_types.asp)
 * [A Guide to Creating Objects in Java](https://www.baeldung.com/java-initialization)
