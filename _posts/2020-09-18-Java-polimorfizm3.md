@@ -42,9 +42,9 @@ s.getSID();
 ```
 Şu şekilde bir hata alırız:
 
-
-* **Compile time error: Cannot resolve method 'getSID' in 'Person'**
-
+```java
+Compile time error: Cannot resolve method 'getSID' in 'Person'
+```
 
 Hatırlayacağınız üzere derleme zamanında, derleyici **SADECE** referans tipini bildiğinden ve metot çağrıları için sadece referans tipinin sınıfına bakacağından, **Person** sınıfında ``getSID`` metodunu bulamayacaktır. Ama biz bu metodun Student sınıfında olduğunu biliyoruz. **Student** sınıfına da ancak **çalışma zamanında** erişebileceğimiz için, ya derleme zamanı hatasını almaya razı olacağız ya da derleyiciye bir **taahhüt** vererek bu metodun aslında Student sınıfında bulunduğunu söyleyeceğiz. Şayet 2. yöntemi seçersek, casting denen işlemi uygulamamız gerekmektedir.
 
@@ -109,9 +109,9 @@ Person s = new Person("Hasan");
 
 Çalışma zamanında aşağıdaki gibi bir hata alırdık.
 
-
-* **Exception in thread "main" java.lang.ClassCastException: Person cannot be cast to Student**
-
+```java
+Exception in thread "main" java.lang.ClassCastException: Person cannot be cast to Student
+```
 
 Daha ilk başta yaptığımız hata; çalışma zamanında Person nesnesinin olduğunu bildiğimiz halde, Person sınıfını Student sınıfına gönüştürmeye çalışmamızdır. Bir bakıma derleyicinin güvenini sarstık. Özetle derleyiciye, **"bunun çalışma zamanında bir Student sınıfı olacağını ve bu sınıfın da içinde bir getSID metodu barındıracağını taahhüt ettik."** Daha çalışma zamanındaki sınıfı bile tutturamadık.
 
