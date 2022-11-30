@@ -302,3 +302,6 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar:
+        - text: >
+            [![img](/assets/images/speak-friend-and-enter.webp)](#)
