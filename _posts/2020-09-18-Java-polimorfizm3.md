@@ -30,12 +30,14 @@ toc_sticky: true
 {: .notice}
 
 
-Bazı durumlarda derleme ve çalışma zamanı kararlarını değiştirmek için derleyiciye yardım etmek gerekebilir. Bu gibi durumlarda casting işlemini uygularız. Ne demek istediğimi bir öndeki bölümde yarım bıraktığımız kod üzerinden göstermek istiyorum.
+Bazı durumlarda derleme ve çalışma zamanı kararlarını değiştirmek için derleyiciye yardım etmek gerekebilir. Bu gibi durumlarda **casting** dediğimiz işlemi uygularız. Ne demek istediğimi bir önceki bölümde yarım bıraktığımız kod üzerinden göstermek istiyorum.
 
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml1.webp"  width="200px" height="100%" class="align-center" loading="lazy" alt="polimorfizm">
 
-
+<div class="notice--danger" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Compile time error</h4>
+---
 ```java
 Person s = new Student("Hasan", 1111);
 s.getSID();
@@ -45,7 +47,7 @@ s.getSID();
 ```java
 Compile time error: Cannot resolve method 'getSID' in 'Person'
 ```
-
+</div>
 Hatırlayacağınız üzere derleme zamanında, derleyici **SADECE** referans tipini bildiğinden ve metot çağrıları için sadece referans tipinin sınıfına bakacağından, **Person** sınıfında ``getSID`` metodunu bulamayacaktır. Ama biz bu metodun Student sınıfında olduğunu biliyoruz. **Student** sınıfına da ancak **çalışma zamanında** erişebileceğimiz için, ya derleme zamanı hatasını almaya razı olacağız ya da derleyiciye bir **taahhüt** vererek bu metodun aslında Student sınıfında bulunduğunu söyleyeceğiz. Şayet 2. yöntemi seçersek, casting denen işlemi uygulamamız gerekmektedir.
 
 Öncelikli olarak casting çeşitleri hakkında bilgi vermek istiyorum. Sonrasında yukarıdaki sorunun çözümünü ele alırız.
@@ -62,7 +64,9 @@ Hatırlayacağınız üzere derleme zamanında, derleyici **SADECE** referans ti
     public class TestClass {
       public static void main(String[] args) {
         int sampleInt = 2;
-        double sampleDouble = sampleInt; // otomatik casting: int'den double'a
+        
+        // otomatik casting, int'den double'a
+        double sampleDouble = sampleInt;
 
         System.out.println(sampleInt);      // Çıktı 2
         System.out.println(sampleDouble);   // Çıktı 2.0
@@ -81,7 +85,9 @@ Hatırlayacağınız üzere derleme zamanında, derleyici **SADECE** referans ti
     public class TestClass {
       public static void main(String[] args) {
         double sampleDouble = 2.66;
-        int sampleInt = (int) sampleDouble; // Manuel casting: double'dan int'e
+
+        // Manuel casting, double'dan int'e
+        int sampleInt = (int) sampleDouble;
 
         System.out.println(sampleDouble);   // Çıktı 2.66
         System.out.println(sampleInt);      // Çıktı 2
@@ -98,7 +104,9 @@ Hatırlayacağınız üzere derleme zamanında, derleyici **SADECE** referans ti
 ```java
 ((Student)s ).getSID();
 ```
-
+<div class="notice--danger" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Runtime Error</h4>
+---
 Peki kodu şu şekilde değiştirsek sizce ne olurdu?
 
 
@@ -107,12 +115,12 @@ Person s = new Person("Hasan");
 ((Student)s ).getSID();
 ```
 
-Çalışma zamanında aşağıdaki gibi bir hata alırdık.
+O zaman da çalışma zamanında aşağıdaki gibi bir hata alırdık.
 
 ```java
 Exception in thread "main" java.lang.ClassCastException: Person cannot be cast to Student
 ```
-
+</div>
 Daha ilk başta yaptığımız hata; çalışma zamanında Person nesnesinin olduğunu bildiğimiz halde, Person sınıfını Student sınıfına gönüştürmeye çalışmamızdır. Bir bakıma derleyicinin güvenini sarstık. Özetle derleyiciye, **"bunun çalışma zamanında bir Student sınıfı olacağını ve bu sınıfın da içinde bir getSID metodu barındıracağını taahhüt ettik."** Daha çalışma zamanındaki sınıfı bile tutturamadık.
 
 ```java
