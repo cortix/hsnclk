@@ -293,9 +293,17 @@ public class Banka {
 
 Yukarıdaki kod bloğunda dikkat etmemiz gereken iki şey var. Birincisi yukarıda oluşturduğumuz *BankaHesabı* sınıfının önünde bulunan ``static`` anahtar kelimesidir. Burada sınıfı bu şekilde değiştirmemin sebebi hem static sınıfların kullanımını göstermek hemde static bir ifadenin bazı kurallarından bahsetmek olacaktır.
 
-Mesela bir kural şudur. Yukarıdaki gibi bir örnekte, inner olarak oluşturduğumuz sınıfı non-static yapamayız. Aksi halde şu şekilde bir hata alabiliriz.
+<div class="notice--danger" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Önemli Hatırlatma</h4>
+---
+Mesela <u>bir kural</u> da şudur. Yukarıdaki gibi bir örnekte, inner olarak oluşturduğumuz sınıfı **non-static** yapamayız.
 
-**Error: non-static variable this cannot be referenced from a static context**
+Aksi halde şu şekilde bir hata alabiliriz.
+
+```java
+Error: non-static variable this cannot be referenced from a static context
+```
+</div>
 
 Çünkü main metodu static bir metodtur. Static bir durumda static değişkenler kullanmak zorundayız. Bu Java'nın kurallarından sadece biridir. Tabiki amacımız bu kuralları derinlemesine işlemek değil. Static ifadesiyle alakalı olduğu için değinmek istedim. Örneğe geri dönecek olursak, oluşturulan her bir nesne için instance variable'lar hep sıfırdan başlamaktadır. Ama biz sonHesapNum değişkeninin bir önceki hesap numarasını takip etmek istediğini ve onu baz alarak bir atama yapmasını sağlayacaktık. O zaman sonHesapNum değişkeni önüne ``static`` anahtarını koyabiliriz.
 

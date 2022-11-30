@@ -137,11 +137,22 @@ Burada küçük bir parantez açıp bir şeyi izah etmek istiyorum. Aslında **n
 
 Aşağıdaki şekilden de görüleceği üzere **referans** ve **nesne(obje)** tiplerinin neler olduğunu görüyorsunuz. [Hashmap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) sınıfı aslında **Map arayüzünü(interface)** uygular. [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) <u>soyut bir sınıftır</u>.
 
-Soyut sınıflar **new** anahtar kelimesi ile oluşturulamazlar. Oluşturmaya kalkıştığınızda şu şekilde bir hata alırsınız. **'Map' is abstract; cannot be instantiated.** **Abstract**'ın kelime anlamı <u>soyut</u>, **instantiated** ise <u>somutlaştırmadır</u>. Yani bu hata mesajı bize, <u>Map soyuttur, somutlaştırılamaz demek istemektedir</u>. Yani, nesne türü olarak ifade ettiğimizde, sanki stack'teki değişkenin(referansın) tipinin karşılığı da, heap'teki somut nesnenin tipiyle aynı olduğu kanısı oluşabilir. <u>Ama bu örnekten de anlaşılacağı üzere stack'te her zaman somut bir sınıfın türü objeyi temsil etmeyebilir.</u> Bu tür burada olduğu gibi bir **interface** de olabilir. Bu yüzden referans türü diye ifade ettiğimizde nesneyi de kapsadığı için daha genel bir tanım olacaktır.
+<div class="notice--danger" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Önemli Hatırlatma</h4>
+---
+Soyut sınıflar **new** anahtar kelimesi ile oluşturulamazlar. Oluşturmaya kalkıştığınızda şu şekilde bir hata alırsınız.
+
+```java
+'Map' is abstract; cannot be instantiated.
+```
+</div>
+
+**Abstract**'ın kelime anlamı <u>soyut</u>, **instantiated** ise <u>somutlaştırmadır</u>. Yani bu hata mesajı bize, <u>Map soyuttur, somutlaştırılamaz demek istemektedir</u>. Yani, nesne türü olarak ifade ettiğimizde, sanki stack'teki değişkenin(referansın) tipinin karşılığı da, heap'teki somut nesnenin tipiyle aynı olduğu kanısı oluşabilir. <u>Ama bu örnekten de anlaşılacağı üzere stack'te her zaman somut bir sınıfın türü objeyi temsil etmeyebilir.</u> Bu tür burada olduğu gibi bir **interface** de olabilir. Bu yüzden referans türü diye ifade ettiğimizde nesneyi de kapsadığı için daha genel bir tanım olacaktır.
 
 Özetle, <u>soyut sınıflar ve arayüzler(abstract classes and interfaces) heap alanında somut bir sınıf(concrete class) tarafından temsil edilmedikçe</u> **var olamazlar**. `HashMap` ise **somut(concrete)** bir sınıftır.
 
 **NOT :** Bu arada referans tipleri, deklare edilen tipler(declared type) olarak da tanımlanır.
+{: .notice--warning}
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/ref-obj-type.webp"  width="100%" height="100%"  loading="lazy" alt="referans ve obje tipi arasındaki fark">
 
