@@ -4,15 +4,19 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Books"
+  - title: "Kitaplar"
     url: /reviews/
-  - title: "Advices"
+  # - title: "Katıldığım Etkinlikler"
+  #   url: /events/
+  - title: "Öneri"
     url: /recommends/
-  - title: "Articles"
+  - title: "Yazılar"
     url: /year-archive/
-  - title: "Categories"
+  - title: "Kategoriler"
     url: /categories/
-  - title: "Tags"
+  - title: "Etiketler"
     url: /tags/
+  - title: <i class="fa fa-language" aria-hidden="true"></i><b> ENG</b>
+    url: https://en.hasancelik.org
   # - title: "Sitemap"
   #   url: /sitemap/
