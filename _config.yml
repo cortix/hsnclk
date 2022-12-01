@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "tr-TR"
 title                    : "hasancelik.org"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Hasan Çelik"
   avatar           : "/assets/images/bio/hc2.webp" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A software developer who likes to develop himself and is interested in music, philosophy, psychology, marketing, branding, history, economy and science at the same time."
+  bio              : "Kendini geliştirmeyi seven, aynı zamanda müzik, felsefe, psikoloji, pazarlama, markalaşma, tarih, ekonomi ve bilimle de ilgilenen bir yazılımcı."
   location         : "Ankara/Turkey"
   email            : "hsnclk1985@gmail.com"
   links:
