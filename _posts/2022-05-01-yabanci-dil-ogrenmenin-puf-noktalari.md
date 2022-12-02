@@ -32,7 +32,7 @@ toc_sticky: true
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-**BİLGİLENDİRME :** Yabancı dil öğrenmenin **PÜF NOKTALARI 34**'den sonraki **PÜF NOKTALAR** serisine ulaşmak için bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-2/) tıklayabilirsiniz.
+**BİLGİLENDİRME :** Yabancı dil öğrenmenin **PÜF NOKTALARI 35 - 56** serisine ulaşmak için bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-2/), **PÜF NOKTALARI 57 - 66** serisine ulaşmak için ise bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-3/) tıklayabilirsiniz.
 {: .notice--warning}
 
 
@@ -454,7 +454,7 @@ Tabii ki Johan Vandewalle instagram sayfasından ve youtube kanalından daha faz
 {% include video id="MjU7jigkmMY" provider="youtube" %}
 
 
-## Reference:
+## Referanslar:
 * [Johan Vandewalle'nin Instagram hesabı--> @johan.vandewalle](https://www.instagram.com/johan.vandewalle/)
 * [Johan Vandewalle'nin Youtube hesabı](https://www.youtube.com/channel/UCPqrL6dI-bhCnR0W5Hg9Y_Q)
 * [Johan Vandewalle Wiki](https://tr.wikipedia.org/wiki/Johan_Vandewalle)
