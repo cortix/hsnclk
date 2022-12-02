@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: hasancelik.org
-Token: ba5a1eb6f4a25c0643847d9a6d27ab128189bd8aab756459a09689a919946076
+Token: 869ff477a7575473a0d80dc765f6be693f476bd85f213ab313be245e37a559dd
