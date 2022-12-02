@@ -1,7 +1,7 @@
 ---
-title: "Imperative and Declarative Style Programming (Programming Style Part 1)"
+title: "Imperative ve Declarative Stil Programlama (Programlama Stili Part 1)"
 comments: false
-excerpt: "In this article I am going to try to explain the difference between imperative and declarative style programming"
+excerpt: "Bu yazıda, zorunlu ve bildirimsel stil programlama arasındaki farkı açıklamaya çalışacağım."
 header:
   teaser: "assets/images/2022-02-23-imperative-and-declarative-programming/imp.webp"
   #og_image: /assets/images/page-header-og-image.png
@@ -24,18 +24,18 @@ toc_label: "CONTENT"
 
 
 
-**IMPORTANT :** The notes that I took for myself. I hope they will help you, too. Each resource that I used is added as reference at the end of the page.
+**ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-## Imperative Style Programming
+## Zorunlu Stil Programlama (Imperative Style Programming)
 
-According to the wiki definition, **imperative programming style** focuses on describing how a program operates. Actually it sounds good but not very descriptive. I have found a better one at a live event I attended via O'reilly.
+Wiki tanımına göre **zorunlu programlama stili** bir programın nasıl çalıştığını açıklamaya odaklanır. Aslında kulağa hoş geliyor, ama çok da açıklayıcı değil. O'reilly aracılığıyla katıldığım canlı bir etkinlikte daha iyisini buldum.
 
-According to Venkat Subramaniam, Imperative Style Programming tells us **what a program does and also how it does it**. I want to summarize this definition like Venkat did ->
+Venkat Subramaniam'a göre Zorunlu Stil Programlama bize **bir programın ne yaptığını ve ayrıca bunu nasıl yaptığını** söyler. Bu tanımı Venkat'ın yaptığı gibi özetlemek istiyorum ->
 
-### What to do - How to do it
+### Ne yapıyor - Nasıl yapıyor (What to do - How to do it)
 
-For instance;
+Örneğin;
 
 ```java
 String[] names = {"hasan", "tom", "phil", "bev", "mike"};
@@ -45,27 +45,30 @@ for (int i = 0; i < names.length; i++) {
     }
 }
 ```
-In the above example, we can easily understand what this code does.
+Yukarıdaki örnekte bu kodun ne işe yaradığını kolaylıkla anlayabiliriz.
 
-**What is it doing :** it is trying to find a special name in the array.
+**Ne yapıyor:** array içinde özel bir isim bulmaya çalışıyor.
 
-**How is it doing it? :** it is doing it by using a standard for-loop. It defines a variable in the for-loop and does this by incrementing it one at a time and comparing it to the name it is looking for.
+**Bunu Nasıl yapıyor? :** bunu standart bir for döngüsü kullanarak yapıyor. For döngüsünde bir değişken tanımlıyor ve bunu birer birer artırarak ve aradığı adla karşılaştırarak yapıyor.
 
-In summary, we show step by step *how we do* the necessary actions to find this name(*what we do*).
+Özetle, <u>bu ismi bulmak için</u>(yani, "**ne yapıyor**" kısmını) <u>gerekli işlemleri</u> (yani "**nasıl yapıyoruz**" kısmını) adım adım gösteriyoruz.
 
-### Note:
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+---
 
-At the core of the familiar imperative style are **mutability** and **command-driven** programming. We create variables or objects and modify their state along the way. We also provide detailed commands or instructions to execute, such as create a loop index, increment its value, check if we reached the end, update the nth element of an array, and so on.
+Zorunlu stilin özünde **değişkenlik** ve **komuta-dayalı** programlama vardır. Değişkenler veya nesneler yaratır ve süreç boyunca onların durumlarını(yani state'lerini) değiştiririz. Ayrıca, bir döngü dizini oluşturma, değerini artırma, sona ulaşıp ulaşmadığımızı kontrol etme, bir array'in n'inci öğesini güncelleme vb. gibi yürütmeye yönelik ayrıntılı komutlar veya talimatlar da sağlarız.
+</div>
 
-## Declarative Style Programming
+## Bildirimsel Stil Programlama (Declarative Style Programming)
 
-The declarative programming style focuses on what the program should accomplish without specifying all the details of how the program should achieve the result. Again according to Venkat;
+Bildirimsel programlama stili, programın sonuca nasıl ulaşması gerektiğine dair tüm ayrıntıları belirtmeden programın neyi başarması gerektiğine odaklanır. Yine Venkat'a göre;
 
-It tells us **what a program does but not how to do it**. Again, I would like to summarize this definition like this ->
+Bize **bir programın ne yaptığını** söyler **ama nasıl yapacağını** söylemez. Tekrardan bu tanımı şöyle özetlemek istiyorum ->
 
-### What to do - NOT How to do it
+### Ne yapıyor - Nasıl yapıyor YOK (What to do - NOT How to do it)
 
-For instance;
+Örneğin;
 
 ```java
 List<String> listNames = Arrays.asList("hasan", "tom", "phil", "bev");
@@ -73,32 +76,30 @@ if (listNames.contains("hasan")) {
     System.out.println("it is found");
 }
 ```
-**What is it doing :** well, it is trying to find a special name in the array like previous one.
+**Ne yapıyor :** önceki gibi array içinde özel bir isim bulmaya çalışıyor.
 
-**NOT "how is it doing it" :** The difference out of the imperative programming style, declarative style hides the details of "**how to do**" parts. As you can see, the *contains* method does the whole job for us and hides the complexity.
+**"Bunu Nasıl yapıyor" YOK :** Zorunlu programlama stilinden farkı, bildirimsel stilin, "**nasıl yapılır**" bölümlerinin ayrıntılarını gizlemesidir. Görüleceği üzere, *contains* yöntemi bizim için tüm işi yapıyor ve karmaşıklığı gizliyor.
 
-## Comparison of enhanced and standard loops in terms of programming styles
+## Gelişmiş(enhanced) ve standart döngülerin programlama stilleri açısından karşılaştırılması
 
-In which classification should we evaluate **enhanced** and **standard** for loops? Let's brainstorm together...
+**Gelişmiş** ve **standart** for döngülerini hangi sınıflandırma içide değerlendirmeliyiz? Gelin birlikte beyin fırtınası yapalım…
 
-In both cases, it's obvious what we're going to do. Our goal is to print the elements of the array to the console. What about "**how to do**" parts???
+Her iki durumda da ne yapacağımız bellidir. Amacımız array'in elemanlarını konsola yazdırmak. Peki ya “**nasıl yapılır**” bölümleri???
 
-**In the standard for loop;** A counter, *i*, is declared and initialized to 0. A boolean expression compares *i* with the length of the *names* array. if *i<names.length*, the code block is executed. *i* is incremented by one at the end of each code block. Within the code block, *i* is used as the array index. As you can see, We explain **how to do** it step by step.
+**Standart for döngüsünde;** Bir sayaç, *i*, bildirilir ve 0 olarak başlatılır. Bir boolean ifadesi, *i*'yi *names* dizisinin uzunluğuyla karşılaştırır. Eğer *i<names.length* ise, kod bloğu yürütülür. *i*, her kod bloğunun sonunda bir artırılır. Kod bloğu içinde *i* array indeksi olarak kullanılır. Gördüğünüz gibi adım adım **nasıl yapacağınızı** anlatıyoruz.
 
-**In the enhanced for loop;** A string variable, *name*, is declared to hold each element of the array. But we don't know **how** this loop does all these operations.
+**Geliştirilmiş for döngüsünde;** Array'in her öğesini tutmak için bir string değişkeni olan *name* deklare edilir. Ancak bu döngünün tüm bu işlemleri **nasıl** yaptığını bilmiyoruz.
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-02-23-imperative-and-declarative-programming/forloops.webp"  width="100%" height="100%" loading="lazy" alt="for loops example">
 
-Actually both the **standard for loop** *(for i = 0...)* and the **enhanced for loop** *(for var x : ...)* are **imperative style**. The **enhanced for loop** is really a wrapper around
-`iterator.hasNext()` and `iterator.next()`. That is, under the hood this form of iteration uses the `Iterator` interface and calls into its `hasNext` and `next` methods. Furthermore, from the **enhanced for loop** we can do `break` and `continue` with an if condition, and that is where we see the **imperative** nature being
-enhanced clearly.
+Aslında hem **standart for döngüsü** *(for i = 0...)* hem de **gelişmiş(enhanced) for döngüsü** *(for var x : ...)* zorunlu(imperative) stildir. **Geliştirilmiş for döngüsü** aslında `iterator.hasNext()` ve `iterator.next()` etrafında bir sarmalayıcıdır. Diğer bir deyişle, bu yineleme(iteration) biçimi, arka planda, `Iterator` arabirimini kullanır ve onun `hasNext` ve `next` yöntemlerini çağırır. Dahası, **enhanced for döngüsünden**, bir if koşuluyla `break` ve `continue` yapabiliriz ve bu, imperative'in açıkça geliştirildiğini gördüğümüz yerdir.
 
-> ENHANCED for loop is more declarative than the STANDARD for loop
+> ENHANCED for döngüsü, STANDARD for döngüsünden daha bildirimseldir
 
-We can say that the enhanced for loop moves the needle towards **declarative style**. However, it is not entirely in the land of **declarative style**. Both the **standard loop** and the **enhanced loops** are external iterators which are **imperative** in nature. In both the loops we control the flow using if `break` or if `continue`. We do a little bit less of the controlling in enhanced for loop compared to the standard for loop. Nevertheless both allow for imperative control.
+Geliştirilmiş for döngüsünün **bildirim stiline** daha çok benzediğini söyleyebiliriz. Fakat tamamen **bildirimsel(declarative)** stildir diyemeyiz. Hem **standart** döngü hem de **geliştirilmiş** döngüler, doğası gereği zorunlu(imperative) olan harici yineleyicilerdir. Her iki döngüde de akışı "if `break`" veya "if `continue`" kullanarak kontrol edebiliriz. Yalnız, gelişmiş for döngüsünde, standart for döngüsüne kıyasla biraz daha az kontrol yapıyoruz. Ama yine de her ikisi de zorunlu(imperative) kontrole izin verir.
 
 
-## Reference:
+## Referanslar:
 * [Imperative programming](https://en.wikipedia.org/wiki/Imperative_programming)
 * [Declarative programming](https://en.wikipedia.org/wiki/Declarative_programming)
 * [Understanding Functional Programming - Venkat Subramaniam](https://learning.oreilly.com/live-events/understanding-functional-programming/0636920457435/0636920058831/)
