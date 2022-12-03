@@ -27,6 +27,17 @@ classes: wide
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir. Rice Üniversitesi'nin hazırladığı eğitsel bir Framework olan PCDP bu ve sonraki bölümlerde kullanılacaktır. async ve finish notasyonları bu Framework'de yer almaktadır.
 {: .notice}
 
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java Paralel Programlama Serisi</h4>
+---
+
+1. Java Paralel Programlama - [Bölüm 1](/java-paralel-programlama/Java-paralel-programlama1/)
+2. Java Paralel Programlama - [Bölüm 2](/java-paralel-programlama/Java-paralel-programlama2/)
+3. Java Paralel Programlama - [Bölüm 3](/java-paralel-programlama/Java-paralel-programlama3/)
+4. **Java Paralel Programlama - Bölüm 4**
+
+</div>
+
 ## Genel Bakış
 
 Bir önceki bölümde hesaplama grafiklerini görmüştük. Şimdi ise gerçek **çok çekirdekli bilgisayarlarda** nasıl haritalandıklarını görebiliriz. Bir önceki bölümde resmettiğimiz hesaplama grafiğini tekrar göz önüne getirelim ve her bir işleme bazı yürütme zamanlarını verelim. **S<sub>6</sub>** dışında bütün işlemlere <u>1 birim</u> çalışma zamanı verdiğimizi varsayalım. **S<sub>6</sub>** ise **10** olsun.

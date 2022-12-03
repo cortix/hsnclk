@@ -27,6 +27,15 @@ toc_label: "SAYFA İÇERİĞİ"
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Programlama Stili Serisi</h4>
+---
+
+1. **Programlama Stili Part 1 - Imperative ve Declarative Stil Programlama**
+2. Programlama Stili Part 2 - [Higher Order Fonksiyonlar](/programming-style/higher-order-functions/)
+
+</div>
+
 ## Zorunlu Stil Programlama (Imperative Style Programming)
 
 Wiki tanımına göre **zorunlu programlama stili** bir programın nasıl çalıştığını açıklamaya odaklanır. Aslında kulağa hoş geliyor, ama çok da açıklayıcı değil. O'reilly aracılığıyla katıldığım canlı bir etkinlikte daha iyisini buldum.
