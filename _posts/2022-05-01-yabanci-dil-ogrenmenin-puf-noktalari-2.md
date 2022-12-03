@@ -24,7 +24,7 @@ tags:
   - Yabancı Dil Örenmenin Püf Noktaları
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
-toc_label: "CONTENT"
+toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
 ---
 
