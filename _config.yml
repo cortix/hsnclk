@@ -304,4 +304,4 @@ defaults:
       related: true
       sidebar:
         - text: >
-            [![img](/assets/images/speak-friend-and-enter.webp)](#)
+            [![speak friend and enter](/assets/images/speak-friend-and-enter.webp){: height="100%" width="100%" loading="lazy"}](#)
