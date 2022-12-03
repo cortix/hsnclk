@@ -28,6 +28,15 @@ toc_label: "SAYFA İÇERİĞİ"
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Programlama Stili Serisi</h4>
+---
+
+1. Programlama Stili Part 1 - [Imperative ve Declarative Stil Programlama](/programming-style/imperative-and-declarative-programming/)
+2. **Programlama Stili Part 2 - Higher Order Fonksiyonlar**
+
+</div>
+
 Her şeyden önce, üst düzey fonksiyonları(yani higher order functions) anlamak için bazı tanımları bilmeliyiz. "**birinci sınıf vatandaş**(first-class citizen)" terimiyle başlamak istiyorum
 
 ## Birinci sınıf vatandaş (First-class citizen)

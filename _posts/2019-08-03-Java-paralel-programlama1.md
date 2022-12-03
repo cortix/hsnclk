@@ -28,6 +28,17 @@ classes: wide
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir. Rice Üniversitesi'nin hazırladığı eğitsel bir Framework olan PCDP bu ve sonraki bölümlerde kullanılacaktır. async ve finish notasyonları bu Framework'de yer almaktadır.
 {: .notice}
 
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java Paralel Programlama Serisi</h4>
+---
+
+1. **Java Paralel Programlama - Bölüm 1**
+2. Java Paralel Programlama - [Bölüm 2](/java-paralel-programlama/Java-paralel-programlama2/)
+3. Java Paralel Programlama - [Bölüm 3](/java-paralel-programlama/Java-paralel-programlama3/)
+4. Java Paralel Programlama - [Bölüm 4](/java-paralel-programlama/Java-paralel-programlama4/)
+
+</div>
+
 ## Genel Bakış
 
 Bilgisayar bilimlerinde, sıralı bir algoritma(**sequential algorithm**) veya seri algoritma(**serial algorithm**), eşzamanlı(**concurrently**) veya paralel'in(**parallel**) aksine sırayla (<u>başka bir işlem çalıştırmadan baştan sona kadar bir kez</u>) yürütülen bir algoritmadır. Terim öncelikle eşzamanlı algoritma veya paralel algoritma ile zıtlık oluşturmak için kullanılır; çoğu standart bilgisayar algoritması, sıralı algoritmalardır ve sıralılık bir arka plan varsayımı olduğu için özel olarak tanımlanmamıştır.

@@ -19,13 +19,22 @@ tags:
   - imperative
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
-toc_label: "CONTENT"
+toc_label: "SAYFA İÇERİĞİ"
 ---
 
 
 
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
+
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Programlama Stili Serisi</h4>
+---
+
+1. **Programlama Stili Part 1 - Imperative ve Declarative Stil Programlama**
+2. Programlama Stili Part 2 - [Higher Order Fonksiyonlar](/programming-style/higher-order-functions/)
+
+</div>
 
 ## Zorunlu Stil Programlama (Imperative Style Programming)
 

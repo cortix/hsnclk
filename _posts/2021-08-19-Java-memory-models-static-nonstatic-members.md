@@ -26,10 +26,23 @@ toc: true
 toc_label: "SAYFA İÇERİĞİ"
 ---
 
-
-
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
+
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java'da Hafıza Modeli Serisi</h4>
+---
+
+1. Java'da Hafıza Modeli 1 - [İlkel Veri Tipleri(Primitive Types)](/java-hafiza-yonetimi/Java-memory-models-primitive-types/)
+2. Java’da Hafıza Modeli 2 - [Nesneler](/java-hafiza-yonetimi/Java-memory-models-objects/)
+3. Java’da Hafıza Modeli 3 - [Nesneler](/java-hafiza-yonetimi/Java-memory-models-objects1/)
+4. Java’da Hafıza Modeli 4 - [Kapsam(Scope)](/java-hafiza-yonetimi/Java-memory-models-scope/)
+5. Java’da Hafıza Modeli 5 - [Pass By Value / Pass By Reference](/java-hafiza-yonetimi/Java-memory-models-pass-by-value-reference/)
+6. **Java’da Hafıza Modeli 6 - Java’da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi**
+7. Java’da Hafıza Modeli 7 - [String Interning Nedir, String Pool Nedir, == operatörü ve equals metodu Arasındaki Fark](/java-hafiza-yonetimi/string-interning-string-pool/)
+</div>
+
+## Genel Bakış
 
 Merhabalar arkadaşlar, bu blog yazımı video içerik oluşturarak hazırlamak istedim:) Özellikle statik ve statik olmayan değişken ve yöntemlerin neler olduğunu, hafızada nasıl yer kapladıklarını merak edenler için güzel bir içerik olduğunu düşünüyorum. Bununla beraber, birçoğunuzun **Non-static method '' cannot be referenced from a static context** hatasını neden aldığımızı merak ettiğinizi de tahmin edebiliyorum.. Bu video, bütün bu sorulara cevap niteliğindedir. Umarım sabırla sonuna kadar izlersiniz.
 
