@@ -1,7 +1,7 @@
 ---
-title: "Higher Order Functions (Programming Style Part 2)"
+title: "Higher Order Fonksiyonlar (Programlama Stili Part 2)"
 comments: false
-excerpt: "In this article, I am going to try to explain what the higher-order functions are, first-class citizen and first-class function"
+excerpt: "Bu yazıda, birinci-sınıf vatandaş(first-class citizen) ve birinci-sınıf fonksiyonlar(first-class function) olmak üzere higher-order(üst düzey) fonksiyonların ne olduğunu açıklamaya çalışacağım."
 header:
   teaser: "/assets/images/2022-02-25-higher-order-functions/higher.webp"
   #og_image: /assets/images/page-header-og-image.png
@@ -20,43 +20,43 @@ tags:
   - first-class functions
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
-toc_label: "CONTENT"
+toc_label: "SAYFA İÇERİĞİ"
 ---
 
 
 
-**IMPORTANT :** The notes that I took for myself. I hope they will help you too.. Each resource that I used is added as reference at the end of the page.
+**ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-First things first, we have to know some definitions to understand higher order functions. I would like to start with the term of "**first-class citizen**"
+Her şeyden önce, üst düzey fonksiyonları(yani higher order functions) anlamak için bazı tanımları bilmeliyiz. "**birinci sınıf vatandaş**(first-class citizen)" terimiyle başlamak istiyorum
 
-## First-class citizen
+## Birinci sınıf vatandaş (First-class citizen)
 
-According to the wiki definition, in programming language design, a **first-class citizen** (also type, object, entity, or value) in a given programming language is an entity which supports all the operations generally available to other entities. These operations typically include being **passed as an argument**, **returned from a function**, and **assigned to a variable**.
+Wiki tanımına göre, programlama dili tasarımında, belirli bir programlama dilinde **birinci sınıf vatandaş** (ayrıca tür, nesne, varlık veya değer), genel olarak diğer varlıklar tarafından kullanılabilen, tüm işlemleri destekleyen bir varlıktır. Bu işlemler tipik olarak **argüman olarak iletilmeyi**(passed as an argument), **bir işlevden döndürülmeyi**(returned from a function) ve **bir değişkene atanmayı**(assigned to a variable) içerir.
 
-According to this definition, anything can be *first-class citizen* if it supports the **highlighted operations** in the above. I want to put a comma here and move on to the next definition which is **first-class function**
+Bu tanıma göre, yukarıda **vurgulanan işlemleri** destekleyen her şey *birinci sınıf vatandaş(first-class citizen)* olabilir. Buraya bir virgül koyup **birinci sınıf işlev**(first-class function) olan bir sonraki tanıma geçmek istiyorum.
 
-## First-class function
+## Birinci-sınıf işlev (First-class function)
 
- We have a little bit idea what the *first-class citizen* is. We can say that a programming language is said to have **first-class functions** if it treats functions as *first-class citizens*.
+*Birinci sınıf vatandaşın(first-class citizen)* ne olduğu hakkında biraz fikrimiz var. O halde, işlevlere *birinci sınıf vatandaşlar* gibi davranan bir programlama dilinin **birinci sınıf işlevlere**(first-class function) sahip olduğu söylenebilir.
 
-## Higher Order Functions
+## Üst Düzey Fonksiyonlar (Higher Order Functions)
 
-In normal **functions** in general;
+Normal **fonksiyonlarda** genel olarak;
 
-* We can pass objects to functions
-* We can create objects in functions
-* We can also return objects from functions
+* Nesneleri fonksiyonlara geçirebiliriz
+* Fonksiyonlarda nesneler oluşturabiliriz
+* Fonksiyonlardan da nesne döndürebiliriz
 
-In **higher order functions**;
+**Üst düzey fonksiyonlarda**;
 
-* We can pass functions to functions
-* We can create functions in functions
-* We can also return functions from functions
+* Fonksiyonları fonksiyonlara geçirebiliriz
+* Fonksiyonlar içinde fonksiyonlar oluşturabiliriz
+* Fonksiyonlardan da fonksiyon döndürebiliriz.
 
-I would like to share two code examples to clarify.
+Açıklığa kavuşturmak için iki kod örneği paylaşmak istiyorum.
 
-For instance;
+Örneğin;
 
 ```java
 Thread t1 = new Thread(new Runnable() {
@@ -69,7 +69,7 @@ Thread t1 = new Thread(new Runnable() {
 t1.start();
 ```
 
-In the above example, we pass a `Runnable` object to the `Thread` constructor. In here, an **object** treats as *first-class citizen*.
+Yukarıdaki örnekte, `Thread` kurucusuna(yani constructor) bir `Runnable` nesnesi iletiyoruz. Burada **nesne** *birinci sınıf vatandaş* olarak davranır.
 
 ```java
 Thread t2 = new Thread( () -> System.out.println("Another thread"));
@@ -77,11 +77,19 @@ Thread t2 = new Thread( () -> System.out.println("Another thread"));
 t2.start();
 ```
 
-But, we can treat functions or codes as *first class citizens* as well. In this example we pass a **function** which is *lambda expression*(anonymous) as an argument to the `Thread` constructor. This makes it *higher order function* because it receives another function as its parameter.
+Fakat fonksiyonlara veya kodlara da *birinci sınıf vatandaşmış* gibi davranabiliriz. Bu örnekte, *lambda ifadesi*(anonim) olan bir **fonksiyonu**, `Thread` kurucusuna argüman olarak iletiyoruz. Bu onu *üst düzey(yüksek dereceli) fonksiyon* yapar çünkü parametre olarak başka bir fonksiyon alır.
 
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+---
+<u>İngilizce terimlerin</u> türkçe anlamlarının tam olarak neye karşılık geldiğini bilmediğim için parantez içerisinde ingilizce versiyonlarını da yazmaya gayret ettim. Umarım kafanız karışmaz.
 
+* **Higher-order functions :** üst düzey fonksiyonlar, yada yüksek dereceli fonksiyonlar olarak geçiyor.
+* **First-class citizen :** birinci sınıf vatandaş
+* **First-class function :** ise birinci sınıf fonksiyon olarak geçiyor.
+</div>
 
-## Reference:
+## Referanslar:
 * [First-class citizen](https://en.wikipedia.org/wiki/First-class_citizen)
 * [First-class function](https://en.wikipedia.org/wiki/First-class_function)
 * [Higher-order function](https://en.wikipedia.org/wiki/Higher-order_function)
