@@ -32,10 +32,13 @@ toc_sticky: true
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-
-
-**BİLGİLENDİRME :** Bu makale bir önceki makalemin devamıdır. **PÜF NOKTALAR 1 - 34** serisine ulaşmak için bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari/), **PÜF NOKTALAR 35 - 56** serisine ulaşmak için ise bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-2/) tıklayabilirsiniz.
-{: .notice--warning}
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Yabancı dil öğrenmenin Püf Noktaları Serisi</h4>
+---
+* Yabancı dil öğrenmenin [PÜF NOKTALARI 1 - 34](/recommends/yabanci-dil-ogrenmenin-puf-noktalari/)
+* Yabancı dil öğrenmenin [PÜF NOKTALARI 35 - 56](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-2/)
+* **Yabancı dil öğrenmenin PÜF NOKTALARI 57 - 66**
+</div>
 
 Aşağıda sıraladığım maddeler **Johan Vandewalle**'in instagram sayfasından, hocanın <u>izni alınarak</u> alıntılanmıştır. Sıraladığım bu maddeler, doğrudan hocanın kendi ağzından kurduğu cümlelerdir. Bu arada Johan Vandewalle'in **youtube kanalı** ve **instagram** hesabının(**@johan.vandewalle**) linklerine, sayfanın sonunda, referanslar bölümünden erişebilirsiniz. İyi okumalar.
 

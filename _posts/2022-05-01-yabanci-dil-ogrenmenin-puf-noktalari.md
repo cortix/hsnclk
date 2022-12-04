@@ -32,9 +32,13 @@ toc_sticky: true
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-**BİLGİLENDİRME :** Yabancı dil öğrenmenin **PÜF NOKTALARI 35 - 56** serisine ulaşmak için bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-2/), **PÜF NOKTALARI 57 - 66** serisine ulaşmak için ise bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-3/) tıklayabilirsiniz.
-{: .notice--warning}
-
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Yabancı dil öğrenmenin Püf Noktaları Serisi</h4>
+---
+* **Yabancı dil öğrenmenin PÜF NOKTALARI 1 - 34**
+* Yabancı dil öğrenmenin [PÜF NOKTALARI 35 - 56](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-2/)
+* Yabancı dil öğrenmenin [PÜF NOKTALARI 57 - 66](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-3/)
+</div>
 
 **Johan Vandewalle**'i, fikirlerine her zaman değer verdiğim sevgili **Prof. Dr. Selçuk Şirin**'in youtube hesabında paylaştığı bir [video](https://www.youtube.com/watch?v=3OZzMbDHr14) aracılığı ile tanıdım. [Johan Vandewalle](https://tr.wikipedia.org/wiki/Johan_Vandewalle) (d. 15 Şubat 1960, Brugge, Belçika), Belçikalı bir dilbilimcidir. Ghent Üniversitesi'nde ders vermektedir ve Türk dillerinde uzmanlaşmıştır.
 
