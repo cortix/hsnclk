@@ -15,14 +15,12 @@ categories:
 tags:
   - java class
   - sınıf deklarasyonu
-  - değiştiriciler
+  - java erişim değiştiriciler
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
 ---
-
-
 
 **Not :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
@@ -87,7 +85,7 @@ Aslında, erişim görünürlük(**visibility**) anlamına gelir. A sınıfı B 
 Sınıf beyanında bir değiştirici yazmazsanız bu **default access**(varsayılan erişim) anlamına gelir. Yani sadece aynı paket içerisinde bulunan sınıflar birbirlerine görünürdür. Bu yüzden **package access** paket erişimi de denilmektedir.
 
 ### Public Access
-*public* anahtar kelimesiyle yapılan bir sınıf bildirimi, tüm paketlerdeki tüm sınıfların bu public sınıfa erişmesini sağlar. Diğer bir deyişle, Java ekosistemi içindeki tüm sınıfların bir *public* sınıfa erişimi vardır. Yani bütün sınıflar tarafından görünür ve kullanılabilir durumdadır.
+**public** anahtar kelimesiyle yapılan bir sınıf bildirimi, tüm paketlerdeki tüm sınıfların bu public sınıfa erişmesini sağlar. Diğer bir deyişle, Java ekosistemi içindeki tüm sınıfların bir **public** sınıfa erişimi vardır. Yani bütün sınıflar tarafından görünür ve kullanılabilir durumdadır.
 
 ### Other (Non-access) Class Modifiers
 
@@ -148,7 +146,7 @@ Java 8 itibariyle, sözleşme maddelerinin nasıl yapılacağını da belirleyeb
 
 * Bir Interface'in metodları, ``default`` veya ``static`` olarak bildirilmedikçe, dolaylı olarak ``public`` ve ``abstract``dır. Diğer bir deyişle, metod deklarasyonunda aslında ``public`` ve ``abstract`` değiştiricilerini yazmanıza gerek yoktur, derleyici yazılan metodları derleme anında ``public`` ve ``abstract`` olarak algılar. Aşağıdaki görselde ne demek istediğimi daha net anlayacaksınız. İlk kod bloğunu sizin yazdığınız varsayalım. Kodu yazdığınızda derleyici yazdığınız kodu 2. kod bloğundaki gibi algılar. 3. kod bloğunda ise bir interface sınıfını implement eden yani uygulayan bir sınıf ele alınmıştır. Görüleceği üzere bu sınıf interface'in bütün metodlarını uygulamak zorunda kalmıştır.
 
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01.webp"  width="100%" height="100%"  loading="lazy" alt="java interface example">
+    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01.webp"  srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="java interface example">
 
 * Bir interface'de tanımlanan tüm değişkenler(**variables**), ``public``, ``static`` ve ``final`` olmalıdır, diğer bir deyişle, interface instance variables değil, yalnızca **constants(sabit)** deklare edebilir.
 * Interface yöntemleri ``final``, ``strictfp`` veya ``native`` olarak işaretlenemez. Zaten ``final`` ve ``abstract`` yan yana düşünülemez.
@@ -184,12 +182,11 @@ Interface'in package access(**default access**) yerine herkese açık olmasını
 
 Aşağıdaki beş metod deklarasyonu, kendi arayüzleri içinde beyan edildiyse, yasal ve özdeştir! Aşağıdaki metod deklarasyonları farklı gibi gözükse de hepsi aynıdır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1.webp"  width="100%" height="100%"  loading="lazy" alt="java interface example">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java interface example">
 
 Ekran görüntüsünden de anlaşılacağı üzere **IDE**'miz kodu derlediğinde beyan edilen metodların aynı olduğunu bize söylemekte ve hata vermektedir. Birde dikkat ederseniz, **public** ve **abstract** olan kısımlar gri gösterilmektedir. Burada **IDE** bu anahtar kelimeleri yazmanıza gerek yok uyarısı yapmaktadır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2.webp"  width="100%" height="100%"  loading="lazy" alt="java interface example">
-
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java interface example">
 
 
 ## Referanslar:  
