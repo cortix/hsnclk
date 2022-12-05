@@ -34,7 +34,7 @@ toc_sticky: true
 Merhabalar arkadaşlar, blog yazımı okumadan önce aşağıdaki youtube [videomu](https://www.youtube.com/watch?v=cR9uwtMQt-g) izlemenizi öneririm. Bu konuda naçizane öğrendiklerimi sizlerle paylaşmak için detaylı bir video hazırlamaya karar verdim. Umarım kafanızdaki sorulara cevap verebilirim. Şimdiden iyi seyirler.
 
 
-<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp"   width="100%" height="100%"  loading="lazy" alt="Java Memory Management"></a>
+<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="Java Memory Management"></a>
 
 
 ## Konu ile alakalı bir bilgilendirme
@@ -97,7 +97,7 @@ Aşağıdaki resimden de anlaşılacağı üzere sınıf şablonundan yaratılan
 
 </div>
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-memory-management.webp"   width="100%" height="100%"  loading="lazy" alt="Java Memory Management">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-memory-management.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-memory-management-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-memory-management.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="Java Memory Management">
 
 ### Java Sınıf Değişkenleri
 
@@ -200,7 +200,7 @@ Yerel değişkenler(local variables) ile ilgili bir diğer önemli nokta ise şu
 
 #### Illegal start of expression derleme hatası
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/illegal_start.webp"   width="100%" height="100%"  loading="lazy" alt="Illegal Start of expression for local variables">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/illegal_start.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/illegal_start-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/illegal_start.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="Illegal Start of expression for local variables">
 
 Yukarıdaki görselde **yerel değişkene** bir **erişim değiştirici** uygulamaya çalıştım. Görüldüğü gibi "**illegal start of expression**" derleme hatası aldım. <u>Hatadan da anlaşılacağı üzere yerel değişkenlere erişim değiştiricileri(access modifiers) uygulanamaz.</u> Koda şu [linkten](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20private%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ulaşabilirsiniz.
 
