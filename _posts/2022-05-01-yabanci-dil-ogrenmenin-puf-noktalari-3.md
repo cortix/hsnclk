@@ -1,7 +1,7 @@
 ---
-title: "Yazılımcılar İçin Yabancı Dil Bariyeri (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Örenmenin Püf Noktaları) PART 3"
+title: "Yabancı Dil Örenmenin Püf Noktaları (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Örenmenin Püf Noktaları) PART 3"
 comments: false
-excerpt: "Bu makale Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sıraladığım paylaşımın devamıdır. "
+excerpt: "Yazılımcılar İçin Yabancı Dil Bariyeri - Bu makale Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sıraladığım paylaşımın devamıdır. "
 header:
   teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.webp"
   #og_image: /assets/images/page-header-og-image.webp
