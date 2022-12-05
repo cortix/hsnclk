@@ -1,7 +1,7 @@
 ---
-title: "Yazılımcılar İçin Yabancı Dil Bariyeri (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Örenmenin Püf Noktaları) PART 2"
+title: "Yabancı Dil Örenmenin Püf Noktaları (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Örenmenin Püf Noktaları) PART 2"
 comments: false
-excerpt: "Bu makale Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sıraladığım paylaşımın devamıdır. "
+excerpt: "Yazılımcılar İçin Yabancı Dil Bariyeri - Bu makale Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sıraladığım paylaşımın devamıdır. "
 header:
   teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.webp"
   #og_image: /assets/images/page-header-og-image.webp
@@ -32,8 +32,13 @@ toc_sticky: true
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-
-**BİLGİLENDİRME :** Yabancı dil öğrenmenin **PÜF NOKTALARI 1 - 34** serisine ulaşmak için bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari/), **PÜF NOKTALARI 57 - 66** serisine ulaşmak için ise bu [LİNKE](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-3/) tıklayabilirsiniz.
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Yabancı dil öğrenmenin Püf Noktaları Serisi</h4>
+---
+* Yabancı dil öğrenmenin [PÜF NOKTALARI 1 - 34](/recommends/yabanci-dil-ogrenmenin-puf-noktalari/)
+* **Yabancı dil öğrenmenin PÜF NOKTALARI 35 - 56**
+* Yabancı dil öğrenmenin [PÜF NOKTALARI 57 - 66](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-3/)
+</div>
 
 Aşağıda sıraladığım maddeler **Johan Vandewalle**'in instagram sayfasından, hocanın <u>izni alınarak</u> alıntılanmıştır. Sıraladığım bu maddeler, doğrudan hocanın kendi ağzından kurduğu cümlelerdir. Bu arada Johan Vandewalle'in **youtube kanalı** ve **instagram** hesabının(**@johan.vandewalle**) linklerine, sayfanın sonunda, referanslar bölümünden erişebilirsiniz. İyi okumalar.
 
