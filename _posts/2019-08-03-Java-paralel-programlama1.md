@@ -56,29 +56,29 @@ Basit bir örnek ile başlamak gerekirse, integer içeren bir dizi olduğunu var
 olabilir. Sonra bu ikisini birleştirerek son toplamı alabiliriz.
 </div>
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish00.webp"  width="400px" height="100%" loading="lazy" alt="async-finish example">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish00.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish00-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish00.webp 1080w" sizes="50vw" width="400px" height="100%" loading="lazy" alt="async-finish example">
 
 
 Ekstra bir işlem yapmaz isek, yukarıdaki adımlar sıralı bir şekilde **sequential algorithm** kullanılarak yapılır. Peki bunu paralel olarak nasıl yapabiliriz? Burada kullanacağımız notasyon **asenkron**(``async``) denilen bu kelimedir. **Async**'nin amacı, bir statement tarafından takip edilen `async` notasyonuna sahip ifadenin **asenkron(zaman uyumsuz)** olarak çalışması gerektiğidir. Görüleceği üzere **SUM<sub>1</sub>** ``async`` olarak işaretlenmiştir. Bunun anlamı, bu hesaplama, **SUM<sub>1</sub>(alt yarının toplamı)**, takip eden işlem ne olursa olsun asenkron olarak devam etmelidir. **ASYNC** olarak işaretli **SUM<sub>1</sub>** işlemi, **SUM<sub>2</sub>** işleminden önce de gerçekleşebilir, sonra da gerçekleşebilir, hatta **paralel** olarak da gerçekleşebilir.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish0.webp"  width="500px" height="100%" loading="lazy" alt="async-finish example">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish0.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish0-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish0.webp 1080w" sizes="50vw" width="500px" height="100%" loading="lazy" alt="async-finish example">
 
 
 Şimdi farzedelim ki bu iki işlem paralel olarak ilerliyor ve sonrasında **SUM<sub>2</sub>**'yi hesaplıyoruz; buradaki kilit nokta, ikisini bir araya getirmeden, yani **SUM<sub>1</sub>** ve **SUM<sub>2</sub>**'yi toplamadan önce, bu "**zaman uyumsuz**(``async``)" görevin nihayete erip **SUM<sub>1</sub>** değerini elde etmemiz gerekmektedir. Tam da bu noktada bu işlemi gerçekleştirebilmek için bitiş(``finish``) adında başka bir notasyonumuz vardır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish1.webp"  width="500px" height="100%"  loading="lazy" alt="async-finish example">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish1.webp 1080w" sizes="50vw" width="500px" height="100%" loading="lazy" alt="async-finish example">
 
 
 Bu yüzden ``finish``'in arkasındaki temel fikir, <u>çalışan bir dizi asenkron görev alabileceğiniz bir iş kapsamıdır</u>. Görüleceği üzere ``async`` notasyonu sadece **SUM<sub>1</sub>**'i kapsarken, ``finish`` notasyonu hem **SUM<sub>1</sub>** hem de **SUM<sub>2</sub>**'yi kapsamaktadır. Aslında ``finish`` scope'unun(kapsamının) sonunda bütün görevlerin tamamlanacağını garanti edersiniz. Yani ``finish`` scope'unun içindeki asenkron görevler dahil bütün görevler bitmeden bir sonraki işlem ele alınmaz. Artık **SUM<sub>1</sub>** işleminin ``finish`` notasyonundan sonra uygun olacağından emin olabiliriz. ``finish`` notasyonundan sonra **SUM<sub>1</sub>** ve **SUM<sub>2</sub>** için toplama işlemi gerçekleştirebiliriz.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish2.webp"  width="500px" height="100%"  loading="lazy" alt="async-finish example">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish2.webp 1080w" sizes="50vw" width="500px" height="100%" loading="lazy" alt="async-finish example">
 
 
 Yukarıdaki resimde de görüleceği üzere, eğer **pentium dual** bir işlemciye sahipseniz, işlemlerden biri(yani **SUM<sub>1</sub>**) ``core0`` çekirdeğinde, işlemlerden diğeri(yani **SUM<sub>2</sub>**) ``core1`` çekirdeğinde gerçekleşecektir. Dolayısıyla, buradaki prensibe bakarsanız, herhangi bir sıralı algoritmayı alabilir ve paralellik için fırsat gördüğümüz her yerde ``asyncs`` ile önek ekleyebiliriz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish3.webp"  width="600px" height="100%"  loading="lazy" alt="async-finish example">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish3.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish3-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-03-Java-paralel-programlama1/async-finish3.webp 1080w" sizes="50vw" width="600px" height="100%" loading="lazy" alt="async-finish example">
 
 Paralel olarak çalışmasını istediğiniz işlemlerin bulunduğu yere bir ``finish`` scope'u ekleyin. Yukarıdaki örnekteki gibi **S<sub>2</sub>, S<sub>3</sub>, S<sub>4</sub>** birbirleriyle **paralel** olarak çalışacaktır. Fakat **S<sub>5</sub>** işlemi, ``finish`` scope'u tamamlanıncaya kadar bekleyecektir.
 
