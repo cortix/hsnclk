@@ -15,11 +15,11 @@ categories:
 tags:
   - java inheritance
   - Uml diagram
-  - extends
-  - miras alma
+  - java extends
+  - java miras alma
   - kalıtımı sağlamak için asgari hedefler
-  - gizli değişken
-  - gölge değişken
+  - java gizli değişken
+  - java gölge değişken
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -172,7 +172,7 @@ Artık mirası nasıl kullanabileceğimiz hakkında bir fikrimiz olduğuna göre
 
 Kalıtım hiyerarşisi şu şekildedir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1.webp" width="100%" height="100%"  loading="lazy" alt="class hierarchy or inheritance tree uml diagram">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="class hierarchy or inheritance tree uml diagram">
 
 * Grade Point Average (Not Ortalaması)
 
@@ -184,7 +184,7 @@ Diyelim ki yukarıdaki 3 değişkeni bu sınıflara eklemek istiyorsunuz. Sizce 
 
 Cinsiyet değişkeni genel bir değişken olduğundan **Person** sınıfında olması daha doğru olacaktır. Ama **maaş** ve **not ortalaması** değişkenleri biraz daha spesifiktir. Yani öğrencinin maaş alamayacağını ve öğretim görevlilerinin ise not ortalamasına sahip olamayacağını biliyoruz. Bu yüzden bu değişkenleri bu sınıflara özel olarak tanımlayabiliriz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2.webp" width="100%" height="100%"  loading="lazy" alt="class hierarchy or inheritance tree uml diagram">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="class hierarchy or inheritance tree uml diagram">
 
 Dersin başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonuncuyu ise bir sonraki derste ele alacağız.
 
