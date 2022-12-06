@@ -117,7 +117,7 @@ Yalnız şunu belirtmekte yarar var. Statik olup, **strong-typed** veyahut **wea
 
 </div>
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.webp" width="100%" height="100%" loading="lazy" alt="static_dynamic_strong_weak_types map">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="static_dynamic_strong_weak_types map">
 
 Bir dil şartnamesi, tür denetimi kurallarını(typing rules) şiddetle uyguluyorsa, süreç **"strong-typed"** olarak adlandırılır, uygulamıyorsa **"weakly-typed"** olarak adlandırılır.
 
