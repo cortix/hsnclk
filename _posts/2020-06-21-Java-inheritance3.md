@@ -15,7 +15,7 @@ categories:
 tags:
   - java inheritance
   - is-a ilişkisi
-  - referans ve nesne tipleri
+  - java referans ve nesne tipleri
   - derleme ve çalışma zamanı kararları
   - kalıtımı sağlamak için asgari hedefler
 last_modified_at: 2020-06-06T15:12:19-04:00
@@ -68,7 +68,7 @@ Bir önceki ders ilk iki koşulu **extends** anahtar kelimesini kullanarak sağl
 
 ## Referans ve Nesne Türleri
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.webp" width="100%" height="100%"  loading="lazy" alt="reference and object type - is-a relationship">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="reference and object type - is-a relationship">
 
 Referans ve obje tipleri konusuna şu [derste](/java-hafiza-yonetimi/Java-memory-models-objects/#referans-ve-nesne-türleri) biraz değinmiştik. Devam etmeden önce göz gezdirmenizde yarar var.
 
@@ -217,7 +217,7 @@ public class TestFaculty {
 
 ## Derleme Zamanı ve Çalışma Zamanı Kararları
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.webp" width="100%" height="100%"  loading="lazy" alt="reference and object type - compile time decisions and runtime decisions">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="reference and object type - compile time decisions and runtime decisions">
 
 Stack ve heap alanında görselleştirdiklerimizden anlaşılacağı üzere referanslar ön tarafta gerçekleşen işlemleri, objeler ise arka tarafta gerçekleşen işlemleri temsil etmektedir. Ön taraf için derleme zamanı, arka taraf, yani merkezde olan işlemler için ise çalışma zamanını düşünebilirsiniz.
 
