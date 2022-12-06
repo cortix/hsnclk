@@ -60,7 +60,7 @@ Kalıtımın önceki derslerinde **public** ve **private** değiştiricilerini k
 
 Burada ele alacağımız değiştiriciler **public** ve **private** ile beraber şunlardır;
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access.webp"  width="100%" height="100%" loading="lazy" alt="access modifiers">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="access modifiers">
 
 
 1. **public:** bu değiştiriciye sahip olan bir değişken veyahut metot, program içindeki bütün sınıflardan erişime açıktır. Yani herkes bu değiştiriciye sahip metot veya değişkene erişebilir.
@@ -86,28 +86,28 @@ Aşağıdaki şekil sınıflar arası hiyerarşiyi ve aynı zamanda rasgele olu�
 
 Aşağıda 5 farklı sınıf arasında oluşturulmuş bir tasarımı görmektesiniz. Bunlardan **Sub1** ve **Sub2** sınıfları, **Sample** sınıfına doğrudan organik olarak bağlıdır. Çünkü görüleceği üzere **extends** anahtar kelimesi ile bu sınıfı miras aldıklarını görüyoruz. Yalnız **Sub1** sınıfının paket içinde **Sub2** sınıfının ise paket dışında olduğuna dikkat edin. Bunun yanı sıra **Other1** ve **Other2** isimli sınıflarımız da mevcuttur. **Other1** sınıfının **Sample** sınıfı ile aynı pakette olmasının dışında hiçbir organik bağı bulunmamaktadır. Aslında aynı pakette bulunmak da doğrudan bir bağ anlamına gelmez. Ama görünürlük kuralları çerçevesinde bu sınıfın bazı haklara sahip olacağını bize söyler. **Other2** sınıfı ise ne paket içinde ne de **Sample** sınıfı ile doğrudan bir bağ içindedir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access1.webp"  width="100%" height="100%" loading="lazy" alt="extends keyword">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access1.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="extends keyword">
 
 Şekilde okla belirtilen aslında uml diagram gösteriminde **extends** anahtar kelimesini temsil etmektedir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access2.webp"  width="100%" height="100%" loading="lazy" alt="extends keyword">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access2.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="extends keyword">
 
 Bu şekilde ise paketi görebilmeniz için ön plana çıkardım. Hangi sınıfların paket içinde kaldığına dikkat edin istiyorum.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access3.webp"  width="100%" height="100%" loading="lazy" alt="extends keyword">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access3.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access3-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/access3.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="extends keyword">
 
 ## Public Erişim
 
 Görüleceği üzere **Sample** sınıfı içinde bulunan **x** üye değişkeni **public** değiştiricisine sahiptir. Burada sınıfları renkli bırakmamdaki sebep, **x** değişkenine hangi sınıfların erişebileceğini göstermektektir. Görüleceği üzere bu değişken hem paket içinden hem paket dışından, hem de alt sınıflardan erişime açıktır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/public_access.webp"  width="100%" height="100%" loading="lazy" alt="public access modifier">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/public_access.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/public_access-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/public_access.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="public access modifier">
 
 ## Protected Erişim
 
 Şimdi ise **protected** değiştiricisine sahip **y** üye değişkenine odaklanmanızı istiyorum. Burada **Other2** sınıfı dışında bütün sınıflar renkli gösterilmiştir. Kuralımız, hem aynı sınıftan, hem paket içinden hem de alt sınıflardan erişimi mümkün kılıyordu. **Other1** ve **Sub1** aynı paket içinde olduğundan bu değişkene erişim söz konusudur. **Sub1** aynı zamanda çifte hakka sahiptir. Çünkü bu sınıf, **Sample** sınıfının bir alt sınıfıdır. Yani Sample sınıfını miras alır. **Sub2** ise sadece bir alt sınıf olduğu için bu erişim hakkını elde etmiştir. Fakat **Other2** sınıfı ne aynı pakette bulunmakta ne de bir alt sınıf olmaktadır. Bu yüzden **y** değişkenine erişimi yoktur.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/protected_access.webp"  width="100%" height="100%" loading="lazy" alt="protected access modifier">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/protected_access.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/protected_access-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/protected_access.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="protected access modifier">
 
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
@@ -124,7 +124,7 @@ Burada odaklanacağımız değişken ise **package** değiştiricisine sahip **z
 
 Bu erişimdeki kural, aynı sınıf ve aynı pakette olma koşuludur. Görüleceği üzere **Sub2** sınıfı bir alt sınıf olmasına rağmen aynı pakette olmadığı için erişim hakkını kaybetmiştir. **Sub1** ve **Other1** ise **Sample** ile aynı pakette olduğundan bu değişkene erişim hakkına sahiptirler.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/package_access.webp"  width="100%" height="100%" loading="lazy" alt="package access modifier">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/package_access.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/package_access-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/package_access.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="package access modifier">
 
 > **ÖNEMLİ:** Burada da tıpkı **protected** erişimde olduğu gibi **Other1** sınıfı **Sample** ile bir organik bağı olmadığı halde sırf aynı pakette olduğu için **z** değişkenine erişim hakkı elde edebiliyor. Az önceki soruyu yinelemek istiyorum. Bu gerçekten doğru bir tasarım mı? **protected** erişimde olduğu gibi bu tarz bir yaklaşım da iyi bir tasarım oluşturmaz ve bu yüzden çok gerekmedikçe **package(default)** değiştiricisinin kullanılması önerilmez. Tabii ki gerektiği durumlar da vardır.
 
@@ -132,7 +132,7 @@ Bu erişimdeki kural, aynı sınıf ve aynı pakette olma koşuludur. Görülece
 
 Görüleceği üzere sadece aynı sınıftan erişim mümkündür. **private** erişim çok kullanılan bir tasarım tekniğidir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/private_access.webp"  width="100%" height="100%" loading="lazy" alt="private access modifier">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/private_access.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/private_access-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-23-Java-inheritance4/private_access.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="private access modifier">
 
 ## Özet
 
