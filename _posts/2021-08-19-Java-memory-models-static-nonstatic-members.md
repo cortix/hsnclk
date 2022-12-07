@@ -8,9 +8,9 @@ header:
   overlay_image: /assets/images/unsplash-image-60.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"
-  video:
-    id: cR9uwtMQt-g
-    provider: youtube
+  #video:
+    #id: cR9uwtMQt-g
+    #provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -49,4 +49,4 @@ Merhabalar arkadaşlar, bu blog yazımı video içerik oluşturarak hazırlamak 
 
 Bir konuyu anlayabilmek için önce kafada doğru bir tanıma oturtmanın, o konuyu öğrenmenin başlıca koşulu olduğunu her zaman düşünmüşümdür. Özellikle yazılım öğrenirken arka planda gerçekleşen işlemleri tasvir edebilmek gerçekten çok önemlidir. Bu konuda yeni yazılımcıların çok sıkıntı yaşadığını bildiğim için detaylı bir eğitim videosu hazırlamaya karar verdim. Umarım kafanızdaki birçok soruya cevap verebilirim. Şimdiden iyi seyirler.
 
-{% include video id="cR9uwtMQt-g" provider="youtube" %}
+<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="Java Memory Management"></a>
