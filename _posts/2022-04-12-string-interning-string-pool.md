@@ -9,9 +9,9 @@ header:
   overlay_image: /assets/images/unsplash-image-25.webp
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Kelli Tungay](https://unsplash.com/@kellitungay?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash"
-  video:
-    id: jT06ibYdEXo
-    provider: youtube
+  #video:
+    #id: jT06ibYdEXo
+    #provider: youtube
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -57,7 +57,7 @@ Arkadaşlar bu bir video içerik. Birbiri ile bağlantılı olduğu için aşağ
 2. **String Pool**, diğer ismiyle **string constant/intern pool** nedir ve neden vardır?
 3. **==** operatörü ve **equals** metodu arasındaki fark nedir?
 
-{% include video id="jT06ibYdEXo" provider="youtube" %}
+<a href="https://www.youtube.com/watch?v=jT06ibYdEXo"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-04-12-string-interning-string-pool/string-interning.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2022-04-12-string-interning-string-pool/string-interning-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2022-04-12-string-interning-string-pool/string-interning.webp 1080w" sizes="(min-width: 1280px) 650px, (min-width: 1040px) calc(100vw - 430px), calc(101.11vw - 43px)" width="100%" height="100%" loading="lazy" alt="Java String Interning Nedir, String Pool Nedir, == operatörü ve equals metodu Arasındaki Fark"></a>
 
 Daha önceki [makalelerimin](/java-hafiza-yonetimi/Java-memory-models-primitive-types/#string-interning) birinde string interning kavramına değinmiştim. Dilerseniz o makaleyi de inceleyebilirsiniz. Yalnız bu video daha detaylı olduğu ve 3 konuyu da ele aldığı için daha yararlı olacağını düşünüyorum.
 
