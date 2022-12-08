@@ -66,7 +66,7 @@ Sayıları birbiriyle karşılaştırarak küçükten büyüğe doğru sıralama
 ```java
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] list = {9,4,3,1,5,8,2,0,8};
+        int[] list = {9,4,3,1};
         for(int i=0; i< list.length-1; i++) {
             boolean hasSmallestBeenFounded = false;
             int smallest = i;
@@ -88,7 +88,7 @@ public class SelectionSort {
 ```
 ---
 
-1. **Seçim sıralamasını** listeme uygulamak için iki tane iç içe geçmiş **for döngüsüne** ihtiyacım var(elbette for döngüsü kullanmak şart değildir). **Dıştaki for döngüm**, <u>tutmak istediğim konumu</u> takip ederek listenin başından başlar(yani yukarıdaki tanıma göre bizim referans değerimiz oluyor). Algoritmanın en başında bu konum elbette "**0**" dir. Öte yandan, **içteki for döngüm** ise, **en küçük öğeyi** bulmak için dıştaki for döngüsünün tuttuğu konumdaki öğe dışındaki diğer öğeleri kontrol eder.
+1. **Seçim sıralamasını** listeme uygulamak için iki tane iç içe geçmiş **for döngüsüne** ihtiyacım var(elbette for döngüsü kullanmak şart değildir). **Dıştaki for döngüm**, <u>tutmak istediğim konumu</u> takip ederek listenin başından başlar(yani yukarıdaki tanıma göre bizim referans değerimiz oluyor). Algoritmanın en başında bu konum elbette "**0**" olacaktır. Öte yandan, **içteki for döngüm** ise, **en küçük öğeyi** bulmak için dıştaki for döngüsünün tuttuğu konumdaki öğe dışındaki diğer öğeleri kontrol eder.
 2. Bulunan her yeni en küçük değer için int “**smallest**” değeri içteki for döngüsü boyunca güncellenecektir.
 3. "**smallest**" ve "**hasSmallestBeenFounded**" değerlerinin siz içteki for döngüsüne girmeden hemen önce güncellendiğini fark edeceksiniz. Çünkü içteki for döngüsünün amacı en küçük değeri bulmak ve referans değerle karşılaştırmaktır. Şayet içteki döngünün dışına çıktığımızda, bu değerlerin görevlerini yerine getirmiş olduğunu varsayarak, bu iki değeri sonraki en küçük değeri bulmak için sıfırlarız.
 4. İçteki for döngüsü çalışmasını bitirdiğinde, en azından bir tane bile en küçük değer bulunsa, "**hasSmallestBeenFounded**" boolean değeri `true` olarak işaretlenir. Çünkü içteki döngü boyunca **smallest** değeri değişebilir. Şayet, en küçük değer bulunmazsa, "**hasSmallestBeenFounded**" değeri `false` olarak kalır ve döngünün dışındaki "**if**" ifadesinin içine girilmez.
@@ -96,6 +96,7 @@ public class SelectionSort {
 6. İçteki döngü, bir tane bile en küçük değer bulsa, içteki döngünün dışında bulunan "**if**" ifadesinin içine girer, bu da bulunan en küçük değeri ilk konumdaki değerle değiştirir (ki bu elbette dış döngü aracılığıyla tuttuğum konumdur)).
 7. Dış döngümün ilk konumu bulunan en küçük değerle(varsa) değiştirildikten sonra, **i** sayısını **bir** artırarak dış döngümün 2. konumu ile aynı işlemi tekrarlarız. Daha sonra dış döngümün **sondan bir önceki konumuna(list.length-1)** kadar aynı işlemler devam eder.
 
+----
 
 <div class="notice--warning" markdown="1">
 <h4 class="no_toc"><i class="fas fa-comment"></i> Not:</h4>
@@ -126,19 +127,19 @@ Yukarıdaki kodda, hem sıralanmış hem de sıralanmamış liste kullanmak yeri
 Seçme sıralamasının zaman verimliliği ikinci derecedendir(quadratic).
 
 ### Seçme Sıralamasının En İyi Durum Zaman Karmaşıklığı
----
+
 \\(O(n^{2})\\) karşılaştırma, \\( O(1) \\) yer değiştirme.
 
 En iyi durum zaman karmaşıklığında, listenin zaten sıralı olduğunu düşünürüz. Yer değiştirme olmayacağı için **O(n)** **1** olur. Ancak listenin sıralı olup olmadığını öğrenmek için her durumda **karşılaştırma** olacaktır. Bu **quadratic** zaman karmaşıklığını beraberinde getirir, yani, \\(O(n^{2})\\). Çünkü **2** tane iç içe **for** döngümüz bulunmaktadır.
 
 ### Seçme Sıralamasının En Kötü Durum Zaman Karmaşıklığı
----
+
 \\(O(n^{2})\\) karşılaştırma, \\( O(n) \\) yer değiştirme.
 
 Yazılım geliştiriciler genellikle sadece **en kötü durumun çalışma zamanını** bulmak üzerine yoğunlaşır çünkü **n** boyutlu herhangi bir girdi için en uzun çalışma zamanı odur. Tıpkı en iyi durum zaman karmaşıklığında olduğu gibi, **karşılaştırma** ikinci dereceden(**quadratic**) zaman karmaşıklığında gerçekleşir. Ama en kötü senaryoda elbette listemiz **sıralı olmayacak**. Çünkü en kötü senaryo bunu gerektirir. Bu yüzden **yer değiştirme** \\( O(n) \\) zamanda gerçekleşir.
 
 ### Seçme Sıralamasının Ortalama Durum Zaman Karmaşıklığı
----
+
 \\(O(n^{2})\\) karşılaştırma, \\( O(n) \\) yer değiştirme.
 
 Ortalama süredeki adım sayısı en kötü durumun **yarısı** olsa bile sabitler(constants) formülasyonda dikkate alınmayacağından sonuç yine en kötü durumla aynı olacaktır.
