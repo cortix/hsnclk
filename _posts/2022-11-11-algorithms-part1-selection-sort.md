@@ -56,7 +56,7 @@ border-right-width: 0px;
 border-bottom-width: 0px;
 border-left-width: 0px;" title="Selection Sort Algorithm"></iframe> -->
 
-### Seçim Sıralamasına Bir Örnek
+### Seçme Sıralamasına Bir Örnek
 
 Örneğin, bunun gibi sıralanmamış bir listemiz var;
 
@@ -67,7 +67,7 @@ border-left-width: 0px;" title="Selection Sort Algorithm"></iframe> -->
 
 Sayıları birbiriyle karşılaştırarak küçükten büyüğe doğru sıralamak.
 
-#### Seçim sıralama algoritması nasıl uygulanır
+#### Seçme sıralama algoritması nasıl uygulanır
 ---
 
 ```java
@@ -95,7 +95,7 @@ public class SelectionSort {
 ```
 ---
 
-1. **Seçim sıralamasını** listeme uygulamak için iki tane iç içe geçmiş **for döngüsüne** ihtiyacım var(elbette for döngüsü kullanmak şart değildir). **Dıştaki for döngüm**, <u>tutmak istediğim konumu</u> takip ederek listenin başından başlar(yani yukarıdaki tanıma göre bizim referans değerimiz oluyor). Algoritmanın en başında bu konum elbette "**0**" olacaktır. Öte yandan, **içteki for döngüm** ise, **en küçük öğeyi** bulmak için dıştaki for döngüsünün tuttuğu konumdaki öğe dışındaki diğer öğeleri kontrol eder.
+1. **Seçme sıralamasını** listeme uygulamak için iki tane iç içe geçmiş **for döngüsüne** ihtiyacım var(elbette for döngüsü kullanmak şart değildir). **Dıştaki for döngüm**, <u>tutmak istediğim konumu</u> takip ederek listenin başından başlar(yani yukarıdaki tanıma göre bizim referans değerimiz oluyor). Algoritmanın en başında bu konum elbette "**0**" olacaktır. Öte yandan, **içteki for döngüm** ise, **en küçük öğeyi** bulmak için dıştaki for döngüsünün tuttuğu konumdaki öğe dışındaki diğer öğeleri kontrol eder.
 2. Bulunan her yeni en küçük değer için int “**smallest**” değeri içteki for döngüsü boyunca güncellenecektir.
 3. "**smallest**" ve "**hasSmallestBeenFounded**" değerlerinin siz içteki for döngüsüne girmeden hemen önce güncellendiğini fark edeceksiniz. Çünkü içteki for döngüsünün amacı en küçük değeri bulmak ve referans değerle karşılaştırmaktır. Şayet içteki döngünün dışına çıktığımızda, bu değerlerin görevlerini yerine getirmiş olduğunu varsayarak, bu iki değeri sonraki en küçük değeri bulmak için sıfırlarız.
 4. İçteki for döngüsü çalışmasını bitirdiğinde, en azından bir tane bile en küçük değer bulunsa, "**hasSmallestBeenFounded**" boolean değeri `true` olarak işaretlenir. Çünkü içteki döngü boyunca **smallest** değeri değişebilir. Şayet, en küçük değer bulunmazsa, "**hasSmallestBeenFounded**" değeri `false` olarak kalır ve döngünün dışındaki "**if**" ifadesinin içine girilmez.
