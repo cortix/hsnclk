@@ -33,7 +33,7 @@ Aşağıdaki kart oyunu, **seçme algoritmasının**(selection algorithm) nasıl
 
 Bunu yapmak için; öncelikle **ilk konumdaki** öğeyle başlamalı ve **en küçük** öğeyi bulmak için bu öğeyi diğer öğelerle karşılaştırmalıyız. Bu durumda ilk öğemiz, varsa, listedeki en küçük öğenin yerini alacağı için bizim referans değerimiz olacaktır. <u>Her neyse, listedeki ilk konum dışındaki en küçük öğeyi bulursak, onu ilk öğeyle <b>değiştirmemiz</b> gerekir(tabii ki bulunan bu değer ilk öğeden küçükse!).</u> Listedeki en küçük öğeyi ilk pozisyona yerleştirdikten sonra benzer işlemleri 2. pozisyondan başlayarak devam edeceğiz. Bu durumda ise referansımız 2.öğe olur. Karşılaştırma, ve varsa yer değiştirme işlemleri bittikten sonra, benzer işlemleri sırasıyla listenin **sondan bir önceki** elemanına kadar devam ettirmemiz gerekiyor. Özetle seçme sıralaması algoritması bu şekilde gerçekleşir.
 
-<div class="notice--warning" markdown="1">
+<!-- <div class="notice--warning" markdown="1">
 <h4 class="no_toc"><i class="fas fa-comment"></i> Not:</h4>
 ---
 Eğer algoritmanın nasıl çalıştığını aşama aşama görmek istiyorsanız, **STEP** butonuna basabilirsiniz.
@@ -42,12 +42,14 @@ Ya da kart oyununu kendi kendine çalıştırmak için **PLAY** butonuna basın.
 
 Son olarak, kartları tekrar karıştırmak ve oyunu yeniden başlatmak isterseniz **SHUFFLE** düğmesine basabilirsiniz.
 
-</div>
+</div> -->
 
-<iframe sandbox="allow-popups allow-same-origin allow-scripts allow-top-navigation" src="https://www.khanacademy.org/computer-programming/program/4808854910533632/embedded?embed=yes&amp;author=no&amp;editor=no&amp;width=688&amp;buttons=no&amp;settings=%7B%22sortType%22%3A%22selection%22%7D" class="perseus-scratchpad" allowfullscreen="" style="height: 450px; width: 100%; border-top-width: 0px;
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card-small.gif 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif 1080w" sizes="50vw" width="420px" height="100%" class="align-center" loading="lazy" alt="Selection Sort Algorithm">
+
+<!-- <iframe sandbox="allow-popups allow-same-origin allow-scripts allow-top-navigation" src="https://www.khanacademy.org/computer-programming/program/4808854910533632/embedded?embed=yes&amp;author=no&amp;editor=no&amp;width=688&amp;buttons=no&amp;settings=%7B%22sortType%22%3A%22selection%22%7D" class="perseus-scratchpad" allowfullscreen="" style="height: 450px; width: 100%; border-top-width: 0px;
 border-right-width: 0px;
 border-bottom-width: 0px;
-border-left-width: 0px;" title="Selection Sort Algorithm"></iframe>
+border-left-width: 0px;" title="Selection Sort Algorithm"></iframe> -->
 
 ### Seçim Sıralamasına Bir Örnek
 
