@@ -46,7 +46,7 @@ Son olarak, kartları tekrar karıştırmak ve oyunu yeniden başlatmak istersen
 
 <!-- <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card-small.gif 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif 1080w" sizes="50vw" width="420px" height="100%" class="align-center" loading="lazy" alt="Selection Sort Algorithm"> -->
 
-<video autoplay loop muted width="420px" height="100%" class="align-center" title="Selection Sort Algorithm">
+<video autoplay loop muted playsinline width="380px" height="100%" class="align-center" title="Selection Sort Algorithm">
   <source src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.webm" type="video/webm">
   <source src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.mp4" type="video/mp4">
 </video>
