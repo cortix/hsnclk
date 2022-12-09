@@ -44,7 +44,12 @@ Son olarak, kartları tekrar karıştırmak ve oyunu yeniden başlatmak istersen
 
 </div> -->
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card-small.gif 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif 1080w" sizes="50vw" width="420px" height="100%" class="align-center" loading="lazy" alt="Selection Sort Algorithm">
+<!-- <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card-small.gif 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif 1080w" sizes="50vw" width="420px" height="100%" class="align-center" loading="lazy" alt="Selection Sort Algorithm"> -->
+
+<video autoplay loop muted width="420px" height="100%" class="align-center" title="Selection Sort Algorithm">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.webm" type="video/webm">
+  <source src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.mp4" type="video/mp4">
+</video>
 
 <!-- <iframe sandbox="allow-popups allow-same-origin allow-scripts allow-top-navigation" src="https://www.khanacademy.org/computer-programming/program/4808854910533632/embedded?embed=yes&amp;author=no&amp;editor=no&amp;width=688&amp;buttons=no&amp;settings=%7B%22sortType%22%3A%22selection%22%7D" class="perseus-scratchpad" allowfullscreen="" style="height: 450px; width: 100%; border-top-width: 0px;
 border-right-width: 0px;
