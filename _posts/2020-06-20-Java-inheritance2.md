@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 2- Extends"
 comments: false
-excerpt: "Bu derste Java'daki kalıtım ve polimorfizm kavramlarını ele almaya devam edeceğiz. Java'da extends anahtar kelimesinin ne anlama geldiğini ve kullanımını, superclass ve subclass kavramlarını, sınıf hiyerarşisinde UML diyagramı kullanımını göreceğiz. Bununla birlikte bir önceki derste belirlediğimiz kalıtımı sağlamak için asgari hedeflerin ilk ikisini ele alacağız."
+excerpt: "Bu derste Java'daki kalıtım(inheritance) ve polimorfizm kavramlarını ele almaya devam edeceğiz. Java'da extends anahtar kelimesinin ne anlama geldiğini ve kullanımını, superclass ve subclass kavramlarını, sınıf hiyerarşisinde UML diyagramı kullanımını göreceğiz. Bununla birlikte bir önceki derste belirlediğimiz kalıtımı sağlamak için asgari hedeflerin ilk ikisini ele alacağız."
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
@@ -30,7 +30,7 @@ toc_sticky: true
 {: .notice}
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java’da Kalıtım ve Java’da Polimorfizm Serisi</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java’da Kalıtım(inheritance) ve Java’da Polimorfizm Serisi</h4>
 ---
 
 1. Java’da Kalıtım 1 - [Kalıtımı Neden Kullanırız? Kalıtımı Sağlamak İçin Asgari Şartlar Nelerdir?](/java-kalitim-polimorfizm/Java-inheritance1/)
@@ -47,17 +47,17 @@ toc_sticky: true
 
 ## Genel Bakış
 
-Bir önceki dersten de hatırlayacağımız üzere belirlediğimiz temel hedefler şunlardı;
+Bir önceki dersten de hatırlayacağımız üzere yazdığımız kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için belirlediğimiz temel hedefler şunlardı;
 
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
 ---
-1. Bütün ortak davranışları bir sınıfta tutmak,
-2. Farklı davranışa sahip olanları ise farklı sınıflara ayırmak
+1. **Bütün ortak davranışları bir sınıfta tutmak,**
+2. **Farklı davranışa sahip olanları ise farklı sınıflara ayırmak**
 3. Tüm bu nesneleri tek bir veri yapısında tutmak.
 </div>
 
-İlk ikisini bu derste ele almaya çalışacağız.
+İlk ikisini bu derste ele almaya çalışacağız. Hatırlayacağınız üzere bunu java'da kalıtım(inheritance) kullanarak çözmeye çalışacağımızı belirtmiştik.
 
 ### Ortak Kod
 
@@ -140,7 +140,7 @@ public class Student extends Person {
 
 
 
-Gerçekten hala **name** adında bir **Student** üye değişkenine sahip olmanız gerekiyor mu? Aslında hayır... Buna **gizli değişken** veya **gölge değişken** de denir ve bu hangi değişkeni, hangi **name** üye değişkeninden bahsettiğinizi fark etmek zordur. **Student** mı yoksa **Person** mı???? Yani aslında buna sahip olmazsınız, çünkü onu otomatik olarak Person'dan miras aldınız. Yalnız ufak bir sorun var. **public** olmayan değişkenlere erişim sadece **public** metodlar üzerinden sağlanabilir. **getter** ve **setter** metodlar buna güzel bir örnektir.
+Gerçekten hala **name** adında bir **Student** üye değişkenine sahip olmanız gerekiyor mu? Aslında hayır... Buna **gizli değişken** veya **gölge değişken**(variable shadowing) de denir ve bu hangi değişkeni, hangi **name** üye değişkeninden bahsettiğinizi fark etmek zordur. **Student** mı yoksa **Person** mı???? Yani aslında buna sahip olmazsınız, çünkü onu otomatik olarak Person'dan miras aldınız. Yalnız ufak bir sorun var. **public** olmayan değişkenlere erişim sadece **public** metodlar üzerinden sağlanabilir. **getter** ve **setter** metodlar buna güzel bir örnektir.
 
 
 ``` java
@@ -162,7 +162,7 @@ public class Student extends Person {
 
 Artık mirası nasıl kullanabileceğimiz hakkında bir fikrimiz olduğuna göre, bir miras hiyerarşisini nasıl tasarlayabileceğimiz hakkında konuşmaya başlayalım. Şimdi bir tasarım ekibi ile bir beyaz tahta üzerinde çalışıyorsanız, tüm sınıfı yazmak istemeyeceksiniz. Bir sınıfı çok küçük bir şekilde temsil etmek isteyeceksiniz.
 
-Kalıtım hiyerarşisi şu şekildedir.
+Kalıtım(inheritance) hiyerarşisi şu şekildedir.
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="class hierarchy or inheritance tree uml diagram">
 
@@ -183,3 +183,4 @@ Dersin başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonunc
 ## Referanslar
 * [Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
 * [Object Oriented Programming in Java](https://www.coursera.org/learn/object-oriented-java?specialization=java-object-oriented)
+* [Variable shadowing](https://en.wikipedia.org/wiki/Variable_shadowing)

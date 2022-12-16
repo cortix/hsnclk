@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 3 - Referans ve Nesne Tipleri"
 comments: false
-excerpt: "Bu derste Java'daki Referans ve Nesne Tipleri ele alacağız. Aynı zamanda is-a ilişkisinin ne anlama geldiğini yine bu derste işleyeceğiz. Bunun yanı sıra, derleme zamanı ve çalışma zamanı kararları alınırken nelerin dikkate alındığından ve bir önceki derste yarım kalan, kalıtımı sağlamak için asgari hedefler nelerdir? başlıklı sorumuzun son maddesinden de bahsedeceğiz."
+excerpt: "Bu derste Java'daki Referans ve Nesne Tipleri ele alacağız. Aynı zamanda is-a ilişkisinin ne anlama geldiğini yine bu derste işleyeceğiz. Bunun yanı sıra, derleme zamanı ve çalışma zamanı kararları alınırken nelerin dikkate alındığından ve bir önceki derste yarım kalan, kalıtımı(inheritance) sağlamak için asgari hedefler nelerdir? başlıklı sorumuzun son maddesinden de bahsedeceğiz."
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
@@ -28,7 +28,7 @@ toc_sticky: true
 {: .notice}
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java’da Kalıtım ve Java’da Polimorfizm Serisi</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java’da Kalıtım(inheritance) ve Java’da Polimorfizm Serisi</h4>
 ---
 
 1. Java’da Kalıtım 1 - [Kalıtımı Neden Kullanırız? Kalıtımı Sağlamak İçin Asgari Şartlar Nelerdir?](/java-kalitim-polimorfizm/Java-inheritance1/)
@@ -56,7 +56,7 @@ Buradaki amacımız, sınıflar arasındaki "**is-a**" ilişkisinin ne anlama ge
 3. **Tüm bu nesneleri tek bir veri yapısında tutmak.**
 </div>
 
-Bir önceki ders ilk iki koşulu **extends** anahtar kelimesini kullanarak sağlamıştık. Ortak kodları **parent** sınıfta, farklı kodları ise **child** sınıflarda tutarak gerekli koşulları sağlamıştık. Şimdi ise 3. koşulu anlamaya çalışalım.
+Bir önceki ders kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için ilk iki koşulu java'da **extends** anahtar kelimesini kullanarak sağlamıştık. Ortak kodları **parent** sınıfta, farklı kodları ise **child** sınıflarda tutarak gerekli koşulları sağlamıştık. Şimdi ise 3. koşulu anlamaya çalışalım.
 
 
 ## Referans ve Nesne Türleri
