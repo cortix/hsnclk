@@ -1,5 +1,5 @@
 ---
-title: "Yabancı Dil Örenmenin Püf Noktaları (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Örenmenin Püf Noktaları) PART 2"
+title: "Yabancı Dil Öğrenmenin Püf Noktaları (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Öğrenmenin Püf Noktaları) PART 2"
 comments: false
 excerpt: "Yazılımcılar İçin Yabancı Dil Bariyeri - Bu makale Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sıraladığım paylaşımın devamıdır. "
 header:
@@ -22,7 +22,7 @@ tags:
   - Yabancı dil öğrenimi
   - Yabancı dil bariyeri
   - Yabancı dil öğrenmenin sırları
-  - Yabancı Dil Örenmenin Püf Noktaları
+  - Yabancı Dil Öğrenmenin Püf Noktaları
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"

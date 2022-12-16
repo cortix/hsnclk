@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 1 - Kalıtımı Neden Kullanırız? Kalıtımı Sağlamak İçin Asgari Şartlar Nelerdir?"
 comments: false
-excerpt: "Bu derste Java'daki kalıtım ve polimorfizm kavramlarını genel olarak ele alacak ve bununla birlikte kalıtımı sağlamak için asgari hedeflerin neler olduğunu işleyeceğiz."
+excerpt: "Bu derste Java'daki kalıtım(inheritance) ve polimorfizm kavramlarını genel olarak ele alacak ve bununla birlikte kalıtımı sağlamak için asgari hedeflerin neler olduğunu işleyeceğiz."
 header:
   teaser: "assets/images/equality.webp"
   og_image: /assets/images/equality.webp
@@ -26,7 +26,7 @@ toc_sticky: true
 {: .notice}
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java’da Kalıtım ve Java’da Polimorfizm Serisi</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java’da Kalıtım(inheritance) ve Java’da Polimorfizm Serisi</h4>
 ---
 1. **Java’da Kalıtım 1 - Kalıtımı Neden Kullanırız? Kalıtımı Sağlamak İçin Asgari Şartlar Nelerdir?**
 2. Java’da Kalıtım 2- [Extends](/java-kalitim-polimorfizm/Java-inheritance2/)
@@ -42,7 +42,7 @@ toc_sticky: true
 </div>
 ## Kalıtımı Neden Kullanırız?
 
-**Kalıtım** ve **polimorfizm**, nesneye dayalı bir programlama dilinde inanılmaz derecede güçlü özelliklerdir. **Loop** ve **conditional**'ların aksine, kodunuzun çalışması için genellikle kalıtım ve polimorfizm kullanmanız gerekmez. Yani önemini, sahip olduğunuz kod devasa bir hale gelmeden anlayamazsınız. Çünkü kodunuz büyüdükçe yöntemleri ve daha sonra sınıfları kullanmaya başlarsınız. Aynı şekilde, projenizin karmaşıklığı arttıkça ve büyük yazılım tasarım projeleri üzerinde çalışmaya başladığınızda, projenin karmaşıklığını kaldırabilmek için **kalıtım** ve **polimorfizm** kullanmaya başlarsınız.
+**Kalıtım**(inheritance) ve **polimorfizm**, nesneye dayalı bir programlama dilinde inanılmaz derecede güçlü özelliklerdir. **Loop** ve **conditional**'ların aksine, kodunuzun çalışması için genellikle kalıtım ve polimorfizm kullanmanız gerekmez. Yani önemini, sahip olduğunuz kod devasa bir hale gelmeden anlayamazsınız. Çünkü kodunuz büyüdükçe yöntemleri ve daha sonra sınıfları kullanmaya başlarsınız. Aynı şekilde, projenizin karmaşıklığı arttıkça ve büyük yazılım tasarım projeleri üzerinde çalışmaya başladığınızda, projenin karmaşıklığını kaldırabilmek için **kalıtım** ve **polimorfizm** kullanmaya başlarsınız.
 
 ### Örnek
 
@@ -143,7 +143,7 @@ Buradaki **hedefler**,
 3. Tüm bu nesneleri tek bir veri yapısında tutmak.
 </div>
 
-İşin güzel yanı bütün bunları kalıtım ile yapabiliriz.
+İşin güzel yanı bütün bunları kalıtım(inheritance) ile yapabiliriz.
 
 
 ## Referanslar

@@ -1,5 +1,5 @@
 ---
-title: "Yabancı Dil Örenmenin Püf Noktaları (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Örenmenin Püf Noktaları) PART 1"
+title: "Yabancı Dil Öğrenmenin Püf Noktaları (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Öğrenmenin Püf Noktaları) PART 1"
 comments: false
 excerpt: "Yazılımcılar İçin Yabancı Dil Bariyeri - Bu makalemde Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sizinle paylaşmak istiyorum."
 header:
@@ -22,7 +22,7 @@ tags:
   - Yabancı dil öğrenimi
   - Yabancı dil bariyeri
   - Yabancı dil öğrenmenin sırları
-  - Yabancı Dil Örenmenin Püf Noktaları
+  - Yabancı Dil Öğrenmenin Püf Noktaları
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -47,7 +47,7 @@ Uzun yıllar yabancı dil öğrenme üzerine kendini geliştiren biri için, tav
 
 Dil bariyeri diğer meslek gruplarında olduğu gibi yazılım geliştiriciler için de çok önemli bir engel. Çünkü yazılım alanında türkçe kaynak bulmak gerçekten çok zor. Kaldı ki hızla gelişen teknoloji, mevcut kaynakların güncelliğini yitirmesi gibi etmenler düşünüldüğünde türkçe kaynak bulmak yerine doğrudan yabancı dil öğrenmek birçoklarına göre daha akıllıca bir yatırım olacaktır. Takdir edersiniz ki dil öğrenmek de hiç o kadar kolay bir husus değildir. Özellikle belli bir yaştan sonra!!  
 
-Yabancı Dil Örenmenin Püf Noktalarına geçmeden önce bir şeyi belirtmek isterim. Aşağıda sıraladığım maddeler **Johan Vandewalle**'in instagram sayfasından, hocanın <u>izni alınarak</u> alıntılanmıştır. Sıraladığım bu maddeler, doğrudan hocanın kendi ağzından kurduğu cümlelerdir. Bu arada Johan Vandewalle'in **youtube kanalı** ve **instagram** hesabının(**@johan.vandewalle**) linklerine, sayfanın sonunda, referanslar bölümünden erişebilirsiniz. İyi okumalar.
+Yabancı Dil Öğrenmenin Püf Noktalarına geçmeden önce bir şeyi belirtmek isterim. Aşağıda sıraladığım maddeler **Johan Vandewalle**'in instagram sayfasından, hocanın <u>izni alınarak</u> alıntılanmıştır. Sıraladığım bu maddeler, doğrudan hocanın kendi ağzından kurduğu cümlelerdir. Bu arada Johan Vandewalle'in **youtube kanalı** ve **instagram** hesabının(**@johan.vandewalle**) linklerine, sayfanın sonunda, referanslar bölümünden erişebilirsiniz. İyi okumalar.
 
 
 ## PÜF NOKTASI 1
