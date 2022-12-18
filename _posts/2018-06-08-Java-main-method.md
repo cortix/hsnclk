@@ -6,7 +6,6 @@ header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
   overlay_image: /assets/images/unsplash-image-41.png
-  overlay_image: /assets/images/
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Jon Tyson](https://unsplash.com/photos/FlHdnPO6dlw) on Unsplash"
   #video:
