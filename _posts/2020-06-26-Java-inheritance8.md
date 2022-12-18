@@ -3,9 +3,9 @@ title: "Java'da Kalıtım 8 - Alıştırmalar"
 comments: false
 excerpt: "Bu bölümde şu ana kadar öğrendiklerimizi test etmek amacıyla birkaç tane örnek kod üzerinde çalışacağız."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-12.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-12.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [NOAA](https://unsplash.com/photos/sDCG1hTV8mI) on Unsplash"
 #  video:
@@ -14,14 +14,14 @@ header:
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
-  - java-kalitim-polimorfizm
+  - Java-kalitim-polimorfizm
 tags:
-  - java inheritance
-  - nesne oluşumu
-  - Kurucu(constructor)
-  - derleyici kuralları
-  - değişken ilklendirme
-  - this keyword in Java
+  - Java inheritance
+  - Java nesne oluşumu
+  - Java Kurucu(constructor)
+  - Java derleyici kuralları
+  - Java değişken ilklendirme
+  - Java this keyword
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
