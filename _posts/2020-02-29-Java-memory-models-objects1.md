@@ -3,9 +3,9 @@ title: "Java'da Hafıza Modeli 3 - Nesneler"
 comments: false
 excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır? Farklı Örnekler"
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-35.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-35.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [redcharlie](https://unsplash.com/photos/k2zWqv_yfNM) on Unsplash"
   #cta_label: "More Info"
@@ -66,8 +66,9 @@ Dilerseniz bir önceki yazıda değindiğimiz örneği bir adım öteye taşıya
 ---
 Sizce bu sorunun cevabı hangisi olurdu?
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample8.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample8-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample8.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects1/sample8.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
+
+{% picture 2020-02-29-Java-memory-models-objects1/sample9.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 Görüleceği üzere 2 adet **new**, bize <u>heap alanında 2 farklı nesnenin oluştuğunu</u> söylüyor. Burası önemli!!! Her yeni bir **new** anahtar kelimesi bize yeni bir nesneyi işaret etmektedir. Bu sebepten ötürü **A şıkkını** elemeliyiz. <u>Çünkü iki nesne de heap de tek bir nesneyi işaret etmektedir</u>. Halbuki bize 2 farklı nesne gerekiyor.
 
@@ -75,11 +76,11 @@ Görüleceği üzere 2 adet **new**, bize <u>heap alanında 2 farklı nesnenin o
 
 Doğru seçenek olan **C cevabını** scope dersine geçmeden önce bir adım öteye taşıyarak açıklamak istiyorum. Birinci kod bloğunun 3.satırında **m** isminde bir değişkene bir **int ilkel tipli** bir sayı atıyoruz. Buraya kadar her şey normal! 4.satırda ise aslında bildiğimiz gibi <u>heap'de bir nesne yaratma işlemi</u> vardır. Yalnız burada bir şeye değinmek istiyorum. Nesne oluştururken nesnenin aldığı parametreler için hiç görsel sunmadık. **SampleTest** sınıfı constructor'ına iki tane parametre almaktadır. Bunlar **xx** ve **yy** parametreleridir. 4.satırda nesne oluştururken parametrelerden **yy** olanına dikkat ettiyseniz **m** değişkeninin sahip olduğu değeri atamışız. Diğerine ise normal bir sayı!!! Yani bu değerlere stack alanında atama yapıldıktan sonra, constructor aracılığı ile heap'de yer alan nesnenin **x** ve **y** değerleri ilklendirilmektedir. Sonrasında ise bu **xx** ve **yy** parametreleri stack'den silinir. Aslında bu kısım tam olarak <u>böyle değil</u>, scope konusunda, kurucuları(constructor) da işin içine katıp daha farklı bir görsel resim sunmak istiyorum. Buradaki **xx** ve **yy** parametreleri **geçici** değişkenlerdir. Bazen **intermediate değişkenler** olarak da anılır. Ben ise bazen **kullan-at değişkenleri** diyorum. Çünkü asıl işleri olan constructor ilklendirmesini yaptıktan sonra yok olacaklardır. Scope konusunda henüz geçmediğimiz için şimdilik böyle olduğunu varsayın.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9-1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9-1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9-1.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects1/sample9-1.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 5.satırda da benzer şekilde bir nesne oluşturma işlemi gerçekleşmektedir. Aynı şekilde **SampleTest** sınıfı constructor'ına iki tane parametre almaktadır. Bunlar bildiğiniz gibi **xx** ve **yy** parametreleridir. Yalnız bu sefer **yy** parametresi, **sample1** değişkeninin/referansının işaret ettiği nesnenin **y** değikeninin sahip olduğu değeri almaktadır. Yalnız yeşil okla gösterdiğim hafıza modelimizin içinde yer almamaktadır. Buradaki amacım, constructor'da ilklendirme yapıldığını göstermek ve bu işlem sonrasında **xx** ve **yy** değerlerinin silindiğini belirtmektir. Aslında scope konusuna giriş yapınca bazı şeyler kafanızda daha da netleşecektir. Şimdilik aşağıdaki şekilden ne söylemek istediğimi daha net anlayabilirsiniz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9-2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9-2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample9-2.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects1/sample9-2.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 ## Java Hafıza Modeli Örnek 2
 
@@ -112,21 +113,21 @@ public class SampleTest {
 ---
 Birinci kod bloğunun 3. ve 4. satırlarında hafıza modeli aşağıdaki gibidir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample10.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample10-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample10.webp 1080w" sizes="50vw" width="400px" height="100%" class="align-center" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects1/sample10.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 Yalnız 5. satırda bir atama işlemi yapılmaktadır. Yani **sample1** referansının sahip olduğu *id* **sample2**'nin *id*'si ile değiştiriyoruz. Yani heap alanında **sample1** referansının işaret ettiği nesne 4.satırda oluşturduğumuz nesneyi işaret etmektedir. Yani okla göstermeden önce **@ işareti** ile başlayan id ile gösterelim.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample11.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample11-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample11.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects1/sample11.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 Id ile gösterimi gözünüzde canlandırabildiyseniz, okla gösterimden devam edebiliriz. Ama tekrar hatırlatmakta yarar var. Aslında okla gösterim az önceki **@** işareti ile başlayan sayıyının ne anlama geldiğini resmetmektedir. <u>Yani bu sayı bir nevi objenin heap alanındaki lokasyonunu</u> bize verir. Gerçekte sayı ile gösterim daha doğrudur. Ama okla yaptığımız gösterim, arka planda olanı daha net anlamanıza yardımcı olacağını düşünüyorum.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample12.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample12-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample12.webp 1080w" sizes="50vw" width="400px" height="100%" class="align-center" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects1/sample12.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 Buraya kadar olan biteni anladığınızı umuyorum. <u>Artık 2 referans da tek bir nesneyi işaret etmektedir.</u> Haliyle ilk oluşturduğumuz nesne heap alanında boşta kalacaktır ve tam da bu noktada **garbage collector** devreye girer. Hatırlarsanız garbage collector'un görevi boşta kalan bu nesneleri temizlemekti.
 
 Kod bloğunun ``sample1.x = 20;`` 6.satırı olan bu yerde ise yeni bir atama işlemi ile karşılaşıyoruz. **sample1** referansı artık **sample2** referansı ile **aynı nesneyi** işaret ettiğine göre ``sample.x`` ile yaptığımız aslında aşağıdaki işlemdir. Yani ikinci nesnenin **x** değeridir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample13.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample13-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects1/sample13.webp 1080w" sizes="50vw" width="400px" height="100%" class="align-center" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects1/sample13.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 Son satırda ise **sample2** referansının işaret ettiği nesnenin **x** ve **y** değerlerini ekrana yazdırma işlemi bulunmaktadır. Bir önceki satırda yaptığımız işlem aslında **sample2** referansının tuttuğu nesneyi de etkilediği için ekrana yazdıracağımız sonuç aşağıdaki gibi olacaktır.
 
