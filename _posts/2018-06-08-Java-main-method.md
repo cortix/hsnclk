@@ -5,7 +5,7 @@ excerpt: "Bu bölümde; Java ile yazılmış bir program nasıl ayağa kalkar? P
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-41.png
+  overlay_image: /assets/images/unsplash-image-64.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Jon Tyson](https://unsplash.com/photos/FlHdnPO6dlw) on Unsplash"
   #video:

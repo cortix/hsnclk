@@ -6,9 +6,9 @@ header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
   #overlay_image: /assets/images/unsplash-image-58.webp
-  overlay_image: /assets/images/unsplash-image-61.jpg
+  overlay_image: /assets/images/unsplash-image-63.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Shubham Dhage](https://unsplash.com/photos/q_uZRDUsuHY) on Unsplash"
+  caption: "Photo by [Jess Bailey](https://unsplash.com/photos/l3N9Q27zULw) on Unsplash"
   #video:
     #id: cR9uwtMQt-g
     #provider: youtube
