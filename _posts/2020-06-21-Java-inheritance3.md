@@ -3,9 +3,9 @@ title: "Java'da Kalıtım 3 - Referans ve Nesne Tipleri"
 comments: false
 excerpt: "Bu derste Java'daki Referans ve Nesne Tipleri ele alacağız. Aynı zamanda is-a ilişkisinin ne anlama geldiğini yine bu derste işleyeceğiz. Bunun yanı sıra, derleme zamanı ve çalışma zamanı kararları alınırken nelerin dikkate alındığından ve bir önceki derste yarım kalan, kalıtımı(inheritance) sağlamak için asgari hedefler nelerdir? başlıklı sorumuzun son maddesinden de bahsedeceğiz."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-45.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-45.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Ricardo Gomez Angel](https://unsplash.com/photos/52NJbPMuGuU) on Unsplash"
   #cta_label: "More Info"
@@ -61,7 +61,7 @@ Bir önceki ders kodda tutarlılığı sağlamak ve veri yapısını tek bir sı
 
 ## Referans ve Nesne Türleri
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/isa.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="reference and object type - is-a relationship">
+{% picture 2020-06-21-Java-inheritance3/isa.png --alt java reference and object type, java is-a relationship (java referans ve obje tipi, java is-a ilişkisi) --img width="100%" height="100%" %}
 
 Referans ve obje tipleri konusuna şu [derste](/java-hafiza-yonetimi/Java-memory-models-objects/#referans-ve-nesne-türleri) biraz değinmiştik. Devam etmeden önce göz gezdirmenizde yarar var.
 
@@ -210,7 +210,7 @@ public class TestFaculty {
 
 ## Derleme Zamanı ve Çalışma Zamanı Kararları
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-21-Java-inheritance3/compile-runtime.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="reference and object type - compile time decisions and runtime decisions">
+{% picture 2020-06-21-Java-inheritance3/compile-runtime.png --alt java reference and object type, java compile time decisions and runtime decisions (java referans ve obje tipi, java derleme zamanı ve çalışma zamanı kararları) --img width="100%" height="100%" %}
 
 Stack ve heap alanında görselleştirdiklerimizden anlaşılacağı üzere referanslar ön tarafta gerçekleşen işlemleri, objeler ise arka tarafta gerçekleşen işlemleri temsil etmektedir. Ön taraf için derleme zamanı, arka taraf, yani merkezde olan işlemler için ise çalışma zamanını düşünebilirsiniz.
 
