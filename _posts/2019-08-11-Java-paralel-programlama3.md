@@ -3,11 +3,11 @@ title: "Java Paralel Programlama - Bölüm 3"
 comments: false
 excerpt: "Java Paralel Programlama - Computation Graphs, Work, Span"
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-39.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-39.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Jenn.jpeg](https://unsplash.com/photos/gQCzAT6vyN4) on Unsplash"
+  caption: "Photo by [Jenn](https://unsplash.com/photos/gQCzAT6vyN4) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -16,7 +16,7 @@ tags:
   - java paralel programlama
   - java threads
   - java fork/join
-  - kritik yol uzunluğu
+  - java kritik yol uzunluğu
   - java data race(veri yarışı)
   - java ideal parallelism
   - java work
@@ -48,14 +48,12 @@ toc_sticky: true
 
 Şu ana kadar gördüklerimizi özetlemek gerekirse, aşağıdaki görsel yeterli olacaktır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/async-finish4.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/async-finish4-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/async-finish4.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="async-finish example">
-
+{% picture 2019-08-11-Java-paralel-programlama3/async-finish4.png --alt Java async-finish example --img width="100%" height="100%" %}
 
 Aslında bu bölümde bunun gibi paralel programları modellemek için **hesaplama grafiği(computation graph)** adı verilen bir kavramı göstermek istiyorum.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph1.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="computation graph example">
-
+{% picture 2019-08-11-Java-paralel-programlama3/comp_graph1.png --alt Java computation graph example --img width="100%" height="100%" %}
 
 Şekilde görüldüğü gibi **S<sub>1</sub>**'den sonra **S<sub>2</sub>** **fork** edilerek yeni bir branch de çalışması sağlanıyor. **S<sub>2</sub>**'ye paralel olarak **S<sub>1</sub>**, **S<sub>3</sub>** olarak yeni bir işleme devam ediyor. Buna **continue** işlemi denir. **S<sub>3</sub>**'ten sonra da aynı görev **S<sub>4</sub>**'te devam etmek istiyor. Ama burada bu **join** işlemi var. Bunun için **join edge** adı verilen farklı bir kenarımız var.
 
@@ -88,12 +86,11 @@ Bu üç koşul geçerli olduğunda, erişimlerin sırası belirleyici değildir 
 Hesaplama grafiklerinin bir başka ilginç özelliği de, paralel programınızın performansını düşünmek için onları kullanabilmemizdir. Varsayalım ki, **S<sub>1</sub>** ve **S<sub>4</sub>**, <u>1 birim</u> zaman alacak, **S<sub>3</sub>** ve **S<sub>2</sub>** ise <u>10 birim</u> zaman alacak iş yapsın.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph2.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="computation graph performans ölçümü">
-
+{% picture 2019-08-11-Java-paralel-programlama3/comp_graph2.png --alt Java computation graph performans ölçümü --img width="100%" height="100%" %}
 
 Performansla ilgili olarak çalışacağımız iki önemli ölçüm bulunmaktadır. İlki **WORK** olarak adlandırılır. Aslında bu sadece tüm düğümlerin **yürütme zamanlarının toplamıdır**. Yani bu durumda, **1 + 10 + 10 + 1** olur. Yani **22**. Gerçekten önemli olan başka bir ölçüm ise **SPAN** olarak adlandırılıyor. Ve bu <u>en uzun yolun uzunluğudur</u>. Programcılar ayrıca bunu "**kritik yol uzunluğu**" olarak da adlandırırlar.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph3.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph3-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2019-08-11-Java-paralel-programlama3/comp_graph3.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="span : kritik yol uzunluğu">
+{% picture 2019-08-11-Java-paralel-programlama3/comp_graph3.png --alt Java span kritik yol uzunluğu --img width="100%" height="100%" %}
 
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Ideal Parallelism</h4>
