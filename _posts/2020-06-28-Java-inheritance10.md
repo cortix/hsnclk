@@ -1,21 +1,21 @@
 ---
 title: "Java'da Kalıtım 10 - Overloading(Aşırı Yükleme) Metotlar"
 comments: false
-excerpt: "Java'da aşırı yükleme ne anlama gelmektedir? Neden constructor'larda overloading metotlara ihtiyaç duyarız ve overload yaparken uymamız gereken bir kural var mıdır gibi soruları cevaplamaya çalışacağız."
+excerpt: "Java'da aşırı yükleme(overloading) ne anlama gelmektedir? Neden constructor'larda overloading metotlara ihtiyaç duyarız ve overload yaparken uymamız gereken bir kural var mıdır gibi soruları cevaplamaya çalışacağız."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-37.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-37.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Karanpreet Singh](https://unsplash.com/photos/Nrof2H8PMlQ) on Unsplash"
+  caption: "Photo by [Insta @Judevin_](https://unsplash.com/photos/Nrof2H8PMlQ) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java inheritance
-  - overloading metot
-  - aşırı yükleme
+  - Java inheritance
+  - Java overloading metot
+  - Java aşırı yükleme
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
