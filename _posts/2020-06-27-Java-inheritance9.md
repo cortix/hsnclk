@@ -3,9 +3,9 @@ title: "Java'da Kalıtım 9 - Overriding(Ezici) Metotlar"
 comments: false
 excerpt: "Bu bölümde overriding ve overloading metotların tanımlarını yapacak, ağırlıklı olarak overriding metotlar üzerine duracağız. Bunun yanı sıra metot imzası ve metot deklarasyonu arasındaki farklardan da bahsedeceğiz."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-50.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-50.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Makenzie Cooper](https://unsplash.com/photos/gl9kCw7y-pY) on Unsplash"
   #cta_label: "More Info"
@@ -13,11 +13,11 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java inheritance
-  - overriding metot
-  - geçersiz kılma
-  - ezici metot
-  - polimorfizm
+  - Java inheritance
+  - Java overriding metot
+  - Java'da overriding(geçersiz kılma)
+  - Java'da ezici metot
+  - Java polimorfizm
   - Robert C. Martin
   - Super Keyword in Java
 last_modified_at: 2020-06-06T15:12:19-04:00
@@ -104,7 +104,7 @@ resultNumbers(int , int )
 
 İlk örneğimiz **Object** sınıfının kendisine bakmak olacak. Bu üst sınıfta ``toString`` adında bir yöntemimiz bulunmaktadır. ``toString`` yöntemi bir nesnenin içeriğini(sahip olduğu state'i, yani instance değişkenlerinin tuttuğu değerler) veya dize temsilini yazdırır. Nesne sınıfında olduğu için Java'daki tüm nesneler ``toString`` yöntemini geçersiz kılabilir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override1.webp"  width="100%" height="100%" loading="lazy" alt="override method">
+{% picture 2020-06-27-Java-inheritance9/override1.png --alt Java Method Overriding(java metot geçersiz kılma(ezme)) --img width="100%" height="100%" %}
 
 ```java
 public class Person {
@@ -141,7 +141,7 @@ Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gib
 
 Şimdi yukarıdaki örneği **Student** sınıfını da işin içine dahil ederek güncelleyelim istiyorum.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-27-Java-inheritance9/override2.webp"  width="100%" height="100%" loading="lazy" alt="override method">
+{% picture 2020-06-27-Java-inheritance9/override2.png --alt Java Method Overriding(java metot geçersiz kılma(ezme)) --img width="100%" height="100%" %}
 
 Görüleceği üzere ``toString()`` metodu **Person** sınıfında olduğu gibi tekrar geçersiz kılınmıştır. Burada, **Person** sınıfının ``toString()`` metodu için yaptığı yorumlamayı, **Student** sınıfı için tekrar yorumlayacağım, demek istiyorum.
 
