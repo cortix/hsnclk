@@ -3,9 +3,9 @@ title: "Java'da Polimorfizm 1 - Amaç?"
 comments: false
 excerpt: "Java'da polimorfizm ne anlama gelmektedir ve neden polimorfizme ihtiyaç duyarız?"
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-52.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-52.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Jeff Vanderspank](https://unsplash.com/photos/vkB5fZqc3No) on Unsplash"
   #cta_label: "More Info"
@@ -13,9 +13,8 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java polimorfizm
-  - polimorfizm
-  - virtual method invocation
+  - Java polimorfizm
+  - Java virtual method invocation
   - Robert C. Martin
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
