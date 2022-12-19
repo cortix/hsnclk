@@ -48,12 +48,12 @@ toc_sticky: true
 
 Şu ana kadar gördüklerimizi özetlemek gerekirse, aşağıdaki görsel yeterli olacaktır.
 
-{% picture 2019-08-11-Java-paralel-programlama3/async-finish4.png --alt Java async-finish example --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-11-Java-paralel-programlama3/async-finish4.png --alt Java async-finish example --img width="100%" height="100%" %}<br/><br/>
 
 Aslında bu bölümde bunun gibi paralel programları modellemek için **hesaplama grafiği(computation graph)** adı verilen bir kavramı göstermek istiyorum.
 
 
-{% picture 2019-08-11-Java-paralel-programlama3/comp_graph1.png --alt Java computation graph example --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-11-Java-paralel-programlama3/comp_graph1.png --alt Java computation graph example --img width="100%" height="100%" %}<br/>
 
 Şekilde görüldüğü gibi **S<sub>1</sub>**'den sonra **S<sub>2</sub>** **fork** edilerek yeni bir branch de çalışması sağlanıyor. **S<sub>2</sub>**'ye paralel olarak **S<sub>1</sub>**, **S<sub>3</sub>** olarak yeni bir işleme devam ediyor. Buna **continue** işlemi denir. **S<sub>3</sub>**'ten sonra da aynı görev **S<sub>4</sub>**'te devam etmek istiyor. Ama burada bu **join** işlemi var. Bunun için **join edge** adı verilen farklı bir kenarımız var.
 
@@ -86,11 +86,11 @@ Bu üç koşul geçerli olduğunda, erişimlerin sırası belirleyici değildir 
 Hesaplama grafiklerinin bir başka ilginç özelliği de, paralel programınızın performansını düşünmek için onları kullanabilmemizdir. Varsayalım ki, **S<sub>1</sub>** ve **S<sub>4</sub>**, <u>1 birim</u> zaman alacak, **S<sub>3</sub>** ve **S<sub>2</sub>** ise <u>10 birim</u> zaman alacak iş yapsın.
 
 
-{% picture 2019-08-11-Java-paralel-programlama3/comp_graph2.png --alt Java computation graph performans ölçümü --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-11-Java-paralel-programlama3/comp_graph2.png --alt Java computation graph performans ölçümü --img width="100%" height="100%" %}<br/>
 
 Performansla ilgili olarak çalışacağımız iki önemli ölçüm bulunmaktadır. İlki **WORK** olarak adlandırılır. Aslında bu sadece tüm düğümlerin **yürütme zamanlarının toplamıdır**. Yani bu durumda, **1 + 10 + 10 + 1** olur. Yani **22**. Gerçekten önemli olan başka bir ölçüm ise **SPAN** olarak adlandırılıyor. Ve bu <u>en uzun yolun uzunluğudur</u>. Programcılar ayrıca bunu "**kritik yol uzunluğu**" olarak da adlandırırlar.
 
-{% picture 2019-08-11-Java-paralel-programlama3/comp_graph3.png --alt Java span kritik yol uzunluğu --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-11-Java-paralel-programlama3/comp_graph3.png --alt Java span kritik yol uzunluğu --img width="100%" height="100%" %}<br/>
 
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Ideal Parallelism</h4>

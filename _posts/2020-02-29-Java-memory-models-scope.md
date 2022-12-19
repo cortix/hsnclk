@@ -73,7 +73,7 @@ public class SampleTest {
 ---
 Toplamda **6 tane** değişken bulunmaktadır. Bunları aşağıdaki şekilde görebilirsiniz.
 
-{% picture 2020-02-29-Java-memory-models-scope/var.png --alt Java variable(java değişkeni) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-scope/var.png --alt Java variable(java değişkeni) --img width="100%" height="100%" %}<br/>
 
 Belki **this** anahtar kelimesini de değişken olarak tanımlamış olabilirsiniz.. Ama aslında pek değişken sayılmaz. Fakat değişken gibi davrandığını söyleyebiliriz. Birazdan scope konusuna geçince bu this anahtar sözcüğünü de ele alacağız. Bu yüzden toplamda **6 değişkenimiz** vardır. Bu değişkenlerin isimlerini düzgün bir şekilde tanımlayacak olursak, **xx** ve **yy** kurucumuzun(constructor) parametreleridir. Main metotumuzun içinde yer alan ve SampleTest nesnesini referans alan **sample1** de bir diğer değişkenimizdir. Diğer bir ifade şekliyle referansımız. **sample1** referansı(değişkeni) main metodu içinde yer aldığı için local(yerel) değişken olarak da ifade edilebilir.
 
@@ -115,27 +115,27 @@ Yukarıdaki kod bloğunda gerçekleşenleri adım adım resmedecek olsak, öncek
 
 **m** değişkeni görüleceği üzere **main** yönteminin içinde yaratılmıştır. Bu da bize bu değişkenin **main** kapsamı(scope) içinde yaşayabileceğini ve bu metodunun dışında bir yerden erişilemeyeceğini söyler. Aşağıdaki şekilden de görüleceği üzere artık tanımladığımız değişkenleri bir de içinde bulundukları kapsamları(scope) belirterek çizmek istiyorum.
 
-{% picture 2020-02-29-Java-memory-models-scope/scope1.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-scope/scope1.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}<br/>
 
 Bir sonraki satırda **SampleTest** sınıfı tipinde bir değişkenimizi(yani referans) oluşturuyoruz. Dikkat ederseniz bu değişkenin de kapsamı **main** yöntemidir.
 
-{% picture 2020-02-29-Java-memory-models-scope/scope2.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-scope/scope2.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}<br/>
 
 Şu ana kadar işlediklerimizi, yani scope dışında olan bölümleri önceki derslerde de görmüştük. **sample1** değişkeni/referansı bir **object type** değişkendir. **new** anahtar kelimesi ile bir nesne yaratılacağı sırada işler biraz karışmaktadır.
 
-{% picture 2020-02-29-Java-memory-models-scope/scope3.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-scope/scope3.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}<br/>
 
 Görüleceği üzere **2 üye değişkeni** ile birlikte nesnemiz heap alanında oluşturulmuştur. <u>Üye değişkenleri her zaman nesnenin içinde ve heap alanında yer alırlar.</u> Nesne oluşturulurken ilk etapda ilgili sınıfın constructor yöntemi çağrılır ve bu üye değişkenleri ilklendirilir(initialize). İlklendirilmekten kasıt değişken atama işlemidir. Bu ilklendirme işlemini de kurucunun aldığı parametreler sayesinde gerçekleştiririz. **Kurucu(constructor)** çağrılırken şu şekilde bir işlem gerçekleşir. Bir yandan ilgili sınıfı da görmekte yarar var.
 
-{% picture 2020-02-29-Java-memory-models-scope/scope4.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-scope/scope4.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}<br/>
 
 Constructor parametre olarak aldığı **xx** ve **yy** değişkenlerini nesnenin üye değişkenleri olan **x** ve **y** değişkenlerini ilklendirmek için kullanır. Constructor'un içindeki **this** anahtar kelimesi heap alanındaki ilgili nesneyi temsil etmektedir. Oku takip ederek üye değişkenlerinin nasıl ilklendirildiğini görebilirsiniz.
 
-{% picture 2020-02-29-Java-memory-models-scope/scope5.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-scope/scope5.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}<br/>
 
 Şimdi, **constructor** ile işimiz bitti. Peki constructor kapsamına ne olacak? Bir yöntem sona erdiğinde kapsamı da kaybolur. Böylece tüm bu yerel değişkenler, parametreler kaybolur. Onları bir daha asla kullanamazsınız. Yani içinde sahip olduğu her şey kapsamın yaşam ömrü kadardır. Kurucunun kapsamı silindikten sonra **main** yönteminin kapsamına geri dönebiliriz. Son olarak **sample1** değişkenine heap alanındaki nesnenin referansı verilir. Böylece kodda yer alan bütün adımları teker teker gerçekleştirmiş olduk.
 
-{% picture 2020-02-29-Java-memory-models-scope/scope6.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-scope/scope6.png --alt Java scope(java'da kapsam) --img width="100%" height="100%" %}<br/>
 
 Burada **this** anahtar kelimesi ile ilgili ek bir bilgi vermek istiyorum. **this** opsiyoneldir. Siz belirtmeseniz de Java arka planda mantıksal bir çıkarım yaparak bu işlemi sizin yerinize zaten gerçekleştirir. Aşağıdaki kodu **this** anahtar kelimesi olmadan güncellemeyi deneyebilirsiniz.
 

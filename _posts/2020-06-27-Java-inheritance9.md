@@ -104,7 +104,7 @@ resultNumbers(int , int )
 
 İlk örneğimiz **Object** sınıfının kendisine bakmak olacak. Bu üst sınıfta ``toString`` adında bir yöntemimiz bulunmaktadır. ``toString`` yöntemi bir nesnenin içeriğini(sahip olduğu state'i, yani instance değişkenlerinin tuttuğu değerler) veya dize temsilini yazdırır. Nesne sınıfında olduğu için Java'daki tüm nesneler ``toString`` yöntemini geçersiz kılabilir.
 
-{% picture 2020-06-27-Java-inheritance9/override1.png --alt Java Method Overriding(java metot geçersiz kılma(ezme)) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-27-Java-inheritance9/override1.png --alt Java Method Overriding(java metot geçersiz kılma(ezme)) --img width="100%" height="100%" %}<br/>
 
 ```java
 public class Person {
@@ -141,7 +141,7 @@ Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gib
 
 Şimdi yukarıdaki örneği **Student** sınıfını da işin içine dahil ederek güncelleyelim istiyorum.
 
-{% picture 2020-06-27-Java-inheritance9/override2.png --alt Java Method Overriding(java metot geçersiz kılma(ezme)) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-27-Java-inheritance9/override2.png --alt Java Method Overriding(java metot geçersiz kılma(ezme)) --img width="100%" height="100%" %}<br/>
 
 Görüleceği üzere ``toString()`` metodu **Person** sınıfında olduğu gibi tekrar geçersiz kılınmıştır. Burada, **Person** sınıfının ``toString()`` metodu için yaptığı yorumlamayı, **Student** sınıfı için tekrar yorumlayacağım, demek istiyorum.
 

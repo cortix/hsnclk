@@ -288,7 +288,7 @@ Son satır, aslında erişilmeye çalışılan field'ın, başvurulan nesnenin �
 >Alan erişimlerine yönelik bu dinamik arama eksikliği, programların basit uygulamalarla verimli bir şekilde çalıştırılmasına izin verir.
 
 
-{% picture 2020-09-18-Java-polimorfizm4_1/1.png --alt Java Static Binding for Field Access (Alan Erişimi için Java Statik Bağlanma) --img width="100%" height="100%" %}
+<br/>{% picture 2020-09-18-Java-polimorfizm4_1/1.png --alt Java Static Binding for Field Access (Alan Erişimi için Java Statik Bağlanma) --img width="100%" height="100%" %}<br/>
 
 
 ## Generic Öncesi ve Sonrası Dönemde Çalışma ve Derleme Zamanı Polimorfizmi

@@ -47,7 +47,7 @@ toc_sticky: true
 Bazı durumlarda derleme ve çalışma zamanı kararlarını değiştirmek için derleyiciye yardım etmek gerekebilir. Bu gibi durumlarda **casting** dediğimiz işlemi uygularız. Ne demek istediğimi bir önceki bölümde yarım bıraktığımız kod üzerinden göstermek istiyorum.
 
 
-{% picture 2020-06-29-Java-polimorfizm2/uml1.png --alt Java Polymorphism(java polimorfizm) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-29-Java-polimorfizm2/uml1.png --alt Java Polymorphism(java polimorfizm) --img width="100%" height="100%" %}<br/>
 
 <div class="notice--danger" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Compile time error</h4>

@@ -33,9 +33,9 @@ toc_sticky: true
 
 Java'da yazılan bir program mutlaka ``main`` adlı bir yöntemle başlar. Programı çalıştırdığınızda, ``main`` yönteminin hangi sınıfta olduğunu belirtirsiniz. ``main`` yöntemi aşağıdaki gibi özel bir deklerasyona sahip olmalıdır.
 
-{% highlight java %}
+```java
 public static void main(String[] args)
-{% endhighlight %}
+```
 
 **main** metodu, programı başlatan kod tarafından çağrılması gerektiğinden herkese açık(*public*) olmalıdır. Bir sonraki anahtar kelime **static**'dir. Bu, **main** yönteminin sınıfın her özel örneğinde yaşamadığı, aksine sınıfın bütünü için sadece bir tane olduğu anlamına gelir. Yani **sınıfa aittir** anlamına gelmektedir. Bu kavramlar şayet kafanızı karıştırıyor ise aşağıdaki videoyu izlemenizi öneririm. Sonrasında ise **void** ifadesini görüyorsunuz. <u>Bu metodun herhangi bir değer döndürmediği anlamına gelir.</u>
 
@@ -50,7 +50,7 @@ public static void main(String[] args)
 şeklindedir.
 
 
-{% picture 2018-06-09-Java-static-method/java-statik-nedir.png --alt Java Memory Management --img width="100%" height="100%" --link https://www.youtube.com/watch?v=cR9uwtMQt-g %}
+<br/>{% picture 2018-06-09-Java-static-method/java-statik-nedir.png --alt Java Memory Management --img width="100%" height="100%" --link https://www.youtube.com/watch?v=cR9uwtMQt-g %}<br/>
 
 ---
 Hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), **main metodunu** da kapsayan bir örnek kod üzerinde, **statik** ve **statik olmayan** değişken ve metotların hafıza yönetim modelini ele aldım. Bu videoyu özellikle izlemenizi öneririm.
@@ -71,7 +71,7 @@ Bu arada parametreleri normal metodlarda sıklıkla görüyoruz. Buradaki çalı
 
 Komut satırı argümanlarından biraz bahsetmek istiyorum. <u>Bir Java uygulaması, komut satırından istediğiniz sayıda argüman girişini kabul edebilir.</u> Bu, kullanıcının uygulama başlatıldığında yapılandırma bilgilerini belirlemesini sağlar. Dikkat ederseniz **main** yönteminin parametre değişkenleri, yani **args**'ın veri tipi bir **String** dizisidir. Bu programın sadece **string** tipinde bir diziyi argüman olarak kabul edeceği anlamına gelmektedir.
 
-{% picture 2018-06-08-Java-main-method/args.png --alt java command-line arguments --img width="100%" height="100%" %}
+<br/>{% picture 2018-06-08-Java-main-method/args.png --alt java command-line arguments --img width="100%" height="100%" %}<br/>
 
 Diyelim ki komut satırı argümanı olarak kullanmak istediğiniz bir şeyler olduğunu hayal edin. Aşağıdaki örnekte ``This is a sample text``  cümlesini komut satırı argümanı eklemek istiyorum. Aşağıdaki kodla bu cümleyi **args parametresi** olarak programımın içine dahil edebilirim. Sistem, zaten **args** parametresi yoksa, parametrenin olmadığını anlayıp sadece **main** metodunun içine odaklanır.
 
@@ -85,7 +85,7 @@ public class Sample {
 }
 ```
 
-{% picture 2018-06-08-Java-main-method/result.png --alt java command-line arguments --img width="100%" height="100%" %}
+<br/>{% picture 2018-06-08-Java-main-method/result.png --alt java command-line arguments --img width="100%" height="100%" %}<br/>
 
 Görüleceği üzere komut satırı argümanlarını da kullanmak bir seçenektir.
 

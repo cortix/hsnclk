@@ -60,9 +60,9 @@ Muhtemelen bir kurucuda daha önce bir değişken başlattınız(yani ilklendird
 
 Geçtiğimiz derslerde verdiğimiz örnek sınıflar olan **Person** ve **Student** sınıflarını bu derste de kullanalım istiyorum.
 
-{% picture 2020-06-24-Java-inheritance6/student.png --alt Java compiler rule(java derleyici kuralı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-24-Java-inheritance6/student.png --alt Java compiler rule(java derleyici kuralı) --img width="100%" height="100%" %}<br/>
 
-{% picture 2020-06-24-Java-inheritance6/rule4.png --alt Java compiler rule(java derleyici kuralı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-24-Java-inheritance6/rule4.png --alt Java compiler rule(java derleyici kuralı) --img width="100%" height="100%" %}<br/>
 
 **Person** sınfını ele alacak olursak, derleyici, sınıfın miras aldığı bir başka sınıf yoksa arka planda otomatik olarak **Object** sınıfını miras alıyor ve sınıfın bir kurucusu yoksa bir de sınıfa bir **kurucu(constructor)** yerleştiriyordu. Hatta 3.derleyici kuralımızı hatırlarsanız, bu kurucu içine bir de ``super();`` metodu çağrısı da eklemişti. Ben bu değişiklikler, sanki derleyici tarafından açıkça eklemiş gibi aşağıdaki kodda belirteceğim. Yalnız bunların derleyici tarafından arka planda eklendiğini unutmayın.
 
@@ -81,14 +81,14 @@ Aşağıdaki kodda da görüleceği üzere Person kurucusunu, değişken ilklend
 
 
 
-{% picture 2020-06-24-Java-inheritance7/var_init1.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-24-Java-inheritance7/var_init1.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}<br/>
 
 
 
 Derleyici kurallarından **3.kuralı** hatırlayacak olursak, <u>kurucunun ilk satırı mutlaka aynı sınıf(same-class) yapıcısına veya bir üst sınıf(superclass) yapıcısına bir çağrı olmalıdır.</u> O halde ``super();`` çağrısının yerini değiştirerek bu sorunu çözebiliriz.
 
 
-{% picture 2020-06-24-Java-inheritance7/var_init2.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-24-Java-inheritance7/var_init2.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}<br/>
 
 
 Şimdi hem üst sınıf kurucumu doğru bir şekilde çağırabiliyorum hem de üye değişkenimi başlatabiliyorum. Buradan aslında şu çıkarımı da yapabilirsiniz. Bir sınıftan bir objeyi oluşturmadan veyahut sınıfın kendisini yüklemeden önce derleyici hep bir üst sınıfın sorunlarını çözmemiz için bizi zorlar.
@@ -97,19 +97,19 @@ Derleyici kurallarından **3.kuralı** hatırlayacak olursak, <u>kurucunun ilk s
 
 Hatırlarsanız, derleyici arka planda bizim yerimize eklediği kurucu ve kurucu içindeki `super();` üst sınıf çağrısını yapmıştı. Şimdi bu varsayılan(default) **Student** kurucusunu ele alıp, üzerinde biraz değişiklikler yapacağım. Haliyle değişiklik yapacağımız için bu kurucunun artık bize özel bir kurucu olacağını unutmayın. Bildiğiniz gibi derleyici, sınıf içinde bir kurucu olmadığı zaman müdahale ediyordu.
 
-{% picture 2020-06-24-Java-inheritance7/var_init3.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-24-Java-inheritance7/var_init3.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}<br/>
 
 **Student** kurucusunun içinde, **Person** kurucusunda yaptığımız gibi benzer ilklendirme işlemini yapalım istiyorum. Eş zamanlı olarak bu kodu bir editörde denediğinizi varsayarak, alacağınız derleme hatalarını birlikte irdeleyebiliriz. İlk gözüme çarpan **Person** sınıfının içinde argümansız bir kurucunun olmayışı!! İkincisi ise **name** üye değişkeninin **private** olması... Hatırlarsanız **private** değişkenlere **getter** ve **setter** yöntemlerle erişebiliyorduk. Yalnız **Person** sınıfında **public** olan bir **getter/setter** yöntemin olmadığını görüyorum. Peki bu durumda ne yapabiliriz? Yani **getter** ve **setter** olmadan **name** isimli üye değişkenini nasıl ilklendirebiliriz? Aşağıdaki gibi bir düzenleme ile bu mümkün...
 
-{% picture 2020-06-24-Java-inheritance7/var_init4.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-24-Java-inheritance7/var_init4.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}<br/>
 
 Şimdi Student sınıfına tamamen keyfi olarak bir argümansız kurucu eklemek istiyorum. Person sınıfında argümansız bir kurucu olmadığı için super("Student") çağrımızın içine bir string eklemem gerekiyor. **name** değişkenini ilklendirebilmek için **"Student"** isminde varsayılan bir değer ekliyorum. Bu kod bu şekilde çalışır.
 
-{% picture 2020-06-24-Java-inheritance7/var_init5.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-24-Java-inheritance7/var_init5.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}<br/>
 
 Daha iyi bir yaklaşım sizce var mı? Evet var.. Çünkü Student sınıfının içinde, argümanlı bir kurucu içinden zaten superclass çağrısı yapılıyor. Tekrardan benzer bir çağrı yapmanın gereği yoktur. Bu gibi durumlarda, aynı sınıf kurucularımı kullanabilirim. Belki de aynı sınıf kurucularımdan biri, tam olarak bu isteğime dayalı bir talebi karşılıyordur. Aşağıdaki kodda yaptığım değişiklik görüleceği üzere, üst sınıf çağrımız olan ``super("Student");`` çağrısını **this("Student")** yapmak oldu. Burada **this** kullanarak **bulunduğumuz sınıfın kurucusunu(constructor)** kastettiğimizi anlamışsınızdır.
 
-{% picture 2020-06-24-Java-inheritance7/var_init6.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-24-Java-inheritance7/var_init6.png --alt Java Variable Initialization(java değişken ilklendirme) --img width="100%" height="100%" %}<br/>
 
 Bazı durumlarda bu tarz sınıf içi kuruculara ihtiyaç duyulabilir. Örneğin **Person** sınıfının ilklendirmesini dışarıdan gelen parametrelerle değil de kendiniz belirlemek isteyebilirsiniz. Örneğin argümanlı kurucunuzu **private** yapıp, bu kurucuya erişimi sadece argümansız kurucuyla yapabildiğinizi hayal edin. Bu gibi durumlarda **this("")** çağrısı ile sınıf içi bir kurucuya erişebilirsiniz.
 

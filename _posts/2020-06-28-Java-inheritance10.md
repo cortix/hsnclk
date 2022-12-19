@@ -56,22 +56,25 @@ Hem bir sınıftan nesne yaratırken hem de sınıfın sahip olduğu bir methodu
 
 Constructor, ilgili sınıftan bir nesne oluşturabilmek için reçetedir. O sınıfı kullanabilmek için bir kullanım kılavuzudur. Aşağıdaki iki constructor örneği de beraber çalışabilir. Overloading için güzel bir örnektir.
 
-{% highlight java %}
+```java
 public class Deneme
 {
   //...
-  public Deneme() // 1.constructor - parametresiz constructor(default constructor)
+  // 1.constructor - parametresiz constructor
+  // (default constructor)
+  public Deneme()
   {
     //
   }
-  public Deneme(int a, int b) // 2.constructor - parametreli constructor
+  // 2.constructor - parametreli constructor
+  public Deneme(int a, int b)
   {
     //
   }
 
 }
-{% endhighlight %}
----
+```
+<br/>
 
 Örneğin yukarıdaki **Deneme** sınıfını ele alacak olursak, 1.constructor parametresiz bir kurucudur(constructor). Siz belirtmeseniz de java sizin için bunu arka planda oluşturacaktır. Her neyse, bu constructorı oluşturabilmek için new anahtar sözcüğü ile `new deneme()` yazmanız bu sınıfın bir nesnesini oluşturacaktır. Bu şu demek oluyor, artık bu sınıfı kullanabilmek için elimde bir nesne var demektir. 2. constructor ise parametreli constructor'dır.
 
@@ -93,7 +96,7 @@ Java bu gibi durumlarda derleme hatası verir. Aşağıda bu durumu örneklendir
 
 Daha önce de belirttiğimiz gibi constructor'ı overloading yapabildiğimiz gibi metotları da overload yapabiliriz.
 
-{% highlight java %}
+```java
 public class Deneme
 {
   //...
@@ -102,7 +105,7 @@ public class Deneme
   }
 
 }
-{% endhighlight %}
+```
 
 
 Yukarıdaki örnek için hangi overloading methodlar uygun olur?

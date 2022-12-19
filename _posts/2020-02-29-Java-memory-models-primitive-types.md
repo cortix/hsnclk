@@ -84,7 +84,7 @@ String a2 = "hello";
 String a3 = new String("hello");
 ```
 
-{% picture 2020-02-29-Java-memory-models-primitive-types/string-interning.png --alt Java string interning --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-primitive-types/string-interning.png --alt Java string interning --img width="100%" height="100%" %}<br/>
 
 
 Arkadaşlar dilerseniz **string interning** ile alakalı hazırladığım bu [videoya](https://www.youtube.com/watch?v=jT06ibYdEXo) da göz gezdirebilirsiniz. Bu videoda **string interning**'in yanı sıra bu konuyla bağlantılı olduğunu düşündüğüm **2 konuyu** daha ele aldım. Bakmanızı öneririm.
@@ -106,7 +106,7 @@ Adım adım yukarıdaki kod bloğu nasıl çalışır, bunu resmetmeye çalışa
 
 <!-- 1.variable declaration: Draw a box and label it with the variable's name -->
 
-{% picture 2020-02-29-Java-memory-models-primitive-types/deg1.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-primitive-types/deg1.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}<br/>
 
 > Bu kutuyu, hafızada primitive type(ilkel tür) için açılan boşluğu, yani alanı temsil ediyor gibi düşünebilirsiniz.
 
@@ -114,20 +114,20 @@ Adım adım yukarıdaki kod bloğu nasıl çalışır, bunu resmetmeye çalışa
 
 <!-- 2.variable assignment: put the value of the right hand side(RHS) into the box for the variable on the left hand side(LHS). -->
 
-{% picture 2020-02-29-Java-memory-models-primitive-types/deg1-2.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-primitive-types/deg1-2.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}<br/>
 
 * **2.satır:** Kodun bir sonraki satırı ise atama komutudur(*assignment statement*). Burada da Java'ya şunu söylüyorsunuz. Java sağ tarafta bulunan değeri al(yani 5'i) ve sol tarafta bulunan değişkene(yani **deg1** olana) yerleştir(yani atama yap). Hafıza modelimize geri dönecek olursak, 5 sayısını alıp kutunun içine yerleştiriyor gibi düşünebiliriz.
 
-{% picture 2020-02-29-Java-memory-models-primitive-types/deg2.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-primitive-types/deg2.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}<br/>
 
 * **3.satır:** Bu satırda, birinci satırda olduğu gibi yeni bir değişken tanımlıyoruz. Bu değişkenin ismini de **deg2** olarak etiketlediğimizi düşünelim. **deg1** için yaptıklarımızı aynen bunun içinde yapacağız. Bir kutu oluşturacak ve bu kutuyu **deg2** ismiyle etiketleyeceğiz.
 > Etiketlemekten kastım, aslında bir isim vereceğiz demek istiyorum. İngilizce label karşılığı etiketlemek olduğu için tercih ettim.
 
-{% picture 2020-02-29-Java-memory-models-primitive-types/deg2-2.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-primitive-types/deg2-2.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}<br/>
 
 * **4.satır:** Bu satır bir başka atama komutunun olduğu satırdır. Bir önceki atama işlemlerinden biraz daha farklı olduğunu görebilirsiniz. Çünkü işlemin sağ tarafında bulunan değer bir rakam değil, başka bir değişkendir. Burada bizden istenen, **deg1** değişkeninin sahip olduğu değerin aynısını **deg2** değişkenine de atamaktır. Bu durumu, **deg1** kutusunun içindeki değerin aynısını **deg2** kutusunun içine yapıştırarak  hafıza modelimizde resmedebiliriz. Resimden de görüleceği üzere **deg1** ve **deg2** değişkenleri aynı değeri saklamaya başladı. Dikkat edilecek olursa, bu iki değişken de tamamen farklı ve hiçbir şekilde birbirlerine bağlı değiller. Sadece geçici olarak aynı değeri saklıyorlar.
 
-{% picture 2020-02-29-Java-memory-models-primitive-types/deg1-3.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}
+<br/>{% picture 2020-02-29-Java-memory-models-primitive-types/deg1-3.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}<br/>
 
 * **5.satır:** Bu satırda bir başka atama komutu ile karşılaşıyoruz. Bu sefer **deg1** değişkenine 12 değerini atamamız isteniyor.
 Yani hafıza modelimizde düşünecek olursak: 12 değerini al ve **deg1** değişkeninin olduğu kutuya yerleştir. Yani bu, eski değerimiz olan 5'in yerini şimdi 12 alacak demektir. Dikkat ederseniz değişen sadece **deg1** değişkeni!! **deg2** değişkeni için yaptığımız bir işlem olmadı. Daha önce de belirttiğimiz üzere, bu iki değişken arasında aynı değeri tutmalarının dışında bir benzerlik ve bağlantı yok. Tesadüfen aynı değeri tutan iki değişken gibi düşünülebilir.  

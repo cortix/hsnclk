@@ -100,7 +100,7 @@ Aşağıdaki resimden de anlaşılacağı üzere sınıf şablonundan yaratılan
 
 </div>
 
-{% picture 2018-06-09-Java-static-method/java-memory-management.png --alt Java Memory Management --img width="100%" height="100%" %}
+<br/>{% picture 2018-06-09-Java-static-method/java-memory-management.png --alt Java Memory Management --img width="100%" height="100%" %}<br/>
 
 ### Java Sınıf Değişkenleri
 
@@ -203,7 +203,7 @@ Yerel değişkenler(local variables) ile ilgili bir diğer önemli nokta ise şu
 
 #### Illegal start of expression derleme hatası
 
-{% picture 2018-06-09-Java-static-method/illegal_start.png --alt Java Illegal Start of expression for local variables --img width="100%" height="100%" %}
+<br/>{% picture 2018-06-09-Java-static-method/illegal_start.png --alt Java Illegal Start of expression for local variables --img width="100%" height="100%" %}<br/>
 
 Yukarıdaki görselde **yerel değişkene** bir **erişim değiştirici** uygulamaya çalıştım. Görüldüğü gibi "**illegal start of expression**" derleme hatası aldım. <u>Hatadan da anlaşılacağı üzere yerel değişkenlere erişim değiştiricileri(access modifiers) uygulanamaz.</u> Koda şu [linkten](http://www.pythontutor.com/visualize.html#code=public%20class%20Deneme%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20InnerClas%20c%3D%20new%20InnerClas%28%29%3B%0A%20%20%20%20%20%20%20%20c.deneGor%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20static%20class%20InnerClas%20%7B%0A%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20void%20deneGor%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20private%20int%20x%20%3D%207%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28this.x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false) ulaşabilirsiniz.
 
@@ -221,11 +221,11 @@ Aslında **parametre** ile **argüman** arasında da ufak bir **fark** vardır.
 
 * **Argüman** ise bu metodu kullanmak istediğimizde yani metodu çağırdığımızda metodun içine aldığı değerdir. Örneğin bu metodun içine değer olarak **32** veya **44** int değerlerini aldığımızda bunlar aslında argüman olarak ifade edilir.
 
-{% highlight java %}
+```java
 public String methodA(int num) {
     // method body goes here
 }
-{% endhighlight %}
+```
 </div>
 
 Yukarıdaki örnektede görüleceği üzere **methodA**'yı kullanabilmek için **int** tipinde bir sayıya ihtihacınız olduğu anlamına geliyor. Yani bu şartı sağlamadan bu metodu kullanamazsınız. Aksi halde derleme hatası ile karşılaşırsınız. Unutulmaması gereken en önemli şey, parametrelerin her zaman "alanlar(*fields*)" olarak değil "değişkenler(*variables*)" olarak sınıflandırılmasıdır.
@@ -235,24 +235,24 @@ Yukarıdaki örnektede görüleceği üzere **methodA**'yı kullanabilmek için 
 
 Java ile yazılmış en basit kod içinde bile, isteğimiz dışında bir `static` ifadesini kullandığımız oluyor. Bunu devamlı kullandığımız main metodundan hatırlayabiliriz. ``main`` metodu ile ilgili detaylı bilgi için şu [linkteki](/java/Java-main-method/) yazımı okuyabilirsiniz.
 
-{% highlight java %}
+```java
 public static void main(String[] args) {
         //code
     }
-{% endhighlight %}
+```
 
 
 Bu ifadeyi metod tanımlarken kullandığımızda, ilgili yöntemin genel anlamıyla bulunduğu sınıfa ait olduğu ve belirli başka bir örnekte olmadığı anlamına gelir. Bunun ne anlama geldiğini daha yakından görmek için, önce ilgili sınıfın her bir instance'ı için bir kopya olan statik olmayan(*non-static*) alanlara bakalım. Örnek olarak, bankacılık ile ilgili bir yazılım hazırladığınızı varsayalım. Bir banka hesabı için bir sınıf oluşturmaya ve alanları(*fields*) için, hesap bakiyesi ve hesap numarası bildirmeye karar verdiniz.
 
 * non-static(instance) = her nesnede(in each object)
 
-{% highlight java %}
+```java
 class BankaHesabi{
   int hesapNum;
   double bakiye;
   ...
 }
-{% endhighlight %}
+```
 
 Her bir farklı banka hesabının kendi hesap numarası ve kendi bakiyesi olması gerekmektedir. Bankanızda, bu sınıfın üç örneğini, veri depolamada üç hesap için oluşturduysanız, böyle görünebilir. Burada her bir örneğin kendi hesap numarası ve bakiyesinin nasıl olduğunu görebiliriz. **Bu alanlar statik değildir ve her nesne için ayrı ayrı oluşur.**
 
@@ -263,13 +263,13 @@ Her bir farklı banka hesabının kendi hesap numarası ve kendi bakiyesi olmas�
 | Bilal   | 102   | 0   
 {: rules="groups"}
 
-{% highlight java %}
+```java
 class BankaHesabi{
   int hesapNum;
   double bakiye;
   int sonHesapNum;
 }
-{% endhighlight %}
+```
 
 Şimdi, bu kodu yazarken, bir değişkende atama yapmak için bir önceki hesap numarasını takip etmek istediğinizi varsayalım. Böylece yeni bir hesap oluşturduğunuzda, ona hangi numarayı vereceğinizi bileceksiniz. Eklediğimiz alan yukarıda gösterildiği gibi olursa, bu sonraki hesap numarası için oluşturduğumuz örnek beklediğimiz gibi olmayabilir. Aşağıdaki kodu görüntüleyemiyorsanız lütfen [linke](https://goo.gl/x4udgN) tıklayınız.
 
