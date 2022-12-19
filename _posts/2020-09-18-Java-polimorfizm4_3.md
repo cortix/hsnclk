@@ -3,9 +3,9 @@ title: "Java'da Polimorfizm 4.3 - Dinamik Bağlanma Örnek"
 comments: false
 excerpt: "Bu bölümde, dinamik bağlanmayla ilgili bir örnek verecek, konunun daha iyi anlaşılmasını sağlayacağız "
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-56.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-56.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Quinton Coetzee](https://unsplash.com/photos/AOaDfdSly3g) on Unsplash"
   #cta_label: "More Info"
@@ -13,9 +13,9 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java polimorfizm
-  - dynamic/late binding(dinamik/geç bağlanma)
-  - this keyword
+  - Java polimorfizm
+  - Java dynamic/late binding(dinamik/geç bağlanma)
+  - Java this keyword
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
