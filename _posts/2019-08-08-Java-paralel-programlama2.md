@@ -13,9 +13,9 @@ header:
 categories:
   - java-paralel-programlama
 tags:
-  - java paralel programlama
-  - java threads
-  - java fork/join
+  - Java paralel programlama
+  - Java threads
+  - Java fork/join
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: false
 toc_label: "SAYFA İÇERİĞİ"

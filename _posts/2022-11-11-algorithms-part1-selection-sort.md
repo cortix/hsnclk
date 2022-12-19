@@ -15,7 +15,7 @@ categories:
   - algorithms
 tags:
   - Algorithms
-  - Selection sort algorithm
+  - Selection Sort algorithm
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: false
 toc_label: "SAYFA İÇERİĞİ"

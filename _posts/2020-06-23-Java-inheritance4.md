@@ -13,9 +13,9 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java inheritance
-  - java erişim değiştiricileri
-  - java görünürlük değiştiricileri
+  - Java inheritance
+  - Java erişim değiştiricileri
+  - Java görünürlük değiştiricileri
   - public
   - private
   - protected

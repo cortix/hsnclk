@@ -13,7 +13,7 @@ header:
 categories:
   - java-hafiza-yonetimi
 tags:
-  - java memory model
+  - Java memory model
   - Java'da Nesneler İçin Hafıza Modeli
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
