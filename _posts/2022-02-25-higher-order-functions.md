@@ -14,10 +14,10 @@ header:
 categories:
   - programming-style
 tags:
-  - programming-style
+  - Programming-style
   - Java higher order functions
-  - first-class citizens
-  - first-class functions
+  - First-class citizens
+  - First-class functions
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"

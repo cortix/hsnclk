@@ -16,8 +16,8 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java inheritance
-  - nesne oluşumu
+  - Java inheritance
+  - Nesne oluşumu
   - Object sınıfı
   - new anahtar kelimesi
   - Kurucu(constructor)

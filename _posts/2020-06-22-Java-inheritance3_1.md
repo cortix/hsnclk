@@ -13,11 +13,11 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java inheritance
-  - static type(statik tip)
-  - dynamic type(dinamik tip)
-  - strong-typed
-  - weakly-typed
+  - Java inheritance
+  - Static type(statik tip)
+  - Dynamic type(dinamik tip)
+  - Strong-typed
+  - Weakly-typed
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"

@@ -13,9 +13,9 @@ header:
 categories:
   - java-hafiza-yonetimi
 tags:
-  - java memory model
-  - pass by value
-  - pass by reference
+  - Java memory model
+  - Pass by value
+  - Pass by reference
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"

@@ -14,9 +14,9 @@ header:
 categories:
   - programming-style
 tags:
-  - programming-style
-  - declarative style programming
-  - imperative style programming
+  - Programming-style
+  - Declarative style programming
+  - Imperative style programming
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"

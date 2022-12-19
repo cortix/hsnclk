@@ -17,10 +17,10 @@ header:
 categories:
   - java
 tags:
-  - java class
-  - static metot
-  - java değişkenler
-  - java parametreler
+  - Java class
+  - Static metot
+  - Java değişkenler
+  - Java parametreler
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"

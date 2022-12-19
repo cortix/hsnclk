@@ -13,17 +13,17 @@ header:
 categories:
   - java-paralel-programlama
 tags:
-  - java paralel programlama
-  - java threads
-  - java fork/join
-  - java kritik yol uzunluğu
-  - java data race(veri yarışı)
-  - java ideal parallelism
-  - java work
-  - java span
-  - java continue edges
-  - java fork edges
-  - java join edges
+  - Java paralel programlama
+  - Java threads
+  - Java fork/join
+  - Java kritik yol uzunluğu
+  - Java data race(veri yarışı)
+  - Java ideal parallelism
+  - Java work
+  - Java span
+  - Java continue edges
+  - Java fork edges
+  - Java join edges
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
