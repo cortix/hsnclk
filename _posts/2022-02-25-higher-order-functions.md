@@ -1,12 +1,12 @@
 ---
-title: "Higher Order Fonksiyonlar (Programlama Stili Part 2)"
+title: "Higher Order Functions (Üst Düzey Fonksiyonlar) (Programlama Stili PART 2)"
 comments: false
 excerpt: "Bu yazıda, birinci-sınıf vatandaş(first-class citizen) ve birinci-sınıf fonksiyonlar(first-class function) olmak üzere higher-order(üst düzey) fonksiyonların ne olduğunu açıklamaya çalışacağım."
 header:
-  teaser: "/assets/images/2022-02-25-higher-order-functions/higher.webp"
+  teaser: "/assets/images/2022-02-25-higher-order-functions/higher.png"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-02-25-higher-order-functions/higher.webp
-  overlay_image: /assets/images/2022-02-25-higher-order-functions/higher_f.webp
+  og_image: /assets/images/2022-02-25-higher-order-functions/higher.png
+  overlay_image: /assets/images/2022-02-25-higher-order-functions/higher_f.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Etienne Girardet](https://unsplash.com/photos/Xh6BpT-1tXo) on Unsplash"
   #cta_label: "More Info"
@@ -15,7 +15,7 @@ categories:
   - programming-style
 tags:
   - programming-style
-  - higher order functions
+  - Java higher order functions
   - first-class citizens
   - first-class functions
 last_modified_at: 2022-02-23T15:12:19-04:00
@@ -32,8 +32,8 @@ toc_label: "SAYFA İÇERİĞİ"
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Programlama Stili Serisi</h4>
 ---
 
-1. Programlama Stili Part 1 - [Imperative ve Declarative Stil Programlama](/programming-style/imperative-and-declarative-programming/)
-2. **Programlama Stili Part 2 - Higher Order Fonksiyonlar**
+1. Programlama Stili Part 1 - [Imperative and Declarative Style Programming (Zorunlu ve Bildirimsel Stil Programlama)](/programming-style/imperative-and-declarative-programming/)
+2. **Programlama Stili Part 2 - Higher Order Functions (Üst Düzey Fonksiyonlar)**
 
 </div>
 

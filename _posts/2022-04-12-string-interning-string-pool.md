@@ -3,12 +3,12 @@ title: "Java'da Hafıza Modeli 7 - String Interning Nedir, String Pool Nedir, ==
 comments: false
 excerpt: "Burada bu 3 sorunun yanıtını arayacağız."
 header:
-  teaser: "/assets/images/2022-04-12-string-interning-string-pool/img.webp"
+  teaser: "/assets/images/2022-04-12-string-interning-string-pool/img.png"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-04-12-string-interning-string-pool/img.webp
-  overlay_image: /assets/images/unsplash-image-25.webp
+  og_image: /assets/images/2022-04-12-string-interning-string-pool/img.png
+  overlay_image: /assets/images/unsplash-image-25.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Kelli Tungay](https://unsplash.com/@kellitungay?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash"
+  caption: "Photo by [Kelli Tungay](https://unsplash.com/photos/2LJ4rqK2qfU) on Unsplash"
   #video:
     #id: jT06ibYdEXo
     #provider: youtube
@@ -17,12 +17,12 @@ header:
 categories:
   - java-hafiza-yonetimi
 tags:
-  - java memory model
-  - string interning
-  - string pool
-  - string constant pool
-  - string intern pool
-  - == ve equals farkı
+  - Java memory model
+  - Java string interning
+  - Java string pool
+  - Java string constant pool
+  - Java string intern pool
+  - Java'da == operatörü ve equals metodu farkı
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -57,10 +57,10 @@ Arkadaşlar bu bir video içerik. Birbiri ile bağlantılı olduğu için aşağ
 2. **String Pool**, diğer ismiyle **string constant/intern pool** nedir ve neden vardır?
 3. **==** operatörü ve **equals** metodu arasındaki fark nedir?
 
-<a href="https://www.youtube.com/watch?v=jT06ibYdEXo"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-04-12-string-interning-string-pool/string-interning.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2022-04-12-string-interning-string-pool/string-interning-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2022-04-12-string-interning-string-pool/string-interning.webp 1080w" sizes="(min-width: 1280px) 650px, (min-width: 1040px) calc(100vw - 430px), calc(101.11vw - 43px)" width="100%" height="100%" loading="lazy" alt="Java String Interning Nedir, String Pool Nedir, == operatörü ve equals metodu Arasındaki Fark"></a>
+{% picture 2022-04-12-string-interning-string-pool/string-interning.png --alt Java String Interning Nedir, String Pool Nedir, == operatörü ve equals metodu Arasındaki Fark --img width="100%" height="100%" --link https://www.youtube.com/watch?v=jT06ibYdEXo %}
 
 Daha önceki [makalelerimin](/java-hafiza-yonetimi/Java-memory-models-primitive-types/#string-interning) birinde string interning kavramına değinmiştim. Dilerseniz o makaleyi de inceleyebilirsiniz. Yalnız bu video daha detaylı olduğu ve 3 konuyu da ele aldığı için daha yararlı olacağını düşünüyorum.
 
-## Reference:
+## Referanslar:
 * [String intern](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#intern())
 * [String interning](https://en.wikipedia.org/wiki/String_interning)
