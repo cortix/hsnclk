@@ -110,7 +110,7 @@ Yalnız şunu belirtmekte yarar var. Statik olup, **strong-typed** veyahut **wea
 
 </div>
 
-{% picture 2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.png --alt Statically typed programming languages, dynamically typed programming languages, strongly typed programming languages, weakly typed programming languages (Statik Tip Diller, Dinamik Tip Diller, Güçlü Tip Diller, Zayıf Tip Diller) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.png --alt Statically typed programming languages, dynamically typed programming languages, strongly typed programming languages, weakly typed programming languages (Statik Tip Diller, Dinamik Tip Diller, Güçlü Tip Diller, Zayıf Tip Diller) --img width="100%" height="100%" %}<br/><br/><br/>
 
 Bir dil şartnamesi, tür denetimi kurallarını(typing rules) şiddetle uyguluyorsa, süreç **"strong-typed"** olarak adlandırılır, uygulamıyorsa **"weakly-typed"** olarak adlandırılır.
 

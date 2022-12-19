@@ -61,7 +61,7 @@ Bir önceki ders kodda tutarlılığı sağlamak ve veri yapısını tek bir sı
 
 ## Referans ve Nesne Türleri
 
-{% picture 2020-06-21-Java-inheritance3/isa.png --alt java reference and object type, java is-a relationship (java referans ve obje tipi, java is-a ilişkisi) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-21-Java-inheritance3/isa.png --alt java reference and object type, java is-a relationship (java referans ve obje tipi, java is-a ilişkisi) --img width="100%" height="100%" %}<br/>
 
 Referans ve obje tipleri konusuna şu [derste](/java-hafiza-yonetimi/Java-memory-models-objects/#referans-ve-nesne-türleri) biraz değinmiştik. Devam etmeden önce göz gezdirmenizde yarar var.
 
@@ -210,7 +210,7 @@ public class TestFaculty {
 
 ## Derleme Zamanı ve Çalışma Zamanı Kararları
 
-{% picture 2020-06-21-Java-inheritance3/compile-runtime.png --alt java reference and object type, java compile time decisions and runtime decisions (java referans ve obje tipi, java derleme zamanı ve çalışma zamanı kararları) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-21-Java-inheritance3/compile-runtime.png --alt java reference and object type, java compile time decisions and runtime decisions (java referans ve obje tipi, java derleme zamanı ve çalışma zamanı kararları) --img width="100%" height="100%" %}<br/><br/><br/>
 
 Stack ve heap alanında görselleştirdiklerimizden anlaşılacağı üzere referanslar ön tarafta gerçekleşen işlemleri, objeler ise arka tarafta gerçekleşen işlemleri temsil etmektedir. Ön taraf için derleme zamanı, arka taraf, yani merkezde olan işlemler için ise çalışma zamanını düşünebilirsiniz.
 

@@ -164,7 +164,7 @@ Artık mirası nasıl kullanabileceğimiz hakkında bir fikrimiz olduğuna göre
 
 Kalıtım(inheritance) hiyerarşisi şu şekildedir.
 
-{% picture 2020-06-20-Java-inheritance2/uml1.png --alt java class hierarchy or inheritance tree uml diagram (java sınıf hiyerarşisi veya kalıtım ağacı uml diyagramı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-20-Java-inheritance2/uml1.png --alt java class hierarchy or inheritance tree uml diagram (java sınıf hiyerarşisi veya kalıtım ağacı uml diyagramı) --img width="100%" height="100%" %}<br/>
 
 * Grade Point Average (Not Ortalaması)
 
@@ -176,7 +176,7 @@ Diyelim ki yukarıdaki 3 değişkeni bu sınıflara eklemek istiyorsunuz. Sizce 
 
 Cinsiyet değişkeni genel bir değişken olduğundan **Person** sınıfında olması daha doğru olacaktır. Ama **maaş** ve **not ortalaması** değişkenleri biraz daha spesifiktir. Yani öğrencinin maaş alamayacağını ve öğretim görevlilerinin ise not ortalamasına sahip olamayacağını biliyoruz. Bu yüzden bu değişkenleri bu sınıflara özel olarak tanımlayabiliriz.
 
-{% picture 2020-06-20-Java-inheritance2/uml2.png --alt java class hierarchy or inheritance tree uml diagram (java sınıf hiyerarşisi veya kalıtım ağacı uml diyagramı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-20-Java-inheritance2/uml2.png --alt java class hierarchy or inheritance tree uml diagram (java sınıf hiyerarşisi veya kalıtım ağacı uml diyagramı) --img width="100%" height="100%" %}<br/>
 
 Dersin başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonuncuyu ise bir sonraki derste ele alacağız.
 

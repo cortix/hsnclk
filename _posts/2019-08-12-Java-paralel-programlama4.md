@@ -17,9 +17,9 @@ tags:
   - Java threads
   - Java fork/join
 last_modified_at: 2018-06-06T15:12:19-04:00
-toc: false
+toc: true
 toc_label: "SAYFA İÇERİĞİ"
-classes: wide
+#classes: wide
 ---
 
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir. Rice Üniversitesi'nin hazırladığı eğitsel bir Framework olan PCDP bu ve sonraki bölümlerde kullanılacaktır. async ve finish notasyonları bu Framework'de yer almaktadır.
@@ -41,7 +41,7 @@ classes: wide
 Bir önceki bölümde hesaplama grafiklerini görmüştük. Şimdi ise gerçek **çok çekirdekli bilgisayarlarda** nasıl haritalandıklarını görebiliriz. Bir önceki bölümde resmettiğimiz hesaplama grafiğini tekrar göz önüne getirelim ve her bir işleme bazı yürütme zamanlarını verelim. **S<sub>6</sub>** dışında bütün işlemlere <u>1 birim</u> çalışma zamanı verdiğimizi varsayalım. **S<sub>6</sub>** ise **10** olsun.
 
 
-{% picture 2019-08-12-Java-paralel-programlama4/comp_graph4.png --alt Java hesaplama grafiği(java computation graph) --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-12-Java-paralel-programlama4/comp_graph4.png --alt Java hesaplama grafiği(java computation graph) --img width="100%" height="100%" %}<br/>
 
 Burada ilgilendiğimiz şey, **P** kadar işlemci olduğunda **T yürütme zamanını** bilmek istiyoruz. Yani, **P işlemcili** çok çekirdekli bir makinemiz varsa: Örn; **2, 4, 8, 16** çekirdekli, verilen bir hesaplama grafiği için hangi işlem zamanını alabiliriz?
 
@@ -51,7 +51,7 @@ Hesaplama grafiğindeki bu adımların aslında işlemcilerde nasıl zamanlandı
 
 **2 işlemcili** bir durumu ele aldığımızı varsayalım ve bu adımların nasıl programlanabileceğini görelim.
 
-{% picture 2019-08-12-Java-paralel-programlama4/multiprocessor1.png --alt Java hesaplama grafiğinin(java computation graph) işlemciler üzerinde gösterimi --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-12-Java-paralel-programlama4/multiprocessor1.png --alt Java hesaplama grafiğinin(java computation graph) işlemciler üzerinde gösterimi --img width="100%" height="100%" %}<br/>
 
 Dolayısıyla, ne olursa olsun **S<sub>1</sub>**'in ilk önce gerçekleştirilmesi gerektiğini görüyoruz, çünkü grafiğin asıl amacı, sıralama ilişkilerini gösterir ve **S<sub>1</sub>** işini bitirene kadar başka hiçbir şey çalışmaz. **S<sub>1</sub>**'i rastgele olarak **P<sub>0</sub>**'da başlattığımızı varsayalım. Sonrasında **S<sub>2</sub>** ve **S<sub>4</sub>** ve **S<sub>6</sub>** hepsi çalıştırılabilir. Ama iki işlemci olduğu için **3** işlemden **2**'sini seçmemiz gerekli.
 
@@ -59,12 +59,12 @@ Farzedelim ki, **S<sub>2</sub>** ve **S<sub>4</sub>**'ü seçtik. **P<sub>0</sub
 
 Her iki işlemci de boşa çıktığı için ikisinden birinde **S<sub>6</sub>** çalıştırılabilir. Farzedelim ki bu görevi **P<sub>0</sub>** aldı. Artık son işlem olan **S<sub>7</sub>**'ye geçebiliriz. Bunu da **S<sub>6</sub>**'da olduğu gibi boşta olan herhangi bir işlemci alabilir. Yine **P<sub>0</sub>**'ın aldığını varsayalım. Yukarıda görüldüğü üzere işlemciler üzerinde ilgili planlama yapıldı. Şimdi ise bu işlemcilerin çalışma zamanlarını üzerinde tekrar düşünebiliriz.
 
-{% picture 2019-08-12-Java-paralel-programlama4/multiprocessor2.png --alt Java hesaplama grafiğinin(java computation graph) işlemciler üzerinde gösterimi --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-12-Java-paralel-programlama4/multiprocessor2.png --alt Java hesaplama grafiğinin(java computation graph) işlemciler üzerinde gösterimi --img width="100%" height="100%" %}<br/>
 
 
 Planlama bu şekilde olduğunda 2 işlemcideki çalışma süresini **14**(yani **T<sub>2</sub>** = 14) olarak hesapladık. Dikkat edilecek olursa **2** adet de **IDLE**(atıl) slot göze çarpmaktadır. Yani bu slotların boşta olduğunu, yapacak bir işlerinin olmadığını göstermektedir. Ancak, grafiği programlamanın tek yolu bu değildir. Başka bir yaklaşım da izleyebiliriz. Çünkü **S<sub>6</sub>** bir darboğaz oluşturuyor ve **P<sub>1</sub>** işlemcisinin belirli durumlarda **boşta(IDLE)** kalmasına neden oluyor. Dolayısıyla, şimdi ikinci planlamadaki hedefimiz **S<sub>6</sub>**'yı mümkün olan en kısa sürede çalıştırmak olacaktır.
 
-{% picture 2019-08-12-Java-paralel-programlama4/multiprocessor3.png --alt Java hesaplama grafiğinin(java computation graph) işlemciler üzerinde gösterimi --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-12-Java-paralel-programlama4/multiprocessor3.png --alt Java hesaplama grafiğinin(java computation graph) işlemciler üzerinde gösterimi --img width="100%" height="100%" %}<br/>
 
 
 Bu planlama örneğinde **S<sub>1</sub>**'i yine ilk olarak başlatmak zorundayız. Tabii **S<sub>1</sub>** başladığında **P<sub>1</sub>** bir öncekinde olduğu gibi başlangıçta boş kalır. **S<sub>1</sub>** işlemi bittiğinde, **P<sub>0</sub>**'da **S<sub>6</sub>**'yı önceliklendirebiliriz. Böylece **S<sub>6</sub>**, <u>10 birim</u> zaman boyunca **P<sub>0</sub>** üzerinde çalışırken, **P<sub>1</sub>**'de **S<sub>2</sub>**, **S<sub>3</sub>**, **S<sub>4</sub>**, **S<sub>5</sub>** işlemlerini rahatlıkla ele alabiliriz. <u>Sıra önemli değil çünkü bunlar, hangi sırayla yapılırsa yapsınlar toplamda dört iş birimi ile çalışırlar</u>. Yani **10 birim** zamana sahip **S<sub>6</sub>**'yı düşünürsek, işlemlerini **S<sub>6</sub>**'dan önce bitirecekleri kesindir. **S<sub>6</sub>**'da işlemini sonlandırdıktan sonra **S<sub>7</sub>**'yi işleme alabiliriz. **S<sub>7</sub>** herhangi bir işlemci de başlayabilir. Varsayalım ki **P<sub>0</sub>**'da başladı. Peki, şimdi bu planlama için yürütme süresi ne oldu?. Burada **S<sub>1</sub>**'in **1**, **S<sub>6</sub>**'nın **10** ve **S<sub>7</sub>**'nin <u>1 birim</u> süresi olduğu için toplamda <u>12 birim</u> çalışma süresi olduğunu görüyoruz.

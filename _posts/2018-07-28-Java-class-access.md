@@ -33,22 +33,21 @@ Köşeli parantezler arasındaki alan (yani sınıf gövdesi), sınıftan yarat�
 
 Basit haliyle bir sınıfın deklarasyonu şu şekildedir.
 
-{% highlight java %}
+```java
 class MyClass {
     // field, constructor, and
     // method declarations
 }
-}
-{% endhighlight %}
+```
 
 Java kuralları gereği bir sınıfın isminin **baş harfi** büyük olmak zorundadır. Yukarıdaki örnek en yalın haliyle bir sınıf tanımıdır. Bu tanımı genişletmekte mümkündür.
 
-{% highlight java %}
+```java
 class MyClass extends MySuperClass implements YourInterface {
     // field, constructor, and
     // method declarations
 }
-{% endhighlight %}
+```
 
 Bu, **MyClass**'ın **MySuperClass**'ın bir alt sınıfı olduğu ve **YourInterface** arayüzünü uyguladığı anlamına gelir.
 
@@ -99,7 +98,7 @@ Peki neden bir ``final`` işaretini kullanalım? Ne de olsa, OO'nun miras anlay�
 ### Abstract Classes
 Soyut(**Abstract**) bir sınıf asla örneklenemez. Tek amacı, yaşamdaki misyonu, genişletilmesidir (**alt sınıf oluşturulması**). Soyut yöntemlerin sonu, köşeli parantez yerine noktalı virgülle işaretlendiğine dikkat edin.
 
-{% highlight java %}
+```java
 abstract class XClass {
   private double price;
   protected String speed;
@@ -107,15 +106,15 @@ abstract class XClass {
   protected abstract void goFast();
   public abstract void goUpHill();
 }
-{% endhighlight %}
+```
 
 Bir sınıfın içindeki sadece bir metodun bile soyut olması - bir arayüzün aksine - sınıfın da soyut olarak işaretlenmesi anlamına gelir. Bununla birlikte, soyut olan bir sınıfta, soyut olmayan metotları yerleştirebilirsiniz. Soyut olmayan bir metoda soyut bir sınıfta yer verdiğinizde, bu **abstract** sınıfı **extend** eden tüm somut(**concrete**) alt sınıflara (**concrete** soyut olmayan anlamına gelir.) kalıtsal yöntem uygulamalarını verirsiniz.
 
 * Bir sınıfı hem ``abstract`` hem de ``final`` olarak işaretleyemezsiniz. Neredeyse karşıt anlamlara sahiptirler. Bir **abstract** sınıfı alt sınıflara ayrılabilirken, bir **final** sınıfı ise alt sınıflanamaz. Bir sınıf veya yöntem bildirimi için kullanılan ``abstract`` ve ``final`` değiştiricilerin bu birleşimini görürseniz, kod derlenmez.
 
-{% highlight java %}
+```java
 XClass x = new Xclass(); // hata oluşur
-{% endhighlight %}
+```
 
 En başta söylediğimiz gibi bir **abstract** sınıftan ``new`` anahtar kelimesi kullanarak instance oluşturamazsınız. Yani örneklendirilemez. Yapılırsa hata alırsınız.
 
@@ -125,12 +124,12 @@ En başta söylediğimiz gibi bir **abstract** sınıftan ``new`` anahtar kelime
 
 Genel olarak, bir arayüz oluşturduğunuzda, bir sınıfın yapabileceği şeyler için, nasıl yapılacağı hakkında bir şey söylemeden bir sözleşme tanımlayabilirsiniz. Yani bu şu anlama gelir. Bu arayüzü implement eden sınıflar bu sözleşmenin maddelerine bağlı kalmak zorundadırlar. Java 8'e kadar interface'ler ile ilgili %100 **abstract** tanımını yapabiliyorduk. Fakat ilk olarak Java 8'e kadar olan interface yapısından bahsetmek istiyorum.
 
-{% highlight java %}
+```java
 public abstract interface MyInterface  {
     public int call(int a, int b);
     abstract void bounce();
 }
-{% endhighlight %}
+```
 
 <!-- An interface is something that indicates that we're dealing with an abstract data type. It's like a promise between the Programmer and the person using the library's code.  -->
 
@@ -146,26 +145,27 @@ Java 8 itibariyle, sözleşme maddelerinin nasıl yapılacağını da belirleyeb
 
 * Bir Interface'in metodları, ``default`` veya ``static`` olarak bildirilmedikçe, dolaylı olarak ``public`` ve ``abstract``dır. Diğer bir deyişle, metod deklarasyonunda aslında ``public`` ve ``abstract`` değiştiricilerini yazmanıza gerek yoktur, derleyici yazılan metodları derleme anında ``public`` ve ``abstract`` olarak algılar. Aşağıdaki görselde ne demek istediğimi daha net anlayacaksınız. İlk kod bloğunu sizin yazdığınız varsayalım. Kodu yazdığınızda derleyici yazdığınız kodu 2. kod bloğundaki gibi algılar. 3. kod bloğunda ise bir interface sınıfını implement eden yani uygulayan bir sınıf ele alınmıştır. Görüleceği üzere bu sınıf interface'in bütün metodlarını uygulamak zorunda kalmıştır.
 
-    {% picture 2018-07-28-Java-class-access/f0024-01.png --alt Java interface example --img width="100%" height="100%" %}
+    <br/>{% picture 2018-07-28-Java-class-access/f0024-01.png --alt Java interface example --img width="100%" height="100%" %}<br/><br/>
 
 * Bir interface'de tanımlanan tüm değişkenler(**variables**), ``public``, ``static`` ve ``final`` olmalıdır, diğer bir deyişle, interface instance variables değil, yalnızca **constants(sabit)** deklare edebilir.
 * Interface yöntemleri ``final``, ``strictfp`` veya ``native`` olarak işaretlenemez. Zaten ``final`` ve ``abstract`` yan yana düşünülemez.
 * Bir interface bir veya daha fazla interface'i genişletebilir(yani **extends** anahtar kelimesi ile miras alabilir).
 
-{% highlight java %}
+```java
 public interface MyInterface extends Z,M  {
     //methods
 }
-{% endhighlight %}
+```
 
-{% highlight java %}
+```java
 public interface M {
 }
-{% endhighlight %}
-{% highlight java %}
+```
+
+```java
 public interface Z {
 }
-{% endhighlight %}
+```
 
 
 * Fakat bir interface, bir arayüzden başka bir şey extend edemez.
@@ -173,20 +173,20 @@ public interface Z {
 
 Yukarıda da bahsettiğimiz gibi interface deklarasyonunda **abstract** anahtar kelimesi gereksiz gözükebilir. Ama interface zaten dolaylı olarak abstract, yani soyuttur. Siz belirtsenizde belirtmesenizde!!! Aşağıdaki iki interface deklarasyonu da benzerdir.
 
-{% highlight java %}
+```java
 public abstract interface M { }
 public interface M { }
-{% endhighlight %}
+```
 
 Interface'in package access(**default access**) yerine herkese açık olmasını istiyorsanız, ``public`` değiştirici işareti gereklidir.
 
 Aşağıdaki beş metod deklarasyonu, kendi arayüzleri içinde beyan edildiyse, yasal ve özdeştir! Aşağıdaki metod deklarasyonları farklı gibi gözükse de hepsi aynıdır.
 
-{% picture 2018-07-28-Java-class-access/interface1.png --alt Java interface example --img width="100%" height="100%" %}
+<br/>{% picture 2018-07-28-Java-class-access/interface1.png --alt Java interface example --img width="100%" height="100%" %}<br/>
 
 Ekran görüntüsünden de anlaşılacağı üzere **IDE**'miz kodu derlediğinde beyan edilen metodların aynı olduğunu bize söylemekte ve hata vermektedir. Birde dikkat ederseniz, **public** ve **abstract** olan kısımlar gri gösterilmektedir. Burada **IDE** bu anahtar kelimeleri yazmanıza gerek yok uyarısı yapmaktadır.
 
-{% picture 2018-07-28-Java-class-access/interface2.png --alt Java interface example --img width="100%" height="100%" %}
+<br/>{% picture 2018-07-28-Java-class-access/interface2.png --alt Java interface example --img width="100%" height="100%" %}<br/>
 
 ## Referanslar:  
 

@@ -17,10 +17,10 @@ tags:
   - Java threads
   - Java fork/join
 last_modified_at: 2018-06-06T15:12:19-04:00
-toc: false
+toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
-classes: wide
+#classes: wide
 ---
 
 
@@ -45,14 +45,19 @@ Bir önceki bölümde gördüğümüz ``async`` ve ``finish`` notasyonları eği
 
 Öyleyse **array-sum** örneğimize geri dönelim. Ve önce bir "**böl ve fethet algoritmasına**" kadar uzatabilir miyiz bir bakalım. Şimdi, daha nesne odaklı düşünelim ve bir sınıfımız olduğunu söyleyelim. Bu sınıfımızın adı **ASUM** olsun.
 
-{% highlight java %}
+```java
 CLASS ASUM {
   A, // an array
   LO, // lower bound
   UP, // upper bound
   SUM;
-  COMPUTE(){  //compute() metodu, aslında alt ve üst sınırlar ve array göz önüne alındığında toplamı hesaplayacak bir hesaplama yöntemimizdir.
-    IF(LO == UP) SUM = A[LO]; // Örneğin, eğer LO, UP ile aynıysa, sum değerini array LO'ya ata, ki set high ile aynı yaparız.
+  //compute() metodu, aslında alt ve üst sınırlar ve
+  //array göz önüne alındığında toplamı hesaplayacak
+  //bir hesaplama yöntemimizdir.
+  COMPUTE(){  
+    // Örneğin, eğer LO, UP ile aynıysa, sum değerini
+    //array LO'ya ata, ki set high ile aynı yaparız.
+    IF(LO == UP) SUM = A[LO];
     ELSE IF (LO>UP) SUM = 0;
     ELSE {
       MID = (LO+UP)/2;
@@ -64,7 +69,7 @@ CLASS ASUM {
     }
   }
 }
-{% endhighlight %}
+```
 
 
 <div class="notice--success" markdown="1">
@@ -74,29 +79,29 @@ Bu bölümde, **async**, **finish** ve **Fork/Join** kavramlarını deneysel anl
 </div>
 Yukarıda görüleceği üzere **L.COMPUTE()** ve **R.COMPUTE()** olarak ifade edilmiş **2 işlem** bulunmaktadır. Biz bu işlemlerden herhangi birini, örneğin **L.COMPUTE()** olanı asenkron olarak işaretlersek paralellik sağlamış oluruz. `finish` notasyonu ile de bu iki işlemi bir kapsam içine alırsak, iki işlemin nihayete ereceği garanti altına alınmış olur. Böylelikle iki işlem bitmeden **SUM** işlemine geçilemez.
 
-{% highlight java %}
+```java
 FINISH {
   ASYNC L.COMPUTE() // L.FORK async ile aynı işi yapar.
         R.COMPUTE()
 }
 SUM = L.SUM + R.SUM;
-{% endhighlight %}
+```
 
 `finish` ise **join** ile aynı işi yapar. Tek fark, **finish** scope içindeki bütün işlerin bitmesini beklerken, **join** sadece bir işe odaklanır. Benzer işlem `async` ve `finish` notasyonları yerine **fork/join** kullanılarak ise şu şekilde yapılır.
 
-{% highlight java %}
+```java
 L.COMPUTE();
 L.FORK;
 R.COMPUTE()
 L.JOIN();
 SUM = L.SUM + R.SUM;
-{% endhighlight %}
+```
 
 **Fork/Join** görevleri, java iş parçacığı havuzu olan bir "**ForkJoinPool**" içinde yürütülür. Bu havuz, hem **fork** hem de **join** işlemlerini paralel bir dizi görevi yürüterek ve bunların tamamlanmasını bekleyerek birleştiren **invokeAll()** yöntemini destekler. Örneğin, **ForkJoinTask.invokeAll (sol, sağ)**, örtülü olarak sol ve sağda **fork()** işlemlerini gerçekleştirir, ardından her iki nesnede de **join()** işlemi gerçekleştirir.
 
 Bu Framework'de, kullanıcının kendi oluşturacağı bir sınıf, **FJ Framework**'ü içinde bulunan **RecursiveAction** sınıfı **extends** edilip, bu sınıfın yerleşik metodlarından biri olan **compute()** metodu **override** edildikten sonra, metodun içinde istenilen görev belirlenebilir.  
 
-{% highlight java %}
+```java
 private static class ASum extends RecursiveAction {
   int[] A; // input array
   int LO, HI; // subrange
@@ -109,7 +114,7 @@ private static class ASum extends RecursiveAction {
     for (int i = LO; i <= HI; i++) SUM += A[i];
   } // compute()
 }
-{% endhighlight %}
+```
 
 
 ## Referanslar :

@@ -53,7 +53,7 @@ Bu derste işleyeceklerimiz, tüm nesnelerin aslında ``Object`` sınıfından t
 
 Java'da nesnelerin içten dışa nasıl inşa edildiğini gördük.
 
-{% picture 2020-06-23-Java-inheritance5/inheritance.png --alt Java inheritance (java kalıtım) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/inheritance.png --alt Java inheritance (java kalıtım) --img width="100%" height="100%" %}<br/>
 
 Aşağıdaki şekilde gördüğünüz kod bloğundaki ``new`` ahantar kelimesi aslında bir operatördür. Bu operatör, burada alan ayırmak anlamına gelir. Sonrasında **this** hemen bu alana, yani constructor'a verilir. Yani "this" kurucunun(constructor) başlaması(initialization) için bu alana referans olarak geçer. Aslında yapıcılar(constructor) başlatıcılar(initializers) olarak adlandırılmalıdır çünkü diğer programlama dillerinde aslında **init** olarak adlandırıldığını göreceksiniz.
 
@@ -66,7 +66,7 @@ Bir örnek yöntemi veya bir kurucu içinde **this**, geçerli nesneye (yöntemi
 
 </div>
 
-{% picture 2020-06-23-Java-inheritance5/new1.png --alt Java new keyword and java this keyword (java new anahtar kelimesi ve java this anahtar kelimesi) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/new1.png --alt Java new keyword and java this keyword (java new anahtar kelimesi ve java this anahtar kelimesi) --img width="100%" height="100%" %}<br/>
 
  Konumuza geri dönecek olursak, burada ``Student`` kurucusunun yaptığı, öğrenciyle ilişkili değişkenleri başlatmaktır. Ve bunu yapmanın yolu aslında içten dışa doğru yol almaktır. Çünkü nesneler içten dışa doğru oluşturulurlar. Hiyerarşiye göre ``Object`` sınıfına kadar gider ve sonra başladığınız sınıfa geri dönersiniz. Geri döndükçe ilgili tüm değişkenleri başlatırsınız(yani ilklendirirsiniz, yani atama işlemlerini yaparsınız:)).
 
@@ -101,31 +101,31 @@ Sınıf yüklendikten sonra o sınıftan defalarca obje oluşturabilirsiniz.
   ``new`` operatörü ile bir obje alanı(boşluğu) yarattık. Sonrasında ise bu alana(boşluğa) constructor aracılığı ile girdik. Aşağıdaki şekilde görebilirsiniz.
 
 
-{% picture 2020-06-23-Java-inheritance5/hierarchy1_1.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/hierarchy1_1.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
 Akabinde ilk kod satırı olan ``Student`` yapıcısı/kurucusu(yani constructor), bizi superclass yapıcısına gönderecektir. Bu durumda Person'dan bahsettiğimizi anlamışsınızdır.
 
-{% picture 2020-06-23-Java-inheritance5/hierarchy1_2.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/hierarchy1_2.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
 ``Person()`` kurucusunun ilk kod satırı da bizi hemen indirect superclass kurucusuna, yani bu durumda Object'e gönderecektir.
 
-{% picture 2020-06-23-Java-inheritance5/hierarchy1_3.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/hierarchy1_3.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
 Şimdi, ``Object()`` yapıcısı object ile ilişkili değişkenleri başlatabilir. Indirect superclass yazan yeri ``Object()`` yapıcısının o alanı başlattığını göstermek için yeşile boyamak istiyorum.
 
-{% picture 2020-06-23-Java-inheritance5/hierarchy2.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/hierarchy2.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
 Tamamlandığında java, ``Person()`` kurucusuna geri döner ve ``Person`` ile ilişkili değişkenlerini başlatır.
 
-{% picture 2020-06-23-Java-inheritance5/hierarchy3.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/hierarchy3.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
 Ve sonra ``Student()`` kurucusuna geri döner ve ``Student`` ile ilişkili değişkenlerini başlatır.
 
-{% picture 2020-06-23-Java-inheritance5/hierarchy4.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/hierarchy4.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
 Bu süreç boyunca aslında tüm bu değişkenleri başlattık, hatta nesneye kadar gidip geri döndük. Aslında içten dışa ilklendirmeden bunu kastediyorduk. Ama değişken ilklendirirken de izlenilen kuralları bilmemiz gerekecek o yüzden bu dersten 2 ders sonrasında bu [kuralları](/java-kalitim-polimorfizm/Java-inheritance7/) ele alacağız. Sabırla ilelemenizi öneririm.
 
-{% picture 2020-06-23-Java-inheritance5/hierarchy5.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}
+<br/>{% picture 2020-06-23-Java-inheritance5/hierarchy5.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
 Burada şu soruyu sorabilirsiniz. ``Object`` sınıfını ``extends`` etmediğimiz halde java bunu nasıl biliyor? Bir sonraki bölümde bunun cevabını bulmaya çalışalım. Bu arada burada anlattıklarım belki kafanızda tam oturmamış olabilir. O yüzden aşağıdaki videoyu izlemenizi şiddetle öneririm.
 

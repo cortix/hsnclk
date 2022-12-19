@@ -17,10 +17,10 @@ tags:
   - Java threads
   - Java fork/join
 last_modified_at: 2018-06-06T15:12:19-04:00
-toc: false
+toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
-classes: wide
+#classes: wide
 ---
 
 
@@ -56,23 +56,23 @@ Basit bir örnek ile başlamak gerekirse, integer içeren bir dizi olduğunu var
 olabilir. Sonra bu ikisini birleştirerek son toplamı alabiliriz.
 </div>
 
-{% picture 2019-08-03-Java-paralel-programlama1/async-finish00.png --alt Java async-finish example --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-03-Java-paralel-programlama1/async-finish00.png --alt Java async-finish example --img width="100%" height="100%" %}<br/>
 
 Ekstra bir işlem yapmaz isek, yukarıdaki adımlar sıralı bir şekilde **sequential algorithm** kullanılarak yapılır. Peki bunu paralel olarak nasıl yapabiliriz? Burada kullanacağımız notasyon **asenkron**(``async``) denilen bu kelimedir. **Async**'nin amacı, bir statement tarafından takip edilen `async` notasyonuna sahip ifadenin **asenkron(zaman uyumsuz)** olarak çalışması gerektiğidir. Görüleceği üzere **SUM<sub>1</sub>** ``async`` olarak işaretlenmiştir. Bunun anlamı, bu hesaplama, **SUM<sub>1</sub>(alt yarının toplamı)**, takip eden işlem ne olursa olsun asenkron olarak devam etmelidir. **ASYNC** olarak işaretli **SUM<sub>1</sub>** işlemi, **SUM<sub>2</sub>** işleminden önce de gerçekleşebilir, sonra da gerçekleşebilir, hatta **paralel** olarak da gerçekleşebilir.
 
-{% picture 2019-08-03-Java-paralel-programlama1/async-finish0.png --alt Java async-finish example --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-03-Java-paralel-programlama1/async-finish0.png --alt Java async-finish example --img width="100%" height="100%" %}<br/>
 
 Şimdi farzedelim ki bu iki işlem paralel olarak ilerliyor ve sonrasında **SUM<sub>2</sub>**'yi hesaplıyoruz; buradaki kilit nokta, ikisini bir araya getirmeden, yani **SUM<sub>1</sub>** ve **SUM<sub>2</sub>**'yi toplamadan önce, bu "**zaman uyumsuz**(``async``)" görevin nihayete erip **SUM<sub>1</sub>** değerini elde etmemiz gerekmektedir. Tam da bu noktada bu işlemi gerçekleştirebilmek için bitiş(``finish``) adında başka bir notasyonumuz vardır.
 
-{% picture 2019-08-03-Java-paralel-programlama1/async-finish1.png --alt Java async-finish example --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-03-Java-paralel-programlama1/async-finish1.png --alt Java async-finish example --img width="100%" height="100%" %}<br/>
 
 Bu yüzden ``finish``'in arkasındaki temel fikir, <u>çalışan bir dizi asenkron görev alabileceğiniz bir iş kapsamıdır</u>. Görüleceği üzere ``async`` notasyonu sadece **SUM<sub>1</sub>**'i kapsarken, ``finish`` notasyonu hem **SUM<sub>1</sub>** hem de **SUM<sub>2</sub>**'yi kapsamaktadır. Aslında ``finish`` scope'unun(kapsamının) sonunda bütün görevlerin tamamlanacağını garanti edersiniz. Yani ``finish`` scope'unun içindeki asenkron görevler dahil bütün görevler bitmeden bir sonraki işlem ele alınmaz. Artık **SUM<sub>1</sub>** işleminin ``finish`` notasyonundan sonra uygun olacağından emin olabiliriz. ``finish`` notasyonundan sonra **SUM<sub>1</sub>** ve **SUM<sub>2</sub>** için toplama işlemi gerçekleştirebiliriz.
 
-{% picture 2019-08-03-Java-paralel-programlama1/async-finish2.png --alt Java async-finish example --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-03-Java-paralel-programlama1/async-finish2.png --alt Java async-finish example --img width="100%" height="100%" %}<br/>
 
 Yukarıdaki resimde de görüleceği üzere, eğer **pentium dual** bir işlemciye sahipseniz, işlemlerden biri(yani **SUM<sub>1</sub>**) ``core0`` çekirdeğinde, işlemlerden diğeri(yani **SUM<sub>2</sub>**) ``core1`` çekirdeğinde gerçekleşecektir. Dolayısıyla, buradaki prensibe bakarsanız, herhangi bir sıralı algoritmayı alabilir ve paralellik için fırsat gördüğümüz her yerde ``asyncs`` ile önek ekleyebiliriz.
 
-{% picture 2019-08-03-Java-paralel-programlama1/async-finish3.png --alt Java async-finish example --img width="100%" height="100%" %}
+<br/>{% picture 2019-08-03-Java-paralel-programlama1/async-finish3.png --alt Java async-finish example --img width="100%" height="100%" %}<br/>
 
 Paralel olarak çalışmasını istediğiniz işlemlerin bulunduğu yere bir ``finish`` scope'u ekleyin. Yukarıdaki örnekteki gibi **S<sub>2</sub>, S<sub>3</sub>, S<sub>4</sub>** birbirleriyle **paralel** olarak çalışacaktır. Fakat **S<sub>5</sub>** işlemi, ``finish`` scope'u tamamlanıncaya kadar bekleyecektir.
 
@@ -82,13 +82,13 @@ Paralel olarak çalışmasını istediğiniz işlemlerin bulunduğu yere bir ``f
 ## Özet
 Bu bölümde bir array kullanarak görev oluşturma(**task creation**) ve görev sonlandırma(**task termination**) konseptlerini öğrendik.
 
-{% highlight java %}
+```java
 finish {
   async S1; // Asenkron olarak dizinin alt yarısının toplamını hesapla
   S2;       // S1 ile paralel array'in üst yarısının toplamını hesapla
 }
 S3; // S1 ve S2 tamamlandıktan sonra iki kısmi toplamı birleştirir.
-{% endhighlight %}
+```
 
 - Görev oluşturma(**task creation**) için zaman uyumsuz(**asenkron**) gösterimini öğrendik: ``async`` **S<sub>1</sub>** --> ``async`` notasyonu parent task'ın bir child task oluşturmasına sebep olur. ``async`` notasyonuna sahip task, parent task ile asenkron bir şekilde işleme alınır. Burada işlem parent task'ın öncesinde sonrasında veyahut parelel bir şekilde gerçekleşebilir.
 - ``finish`` notasyonunu kullanarak görev sonlandırma(**task termination**) gösterimini öğrendik. ``finish`` notasyonu, parent task'ın çalışmasını ve ``finish`` scope içinde oluşturulan tüm asenkron görevlerin tamamlanmasını bekler. ``async`` ve ``finish`` yapıları isteğe bağlı olarak yerleştirilmiş olabilir.
