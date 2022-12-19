@@ -3,18 +3,18 @@ title: "Java Sınıf Deklarasyonu ve Değiştiriciler"
 comments: false
 excerpt: "Java sınıf deklarasyonu nasıl yapılır? Değiştiriciler hakkında bilmeniz gerekenler nelerdir gibi soruları bu bölümde bulabilirsiniz."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-4.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-4.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  caption: "Photo by [davide ragusa](https://unsplash.com/photos/4jcFu1byopQ) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
   - java
 tags:
   - java class
-  - sınıf deklarasyonu
+  - java sınıf deklarasyonu
   - java erişim değiştiriciler
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: true
@@ -146,7 +146,7 @@ Java 8 itibariyle, sözleşme maddelerinin nasıl yapılacağını da belirleyeb
 
 * Bir Interface'in metodları, ``default`` veya ``static`` olarak bildirilmedikçe, dolaylı olarak ``public`` ve ``abstract``dır. Diğer bir deyişle, metod deklarasyonunda aslında ``public`` ve ``abstract`` değiştiricilerini yazmanıza gerek yoktur, derleyici yazılan metodları derleme anında ``public`` ve ``abstract`` olarak algılar. Aşağıdaki görselde ne demek istediğimi daha net anlayacaksınız. İlk kod bloğunu sizin yazdığınız varsayalım. Kodu yazdığınızda derleyici yazdığınız kodu 2. kod bloğundaki gibi algılar. 3. kod bloğunda ise bir interface sınıfını implement eden yani uygulayan bir sınıf ele alınmıştır. Görüleceği üzere bu sınıf interface'in bütün metodlarını uygulamak zorunda kalmıştır.
 
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01.webp"  srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/f0024-01.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="java interface example">
+    {% picture 2018-07-28-Java-class-access/f0024-01.png --alt Java interface example --img width="100%" height="100%" %}
 
 * Bir interface'de tanımlanan tüm değişkenler(**variables**), ``public``, ``static`` ve ``final`` olmalıdır, diğer bir deyişle, interface instance variables değil, yalnızca **constants(sabit)** deklare edebilir.
 * Interface yöntemleri ``final``, ``strictfp`` veya ``native`` olarak işaretlenemez. Zaten ``final`` ve ``abstract`` yan yana düşünülemez.
@@ -182,12 +182,11 @@ Interface'in package access(**default access**) yerine herkese açık olmasını
 
 Aşağıdaki beş metod deklarasyonu, kendi arayüzleri içinde beyan edildiyse, yasal ve özdeştir! Aşağıdaki metod deklarasyonları farklı gibi gözükse de hepsi aynıdır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface1.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java interface example">
+{% picture 2018-07-28-Java-class-access/interface1.png --alt Java interface example --img width="100%" height="100%" %}
 
 Ekran görüntüsünden de anlaşılacağı üzere **IDE**'miz kodu derlediğinde beyan edilen metodların aynı olduğunu bize söylemekte ve hata vermektedir. Birde dikkat ederseniz, **public** ve **abstract** olan kısımlar gri gösterilmektedir. Burada **IDE** bu anahtar kelimeleri yazmanıza gerek yok uyarısı yapmaktadır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-07-28-Java-class-access/interface2.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java interface example">
-
+{% picture 2018-07-28-Java-class-access/interface2.png --alt Java interface example --img width="100%" height="100%" %}
 
 ## Referanslar:  
 

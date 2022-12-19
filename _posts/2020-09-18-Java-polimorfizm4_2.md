@@ -3,9 +3,9 @@ title: "Java'da Polimorfizm 4.2 - Statik ve Dinamik Bağlanma 2"
 comments: false
 excerpt: "Bu derste Java'da statik ve dinamik bağlanma arasındaki farkları ele almaya devam edecek, konunun daha iyi anlaşılması için farklı bir örneği ele alacağız."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-57.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-57.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Marina Montoya](https://unsplash.com/photos/GUi8uIw3JbQ) on Unsplash"
   #cta_label: "More Info"
@@ -13,11 +13,11 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java polimorfizm
-  - static/early binding(statik/erken bağlanma)
-  - dynamic/late binding(dinamik/geç bağlanma)
-  - super keyword
-  - this keyword
+  - Java polimorfizm
+  - Java static/early binding(statik/erken bağlanma)
+  - Java dynamic/late binding(dinamik/geç bağlanma)
+  - Java super keyword
+  - Java this keyword
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -47,8 +47,7 @@ toc_label: "SAYFA İÇERİĞİ"
 Şimdi aşağıdaki gibi bir sınıf hiyerarşimizin olduğunu düşünelim.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm4_2/uml1.webp"  width="200px" height="100%" class="align-center" loading="lazy" alt="Static and Dynamic Binding">
-
+{% picture 2020-09-18-Java-polimorfizm4_2/uml1.png --alt Java Static and Dynamic Binding (Java Statik ve Dinamik Bağlama) --img width="100%" height="100%" %}
 
 
 Görüleceği üzere **Person** sınıfı hiyerarşimizin en üstünde yer alan sınıf ve iki adet metodu bulunmakta. Onun hemen altında bu sınıfı miras alan bir **Student** sınıfımız var. Bu sınıf **Person** sınıfının 2 metodunu geçersiz kılmış(override). **Student** sınfını da **Undergrad** isimli başka bir sınıf miras alıyor ama bu sınıf **Student** sınıfının sadece ``method2()`` metodunu geçersiz kılıyor.

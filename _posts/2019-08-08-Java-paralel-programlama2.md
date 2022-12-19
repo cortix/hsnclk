@@ -3,19 +3,19 @@ title: "Java Paralel Programlama - Bölüm 2"
 comments: false
 excerpt: "Java Paralel Programlama - Java Fork/Join Framework"
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-40.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-65.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Tanya Trofymchuk](https://unsplash.com/photos/LsD0PaXl_U8) on Unsplash"
+  caption: "Photo by [David Pisnoy](https://unsplash.com/photos/46juD4zY1XA) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
   - java-paralel-programlama
 tags:
   - java paralel programlama
-  - threads
-  - fork/join
+  - java threads
+  - java fork/join
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: false
 toc_label: "SAYFA İÇERİĞİ"

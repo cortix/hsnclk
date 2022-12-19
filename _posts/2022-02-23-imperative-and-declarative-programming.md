@@ -1,12 +1,12 @@
 ---
-title: "Imperative ve Declarative Stil Programlama (Programlama Stili Part 1)"
+title: "Imperative and Declarative Style Programming (Zorunlu ve Bildirimsel Stil Programlama) (Programlama Stili PART 1)"
 comments: false
 excerpt: "Bu yazıda, zorunlu ve bildirimsel stil programlama arasındaki farkı açıklamaya çalışacağım."
 header:
-  teaser: "assets/images/2022-02-23-imperative-and-declarative-programming/imp.webp"
+  teaser: "assets/images/2022-02-23-imperative-and-declarative-programming/imp.png"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-02-23-imperative-and-declarative-programming/imp.webp
-  overlay_image: /assets/images/unsplash-image-60.webp
+  og_image: /assets/images/2022-02-23-imperative-and-declarative-programming/imp.png
+  overlay_image: /assets/images/unsplash-image-60.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"
   #cta_label: "More Info"
@@ -15,8 +15,8 @@ categories:
   - programming-style
 tags:
   - programming-style
-  - declarative
-  - imperative
+  - declarative style programming
+  - imperative style programming
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -31,8 +31,8 @@ toc_label: "SAYFA İÇERİĞİ"
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Programlama Stili Serisi</h4>
 ---
 
-1. **Programlama Stili Part 1 - Imperative ve Declarative Stil Programlama**
-2. Programlama Stili Part 2 - [Higher Order Fonksiyonlar](/programming-style/higher-order-functions/)
+1. **Programlama Stili Part 1 - Imperative and Declarative Style Programming (Zorunlu ve Bildirimsel Stil Programlama)**
+2. Programlama Stili Part 2 - [Higher Order Functions (Üst Düzey Fonksiyonlar)](/programming-style/higher-order-functions/)
 
 </div>
 
@@ -99,7 +99,7 @@ Her iki durumda da ne yapacağımız bellidir. Amacımız array'in elemanların�
 
 **Geliştirilmiş for döngüsünde;** Array'in her öğesini tutmak için bir string değişkeni olan *name* deklare edilir. Ancak bu döngünün tüm bu işlemleri **nasıl** yaptığını bilmiyoruz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-02-23-imperative-and-declarative-programming/forloops.webp"  width="100%" height="100%" loading="lazy" alt="for loops example">
+{% picture 2022-02-23-imperative-and-declarative-programming/forloops.png --alt Java for loops example (Java for döngüsü örneği) --img width="100%" height="100%" %}
 
 Aslında hem **standart for döngüsü** *(for i = 0...)* hem de **gelişmiş(enhanced) for döngüsü** *(for var x : ...)* zorunlu(imperative) stildir. **Geliştirilmiş for döngüsü** aslında `iterator.hasNext()` ve `iterator.next()` etrafında bir sarmalayıcıdır. Diğer bir deyişle, bu yineleme(iteration) biçimi, arka planda, `Iterator` arabirimini kullanır ve onun `hasNext` ve `next` yöntemlerini çağırır. Dahası, **enhanced for döngüsünden**, bir if koşuluyla `break` ve `continue` yapabiliriz ve bu, imperative'in açıkça geliştirildiğini gördüğümüz yerdir.
 

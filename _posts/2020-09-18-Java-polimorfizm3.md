@@ -1,11 +1,11 @@
 ---
 title: "Java'da Polimorfizm 3 - Casting"
 comments: false
-excerpt: "Bu bölümde casting işleminin ne olduğuna ve hangi durumlarda bu işleme ihtiyaç duyulduğuna bakacağız. Aynı zamanda bazı casting türleri hakkında bilgi verecek ve casting işleminin derleme ve çalışma zamanlarına etkileri hakkında konuşacağız."
+excerpt: "Bu bölümde java'da casting işleminin ne olduğuna ve hangi durumlarda bu işleme ihtiyaç duyulduğuna bakacağız. Aynı zamanda bazı casting türleri hakkında bilgi verecek ve casting işleminin derleme ve çalışma zamanlarına etkileri hakkında konuşacağız."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-54.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-54.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Serge Kutuzov](https://unsplash.com/photos/_FPy-FUndok) on Unsplash"
   #cta_label: "More Info"
@@ -13,11 +13,11 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java polimorfizm
-  - casting
-  - Widening Casting
-  - Narrowing Casting
-  - instanceof
+  - Java polimorfizm
+  - Java casting
+  - Java Widening Casting
+  - Java Narrowing Casting
+  - Java instanceof
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -47,7 +47,7 @@ toc_sticky: true
 Bazı durumlarda derleme ve çalışma zamanı kararlarını değiştirmek için derleyiciye yardım etmek gerekebilir. Bu gibi durumlarda **casting** dediğimiz işlemi uygularız. Ne demek istediğimi bir önceki bölümde yarım bıraktığımız kod üzerinden göstermek istiyorum.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml1.webp"  width="200px" height="100%" class="align-center" loading="lazy" alt="polimorfizm">
+{% picture 2020-06-29-Java-polimorfizm2/uml1.png --alt Java Polymorphism(java polimorfizm) --img width="100%" height="100%" %}
 
 <div class="notice--danger" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Compile time error</h4>

@@ -3,19 +3,19 @@ title: "Java'da Kalıtım 1 - Kalıtımı Neden Kullanırız? Kalıtımı Sağla
 comments: false
 excerpt: "Bu derste Java'daki kalıtım(inheritance) ve polimorfizm kavramlarını genel olarak ele alacak ve bununla birlikte kalıtımı sağlamak için asgari hedeflerin neler olduğunu işleyeceğiz."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-43.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-43.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Franck V.](https://unsplash.com/photos/sVOF3ONKvfU) on Unsplash"
+  caption: "Photo by [Possessed Photography](https://unsplash.com/photos/sVOF3ONKvfU) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java inheritance
-  - spagetti kodlama
-  - kalıtımı sağlamak için asgari hedefler
+  - Java inheritance
+  - Java spagetti kodlama
+  - Java'da kalıtımı sağlamak için asgari hedefler
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"

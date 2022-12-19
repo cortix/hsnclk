@@ -3,9 +3,9 @@ title: "Java'da Kalıtım 3.1 - Static ve Dinamik Tür"
 comments: false
 excerpt: "Bu derste hem Java'da hem de diğer programlama dillerinde statik ve dinamik tip dillerin farklarını ele alacak hem de bu ayrımın getirdiği ajantaj ve dezajantajlarını göreceğiz. Statik ve dinamik tür denilince ne anlamamız gerektiğini yine bu bölümde göreceksiniz."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-51.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-51.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Maurits Bausenhart](https://unsplash.com/photos/w8nrcXz8pwk) on Unsplash"
   #cta_label: "More Info"
@@ -61,7 +61,7 @@ Bu arada **tür denetimi**, programın **tür güvenli(type-safe)** olduğundan 
 
 </div>
 
-## Statik Tip Dile Örnek
+## Statik Tip Dile Örnek (Statically Typed Languages)
 
 Aşağıdaki örnek java'da yazılmış bir kod bloğudur. Görüleceği üzere ``a`` değişkeninin tipi önceden deklare ediliyor. Yani bir **integer**. Ama sonrasında bu değişkene bir **string** atanmak isteniyor. Haliyle program çalışma zamanı öncesinde, yani derleme zamanında bir hata verir ve bu hatayı düzeltmeniz istenir. Bu yüzden referans türleri derleme zamanı kararlarında, nesne türleri ise çalışma zamanı kararlarında göz önüne alınır.
 
@@ -87,7 +87,7 @@ Ama şimdi göreceğimiz dinamik tip dillerde böyle bir şey söz konusu değil
 
 Static tip dillerin örneklerini bu [linkten](https://en.wikipedia.org/wiki/Category:Statically_typed_programming_languages) görebilirsiniz.
 
-## Dinamik Tip Dile Örnek
+## Dinamik Tip Dile Örnek (Dynamically Typed Languages)
 
 Bu örnek ise dinamik tipte yazılmış bir dil olan python'da oluşturulmuştur.
 
@@ -110,7 +110,7 @@ Yalnız şunu belirtmekte yarar var. Statik olup, **strong-typed** veyahut **wea
 
 </div>
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="static_dynamic_strong_weak_types map">
+{% picture 2020-06-22-Java-inheritance3_1/static_dynamic_strong_weak_types.png --alt Statically typed programming languages, dynamically typed programming languages, strongly typed programming languages, weakly typed programming languages (Statik Tip Diller, Dinamik Tip Diller, Güçlü Tip Diller, Zayıf Tip Diller) --img width="100%" height="100%" %}
 
 Bir dil şartnamesi, tür denetimi kurallarını(typing rules) şiddetle uyguluyorsa, süreç **"strong-typed"** olarak adlandırılır, uygulamıyorsa **"weakly-typed"** olarak adlandırılır.
 
@@ -121,7 +121,7 @@ Bir dil şartnamesi, tür denetimi kurallarını(typing rules) şiddetle uyguluy
 
 Dinamik tip dillerin örneklerini bu [linkten](https://en.wikipedia.org/wiki/Category:Dynamically_typed_programming_languages) görebilirsiniz.
 
-## Güçlü Tip Dile Örnek
+## Güçlü Tip Dile Örnek (Strongly Typed Languages)
 
 **Strong-typed**(güçlü-tip) bir dil, değişkenlerin belirli veri türlerine bağlı olduğu dildir ve türler, denetimin ne zaman gerçekleştiğine bakılmaksızın, bulundukları ifadede beklendiği gibi eşleşmezse **tür hatalarına** neden olur.
 
@@ -142,7 +142,7 @@ Görüleceği üzere ``a`` değişkeni, **string** bir değer olmasına rağmen 
 * Java, static ve strong-typed bir dildir.
 * Python ise dinamik ve strong-typed bir dildir.
 
-## Zayıf Tip Dile Örnek
+## Zayıf Tip Dile Örnek (Weakly Typed Languages)
 
 Diğer taraftan **weakly-typed**(zayıf tip) bir dil, değişkenlerin belirli bir veri türüne bağlı olmadığı bir dildir; hala bir türü vardır, ancak tür güvenlik kısıtlamaları, güçlü yazılan dillere göre daha düşüktür.
 

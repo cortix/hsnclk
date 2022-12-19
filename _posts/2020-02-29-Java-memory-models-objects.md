@@ -3,9 +3,9 @@ title: "Java'da Hafıza Modeli 2 - Nesneler"
 comments: false
 excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır? Bu durumu net anlaşılması için nasıl simüle edebiliriz?"
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-36.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-36.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [NASA](https://unsplash.com/photos/-hI5dX2ObAs) on Unsplash"
   #cta_label: "More Info"
@@ -14,7 +14,7 @@ categories:
   - java-hafiza-yonetimi
 tags:
   - java memory model
-  - Nesneler İçin Hafıza Modeli
+  - Java'da Nesneler İçin Hafıza Modeli
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -90,28 +90,26 @@ Dilerseniz bir önceki makalede olduğu gibi bir örnekle başlayalım.
 Adım adım yukarıdaki kod bloğu nasıl çalışır, resmetmeye çalışalım;
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/deg1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/deg1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/deg1.webp 1080w" sizes="50vw" width="250px" height="100%" class="align-center" loading="lazy" alt="java variable assignment">
-
+{% picture 2020-02-29-Java-memory-models-objects/deg1.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}
 
 * **1.satır:** Bu ilk satır bir önceki derste yaptığımız gibi değişken tanımlama işlemidir. Java'ya, tamsayı(int) tipinde bir değeri saklamak için yeni bir alan istiyorum, diyorsunuz. Ve o alanı(space) **deg1** etiketiyle etiketleyeceğinizi belirtiyorsunuz. Şimdi hafıza modelimizde bunu göz önünde canlandırabilmek için bir kutu çizeceğiz. Bu kutu değişkeni temsil etmem gereken alanı(space) işaret ediyor. Sonrasında bu değişkeni **deg1** ismiyle etiketliyorum. Bir önceki dersteki işlemin aynısı!!!
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample1.webp 1080w" sizes="50vw" width="250px" height="100%" class="align-center" loading="lazy" alt="java reference variable assignment">
-
+{% picture 2020-02-29-Java-memory-models-objects/sample1.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 * **2.satır:** Aslında ikinci satırda yaptığımız işlemin birinci satırda olandan bir farklı yok. `sample1` isminde bir değişken oluşturup, onun için de özel bir kutu çizeceğiz. Sadece değişkenin tipi `int` yerine **SampleTest** isminde bir sınıf olduğunu unutmayalım.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample2.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects/sample2.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 * **3.satır:** Bu satırda işler biraz daha komplike bir hal almaya başlıyor. Aslında 1. satırda olduğu gibi bir atama işlemi var. Yalnız tek farkı; atanan değerin bir nesne olması. Burada **new** anahtar kelimesini kullanarak **SampleTest** sınıfından bir nesne yaratma ve yaratılan bu nesneyi de az önce oluşturduğumuz değişkene(yani referansa) atama işlemi var(<u>Az önce sırf bu yüzden bir açıklama getirmiştim. Bu değişken artık ilkel bir veriyi tutan bir değişkenin aksine heap alanında bir objeyi işaret eden bir referanstır.</u> Yine değişken olarak da ifade edebilirsiniz fakat farkını bilmenizde yarar var). **new** anahtar kelimesini kullandığımızda Java'ya bilgisayarın hafızasında, heap denilen bölgede özel bir alan oluşturmasını ve bu alanda yaratılan nesneyi saklamasını söylüyorsunuz. Yani `deg1` ve `sample1` değişkenlerini yarattığımız yığından(stack) farklı, özel bir birimden bahsediyorum. Sonuç olarak Java bu nesneyi **heap**'de bir lokasyona koyar ve bize sadece bu lokasyonun **id**'sini(başka programlama dillerinde bu id adres olarak da geçer) verir. Tabii Java'nın, bu nesneyi oluşturmak için **heap**'de tam olarak nereyi seçtiğini bilmiyoruz. O yüzden bize verdiği **id** ile yetinmek zorundayız. Verilen id'nin başında **@** işareti vardır. Bunu bir editörde debug modda deneyerek görebilirsiniz. Peki burada ne oluyor? Aslında java heap'de yarattığı nesneyi **sample1** kutusunun içine kopyalamak yerine, bu nesneye ulaşabilmek için stack'de yer alan bu **değişkene/referansa** bir id verir. Klişe olan şekilde ifade etmek gerekirse, nesnenin heap içinde saklandığı yerin adresini(aslında adres değil :))) **sample1** değişkeninin/referansının kutusuna yazar. Bu, referans verme işlemi olarak adlandırılır. Yani **@** işareti ile başlayan sayı bir nevi heap'de yer alan objenin stack alanındaki referansıdır. Nesnelere referans türleri denmesinin sebebi de aslında budur.
 
 Bu referansı stack'da yer alan **sample1** değişkeninin içine yerleştirdiğimizi hayal edin. Aslında arka planda tam olarak buna benzer bir işlem olmaktadır.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample3.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample3-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample3.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects/sample3.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 Bu id'yi silip okla göstermek istiyorum. Bu ok az önceki **@** işareti ile başlayan id'nin ne anlama geldiğini resmetmektedir. Gerçekte **id** ile gösterim daha doğrudur. Ama okla yaptığımız gösterim, arka planda olanı daha net anlamanıza yardımcı olacağını düşünüyorum. Bu ok aslında **sample1** değişkeninin/referansının heap'te ne tuttuğunu bize işaret etmektedir. Yani aşağıdaki gibi bir sonuç bizi beklemektedir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample4.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample4-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample4.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects/sample4.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 
 Şimdi olan biteni daha detaylı anlamak için objenin **heap** alanında nasıl oluştuğuna bakalım. Haliyle sınıfın kendine özel değişkenleri de olabilir. Buna **nesne değişkenleri(member variables/statik olmayan değişkenler/instance variables**) da denmektedir. <u>Bu değişkenler bu sınıftan türetilen herbir nesnenin içinde yer almaktadır</u>. Şimdi yukarıdaki kodda yer alan sınıfımızın aşağıdaki gibi **2 nesne değişkenine** sahip olduğunu hayal edin. Bunlar heap alanında oluşurken resmetmeye çalışacağım.
@@ -130,17 +128,17 @@ public class SampleTest{
 
 Heap alanında nesne yaratıldığında tıpkı stack alanında yaptığımız gibi nesnenin içinde de nesnenin sahip olduğu değişkenleri temsil eden iki tane kutu çizeceğiz. Bu kutular nesne yaratıldığında, nesnenin **x ve y değerlerini** saklayacaktır. İlk paylaştığımız kod bloğunun 3.satırında ``new SampleTest(1,2);`` görüldüğü üzere <u>2 parametre</u> almaktadır. Bu parametreler aslında bu **x** ve **y** değerlerini ilklendirmek için nesne yaratıldığında tanımlanmıştır. **Constructor(yapılandırıcı)** scope'unun nasıl oluştuğu ile ilgili örneğe scope'lara giriş konusunda değiniriz. Burada böyle bir constructor olduğunu varsayarak bu değerleri heap alanında oluşturduğumuz nesne içindeki değişken kutucuklarına ekleyeceğim. Yani şöyle bir şeyle karşılaşırız.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample5.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample5-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample5.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects/sample5.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 * **4.satır:**
 Bu adımda ``SampleTest sample2 = new SampleTest(3,4);`` 3. adımdakine benzer şekilde heap alanında tekrardan yeni bir nesne yaratıyoruz. Aynı zamanda stack alanında da **sample2** isminde yeni bir değişken/referans oluşturuyoruz. Sonrasında bu referansa bu nesnenin id'sini veriyoruz. **@** işareti ile başlayan id yerine yine okla gösterimi tercih edeceğim.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample6.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample6-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample6.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects/sample6.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 * **5.satır**
 Son satırda ise ``sample2.x = 5;`` **sample2** referansının işaret ettiği nesnenin **x** değişkenine yeni bir değerin atanması işlemi vardır. Yani **sample2** referansının işaret ettiği nesneye gidip ilgili değeri değiştireceğiz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample7.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample7-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/sample7.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="java reference variable assignment">
+{% picture 2020-02-29-Java-memory-models-objects/sample7.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}
 
 Yukarıdaki kod bloğumuzun **hafıza modeli** kısaca bu şekildedir. Bu resmi bir sonraki ders **scope** konusu ile bir adım öteye taşıyacağız.
 
@@ -167,8 +165,7 @@ Soyut sınıflar **new** anahtar kelimesi ile oluşturulamazlar. Oluşturmaya ka
 **NOT :** Bu arada referans tipleri, deklare edilen tipler(declared type) olarak da tanımlanır.
 {: .notice--warning}
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/ref-obj-type.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/ref-obj-type-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-02-29-Java-memory-models-objects/ref-obj-type.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="referans ve obje tipi arasındaki fark">
-
+{% picture 2020-02-29-Java-memory-models-objects/ref-obj-type.png --alt Java difference between reference and object variable(java referans ve obje tipi arasındaki fark) --img width="100%" height="100%" %}
 
 
 ## Referanslar

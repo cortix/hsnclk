@@ -3,10 +3,10 @@ title: "Algoritmalar Bölüm 1 - Seçme Sıralaması(Selection Sort)"
 comments: false
 excerpt: "Bu bölümde, seçme sıralaması algoritmasının ne olduğunu ve performansının en kötü, en iyi ve ortalama durum senaryosunda nasıl davrandığını açıklamaya çalışacağım."
 header:
-  teaser: "/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.webp"
+  teaser: "/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.png"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.webp
-  overlay_image: /assets/images/unsplash-image-58.webp
+  og_image: /assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.png
+  overlay_image: /assets/images/unsplash-image-58.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [zero take](https://unsplash.com/photos/jSB9PWaxhXo) on Unsplash"
   #cta_label: "More Info"
@@ -14,8 +14,8 @@ header:
 categories:
   - algorithms
 tags:
-  - algorithms
-  - selection Sort algorithm
+  - Algorithms
+  - Selection sort algorithm
 last_modified_at: 2022-02-23T15:12:19-04:00
 toc: false
 toc_label: "SAYFA İÇERİĞİ"

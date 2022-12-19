@@ -3,9 +3,9 @@ title: "Java'da Kalıtım 2- Extends"
 comments: false
 excerpt: "Bu derste Java'daki kalıtım(inheritance) ve polimorfizm kavramlarını ele almaya devam edeceğiz. Java'da extends anahtar kelimesinin ne anlama geldiğini ve kullanımını, superclass ve subclass kavramlarını, sınıf hiyerarşisinde UML diyagramı kullanımını göreceğiz. Bununla birlikte bir önceki derste belirlediğimiz kalıtımı sağlamak için asgari hedeflerin ilk ikisini ele alacağız."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-44.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-44.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Mitchell Luo](https://unsplash.com/photos/hhdxtwlaAsM) on Unsplash"
   #cta_label: "More Info"
@@ -13,13 +13,13 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java inheritance
-  - Uml diagram
-  - java extends
-  - java miras alma
-  - kalıtımı sağlamak için asgari hedefler
-  - java gizli değişken
-  - java gölge değişken
+  - Java inheritance
+  - Java Uml diagram
+  - Java extends
+  - Java'da miras alma
+  - Java'da kalıtımı sağlamak için asgari hedefler
+  - Java gizli değişken
+  - Java gölge değişken
 last_modified_at: 2020-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -164,7 +164,7 @@ Artık mirası nasıl kullanabileceğimiz hakkında bir fikrimiz olduğuna göre
 
 Kalıtım(inheritance) hiyerarşisi şu şekildedir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml1.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="class hierarchy or inheritance tree uml diagram">
+{% picture 2020-06-20-Java-inheritance2/uml1.png --alt java class hierarchy or inheritance tree uml diagram (java sınıf hiyerarşisi veya kalıtım ağacı uml diyagramı) --img width="100%" height="100%" %}
 
 * Grade Point Average (Not Ortalaması)
 
@@ -176,7 +176,7 @@ Diyelim ki yukarıdaki 3 değişkeni bu sınıflara eklemek istiyorsunuz. Sizce 
 
 Cinsiyet değişkeni genel bir değişken olduğundan **Person** sınıfında olması daha doğru olacaktır. Ama **maaş** ve **not ortalaması** değişkenleri biraz daha spesifiktir. Yani öğrencinin maaş alamayacağını ve öğretim görevlilerinin ise not ortalamasına sahip olamayacağını biliyoruz. Bu yüzden bu değişkenleri bu sınıflara özel olarak tanımlayabiliriz.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-06-20-Java-inheritance2/uml2.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="class hierarchy or inheritance tree uml diagram">
+{% picture 2020-06-20-Java-inheritance2/uml2.png --alt java class hierarchy or inheritance tree uml diagram (java sınıf hiyerarşisi veya kalıtım ağacı uml diyagramı) --img width="100%" height="100%" %}
 
 Dersin başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonuncuyu ise bir sonraki derste ele alacağız.
 

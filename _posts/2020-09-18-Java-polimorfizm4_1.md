@@ -3,27 +3,27 @@ title: "Java'da Polimorfizm 4.1 - Statik ve Dinamik Bağlanma 1"
 comments: false
 excerpt: "Bu derste hem Java'da statik ve dinamik bağlanma arasındaki farkları ele alacağız. Diğer bir ifade şekliyle derleme ve çalışma zamanı polimorfizmi olarak da bilinir. Bunun yanı sıra dolaylı final metotlar, metot saklamanın ne olduğu da bu ders içinde anlatılacaktır"
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-55.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-67.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [majd altaifi](https://unsplash.com/photos/rVAvAxQSmGI) on Unsplash"
+  caption: "Photo by [Mikhail Vasilyev](https://unsplash.com/photos/NodtnCsLdTE) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java polimorfizm
-  - static/early binding(statik/erken bağlanma)
-  - dynamic/late binding(dinamik/geç bağlanma)
-  - overriding metot
-  - overloading metot
-  - ezici metot
-  - geçersiz kılma
-  - aşırı yükleme
-  - metot saklama (method hiding)
-  - metot gizleme
-  - dolaylı final metotlar
+  - Java polimorfizm
+  - Java static/early binding(statik/erken bağlanma)
+  - Java dynamic/late binding(dinamik/geç bağlanma)
+  - Java overriding metot
+  - Java overloading metot
+  - Java ezici metot
+  - Java geçersiz kılma
+  - Java aşırı yükleme
+  - Java metot saklama (method hiding)
+  - Java metot gizleme
+  - Java dolaylı final metotlar
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -288,7 +288,7 @@ Son satır, aslında erişilmeye çalışılan field'ın, başvurulan nesnenin �
 >Alan erişimlerine yönelik bu dinamik arama eksikliği, programların basit uygulamalarla verimli bir şekilde çalıştırılmasına izin verir.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm4_1/1.webp"  width="400px" height="100%" class="align-center" loading="lazy" alt="Static Binding for Field Access">
+{% picture 2020-09-18-Java-polimorfizm4_1/1.png --alt Java Static Binding for Field Access (Alan Erişimi için Java Statik Bağlanma) --img width="100%" height="100%" %}
 
 
 ## Generic Öncesi ve Sonrası Dönemde Çalışma ve Derleme Zamanı Polimorfizmi

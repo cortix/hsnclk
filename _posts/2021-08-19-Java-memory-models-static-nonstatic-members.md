@@ -1,11 +1,11 @@
 ---
 title: "Java'da Hafıza Modeli 6 - Java'da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi"
 comments: false
-excerpt: "Java Statik ve Statik Olmayan Konteks Nedir? Java'da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi Nasıl Olur? gibi soruların cevabını vermeye çalışacağım."
+excerpt: "Java'da Statik ve Statik Olmayan Konteks Nedir? Java'da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi Nasıl Olur? gibi soruların cevabını vermeye çalışacağım."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-60.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-60.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"
   #video:
@@ -16,11 +16,11 @@ header:
 categories:
   - java-hafiza-yonetimi
 tags:
-  - java memory model
-  - static context
-  - instance context
-  - static context memory management
-  - non-static context memory management
+  - Java memory model
+  - Java static context
+  - Java instance context
+  - Java static context memory management
+  - Java non-static context memory management
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -49,4 +49,4 @@ Merhabalar arkadaşlar, bu blog yazımı video içerik oluşturarak hazırlamak 
 
 Bir konuyu anlayabilmek için önce kafada doğru bir tanıma oturtmanın, o konuyu öğrenmenin başlıca koşulu olduğunu her zaman düşünmüşümdür. Özellikle yazılım öğrenirken arka planda gerçekleşen işlemleri tasvir edebilmek gerçekten çok önemlidir. Bu konuda yeni yazılımcıların çok sıkıntı yaşadığını bildiğim için detaylı bir eğitim videosu hazırlamaya karar verdim. Umarım kafanızdaki birçok soruya cevap verebilirim. Şimdiden iyi seyirler.
 
-<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="Java Memory Management"></a>
+{% picture 2018-06-09-Java-static-method/java-statik-nedir.png --alt Java Memory Management (Java Hafıza Yönetimi) --img width="100%" height="100%" --link https://www.youtube.com/watch?v=cR9uwtMQt-g %}

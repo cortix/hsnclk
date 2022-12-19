@@ -3,11 +3,11 @@ title: "Java'da Hafıza Modeli 5 - Pass By Value / Pass By Reference"
 comments: false
 excerpt: "Aslında bu bölümde anlatılacaklar şu ana kadar öğrendiklerimizin bir tekrarı gibi düşünülebilir. Yalnız bu bölümde bu öğrendiklerimizi farklı programlama dilleri ile karşılaştırarak değerlendireceğiz. Metotlara parametre geçirilirken kullanılan 2 farklı yaklaşımı ele alacağız. Passing By Value/Passing By Reference(Değer veya Referans İle Parametre Geçirmek)"
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-33.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-66.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [ian dooley](https://unsplash.com/photos/TevqnfbI0Zc) on Unsplash"
+  caption: "Photo by [Jackson Sophat](https://unsplash.com/photos/_t-l5FFH8VA) on Unsplash"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -38,12 +38,17 @@ toc_sticky: true
 7. Java’da Hafıza Modeli 7 - [String Interning Nedir, String Pool Nedir, == operatörü ve equals metodu Arasındaki Fark](/java-hafiza-yonetimi/string-interning-string-pool/)
 </div>
 
-## Konu ile alakalı bir bilgilendirme
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Konu ile alakalı bir bilgilendirme</h4>
+---
 
 Arkadaşlar, bu konu her ne kadar spesifik bir konu gibi gözükse de bir bağlam içerisinde konuyu ele almak çok daha önemlidir. Yani, **statik nedir**? sorusunu daha geniş bağlamda düşünmemiz gerekiyor. Bunun için **statik olmayan** <u>değişken ve metotlar nedir</u>? **Statik** ve **statik olmayan** <u> değişkenler hafızada nasıl saklanır</u>? gibi farklı soruları da beraberinde düşünmemiz elzemdir. Bunun için aşağıdaki içeriklerime sırasıyla bakmanızı öneriyorum.
 
-* **Java’da Hafıza Modeli** [serisi](/categories/#java-hafiza-yonetimi)
-* **Java’da Kalıtım ve Java’da Polimorfizm** [serisi](/categories/#java-kalitim-polimorfizm)
+* Java'da Hafıza Modeli 1 - [İlkel Veri Tipleri(Primitive Types)](/java-hafiza-yonetimi/Java-memory-models-primitive-types/)
+* Java’da Kalıtım 1 - [Kalıtımı Neden Kullanırız? Kalıtımı Sağlamak İçin Asgari Şartlar Nelerdir?](/java-kalitim-polimorfizm/Java-inheritance1/)
+* Java’da Polimorfizm 1 - [Amaç?](/java-kalitim-polimorfizm/Java-polimorfizm1/)
+
+</div>
 
 ## Değişken Geçirme(Passing a Variable)
 
@@ -60,7 +65,7 @@ Programlama dilleri metotlara parametre aktarılırken 2 farklı yaklaşım kull
 Önceki derslerde ilkel ve ilkel olmayan tiplerin hafızada nerelerde ve nasıl saklandığını zaten bildiğinizi varsayarak, hibrit bir hafıza şekli ile bu durumu anlatmak istiyorum. Buradaki amaç heap ve stack gibi hafıza birimlerine etraflıca girmeden konuyu daha genel bir çerçeveden ele almaktır.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/1.webp 1080w" sizes="50vw" width="200px" height="100%" class="align-center" loading="lazy" alt="how memory works">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/1.png --alt How memory management works in java (java'da hafıza yönetimi nasıl çalışır) --img width="100%" height="100%" %}
 
 Basitleştirmek için, hafızayı yan yana sıralanmış bloklar olarak düşünebilirsiniz. Ve her bir bloğun da veri saklayan bir alanı temsil ettiğini hayal edin. **Gri rakamlar** herbir bloğun hafızadaki adresini, **mavi** ve **kırmızı** rakamlar ise bu hafıza bloklarında saklanan gerçek değerleri temsil etmektedir.
 
@@ -74,7 +79,7 @@ calBirthYear(myAge);
 ```
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/2.webp 1080w" sizes="50vw" width="350px" height="100%" class="align-center" loading="lazy" alt="pass by value">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/2.png --alt Java pass by value (java'da değer geçirme) --img width="100%" height="100%" %}
 
 
 Şayet bir işlem yapılmak istendiğinde gerekli işlem orijinal değere değil, kopyalanan değere uygulanır. Aslında bunun izahını bir önceki bölüm olan scope(kapsam) konusunda farklı bir şekilde ele almıştık.
@@ -100,7 +105,7 @@ int increaseAge(int age) {
 ```
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/3.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/3-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/3.webp 1080w" sizes="50vw" width="200px" height="100%" class="align-center" loading="lazy" alt="pass by value">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/3.png --alt Java pass by value (java'da değer geçirme) --img width="100%" height="100%" %}
 
 
 Görüleceği üzere **myAge** değeri ancak bu şekilde değişir. 15 olarak bu değer güncellenir.
@@ -146,7 +151,7 @@ Bu sayede ``myAge`` değişkeninin orijinal değeri olan **14** doğrudan deği�
 Sonuç olarak **pass by value**'da olduğu gibi değer, ayrı bir bloğa kopyalanmadı. Doğrudan orijinal değer üzerinde gerekli işlemler gerçekleşmiş oldu.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/4.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/4-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/4.webp 1080w" sizes="50vw" width="350px" height="100%" class="align-center" loading="lazy" alt="pass by reference">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/4.png --alt Java pass by reference (java'da referans geçirme) --img width="100%" height="100%" %}
 
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
@@ -303,29 +308,29 @@ public static void testMethod(SomeObject someObjectX) {
 
 Farz edelim ki referansın heap alanıdaki adresi **121** rakamı olsun.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_1.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_1-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_1.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/5_1.png --alt Java object Variable(java nesne değişkeni), Java pass by value (java'da değer geçirme) --img width="100%" height="100%" %}
 
 * **1.satırda:** heap alanında **new** anahtar kelimesi yardımıyla bir **someObject** objesi yaratılır. Bu objeyi stack'da **someObject** referansı temsil etmektedir. Hayali verdiğimiz **121** rakamı(yani objenin heap alanıdaki adresi) bu referansa **değer** olarak geçirilir. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_2.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_2-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_2.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/5_2.png --alt Java object Variable(java nesne değişkeni), Java pass by value (java'da değer geçirme) --img width="100%" height="100%" %}
 
 * **2.satırda:** ise **someObject** referansı **testMethod** yöntemine geçer. Yani aslında bu referansın bir kopyası **testMethod** yöntemine geçecektir. (Bir üstteki şekil)
 
 * **4.satırda:** burada **someObjectX** isminde bir **kopya-referans** oluşturulur. Bu referans/değişken **someObject** referansında olduğu gibi **121** değerine sahiptir. Her ne kadar **kopya-referans** olsa da heap alanında yine aynı objeyi işaret edeceğini unutmayın. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_3.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_3-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_3.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/5_3.png --alt Java object Variable(java nesne değişkeni), Java pass by value (java'da değer geçirme) --img width="100%" height="100%" %}
 
 * **5.satırda:** ise **someObjectX** referansının heap alanında işaret ettiği nesnenin **name** özelliği(yani nesnenin üye değişkeni(instance variable)) **o1** olarak güncelleniyor. **someObject** referansı da heap'teki aynı nesneyi işaret ettiği için haliyle bu güncellemeden dolaylı yoldan etkilenmiş olur ama sahip olduğu değerde(yani **121**'de) bir değişiklik olmaz. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_4.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_4-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_4.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/5_4.png --alt Java object Variable(java nesne değişkeni), Java pass by value (java'da değer geçirme) --img width="100%" height="100%" %}
 
 * **6.satırda:** bu satırda yeni bir**someObject** objesi yaratılır ve **kopya-referansımız** olan **someObjectX** referansı/değişkeni artık yeni yaratılan bu nesneyi işaret etmeye başlar. Burada bir başka değişen şey ise **someObjectX** referansının değeridir. Bu referans yeni objenin adresi olan **119** rakamını saklamaya başlar. Buna karşın **someObject** referansı ise hâlen **121** adresini(aslında java'da bunun adres değil id old. belirtmiştim.) muhafaza etmektedir. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_5.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_5-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_5.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/5_5.png --alt Java object Variable(java nesne değişkeni), Java pass by value (java'da değer geçirme) --img width="100%" height="100%" %}
 
 * **7.satırda:** 7.satırda ise **someObjectX** referansının işaret ettiği nesnenin **name** özelliği(yani nesnenin üye değişkeni) **o2** olarak güncellenmektedir. (Bir üstteki şekil)
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_6.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_6-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2020-03-01-Java-memory-models-pass-by-value-reference/5_6.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="java object Variable - java pass by value">
+{% picture 2020-03-01-Java-memory-models-pass-by-value-reference/5_6.png --alt Java object Variable(java nesne değişkeni), Java pass by value (java'da değer geçirme) --img width="100%" height="100%" %}
 
 * **3.satırda:** Son olarak bir ek bilgi daha verecek olursak, **testMethod** yönteminden çıktıktan sonra, yani bu yöntemin kapsamı dışına çıktıktan sonra, **someObjectX** referansı yok olacak, bu referansın işaret ettiği nesne ise sahipsiz(yani referanssız) kaldığı için garbage collector'un inisiyatifine kalacaktır(garbage collector bu nesneyi gerekirse hemen de siler, ya da silmek için hazır bekletir). Sadece **someObject** referansı ve bu referansın işaret ettiği nesne kalacaktır. (Gerekli nesne temizleme işlemleri garbage collector tarafından gerekirse gerçekleştirilir.)
 

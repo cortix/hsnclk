@@ -3,9 +3,9 @@ title: "Java'da Polimorfizm 2 - İzlenecek Kurallar Nelerdir?"
 comments: false
 excerpt: "Java'da aşırı yükleme ne anlama gelmektedir? Neden constructor'larda overloading metotlara ihtiyaç duyarız ve overload yaparken uymamız gereken bir kural var mıdır gibi soruları cevaplamaya çalışacağız."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-53.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-53.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Andras Vas](https://unsplash.com/photos/l2uv7YZcYDE) on Unsplash"
   #cta_label: "More Info"
@@ -13,9 +13,9 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java polimorfizm
-  - compile-time decision
-  - runtime decision
+  - Java polimorfizm
+  - Java compile-time decision
+  - Java runtime decision
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -59,7 +59,7 @@ Bu sözün aslında altında yatan mantık çok açıktır. Çünkü bir kodu he
 1. **Derleyici SADECE referans tipini bilir:** (yani derleyici nesnenin çalışma zamanı tipini bilmez. Derleyicinin amacı, daha sonra çalışma zamanında yürütülecek olan bir yöntem imzası çıkarmaktır.)
 
 
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml1.webp"  width="200px" height="100%" class="align-center" loading="lazy" alt="polimorfizm">
+    {% picture 2020-06-29-Java-polimorfizm2/uml1.png --alt Java Polymorphism(java polimorfizm) --img width="100%" height="100%" %}
 
 
     ```java
@@ -70,24 +70,25 @@ Bu sözün aslında altında yatan mantık çok açıktır. Çünkü bir kodu he
 
 2. **Derleyici metot çağrıları için SADECE referans tipinin sınıfına bakar:** *s* referansı ile `toString`'i çağırmayı denediğinizde, java **derleme zamanında** ilk olarak **Person** sınıfına bakacak ve bu `toString` yöntemini bulacaktır.
 
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml2.webp"  width="100%" height="100%" loading="lazy" alt="polimorfizm">
+    {% picture 2020-06-29-Java-polimorfizm2/uml2.png --alt Java Polymorphism(java polimorfizm) --img width="100%" height="100%" %}
 
 3. **Derleyici bir yöntem imzası yayımlar:** Derleyicinin bir diğer amacı ise daha sonra çalışma zamanında yürütülecek olan bir **yöntem imzası** çıkarmaktır. Yani parametresiz bir toString yöntem imzası derleyici tarafından daha sonra çalışma zamanında yürütülmek üzere yayımlanır.
 
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml3_0.webp"  width="100%" height="100%" loading="lazy" alt="polimorfizm">
+    {% picture 2020-06-29-Java-polimorfizm2/uml3_0.png --alt Java Polymorphism(java polimorfizm) --img width="100%" height="100%" %}
 
 ## Çalışma Zamanı Kuralları(Runtime Decision)
 
 1. **Çalışma zamanında, ilgili yöntemi bulmak için java, nesnenin çalışma zamanı türünü izler**
 2. **Derleme zamanında yayımlanan yöntem imzasını gerçek çalışma zamanı sınıfındaki uygun yöntemle eşleştirir:** Yukarıdaki örnekten yola çıkarsak, ``s.toString`` yapmaya çalıştığımızda java, artık çalışma zamanında **s**'in aslında bir **Student** nesnesi olduğunu bilir ve bu metodu ilk bu sınıfın içinde arar. Yukarıdaki koddan yola çıkarsak, java **Student** sınıfında ``toString`` yöntemini bulacak ve çalışma zamanında çalıştıracaktır.
 
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4_0.webp"  width="100%" height="100%" loading="lazy" alt="polimorfizm">
+    {% picture 2020-06-29-Java-polimorfizm2/uml4_0.png --alt Java Polymorphism(java polimorfizm) --img width="100%" height="100%" %}
 
     **ÖNEMLİ NOT :** Buraya kadar olanlar ilgili yöntem(yani ``toString`` metodunu kastediyorum) **geçersiz kılınmışsa** gerçekleşecek şeylerdir. Çünkü ilgili yöntem geçersiz kılınmışsa, polimorfizm gereği doğrudan geçersiz kılınan yöntem çalıştırılır. Yani bu örnekte yöntemin geçersiz kılındığını görüyoruz.
 
 3. Peki ilgili yöntem **geçersiz kılınmamışsa** ne olur? Bu durumda ise java çalışma zamanı sınıfında uygun bir yöntem bulamadığı için referans tipinin sınıfındaki yöntemle eşleşir. Bu kısım çok önemlidir. Farzedelim ki yukarıdaki örnek şu şekilde olsaydı(Student sınıfına odaklanmanızı istiyorum. Dikkat ederseniz ``toString`` metodu override edilmemiş)
 
-    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-06-29-Java-polimorfizm2/uml4.webp"  width="100%" height="100%" loading="lazy" alt="polimorfizm">
+    {% picture 2020-06-29-Java-polimorfizm2/uml4.png --alt Java Polymorphism(java polimorfizm) --img width="100%" height="100%" %}
+
     ``s.toString`` yazarak metodu çağırmaya çalıştığımızda, **Person** sınıfındaki ``toString`` metodu çalışacaktır.
 
 
@@ -109,7 +110,7 @@ Aslında ilk bakışta kodun çalışacağını düşünebiliriz. Ama çalışma
 Yalnız koda baktığımızda bu metodun **Student** sınıfında bulunduğunu biliyoruz. Peki bizim bu bildiğimizi derleyicinin bilmesini nasıl sağlarız. Bunun yöntemi **casting**'dir. Bir sonraki ders bu konu üzerine konuşacağız.
 
 ## Özet
-Polimorfizm konusundan bahsederken sıklıkla derleme ve çalışma zamanı kararlarından bahsettik. Aslında polimorfizmi tanımsal olarak rahatlıkla ikiye ayırabiliriz.
+Java'da polimorfizm konusundan bahsederken sıklıkla derleme ve çalışma zamanı kararlarından bahsettik. Aslında polimorfizmi tanımsal olarak rahatlıkla ikiye ayırabiliriz.
 
 1. Statik veya derleme zamanı polimorfizmi
 2. Dinamik veya çalışma zamanı polimorfizmi

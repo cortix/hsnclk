@@ -3,9 +3,9 @@ title: "Java Main Metodu"
 comments: false
 excerpt: "Bu bölümde; Java ile yazılmış bir program nasıl ayağa kalkar? Programı ayağa kaldıracak metot için gerekli asgari şartlar nelerdir? gibi soruları cevaplamaya çalışacağız"
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-41.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-64.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [Jon Tyson](https://unsplash.com/photos/FlHdnPO6dlw) on Unsplash"
   #video:
@@ -17,7 +17,7 @@ categories:
   - java
 tags:
   - java class
-  - main metotu
+  - java main metotu
 last_modified_at: 2018-06-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -50,7 +50,7 @@ public static void main(String[] args)
 şeklindedir.
 
 
-<a href="https://www.youtube.com/watch?v=cR9uwtMQt-g"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-06-09-Java-static-method/java-statik-nedir.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="Java Memory Management"></a>
+{% picture 2018-06-09-Java-static-method/java-statik-nedir.png --alt Java Memory Management --img width="100%" height="100%" --link https://www.youtube.com/watch?v=cR9uwtMQt-g %}
 
 ---
 Hazırladığım java eğitim [videosunda](https://www.youtube.com/watch?v=cR9uwtMQt-g), **main metodunu** da kapsayan bir örnek kod üzerinde, **statik** ve **statik olmayan** değişken ve metotların hafıza yönetim modelini ele aldım. Bu videoyu özellikle izlemenizi öneririm.
@@ -71,7 +71,7 @@ Bu arada parametreleri normal metodlarda sıklıkla görüyoruz. Buradaki çalı
 
 Komut satırı argümanlarından biraz bahsetmek istiyorum. <u>Bir Java uygulaması, komut satırından istediğiniz sayıda argüman girişini kabul edebilir.</u> Bu, kullanıcının uygulama başlatıldığında yapılandırma bilgilerini belirlemesini sağlar. Dikkat ederseniz **main** yönteminin parametre değişkenleri, yani **args**'ın veri tipi bir **String** dizisidir. Bu programın sadece **string** tipinde bir diziyi argüman olarak kabul edeceği anlamına gelmektedir.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/args.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/args-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/args.webp 1080w" sizes="50vw" width="100%" height="100%" loading="lazy" alt="command-line arguments">
+{% picture 2018-06-08-Java-main-method/args.png --alt java command-line arguments --img width="100%" height="100%" %}
 
 Diyelim ki komut satırı argümanı olarak kullanmak istediğiniz bir şeyler olduğunu hayal edin. Aşağıdaki örnekte ``This is a sample text``  cümlesini komut satırı argümanı eklemek istiyorum. Aşağıdaki kodla bu cümleyi **args parametresi** olarak programımın içine dahil edebilirim. Sistem, zaten **args** parametresi yoksa, parametrenin olmadığını anlayıp sadece **main** metodunun içine odaklanır.
 
@@ -85,7 +85,7 @@ public class Sample {
 }
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/result.webp" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/result-small.webp 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2018-06-08-Java-main-method/result.webp 1080w" sizes="50vw" width="100%" height="100%"  loading="lazy" alt="command-line arguments">
+{% picture 2018-06-08-Java-main-method/result.png --alt java command-line arguments --img width="100%" height="100%" %}
 
 Görüleceği üzere komut satırı argümanlarını da kullanmak bir seçenektir.
 
