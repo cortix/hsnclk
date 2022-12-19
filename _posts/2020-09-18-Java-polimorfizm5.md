@@ -1,11 +1,11 @@
 ---
 title: "Java'da Polimorfizm 5 - Soyut(Abstract) Sınıflar ve Arayüzler(Interfaces)"
 comments: false
-excerpt: "Bu bölümde abstract sınıfları ve arayüzleri ele almak istiyorum. Özellikle neler olduğu, hangi durumlarda hangisinin tercih edilmesi gerektiği hakkında konuşacağız. Bunun yanı sıra uygulama kalıtımı(**inheritance of implementation**) ve arayüzün kalıtımı(**inheritance of interface**) kavramlarının neler olduğunu karşılaştıracağız."
+excerpt: "Bu bölümde java'da abstract sınıfları ve arayüzleri ele almak istiyorum. Özellikle neler olduğu, hangi durumlarda hangisinin tercih edilmesi gerektiği hakkında konuşacağız. Bunun yanı sıra uygulama kalıtımı(**inheritance of implementation**) ve arayüzün kalıtımı(**inheritance of interface**) kavramlarının neler olduğunu karşılaştıracağız."
 header:
-  teaser: "assets/images/equality.webp"
-  og_image: /assets/images/equality.webp
-  overlay_image: /assets/images/unsplash-image-58.webp
+  teaser: "assets/images/equality.png"
+  og_image: /assets/images/equality.png
+  overlay_image: /assets/images/unsplash-image-58.jpeg
   overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
   caption: "Photo by [zero take](https://unsplash.com/photos/jSB9PWaxhXo) on Unsplash"
   #cta_label: "More Info"
@@ -13,11 +13,11 @@ header:
 categories:
   - java-kalitim-polimorfizm
 tags:
-  - java polimorfizm
-  - inheritance of implementation
-  - inheritance of interface
-  - abstract class
-  - interface
+  - Java polimorfizm
+  - Java inheritance of implementation
+  - Java inheritance of interface
+  - Java abstract class
+  - Java interface
 last_modified_at: 2020-02-19T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
@@ -46,7 +46,7 @@ Aslında **abstract sınıf** ve **interface** özünde ikisi de soyut kavramlar
 
 Normalde bir üst sınıfım ve onu miras alan bir alt sınıfım oluyordu. Burada yapmak istediğim şey aslında yine kalıtımı bazı kısıtlamalar getirerek uygulamak olacak. Hemen bir örnek vermek istiyorum.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/2020-09-18-Java-polimorfizm5/uml1.webp"  width="100%" height="100%" loading="lazy" alt="inheritance">
+{% picture 2020-09-18-Java-polimorfizm5/uml1.png --alt Java Inheritance (Java Kalıtım) --img width="100%" height="100%" %}
 
 Normalde bir sınıfı miras aldığımızda o sınıfın bütün davranışlarını da miras almış olurduk. Yani metotları ve özelliklerini(fields) kastediyorum. Alt sınıflar da eğer farklı bir şey yapmak isterlerse metotları kendilerine göre geçersiz kılabiliyorlardı.
 
