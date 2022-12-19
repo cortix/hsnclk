@@ -1,16 +1,16 @@
 ---
 layout: archive
-title: "Kitap Tavsiyeleri ve Değerlendirmeler"
+title: "Kitap Tavsiyeleri ve Kitap İncelemeleri"
 permalink: /reviews/
 author_profile: true
 header:
   overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/unsplash-image-2.webp
+  overlay_filter: "0.3"
+  overlay_image: /assets/images/unsplash-image-2.jpeg
   #cta_label: "Download"
   #cta_url: "https://github.com/mmistakes/minimal-mistakes/"
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-excerpt: "Fırsat buldukça okuduğum kitapların değerlendirmelerini yapmaya çalışacağım."
+excerpt: "Fırsat buldukça okuduğum kitapların incelemelerini bu sayfada paylaşmaya çalışacağım."
 entries_layout: grid
 classes: wide
 ---
