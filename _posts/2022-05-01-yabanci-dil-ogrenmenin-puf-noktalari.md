@@ -439,6 +439,7 @@ Ne gibi insanlar takip ediyordum? Takip ettiklerimi televizyon seyrederken tanı
 
 
 **Yabancı dil öğrenmenin püf noktaları serisinin 2. PARTINA** göz atmak bu [linki](/recommends/yabanci-dil-ogrenmenin-puf-noktalari-2/) ziyaret edebilirsiniz.
+{: .notice--success}
 
 -----------------------
 
