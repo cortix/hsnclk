@@ -5,9 +5,10 @@ excerpt: "Bu derste Java'daki Referans ve Nesne Tipleri ele alacağız. Aynı za
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-45.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Ricardo Gomez Angel](https://unsplash.com/photos/52NJbPMuGuU) on Unsplash"
+  overlay_image: /assets/images/svg-book10.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:

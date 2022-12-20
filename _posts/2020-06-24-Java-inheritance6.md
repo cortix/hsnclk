@@ -5,9 +5,10 @@ excerpt: "Bu derste Java'da sınıf inşaası sırasında derleyicinin yazdığ�
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-48.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Daniel Salgado](https://unsplash.com/photos/1eTc_d3sdHs) on Unsplash"
+  overlay_image: /assets/images/svg-book10.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
 #  video:
 #    id: cR9uwtMQt-g
 #    provider: youtube

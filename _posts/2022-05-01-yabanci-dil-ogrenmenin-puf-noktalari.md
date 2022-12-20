@@ -6,9 +6,10 @@ header:
   teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.png"
   #og_image: /assets/images/page-header-og-image.png
   og_image: /assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.png
-  overlay_image: /assets/images/unsplash-image-68.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Sincerely Media](https://unsplash.com/photos/vcF5y2Edm6A) on Unsplash"
+  overlay_image: /assets/images/svg-book13.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
 #  video:
 #    id: 3OZzMbDHr14
 #    id: MjU7jigkmMY

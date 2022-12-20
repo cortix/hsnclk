@@ -5,9 +5,10 @@ excerpt: "Aslında bu bölümde anlatılacaklar şu ana kadar öğrendiklerimizi
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-66.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Jackson Sophat](https://unsplash.com/photos/_t-l5FFH8VA) on Unsplash"
+  overlay_image: /assets/images/svg-book9.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:

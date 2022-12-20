@@ -5,9 +5,10 @@ excerpt: "Bu derste Java'da Nesne oluşturma işlemini hafıza modeli konusunda 
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-47.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Tamas Tuzes-Katai](https://unsplash.com/photos/LzpTVcfTBE8) on Unsplash"
+  overlay_image: /assets/images/svg-book10.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
 #  video:
 #    id: cR9uwtMQt-g
 #    provider: youtube

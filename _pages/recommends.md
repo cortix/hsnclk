@@ -4,12 +4,10 @@ title: "Önerdiğim İçerikler"
 permalink: /recommends/
 author_profile: true
 header:
+  overlay_image: /assets/images/svg-book8.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
-  overlay_image: /assets/images/unsplash-image-2.jpeg
-  #cta_label: "Download"
-  #cta_url: "https://github.com/mmistakes/minimal-mistakes/"
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
 excerpt: "Bu sayfada, kişisel gelişimimde bana büyük katkı sağlayan eğitmenleri, kişileri, içerikleri, ve izlediğim teknik videolardan beğendiklerimi sizlerle paylaşmaya çalışacağım. Kendim için aldığım bu notların size de faydalı olması dileği ile..."
 entries_layout: grid
 classes: wide

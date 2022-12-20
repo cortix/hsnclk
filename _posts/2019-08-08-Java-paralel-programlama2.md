@@ -5,9 +5,10 @@ excerpt: "Java Paralel Programlama - Java Fork/Join Framework"
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-65.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [David Pisnoy](https://unsplash.com/photos/46juD4zY1XA) on Unsplash"
+  overlay_image: /assets/images/svg-book7.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:

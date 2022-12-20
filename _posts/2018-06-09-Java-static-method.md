@@ -5,10 +5,10 @@ excerpt: "Java Static Metodu Nedir? Hangi Durumlarda Kullanılır? Java'da Deği
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  #overlay_image: /assets/images/unsplash-image-58.webp
-  overlay_image: /assets/images/unsplash-image-63.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Jess Bailey](https://unsplash.com/photos/l3N9Q27zULw) on Unsplash"
+  overlay_image: /assets/images/svg-book6.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
   #video:
     #id: cR9uwtMQt-g
     #provider: youtube
