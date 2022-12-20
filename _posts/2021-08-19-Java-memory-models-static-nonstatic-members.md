@@ -5,9 +5,10 @@ excerpt: "Java'da Statik ve Statik Olmayan Konteks Nedir? Java'da Statik ve Stat
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-60.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"
+  overlay_image: /assets/images/svg-book9.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
   #video:
     #id: cR9uwtMQt-g
     #provider: youtube

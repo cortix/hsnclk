@@ -5,9 +5,10 @@ excerpt: "Java'da aşırı yükleme ne anlama gelmektedir? Neden constructor'lar
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-53.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Andras Vas](https://unsplash.com/photos/l2uv7YZcYDE) on Unsplash"
+  overlay_image: /assets/images/svg-book11.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:

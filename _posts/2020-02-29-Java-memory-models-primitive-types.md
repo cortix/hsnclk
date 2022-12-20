@@ -5,9 +5,10 @@ excerpt: "Java'da İlkel Veri Tipleri Bellekte Nasıl Saklanır? Bu durumun net 
 header:
   teaser: "assets/images/equality.png"
   og_image: /assets/images/equality.png
-  overlay_image: /assets/images/unsplash-image-34.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Vincent van Zalinge](https://unsplash.com/photos/vUNQaTtZeOo) on Unsplash"
+  overlay_image: /assets/images/svg-book9.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
 #  video:
 #    id: jT06ibYdEXo
 #    provider: youtube

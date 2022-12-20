@@ -6,9 +6,10 @@ header:
   teaser: "/assets/images/2022-04-12-string-interning-string-pool/img.png"
   #og_image: /assets/images/page-header-og-image.png
   og_image: /assets/images/2022-04-12-string-interning-string-pool/img.png
-  overlay_image: /assets/images/unsplash-image-25.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Kelli Tungay](https://unsplash.com/photos/2LJ4rqK2qfU) on Unsplash"
+  overlay_image: /assets/images/svg-book9.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
   #video:
     #id: jT06ibYdEXo
     #provider: youtube

@@ -6,9 +6,10 @@ header:
   teaser: "assets/images/2022-02-23-imperative-and-declarative-programming/imp.png"
   #og_image: /assets/images/page-header-og-image.png
   og_image: /assets/images/2022-02-23-imperative-and-declarative-programming/imp.png
-  overlay_image: /assets/images/unsplash-image-60.jpeg
-  overlay_filter: 0.5 #rgba(255, 0, 0, 0.5)
-  caption: "Photo by [Omid Armin](https://unsplash.com/photos/edANaB0ZFVo) on Unsplash"
+  overlay_image: /assets/images/svg-book15.svg
+  overlay_color: "#000"
+  overlay_filter: "0.3"
+  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
   #cta_label: "More Info"
   #cta_url: "https://unsplash.com"
 categories:
@@ -27,7 +28,7 @@ toc_label: "SAYFA İÇERİĞİ"
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-<div class="notice--success" markdown="1">
+<div class="notice--warning" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Programlama Stili Serisi</h4>
 ---
 
