@@ -3,9 +3,11 @@ title: "Yabancı Dil Öğrenmenin Püf Noktaları (50 Dil Bilen Johan Vandewalle
 comments: false
 excerpt: "Yazılımcılar İçin Yabancı Dil Bariyeri - Bu makale Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sıraladığım paylaşımın devamıdır. "
 header:
-  teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.png"
+  #teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.png"
   #og_image: /assets/images/page-header-og-image.webp
-  og_image: /assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.png
+  #og_image: /assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.png
+  teaser: "/assets/images/svg-book13.svg"
+  og_image: /assets/images/svg-book13.svg
   overlay_image: /assets/images/svg-book13.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

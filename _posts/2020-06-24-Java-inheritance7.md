@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 7 - Sınıf Hiyerarşisinde Değişken İlklendirme (J
 comments: false
 excerpt: "Java'da nesneleri oluştururken, bulunduğumuz alt sınıf kurucuları, hiyerarşik sırada en üstte bulunan Object sınıfına ulaşana kadar içten dışa doğru çağrıldığından bahsetmiştik. Bu derste ise en dıştaki sınıfın üye değişkenlerinden başlayıp, bulunduğumuz sınıfa kadar üye değişkenlerinin nasıl ilklendirildiğini göreceğiz."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/equality.png
+  teaser: "/assets/images/svg-book10.svg"
+  og_image: //assets/images/svg-book10.svg
   overlay_image: /assets/images/svg-book10.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

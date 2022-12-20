@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 3.1 - Static ve Dinamik Tür"
 comments: false
 excerpt: "Bu derste hem Java'da hem de diğer programlama dillerinde statik ve dinamik tip dillerin farklarını ele alacak hem de bu ayrımın getirdiği ajantaj ve dezajantajlarını göreceğiz. Statik ve dinamik tür denilince ne anlamamız gerektiğini yine bu bölümde göreceksiniz."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/equality.png
+  teaser: "/assets/images/svg-book10.svg"
+  og_image: //assets/images/svg-book10.svg
   overlay_image: /assets/images/svg-book10.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
