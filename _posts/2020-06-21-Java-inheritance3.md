@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 3 - Referans ve Nesne Tipleri"
 comments: false
 excerpt: "Bu derste Java'daki Referans ve Nesne Tipleri ele alacağız. Aynı zamanda is-a ilişkisinin ne anlama geldiğini yine bu derste işleyeceğiz. Bunun yanı sıra, derleme zamanı ve çalışma zamanı kararları alınırken nelerin dikkate alındığından ve bir önceki derste yarım kalan, kalıtımı(inheritance) sağlamak için asgari hedefler nelerdir? başlıklı sorumuzun son maddesinden de bahsedeceğiz."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/equality.png
+  teaser: "/assets/images/svg-book10.svg"
+  og_image: //assets/images/svg-book10.svg
   overlay_image: /assets/images/svg-book10.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

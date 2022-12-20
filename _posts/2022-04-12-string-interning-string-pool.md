@@ -3,9 +3,11 @@ title: "Java'da Hafıza Modeli 7 - String Interning Nedir, String Pool Nedir, ==
 comments: false
 excerpt: "Burada bu 3 sorunun yanıtını arayacağız."
 header:
-  teaser: "/assets/images/2022-04-12-string-interning-string-pool/img.png"
+  #teaser: "/assets/images/2022-04-12-string-interning-string-pool/img.png"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-04-12-string-interning-string-pool/img.png
+  #og_image: /assets/images/2022-04-12-string-interning-string-pool/img.png
+  teaser: "/assets/images/svg-book9.svg"
+  og_image: /assets/images/svg-book9.svg
   overlay_image: /assets/images/svg-book9.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

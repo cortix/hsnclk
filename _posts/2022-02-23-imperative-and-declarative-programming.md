@@ -3,9 +3,11 @@ title: "Imperative and Declarative Style Programming (Zorunlu ve Bildirimsel Sti
 comments: false
 excerpt: "Bu yazıda, zorunlu ve bildirimsel stil programlama arasındaki farkı açıklamaya çalışacağım."
 header:
-  teaser: "assets/images/2022-02-23-imperative-and-declarative-programming/imp.png"
+  #teaser: "assets/images/2022-02-23-imperative-and-declarative-programming/imp.png"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-02-23-imperative-and-declarative-programming/imp.png
+  #og_image: /assets/images/2022-02-23-imperative-and-declarative-programming/imp.png
+  teaser: "/assets/images/svg-book15.svg"
+  og_image: /assets/images/svg-book15.svg
   overlay_image: /assets/images/svg-book15.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

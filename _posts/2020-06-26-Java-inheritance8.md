@@ -3,8 +3,8 @@ title: "Java'da Kalıtım 8 - Alıştırmalar"
 comments: false
 excerpt: "Bu bölümde şu ana kadar öğrendiklerimizi test etmek amacıyla birkaç tane örnek kod üzerinde çalışacağız."
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/equality.png
+  teaser: "/assets/images/svg-book10.svg"
+  og_image: //assets/images/svg-book10.svg
   overlay_image: /assets/images/svg-book10.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

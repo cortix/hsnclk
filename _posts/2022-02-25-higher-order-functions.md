@@ -3,9 +3,11 @@ title: "Higher Order Functions (Üst Düzey Fonksiyonlar) (Programlama Stili PAR
 comments: false
 excerpt: "Bu yazıda, birinci-sınıf vatandaş(first-class citizen) ve birinci-sınıf fonksiyonlar(first-class function) olmak üzere higher-order(üst düzey) fonksiyonların ne olduğunu açıklamaya çalışacağım."
 header:
-  teaser: "/assets/images/2022-02-25-higher-order-functions/higher.png"
+  #teaser: "/assets/images/2022-02-25-higher-order-functions/higher.png"
   #og_image: /assets/images/page-header-og-image.png
-  og_image: /assets/images/2022-02-25-higher-order-functions/higher.png
+  #og_image: /assets/images/2022-02-25-higher-order-functions/higher.png
+  teaser: "/assets/images/svg-book15.svg"
+  og_image: /assets/images/svg-book15.svg
   overlay_image: /assets/images/svg-book15.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

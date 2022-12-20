@@ -3,8 +3,8 @@ title: "Java'da Hafıza Modeli 2 - Nesneler"
 comments: false
 excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır? Bu durumu net anlaşılması için nasıl simüle edebiliriz?"
 header:
-  teaser: "assets/images/equality.png"
-  og_image: /assets/images/equality.png
+  teaser: "/assets/images/svg-book9.svg"
+  og_image: //assets/images/svg-book9.svg
   overlay_image: /assets/images/svg-book9.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
