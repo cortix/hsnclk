@@ -20,7 +20,7 @@ title                    : "hasancelik.org"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Hasan Çelik"
-description              : "Hasan Çelik's personal website."
+description              : "Hasan Çelik'in Kişisel Web Sitesi. Burası, yazılım ile ilgili öğrendiklerimi, ve okuduğum kitapların incelemelerini paylaştığım kişisel blogum."
 url                      : https://hasancelik.org # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,9 +106,9 @@ analytics:
 author:
   name             : "Hasan Çelik"
   avatar           : "/assets/images/bio/hc2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Kendini geliştirmeyi seven, aynı zamanda müzik, felsefe, psikoloji, pazarlama, markalaşma, tarih, ekonomi ve bilimle de ilgilenen bir yazılımcı."
-  location         : "Ankara/Turkey"
-  email            : "hsnclk1985@gmail.com"
+  bio              : "Kendini geliştirmeyi seven, tutkulu bir yazılımcı"
+  location         : # "Ankara/Turkey"
+  email            : # "hsnclk1985@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -302,9 +302,9 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar:
-        - text: >
-            [![speak friend and enter](/assets/images/speak-friend-and-enter.svg){: height="100%" width="100%" loading="lazy"}](#)
+      # sidebar:
+      #   - text: >
+      #       [![speak friend and enter](/assets/images/speak-friend-and-enter.svg){: height="100%" width="100%" loading="lazy"}](#)
 
 picture:
   source: "assets/images/"

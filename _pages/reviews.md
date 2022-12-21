@@ -14,6 +14,11 @@ classes: wide
 ---
 
 <h2>Kitap Değerlendirmeleri</h2>
+
+Yaptığım kitap incelemeleri yalnızca beğendiğim kitapları kapsıyor. Genellikle bu kitaplar, **goodreads** platformu üzerinde, puan olarak 4 veya 5 yıldız verdiğim kitaplardan oluşuyor. Nadiren, puan olarak 2 veya 3 yıldız verdiklerime eleştiri mahiyetinde de olsa bir yorum bırakıyorum. Bu kitapların tam listesine ulaşmak için [goodreads hesabımı](https://www.goodreads.com/user/show/88145705-hasan-elik) ziyaret edebilirsiniz.
+
+<br/><br/>
+
 {% for post in site.categories.book-reviews %}
   {% include archive-single.html type="grid"%}
 {% endfor %}
