@@ -20,9 +20,10 @@ tags:
   - Algorithms
   - Selection Sort algorithm
 last_modified_at: 2022-02-23T15:12:19-04:00
-toc: false
+toc: true
+toc_sticky: true
 toc_label: "SAYFA İÇERİĞİ"
-classes: wide
+#classes: wide
 ---
 
 
