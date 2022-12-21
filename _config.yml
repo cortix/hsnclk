@@ -136,7 +136,7 @@ author:
       url: "https://www.goodreads.com/user/show/88145705-hasan-elik"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin-in"
-      url: "https://www.linkedin.com/in/hsncelik/"
+      #url: "https://www.linkedin.com/in/hsncelik/"
 # Site Footer
 footer:
   links:
