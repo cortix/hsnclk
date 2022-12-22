@@ -78,11 +78,11 @@ Dolayısıyla, <u>bir öncekine kıyasla daha küçük bir yürütme zamanımız
 
 Örneği düşünecek olursak tüm çalışma zamanlarının toplamı;
 
-{% highlight java %}
+```java
 S1 + S2 + S3 + S4 + S5 + S6 + S7 = ?
 1  + 1  + 1  + 1  + 1  + 10 + 1  = 16
 T1 = 16
-{% endhighlight %}
+```
 
 Düşünebileceğimiz diğer bir şey ise, pratikte olmasa da, sonsuz sayıda işlemcimiz olsaydı ne olurdu? Cevap daha önce öğrendiğimiz, yani hesaplama grafiğindeki en uzun yolun uzunluğunu temsil eden **SPAN** olurdu. Çünkü yeterli işlemcimiz varsa, en uzun yolda olmak ve kendinden sonra gelecek işlemleri beklemek dışında bir adım dahi beklemenin bir sebebi yoktur.
 
@@ -95,9 +95,9 @@ Yani sonsuz sayıda da işlemciniz olsa hesaplama grafiğine göre en fazla 3 ta
 
 * **T<sub>1</sub> = WORK = 16**
 
-* **T<sub>$$\infty$$</sub> = SPAN = 12**
+* **T<sub>∞</sub> = SPAN = 12**
 
-* **T<sub>$$\infty$$</sub> $$\le$$ T<sub>p</sub> $$\le$$ T<sub>1</sub>**
+* **T<sub>∞</sub> ≤ T<sub>p</sub> ≤ T<sub>1</sub>**
 </div>
 
 Paralel programlar hakkında konuşurken çok ilginç bir diğer kavram ise hızlanmadır(**SPEEDUP**). Bu yüzden, paralelliğin asıl amacı, donanım üreticilerinin bize verdiği tüm bu çekirdeklerle programınızın daha hızlı çalışmasını sağlamaktır.
@@ -107,7 +107,7 @@ Paralel programlar hakkında konuşurken çok ilginç bir diğer kavram ise hız
 Öyleyse bunu düşünelim. **T<sub>1</sub>** sıralı yürütme süresidir. **T<sub>P</sub>**, **P** işlemcide aldığımız yürütme süresidir. Ve bu oran, paralel versiyonun ne kadar hızlı çalışabildiğinin faktörü olacaktır. Bu yüzden, hızlanmanın **P**'ye küçük eşit olması gerektiğini görebiliyoruz.
 
 
-* **SPEEDUP $$\le$$ P**
+* **SPEEDUP ≤ P**
 
 Speedup(P) must be ≤ the number of processors P.
 {: .notice--info}
@@ -116,7 +116,7 @@ Speedup(P) must be ≤ the number of processors P.
 Aynı şekilde, **SPEEDUP** aşağıdaki gibi de olmalı;
 
 
-* **SPEEDUP $$\le$$ WORK/SPAN = IDEAL PARALLELISM**
+* **SPEEDUP ≤ WORK/SPAN = IDEAL PARALLELISM**
 
 Speedup(P) must be ≤ the ideal parallelism, WORK/SPAN.
 {: .notice--info}
@@ -124,7 +124,7 @@ Speedup(P) must be ≤ the ideal parallelism, WORK/SPAN.
 
 Dolayısıyla, hızlanmanın elbette kaç işlemcinin mevcut olduğuna bağlı olduğunu ve aynı zamanda "**ideal paralellik**" olan hesaplama grafiğinin bu gerçekten önemli özelliği ile de sınırlandığını görüyoruz. <u>Paralel algoritmalarda hedefimiz, sahip olduğunuz işlemci sayısından çok daha büyük olan ideal paralelliğe sahip hesaplama grafikleri oluşturmaktır</u>, böylece, bu paralel programı çok sayıda işlemcide çalıştırma esnekliğine sahip olursunuz.
 
-* **IDEAL PARALLELISM $$\ge$$ P**
+* **IDEAL PARALLELISM ≥ P**
 
 
 ## Referanslar :
