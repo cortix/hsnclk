@@ -23,7 +23,7 @@ last_modified_at: 2022-02-23T15:12:19-04:00
 toc: true
 toc_sticky: true
 toc_label: "SAYFA İÇERİĞİ"
-mathjax: true
+#mathjax: true
 #classes: wide
 ---
 
@@ -140,19 +140,19 @@ Seçme sıralamasının zaman verimliliği ikinci derecedendir(quadratic).
 
 ### Seçme Sıralamasının En İyi Durum Zaman Karmaşıklığı
 
-\\(O(n^{2})\\) karşılaştırma, \\( O(1) \\) yer değiştirme.
+*O(n<sup>2</sup>)* karşılaştırma, *O(1)* yer değiştirme,
 
-En iyi durum zaman karmaşıklığında, listenin zaten sıralı olduğunu düşünürüz. Yer değiştirme olmayacağı için **O(n)** **1** olur. Ancak listenin sıralı olup olmadığını öğrenmek için her durumda **karşılaştırma** olacaktır. Bu **quadratic** zaman karmaşıklığını beraberinde getirir, yani, \\(O(n^{2})\\). Çünkü **2** tane iç içe **for** döngümüz bulunmaktadır.
+En iyi durum zaman karmaşıklığında, listenin zaten sıralı olduğunu düşünürüz. Yer değiştirme olmayacağı için **O(n)** **1** olur. Ancak listenin sıralı olup olmadığını öğrenmek için her durumda **karşılaştırma** olacaktır. Bu **quadratic** zaman karmaşıklığını beraberinde getirir, yani, O(n<sup>2</sup>). Çünkü **2** tane iç içe **for** döngümüz bulunmaktadır.
 
 ### Seçme Sıralamasının En Kötü Durum Zaman Karmaşıklığı
 
-\\(O(n^{2})\\) karşılaştırma, \\( O(n) \\) yer değiştirme.
+*O(n<sup>2</sup>)* karşılaştırma, *O(n)* yer değiştirme,
 
-Yazılım geliştiriciler genellikle sadece **en kötü durumun çalışma zamanını** bulmak üzerine yoğunlaşır çünkü **n** boyutlu herhangi bir girdi için en uzun çalışma zamanı odur. Tıpkı en iyi durum zaman karmaşıklığında olduğu gibi, **karşılaştırma** ikinci dereceden(**quadratic**) zaman karmaşıklığında gerçekleşir. Ama en kötü senaryoda elbette listemiz **sıralı olmayacak**. Çünkü en kötü senaryo bunu gerektirir. Bu yüzden **yer değiştirme** \\( O(n) \\) zamanda gerçekleşir.
+Yazılım geliştiriciler genellikle sadece **en kötü durumun çalışma zamanını** bulmak üzerine yoğunlaşır çünkü **n** boyutlu herhangi bir girdi için en uzun çalışma zamanı odur. Tıpkı en iyi durum zaman karmaşıklığında olduğu gibi, **karşılaştırma** ikinci dereceden(**quadratic**) zaman karmaşıklığında gerçekleşir. Ama en kötü senaryoda elbette listemiz **sıralı olmayacak**. Çünkü en kötü senaryo bunu gerektirir. Bu yüzden **yer değiştirme** O(n) zamanda gerçekleşir.
 
 ### Seçme Sıralamasının Ortalama Durum Zaman Karmaşıklığı
 
-\\(O(n^{2})\\) karşılaştırma, \\( O(n) \\) yer değiştirme.
+*O(n<sup>2</sup>)* karşılaştırma, *O(n)* yer değiştirme,
 
 Ortalama süredeki adım sayısı en kötü durumun **yarısı** olsa bile sabitler(constants) formülasyonda dikkate alınmayacağından sonuç yine en kötü durumla aynı olacaktır.
 
@@ -161,9 +161,9 @@ Ortalama süredeki adım sayısı en kötü durumun **yarısı** olsa bile sabit
 ---
 Bir algoritmanın **en kötü durum çalışma zamanı** bize herhangi bir girdinin çalışma zamanı hakkında bir **üst sınır(upper bound)** verir. Bu, algoritmanın asla sürmeyeceği zamanı bilmeyi garanti eder.
 
-Bunun yanı sıra, en iyi, en kötü ve ortalama durum zaman karmaşıklıklarını tanımlarken, \\(O(n^{2})\\) karşılaştırma, \\( O(n) \\) yer değiştirme, şeklinde ifade etsek de, her zaman **dominant terim** dikkate alınır. Bu yüzden;
+Bunun yanı sıra, en iyi, en kötü ve ortalama durum zaman karmaşıklıklarını tanımlarken, O(n<sup>2</sup>) karşılaştırma, O(n) yer değiştirme, şeklinde ifade etsek de, her zaman **dominant terim** dikkate alınır. Bu yüzden;
 
-\\(O(n^{2})\\) karşılaştırma, \\( O(n) \\) yer değiştirme için dominant terim: \\(O(n^{2})\\)
+O(n<sup>2</sup>) karşılaştırma, O(n) yer değiştirme için dominant terim: O(n<sup>2</sup>)
 
 </div>
 
