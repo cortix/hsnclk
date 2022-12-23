@@ -51,7 +51,7 @@ Son olarak, kartları tekrar karıştırmak ve oyunu yeniden başlatmak istersen
 
 <!-- <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif" srcset="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card-small.gif 480w, {{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/card.gif 1080w" sizes="50vw" width="420px" height="100%" class="align-center" loading="lazy" alt="Selection Sort Algorithm"> -->
 
-<video autoplay loop muted playsinline width="380px" height="100%" class="align-center" title="Selection Sort Algorithm">
+<video autoplay loop muted playsinline width="380px" height="100%" class="align-center" title="Selection Sort Algorithm" poster="/assets/images/2022-11-11-algorithms-part1-selection-sort/poster.png">
   <source src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.webm" type="video/webm">
   <source src="{{ site.url }}{{ site.baseurl }}/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.mp4" type="video/mp4">
 </video>
@@ -94,7 +94,8 @@ public class SelectionSort {
                 list[smallest] = tempValue;
             }
         }
-        //Arrays.stream(list).forEach(value -> System.out.print(value + " - "));
+//       Arrays.stream(list)
+//      .forEach(value -> System.out.print(value + " - "));
     }
 }
 ```
@@ -142,19 +143,19 @@ Seçme sıralamasının zaman verimliliği ikinci derecedendir(quadratic).
 
 *O(n<sup>2</sup>)* karşılaştırma, *O(1)* yer değiştirme,
 
-En iyi durum zaman karmaşıklığında, listenin zaten sıralı olduğunu düşünürüz. Yer değiştirme olmayacağı için **O(n)** **1** olur. Ancak listenin sıralı olup olmadığını öğrenmek için her durumda **karşılaştırma** olacaktır. Bu **quadratic** zaman karmaşıklığını beraberinde getirir, yani, O(n<sup>2</sup>). Çünkü **2** tane iç içe **for** döngümüz bulunmaktadır.
+En iyi durum zaman karmaşıklığında, listenin zaten sıralı olduğunu düşünürüz. Yer değiştirme olmayacağı için *O(n)* 1 olur. Ancak listenin sıralı olup olmadığını öğrenmek için her durumda <u>karşılaştırma</u> olacaktır. Bu <u>quadratic</u> zaman karmaşıklığını beraberinde getirir, yani, *O(n<sup>2</sup>)*. Çünkü 2 tane iç içe **for** döngümüz bulunmaktadır.
 
 ### Seçme Sıralamasının En Kötü Durum Zaman Karmaşıklığı
 
 *O(n<sup>2</sup>)* karşılaştırma, *O(n)* yer değiştirme,
 
-Yazılım geliştiriciler genellikle sadece **en kötü durumun çalışma zamanını** bulmak üzerine yoğunlaşır çünkü **n** boyutlu herhangi bir girdi için en uzun çalışma zamanı odur. Tıpkı en iyi durum zaman karmaşıklığında olduğu gibi, **karşılaştırma** ikinci dereceden(**quadratic**) zaman karmaşıklığında gerçekleşir. Ama en kötü senaryoda elbette listemiz **sıralı olmayacak**. Çünkü en kötü senaryo bunu gerektirir. Bu yüzden **yer değiştirme** O(n) zamanda gerçekleşir.
+Yazılım geliştiriciler genellikle sadece <u>en kötü durumun çalışma zamanını</u> bulmak üzerine yoğunlaşır çünkü **n** boyutlu herhangi bir girdi için en uzun çalışma zamanı odur. Tıpkı en iyi durum zaman karmaşıklığında olduğu gibi, <u>karşılaştırma</u> ikinci dereceden(quadratic) zaman karmaşıklığında gerçekleşir. Ama en kötü senaryoda elbette listemiz <u>sıralı olmayacak</u>. Çünkü en kötü senaryo bunu gerektirir. Bu yüzden <u>yer değiştirme</u> O(n) zamanda gerçekleşir.
 
 ### Seçme Sıralamasının Ortalama Durum Zaman Karmaşıklığı
 
 *O(n<sup>2</sup>)* karşılaştırma, *O(n)* yer değiştirme,
 
-Ortalama süredeki adım sayısı en kötü durumun **yarısı** olsa bile sabitler(constants) formülasyonda dikkate alınmayacağından sonuç yine en kötü durumla aynı olacaktır.
+Ortalama süredeki adım sayısı en kötü durumun <u>yarısı</u> olsa bile sabitler(constants) formülasyonda dikkate alınmayacağından sonuç yine en kötü durumla aynı olacaktır.
 
 <div class="notice--warning" markdown="1">
 <h4 class="no_toc"><i class="fas fa-comment"></i> Note:</h4>
