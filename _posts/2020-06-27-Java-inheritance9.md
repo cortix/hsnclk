@@ -134,7 +134,13 @@ System.out.println(p.toString());
 
 Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gibi bunu ekrana yazdırmak istiyorsunuz... ``toString()`` metodu **Object** sınıfının toString metodunu çağırmayacaktır. Çünkü bu metodu ezdiğimiz için, çağrılan ``toString()`` metodu, **Person** sınıfındaki olacaktır. Sonuç olarak ekrana **"Hasan"** yazdırılır. Aslında burada biraz da polimorfizm devreye girer. Polimorfizm konusu overriding konusu ile iç içe bir konudur ve beraber değerlendirmek çok önemlidir. Polimorfizm konusuna henüz girmedik ama **Robert C. Martin**'in polimorfizm için yaptığı şu tanımı sizinle paylaşmak istiyorum.
 
-> The lowest implementation of the method down the hierarchy is automatically invoked that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşideki en düşük uygulaması otomatik olarak çağrılır, bu JAVA'daki polimorfizmin tanımıdır.)
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Robert C. Martin'in Polimorfizm Tanımı:</h4>
+---
+
+> The lowest implementation of the method down the hierarchy is automatically invoked, that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşideki en düşük uygulaması otomatik olarak çağrılır, bu da JAVA'daki polimorfizmin tanımıdır.)
+
+</div>
 
 > **Not:** Bu arada **println** yönteminin olduğu yerde **toString()** yöntemini çağırmak gereksizdir. Çünkü **println** yöntemi bu yöntemi zaten otomatik olarak çağırır. Yani **System.out.println(p);** yazmamız yeterlidir.
 

@@ -50,7 +50,7 @@ toc_sticky: true
 Buradaki amacımız, sınıflar arasındaki "**is-a**" ilişkisinin ne anlama geldiğini anlamak ve bir önceki derste yarım bıraktığımız **3. koşulu** yerine getirmek olacaktır.
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Hedefler:</h4>
 ---
 1. Bütün ortak davranışları bir sınıfta tutmak,
 2. Farklı davranışa sahip olanları ise farklı sınıflara ayırmak

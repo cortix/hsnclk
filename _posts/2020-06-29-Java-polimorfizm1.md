@@ -61,11 +61,11 @@ Yukarıdaki örnekten de görüleceği üzere, referans türü **Person** <u>üs
 Kalıtım konusunun 9.[dersinin](/java-kalitim-polimorfizm/Java-inheritance9/) verdiğim tanımı burada da yinelemek istiyorum.
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Hatırlatma:</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Robert C. Martin'in Polimorfizm Tanımı:</h4>
 ---
 Polimorfizm konusu overriding konusu ile iç içe bir konudur ve beraber değerlendirmek çok önemlidir. **Robert C. Martin**'in polimorfizm için yaptığı şu tanımı sizinle paylaşmak istiyorum.
 
-> The lowest implementation of the method down the hierarchy is automatically invoked that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşideki en düşük uygulaması otomatik olarak çağrılır, bu JAVA'daki polimorfizmin tanımıdır.)
+> The lowest implementation of the method down the hierarchy is automatically invoked, that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşideki en düşük uygulaması otomatik olarak çağrılır, bu da JAVA'daki polimorfizmin tanımıdır.)
 
 </div>
 

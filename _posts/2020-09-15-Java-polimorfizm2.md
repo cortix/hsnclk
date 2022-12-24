@@ -43,7 +43,7 @@ toc_sticky: true
 
 ## Genel Bakış
 
-Katıldığım online bir etkinlikte object-oriented nedir şeklinde sorulan bir soruya **Robert C. Martin** şu şekilde yanıt vermişti.
+Katıldığım online bir etkinlikte **object-oriented** nedir şeklinde sorulan bir soruya **Robert C. Martin** şu şekilde yanıt vermişti.
 
 > "A language is object-oriented if it supports dynamic polymorphism" ("Bir dil, dinamik polimorfizmi destekliyorsa nesne yönelimlidir")
 
