@@ -4,7 +4,7 @@ comments: false
 excerpt: "Java'da polimorfizm ne anlama gelmektedir ve neden polimorfizme ihtiyaç duyarız?"
 header:
   teaser: "/assets/images/svg-book11.svg"
-  og_image: //assets/images/svg-book11.svg
+  og_image: /assets/images/svg-book11.svg
   overlay_image: /assets/images/svg-book11.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -41,7 +41,7 @@ toc_sticky: true
 18. Java’da Polimorfizm 5 - [Soyut(Abstract) Sınıflar ve Arayüzler(Interfaces)](/java-kalitim-polimorfizm/Java-polimorfizm5/)
 </div>
 
-## Polimorfizm Giriş
+## Polimorfizm Nedir?
 
 Polimorfizm ismi daha çok biyolojik bir terimdir. Polimorfizm biyolojide, iki veya daha fazla farklı fenotipin aynı tür popülasyonunda bulunması anlamına gelmektedir. Basitçe söylemek gerekirse, polimorfizm, bir gen üzerinde iki veya daha fazla özelliğin olması ihtimalidir. Örneğin, bir jaguarın cilt rengi açısından birden fazla olası özellik vardır; açık biçimde veya koyu biçimde olabilirler. Bu gen için birden fazla olası varyasyona sahip olduğundan, buna '**polimorfizm**' denir. Türkçe çevirisine **çok biçimlilik** de denilebilir.
 

@@ -4,7 +4,7 @@ comments: false
 excerpt: "Bu derste Java'daki Referans ve Nesne Tipleri ele alacağız. Aynı zamanda is-a ilişkisinin ne anlama geldiğini yine bu derste işleyeceğiz. Bunun yanı sıra, derleme zamanı ve çalışma zamanı kararları alınırken nelerin dikkate alındığından ve bir önceki derste yarım kalan, kalıtımı(inheritance) sağlamak için asgari hedefler nelerdir? başlıklı sorumuzun son maddesinden de bahsedeceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
-  og_image: //assets/images/svg-book10.svg
+  og_image: /assets/images/svg-book10.svg
   overlay_image: /assets/images/svg-book10.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -36,7 +36,7 @@ toc_sticky: true
 2. Java’da Kalıtım 2- [Extends](/java-kalitim-polimorfizm/Java-inheritance2/)
 3. **Java’da Kalıtım 3 - Referans ve Nesne Tipleri**
 4. Java’da Kalıtım 3.1 - [Static ve Dinamik Tür](/java-kalitim-polimorfizm/Java-inheritance3_1/)
-5. Java’da Kalıtım 4 - [Görünürlük Değiştiricileri](/java-kalitim-polimorfizm/Java-inheritance4/)
+5. Java’da Kalıtım 4 - [Görünürlük/Erişim Değiştiricileri](/java-kalitim-polimorfizm/Java-inheritance4/)
 6. Java’da Kalıtım 5 - [Java’da Nesne Oluşturma](/java-kalitim-polimorfizm/Java-inheritance5/)
 7. Java’da Kalıtım 6 - [Sınıf İnşası için Derleyici Kuralları](/java-kalitim-polimorfizm/Java-inheritance6/)
 8. Java’da Kalıtım 7 - [Sınıf Hiyerarşisinde Değişken İlklendirme](/java-kalitim-polimorfizm/Java-inheritance7/)
@@ -50,7 +50,7 @@ toc_sticky: true
 Buradaki amacımız, sınıflar arasındaki "**is-a**" ilişkisinin ne anlama geldiğini anlamak ve bir önceki derste yarım bıraktığımız **3. koşulu** yerine getirmek olacaktır.
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Hedefler:</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için hedefler:</h4>
 ---
 1. Bütün ortak davranışları bir sınıfta tutmak,
 2. Farklı davranışa sahip olanları ise farklı sınıflara ayırmak
@@ -98,7 +98,7 @@ p[2] = new Faculty();
 
 Yani bir **Person** dizisi hem **Student** hem de **Faculty** objelerini saklayabilir. Dersin başında bahsettiğimiz son şartı da bu şekilde sağlamış olduk. Yani **tüm bu nesneleri tek bir veri yapısında tutmaktan** bahsediyorum. Hem **Student**, hem **Faculty** hem de **Person** objelerini tek bir veri yapısı olan **Person** veri yapısında(data structure) saklamış olduk.
 
-### Örnek
+### Java'da IS-A İlişkisine Örnek
 
 Şu ana kadar öğrendiklerimizi uygulayacak olursak, aşağıdaki kod çalıştırıldığında nerelerde hata alırız? Bir editörde çalıştırmadan, yani bakarak çözmeye çalışın istiyorum.
 

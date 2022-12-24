@@ -4,7 +4,7 @@ comments: false
 excerpt: "Bu bölümde java'da abstract sınıfları ve arayüzleri ele almak istiyorum. Özellikle neler olduğu, hangi durumlarda hangisinin tercih edilmesi gerektiği hakkında konuşacağız. Bunun yanı sıra uygulama kalıtımı(**inheritance of implementation**) ve arayüzün kalıtımı(**inheritance of interface**) kavramlarının neler olduğunu karşılaştıracağız."
 header:
   teaser: "/assets/images/svg-book11.svg"
-  og_image: //assets/images/svg-book11.svg
+  og_image: /assets/images/svg-book11.svg
   overlay_image: /assets/images/svg-book11.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

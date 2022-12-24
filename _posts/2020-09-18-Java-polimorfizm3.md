@@ -4,7 +4,7 @@ comments: false
 excerpt: "Bu bölümde java'da casting işleminin ne olduğuna ve hangi durumlarda bu işleme ihtiyaç duyulduğuna bakacağız. Aynı zamanda bazı casting türleri hakkında bilgi verecek ve casting işleminin derleme ve çalışma zamanlarına etkileri hakkında konuşacağız."
 header:
   teaser: "/assets/images/svg-book11.svg"
-  og_image: //assets/images/svg-book11.svg
+  og_image: /assets/images/svg-book11.svg
   overlay_image: /assets/images/svg-book11.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -43,7 +43,7 @@ toc_sticky: true
 18. Java’da Polimorfizm 5 - [Soyut(Abstract) Sınıflar ve Arayüzler(Interfaces)](/java-kalitim-polimorfizm/Java-polimorfizm5/)
 </div>
 
-## Genel Bakış
+## Casting Nedir?
 
 Bazı durumlarda derleme ve çalışma zamanı kararlarını değiştirmek için derleyiciye yardım etmek gerekebilir. Bu gibi durumlarda **casting** dediğimiz işlemi uygularız. Ne demek istediğimi bir önceki bölümde yarım bıraktığımız kod üzerinden göstermek istiyorum.
 

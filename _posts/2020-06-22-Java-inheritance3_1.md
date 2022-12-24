@@ -1,10 +1,10 @@
 ---
 title: "Java'da Kalıtım 3.1 - Static ve Dinamik Tür"
 comments: false
-excerpt: "Bu derste hem Java'da hem de diğer programlama dillerinde statik ve dinamik tip dillerin farklarını ele alacak hem de bu ayrımın getirdiği ajantaj ve dezajantajlarını göreceğiz. Statik ve dinamik tür denilince ne anlamamız gerektiğini yine bu bölümde göreceksiniz."
+excerpt: "Bu bölümde hem Java'da hem de diğer programlama dillerinde statik ve dinamik tip dillerin farklarını ele alacak hem de bu ayrımın getirdiği ajantaj ve dezajantajlarını göreceğiz. Statik ve dinamik tür denilince ne anlamamız gerektiğini yine bu bölümde göreceksiniz."
 header:
   teaser: "/assets/images/svg-book10.svg"
-  og_image: //assets/images/svg-book10.svg
+  og_image: /assets/images/svg-book10.svg
   overlay_image: /assets/images/svg-book10.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -36,7 +36,7 @@ toc_sticky: true
 2. Java’da Kalıtım 2- [Extends](/java-kalitim-polimorfizm/Java-inheritance2/)
 3. Java’da Kalıtım 3 - [Referans ve Nesne Tipleri](/java-kalitim-polimorfizm/Java-inheritance3/)
 4. **Java’da Kalıtım 3.1 - Static ve Dinamik Tür**
-5. Java’da Kalıtım 4 - [Görünürlük Değiştiricileri](/java-kalitim-polimorfizm/Java-inheritance4/)
+5. Java’da Kalıtım 4 - [Görünürlük/Erişim Değiştiricileri](/java-kalitim-polimorfizm/Java-inheritance4/)
 6. Java’da Kalıtım 5 - [Java’da Nesne Oluşturma](/java-kalitim-polimorfizm/Java-inheritance5/)
 7. Java’da Kalıtım 6 - [Sınıf İnşası için Derleyici Kuralları](/java-kalitim-polimorfizm/Java-inheritance6/)
 8. Java’da Kalıtım 7 - [Sınıf Hiyerarşisinde Değişken İlklendirme](/java-kalitim-polimorfizm/Java-inheritance7/)
