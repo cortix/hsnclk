@@ -51,7 +51,7 @@ toc_sticky: true
 Bir önceki dersten de hatırlayacağımız üzere yazdığımız kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için belirlediğimiz temel hedefler şunlardı;
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Hedefler:</h4>
 ---
 1. **Bütün ortak davranışları bir sınıfta tutmak,**
 2. **Farklı davranışa sahip olanları ise farklı sınıflara ayırmak**
@@ -112,9 +112,8 @@ Görüleceği üzere ortak değişkenimiz olan **name**, sadece üst sınıfım�
 Böylelikle **Person** sınıfımız bizim **base/super/parent** sınıfımız olurken, **Student** ve **Faculty** sınıfları ise ana sınıftan türeyen **derived/subclass/child** olur.  
 
 <div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Peki Parent Sınıftan ne Miras Alınır?</h4>
 ---
-Peki Parent Sınıftan ne Miras Alınır?
 
 Tabii ki bütün özelliklerini değil.
 
