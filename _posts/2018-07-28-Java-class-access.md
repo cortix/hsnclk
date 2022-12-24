@@ -1,5 +1,5 @@
 ---
-title: "Java Sınıf Deklarasyonu ve Değiştiriciler"
+title: "Java Sınıf Deklarasyonu ve Erişim Değiştiriciler(Access Modifiers)"
 comments: false
 excerpt: "Java sınıf deklarasyonu nasıl yapılır? Değiştiriciler hakkında bilmeniz gerekenler nelerdir gibi soruları bu bölümde bulabilirsiniz."
 header:

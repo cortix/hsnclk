@@ -1,10 +1,10 @@
 ---
-title: "Java'da Kalıtım 4 - Görünürlük Değiştiricileri (Java Access Modifiers)"
+title: "Java'da Kalıtım 4 - Görünürlük/Erişim Değiştiricileri (Java Access Modifiers)"
 comments: false
-excerpt: "Bu derste Java'daki public, protected, package(default), private değiştirici işaretlerini ele alacağız. Bu değiştiricilerin, java'da görünürlüğü nasıl etkilediği hakkında fikir sahibi olacaksınız"
+excerpt: "Bu bölümde Java'daki public, protected, package(default), private değiştirici işaretlerini ele alacağız. Bu değiştiricilerin, java'da görünürlüğü nasıl etkilediği hakkında fikir sahibi olacaksınız"
 header:
   teaser: "/assets/images/svg-book10.svg"
-  og_image: //assets/images/svg-book10.svg
+  og_image: /assets/images/svg-book10.svg
   overlay_image: /assets/images/svg-book10.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -38,7 +38,7 @@ toc_sticky: true
 2. Java’da Kalıtım 2- [Extends](/java-kalitim-polimorfizm/Java-inheritance2/)
 3. Java’da Kalıtım 3 - [Referans ve Nesne Tipleri](/java-kalitim-polimorfizm/Java-inheritance3/)
 4. Java’da Kalıtım 3.1 - [Static ve Dinamik Tür](/java-kalitim-polimorfizm/Java-inheritance3_1/)
-5. **Java’da Kalıtım 4 - Görünürlük Değiştiricileri**
+5. **Java’da Kalıtım 4 - Görünürlük/Erişim Değiştiricileri**
 6. Java’da Kalıtım 5 - [Java’da Nesne Oluşturma](/java-kalitim-polimorfizm/Java-inheritance5/)
 7. Java’da Kalıtım 6 - [Sınıf İnşası için Derleyici Kuralları](/java-kalitim-polimorfizm/Java-inheritance6/)
 8. Java’da Kalıtım 7 - [Sınıf Hiyerarşisinde Değişken İlklendirme](/java-kalitim-polimorfizm/Java-inheritance7/)

@@ -1,10 +1,10 @@
 ---
 title: "Java'da Kalıtım 5 - Java'da Nesne Oluşturma"
 comments: false
-excerpt: "Bu derste Java'da Nesne oluşturma işlemini hafıza modeli konusunda işlemiştik. Bu konuyu tekrar gözden geçirmemizin nedeni, artık kalıtım konusunu bildiğimizden, şimdi nesnelerin gerçekte nasıl inşa edildiği hakkında daha fazla ayrıntı öğrenebiliriz."
+excerpt: "Bu bölümde Java'da Nesne oluşturma işlemini hafıza modeli konusunda işlemiştik. Bu konuyu tekrar gözden geçirmemizin nedeni, artık kalıtım konusunu bildiğimizden, şimdi nesnelerin gerçekte nasıl inşa edildiği hakkında daha fazla ayrıntı öğrenebiliriz."
 header:
   teaser: "/assets/images/svg-book10.svg"
-  og_image: //assets/images/svg-book10.svg
+  og_image: /assets/images/svg-book10.svg
   overlay_image: /assets/images/svg-book10.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
@@ -39,7 +39,7 @@ toc_sticky: true
 2. Java’da Kalıtım 2- [Extends](/java-kalitim-polimorfizm/Java-inheritance2/)
 3. Java’da Kalıtım 3 - [Referans ve Nesne Tipleri](/java-kalitim-polimorfizm/Java-inheritance3/)
 4. Java’da Kalıtım 3.1 - [Static ve Dinamik Tür](/java-kalitim-polimorfizm/Java-inheritance3_1/)
-5. Java’da Kalıtım 4 - [Görünürlük Değiştiricileri](/java-kalitim-polimorfizm/Java-inheritance4/)
+5. Java’da Kalıtım 4 - [Görünürlük/Erişim Değiştiricileri](/java-kalitim-polimorfizm/Java-inheritance4/)
 6. **Java’da Kalıtım 5 - Java’da Nesne Oluşturma**
 7. Java’da Kalıtım 6 - [Sınıf İnşası için Derleyici Kuralları](/java-kalitim-polimorfizm/Java-inheritance6/)
 8. Java’da Kalıtım 7 - [Sınıf Hiyerarşisinde Değişken İlklendirme](/java-kalitim-polimorfizm/Java-inheritance7/)

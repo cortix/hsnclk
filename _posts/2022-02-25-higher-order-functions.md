@@ -95,7 +95,7 @@ Fakat fonksiyonlara veya kodlara da *birinci sınıf vatandaşmış* gibi davran
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
 ---
-<u>İngilizce terimlerin</u> türkçe anlamlarının tam olarak neye karşılık geldiğini bilmediğim için parantez içerisinde ingilizce versiyonlarını da yazmaya gayret ettim. Umarım kafanız karışmaz.
+<u>İngilizce terimlerin</u> türkçe anlamlarının tam olarak neye karşılık geldiğini bilmediğim için parantez içerisinde ingilizce karşılıklarını da yazmaya gayret ettim. Umarım kafanız karışmaz.
 
 * **Higher-order functions :** üst düzey fonksiyonlar, yada yüksek dereceli fonksiyonlar olarak geçiyor.
 * **First-class citizen :** birinci sınıf vatandaş

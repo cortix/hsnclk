@@ -4,7 +4,7 @@ comments: false
 excerpt: "Java'da İlkel Veri Tipleri Bellekte Nasıl Saklanır? Bu durumun net anlaşılması için nasıl simüle edebiliriz? String interning nedir?"
 header:
   teaser: "/assets/images/svg-book9.svg"
-  og_image: //assets/images/svg-book9.svg
+  og_image: /assets/images/svg-book9.svg
   overlay_image: /assets/images/svg-book9.svg
   overlay_color: "#000"
   overlay_filter: "0.3"

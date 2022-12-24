@@ -22,6 +22,18 @@ html {
   @include breakpoint($x-large) {
     font-size: 15px; // change to whatever
   }
+
+  @media (max-width: 1279px) {
+    .sidebar-ads {
+        display: none;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .speak-friend {
+      display: none;
+    }
+  }
 }
 //https://github.com/mmistakes/minimal-mistakes/issues/1219
 //https://github.com/mmistakes/minimal-mistakes/issues/1184

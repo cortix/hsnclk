@@ -22,6 +22,7 @@ presets:
       jp2: 30
       png: 65
       jpg: 65
+      jpeg: 65
     link_source: false
     #dimension_attributes: true
     # sizes:
