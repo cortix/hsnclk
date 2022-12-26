@@ -65,7 +65,9 @@ Kalıtım konusunun 9.[dersinin](/java-kalitim-polimorfizm/Java-inheritance9/) v
 ---
 Polimorfizm konusu overriding konusu ile iç içe bir konudur ve beraber değerlendirmek çok önemlidir. **Robert C. Martin**'in polimorfizm için yaptığı şu tanımı sizinle paylaşmak istiyorum.
 
-> The lowest implementation of the method down the hierarchy is automatically invoked, that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşideki en düşük uygulaması otomatik olarak çağrılır, bu da JAVA'daki polimorfizmin tanımıdır.)
+> The lowest implementation of the method down the hierarchy is automatically invoked, that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşide en aşağıda bulunan uygulaması otomatik olarak çağrılır, bu da JAVA'daki polimorfizmin tanımıdır.)
+
+Burada en aşağıdaki uygulamadan(lowest implementation) kasıt **override edilen metottur**. Alt sınıfta bulunan bir metot üst sınıfta bulunan benzer bir metodu geçersiz kıldığında haliyle o yöntemin hiyerarşideki en alt uygulaması olur.
 
 </div>
 
