@@ -138,7 +138,9 @@ Diyelim ki bir main metodu içinde bir Person objesi oluşturup, yukarıdaki gib
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Robert C. Martin'in Polimorfizm Tanımı:</h4>
 ---
 
-> The lowest implementation of the method down the hierarchy is automatically invoked, that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşideki en düşük uygulaması otomatik olarak çağrılır, bu da JAVA'daki polimorfizmin tanımıdır.)
+> The lowest implementation of the method down the hierarchy is automatically invoked, that's the definition of the polymorphism in JAVA. (Yöntemin hiyerarşide en aşağıda bulunan uygulaması otomatik olarak çağrılır, bu da JAVA'daki polimorfizmin tanımıdır.)
+
+Burada en aşağıdaki uygulamadan(lowest implementation) kasıt **override edilen metottur**. Alt sınıfta bulunan bir metot üst sınıfta bulunan benzer bir metodu geçersiz kıldığında haliyle o yöntemin hiyerarşideki en alt uygulaması olur.
 
 </div>
 
