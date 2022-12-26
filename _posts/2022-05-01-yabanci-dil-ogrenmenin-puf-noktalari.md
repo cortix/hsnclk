@@ -1,5 +1,5 @@
 ---
-title: "Yabancı Dil Öğrenmenin Püf Noktaları (50 Dil Bilen Johan Vandewalle'den Yabancı Dil Öğrenmenin Püf Noktaları) PART 1"
+title: "Dil Öğrenme Teknikleri (50 Dil Çalışmış Johan Vandewalle'den Yabancı Dil Öğrenmenin Püf Noktaları) PART 1"
 comments: false
 excerpt: "Yazılımcılar İçin Yabancı Dil Bariyeri - Bu makalemde Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sizinle paylaşmak istiyorum."
 header:
