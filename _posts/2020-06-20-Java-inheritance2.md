@@ -53,9 +53,9 @@ Bir önceki dersten de hatırlayacağımız üzere yazdığımız kodda tutarlı
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için hedefler:</h4>
 ---
-1. **Bütün ortak davranışları bir sınıfta tutmak,**
-2. **Farklı davranışa sahip olanları ise farklı sınıflara ayırmak**
-3. Tüm bu nesneleri tek bir veri yapısında tutmak.
+1. [x] **Bütün ortak davranışları bir sınıfta tutmak,**
+2. [x] **Farklı davranışa sahip olanları ise farklı sınıflara ayırmak**
+3. [ ] Tüm bu nesneleri tek bir veri yapısında tutmak.
 </div>
 
 İlk ikisini bu derste ele almaya çalışacağız. Hatırlayacağınız üzere bunu java'da kalıtım(inheritance) kullanarak çözmeye çalışacağımızı belirtmiştik.
