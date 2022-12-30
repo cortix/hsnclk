@@ -20,7 +20,7 @@ tags:
   - Java memory model
   - Java İlkel Tipler İçin Hafıza Modeli
   - Java string interning
-last_modified_at: 2020-02-19T15:12:19-04:00
+last_modified_at: 2022-12-29T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
