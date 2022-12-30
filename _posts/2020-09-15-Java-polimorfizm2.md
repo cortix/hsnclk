@@ -17,7 +17,7 @@ tags:
   - Java polimorfizm
   - Java compile-time decision
   - Java runtime decision
-last_modified_at: 2020-02-19T15:12:19-04:00
+last_modified_at: 2022-12-29T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true

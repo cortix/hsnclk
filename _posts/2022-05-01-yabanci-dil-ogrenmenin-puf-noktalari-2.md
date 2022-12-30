@@ -27,7 +27,7 @@ tags:
   - Yabancı dil öğrenmenin sırları
   - Yabancı Dil Öğrenmenin Püf Noktaları
   - Johan Vandewalle metodu
-last_modified_at: 2022-02-23T15:12:19-04:00
+last_modified_at: 2022-12-29T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
