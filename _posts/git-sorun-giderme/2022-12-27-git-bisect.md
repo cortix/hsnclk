@@ -59,7 +59,7 @@ DESCRIPTION
 {% endhighlight %}
 
 
-Tabii bu işaretlemelerden önce bisect state'ine girmemiz gerekmektedir. Bunun için ise ``bisect start`` komutunu kullanırız.
+<br/>Tabii bu işaretlemelerden önce bisect state'ine girmemiz gerekmektedir. Bunun için ise ``bisect start`` komutunu kullanırız.
 
 <!-- Bisect'i bir şeyin ilk kez nerede tanıtıldığını bulmak için kullanabilirsiniz -->
 
@@ -156,6 +156,23 @@ Date:   Thu Dec 29 03:13:56 2022 +0300
 <br/><br/><img src="{{ site.url }}{{ site.baseurl }}/assets/images/git-sorun-giderme/2022-12-27-git-bisect/5.svg"  width="100%" height="100%" loading="lazy" alt="git-bisect usage(git-bisect kullanımı)"><br/><br/>
 
 
+### Git bisect visualize
+
+{% highlight bash %}
+% git bisect visualize
+{% endhighlight %}
+
+Bu komut sayesinde ise ilgili commit'i **gitk** yardımcı programı aracılığı ile görselleştirebilirsiniz. Bu sayede commit hakkında daha detaylı bilgi alabilirsiniz. Örneğin hataya ilk neden olan kişinin kullanıcı bilgilerini de bu komut sayesinde görüntüleyebilirsiniz.
+
+
+### Git bisect log
+
+{% highlight bash %}
+% git bisect log
+{% endhighlight %}
+
+commit'leri **good** veya **bad** olarak işaretledikten sonra, şu ana kadar yapılanları göstermek için ``git bisect log`` komutunu kullanabilirsiniz.
+
 ### Git bisect reset
 
 Hataya neden olan ilk commit'i bulduktan sonra bisect state'inden çıkmak isteyeceksiniz. Bunun için ise ``git bisect reset`` komutunu kullanabilirsiniz.
@@ -167,6 +184,26 @@ Switched to branch 'main'
 Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 {% endhighlight %}
+
+
+### Git bisect run
+
+Diyelim ki kodunuzun çalışıp çalışmadığını test edecek bir script'te sahipsiniz;
+
+{% highlight bash %}
+git bisect run my_script arguments
+{% endhighlight %}
+
+bu komutu kullanarak **bad** ve **good** işaretleme işlemlerini otomatize edebilirsiniz. Yalnız, script'inizi çalıştırdığınızda kodunuz iyiyse(yani **good/old** ise) script'i **0** koduyla, kodunuz kötüyse(yani **bad/new** ise) **125** dışında **1** ile **127 (dahil)** arasında bir kodla döndürmeniz gerektiğini unutmayın. ``git bisect run`` komutuyla ilgili detaylı bilgi için, ``git bisect --help`` komutu vasıtasıyla detaylı bilgi alabilirsiniz.
+
+Geçerli kaynak kodu <u>test edilemediğinde</u> **125** rakamı çıktı olarak döndürülmelidir. Komut dosyası bu kodla çıkarsa, geçerli revizyon atlanır (bunun için ``git bisect skip`` bölümüne bakın).
+
+**Not:** Bu arada **good** yerine **old**, **bad** yerine ise **new** işaretini de kullanabilirsiniz.
+{: .notice--warning}
+
+## Git bisect komutunun avantajları
+
+Yukarıdaki örnekten de görüleceği üzere hatanın ilk ortaya çıktığı yeri 10 commit'i de tek tek test etmek yerine yaklaşık 3-4 adımda belirlemiş olduk. Bu aralık 10 yerine 100 veyahut 1000 commit'ten de oluşuyor olabilirdi. Git bisect, **ikili arama(binary search)** algoritması sayesinde test sayısını dramatik bir şekilde azaltır.
 
 
 ## Referanslar

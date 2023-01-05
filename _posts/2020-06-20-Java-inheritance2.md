@@ -30,7 +30,7 @@ toc_sticky: true
 **ÖNEMLİ :** Kendim için aldığım notlar. Umarım size de bir faydası olur. Kullanılan her bir makale referans olarak eklenmiştir.
 {: .notice}
 
-<div class="notice--success" markdown="1">
+<div class="notice--info" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java’da Kalıtım(inheritance) ve Java’da Polimorfizm Serisi</h4>
 ---
 
@@ -60,7 +60,14 @@ Bir önceki bölümden de hatırlayacağımız üzere yazdığımız kodda tutar
 
 İlk iki hedefi bu bölümde ele almaya çalışacağız. Hatırlayacağınız üzere, bunu java'da kalıtım(inheritance) kullanarak çözmeye çalışacağımızı belirtmiştik.
 
-### Ortak Kod
+
+## Java'da extends anahtar kelimesine bir örnek
+
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java extends anahtar kelimesinden yoksun bir örnek</h4>
+---
+
+**Ortak Kod**
 
 ``` java
 public class Person {
@@ -69,7 +76,7 @@ public class Person {
 }
 ```
 
-### Farklı Sınıflara Ayrılan Kod
+**Farklı Sınıflara Ayrılan Kod**
 
 ``` java
 public class Student {
@@ -82,10 +89,14 @@ public class Faculty {
   ....
 }
 ```
+</div>
 
 Aslında 1 ve 2. seçenekleri tamamlamamız için sihirli bir anahtar kelimesine ihtiyacımız bulunmaktadır. Çünkü ortak değişkenler hâlen tek bir sınıfta ikamet ediyor. Tahmin edeceğiniz üzere bu kelime **extends** anahtar kelimesidir.
 
-### Ortak Kod
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java extends anahtar kelimesiyle bir örnek</h4>
+---
+**Ortak Kod**
 
 ``` java
 public class Person {
@@ -94,7 +105,7 @@ public class Person {
 }
 ```
 
-### Farklı Sınıflara Ayrılan Kod
+**Farklı Sınıflara Ayrılan Kod**
 
 ``` java
 public class Student extends Person {
@@ -106,29 +117,30 @@ public class Faculty extends Person {
 }
 ```
 
+</div>
 
-Görüleceği üzere ortak değişkenimiz olan **name**, sadece üst sınıfımız olan **Person** sınıfında yer almaktadır. Ama private erişim değiştiricisine sahip!!! Bu arada **extend** anahtar kelimesinin anlamı genişletmektir. Yalnız programlama jargonundaki tam karşılı ise **miras almaktır**. Yani **Student** ve **Faculty** sınıflarını **Person** sınıfına **extends** ettiğimizde aslında **Person** sınıfını miras almış oluruz.
+Görüleceği üzere ortak değişkenimiz olan **name**, sadece üst sınıfımız olan **Person** sınıfında yer almaktadır. Ama **private** <u>erişim değiştiricisine sahip!!!</u>
 
-<div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Peki Parent Sınıftan ne Miras Alınır?</h4>
----
+Bu arada **extend** anahtar kelimesinin anlamı genişletmektir. Yalnız programlama jargonundaki tam karşılı ise **miras almaktır**. Yani **Student** ve **Faculty** sınıflarını **Person** sınıfına **extends** ettiğimizde aslında **Person** sınıfını miras almış oluruz.
 
-Tabii ki bütün özelliklerini değil.
+## Peki Java'da parent sınıftan ne miras alınır?
+
+Tabii ki bütün özelliklerini değil!
 
 * **public** örnek değişkenleri(instance variables) miras alırız,
 * **public** metotları miras alırız,
 * **private** örnek değişkenleri de teknik olarak miras alınır ama bu değişkenlere erişim için public metotlara ihtiyacımız olacaktır. Aşağıda bunu izah etmeye çalışacağım.
-
-</div>
 
 **Not:** Dikkat edecek olursanız, üst sınıfımız olan **Person** sınıfında bulunan **name** ismindeki üye değişkenimiz **private** erişim değiştiricisine sahip olduğu için alt sınıflar tarafından miras alınsa da bu değişkene erişim şu an için mümkün gözükmemektedir.
 {: .notice--warning}
 
 Kaldığımız yerden devam edecek olursak, **Person** sınıfımız bizim **base/super/parent** sınıfımız olurken, **Student** ve **Faculty** sınıfları ise ana sınıftan türeyen **derived/subclass/child** olur.  
 
-### Gizli değişken (Hidden Variable) | Gölge değişken (shadow variable / variable shadowing)
+## Gizli değişken (Hidden Variable) | Gölge değişken (shadow variable / variable shadowing)
 
-{% highlight java mark_lines="7" %}
+Bu örnekte ise hem parent hem de child sınıfta, **name** isminde benzer üye değişkenlerimiz bulunmaktadır. Görüleceği üzere, her ikisi de **private** erişim değiştiricisine sahip. Sizce **Student** sınıfında **name** adında private bir üye değişkenine gerçekten de sahip olmanız gerekiyor mu?
+
+{% highlight java %}
 public class Person {
   private String name;
   ....
@@ -140,22 +152,18 @@ public class Student extends Person {
 }
 {% endhighlight %}
 
+<br/>Aslında hayır... Hatta bu kötü bir pratiktir.
 
+Çünkü, **Student** sınıfı içindeki private **name** değişkeni, **gizli değişken** veya **gölge değişken** (variable shadowing) olarak ifade ettiğimiz şekilde davranır. Yani hangi sınıfın **name** üye değişkeninden bahsettiğinizi belirlemek zordur. **Student** mı yoksa **Person** mı? Bu yüzden **Student** sınıfı içinde tekrardan aynı isimli bir değişkeni tanımlamamız anlamsızdır, çünkü bu değişkeni otomatik olarak **Person** sınıfından zaten miras alırsınız.
 
-Bu örnekte ise hem parent hem de child sınıfta, **name** isminde benzer üye değişkenlerimiz bulunmaktadır. Görüleceği üzere, her ikisi de **private** erişim değiştiricisine sahip. Sizce **Student** sınıfında **name** adında private bir üye değişkenine gerçekten de sahip olmanız gerekiyor mu?
+## Java'da private örnek değişkenine erişim nasıl sağlanır?
 
-Aslında hayır... Hatta bu kötü bir pratiktir. Çünkü, **Student** sınıfı içindeki private **name** değişkeni, **gizli değişken** veya **gölge değişken**(variable shadowing) olarak ifade ettiğimiz şekilde davranır. Yani hangi sınıfın **name** üye değişkeninden bahsettiğinizi belirlemek zordur. **Student** mı yoksa **Person** mı???? Bu yüzden Student sınıfı içinde tekrardan aynı isimli bir değişkeni tanımlamamız anlamsızdır, çünkü bu değişkeni otomatik olarak **Person** sınıfından zaten miras alırsınız.
-
-<div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Private örnek değişkenine erişim</h4>
----
-
-* Peki **private** olan bu örnek değişkenlerini miras alabiliyorsak bunlara nasıl erişeceğiz?
+> Peki **private** olan bu örnek değişkenlerini miras alabiliyorsak bunlara nasıl erişeceğiz?
 
 **private** örnek değişkenlerine doğrudan erişim sağlayamasak da **public** metotlar üzerinden bu değişkenlere erişim sağlayabiliriz.
 
 **getter** ve **setter** metodlar buna güzel bir örnektir. Hatta bu erişim yöntemi şiddetle tavsiye edilir.
-</div>
+
 
 ``` java
 public class Person {
