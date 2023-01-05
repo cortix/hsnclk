@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 5 - Java'da Nesne Oluşturma"
 comments: false
-excerpt: "Bu bölümde Java'da Nesne oluşturma işlemini hafıza modeli konusunda işlemiştik. Bu konuyu tekrar gözden geçirmemizin nedeni, artık kalıtım konusunu bildiğimizden, şimdi nesnelerin gerçekte nasıl inşa edildiği hakkında daha fazla ayrıntı öğrenebiliriz."
+excerpt: "Bu bölümde java'da nesne oluşturma işlemini kalıtım perspektifinden derinlemesine ele alacağız. "
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg
@@ -50,7 +50,7 @@ toc_sticky: true
 
 ## Genel Bakış
 
-Bu derste işleyeceklerimiz, tüm nesnelerin aslında ``Object`` sınıfından türetildiğini, özünde bu sınıfı miras aldığını tanımak olacaktır. Bununla beraber, Java'da nesnelerin içten dışa nasıl inşa edildiğini görecek ve sonrasında örnek değişkenlerin ``Object`` sınıfından başlayarak nasıl başlattığına(initialization) bakacağız.
+Bu bölümde işleyeceklerimiz, tüm nesnelerin aslında ``Object`` sınıfından türetildiğini, özünde bu sınıfı miras aldığını tanımak olacaktır. Bununla beraber, Java'da nesnelerin içten dışa nasıl inşa edildiğini görecek ve sonrasında örnek değişkenlerin ``Object`` sınıfından başlayarak nasıl başlattığına(initialization) bakacağız.
 
 Java'da nesnelerin içten dışa nasıl inşa edildiğini gördük.
 
@@ -124,7 +124,7 @@ Ve sonra ``Student()`` kurucusuna geri döner ve ``Student`` ile ilişkili deği
 
 <br/>{% picture 2020-06-23-Java-inheritance5/hierarchy4.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
-Bu süreç boyunca aslında tüm bu değişkenleri başlattık, hatta nesneye kadar gidip geri döndük. Aslında içten dışa ilklendirmeden bunu kastediyorduk. Ama değişken ilklendirirken de izlenilen kuralları bilmemiz gerekecek o yüzden bu dersten 2 ders sonrasında bu [kuralları](/java-kalitim-polimorfizm/Java-inheritance7/) ele alacağız. Sabırla ilelemenizi öneririm.
+Bu süreç boyunca aslında tüm bu değişkenleri başlattık, hatta nesneye kadar gidip geri döndük. Aslında içten dışa ilklendirmeden bunu kastediyorduk. Ama değişken ilklendirirken de izlenilen kuralları bilmemiz gerekecek. Bu sebepten ötürü, bu bölümden 2 ders sonrasında bu [kuralları](/java-kalitim-polimorfizm/Java-inheritance7/) ele alacağız. Sabırla ilelemenizi öneririm.
 
 <br/>{% picture 2020-06-23-Java-inheritance5/hierarchy5.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 

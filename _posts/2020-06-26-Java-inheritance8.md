@@ -51,7 +51,7 @@ toc_sticky: true
 
 ## Genel Bakış
 
-Aşağıdaki sorularda bir önceki derslerde öğrendiklerimizi pekiştirmeye çalışacağız. Lütfen önce koda bakarak kendiniz çözmeye çalışın. Bu çok daha yararlı bir egzersizdir. IDE kullanarak çözmeye çalışmak kodun çalışma mantığını anlamanıza yardımcı olmaz. Kalem kağıt kullanabilirsiniz.
+Aşağıdaki sorularda bir önceki derslerde öğrendiklerimizi pekiştirmeye çalışacağız. Lütfen önce koda bakarak kendiniz çözmeye çalışın. Bu çok daha yararlı bir egzersizdir. IDE kullanarak çözmeye çalışmak kodun çalışma mantığını anlamanıza yardımcı olmaz. Kalem kâğıt kullanabilirsiniz.
 
 ## Örnek 1
 

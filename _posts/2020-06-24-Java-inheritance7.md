@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 7 - Sınıf Hiyerarşisinde Değişken İlklendirme (Java Variable Initialization)"
 comments: false
-excerpt: "Java'da nesneleri oluştururken, bulunduğumuz alt sınıf kurucuları, hiyerarşik sırada en üstte bulunan Object sınıfına ulaşana kadar içten dışa doğru çağrıldığından bahsetmiştik. Bu derste ise en dıştaki sınıfın üye değişkenlerinden başlayıp, bulunduğumuz sınıfa kadar üye değişkenlerinin nasıl ilklendirildiğini göreceğiz."
+excerpt: "Bu bölümde java'da en dıştaki sınıfın üye değişkenlerinden başlayıp, içteki sınıfa kadar üye değişkenlerinin nasıl ilklendirildiğini göreceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg
@@ -53,13 +53,13 @@ toc_sticky: true
 
 Son derslerde Java'da sınıf oluşturmanın veya nesne oluşturmanın nasıl gerçekleştiğine, özellikle kalıtımın nesne oluşturmaya nasıl uygulandığına bakmıştık.
 
-Son iki derste gördüklerimiz özetle şunlardı. Öncelikli olarak tüm nesnelerin içten dışa doğru yaratıldığını söyleyerek başladık. Son derste derleyici kurallarının bunu nasıl gerçekleştirdiğini gördük. Bu arada bu kuralları bilmek istememizin nedeni, kodumuzu rahatlıkla izlememize yardımcı olmasıdır. Aslında, bu derste, kodumuzda belli başlı hatalar göreceğiz. Bu hataların da bu kuralların uygulanmaması nedeniyle ortaya çıktığını anlayacaksınız.
+Son iki bölümde gördüklerimiz özetle şunlardı. Öncelikli olarak tüm nesnelerin içten dışa doğru yaratıldığını söyleyerek başladık. Son bölümde derleyici kurallarının bunu nasıl gerçekleştirdiğini gördük. Bu arada bu kuralları bilmek istememizin nedeni, kodumuzu rahatlıkla izlememize yardımcı olmasıdır. Aslında bu bölümde, kodumuzda belli başlı hatalar göreceğiz. Bu hataların da bu kuralların uygulanmaması nedeniyle ortaya çıktığını anlayacaksınız.
 
 Şu ana kadar yaptığımız, aslında hiçbir üye değişkeni başlatmadan/ilklendirmeden bir dizi varsayılan kurucu(constructor) oluşturmak oldu. Bu kurucular yaratılırken, alt sınıftan başlayarak, kalıtım hiyerarşisinde en üst sınıf olan **Object** sınıfının kurucusuna kadar, belli bir sırayla ilerlediğini gördük. Şimdi ise yarım bıraktığımız iş olan değişkenleri ilklendirme işlemine odaklanacağız.
 
-Muhtemelen bir kurucuda daha önce bir değişken başlattınız(yani ilklendirdiniz). Yalnız bu derste odaklandığımız şey kalıtım için geçerli olan unsurlardır. Ayrıca sınıf oluşturmaya yardımcı olması için aynı sınıf(same-class) kurucuları ve üst sınıf(superclass) kurucuları kullanacağız.
+Muhtemelen bir kurucuda daha önce bir değişken başlattınız(yani ilklendirdiniz). Yalnız bu bölümde odaklandığımız şey kalıtım için geçerli olan unsurlardır. Ayrıca sınıf oluşturmaya yardımcı olması için aynı sınıf(same-class) kurucuları ve üst sınıf(superclass) kurucuları kullanacağız.
 
-Geçtiğimiz derslerde verdiğimiz örnek sınıflar olan **Person** ve **Student** sınıflarını bu derste de kullanalım istiyorum.
+Geçtiğimiz derslerde verdiğimiz örnek sınıflar olan **Person** ve **Student** sınıflarını bu bölümde de kullanalım istiyorum.
 
 <br/>{% picture 2020-06-24-Java-inheritance6/student.png --alt Java compiler rule(java derleyici kuralı) --img width="100%" height="100%" %}<br/>
 

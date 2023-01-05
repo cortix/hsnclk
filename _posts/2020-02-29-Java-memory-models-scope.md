@@ -1,7 +1,7 @@
 ---
 title: "Java'da Hafıza Modeli 4 - Kapsam(Scope)"
 comments: false
-excerpt: "Java'da kapsam(scope), değişkenin erişilebilir olduğu bölümüdür. Bu derste, Java hafıza modelini, kapsam(scope) kavramını da dahil ederek bir bütün halinde ele alacağız."
+excerpt: "Java'da kapsam(scope), değişkenin erişilebilir olduğu bölümüdür. Bu bölümde, Java hafıza modelini, kapsam(scope) kavramını da dahil ederek ele alacağız."
 header:
   teaser: "/assets/images/svg-book9.svg"
   og_image: /assets/images/svg-book9.svg

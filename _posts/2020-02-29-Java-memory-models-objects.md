@@ -65,7 +65,7 @@ int deg1 = 1;
 SampleTest sample = new SampleTest(1,2);
 ```
 
-Yukarıdaki örneğimizde **ilkel** ve **ilkel olmayan** veri tiplerine birer örnek görmektesiniz. Bir önceki dersten `int` ilkel veri tipine aşinayız. İkinci satırda ise ilkel olmayan veri tipine bir örnek verilmiştir. **SampleTest** isminde bir sınıftan oluşturulmuş bir nesne ve o nesneyi temsil eden **sample** adında bir değişken(bundan sonraki bölümlerde değişken yerine referans kullanmaya çalışacağım. Aslında ikisi de doğru fakat **stack**'de objeyi temsil ettiği için bu değişkenin referans olarak ifade edilmesi daha doğru olacaktır.)!!!
+Yukarıdaki örneğimizde **ilkel** ve **ilkel olmayan** veri tiplerine birer örnek görmektesiniz. Bir önceki bölümden `int` ilkel veri tipine aşinayız. İkinci satırda ise ilkel olmayan veri tipine bir örnek verilmiştir. **SampleTest** isminde bir sınıftan oluşturulmuş bir nesne ve o nesneyi temsil eden **sample** adında bir değişken(bundan sonraki bölümlerde değişken yerine referans kullanmaya çalışacağım. Aslında ikisi de doğru fakat **stack**'de objeyi temsil ettiği için bu değişkenin referans olarak ifade edilmesi daha doğru olacaktır.)!!!
 
 ## İlkel Olmayan Veri Türleri İçin Hafıza Modeli
 
@@ -93,7 +93,7 @@ Adım adım yukarıdaki kod bloğu nasıl çalışır, resmetmeye çalışalım;
 
 <br/>{% picture 2020-02-29-Java-memory-models-objects/deg1.png --alt Java variable assignment(java değişken atama) --img width="100%" height="100%" %}<br/>
 
-* **1.satır:** Bu ilk satır bir önceki derste yaptığımız gibi değişken tanımlama işlemidir. Java'ya, tamsayı(int) tipinde bir değeri saklamak için yeni bir alan istiyorum, diyorsunuz. Ve o alanı(space) **deg1** etiketiyle etiketleyeceğinizi belirtiyorsunuz. Şimdi hafıza modelimizde bunu göz önünde canlandırabilmek için bir kutu çizeceğiz. Bu kutu değişkeni temsil etmem gereken alanı(space) işaret ediyor. Sonrasında bu değişkeni **deg1** ismiyle etiketliyorum. Bir önceki dersteki işlemin aynısı!!!
+* **1.satır:** Bu ilk satır bir önceki bölümde yaptığımız gibi değişken tanımlama işlemidir. Java'ya, tamsayı(int) tipinde bir değeri saklamak için yeni bir alan istiyorum, diyorsunuz. Ve o alanı(space) **deg1** etiketiyle etiketleyeceğinizi belirtiyorsunuz. Şimdi hafıza modelimizde bunu göz önünde canlandırabilmek için bir kutu çizeceğiz. Bu kutu değişkeni temsil etmem gereken alanı(space) işaret ediyor. Sonrasında bu değişkeni **deg1** ismiyle etiketliyorum. Bir önceki bölümde bulunan işlemin aynısı!!!
 
 
 <br/>{% picture 2020-02-29-Java-memory-models-objects/sample1.png --alt Java reference variable assignment(java referans değişkeni atama) --img width="100%" height="100%" %}<br/>

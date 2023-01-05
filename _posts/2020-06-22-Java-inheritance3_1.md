@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 3.1 - Static ve Dinamik Tür"
 comments: false
-excerpt: "Bu bölümde hem Java'da hem de diğer programlama dillerinde statik ve dinamik tip dillerin farklarını ele alacak hem de bu ayrımın getirdiği ajantaj ve dezajantajlarını göreceğiz. Statik ve dinamik tür denilince ne anlamamız gerektiğini yine bu bölümde göreceksiniz."
+excerpt: "Hem programlama dillerindeki statik ve dinamik tip dillerin farklarını ele alacak hem de bu ayrımın getirdiği avantaj ve dezavantajları göreceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg
@@ -145,7 +145,7 @@ Görüleceği üzere ``a`` değişkeni, **string** bir değer olmasına rağmen 
 
 ## Zayıf Tip Dile Örnek (Weakly Typed Languages)
 
-Diğer taraftan **weakly-typed**(zayıf tip) bir dil, değişkenlerin belirli bir veri türüne bağlı olmadığı bir dildir; hala bir türü vardır, ancak tür güvenlik kısıtlamaları, güçlü yazılan dillere göre daha düşüktür.
+Diğer taraftan **weakly-typed**(zayıf tip) bir dil, değişkenlerin belirli bir veri türüne bağlı olmadığı bir dildir; hâlâ bir türü vardır, ancak tür güvenlik kısıtlamaları, güçlü yazılan dillere göre daha düşüktür.
 
 Örneğin javascript, tıpkı C programlama dili gibi zayıf yazılan dile bir örnektir. Her ne kadar C static tip bir dil, javascript ise dinamik tip bir dil olmasına rağmen her ikisi de **weakly-typed**(zayıf tip) bir dil olarak geçmektedir. Peki bu ne demek?
 

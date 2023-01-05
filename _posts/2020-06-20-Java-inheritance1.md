@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 1 - Kalıtımı Neden Kullanırız? Kalıtımı Sağlamak İçin Asgari Şartlar Nelerdir?"
 comments: false
-excerpt: "Bu derste Java'daki kalıtım(inheritance) ve polimorfizm kavramlarını genel olarak ele alacak ve bununla birlikte kalıtımı sağlamak için asgari hedeflerin neler olduğunu işleyeceğiz."
+excerpt: "Bu bölümde Java'daki kalıtım(inheritance) ve polimorfizm kavramlarını ele alacak ve kalıtımı sağlamak için asgari hedeflerin neler olduğunu işleyeceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg

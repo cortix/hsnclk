@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 3 - Referans ve Nesne Tipleri"
 comments: false
-excerpt: "Bu derste Java'daki Referans ve Nesne Tipleri ele alacağız. Aynı zamanda is-a ilişkisinin ne anlama geldiğini yine bu derste işleyeceğiz. Bunun yanı sıra, derleme zamanı ve çalışma zamanı kararları alınırken nelerin dikkate alındığından ve bir önceki derste yarım kalan, kalıtımı(inheritance) sağlamak için asgari hedefler nelerdir? başlıklı sorumuzun son maddesinden de bahsedeceğiz."
+excerpt: "Bu bölümde java'da referans ve nesne tiplerini, is-a ilişkisinin ne anlama geldiğini, bunun yanı sıra derleme zamanı ve çalışma zamanı kararları işleyeceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg
@@ -47,7 +47,7 @@ toc_sticky: true
 
 ## Genel Bakış
 
-Buradaki amacımız, sınıflar arasındaki "**is-a**" ilişkisinin ne anlama geldiğini anlamak ve bir önceki derste yarım bıraktığımız **3. koşulu** yerine getirmek olacaktır.
+Buradaki amacımız, sınıflar arasındaki "**is-a**" ilişkisinin ne anlama geldiğini anlamak ve bir önceki bölümde yarım bıraktığımız **3. koşulu** yerine getirmek olacaktır.
 
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için hedefler:</h4>
@@ -64,14 +64,14 @@ Bir önceki ders kodda tutarlılığı sağlamak ve veri yapısını tek bir sı
 
 <br/>{% picture 2020-06-21-Java-inheritance3/isa.png --alt java reference and object type, java is-a relationship (java referans ve obje tipi, java is-a ilişkisi) --img width="100%" height="100%" %}<br/>
 
-Referans ve obje tipleri konusuna şu [derste](/java-hafiza-yonetimi/Java-memory-models-objects/#referans-ve-nesne-türleri) biraz değinmiştik. Devam etmeden önce göz gezdirmenizde yarar var.
+Referans ve obje tipleri konusuna şu [bölümde](/java-hafiza-yonetimi/Java-memory-models-objects/#referans-ve-nesne-türleri) biraz değinmiştik. Devam etmeden önce göz gezdirmenizde yarar var.
 
 **NOT :** Bu arada referans tipleri, deklare edilen tipler(**declared type**) olarak da tanımlanır.
 {: .notice--success}
 
-Yukarıdaki şekili biraz yorumlamaya çalışalım istiyorum. Önceki derste belirttiğimiz gibi <u>referans ve nesne türleri de her zaman aynı olmayabilir</u>. Heap alanında oluşan nesnenin tipi ile, aynı nesneyi stack alanında temsil eden değişkenin, yani referansın tipi farklı olabilir. Yukarıdaki örnekte **Person** bir parent(ana) sınıftır. **Student** ve **Faculty** sınıfları ise birer child(çocuk) sınıftır ve Person sınıfını **extends** anahtar kelimesi ile miras almıştır.
+Yukarıdaki şekili biraz yorumlamaya çalışalım istiyorum. Önceki bölümde belirttiğimiz gibi <u>referans ve nesne türleri de her zaman aynı olmayabilir</u>. Heap alanında oluşan nesnenin tipi ile, aynı nesneyi stack alanında temsil eden değişkenin, yani referansın tipi farklı olabilir. Yukarıdaki örnekte **Person** bir parent(ana) sınıftır. **Student** ve **Faculty** sınıfları ise birer child(çocuk) sınıftır ve Person sınıfını **extends** anahtar kelimesi ile miras almıştır.
 
-Bu sebepten ötürü stack alanında bulunan değişkenin/referansın tipini parent sınıf olan **Person** yapabiliriz. Bir üst sınıf olduğu için stack alanında **Student** ve **Faculty** sınıflarını temsil edebilir. Yalnız önceki derste verdiğimiz **Map/HashMap** ilişkisine benzetmeyin. Çünkü **Map** bir soyut sınıftır. **Person** sınıfı her ne kadar bir parent sınıf olsa da, somut bir sınıftır. **Person** sınıfını bu yüzden heap alanında somutlaştırabiliriz.
+Bu sebepten ötürü stack alanında bulunan değişkenin/referansın tipini parent sınıf olan **Person** yapabiliriz. Bir üst sınıf olduğu için stack alanında **Student** ve **Faculty** sınıflarını temsil edebilir. Yalnız önceki bölümde verdiğimiz **Map/HashMap** ilişkisine benzetmeyin. Çünkü **Map** bir soyut sınıftır. **Person** sınıfı her ne kadar bir parent sınıf olsa da, somut bir sınıftır. **Person** sınıfını bu yüzden heap alanında somutlaştırabiliriz.
 
 
 ## IS-A İlişkisi
@@ -150,7 +150,7 @@ public class TestFaculty {
 
 * `int m = p.getID();` hata alırız, peki neden? Bildiğimiz gibi ``p`` değişkeninin tipi **Person** sınıfıdır. **Person** sınıfının da böyle bir metodu olmadığından hata mesajı alırız. Ama şunu söyleyebilirsiniz. İyi de biz bir önceki satırda ``p`` referansını/değişkenini artık heap alanında ``s`` referansının işaret ettiği **Student** objesine atamıştık. Artık sahip olması lazım!!!! diye düşünebilirsiniz. Evet tam olarak bunu yaptık. Fakat derleyici bunu bilmiyor. Derleyici bunu bir **Person** nesnesi olarak görüyor çünkü başlangıçta bu şekilde ayarlanmış. Derleyici **p**'nin bir **Student** referası olduğunu ancak çalışma zamanında(run-time) görecektir. <u>Çünkü <b>referanslar</b> ile ilgili kararlar derleme zamanında, <b>objeler/nesneler</b> ile ilgili kararlar ise çalışma zamanında alınır. Bu yüzden derleyici çalışma zamanına geçmeden <b>obje tiplerini</b> bilmeyecektir.</u>
 
-  Programı daha çalıştırmadığımız için, derleme sırasında hata almış olacağız. Haliyle java **p** referasını halen bir **Person** olarak düşünecektir. Alınan hata şu şekildedir. **Cannot resolve method 'getID' in 'Person'.** Aslında derleme zamanında bu hata cast işlemi yapılarak çözülebilir. ``int m = ((Student) p).getID();`` yaptığımızda derleme hatasını bir bakıma engellemiş oluruz. Ama amacımız burada hatanın ne olduğunu göstermek, çözüm yolu aramak değil. Yani Hemen altta derleme zamanı ve çalışma zamanı kararları başlığı altında bu konuya biraz değineceğiz.
+  Programı daha çalıştırmadığımız için, derleme sırasında hata almış olacağız. Haliyle java **p** referasını hâlen bir **Person** olarak düşünecektir. Alınan hata şu şekildedir. **Cannot resolve method 'getID' in 'Person'.** Aslında derleme zamanında bu hata cast işlemi yapılarak çözülebilir. ``int m = ((Student) p).getID();`` yaptığımızda derleme hatasını bir bakıma engellemiş oluruz. Ama amacımız burada hatanın ne olduğunu göstermek, çözüm yolu aramak değil. Yani Hemen altta derleme zamanı ve çalışma zamanı kararları başlığı altında bu konuya biraz değineceğiz.
 
   <div class="notice--success" markdown="1">
   <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
@@ -240,7 +240,7 @@ public class Sample {
 ```
 Yukarıdaki koda baktığımızda görünüşte bir sıkıntının olmadığını söyleyebilirsiniz. 3.satırda  ``SampleTest`` tipinde bir nesne yaratılıyor ve bu nesnenin ``calculate()`` metodu çağırılarak işlem yapılıyor. Buraya kadar her şey normal fakat 5.satırda bir fark var. Burada referans tipi olarak ``Object`` sınıfı tercih edilmiş. Aslında gayet normal diyebilirsiniz. Çünkü şunu biliyoruz ki java'da her şey bir nesnedir ve ``Object`` sınıfını miras alır. Bu yüzden de bu satırda herhangi bir derleme hatası almayız. Asıl sorun 6.satırda gerçekleşecektir. Çünkü Java derleme zamanında referans tiplerine bakar. Referans tipimiz olan ``Object`` sınıfının da ``calculate()`` isminde bir metodu olmadığı için derleme hatası(compile time error) alırız. Fakat yukarıda da değindiğimiz gibi çalışma zamanına geçtiğimizde de bu metot(calculate) yine **Object o** tarafından görünür olmayacaktı. Görünür kılmak için cast işlemi uygulamak şarttır.
 
-İleriki konularda referans türüne göre derleme zamanında hangi kararların alındığı ve nesne türüne göre çalışma zamanında hangi kararların alındığı hakkında konuşacağız. Ama öncesinde bu konuyla çok bağlantılı olan bir konuyu ele alacağız. Statik ve dinamik türler nelerdir? Bundan sonraki derste bu konuyu ele almak istiyorum.
+İleriki konularda referans türüne göre derleme zamanında hangi kararların alındığı ve nesne türüne göre çalışma zamanında hangi kararların alındığı hakkında konuşacağız. Ama öncesinde bu konuyla çok bağlantılı olan bir konuyu ele alacağız. Statik ve dinamik türler nelerdir? Bundan sonraki bölümde bu konuyu ele almak istiyorum.
 
 ## Referanslar
 * [Is-a](https://en.wikipedia.org/wiki/Is-a)
