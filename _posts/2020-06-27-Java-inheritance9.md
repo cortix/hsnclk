@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 9 - Overriding(Ezici) Metotlar"
 comments: false
-excerpt: "Bu bölümde overriding ve overloading metotların tanımlarını yapacak, ağırlıklı olarak overriding metotlar üzerine duracağız. Bunun yanı sıra metot imzası ve metot deklarasyonu arasındaki farklardan da bahsedeceğiz."
+excerpt: "Bu bölümde overriding ve overloading metotların tanımlarını yapacak, metot imzası ve metot deklarasyonu arasındaki farklardan bahsedeceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg
@@ -57,7 +57,7 @@ Kalıtım hakkında ilk konuşmaya başladığımızda üç hedefimiz vardı. Ov
 2. Farklı davranışa sahip olanları ise farklı sınıflara ayırmak
 3. Tüm bu nesneleri tek bir veri yapısında tutmak.
 
-Örneğin bir yöntemi geçersiz kılmazsak 1.maddeyi uygularız. Üst sınıfımızda bir yöntem varsa, ortak olan bu kodu doğrudan kullanırız. Ancak, alt sınıflarımızın farklı davranmasını istiyorsak, tek yapmamız gereken ortak olan bir yöntemi geçersiz kılmaktır. Sonuç olarak metotları geçersiz kıldığımızda bir nevi farklı davranışlara sahip olurlar. Bu sayede de 2.maddemizi uygulamış oluruz. Sonuncu madde olan ve bir sonraki derste göreceğimiz polimorfizm konusu ile de tüm nesnelerimizin tek bir veri yapısında olmasına ve yine de uygun yöntemi çağırabilmemize izin verdiğini göreceğiz. **Yani polimorfizm uygulasak da yine de geçersiz kılınan objenin metoduna ulaşıldığını göreceksiniz.** Söylenenlerin bir kısmının havada kaldığının farkındayım.
+Örneğin bir yöntemi geçersiz kılmazsak 1.maddeyi uygularız. Üst sınıfımızda bir yöntem varsa, ortak olan bu kodu doğrudan kullanırız. Ancak, alt sınıflarımızın farklı davranmasını istiyorsak, tek yapmamız gereken ortak olan bir yöntemi geçersiz kılmaktır. Sonuç olarak metotları geçersiz kıldığımızda bir nevi farklı davranışlara sahip olurlar. Bu sayede de 2.maddemizi uygulamış oluruz. Sonuncu madde olan ve bir sonraki bölümde göreceğimiz polimorfizm konusu ile de tüm nesnelerimizin tek bir veri yapısında olmasına ve yine de uygun yöntemi çağırabilmemize izin verdiğini göreceğiz. **Yani polimorfizm uygulasak da yine de geçersiz kılınan objenin metoduna ulaşıldığını göreceksiniz.** Söylenenlerin bir kısmının havada kaldığının farkındayım.
 
 ## Overriding(Ezici) Metotlar
 

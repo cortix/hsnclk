@@ -52,7 +52,7 @@ toc_sticky: true
 <br/>{% picture 2020-09-18-Java-polimorfizm4_2/uml1.png --alt Java Static and Dynamic Binding (Java Statik ve Dinamik Bağlama) --img width="100%" height="100%" %}<br/>
 
 
-Görüleceği üzere **Person** sınıfı hiyerarşimizin en üstünde yer alan sınıf ve iki adet metodu bulunmakta. Onun hemen altında bu sınıfı miras alan bir **Student** sınıfımız var. Bu sınıf **Person** sınıfının 2 metodunu geçersiz kılmış(override). **Student** sınfını da **Undergrad** isimli başka bir sınıf miras alıyor ama bu sınıf **Student** sınıfının sadece ``method2()`` metodunu geçersiz kılıyor.
+Görüleceği üzere **Person** sınıfı hiyerarşimizin en üstünde yer alan bir sınıftır, ve iki adet metodu bulunmaktadır. Onun hemen altında ise bu sınıfı miras alan bir **Student** sınıfını görmektesiniz. Anlaşılacağı üzere bu sınıf, **Person** sınıfının 2 metodunu geçersiz kılmış(override). **Student** sınfını da **Undergrad** isimli başka bir sınıf miras alıyor ama bu sınıf **Student** sınıfının sadece ``method2()`` metodunu geçersiz kılıyor.
 
 
 Şimdi aşağıdaki gibi bir kod bloğunu çalıştırmak istesek sizce nasıl bir sonuç alırız?

@@ -1,7 +1,7 @@
 ---
 title: "Java'da Hafıza Modeli 5 - Pass By Value / Pass By Reference"
 comments: false
-excerpt: "Aslında bu bölümde anlatılacaklar şu ana kadar öğrendiklerimizin bir tekrarı gibi düşünülebilir. Yalnız bu bölümde bu öğrendiklerimizi farklı programlama dilleri ile karşılaştırarak değerlendireceğiz. Metotlara parametre geçirilirken kullanılan 2 farklı yaklaşımı ele alacağız. Passing By Value/Passing By Reference(Değer veya Referans İle Parametre Geçirmek)"
+excerpt: "Metotlara parametre geçirilirken kullanılan 2 farklı yaklaşımı ele alacağız. Passing By Value/Passing By Reference(Değer veya Referans İle Parametre Geçirmek)"
 header:
   teaser: "/assets/images/svg-book9.svg"
   og_image: /assets/images/svg-book9.svg
@@ -351,7 +351,7 @@ Anlaşılacağı üzere, **someObject** referansı nesnenin kendisini tutmuyor, 
 
 </div>
 
-"Metot dönüş yaptığında, metota geçirilen referansın halen eski objeyi işaret etmesi **pass-by-value** kullandığını göstermektedir", şeklinde bir ifadeyi göreceksiniz. Yani metoda geçirilen aslında kopya bir referans olduğu için bu söylenmektedir. Zaten yukarıda bunu izah etmiştim. Kopya referans, metot içerisinde başka bir objeye atansa bile, orijinal referans metot öncesindeki objeye işaret etmeye devam edecektir. Aslında birçok kaynak buna **sezgisel olarak** **pass-by-referans** olarak ifade eder. Bana kalırsa da bu tanım daha doğrudur. Tercihi yine de size bırakıyorum.
+"Metot dönüş yaptığında, metota geçirilen referansın hâlen eski objeyi işaret etmesi **pass-by-value** kullandığını göstermektedir", şeklinde bir ifadeyi göreceksiniz. Yani metoda geçirilen aslında kopya bir referans olduğu için bu söylenmektedir. Zaten yukarıda bunu izah etmiştim. Kopya referans, metot içerisinde başka bir objeye atansa bile, orijinal referans metot öncesindeki objeye işaret etmeye devam edecektir. Aslında birçok kaynak buna **sezgisel olarak** **pass-by-referans** olarak ifade eder. Bana kalırsa da bu tanım daha doğrudur. Tercihi yine de size bırakıyorum.
 
 
 ## Referanslar

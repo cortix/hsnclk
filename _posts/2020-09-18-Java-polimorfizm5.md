@@ -1,7 +1,7 @@
 ---
 title: "Java'da Polimorfizm 5 - Soyut(Abstract) Sınıflar ve Arayüzler(Interfaces)"
 comments: false
-excerpt: "Bu bölümde java'da abstract sınıfları ve arayüzleri ele almak istiyorum. Özellikle neler olduğu, hangi durumlarda hangisinin tercih edilmesi gerektiği hakkında konuşacağız. Bunun yanı sıra uygulama kalıtımı(**inheritance of implementation**) ve arayüzün kalıtımı(**inheritance of interface**) kavramlarının neler olduğunu karşılaştıracağız."
+excerpt: "Java'da abstract sınıfları, arayüzleri, uygulama kalıtımı(inheritance of implementation) ve arayüz kalıtımı(inheritance of interface) kavramlarını ele alacağız."
 header:
   teaser: "/assets/images/svg-book11.svg"
   og_image: /assets/images/svg-book11.svg
@@ -44,7 +44,7 @@ toc_label: "SAYFA İÇERİĞİ"
 
 ## Genel Bakış
 
-Aslında **abstract sınıf** ve **interface** özünde ikisi de soyut kavramlardır. Tabii aralarında hem kullanım hem de yapısal bazı farklılıklar bulunmaktadır. Bu derste de bu farklılıkları ele alacağız. Ek olarak şu [makaleme](/java/Java-class-access/) de bakmanızı öneririm. Abstract sınıf ve interface konularına orada da değinmiştim.
+Aslında **abstract sınıf** ve **interface** özünde ikisi de soyut kavramlardır. Tabii aralarında hem kullanım hem de yapısal bazı farklılıklar bulunmaktadır. Bu bölümde de bu farklılıkları ele alacağız. Ek olarak şu [makaleme](/java/Java-class-access/) de bakmanızı öneririm. Abstract sınıf ve interface konularına orada da değinmiştim.
 
 Normalde bir üst sınıfım ve onu miras alan bir alt sınıfım oluyordu. Burada yapmak istediğim şey aslında yine kalıtımı bazı kısıtlamalar getirerek uygulamak olacak. Hemen bir örnek vermek istiyorum.
 

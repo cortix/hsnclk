@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 4 - Görünürlük/Erişim Değiştiricileri (Java Access Modifiers)"
 comments: false
-excerpt: "Bu bölümde Java'daki public, protected, package(default), private değiştirici işaretlerini ele alacağız. Bu değiştiricilerin, java'da görünürlüğü nasıl etkilediği hakkında fikir sahibi olacaksınız"
+excerpt: "Java'daki public, protected, package(default), private erişim değiştirici işaretlerini ele alacak ve bunların görünürlüğü nasıl etkilediği inceleyeceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg

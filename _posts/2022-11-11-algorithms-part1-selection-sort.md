@@ -1,7 +1,7 @@
 ---
 title: "Algoritmalar Bölüm 1 - Seçme Sıralaması(Selection Sort)"
 comments: false
-excerpt: "Bu bölümde, seçme sıralaması algoritmasının ne olduğunu ve performansının en kötü, en iyi ve ortalama durum senaryosunda nasıl davrandığını açıklamaya çalışacağım."
+excerpt: "Bu bölümde seçme sıralaması algoritmasının ne olduğunu, performansının en kötü, en iyi ve ortalama durum senaryosunda nasıl davrandığını açıklamaya çalışacağım"
 header:
   #teaser: "/assets/images/2022-11-11-algorithms-part1-selection-sort/selection-sort.png"
   #og_image: /assets/images/page-header-og-image.png
@@ -143,7 +143,10 @@ Seçme sıralamasının zaman verimliliği ikinci derecedendir(quadratic).
 
 *O(n<sup>2</sup>)* karşılaştırma, *O(1)* yer değiştirme,
 
-En iyi durum zaman karmaşıklığında, listenin zaten sıralı olduğunu düşünürüz. Yer değiştirme olmayacağı için *O(n)* 1 olur. Ancak listenin sıralı olup olmadığını öğrenmek için her durumda <u>karşılaştırma</u> olacaktır. Bu <u>quadratic</u> zaman karmaşıklığını beraberinde getirir, yani, *O(n<sup>2</sup>)*. Çünkü 2 tane iç içe **for** döngümüz bulunmaktadır.
+En iyi durum zaman karmaşıklığında, listenin zaten sıralı olduğunu düşünürüz. Yer değiştirme olmayacağı için *O(n)* 1 olur. Ancak listenin sıralı olup olmadığını öğrenmek için her durumda <u>karşılaştırma</u> olacaktır. Bu, <u>quadratic</u> zaman karmaşıklığını beraberinde getirir, yani, *O(n<sup>2</sup>)*. Çünkü 2 tane iç içe **for** döngümüz bulunmaktadır.
+
+2 tane iç içe for döngüsü her zaman *O(n<sup>2</sup>)* <u>quadratic</u> zaman karmaşıklığını beraberinde getirmez. Bazı durumlarda yanıltıcı sorularla karşılaşabilirsiniz.
+{: .notice--warning}
 
 ### Seçme Sıralamasının En Kötü Durum Zaman Karmaşıklığı
 

@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 2- Extends"
 comments: false
-excerpt: "Bu derste Java'daki kalıtım(inheritance) ve polimorfizm kavramlarını ele almaya devam edeceğiz. Java'da extends anahtar kelimesinin ne anlama geldiğini ve kullanımını, superclass ve subclass kavramlarını, sınıf hiyerarşisinde UML diyagramı kullanımını göreceğiz. Bununla birlikte bir önceki derste belirlediğimiz kalıtımı sağlamak için asgari hedeflerin ilk ikisini ele alacağız."
+excerpt: "Java'da extends anahtar kelimesinin ne olduğunu, kullanımını, superclass ve subclass kavramlarını ve sınıf hiyerarşisinde UML diyagramı kullanımını göreceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg
@@ -48,7 +48,7 @@ toc_sticky: true
 
 ## Genel Bakış
 
-Bir önceki dersten de hatırlayacağımız üzere yazdığımız kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için belirlediğimiz temel hedefler şunlardı;
+Bir önceki bölümden de hatırlayacağımız üzere yazdığımız kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için belirlediğimiz temel hedefler şunlardı;
 
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için hedefler:</h4>
@@ -58,7 +58,7 @@ Bir önceki dersten de hatırlayacağımız üzere yazdığımız kodda tutarlı
 3. [ ] Tüm bu nesneleri tek bir veri yapısında tutmak.
 </div>
 
-İlk ikisini bu derste ele almaya çalışacağız. Hatırlayacağınız üzere bunu java'da kalıtım(inheritance) kullanarak çözmeye çalışacağımızı belirtmiştik.
+İlk iki hedefi bu bölümde ele almaya çalışacağız. Hatırlayacağınız üzere, bunu java'da kalıtım(inheritance) kullanarak çözmeye çalışacağımızı belirtmiştik.
 
 ### Ortak Kod
 
@@ -83,7 +83,7 @@ public class Faculty {
 }
 ```
 
-Aslında 1 ve 2. seçenekleri tamamlamamız için gereken sihirli bir kelimeye ihtiyacımız bulunmaktadır. Çünkü halen ortak değişkenler tek bir sınıfta yer almamaktadır. Bu kelime **extends** anahtar kelimesidir.
+Aslında 1 ve 2. seçenekleri tamamlamamız için sihirli bir anahtar kelimesine ihtiyacımız bulunmaktadır. Çünkü ortak değişkenler hâlen tek bir sınıfta ikamet ediyor. Tahmin edeceğiniz üzere bu kelime **extends** anahtar kelimesidir.
 
 ### Ortak Kod
 
@@ -107,9 +107,7 @@ public class Faculty extends Person {
 ```
 
 
-Görüleceği üzere ortak değişkenimiz olan **name**, sadece üst sınıfımız olan **Person** sınıfında yer almaktadır. **Extend** anahtar kelimesinin anlamı genişletmektir. Yalnız programlama jargonundaki tam karşılı ise **miras almaktır**. Yani **Student** ve **Faculty** sınıflarını **Person** sınıfına **extends** ettiğimizde aslında **Person** sınıfını miras almış oluruz.
-
-Böylelikle **Person** sınıfımız bizim **base/super/parent** sınıfımız olurken, **Student** ve **Faculty** sınıfları ise ana sınıftan türeyen **derived/subclass/child** olur.  
+Görüleceği üzere ortak değişkenimiz olan **name**, sadece üst sınıfımız olan **Person** sınıfında yer almaktadır. Ama private erişim değiştiricisine sahip!!! Bu arada **extend** anahtar kelimesinin anlamı genişletmektir. Yalnız programlama jargonundaki tam karşılı ise **miras almaktır**. Yani **Student** ve **Faculty** sınıflarını **Person** sınıfına **extends** ettiğimizde aslında **Person** sınıfını miras almış oluruz.
 
 <div class="notice--success" markdown="1">
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Peki Parent Sınıftan ne Miras Alınır?</h4>
@@ -117,15 +115,20 @@ Böylelikle **Person** sınıfımız bizim **base/super/parent** sınıfımız o
 
 Tabii ki bütün özelliklerini değil.
 
-* **public** örnek değişkenleri(instance variables)
-* **public** metotları,
-* **public** örnek değişkenleri(instance variables)???? Aslında bir bakıma **public** instance variable'ları da bir bakıma **extends** ederiz.
+* **public** örnek değişkenleri(instance variables) miras alırız,
+* **public** metotları miras alırız,
+* **private** örnek değişkenleri de teknik olarak miras alınır ama bu değişkenlere erişim için public metotlara ihtiyacımız olacaktır. Aşağıda bunu izah etmeye çalışacağım.
 
-Ama nasıl olduğuyla ilgili detayı başka bir derste veririz.
 </div>
 
+**Not:** Dikkat edecek olursanız, üst sınıfımız olan **Person** sınıfında bulunan **name** ismindeki üye değişkenimiz **private** erişim değiştiricisine sahip olduğu için alt sınıflar tarafından miras alınsa da bu değişkene erişim şu an için mümkün gözükmemektedir.
+{: .notice--warning}
 
-``` java
+Kaldığımız yerden devam edecek olursak, **Person** sınıfımız bizim **base/super/parent** sınıfımız olurken, **Student** ve **Faculty** sınıfları ise ana sınıftan türeyen **derived/subclass/child** olur.  
+
+### Gizli değişken (Hidden Variable) | Gölge değişken (shadow variable / variable shadowing)
+
+{% highlight java mark_lines="7" %}
 public class Person {
   private String name;
   ....
@@ -135,13 +138,24 @@ public class Student extends Person {
   private String name; // ???????????
   ...
 }
-
-```
-
+{% endhighlight %}
 
 
-Gerçekten hala **name** adında bir **Student** üye değişkenine sahip olmanız gerekiyor mu? Aslında hayır... Buna **gizli değişken** veya **gölge değişken**(variable shadowing) de denir ve bu hangi değişkeni, hangi **name** üye değişkeninden bahsettiğinizi fark etmek zordur. **Student** mı yoksa **Person** mı???? Yani aslında buna sahip olmazsınız, çünkü onu otomatik olarak Person'dan miras aldınız. Yalnız ufak bir sorun var. **public** olmayan değişkenlere erişim sadece **public** metodlar üzerinden sağlanabilir. **getter** ve **setter** metodlar buna güzel bir örnektir.
 
+Bu örnekte ise hem parent hem de child sınıfta, **name** isminde benzer üye değişkenlerimiz bulunmaktadır. Görüleceği üzere, her ikisi de **private** erişim değiştiricisine sahip. Sizce **Student** sınıfında **name** adında private bir üye değişkenine gerçekten de sahip olmanız gerekiyor mu?
+
+Aslında hayır... Hatta bu kötü bir pratiktir. Çünkü, **Student** sınıfı içindeki private **name** değişkeni, **gizli değişken** veya **gölge değişken**(variable shadowing) olarak ifade ettiğimiz şekilde davranır. Yani hangi sınıfın **name** üye değişkeninden bahsettiğinizi belirlemek zordur. **Student** mı yoksa **Person** mı???? Bu yüzden Student sınıfı içinde tekrardan aynı isimli bir değişkeni tanımlamamız anlamsızdır, çünkü bu değişkeni otomatik olarak **Person** sınıfından zaten miras alırsınız.
+
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Private örnek değişkenine erişim</h4>
+---
+
+* Peki **private** olan bu örnek değişkenlerini miras alabiliyorsak bunlara nasıl erişeceğiz?
+
+**private** örnek değişkenlerine doğrudan erişim sağlayamasak da **public** metotlar üzerinden bu değişkenlere erişim sağlayabiliriz.
+
+**getter** ve **setter** metodlar buna güzel bir örnektir. Hatta bu erişim yöntemi şiddetle tavsiye edilir.
+</div>
 
 ``` java
 public class Person {
@@ -178,7 +192,7 @@ Cinsiyet değişkeni genel bir değişken olduğundan **Person** sınıfında ol
 
 <br/>{% picture 2020-06-20-Java-inheritance2/uml2.png --alt java class hierarchy or inheritance tree uml diagram (java sınıf hiyerarşisi veya kalıtım ağacı uml diyagramı) --img width="100%" height="100%" %}<br/>
 
-Dersin başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonuncuyu ise bir sonraki derste ele alacağız.
+Bölümün başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonuncuyu ise bir sonraki bölümde ele alacağız.
 
 ## Referanslar
 * [Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)

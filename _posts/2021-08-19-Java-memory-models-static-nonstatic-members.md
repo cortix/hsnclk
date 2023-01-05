@@ -1,7 +1,7 @@
 ---
 title: "Java'da Hafıza Modeli 6 - Java'da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi"
 comments: false
-excerpt: "Java'da Statik ve Statik Olmayan Konteks Nedir? Java'da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi Nasıl Olur? gibi soruların cevabını vermeye çalışacağım."
+excerpt: "Java'da Statik ve Statik Olmayan Konteks Nedir? Java'da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi Nasıl Olur?"
 header:
   teaser: "/assets/images/svg-book9.svg"
   og_image: /assets/images/svg-book9.svg

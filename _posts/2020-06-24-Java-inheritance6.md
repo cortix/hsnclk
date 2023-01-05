@@ -1,7 +1,7 @@
 ---
 title: "Java'da Kalıtım 6 - Sınıf İnşası İçin Derleyici Kuralları"
 comments: false
-excerpt: "Bu bölümde Java'da sınıf inşaası sırasında derleyicinin yazdığımız kodu nasıl modifiye edip Jvm'e gönderdiğinden ve belli başlı derleyici kurallarından bahsedeceğiz. Bunun yanı sıra Java'nın arka planda nasıl çalıştığını da ele alacağız."
+excerpt: "Bu bölümde java'da sınıf inşaası sırasında derleyicinin nasıl çalıştığından ve belli başlı derleyici kurallarından bahsedeceğiz."
 header:
   teaser: "/assets/images/svg-book10.svg"
   og_image: /assets/images/svg-book10.svg
@@ -51,13 +51,13 @@ toc_sticky: true
 
 ## Genel Bakış
 
-Bir önceki derste Java'da nesnelerin içten dışa nasıl inşa edildiğini gördük. Bu derste ise bu durumun neden bu şekilde gerçekleştiğine bakacağız.
+Bir önceki bölümde Java'da nesnelerin içten dışa nasıl inşa edildiğini gördük. Bu bölümde ise bu durumun neden bu şekilde gerçekleştiğine bakacağız.
 
 Hatırlarsanız bir önceki ders, ``Object`` sınıfını ``extends`` etmediğimiz halde java bunu nasıl biliyor? şeklinde bir soru sormuştuk. Bu bölümde bunun cevabını bulmaya çalışalım.
 
 Aslında bu şekilde olmasının nedeni tamamen Java derleyici kurallarından kaynaklanmaktadır. Nesnenin içten dışa oluşturulmasını sağlamak için bu derleyici kurallarının ne olduğu ve nasıl çalıştığı hakkında konuşalım istiyorum.
 
-Öncelikli olarak, bir önceki derste ne yaptığımızı ve en son nerede kaldığımız hatırlayalım istiyorum. Elimizde bir Student sınıfı vardı. Bu sınıf Person isimli bir başka sınıfı miras alıyordu. Person sınıfı ise biz belirlemesekte java tarafından Object sınıfını miras almaya maruz bırakılıyordu.
+Öncelikli olarak, bir önceki bölümde ne yaptığımızı ve en son nerede kaldığımız hatırlayalım istiyorum. Elimizde bir Student sınıfı vardı. Bu sınıf Person isimli bir başka sınıfı miras alıyordu. Person sınıfı ise biz belirlemesekte java tarafından Object sınıfını miras almaya maruz bırakılıyordu.
 
 <br/>{% picture 2020-06-23-Java-inheritance5/hierarchy5.png --alt Java class hierarchy or java inheritance tree (java sınıf hiyerarşisi veya java kalıtım ağacı) --img width="100%" height="100%" %}<br/>
 
@@ -121,7 +121,7 @@ Soldaki kod bloğu bizim yazdığımız kodu temsil etmektedir. Sağdaki ise der
 
 ### Örnek
 
-Student sınıfının Person sınıfını miras aldığını önceki dersten biliyoruz. Peki sizce aşağıdaki kodu derleyici nasıl değiştirir?
+Student sınıfının Person sınıfını miras aldığını önceki bölümden biliyoruz. Peki sizce aşağıdaki kodu derleyici nasıl değiştirir?
 
 ```java
 public class Student extends Person {

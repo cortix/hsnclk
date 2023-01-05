@@ -1,7 +1,7 @@
 ---
 title: "Higher Order Functions (Üst Düzey Fonksiyonlar) (Programlama Stili PART 2)"
 comments: false
-excerpt: "Bu yazıda, birinci-sınıf vatandaş(first-class citizen) ve birinci-sınıf fonksiyonlar(first-class function) olmak üzere higher-order(üst düzey) fonksiyonların ne olduğunu açıklamaya çalışacağım."
+excerpt: "Birinci-sınıf vatandaş(first-class citizen), birinci-sınıf fonksiyon(first-class function) ve higher-order(üst düzey) fonksiyonları açıklamaya çalışacağım."
 header:
   #teaser: "/assets/images/2022-02-25-higher-order-functions/higher.png"
   #og_image: /assets/images/page-header-og-image.png

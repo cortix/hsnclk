@@ -1,7 +1,7 @@
 ---
 title: "Java'da Polimorfizm 3 - Casting"
 comments: false
-excerpt: "Bu bölümde java'da casting işleminin ne olduğuna ve hangi durumlarda bu işleme ihtiyaç duyulduğuna bakacağız. Aynı zamanda bazı casting türleri hakkında bilgi verecek ve casting işleminin derleme ve çalışma zamanlarına etkileri hakkında konuşacağız."
+excerpt: "Bu bölümde, java'da casting işleminin ne olduğuna, casting türlerine, derleme ve çalışma zamanlarına olan etkilere bakacağız."
 header:
   teaser: "/assets/images/svg-book11.svg"
   og_image: /assets/images/svg-book11.svg

@@ -47,7 +47,7 @@ Polimorfizm ismi daha çok biyolojik bir terimdir. Polimorfizm biyolojide, iki v
 
 <u>Programlama dillerinde ve tür teorisinde ise, polimorfizm, farklı türdeki varlıklara tek bir arayüzün sağlanması veya birden fazla farklı türü temsil etmek için tek bir sembolün kullanılmasıdır.</u> Bir sınıfın alt sınıfları kendi benzersiz davranışlarını tanımlayabilir ve yine de üst sınıfın aynı işlevlerinden bazılarını paylaşabilir.
 
-Bu derste, polimorfizm konusunu ayrıntılı olarak incelemeye çalışacağız. Polimorfizm, kalıtımla birlikte, java dilinde sahip olduğumuz en güçlü özelliklerden biridir. Kalıtım konusunu önceki 10 ders boyunca etraflıca ele aldık. Aslında birçok kez polimorfizme de değindik ama tanımsal olarak ilk kez burada ele alacağız.
+Bu bölümde, polimorfizm konusunu ayrıntılı olarak incelemeye çalışacağız. Polimorfizm, kalıtımla birlikte, java dilinde sahip olduğumuz en güçlü özelliklerden biridir. Kalıtım konusunu önceki 10 ders boyunca etraflıca ele aldık. Aslında birçok kez polimorfizme de değindik ama tanımsal olarak ilk kez burada ele alacağız.
 
 Hatırlarsanız kalıtım konusunun 9.[dersinin](/java-kalitim-polimorfizm/Java-inheritance9/) sonunda aşağıdaki ifadeyi verip, sebebini polimorfizm konusunda ele alacağımızı söylemiştik.
 
