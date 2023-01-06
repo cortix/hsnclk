@@ -63,7 +63,7 @@ DESCRIPTION
 
 <!-- Bisect'i bir şeyin ilk kez nerede tanıtıldığını bulmak için kullanabilirsiniz -->
 
-### Git bisect start
+## Git bisect start
 
 Bisect state'ini başlatmanın birkaç yolu vardır. Bunlardan biri ``git bisect start`` komutudur.
 
@@ -82,7 +82,7 @@ git bisect start HEAD HEAD~15
 
 Bu komut otomatik olarak **HEAD**'i **bad** commit, **HEAD~15**'i yani **HEAD**'den 15 commit önceki commit'i ise **good** commit olarak işaretler. Tabii ki 15 commit öncesinin sorunsuz çalışan bir commit olduğunu biliyor olmanız gerekmektedir.
 
-### Git bisect bad
+## Git bisect bad
 
 ``git bisect start`` komutu kullanarak bisect state'ini başlattığımızı varsayalım. Görüleceği üzere, bisect bizden **bad** ve **good** commit'leri belirlememizi bekler. Farzedelim ki son commit'imiz düzgün çalışmıyor. Ama hatanın da ilk nerede başladığını bulmak istiyoruz.
 
@@ -95,7 +95,7 @@ status: waiting for good commit(s), bad commit known
 
 Son commit'imiz olan **versiyon 10**'u **bad** olarak işaretlediğimizde, komut sonrası durum mesajımız, "**waiting for good commit(s), bad commit known**"(bad commit biliniyor, good commit'ler bekleniyor) şeklinde olacaktır. Tabii ki bu komutu HEAD yazmadan da, yani ``git bisect bad`` şeklinde de yazabilirdik. Bu komut, otomatik olarak HEAD işaretçisinin olduğu commit'i **bad** olarak işaretler.
 
-### Git bisect good
+## Git bisect good
 
 Aşağıdaki komut vasıtasıyla HEAD işaretçisinin bulunduğu commit'ten 10 commit geriye gitmek istiyorum.
 
@@ -156,7 +156,7 @@ Date:   Thu Dec 29 03:13:56 2022 +0300
 <br/><br/><img src="{{ site.url }}{{ site.baseurl }}/assets/images/git-sorun-giderme/2022-12-27-git-bisect/5.svg"  width="100%" height="100%" loading="lazy" alt="git-bisect usage(git-bisect kullanımı)"><br/><br/>
 
 
-### Git bisect visualize
+## Git bisect visualize
 
 {% highlight bash %}
 % git bisect visualize
@@ -165,7 +165,7 @@ Date:   Thu Dec 29 03:13:56 2022 +0300
 Bu komut sayesinde ise ilgili commit'i **gitk** yardımcı programı aracılığı ile görselleştirebilirsiniz. Bu sayede commit hakkında daha detaylı bilgi alabilirsiniz. Örneğin hataya ilk neden olan kişinin kullanıcı bilgilerini de bu komut sayesinde görüntüleyebilirsiniz.
 
 
-### Git bisect log
+## Git bisect log
 
 {% highlight bash %}
 % git bisect log
@@ -173,7 +173,7 @@ Bu komut sayesinde ise ilgili commit'i **gitk** yardımcı programı aracılığ
 
 commit'leri **good** veya **bad** olarak işaretledikten sonra, şu ana kadar yapılanları göstermek için ``git bisect log`` komutunu kullanabilirsiniz.
 
-### Git bisect reset
+## Git bisect reset
 
 Hataya neden olan ilk commit'i bulduktan sonra bisect state'inden çıkmak isteyeceksiniz. Bunun için ise ``git bisect reset`` komutunu kullanabilirsiniz.
 
@@ -186,7 +186,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 {% endhighlight %}
 
 
-### Git bisect run
+## Git bisect run
 
 Diyelim ki kodunuzun çalışıp çalışmadığını test edecek bir script'te sahipsiniz;
 
