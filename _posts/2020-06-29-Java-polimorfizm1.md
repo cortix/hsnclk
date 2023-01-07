@@ -17,7 +17,7 @@ tags:
   - Java polimorfizm
   - Java virtual method invocation
   - Robert C. Martin
-last_modified_at: 2022-12-29T15:12:19-04:00
+last_modified_at: 2023-01-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
@@ -165,7 +165,7 @@ Yalnız şöyle bir ayrıntıdan bahsetmiştik. Referans tipleri, derleme zaman�
 Tam da bu noktada metot geçersiz kılma(overriding) işlemi, polimorfizm kavramını yazılım tarafında tamamlıyor. Burada **dinamik polimorfizm (dynamic polymorphism)** olarak bilinen bir kavram devreye girer. JVM öncelikli olarak, bu metotların alt sınıflarda **geçersiz kılınıp kılınmadığına** bakar. Şayet ilgili metot **geçersiz kılınmışsa** doğrudan geçersiz kılındığı sınıftaki metoda gider. Aksi halde şansını **referans tipinin** sınıfındaki metotta deneyecektir. Şayet referans tipinin, heap tarafında hangi nesne türüne sahip olduğunu biliyorum diyorsanız, "**casting**" yaparak sorumluluğu derleyiciden alırsınız. "Casting" konusunu ilerleyen bölümlerde ele aldığım için, burada sadece değinmekle yetiniyorum.
 
 
-> Stack alanındaki referanslar, çalışma zamanında heap alanındaki hangi objeye bağlanacağını bilir. Ama her zaman nesne(**dinamik**) türüne göre ilgili yöntem çağrılmaz. Şayet overriding işlemi yoksa, referans türü neyse o sınıf içindeki metot çağrılır. 
+> Stack alanındaki referanslar, çalışma zamanında heap alanındaki hangi objeye bağlanacağını bilir. Ama her zaman nesne(**dinamik**) türüne göre ilgili yöntem çağrılmaz. Şayet overriding işlemi yoksa, referans türü neyse o sınıf içindeki metot çağrılır.
 
 Bu örnekteki ``toString()`` metodu, alt sınıflarda geçersiz kılındığı için aşağıdaki sonucu alırız;
 
