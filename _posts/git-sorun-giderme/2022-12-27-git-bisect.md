@@ -15,7 +15,7 @@ tags:
   - git
   - git troubleshooting
   - git bisect
-last_modified_at: 2023-01-04T15:12:19-04:00
+last_modified_at: 2023-01-06T15:12:19-04:00
 toc: true
 toc_sticky: true
 toc_label: "SAYFA İÇERİĞİ"
