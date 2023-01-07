@@ -80,23 +80,22 @@ Kalıtım konusunun 9. bölümünde `toString()` metodunun geçersiz kılınmas�
 
 Kalıtımın temel hedeflerini belirlerken, **tüm nesneleri tek bir veri yapısında tutmakla** ilgili bir şeyden bahsetmiştik. Dilerseniz ilgili konuya [geri](/java-kalitim-polimorfizm/Java-inheritance3/) dönüp bakabilirsiniz. Bu, farklı türdeki birden çok nesneyi işaret eden tek bir veri yapınız olabilir.
 
-<div class="notice--info" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java'da polimorfizm'e bir örnek:</h4>
----
+## Java'da polimorfizm'e bir örnek
+
 Hem **Student**, hem **Faculty** hem de **Person** objelerini tek bir veri yapısı olan **Person** veri yapısında saklamış olduk. Çünkü hem **Student** hem de **Faculty** özünde bir **Person**'dır. Tabii ki **is-a** ilişkisinden ötürü bunu söylüyorum.
 
+<div class="notice--success" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Java'da polimorfizm'e bir örnek:</h4>
+---
 ```java
 public class Person {
     private String name;
     public Person( String n ) {
-        //super();
         this.name = n;
     }
-
     public String getName() {
         return name;
     }
-
     public String toString(){
         return this.getName();
     }
@@ -106,16 +105,13 @@ public class Person {
 ```java
 public class Student extends Person {
     private int studentID;
-
     public int getSID() {
         return studentID;
     }
-
     public Student (String n, int m) {
         super(n);
         this.studentID = m;
     }
-
     public String toString(){
         return this.getSID()+": "+this.getName();
     }
@@ -125,25 +121,24 @@ public class Student extends Person {
 ``` java
 public class Faculty extends Person {
     private String employeeID;
-
     public String getEmployeeID() {
         return employeeID;
     }
-
     public Faculty(String n, String m){
         super(n);
         this.employeeID = m;
     }
-
     public String toString(){
         return this.getEmployeeID()+": "+super.toString();
     }
 }
 ```
-<br/>
+</div>
+
 
 ``p[i]`` ekrana yazdırılırken, ``toString()`` metodunu ekstradan çağırmamız gerekmediğini önceki bölümlerde belirtmiştim. Normalde bunu, ``p[i].toString()`` şeklinde de ifade edebilirdik fakat ``println`` metodu ``toString()`` metodunu hâlihazırda çağırdığı için, sadece ``p[i]`` şeklinde çağırmak da aynı sonucu verecektir.
 
+Burada önemli olan soru şu!!! Size göre ``p[i]`` ekrana yazdırılırken, **Person** sınıfının ``toString()`` metodu mu?, **Student** sınıfının ``toString()`` metodu mu? yoksa **Faculty** sınıfının ``toString()`` metodu mu çağrılır? Cevabı aslında önceki bölümlerde kısmen vermiştik.
 
 ``` java
 Person[] p= new Person[3];
@@ -155,15 +150,9 @@ for (int i = 0; i < p.length; i++) {
     System.out.println(p[i]);
 }
 ```
-
-<br/>Burada önemli olan soru şu!!! Size göre ``p[i]`` ekrana yazdırılırken, **Person** sınıfının ``toString()`` metodu mu?, **Student** sınıfının ``toString()`` metodu mu? yoksa **Faculty** sınıfının ``toString()`` metodu mu çağrılır? Cevabı aslında önceki bölümlerde kısmen vermiştik.
+<br/>
 
 [Referans ve Nesne Tipleri](/java-kalitim-polimorfizm/Java-inheritance3/), ve bu konuyu peşi sıra takip eden bölümlerde, aslında bu sorunun cevabını etraflıca incelemeye çalıştım fakat polimorfizm tanımını ilk olarak burada dile getiriyorum.
-
-</div>
-
-
-
 
 
 Görüleceği üzere **referans tipleri** tek bir veri yapısını temsilen **Person** sınıfıdır. Bu sınıf diğer sınıfları kapsayıcı bir üst sınıftır. **Student** ve **Faculty** sınıfları bu sınıfı miras aldığı için **is-a** ilişkisi kapsamında, **Student** ve **Faculty** özünde bir **Person** diyebiliyorduk ama her kişinin (yani Person'ın) bir öğrenci (Student) veya bir öğretim üyesi (Faculty) olduğunu söyleyemiyorduk. Bu yüzden **Person** sınıfını, **Student** ve **Faculty** nesnelerini tek bir veri yapısında tutan ortak bir sınıf olarak belirleyebildik.
@@ -171,15 +160,19 @@ Görüleceği üzere **referans tipleri** tek bir veri yapısını temsilen **Pe
 
 Yalnız şöyle bir ayrıntıdan bahsetmiştik. Referans tipleri, derleme zamanı kararları alınırken, obje/nesne tipleri ise, çalışma zamanı kararları alınırken devreye giriyordu. Şayet yukarıdaki kod bloğunu çalıştırmasaydık, ve derleme zamanında hangi ``toString()`` metotları devrede olurdu deseydiniz, hepsi için **Person** sınıfınınki diyebilirdik. Yalnız program çalıştığında referans tipleri, heap alanında temsil ettiği objeler ile eşleşir. Ama bu, ``toString()`` metodunun, hemen `p[0]` için **Person**'daki ``toString()``metoduna,  `p[1]` için **Student**'daki ``toString()``metoduna, `p[2]` için ise **Faculty**'deki ``toString()``metoduna, gideceği **anlamına gelmez**.
 
+## Metot Geçersiz Kılmanın (Overriding) Polimorfizm İle İlişkisi
 
 Tam da bu noktada metot geçersiz kılma(overriding) işlemi, polimorfizm kavramını yazılım tarafında tamamlıyor. Burada **dinamik polimorfizm (dynamic polymorphism)** olarak bilinen bir kavram devreye girer. JVM öncelikli olarak, bu metotların alt sınıflarda **geçersiz kılınıp kılınmadığına** bakar. Şayet ilgili metot **geçersiz kılınmışsa** doğrudan geçersiz kılındığı sınıftaki metoda gider. Aksi halde şansını **referans tipinin** sınıfındaki metotta deneyecektir. Şayet referans tipinin, heap tarafında hangi nesne türüne sahip olduğunu biliyorum diyorsanız, "**casting**" yaparak sorumluluğu derleyiciden alırsınız. "Casting" konusunu ilerleyen bölümlerde ele aldığım için, burada sadece değinmekle yetiniyorum.
 
 
-Stack alanındaki referanslar, çalışma zamanında heap alanındaki hangi objeye bağlanacağını bilir. Ama her zaman nesne(**dinamik**) türüne göre ilgili yöntem çağrılmaz. Şayet overriding işlemi yoksa, referans türü neyse o sınıf içindeki metot çağrılır. Bu örnekteki ``toString()`` metodu, alt sınıflarda geçersiz kılındığı için aşağıdaki sonucu alırız;
+> Stack alanındaki referanslar, çalışma zamanında heap alanındaki hangi objeye bağlanacağını bilir. Ama her zaman nesne(**dinamik**) türüne göre ilgili yöntem çağrılmaz. Şayet overriding işlemi yoksa, referans türü neyse o sınıf içindeki metot çağrılır. 
+
+Bu örnekteki ``toString()`` metodu, alt sınıflarda geçersiz kılındığı için aşağıdaki sonucu alırız;
 
 * ``p[0]`` referansı **Person** sınıfının ``toString()`` metodunu kullanır,
 * ``p[1]`` referansı **Student** sınıfının ``toString()`` metodunu kullanır,
 * ``p[2]`` referansı **Faculty** sınıfının ``toString()`` metodunu kullanır,
+
 
 ```java
 Hasan
@@ -187,6 +180,7 @@ Hasan
 ABCD: Baran
 ```
 
+<br/>
 "**Java sanal makinesi (JVM)**", her değişkende referans alınan nesne için uygun yöntemi çağırır. Değişkenin türü tarafından tanımlanan yöntemi çağırmaz. Bu davranış, sanal yöntem çağırma(**virtual method invocation**) olarak adlandırılır, ve Java dilinde polimorfizm özelliklerinin önemli bir yanını gösterir.
 
 Aslında bir sonraki bölümde bunun nasıl gerçekleştiğini, derleyici ve çalışma zamanı kuralları kapsamında göreceğiz. Özetle polimorfizmin bize verdiği şey, tüm nesnelerimizi büyük bir koleksiyonda tutma yeteneğidir.
