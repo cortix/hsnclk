@@ -19,7 +19,7 @@ categories:
 tags:
   - Algorithms
   - Selection Sort algorithm
-last_modified_at: 2023-01-06T15:12:19-04:00
+#last_modified_at: 2023-01-06T15:12:19-04:00
 toc: true
 toc_sticky: true
 toc_label: "SAYFA İÇERİĞİ"

@@ -23,7 +23,7 @@ tags:
   - Java derleyici kuralları
   - Java Virtual Machine(JVM)
   - Javac
-last_modified_at: 2023-01-06T15:12:19-04:00
+#last_modified_at: 2023-01-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
