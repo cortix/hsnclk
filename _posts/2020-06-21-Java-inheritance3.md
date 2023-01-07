@@ -19,7 +19,7 @@ tags:
   - Java referans ve nesne tipleri
   - Derleme ve çalışma zamanı kararları
   - Kalıtımı sağlamak için asgari hedefler
-last_modified_at: 2023-01-06T15:12:19-04:00
+last_modified_at: 2023-01-07T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
@@ -57,7 +57,7 @@ Buradaki amacımız, sınıflar arasındaki "**is-a**" ilişkisinin ne anlama ge
 3. [x] **Tüm bu nesneleri tek bir veri yapısında tutmak.**
 </div>
 
-Bir önceki ders kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için ilk iki koşulu java'da **extends** anahtar kelimesini kullanarak sağlamıştık. Ortak kodları **parent** sınıfta, farklı kodları ise **child** sınıflarda tutarak gerekli koşulları sağlamıştık. Şimdi ise 3. koşulu anlamaya çalışalım.
+Kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için ilk iki koşulu, bir önceki bölümde java'da **extends** anahtar kelimesi kullanarak sağlamıştık. Ortak kodları **parent** sınıfta, farklı kodları ise **child** sınıflarda tutarak gerekli koşulları yerine getirmiştik. Şimdi ise 3. koşulu anlamaya çalışalım.
 
 
 ## Referans ve Nesne Türleri
@@ -71,7 +71,7 @@ Referans ve obje tipleri konusuna şu [bölümde](/java-hafiza-yonetimi/Java-mem
 
 Yukarıdaki şekili biraz yorumlamaya çalışalım istiyorum. Önceki bölümde belirttiğimiz gibi <u>referans ve nesne türleri de her zaman aynı olmayabilir</u>. Heap alanında oluşan nesnenin tipi ile, aynı nesneyi stack alanında temsil eden değişkenin, yani referansın tipi farklı olabilir. Yukarıdaki örnekte **Person** bir parent(ana) sınıftır. **Student** ve **Faculty** sınıfları ise birer child(çocuk) sınıftır ve Person sınıfını **extends** anahtar kelimesi ile miras almıştır.
 
-Bu sebepten ötürü stack alanında bulunan değişkenin/referansın tipini parent sınıf olan **Person** yapabiliriz. Bir üst sınıf olduğu için stack alanında **Student** ve **Faculty** sınıflarını temsil edebilir. Yalnız önceki bölümde verdiğimiz **Map/HashMap** ilişkisine benzetmeyin. Çünkü **Map** bir soyut sınıftır. **Person** sınıfı her ne kadar bir parent sınıf olsa da, somut bir sınıftır. **Person** sınıfını bu yüzden heap alanında somutlaştırabiliriz.
+Bu sebepten ötürü stack alanında bulunan değişkenin/referansın tipini parent sınıf olan **Person** yapabiliriz. Bir üst sınıf olduğu için stack alanında **Student** ve **Faculty** sınıflarını temsil edebilir. Yalnız önceki bölümde verdiğimiz **Map/HashMap** ilişkisine benzetmeyin. Çünkü **Map** bir soyut sınıftır. **Person** sınıfı her ne kadar bir parent sınıf olsa da, <u>somut bir sınıftır</u>. Somut sınıftan kasıt, **Person** sınıfının istenirse heap alanında somutlaştırabiliyor olmasıdır. Yani **new** anahtar kelimesi vasıtasıyla bu sınıftan bir obje oluşturabiliriz.
 
 
 ## IS-A İlişkisi
@@ -83,7 +83,10 @@ Bu sebepten ötürü stack alanında bulunan değişkenin/referansın tipini par
 * A Student **is a** Person : Bir öğrenci bir bireydir.
 * A Person **is a** Student : Bir birey bir öğrencidir.
 
-İlk üçü okunduğundan kulağa gayet mantıklı gelmektedir. <u>Fakat sonuncusunda mantıksal bir gariplik vardır</u>. Çünkü her bir birey bir öğrenci midir???? Öğretim görevlisi de olabilir. Bu sebepten ötürü sonuncu ilişki yanlıştır. Yani ``Student s = new Person();`` doğru bir ilişkiye sahip değildir. Bu cümleyi şu şekilde de okuyabilirsiniz. **new** anahtar kelimesi ile somutlaşan her bir **kişi(Person)** aslında bir **öğrenci(Student)** midir? <u>Tabii ki değildir</u>.
+**Not:** person'ı bazen kişi bazen de birey çevirebilirim. Lütfen buna takılmayın.
+{: .notice--warning}
+
+İlk üçü okunduğundan kulağa gayet mantıklı gelmektedir. <u>Fakat sonuncusunda mantıksal bir gariplik vardır</u>. Gerçekten de her bir birey bir öğrenci midir???? Öğretim görevlisi de olabilir. Bu sebepten ötürü sonuncu mantıksal olarak yanlıştır. Yani ``Student s = new Person();`` doğru bir **is-a** ilişkisine sahip değildir. Bu cümleyi şu şekilde de okuyabilirsiniz. **new** anahtar kelimesi ile somutlaşan her bir **kişi(Person)** aslında bir **öğrenci(Student)** midir? <u>Tabii ki değildir</u>.
 
 Doğru ifade şekli tabii ki ``Person p = new Student();`` şeklinde olur. Veyahut ``Person p = new Faculty();`` şeklinde!!!
 
@@ -96,7 +99,7 @@ p[1] = new Student();
 p[2] = new Faculty();
 ```
 
-Yani bir **Person** dizisi hem **Student** hem de **Faculty** objelerini saklayabilir. Dersin başında bahsettiğimiz son şartı da bu şekilde sağlamış olduk. Yani **tüm bu nesneleri tek bir veri yapısında tutmaktan** bahsediyorum. Hem **Student**, hem **Faculty** hem de **Person** objelerini tek bir veri yapısı olan **Person** veri yapısında(data structure) saklamış olduk.
+Yani bir **Person** dizisi hem **Student** hem de **Faculty** objelerini saklayabilir. Yazımın başında bahsettiğim son şartı da bu şekilde sağlamış olduk. Yani **tüm bu nesneleri tek bir veri yapısında tutmaktan** bahsediyorum. Hem **Student**, hem **Faculty** hem de **Person** objelerini tek bir veri yapısı olan **Person** veri yapısında(data structure) saklamış olduk.
 
 ### Java'da IS-A İlişkisine Örnek
 
@@ -143,7 +146,7 @@ public class TestFaculty {
 }
 ```
 
-* Önce hata alınmayanlardan başlayalım istiyorum. ``s`` değişkeninin(referansının) tipi **Student** sınıfıdır. **Student** sınıfı normalde ``getName()`` yöntemine sahip değildir fakat **Person** sınıfını miras aldığı için ``getName()`` metoduna ulaşabilir.
+* Önce hata almadıklarımızdan başlayalım istiyorum. ``s`` değişkeninin(referansının) tipi **Student** sınıfıdır. **Student** sınıfı normalde ``getName()`` yöntemine sahip değildir fakat **Person** sınıfını miras aldığı için ``getName()`` metoduna ulaşabilir.
 
 * ``p = s;`` atama işlemini ele alacak olursak; ``p`` değişkeninin(referansının) tipi **Person** sınıfıdır. ``s`` değişkenini(referansını) zaten az önce ele almıştık. Burada yapılmak istenen şey, ``p`` değişkeninin(referansının) heap alanında temsil ettiği objeyi, ``s`` değişkeninin(referansının) heap alanında temsil ettiği obje ile değiştirmektir. Yani ``p`` referansı artık ``s`` referansının işaret ettiği objeyi işaret edecektir. Peki bu mümkün müdür? Hemen bakalım. Yapılmak istenen özünde şöyle bir işlemdir. ``Person p = new Student();`` Yani bir **is-a** ilişkisi vardır. **A Student is a Person**.... Bir öğrenci bir kişi midir? Cevap: Evet. Her bir öğrenci aslında bir kişidir. Bu yüzden bu atamada bir sakınca yoktur.(Bu arada okumayı soldan sağa yapmadığımızı farkettiğinizi umuyorum. Cümleye `new` anahtar kelimesinin olduğu yerden başladım. Yani ``new Student()`` bir Person mıdır? Kafanız karıştıysa sorabilirsiniz)
 

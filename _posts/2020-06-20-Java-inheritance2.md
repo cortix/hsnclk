@@ -21,7 +21,7 @@ tags:
   - Java'da kalıtımı sağlamak için asgari hedefler
   - Java gizli değişken
   - Java gölge değişken
-last_modified_at: 2023-01-06T15:12:19-04:00
+last_modified_at: 2023-01-07T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
@@ -134,7 +134,7 @@ Tabii ki bütün özelliklerini değil!
 **Not:** Dikkat edecek olursanız, üst sınıfımız olan **Person** sınıfında bulunan **name** ismindeki üye değişkenimiz **private** erişim değiştiricisine sahip olduğu için alt sınıflar tarafından miras alınsa da bu değişkene erişim şu an için mümkün gözükmemektedir.
 {: .notice--warning}
 
-Kaldığımız yerden devam edecek olursak, **Person** sınıfımız bizim **base/super/parent** sınıfımız olurken, **Student** ve **Faculty** sınıfları ise ana sınıftan türeyen **derived/subclass/child** olur.  
+Kaldığımız yerden devam edecek olursak, **Person** sınıfımız bizim **base/super/parent** sınıfımız olurken, **Student** ve **Faculty** sınıfları ise ana sınıftan türeyen **derived/subclass/child** sınıfları olur.  
 
 ## Gizli değişken (Hidden Variable) | Gölge değişken (shadow variable / variable shadowing)
 
