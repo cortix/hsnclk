@@ -19,7 +19,7 @@ tags:
   - Java dynamic/late binding(dinamik/geç bağlanma)
   - Java super keyword
   - Java this keyword
-last_modified_at: 2023-01-06T15:12:19-04:00
+#last_modified_at: 2023-01-06T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
