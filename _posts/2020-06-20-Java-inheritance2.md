@@ -200,7 +200,7 @@ Cinsiyet değişkeni genel bir değişken olduğundan **Person** sınıfında ol
 
 <br/>{% picture 2020-06-20-Java-inheritance2/uml2.png --alt java class hierarchy or inheritance tree uml diagram (java sınıf hiyerarşisi veya kalıtım ağacı uml diyagramı) --img width="100%" height="100%" %}<br/>
 
-Bölümün başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonuncuyu ise bir sonraki bölümde ele alacağız.
+Bölümün başında belirttiğimiz 3 şarttan ilk ikisini gerçekleştirdik. Sonuncuyu ise bir sonraki [yazımda](/java-kalitim-polimorfizm/Java-inheritance3/) ele aldım, dilerseniz bakabilirsiniz.
 
 ## Referanslar
 * [Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)

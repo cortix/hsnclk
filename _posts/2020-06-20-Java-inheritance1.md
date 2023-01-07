@@ -45,7 +45,7 @@ toc_sticky: true
 
 **Kalıtım**(inheritance) ve **polimorfizm**, nesneye dayalı bir programlama dilinde inanılmaz derecede güçlü özelliklerdir. **Loop** ve **conditional**'ların aksine, kodunuzun çalışması için genellikle kalıtım ve polimorfizm kullanmanız gerekmez. Yani önemini, sahip olduğunuz kod devasa bir hale gelmeden anlayamazsınız. Çünkü kodunuz büyüdükçe yöntemleri ve daha sonra sınıfları kullanmaya başlarsınız. Aynı şekilde, projenizin karmaşıklığı arttıkça ve büyük yazılım tasarım projeleri üzerinde çalışmaya başladığınızda, projenin karmaşıklığını kaldırabilmek için **kalıtım** ve **polimorfizm** kullanmaya başlarsınız.
 
-### Örnek
+## Java'da Kalıtım Kullanmadan Oluşturulan Örnek Kodlar
 
 Bir örnekle konuya girmek istiyorum. Diyelim ki elimizde bir **Person**(kişi) sınıfı var. Ancak yazılım tasarım ekibiniz size, artık bir sınıfın yetmediğini, öğrenci ve öğretim üyeleri olmak üzere **2 farklı sınıfa** daha ihtiyacın olduğunu söylüyor.
 
@@ -56,10 +56,15 @@ public class Person {
 }
 ```
 
-Şimdi ortada bir sorun var. Varolan **Person** sınıfının üstüne bir de **Student** ve **Faculty** isminde iki sınıf daha oluşturmamız isteniyor. Peki ne yapmamız gerekiyor? Bu sorunu ele almak için ilk olarak **2 tane kötü** çözüm yöntemi sunmak istiyorum. İlk olarak bu ihtimalleri görmeniz kalıtımın önemini anlamak açısından daha yerinde olacaktır.
+<br/>Varolan **Person** sınıfının üstüne bir de **Student** ve **Faculty** isminde iki sınıf daha oluşturmamız isteniyor. Peki ne yapmamız gerekiyor? Bu sorunu ele almak için ilk olarak **2 tane kötü** çözüm yöntemi sunmak istiyorum. İlk olarak bu ihtimalleri görmeniz kalıtımın önemini anlamak açısından daha yerinde olacaktır.
 
-İlk çözüm, olan biteni sadece **Person** sınıfında tutmaya çalışmak olsun. Yani ne demek istiyorum?
+### Birinci Önerilmeyen Yöntem
 
+İlk çözüm, olan biteni sadece **Person** sınıfında tutmaya çalışmak olsun. Yani demek istediğim aşağıdaki gibi bir kod;
+
+<div class="notice--info" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Birinci kötü çözüm:</h4>
+---
 
 ``` java
 public class Person {
@@ -81,10 +86,15 @@ if (student){
 }
   ....
 ```
----
-Yukarıda görüldüğü gibi karşılaştığım sorunları yine **Person** sınıfı içinde bir ``if-else`` conditional'ı kullanarak halledebilirim. Her seferinde bu kişi bir öğrenci mi yoksa fakülte üyesi mi şeklinde bir soru sormam yeterli olacaktır. Burada basit gibi gözükse de üye değişkenleri fazlalaştığında bu durum içinden çıkılamayacak bir hal alabilir.
+</div>
 
-Fakat farklı öğrencilerin farklı davranışları da olabilir. Aynı durum fakülte üyeleri için de geçerlidir. Okulda mezun öğrenciler de, mezun olmamışlar da olabilir. Her seferinde `if-else` kullanarak bu sorunu çözemeyiz.
+Yukarıda görüldüğü gibi karşılaştığım sorunları yine **Person** sınıfı içinde bir ``if-else`` conditional'ı kullanarak halledebilirim. Her seferinde bu kişi bir öğrenci mi? yoksa bir fakülte üyesi mi? şeklinde bir soru sormam yeterli olacaktır. Buradaki örnek basit gibi gözükse de, üye değişkenleri fazlalaştığında, bu durum içinden çıkılamayacak bir hâl alacaktır.
+
+Fakat farklı öğrencilerin farklı davranışları da olabilir. Aynı durum fakülte üyeleri için de geçerlidir. Okulda mezun öğrenciler olduğu gibi, henüz mezun olmamış öğrenciler de olabilir. Her seferinde `if-else` kullanarak bu sorunu çözemeyiz.
+
+<div class="notice--info" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Birinci kötü çözümün devamı:</h4>
+---
 
 ``` java
 public class Person {
@@ -113,8 +123,17 @@ if (student){
 }
   ....
 ```
+</div>
 
-Bu tarz kodlamaya **spagetti kodlama** da denir. Peki diğer kötü çözüm yöntemimiz nedir? Bu da **Person** sınıfın **Student** ve **Faculty** isminde 2 farklı kopyasını oluşturmak. Yani **Person** sınıfının içeriğini doğrudan kopyalayıp bu yeni sınıflara yapıştırmış olduk.
+Bu tarz kodlamaya **spagetti kodlama** da denir.
+
+### İkinci Önerilmeyen Yöntem
+
+Peki diğer kötü çözüm yöntemimiz nedir? Bu da, **Person** sınıfının **Student** ve **Faculty** isminde 2 farklı kopyasını oluşturmak olabilir. Yani **Person** sınıfının içeriğini doğrudan kopyalayıp bu yeni sınıflara yapıştırmaktan bahsediyorum;
+
+<div class="notice--info" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> İkinci kötü çözüm:</h4>
+---
 
 ``` java
 public class Student {
@@ -129,22 +148,26 @@ public class Faculty {
   ....
 }
 ```
-Peki buradan ne gibi problemler çıkardı? Cevabınız, tutarlılıkla(**consistency**) veya bütün nesneleri tek bir veri yapısında saklama özelliğiyle ilgiliyse, doğru yoldasınız demektir. Şimdi her ikisinde de konuşalım. Buradaki problem aslında tam olarak şudur. Örneğin **Person** sınıfının kodunda değişiklik yapmak istediğinizde, bu değişiklikleri **Student** ve **Faculty** sınıflarına da uygulamamız gerekecektir. Peki bunu her seferinde kopyala-yapıştır şeklinde mi yapacağız? Böyle yaparsak ortak kodu **tutarlı** tutmak gerçekten zor olacak.
 
-Veyahut **Person[]** tipinde bir dizi oluşturmak istiyoruz. Bu dizinin öğrenci mi yoksa fakülte üyesi mi olduğuna nasıl karar vereceğim? Diyelim ki bunu sadece öğrenciler ve sadece fakülte üyeleri şeklinde iki farklı diziye ayırırsam ne olur? **Student[]** ve **Faculty[]** .... O zaman da kişileri temsil eden diziyi bir daha asla kullanamam. Sonuç olarak öğrenciler ve fakülte üyeleri için iki farklı dizi tutmam gerekecek.
+</div>
 
-Tüm insanlar için tek bir veri yapısı tutmanın bir yolu olmadığını da görüyorum. <u>Peki bu neden önemlidir?</u> Yani sadece **Person** şeklinde tutmanın ne önemi olacak? Belkide amacımız, okuldaki insanları, öğrenci veya öğretim görevlisi ayrımı yapmadan tek bir çatı altında kayıt altına almak olabilirdi. Yalnız bu durumda bunu yapmak gerçekten zor olurdu. Öğrencileri potansiyel olarak sıralayabilirim, öğretim görevlilerini de sıralayabilirim, ama bunları nasıl birleştirebilirim? Esasen, bu iki örneğe bakarak ne yapmamız gerektiğini az çok anladık.
+Peki buradan ne gibi problemler çıkardı? Cevabınız, tutarlılıkla(**consistency**) veya veri yapısının dağınıklığı ile ilgiliyse, doğru yoldasınız demektir. Şimdi her ikisini de konuşalım istiyorum.
 
-<div class="notice--success" markdown="1">
-<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak için hedefler:</h4>
----
+Buradaki problem aslında tam olarak şudur. Örneğin **Person** sınıfının kodunda değişiklik yapmak istediğinizde, bu değişiklikleri **Student** ve **Faculty** sınıflarına da uygulamamız gerekecektir. <u>Peki bunu her seferinde kopyala-yapıştır şeklinde mi yapacağız?</u> Şayet böyle yaparsak ortak kodu **tutarlı** tutmak gerçekten zor olacaktır.
+
+Veyahut **Person[]** tipinde bir dizi oluşturmak istediğimizi varsayalım. Bu dizinin öğrenci mi yoksa fakülte üyesi mi olduğuna nasıl karar vereceğiz? Veyahut bunu, sadece öğrenciler ve sadece fakülte üyeleri şeklinde iki farklı diziye ayırırsak ne olur? **Student[]** ve **Faculty[]** .... O zaman da kişileri temsil eden diziyi bir daha asla kullanamayız! Sonuç olarak öğrenciler ve fakülte üyeleri için iki farklı dizi tutmam gerekecek.
+
+Tüm insanlar için tek bir veri yapısı tutmanın bir yolu olmadığını da görüyorum. <u>Peki bu neden önemlidir?</u> Yani sadece **Person** şeklinde tutmanın ne önemi olacak? Belkide amacımız, okuldaki insanları, öğrenci veya öğretim görevlisi ayrımı yapmadan, tek bir çatı altında kayıt altına almak olabilirdi. Yalnız bu durumda bunu yapmak gerçekten zor olurdu. Öğrencileri potansiyel olarak sıralayabilirim, öğretim görevlilerini de sıralayabilirim, ama bunları nasıl birleştirebilirim? Esasen, bu iki örneğe bakarak ne yapmamız gerektiğini az çok anladık.
+
+## Kodda tutarlılığı sağlamak ve veri yapısını tek bir sınıfta toplamak
+
 Buradaki **hedefler**,
+
 1. Bütün ortak davranışları bir sınıfta tutmak,
 2. Farklı davranışa sahip olanları ise farklı sınıflara ayırmak
 3. Tüm bu nesneleri tek bir veri yapısında tutmak.
-</div>
 
-İşin güzel yanı bütün bunları kalıtım(inheritance) ile yapabiliriz.
+İşin güzel yanı bütün bunları kalıtım(inheritance) ile yapabiliriz. Sonraki [yazımda](/java-kalitim-polimorfizm/Java-inheritance2/) bu hedeflerden ilk ikisini ele aldım, dilerseniz bakabilirsiniz.
 
 
 ## Referanslar
