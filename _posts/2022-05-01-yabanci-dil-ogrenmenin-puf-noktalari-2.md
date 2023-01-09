@@ -1,7 +1,7 @@
 ---
 title: "Dil Öğrenme Teknikleri (50 Dil Çalışmış Johan Vandewalle'den Yabancı Dil Öğrenmenin Püf Noktaları) PART 2"
 comments: false
-excerpt: "Yazılımcılar İçin Yabancı Dil Bariyeri - Bu makale Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sıraladığım paylaşımın 2. bölümüdür"
+excerpt: "Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotların ikinci bölümüdür. Dil bariyerini aşmak için poliglot(polyglot) yöntemleri nelerdir?"
 header:
   #teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.png"
   #og_image: /assets/images/page-header-og-image.webp

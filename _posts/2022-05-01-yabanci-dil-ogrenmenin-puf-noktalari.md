@@ -1,7 +1,7 @@
 ---
 title: "Dil Öğrenme Teknikleri (50 Dil Çalışmış Johan Vandewalle'den Yabancı Dil Öğrenmenin Püf Noktaları) PART 1"
 comments: false
-excerpt: "Yazılımcılar İçin Yabancı Dil Bariyeri - Bu makalemde Johan Vandewalle'in yabancı dil öğrenirken uyguladığı metotları sizinle paylaşmak istiyorum."
+excerpt: "Johan Vandewalle'in yabancı dil öğrenirken uyguladığı yöntemlerin birinci bölümüdür. Dil bariyerini aşmak için poliglot yöntemleri? Poliglotlar nasıl çalışır?"
 header:
   #teaser: "/assets/images/2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari/img.png"
   #og_image: /assets/images/page-header-og-image.png
@@ -47,9 +47,9 @@ toc_sticky: true
 
 **Johan Vandewalle**'i, fikirlerine her zaman değer verdiğim sevgili **Prof. Dr. Selçuk Şirin**'in youtube hesabında paylaştığı bir [video](https://www.youtube.com/watch?v=3OZzMbDHr14) aracılığı ile tanıdım. [Johan Vandewalle](https://tr.wikipedia.org/wiki/Johan_Vandewalle) (d. 15 Şubat 1960, Brugge, Belçika), Belçikalı bir dilbilimcidir. Ghent Üniversitesi'nde ders vermektedir ve Türk dillerinde uzmanlaşmıştır.
 
-Uzun yıllar yabancı dil öğrenme üzerine kendini geliştiren biri için, tavsiyelerinin dikkate değer olduğunu düşünüyorum. <u>Bu sebepten ötürü bu değerli eğitmeni sizin de tanımanızı istedim.</u>
+Uzun yıllar yabancı dil öğrenimi üzerine çalışmalar yapmış bu eğitmenin(polyglot) verdiği tavsiyeleri dikkate değer olarak görüyorum. <u>Bu sebepten ötürü bu değerli eğitmeni sizin de tanımanızı istedim.</u>
 
-Dil bariyeri diğer meslek gruplarında olduğu gibi yazılım geliştiriciler için de çok önemli bir engel. Çünkü yazılım alanında türkçe kaynak bulmak gerçekten çok zor. Kaldı ki hızla gelişen teknoloji, mevcut kaynakların güncelliğini yitirmesi gibi etmenler düşünüldüğünde türkçe kaynak bulmak yerine doğrudan yabancı dil öğrenmek birçoklarına göre daha akıllıca bir yatırım olacaktır. Takdir edersiniz ki dil öğrenmek de hiç o kadar kolay bir husus değildir. Özellikle belli bir yaştan sonra!!  
+Dil bariyeri diğer meslek gruplarında olduğu gibi yazılım geliştiriciler için de çok önemli bir engel. Çünkü yazılım alanında türkçe kaynak bulmak gerçekten çok zor. Kaldı ki hızla gelişen teknoloji, mevcut kaynakların güncelliğini yitirmesi gibi etmenler düşünüldüğünde türkçe kaynak bulmak yerine doğrudan yabancı dil öğrenmek birçoklarına göre daha akıllıca bir yatırım olacaktır. Takdir edersiniz ki dil öğrenmek de hiç o kadar kolay bir husus değildir. Özellikle belli bir yaştan sonra!!
 
 Yabancı Dil Öğrenmenin Püf Noktalarına geçmeden önce bir şeyi belirtmek isterim. Aşağıda sıraladığım maddeler **Johan Vandewalle**'in instagram sayfasından, hocanın <u>izni alınarak</u> alıntılanmıştır. Sıraladığım bu maddeler, doğrudan hocanın kendi ağzından kurduğu cümlelerdir. Bu arada Johan Vandewalle'in **youtube kanalı** ve **instagram** hesabının(**@johan.vandewalle**) linklerine, sayfanın sonunda, referanslar bölümünden erişebilirsiniz. İyi okumalar.
 
