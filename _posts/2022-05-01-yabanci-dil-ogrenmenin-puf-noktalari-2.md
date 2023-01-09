@@ -74,6 +74,19 @@ Hedefe doğru yaptığınız yolculukta bir öğretmen size rehberlik edebilir. 
 
 **"İnsanlara kendi dilleri dışında başka bir dille hitap etmeyi büyük bir saygısızlık olarak görüyor":** Ben "saygısızlık" kelimesini hiç kullanmadım, "saygı" kelimesini kullandım. Muhatabınızın ana dilini biliyorsanız ona o dili konuşarak saygı ifade edebilirsiniz. Bilmiyorsanız tabii ki başka bir dilde konuşacaksınız, bunda saygısızlık yok. "Günah" kelimesini kullandığım doğru, şu anlamda kullandım: Bir dili öğrenirken bir anadili konuşucusuyla karşılaştığınızda bu konuşma fırsatından yararlanmalısınız, bunu yapmazsanız âdeta günaha girmiş gibi olursunuz. [link](https://www.instagram.com/p/CdU3BvZs3CG/)
 
+### Johan Vandewalle kaç dil biliyor?
+
+Takipçilerin "Kaç dil biliyorsunuz?" ve "Hangi dilleri biliyorsunuz?" sorularına cevaben bu tabloyu paylaşıyorum.
+
+{% picture 2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/35-1.png --alt Johan Vandewalle hangi dilleri biliyor? Dil öğrenmenin püf noktaları --img width="100%" height="100%" %}<br/>
+
+Kesin bir sayı belirtmek ise aşağıdaki nedenlerden dolayı zor:
+1. **Dillerin tanımı.** Örneğin: Yugoslavya döneminde Sırp-Hırvatça bir tek dil sayılırken, ülkenin dağılmasından sonra iki dil sayılmaya başlandı. Ben üniversitede okurken Klasik Arapça ve Modern Standart Arapça iki ayrı dil olarak ele alınırdı, Araplar ise bunları bir tek dil olarak ele alırlar.
+2. **Seviye farkları.** Örneğin: bir kişi dört dili tam olarak, iki dili yarım olarak bilirse, toplam olarak kaç dil bildiği söylenmeli? Altı dil mi, yoksa 4 + 0,5 + 0,5 = beş dil mi?
+3. **Dillerin arasındaki benzerlikler.** Örneğin: Fransızca, Fince, Rusça hiç tartışmasız olarak üç dil sayılırken birbirine çok yakın olan Danca, Norveççe, İsveççe kaç dil sayılmalı (sözvarlıkları %80 aynı)? Üç dil mi yoksa 80% + 20% + 20% + 20% = 1,4 dil mi? (Kaldı ki Norveççe "bokmal" ve "nynorsk" diye ikiye bölünmektedir.)
+
+Birinci soruya genellikle "50 civarında dil inceledim." şeklinde cevap veriyorum. [link](https://www.instagram.com/p/CbucNzvM5-D/)
+
 ## PÜF NOKTASI 36
 
 **Ders kitabınızı "boyama kitabı"na çevirerek onu kolay hazmedilir hâle getirin:** Resim 1'de iki aydır tekrar çalıştığım "Basic Course in Azerbaijani" ders kitabımdan bir sayfa görüyorsunuz. Uyguladığım teknikleri şöyle açıklayabilirim:
