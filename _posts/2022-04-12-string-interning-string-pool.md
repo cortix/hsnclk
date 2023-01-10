@@ -27,6 +27,7 @@ tags:
   - Java string intern pool
   - Java'da == operatörü ve equals metodu farkı
 #last_modified_at: 2022-12-29T15:12:19-04:00
+last_modified_at:
 toc: true
 toc_sticky: true
 toc_label: "SAYFA İÇERİĞİ"

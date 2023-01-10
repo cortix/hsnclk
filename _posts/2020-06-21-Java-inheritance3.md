@@ -20,6 +20,7 @@ tags:
   - Derleme ve çalışma zamanı kararları
   - Kalıtımı sağlamak için asgari hedefler
 #last_modified_at: 2023-01-07T15:12:19-04:00
+last_modified_at:
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
