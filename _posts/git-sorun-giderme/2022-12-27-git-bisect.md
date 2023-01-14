@@ -172,7 +172,7 @@ Bu komut sayesinde ise ilgili commit'i **gitk** yardımcı programı aracılığ
 % git bisect log
 {% endhighlight %}
 
-commit'leri **good** veya **bad** olarak işaretledikten sonra, şu ana kadar yapılanları göstermek için ``git bisect log`` komutunu kullanabilirsiniz.
+commit'leri **good** veya **bad** olarak işaretledikten sonra, şu ana kadar yapılanları göstermek için ``git bisect log`` komutunu kullanabilirsiniz. Özetle bu komut, git bisect state'i süresince yapılan işlemlerin kayıtlarını karşınıza çıkaracaktır.
 
 ## Git bisect reset
 
@@ -195,7 +195,7 @@ Diyelim ki kodunuzun çalışıp çalışmadığını test edecek bir script'te 
 git bisect run my_script arguments
 {% endhighlight %}
 
-bu komutu kullanarak **bad** ve **good** işaretleme işlemlerini otomatize edebilirsiniz. Yalnız, script'inizi çalıştırdığınızda kodunuz iyiyse(yani **good/old** ise) script'i **0** koduyla, kodunuz kötüyse(yani **bad/new** ise) **125** dışında **1** ile **127 (dahil)** arasında bir kodla döndürmeniz gerektiğini unutmayın. ``git bisect run`` komutuyla ilgili detaylı bilgi için, ``git bisect --help`` komutu vasıtasıyla detaylı bilgi alabilirsiniz.
+bu komutu kullanarak **bad** ve **good** işaretleme işlemlerini otomatize edebilirsiniz. Yalnız, script'inizi çalıştırdığınızda kodunuz iyiyse(yani **good/old** ise) script'i **0** koduyla, kodunuz kötüyse(yani **bad/new** ise) **125** dışında **1** ile **127 (dahil)** arasında bir kodla döndürmeniz gerektiğini unutmayın. Hatta, script isminden sonra boşluk bırakıp, script'in ihtiyaç duyacağı argümanları bu script'e parametre olarak geçirebilirsiniz. ``git bisect run`` komutuyla ilgili detaylı bilgi için, ``git bisect --help`` komutuna başvurabilirsiniz.
 
 Geçerli kaynak kodu <u>test edilemediğinde</u> **125** rakamı çıktı olarak döndürülmelidir. Komut dosyası bu kodla çıkarsa, geçerli revizyon atlanır (bunun için ``git bisect skip`` bölümüne bakın).
 
