@@ -6,9 +6,9 @@ header:
   #teaser: "/assets/images/2022-04-12-string-interning-string-pool/img.png"
   #og_image: /assets/images/page-header-og-image.png
   #og_image: /assets/images/2022-04-12-string-interning-string-pool/img.png
-  teaser: "/assets/images/svg-book9.svg"
-  og_image: /assets/images/svg-book9.svg
-  overlay_image: /assets/images/svg-book9.svg
+  teaser: "/assets/images/svg-book23.svg"
+  og_image: /assets/images/svg-book23.svg
+  overlay_image: /assets/images/svg-book23.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
   caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"

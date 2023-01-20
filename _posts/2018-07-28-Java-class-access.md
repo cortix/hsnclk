@@ -3,9 +3,9 @@ title: "Java Sınıf Deklarasyonu ve Erişim Değiştiriciler(Access Modifiers)"
 comments: false
 excerpt: "Java sınıf deklarasyonu nasıl yapılır? Değiştiriciler hakkında bilmeniz gerekenler nelerdir gibi soruları bu bölümde bulabilirsiniz."
 header:
-  teaser: "/assets/images/svg-book6.svg"
-  og_image: /assets/images/svg-book6.svg
-  overlay_image: /assets/images/svg-book6.svg
+  teaser: "/assets/images/svg-book24.svg"
+  og_image: /assets/images/svg-book24.svg
+  overlay_image: /assets/images/svg-book24.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
   caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"

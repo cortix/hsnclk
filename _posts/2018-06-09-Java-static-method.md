@@ -3,9 +3,9 @@ title: "Java Static Metodu, Değişkenler ve Parametreler"
 comments: false
 excerpt: "Java Static Metodu Nedir? Hangi Durumlarda Kullanılır? Java'da Değişkenler ve Parametreler"
 header:
-  teaser: "/assets/images/svg-book6.svg"
-  og_image: /assets/images/svg-book6.svg
-  overlay_image: /assets/images/svg-book6.svg
+  teaser: "/assets/images/svg-book24.svg"
+  og_image: /assets/images/svg-book24.svg
+  overlay_image: /assets/images/svg-book24.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
   caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
