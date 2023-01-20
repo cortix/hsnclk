@@ -3,9 +3,9 @@ title: "Java Main Metodu"
 comments: false
 excerpt: "Java ile yazılmış bir program nasıl ayağa kalkar? Programı ayağa kaldıracak metot için gerekli asgari şartlar nelerdir? gibi soruları cevaplamaya çalışacağız"
 header:
-  teaser: "/assets/images/svg-book6.svg"
-  og_image: /assets/images/svg-book6.svg
-  overlay_image: /assets/images/svg-book6.svg
+  teaser: "/assets/images/svg-book24.svg"
+  og_image: /assets/images/svg-book24.svg
+  overlay_image: /assets/images/svg-book24.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
   caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
