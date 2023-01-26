@@ -3,9 +3,9 @@ title: "Java'da Hafıza Modeli 1 - İlkel Veri Tipleri(Primitive Types)"
 comments: false
 excerpt: "Java'da İlkel Veri Tipleri Bellekte Nasıl Saklanır? Bu durumun net anlaşılması için nasıl simüle edebiliriz? String interning nedir?"
 header:
-  teaser: "/assets/images/svg-book23.svg"
-  og_image: /assets/images/svg-book23.svg
-  overlay_image: /assets/images/svg-book23.svg
+  teaser: "/assets/images/svg-book26.svg"
+  og_image: /assets/images/svg-book26.svg
+  overlay_image: /assets/images/svg-book26.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
   caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
