@@ -3,9 +3,9 @@ title: "Java'da Hafıza Modeli 3 - Nesneler"
 comments: false
 excerpt: "Java'da Nesneler Bellekte Nasıl Saklanır? Farklı Örnekler"
 header:
-  teaser: "/assets/images/svg-book23.svg"
-  og_image: /assets/images/svg-book23.svg
-  overlay_image: /assets/images/svg-book23.svg
+  teaser: "/assets/images/svg-book26.svg"
+  og_image: /assets/images/svg-book26.svg
+  overlay_image: /assets/images/svg-book26.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
   caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
