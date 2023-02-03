@@ -71,7 +71,7 @@ Yukarıdaki örnekte bu kodun ne işe yaradığını kolaylıkla anlayabiliriz.
 <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Not:</h4>
 ---
 
-Zorunlu stilin özünde **değişkenlik** ve **komuta-dayalı** programlama vardır. Değişkenler veya nesneler yaratır ve süreç boyunca onların durumlarını(yani state'lerini) değiştiririz. Ayrıca, bir döngü dizini oluşturma, değerini artırma, sona ulaşıp ulaşmadığımızı kontrol etme, bir array'in n'inci öğesini güncelleme vb. gibi yürütmeye yönelik ayrıntılı komutlar veya talimatlar da sağlarız.
+Zorunlu stilin özünde **değişkenlik** ve **komuta-dayalı** programlama vardır. Değişkenler veya nesneler yaratır ve süreç boyunca onların durumlarını(yani state'lerini) değiştiririz. Ayrıca, bir döngü dizini oluşturma, değerini artırma, sona ulaşıp ulaşmadığımızı kontrol etme, bir array'in n'inci ögesini güncelleme vb. gibi yürütmeye yönelik ayrıntılı komutlar veya talimatlar da sağlarız.
 </div>
 
 ## Bildirimsel Stil Programlama (Declarative Style Programming)
@@ -102,7 +102,7 @@ Her iki durumda da ne yapacağımız bellidir. Amacımız array'in elemanların�
 
 **Standart for döngüsünde;** Bir sayaç, *i*, bildirilir ve 0 olarak başlatılır. Bir boolean ifadesi, *i*'yi *names* dizisinin uzunluğuyla karşılaştırır. Eğer *i<names.length* ise, kod bloğu yürütülür. *i*, her kod bloğunun sonunda bir artırılır. Kod bloğu içinde *i* array indeksi olarak kullanılır. Gördüğünüz gibi adım adım **nasıl yapacağınızı** anlatıyoruz.
 
-**Geliştirilmiş for döngüsünde;** Array'in her öğesini tutmak için bir string değişkeni olan *name* deklare edilir. Ancak bu döngünün tüm bu işlemleri **nasıl** yaptığını bilmiyoruz.
+**Geliştirilmiş for döngüsünde;** Array'in her ögesini tutmak için bir string değişkeni olan *name* deklare edilir. Ancak bu döngünün tüm bu işlemleri **nasıl** yaptığını bilmiyoruz.
 
 {% picture 2022-02-23-imperative-and-declarative-programming/forloops.png --alt Java for loops example (Java for döngüsü örneği) --img width="100%" height="100%" %}
 

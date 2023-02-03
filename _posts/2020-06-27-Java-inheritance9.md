@@ -83,7 +83,7 @@ public int resultNumbers(int a, int b){
 }
 ```
 
-Metot deklarasyonunun sahip olduğu minimum öğeler; metodun dönüş tipi, ismi, bir çift parantez **()** ve metodun gövdesini temsil eden **{}** köşeli parentezlerdir.
+Metot deklarasyonunun sahip olduğu minimum ögeler; metodun dönüş tipi, ismi, bir çift parantez **()** ve metodun gövdesini temsil eden **{}** köşeli parentezlerdir.
 
 Fakat daha genel olarak, bir yöntem deklarasyonu sırasıyla altı bileşeni içerir:
 
