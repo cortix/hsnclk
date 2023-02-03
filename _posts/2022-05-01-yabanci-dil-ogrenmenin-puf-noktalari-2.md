@@ -173,7 +173,7 @@ Bu teknikten sözlü ve yazılı yabancı dil sınavlarında da yararlanabilirsi
 
 {% picture 2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/40-3.png --alt Dil öğrenmenin püf noktası 40 - Muhatabınızın ağzından kullanabileceğiniz kelime ve yapıları çalın --img width="100%" height="100%" %}<br/>
 
-**Soru zamirli bir soruya cevap verirken soru zamirinin yerine ona cevap vazifesi gören kelimeyi koyup yine diğer kelimeleri tekrarlayabilirsiniz:** "**In which year did Columbus discover America?**" sorusuna cevap "**Columbus discovered America in the year 1492.**" Yazılı sınavlarda bir soruya cevap verirken veya kompozisyon yazarken bazı sözvarlığı ya da dilbilgisi öğeleri konusunda tereddüt edebilirsiniz.
+**Soru zamirli bir soruya cevap verirken soru zamirinin yerine ona cevap vazifesi gören kelimeyi koyup yine diğer kelimeleri tekrarlayabilirsiniz:** "**In which year did Columbus discover America?**" sorusuna cevap "**Columbus discovered America in the year 1492.**" Yazılı sınavlarda bir soruya cevap verirken veya kompozisyon yazarken bazı sözvarlığı ya da dilbilgisi ögeleri konusunda tereddüt edebilirsiniz.
 
 {% picture 2022-05-01-yabanci-dil-ogrenmenin-puf-noktalari-2/40-4.png --alt Dil öğrenmenin püf noktası 40 - Muhatabınızın ağzından kullanabileceğiniz kelime ve yapıları çalın --img width="100%" height="100%" %}<br/>
 

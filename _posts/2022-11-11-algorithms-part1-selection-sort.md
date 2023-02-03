@@ -37,7 +37,7 @@ toc_label: "SAYFA İÇERİĞİ"
 
 Aşağıdaki kart oyunu, **seçme algoritmasının**(selection algorithm) nasıl çalıştığını basitçe açıklamaktadır. Oyun çok basit; **dağınık kartları** <u>küçükten büyüğe</u> olacak şekilde birbirleriyle karşılaştırarak sıralamak istiyoruz.
 
-Bunu yapmak için; öncelikle **ilk konumdaki** öğeyle başlamalı ve **en küçük** öğeyi bulmak için bu öğeyi diğer öğelerle karşılaştırmalıyız. Bu durumda ilk öğemiz, varsa, listedeki en küçük öğenin yerini alacağı için bizim referans değerimiz olacaktır. <u>Her neyse, listedeki ilk konum dışındaki en küçük öğeyi bulursak, onu ilk öğeyle <b>değiştirmemiz</b> gerekir(tabii ki bulunan bu değer ilk öğeden küçükse!).</u> Listedeki en küçük öğeyi ilk pozisyona yerleştirdikten sonra benzer işlemleri 2. pozisyondan başlayarak devam edeceğiz. Bu durumda ise referansımız 2.öğe olur. Karşılaştırma, ve varsa yer değiştirme işlemleri bittikten sonra, benzer işlemleri sırasıyla listenin **sondan bir önceki** elemanına kadar devam ettirmemiz gerekiyor. Özetle seçme sıralaması algoritması bu şekilde gerçekleşir.
+Bunu yapmak için; öncelikle **ilk konumdaki** ögeyle başlamalı ve **en küçük** ögeyi bulmak için bu ögeyi diğer ögelerle karşılaştırmalıyız. Bu durumda ilk ögemiz, varsa, listedeki en küçük ögenin yerini alacağı için bizim referans değerimiz olacaktır. <u>Her neyse, listedeki ilk konum dışındaki en küçük ögeyi bulursak, onu ilk ögeyle <b>değiştirmemiz</b> gerekir(tabii ki bulunan bu değer ilk ögeden küçükse!).</u> Listedeki en küçük ögeyi ilk pozisyona yerleştirdikten sonra benzer işlemleri 2. pozisyondan başlayarak devam edeceğiz. Bu durumda ise referansımız 2.öge olur. Karşılaştırma, ve varsa yer değiştirme işlemleri bittikten sonra, benzer işlemleri sırasıyla listenin **sondan bir önceki** elemanına kadar devam ettirmemiz gerekiyor. Özetle seçme sıralaması algoritması bu şekilde gerçekleşir.
 
 <!-- <div class="notice--warning" markdown="1">
 <h4 class="no_toc"><i class="fas fa-comment"></i> Not:</h4>
@@ -102,7 +102,7 @@ public class SelectionSort {
 ```
 ---
 
-1. **Seçme sıralamasını** listeme uygulamak için iki tane iç içe geçmiş **for döngüsüne** ihtiyacım var(elbette for döngüsü kullanmak şart değildir). **Dıştaki for döngüm**, <u>tutmak istediğim konumu</u> takip ederek listenin başından başlar(yani yukarıdaki tanıma göre bizim referans değerimiz oluyor). Algoritmanın en başında bu konum elbette "**0**" olacaktır. Öte yandan, **içteki for döngüm** ise, **en küçük öğeyi** bulmak için dıştaki for döngüsünün tuttuğu konumdaki öğe dışındaki diğer öğeleri kontrol eder.
+1. **Seçme sıralamasını** listeme uygulamak için iki tane iç içe geçmiş **for döngüsüne** ihtiyacım var(elbette for döngüsü kullanmak şart değildir). **Dıştaki for döngüm**, <u>tutmak istediğim konumu</u> takip ederek listenin başından başlar(yani yukarıdaki tanıma göre bizim referans değerimiz oluyor). Algoritmanın en başında bu konum elbette "**0**" olacaktır. Öte yandan, **içteki for döngüm** ise, **en küçük ögeyi** bulmak için dıştaki for döngüsünün tuttuğu konumdaki öge dışındaki diğer ögeleri kontrol eder.
 2. Bulunan her yeni en küçük değer için int “**smallest**” değeri içteki for döngüsü boyunca güncellenecektir.
 3. "**smallest**" ve "**hasSmallestBeenFounded**" değerlerinin siz içteki for döngüsüne girmeden hemen önce güncellendiğini fark edeceksiniz. Çünkü içteki for döngüsünün amacı en küçük değeri bulmak ve referans değerle karşılaştırmaktır. Şayet içteki döngünün dışına çıktığımızda, bu değerlerin görevlerini yerine getirmiş olduğunu varsayarak, bu iki değeri sonraki en küçük değeri bulmak için sıfırlarız.
 4. İçteki for döngüsü çalışmasını bitirdiğinde, en azından bir tane bile en küçük değer bulunsa, "**hasSmallestBeenFounded**" boolean değeri `true` olarak işaretlenir. Çünkü içteki döngü boyunca **smallest** değeri değişebilir. Şayet, en küçük değer bulunmazsa, "**hasSmallestBeenFounded**" değeri `false` olarak kalır ve döngünün dışındaki "**if**" ifadesinin içine girilmez.
@@ -121,7 +121,7 @@ public class SelectionSort {
 
 Yukarıdaki kodda, hem sıralanmış hem de sıralanmamış liste kullanmak yerine sadece bir liste kullandım. Yani kendi içinde tek bir listeyi sıralayarak çözüme ulaştım. Dilerseniz bu şekilde 2 alt listeye ayırabilirsiniz;
 
-| Sıralanmış alt-liste | Sıralanmamış alt-liste | Sıralanmamış listedeki en küçük öğe |
+| Sıralanmış alt-liste | Sıralanmamış alt-liste | Sıralanmamış listedeki en küçük öge |
 |:--------|:-------:|--------:|
 | ()   | (9,4,3,1)   | 1   |
 | (1)   | (9,4,3)   | 3   |
