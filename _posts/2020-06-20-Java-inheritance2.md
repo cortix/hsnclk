@@ -128,9 +128,12 @@ Bu arada **extend** anahtar kelimesinin anlamı genişletmektir. Yalnız program
 
 Tabii ki bütün özelliklerini değil!
 
-* **public** örnek değişkenleri(instance variables) miras alırız,
+* **public** örnek değişkenleri(instance variables) ve statik değişkenleri miras alırız,
 * **public** metotları miras alırız,
 * **private** örnek değişkenleri de teknik olarak miras alınır ama bu değişkenlere erişim için public metotlara ihtiyacımız olacaktır. Aşağıda bunu izah etmeye çalışacağım.
+* **kurucular (constructors)** miras alınmaz. (Fakat, Java kuralları, tüm kurucuların üst sınıfın kurucularından birine çağrı yaparak başlaması gerektiğini söyler. Bunun cevabını şu [yazımda](/java-kalitim-polimorfizm/Java-inheritance6/) bulabilirsiniz.)
+* **nested** sınıfları miras alırız.
+
 
 **Not:** Dikkat edecek olursanız, üst sınıfımız olan **Person** sınıfında bulunan **name** ismindeki üye değişkenimiz **private** erişim değiştiricisine sahip olduğu için alt sınıflar tarafından miras alınsa da bu değişkene erişim şu an için mümkün gözükmemektedir.
 {: .notice--warning}
