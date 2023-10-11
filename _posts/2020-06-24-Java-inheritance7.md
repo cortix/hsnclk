@@ -50,6 +50,14 @@ toc_sticky: true
 11. Java’da Kalıtım 10 - [Overloading(Aşırı Yükleme) Metotlar](/java-kalitim-polimorfizm/Java-inheritance10/)
 </div>
 
+## Video İçeriği
+
+Okumayı sevmiyorsanız aşağıdaki 3 videoyu izleyebilirsiniz. Videoları izlemek için aşağıdaki resimlere ya da sırasıyla bu linklere [1](https://youtu.be/zItNteBUvZg), [2](https://youtu.be/nBl8tiWmMMo), [3](https://youtu.be/YNNYHclwAkM) tıklayabilirsiniz.
+
+<br/>{% picture 2023-10-01-java-derleyici-kurallari-1/java-compiler-rule-1.jpg --alt Java'da Derleyici Kuralları 1 - this() ve super() kurucu çağrıları & Overloaded constructor Management --img width="50%" height="50%" --link https://youtu.be/zItNteBUvZg %}<br/>
+<br/>{% picture 2023-10-02-java-derleyici-kurallari-2/java-compiler-rule-2.jpg --alt Java'da Derleyici Kuralları 2 - Java'da Nesne Oluşurken Nasıl Bir Yol İzlenir? --img width="50%" height="50%" --link https://youtu.be/nBl8tiWmMMo %}<br/>
+<br/>{% picture 2023-10-03-java-derleyici-kurallari-3/java-compiler-rule-3.jpg --alt Java'da Derleyici Kuralları 3 - Java'da Nesne Oluşumuna Bir Örnek? --img width="50%" height="50%" --link https://youtu.be/YNNYHclwAkM %}<br/>
+
 ## Genel Bakış
 
 Son derslerde Java'da sınıf oluşturmanın veya nesne oluşturmanın nasıl gerçekleştiğine, özellikle kalıtımın nesne oluşturmaya nasıl uygulandığına bakmıştık.
