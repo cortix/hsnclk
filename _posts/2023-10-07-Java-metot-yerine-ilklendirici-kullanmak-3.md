@@ -37,7 +37,7 @@ toc_sticky: true
   6. Java’da Hafıza Modeli 6 - [Java’da Statik ve Statik Olmayan Değişken ve Metotların Hafıza Yönetimi](/java-hafiza-yonetimi/Java-memory-models-static-nonstatic-members/)
   7. Java’da Hafıza Modeli 7 - [String Interning Nedir, String Pool Nedir, == operatörü ve equals metodu Arasındaki Fark](/java-hafiza-yonetimi/string-interning-string-pool/)
   8. Java’da Hafıza Modeli 8 - [Java’da Static Initializer nedir? - Java statik ilklendirici](/java-hafiza-yonetimi/Java-statik-ilklendirici-1/)
-  9. Java’da Hafıza Modeli 9 - [Java’da Instance Initializer Nedir? - Java örnek ilklendirici](/java-hafiza-yonetimi/Java-örnek-ilklendirici-2/)
+  9. Java’da Hafıza Modeli 9 - [Java’da Instance Initializer Nedir? - Java örnek ilklendirici](/java-hafiza-yonetimi/Java-ornek-ilklendirici-2/)
   10. **Java’da Hafıza Modeli 10 - Java’da Neden BAZI durumlarda metot kullanmak yerine initializer’ı tercih ederiz?**
   
   Buradan sonra aşağıdaki seriden devam etmenizden yarar var.
