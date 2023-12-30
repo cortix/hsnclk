@@ -39,29 +39,29 @@ Bu, **[Project Jigsaw](https://openjdk.org/projects/jigsaw/)**'da prototipi olu�
 * **Güvenilir yapılandırma (reliable configuration):** Kırılgan, hataya açık sınıf yolu (class-path) mekanizmasını, program bileşenlerinin birbirlerine açık bağımlılıklarını bildirecek bir araçla değiştirmek için *güvenilir yapılandırma (reliable configuration)*, bununla birlikte,
 * **Güçlü kapsülleme (strong encapsulation):** Bir bileşenin hangi "public" türlerinin diğer bileşenler tarafından erişilebilir olduğunu ve hangilerinin erişilebilir olmadığını bildirmesine olanak tanıyan *güçlü kapsülleme (strong encapsulation)*.
 
-Bu özellikler uygulama geliştiricilerine, kütüphane (library) geliştiricilerine ve Java SE Platformu uygulayıcılarına doğrudan ve ayrıca dolaylı olarak fayda sağlayacaktır çünkü bunlar ölçeklenebilir bir platform, daha fazla platform bütünlüğü ve gelişmiş performans sağlayacaktır.
+Bu özellikler, uygulama geliştiricilerine, kütüphane (library) geliştiricilerine ve Java SE Platformu uygulayıcılarına doğrudan ve ayrıca dolaylı olarak fayda sağlayacaktır, çünkü bunlar ölçeklenebilir bir platform, daha fazla platform bütünlüğü ve gelişmiş performans sağlayacaktır.
 
 
-Bu, bu dökümanın ikinci baskısıdır. [İlk baskıya](https://openjdk.org/projects/jigsaw/spec/sotms/2015-09-08) göre bu baskı, [uyumluluk ve migrasyon](https://openjdk.org/projects/jigsaw/spec/sotms/#compatibility--migration) (compatibility and migration) ilgili materyalleri sunar, [yansıtıcı okunabilirlik](https://openjdk.org/projects/jigsaw/spec/sotms/#reflective-readability) (reflective readability) tanımını gözden geçirir, anlatının(narrative) akışını iyileştirmek için metni yeniden sıralar ve daha kolay gezinme için "iki seviyeli (two-level)“ bir bölüm ve alt bölüm hiyerarşisi halinde düzenlenir.
+Bu, bu dökümanın ikinci baskısıdır. [İlk baskıya](https://openjdk.org/projects/jigsaw/spec/sotms/2015-09-08) göre bu baskı, [uyumluluk ve migrasyon](https://openjdk.org/projects/jigsaw/spec/sotms/#compatibility--migration) (compatibility and migration) ile ilgili materyaller sunar, [yansıtıcı okunabilirlik](https://openjdk.org/projects/jigsaw/spec/sotms/#reflective-readability) (reflective readability) tanımını gözden geçirir, anlatının(narrative) akışını iyileştirmek için metni yeniden sıralar ve daha kolay gezinme için "iki seviyeli (two-level)“ bir bölüm ve alt bölüm hiyerarşisi halinde düzenlenir.
 
 Tasarımda hâlâ pek çok [açık sorunlar](https://openjdk.org/projects/jigsaw/spec/issues/) (open issues) bulunmaktadır ve bunların çözümleri bu belgenin gelecek sürümlerinde yansıtılacaktır.
 
 
 ## DEFINING MODULES (modüllerin tanımlanması)
 
-Hem geliştiriciler için ulaşılabilir hem de mevcut araç zincirleri tarafından desteklenebilir bir şekilde <u>güvenilir yapılandırma</u> (*reliable configuration*) ve <u>güçlü kapsülleme</u> (*strong encapsulation*) sağlamak için modülleri temel bir yeni tür Java program bileşeni olarak ele alıyoruz. *Modül*, adlandırılmış, kendi kendini tanımlayan bir kod ve veri koleksiyonudur. Kodu, tür içeren bir dizi paket olarak organize edilmiştir, *örneğin*, Java sınıfları ve arayüzleri; Verileri(its data), kaynakları (resources) ve diğer statik bilgileri içerir.
+Hem geliştiriciler için ulaşılabilir hem de mevcut araç zincirleri tarafından desteklenebilir bir şekilde <u>güvenilir yapılandırma</u> (*reliable configuration*) ve <u>güçlü kapsülleme</u> (*strong encapsulation*) sağlamak için modülleri temel bir yeni tür Java program bileşeni olarak ele alıyoruz. *Modül*, adlandırılmış (named), kendi kendini tanımlayan (self-describing) bir kod ve veri koleksiyonudur. Kodu (yani modülün kodu), tür içeren bir dizi paket olarak organize edilmiştir, *örneğin*, Java sınıfları ve arayüzleri; verileri(its data), kaynakları (resources) ve diğer statik bilgileri içerir.
 
 
 ### 1.1 Module declarations (modül deklarasyonları/bildirimleri)
 
-Bir modülün kendi açıklaması, Java programlama dilinin yeni bir yapısı olan modül deklarasyonunda (*module declaration*) ifade edilir. Mümkün olan en basit modül deklarasyonu yalnızca modülünün adını belirtir:
+Bir modülün kendi kendini açıklaması (self-description), Java programlama dilinin yeni bir yapısı olan modül deklarasyonunda (*module declaration*) ifade edilir. Mümkün olan en basit modül deklarasyonu yalnızca modülünün adını belirtir:
 
 {% highlight java linenos %}
 module com.foo.bar {
 }
 {% endhighlight %}
 
-Modülün hem <u>derleme</u> hem de <u>çalışma</u> zamanında, başka modüllere adıyla(*by name*) bağımlı olduğunu bildirmek için bir veya daha fazla `requires` clauses eklenebilir:
+Modülün hem <u>derleme</u> hem de <u>çalışma</u> zamanında, başka modüllere adıyla(*by name*) bağımlı olduğunu bildirmek için bir veya daha fazla `requires` cümleciği (*clause*) eklenebilir:
 
 {% highlight java linenos %}
 module com.foo.bar {
@@ -69,7 +69,7 @@ module com.foo.bar {
 }
 {% endhighlight %}
 
-Son olarak, modülün belirli paketlerdeki yalnızca `public` olan bütün türlerini (*types*) diğer modüller tarafından kullanılabilir hale getirdiğini bildirmek için `exports` clauses eklenebilir:
+Son olarak, modülün belirli paketlerdeki yalnızca `public` olan bütün türlerini (*types*) diğer modüller tarafından kullanılabilir hale getirdiğini bildirmek için `exports` cümleciği (*clause*) eklenebilir:
 
 {% highlight java linenos %}
 module com.foo.bar {
@@ -79,12 +79,12 @@ module com.foo.bar {
 }
 {% endhighlight %}
 
-Bir modülün deklarasyonu hiçbir `exports` cümleciği içermiyorsa, o zaman hiçbir türü diğer modüllere aktarmaz.
+Bir modülün deklarasyonu hiçbir `exports` cümleciği (*clause*) içermiyorsa, o zaman hiçbir türü diğer modüllere aktarmaz.
 
 (**Benim notum :** Yani ilgili modülü `requires` ile talep etsek bile, bu modülün dışarı aktarılan (yani `exports` edilen) bir paketi yoksa o modüle ulaşılmaz.)
 {: .notice--warning}
 
-Bir modül deklarasyonunun kaynak kodu, geleneksel olarak, modülün kaynak dosya (*module’s source-file*) hiyerarşisinin kökündeki (*root*) `module-info.java` adlı bir dosyaya yerleştirilir. `com.foo.bar` modülü için kaynak dosyalar örneğin şunları içerebilir:
+Bir modül deklarasyonunun kaynak kodu (*source code*), geleneksel olarak, modülün kaynak dosya (*module’s source-file*) hiyerarşisinin kökündeki (*root*) `module-info.java` adlı bir dosyaya yerleştirilir. `com.foo.bar` modülü için kaynak dosyalar örneğin şunları içerebilir:
 
 {% highlight java linenos %}
 module-info.java
@@ -95,14 +95,13 @@ com/foo/bar/alpha/Alpha.java
 
 Bir modül deklarasyonu, geleneksel olarak, sınıf dosyası çıktı dizinine ( *class-file output directory*) benzer şekilde yerleştirilen `module-info.class` adlı bir dosyaya derlenir.
 
-Paket adları gibi modül adları da çakışmamalıdır. Bir modülü adlandırmanın önerilen yolu, paketlerin adlandırılmasında uzun süredir önerilen <u>reverse-domain-name</u> paternini kullanmaktır. Bu nedenle bir modülün adı genellikle "dışa aktarılan (*exported*) paketlerin adlarının <u>öneki</u> olacaktır, ancak bu ilişki zorunlu değildir.
+Paket adları gibi modül adları da çakışmamalıdır. Bir modülü adlandırmanın önerilen yolu, paketlerin adlandırılmasında uzun süredir önerilen <u>reverse-domain-name</u> paternini kullanmaktır. Bu nedenle bir modülün adı genellikle dışa aktarılan (*export* edilen) paketlerin adlarının <u>öneki</u> olacaktır, ancak bu ilişki zorunlu değildir.
 
 Bir modülün deklarasyonu bir sürüm dizesi (*version string*) içermediği gibi, bağlı olduğu modüllerin sürüm dizeleri üzerinde de kısıtlamalar içermez. Bu kasıtlıdır: sürüm-seçimi (*version-selection*) sorununu çözmek modül sisteminin [bir amacı](https://openjdk.org/projects/jigsaw/spec/reqs/02#version-selection) değildir; bu sorunu inşa-araçları (*build tools*) ve konteyner (*container*) uygulamalarına bırakmak en iyisidir.
 
 Modül deklarasyonu birkaç nedenden dolayı bir dil veya kendi notasyonlarından ziyade Java programlama dilinin bir parçasıdır. En önemlilerinden biri, [fazlar arasında aslına uygunluğu](https://openjdk.org/projects/jigsaw/spec/reqs/02#fidelity-across-all-phases) (*fidelity across phases*) sağlamak için modül bilgilerinin hem derleme zamanında hem de çalışma zamanında mevcut olması gerektiğidir, örneğin, modül sisteminin hem derleme zamanında hem de çalışma zamanında aynı şekilde çalışmasını sağlamak. Bu da, teşhis edilmesi ve onarılması daha kolay olduğunda birçok hata türünün önlenmesine veya en azından - derleme zamanında - daha erken bildirilmesine olanak tanır.
 
-Modül deklarasyonlarının, bir modüldeki diğer kaynak dosyalarıyla (*source files*) birlikte Java sanal makinesi tarafından tüketilmek üzere bir sınıf dosyası (*class file*) halinde derlenen bir kaynak dosyada (*source file*) ifade edilmesi, aslına uygunluğu (*fidelity*) sağlamanın doğal yoludur. Bu yaklaşım geliştiricilere hemen tanıdık gelecektir ve IDE'ler ve inşa araçları (*build tools*) tarafından desteklenmesi zor olmayacaktır. Özellikle bir IDE, bileşenin proje açıklamasında zaten mevcut olan bilgilerden `requires` cümleleri (*requires clauses*) sentezleyerek mevcut bir bileşen için bir başlangıç modül (*initial module*) deklarasyonu önerebilir.
-
+Modül deklarasyonlarının, bir modüldeki diğer kaynak dosyalarla (*source files*) birlikte, Java sanal makinesinin tüketimi için bir sınıf dosyasına (*class file*) derlenen bir kaynak dosyada (*source file*) ifade edilmesi, aslına uygunluğu (*fidelity*) sağlamanın doğal yoludur. Bu yaklaşım geliştiricilere hemen tanıdık gelecek, ve IDE'ler ve inşa araçları (*build tools*) tarafından desteklenmesi zor olmayacaktır. Özellikle bir IDE, bileşenin proje açıklamasında zaten mevcut olan bilgilerden `requires` cümlecikleri (*requires clauses*) sentezleyerek mevcut bir bileşen için bir başlangıç modül (*initial module*) deklarasyonu önerebilir.
 
 ### 1.2 Module artifacts (modül yapıları/yapıtları/artifektler)
 
