@@ -1,5 +1,5 @@
 ---
-title: "The State of the Java Module System - Mark Reinhold (java modül Sisteminin Durumu) (ÇEVİRİ)"
+title: "The State of the Java Module System - Mark Reinhold (Java Modül Sisteminin Durumu) (ÇEVİRİ)"
 comments: false
 excerpt: "Arkadaşlar bu yazı Mark Reinhold'un, Java'da modül sistemi ile ilgili kaleme aldığı meşhur bir makaledir. Çevirisini bizzat kendim yaptım."
 header:
@@ -28,7 +28,7 @@ toc_sticky: true
 
 
 
-## The State of the Module System (modül Sisteminin Durumu)
+## The State of the Module System (modül sisteminin durumu)
 
 > Bu belge biraz güncel değildir. Temel kavramların hiçbiri değişmedi ancak ``requires public`` yönergesi/direktifi ``requires transitive`` olarak yeniden adlandırıldı ve çeşitli ek yetenekler eklendi. Güncelleme hazırlık aşamasındadır ve hazır olduğunda burada yayınlanacaktır. [^1]
 
@@ -56,14 +56,14 @@ Hem geliştiriciler için ulaşılabilir hem de mevcut araç zincirleri tarafın
 
 Bir modülün kendi açıklaması, Java programlama dilinin yeni bir yapısı olan modül deklarasyonunda (*module declaration*) ifade edilir. Mümkün olan en basit modül deklarasyonu yalnızca modülünün adını belirtir:
 
-{% highlight java %}
+{% highlight java linenos %}
 module com.foo.bar {
 }
 {% endhighlight %}
 
 Modülün hem <u>derleme</u> hem de <u>çalışma</u> zamanında, başka modüllere adıyla(*by name*) bağımlı olduğunu bildirmek için bir veya daha fazla `requires` clauses eklenebilir:
 
-{% highlight java %}
+{% highlight java linenos %}
 module com.foo.bar {
   requires org.baz.qux;
 }
@@ -71,7 +71,7 @@ module com.foo.bar {
 
 Son olarak, modülün belirli paketlerdeki yalnızca `public` olan bütün türlerini (*types*) diğer modüller tarafından kullanılabilir hale getirdiğini bildirmek için `exports` clauses eklenebilir:
 
-{% highlight java %}
+{% highlight java linenos %}
 module com.foo.bar {
   requires org.baz.qux;
   exports com.foo.bar.alpha;
@@ -86,7 +86,7 @@ Bir modülün deklarasyonu hiçbir `exports` cümleciği içermiyorsa, o zaman h
 
 Bir modül deklarasyonunun kaynak kodu, geleneksel olarak, modülün kaynak dosya (*module’s source-file*) hiyerarşisinin kökündeki (*root*) `module-info.java` adlı bir dosyaya yerleştirilir. `com.foo.bar` modülü için kaynak dosyalar örneğin şunları içerebilir:
 
-{% highlight java %}
+{% highlight java linenos %}
 module-info.java
 com/foo/bar/alpha/AlphaFactory.java
 com/foo/bar/alpha/Alpha.java
@@ -108,7 +108,7 @@ Modül deklarasyonlarının, bir modüldeki diğer kaynak dosyalarıyla (*source
 
 Mevcut araçlar(*tool*’lar) JAR dosyalarını zaten oluşturabilir, manipüle edebilir ve tüketebilir; bu nedenle adaptasyon ve taşıma kolaylığı için modüler JAR dosyaları tanımlıyoruz. Modüler bir JAR dosyası, kök dizininde (*root directory*) bir `module-info.class` dosyasını da içermesi dışında, tüm olası yönlerden sıradan bir JAR dosyasına benzer. Yukarıdaki `com.foo.bar` modülü için modüler bir JAR dosyası örneğin aşağıdaki içeriğe sahip olabilir:
 
-{% highlight java %}
+{% highlight java linenos %}
 META-INF/
 META-INF/MANIFEST.MF
 module-info.class
@@ -170,7 +170,7 @@ Modül yolu (*module path*) üzerindeki yapılar (*artifact*) tarafından tanım
 
 Yukarıdaki `com.foo.bar` modülünü ve ayrıca platformun `java.sql` modülünü kullanan bir uygulamamız olduğunu varsayalım. Uygulamanın çekirdeğini içeren modül şu şekilde bildirilir:
 
-{% highlight java %}
+{% highlight java linenos %}
 module com.foo.app {
   requires com.foo.bar;
   requires java.sql;
@@ -181,7 +181,7 @@ Bu ilk uygulama modülü göz önüne alındığında, modül sistemi, bu bağı
 
 Modül sistemi, `com.foo.app` modülü için bir modül grafiği oluşturmak amacıyla, `java.sql` modülünün bildirimini inceler:
 
-{% highlight java %}
+{% highlight java linenos %}
 module java.sql {
   requires java.logging;
   requires java.xml;
@@ -233,7 +233,7 @@ Bir modül başka bir modül okuyorsa, bazı durumlarda mantıksal olarak diğer
 
 Özellikle `java.sql.Driver` arayüzü,
 
-{% highlight java %}
+{% highlight java linenos %}
 public Logger getParentLogger();
 {% endhighlight %}
 
@@ -241,7 +241,7 @@ public Logger getParentLogger();
 
 Örneğin, `com.foo.app` modülündeki kodun, bir *logger* elde etmek ve ardından bir mesajı günlüğe kaydetmek için (yani *log*’lamak için) bu yöntemi çağırdığını varsayalım:
 
-{% highlight java %}
+{% highlight java linenos %}
 String url = ...;
 Properties props = ...;
 Driver d = DriverManager.getDriver(url);
@@ -258,7 +258,7 @@ Bu nedenle modül deklarasyonlarını, bir modülün bağlı olduğu ek modülle
 (**Benim notum :** `transitive` olan bu değiştirici önceden bu `public`'di, sonraki güncellemelerde `transitive` olarak değiştirilmiş)
 {: .notice--warning}
 
-{% highlight java %}
+{% highlight java linenos %}
 module java.sql {
   requires transitive java.logging;
   requires transitive java.xml;
@@ -365,9 +365,9 @@ Sınıf yolundaki (*class path*) türleri kullanan otomatik bir modül (*automat
 Program bileşenlerinin servis arayüzleri (*service interfaces*) ve servis sağlayıcılar (*service providers*) aracılığıyla gevşek bağlanması (*loose coupling*), büyük yazılım sistemlerinin oluşturulmasında güçlü bir araçtır. Java, çalışma zamanında sınıf yolunu (*class path*) arayarak servis sağlayıcılarının (*service providers*) yerini saptayan *[java.util.ServiceLoader](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)* sınıfı aracılığıyla uzun süredir desteklenen servislere sahiptir. Modüllerde tanımlanan servis sağlayıcılar (*service providers*) için, bu modülleri gözlemlenebilir modüller (*observable modules*) kümesi arasında nasıl yerleştireceğimizi, bağımlılıklarını nasıl çözeceğimizi ve sağlayıcıları (*providers*) ilgili servisleri kullanan kod için nasıl kullanılabilir hale getireceğimizi düşünmeliyiz.
 
 
-Örneğin, `com.foo.app` modülümüzün bir MySQL veritabanı kullandığını ve `org.slf4j`’nin sürücü (*driver*) tarafından kullanılan bir *logging library* olduğu ve `com.mysql.jdbc`’nin ise `java.sql.Driver` servis arayüzü (*service interface*) uygulamasını içeren bir paket olduğu deklarasyonu içeren gözlemlenebilir bir modülde (*observable module*) bir MySQL JDBC sürücüsünün (*driver*) sağlandığını varsayalım.
+Örneğin, `com.foo.app` modülümüzün bir MySQL veritabanı kullandığını ve
 
-{% highlight java %}
+{% highlight java linenos %}
 module com.mysql.jdbc {
   requires java.sql;
   requires org.slf4j;
@@ -375,9 +375,9 @@ module com.mysql.jdbc {
 }
 {% endhighlight %}
 
-(Sürücü (*driver*) paketini dışa aktarmak (*export* etmek) aslında gerekli değildir ancak bunu netlik sağlamak amacıyla burada yapıyoruz.)
+deklarasyonuna sahip gözlemlenebilir bir modülde (*observable module*) bir MySQL JDBC sürücüsü (*driver*) sağlandığını varsayalım:  burada `org.slf4j`, sürücü (*driver*) tarafından kullanılan bir günlük tutma kütüphanesidir (*logging library*) ve `com.mysql.jdbc` ise, `java.sql.Driver` servis arayüzü (*service interface*) implementasyonunu içeren bir pakettir. (Sürücü (*driver*) paketini dışa aktarmak (*export* etmek) aslında gerekli değildir ancak bunu netlik sağlamak amacıyla burada yapıyoruz.)
 
-`java.sql` modülünün bu sürücüyü (*driver*) kullanabilmesi için, `ServiceLoader` sınıfının sürücü (*driver*) sınıfını *reflection* yoluyla başlatabilmesi (*instantiate* edebilmesi) gerekir; bunun gerçekleşmesi için modül sisteminin sürücü (*driver*) modülünü modül grafiğine eklemesi ve bağımlılıklarını çözmesi gerekir, böylece:
+`java.sql` modülünün bu sürücüyü (*driver*) kullanabilmesi için, `ServiceLoader` sınıfının sürücü (*driver*) sınıfını, yansıma (*reflection*) yoluyla başlatabilmesi (*instantiate* edebilmesi) gerekir; bunun gerçekleşmesi için modül sisteminin sürücü (*driver*) modülünü modül grafiğine eklemesi ve bağımlılıklarını çözmesi gerekir, böylece:
 
 <br/>{% picture 2023-12-28-java-module-system/module-13.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
 
@@ -385,10 +385,10 @@ Bunu başarmak için modül sistemi, önceden-çözümlenmiş modüller aracıl�
 
 Modül sistemi, `ServiceLoader::load` yöntemlerinin çağrılması için modül artifeklerindeki sınıf dosyalarını (class files) tarayarak servislerin kullanımlarını (uses of services) tanımlayabilir, ancak bu hem yavaş hem de güvenilmez olacaktır. Bir modülün belirli bir servisi (service) kullanması, o modülün tanımının temel bir yönüdür; bu nedenle, hem verimlilik hem de netlik açısından bunu modülün beyanında **uses** cümlesiyle ifade ediyoruz:
 
-{% highlight java %}
+{% highlight java linenos %}
 module java.sql {
-  requires public java.logging;
-  requires public java.xml;
+  requires transitive java.logging;
+  requires transitive java.xml;
   exports java.sql;
   exports javax.sql;
   exports javax.transaction.xa;
@@ -398,7 +398,7 @@ module java.sql {
 
 Modül sistemi, `ServiceLoader` sınıfının bugün yaptığı gibi, **META-INF/services** kaynak girişleri için modül artifektlarini tarayarak servis sağlayıcıları (*service providers*) tanımlayabilir. Bununla birlikte, bir modülün belirli bir servisin uygulanmasını (*implementation of a particular service*) sağlaması da aynı derecede temeldir, bu nedenle bunu modülün beyanında bir **provides** yan tümcesiyle ifade ediyoruz:
 
-{% highlight java %}
+{% highlight java linenos %}
 module com.mysql.jdbc {
   requires java.sql;
   requires org.slf4j;
@@ -425,7 +425,7 @@ Modül grafiğini çalışma zamanında *reflection* yoluyla kullanılabilir hal
 
 Bir `Module` nesnesi üzerindeki temel işlemler şunlardır:
 
-{% highlight java %}
+{% highlight java linenos %}
 package java.lang.reflect;
 
 public final class Module {
@@ -450,7 +450,7 @@ Bir *framework*, çalışma zamanında diğer sınıfları yüklemek (*load*), i
 Platformun akış XML ayrıştırıcısı (*[streaming XML parser](https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/package-summary.html)*), örneğin tanımlanmışsa, `ServiceLoader` sınıfı aracılığıyla keşfedilebilir herhangi bir sağlayıcıya (*provider*) tercihen, `javax.xml.stream.XMLInputFactory` sistem özelliği tarafından adlandırılan [XMLInputFactory](https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html) servisinin uygulanmasını [yükler ve başlatır](https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html#newFactory--) (load and instantiate). İstisna yönetimi (*exception handling*) ve güvenlik kontrollerini (*security checks*) göz ardı eden kod, kabaca şunu okur:
 
 
-{% highlight java %}
+{% highlight java linenos %}
 String providerName
 = System.getProperty("javax.xml.stream.XMLInputFactory");
 if (providerName != null) {
@@ -501,9 +501,10 @@ Katmanlar istiflenebilir: Önyükleme katmanının (*boot layer*) üzerine yeni 
 ### 5.6 Qualified exports (nitelikli dışa aktarımlar)
 
 Bazı türlerin bir dizi modül arasında erişilebilir olmasını, ancak diğer tüm modüller tarafından erişilemez kalmasını sağlamak için düzenlemeler yapmak zaman zaman gereklidir.
+
 JDK'nın standart `java.sql` ve `java.xml` modüllerinin implementasyonlarında yer alan kod, örneğin, `java.base` modülünde bulunan dahili (*internal*) `sun.reflect` paketinde tanımlanan türleri kullanır. Bu kodun `sun.reflect` paketindeki türlere erişmesi için bu paketi `java.base` modülünden basitçe dışa aktarabiliriz (*export*):
 
-{% highlight java %}
+{% highlight java linenos %}
 module java.base {
   ...
   exports sun.reflect;
@@ -514,15 +515,15 @@ Bununla birlikte, her modül `java.base`'i okuduğundan, bu, `sun.reflect` paket
 
 Bu nedenle modül deklarasyonlarını, bir paketin bir veya daha fazla "özel olarak adlandırılmış modüle" aktarılmasına izin verecek ve başkalarına izin vermeyecek şekilde genişletiyoruz. `java.base` modülünün deklarasyonu aslında `sun.reflect` paketini yalnızca belirli bir JDK modülleri kümesine aktarır:
 
-{% highlight java %}
+{% highlight java linenos %}
 module java.base {
   ...
   exports sun.reflect to
-  java.corba,
-  java.logging,
-  java.sql,
-  java.sql.rowset,
-  jdk.scripting.nashorn;
+      java.corba,
+      java.logging,
+      java.sql,
+      java.sql.rowset,
+      jdk.scripting.nashorn;
 }
 {% endhighlight %}
 
@@ -530,9 +531,7 @@ Bu nitelikli dışarı aktarımlar (*qualified exports*) paketlerden dışa akta
 
 <br/>{% picture 2023-12-28-java-module-system/module-14.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
 
-Daha önce belirtilen erişilebilirlik kuralları (*accessibility rules*) şu şekilde geliştirilmiştir:
-
-İki tür S ve T farklı modüllerde tanımlanmışsa ve T herkese açıksa (yani `public` ise), S'deki kod aşağıdaki durumlarda T'ye erişebilir: 
+Daha önce belirtilen erişilebilirlik kuralları (*accessibility rules*) şu şekilde geliştirilmiştir: İki tür S ve T farklı modüllerde tanımlanmışsa ve T herkese açıksa (yani `public` ise), S'deki kod aşağıdaki durumlarda T'ye erişebilir:
 
 * S'nin modülü T'nin modülünü okuyorsa, ve
 * T'nin modülü T'nin paketini ya doğrudan S'nin modülüne ya da tüm modüllere aktarıyorsa.
@@ -540,7 +539,7 @@ Daha önce belirtilen erişilebilirlik kuralları (*accessibility rules*) şu ş
 Ayrıca, bir paketin tüm modüller yerine belirli bir modüle aktarılıp aktarılmadığını söylemek için *reflective* `Module` sınıfını bir yöntemle genişletiyoruz:
 
 
-{% highlight java %}
+{% highlight java linenos %}
 public final class Module {
   ...
   public boolean isExported(String packageName, Module target);
@@ -563,7 +562,7 @@ Hasan Çelik (bizzat ben deniz:) )
 
 
 
-[^1]: <https://openjdk.org/projects/jigsaw/spec/sotms/>
+[^1]: <[The State of the Module System](https://openjdk.org/projects/jigsaw/spec/sotms/)>
 
 
 
