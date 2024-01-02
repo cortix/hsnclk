@@ -32,46 +32,46 @@ toc_sticky: true
 
 > Bu belge biraz güncel değildir. Temel kavramların hiçbiri değişmedi ancak ``requires public`` yönergesi/direktifi ``requires transitive`` olarak yeniden adlandırıldı ve çeşitli ek yetenekler eklendi. Güncelleme hazırlık aşamasındadır ve hazır olduğunda burada yayınlanacaktır. [^1]
 
-Bu, **[Project Jigsaw](https://openjdk.org/projects/jigsaw/)**'da prototipi oluşturulan ve **[JSR 376: The Java Platform Module System](https://openjdk.org/projects/jigsaw/spec/)** için önerilen Java SE Platformundaki geliştirmelere ilişkin resmi olmayan bir genel bakıştır. İlgili bir [belgede](https://openjdk.org/jeps/261), JSR kapsamı dışında olan JDK'ya özgü araçlar (JDK-specific tools) ve API'lerde yapılan geliştirmeler açıklanmaktadır.
+Bu, [Project Jigsaw](https://openjdk.org/projects/jigsaw/)'da prototipi oluşturulan ve [JSR 376: The Java Platform Module System](https://openjdk.org/projects/jigsaw/spec/) için önerilen Java SE Platformundaki geliştirmelere ilişkin resmi olmayan bir genel bakıştır. İlgili bir [belgede](https://openjdk.org/jeps/261), JSR kapsamı dışında olan JDK'ya özgü araçlar (JDK-specific tools) ve API'lerde yapılan geliştirmeler açıklanmaktadır.
 
 [JSR'de](https://openjdk.org/projects/jigsaw/spec/) tanımlandığı gibi, modül sisteminin spesifik hedefleri şunları sağlamaktır:
 
-* **Güvenilir yapılandırma (reliable configuration):** Kırılgan, hataya açık sınıf yolu (class-path) mekanizmasını, program bileşenlerinin birbirlerine açık bağımlılıklarını bildirecek bir araçla değiştirmek için *güvenilir yapılandırma (reliable configuration)*, bununla birlikte,
-* **Güçlü kapsülleme (strong encapsulation):** Bir bileşenin hangi "public" türlerinin diğer bileşenler tarafından erişilebilir olduğunu ve hangilerinin erişilebilir olmadığını bildirmesine olanak tanıyan *güçlü kapsülleme (strong encapsulation)*.
+* Kırılgan, hataya açık sınıf yolu (*class-path*) mekanizmasını, program bileşenlerinin birbirlerine açık bağımlılıklarını bildirecek bir araçla değiştirmek için **güvenilir yapılandırma (reliable configuration)**, bununla birlikte,
+* Bir bileşenin hangi `public` türlerinin diğer bileşenler tarafından erişilebilir olduğunu ve hangilerinin erişilebilir olmadığını bildirmesine olanak tanıyan **güçlü kapsülleme (strong encapsulation)**.
 
-Bu özellikler, uygulama geliştiricilerine, kütüphane (library) geliştiricilerine ve Java SE Platformu uygulayıcılarına doğrudan ve ayrıca dolaylı olarak fayda sağlayacaktır, çünkü bunlar ölçeklenebilir bir platform, daha fazla platform bütünlüğü ve gelişmiş performans sağlayacaktır.
+Bu özellikler, uygulama geliştiricilerine, kütüphane (*library*) geliştiricilerine ve Java SE Platformu uygulayıcılarına doğrudan ve ayrıca dolaylı olarak fayda sağlayacaktır, çünkü bunlar ölçeklenebilir bir platform, daha fazla platform bütünlüğü ve gelişmiş performans sağlayacaktır.
 
 
-Bu, bu dökümanın ikinci baskısıdır. [İlk baskıya](https://openjdk.org/projects/jigsaw/spec/sotms/2015-09-08) göre bu baskı, [uyumluluk ve migrasyon](https://openjdk.org/projects/jigsaw/spec/sotms/#compatibility--migration) (compatibility and migration) ile ilgili materyaller sunar, [yansıtıcı okunabilirlik](https://openjdk.org/projects/jigsaw/spec/sotms/#reflective-readability) (reflective readability) tanımını gözden geçirir, anlatının(narrative) akışını iyileştirmek için metni yeniden sıralar ve daha kolay gezinme için "iki seviyeli (two-level)“ bir bölüm ve alt bölüm hiyerarşisi halinde düzenlenir.
+Bu, bu dökümanın ikinci baskısıdır. [İlk baskıya](https://openjdk.org/projects/jigsaw/spec/sotms/2015-09-08) göre bu baskı, [uyumluluk ve migrasyon](https://openjdk.org/projects/jigsaw/spec/sotms/#compatibility--migration) (compatibility and migration) ile ilgili materyaller sunar, [yansıtıcı okunabilirlik](https://openjdk.org/projects/jigsaw/spec/sotms/#reflective-readability) (reflective readability) tanımını gözden geçirir, anlatının(narrative) akışını iyileştirmek için metni yeniden sıralar ve daha kolay gezinme için iki seviyeli (*two-level*) bir bölüm ve alt bölüm hiyerarşisi halinde düzenlenir.
 
-Tasarımda hâlâ pek çok [açık sorunlar](https://openjdk.org/projects/jigsaw/spec/issues/) (open issues) bulunmaktadır ve bunların çözümleri bu belgenin gelecek sürümlerinde yansıtılacaktır.
+Tasarımda hâlâ pek çok [açık sorunlar](https://openjdk.org/projects/jigsaw/spec/issues/) (*open issues*) bulunmaktadır ve bunların çözümleri bu belgenin gelecek sürümlerinde yansıtılacaktır.
 
 
 ## DEFINING MODULES (modüllerin tanımlanması)
 
-Hem geliştiriciler için ulaşılabilir hem de mevcut araç zincirleri tarafından desteklenebilir bir şekilde <u>güvenilir yapılandırma</u> (*reliable configuration*) ve <u>güçlü kapsülleme</u> (*strong encapsulation*) sağlamak için modülleri temel bir yeni tür Java program bileşeni olarak ele alıyoruz. *Modül*, adlandırılmış (named), kendi kendini tanımlayan (self-describing) bir kod ve veri koleksiyonudur. Kodu (yani modülün kodu), tür içeren bir dizi paket olarak organize edilmiştir, *örneğin*, Java sınıfları ve arayüzleri; verileri(its data), kaynakları (resources) ve diğer statik bilgileri içerir.
+Hem geliştiriciler için ulaşılabilir hem de mevcut araç zincirleri tarafından desteklenebilir bir şekilde <u>güvenilir yapılandırma</u> (*reliable configuration*) ve <u>güçlü kapsülleme</u> (*strong encapsulation*) sağlamak için modülleri, temel bir yeni tür Java program bileşeni olarak ele alıyoruz. Bir *modül*, adlandırılmış (*named*), kendi kendini tanımlayan (*self-describing*) bir kod ve veri koleksiyonudur. Kodu (yani modülün kodu), tür içeren bir dizi paket olarak organize edilmiştir, *diğer bir deyişle*, Java sınıfları ve arayüzleri; verileri(*its data*), kaynakları (*resources*) ve diğer statik bilgileri içerir.
 
 
 ### 1.1 Module declarations (modül deklarasyonları/bildirimleri)
 
-Bir modülün kendi kendini açıklaması (self-description), Java programlama dilinin yeni bir yapısı olan modül deklarasyonunda (*module declaration*) ifade edilir. Mümkün olan en basit modül deklarasyonu yalnızca modülünün adını belirtir:
+Bir modülün kendi kendini açıklaması (*self-description*), Java programlama dilinin yeni bir yapısı olan modül deklarasyonunda (*module declaration*) ifade edilir. Mümkün olan en basit modül deklarasyonu yalnızca <u>modülünün adını</u> belirtir:
 
-{% highlight java linenos %}
+{% highlight java mark_lines="1" linenos %}
 module com.foo.bar {
 }
 {% endhighlight %}
 
-Modülün hem <u>derleme</u> hem de <u>çalışma</u> zamanında, başka modüllere adıyla(*by name*) bağımlı olduğunu bildirmek için bir veya daha fazla `requires` cümleciği (*clause*) eklenebilir:
+Modülün hem <u>derleme</u> hem de <u>çalışma</u> zamanında, başka modüllere adıyla(*by name*) bağımlı olduğunu bildirmek için, bir veya daha fazla `requires` cümleciği (*clause*) eklenebilir:
 
-{% highlight java linenos %}
+{% highlight java mark_lines="2" linenos %}
 module com.foo.bar {
   requires org.baz.qux;
 }
 {% endhighlight %}
 
-Son olarak, modülün belirli paketlerdeki yalnızca `public` olan bütün türlerini (*types*) diğer modüller tarafından kullanılabilir hale getirdiğini bildirmek için `exports` cümleciği (*clause*) eklenebilir:
+Son olarak, modülün belirli paketlerdeki yalnızca `public` olan bütün türlerini (*types*) diğer modüller tarafından kullanılabilir hale getirdiğini bildirmek için, `exports` cümleciği (*clause*) eklenebilir:
 
-{% highlight java linenos %}
+{% highlight java mark_lines="3 4" linenos %}
 module com.foo.bar {
   requires org.baz.qux;
   exports com.foo.bar.alpha;
@@ -84,7 +84,7 @@ Bir modülün deklarasyonu hiçbir `exports` cümleciği (*clause*) içermiyorsa
 (**Benim notum :** Yani ilgili modülü `requires` ile talep etsek bile, bu modülün dışarı aktarılan (yani `exports` edilen) bir paketi yoksa o modüle ulaşılmaz.)
 {: .notice--warning}
 
-Bir modül deklarasyonunun kaynak kodu (*source code*), geleneksel olarak, modülün kaynak dosya (*module’s source-file*) hiyerarşisinin kökündeki (*root*) `module-info.java` adlı bir dosyaya yerleştirilir. `com.foo.bar` modülü için kaynak dosyalar örneğin şunları içerebilir:
+Bir modül deklarasyonunun kaynak kodu (*source code*), geleneksel olarak, modülün kaynak dosya (*module’s source-file*) hiyerarşisinin kökündeki (*root*) `module-info.java` adlı bir dosyaya yerleştirilir. `com.foo.bar` modülü için kaynak dosyalar, örneğin şunları içerebilir:
 
 {% highlight java linenos %}
 module-info.java
@@ -95,17 +95,17 @@ com/foo/bar/alpha/Alpha.java
 
 Bir modül deklarasyonu, geleneksel olarak, sınıf dosyası çıktı dizinine ( *class-file output directory*) benzer şekilde yerleştirilen `module-info.class` adlı bir dosyaya derlenir.
 
-Paket adları gibi modül adları da çakışmamalıdır. Bir modülü adlandırmanın önerilen yolu, paketlerin adlandırılmasında uzun süredir önerilen <u>reverse-domain-name</u> paternini kullanmaktır. Bu nedenle bir modülün adı genellikle dışa aktarılan (*export* edilen) paketlerin adlarının <u>öneki</u> olacaktır, ancak bu ilişki zorunlu değildir.
+Paket adları gibi modül adları da <u>çakışmamalıdır</u>. Bir modülü adlandırmanın önerilen yolu, paketlerin adlandırılmasında uzun süredir önerilen <u>ters-alan-adı</u> (*reverse-domain-name*) paternini kullanmaktır. Bu nedenle bir modülün adı genellikle dışa aktarılan (*export* edilen) paketlerin adlarının <u>öneki</u> olacaktır, ancak bu ilişki zorunlu değildir.
 
-Bir modülün deklarasyonu bir sürüm dizesi (*version string*) içermediği gibi, bağlı olduğu modüllerin sürüm dizeleri üzerinde de kısıtlamalar içermez. Bu kasıtlıdır: sürüm-seçimi (*version-selection*) sorununu çözmek modül sisteminin [bir amacı](https://openjdk.org/projects/jigsaw/spec/reqs/02#version-selection) değildir; bu sorunu inşa-araçları (*build tools*) ve konteyner (*container*) uygulamalarına bırakmak en iyisidir.
+Bir modülün deklarasyonu bir sürüm dizesi (*version string*) içermediği gibi, bağlı olduğu modüllerin sürüm dizeleri üzerinde de kısıtlamalar içermez. <u>Bu kasıtlıdır:</u> sürüm-seçimi (*version-selection*) sorununu çözmek modül sisteminin [bir amacı değildir](https://openjdk.org/projects/jigsaw/spec/reqs/02#version-selection); bu sorunu inşa-araçları (*build tools*) ve konteyner (*container*) uygulamalarına bırakmak en iyisidir.
 
-Modül deklarasyonu birkaç nedenden dolayı bir dil veya kendi notasyonlarından ziyade Java programlama dilinin bir parçasıdır. En önemlilerinden biri, [fazlar arasında aslına uygunluğu](https://openjdk.org/projects/jigsaw/spec/reqs/02#fidelity-across-all-phases) (*fidelity across phases*) sağlamak için modül bilgilerinin hem derleme zamanında hem de çalışma zamanında mevcut olması gerektiğidir, örneğin, modül sisteminin hem derleme zamanında hem de çalışma zamanında aynı şekilde çalışmasını sağlamak. Bu da, teşhis edilmesi ve onarılması daha kolay olduğunda birçok hata türünün önlenmesine veya en azından - derleme zamanında - daha erken bildirilmesine olanak tanır.
+Modül deklarasyonları çeşitli nedenlerden dolayı kendilerine ait bir dil veya notasyon/gösterim yerine Java programlama dilinin bir parçasıdır. En önemlilerinden biri, [fazlar arasında aslına uygunluğu](https://openjdk.org/projects/jigsaw/spec/reqs/02#fidelity-across-all-phases) (*fidelity across phases*) sağlamak için modül bilgilerinin hem derleme zamanında hem de çalışma zamanında mevcut olması gerektiğidir, başka bir deyişle, modül sisteminin hem derleme zamanında hem de çalışma zamanında aynı şekilde çalışmasını sağlamaktır. Bu da, birçok hata türünün önlenmesine veya en azından, teşhis edilmesi ve onarılması daha kolay olduğunda, daha erken - derleme zamanında - bildirilmesine olanak tanır.
 
-Modül deklarasyonlarının, bir modüldeki diğer kaynak dosyalarla (*source files*) birlikte, Java sanal makinesinin tüketimi için bir sınıf dosyasına (*class file*) derlenen bir kaynak dosyada (*source file*) ifade edilmesi, aslına uygunluğu (*fidelity*) sağlamanın doğal yoludur. Bu yaklaşım geliştiricilere hemen tanıdık gelecek, ve IDE'ler ve inşa araçları (*build tools*) tarafından desteklenmesi zor olmayacaktır. Özellikle bir IDE, bileşenin proje açıklamasında zaten mevcut olan bilgilerden `requires` cümlecikleri (*requires clauses*) sentezleyerek mevcut bir bileşen için bir başlangıç modül (*initial module*) deklarasyonu önerebilir.
+Modül deklarasyonlarının, bir modüldeki diğer kaynak dosyalarla (*source files*) birlikte, Java sanal makinesinin tüketimi için bir sınıf dosyasına (*class file*) derlenen bir kaynak dosyada (*source file*) ifade edilmesi, aslına uygunluğu (*fidelity*) sağlamanın doğal yoludur. Bu yaklaşım geliştiricilere hemen tanıdık gelecek, ve IDE'ler ve inşa araçları (*build tools*) tarafından desteklenmesi zor olmayacaktır. Özellikle bir IDE, bileşenin proje açıklamasında (*component’s project description*) zaten mevcut olan bilgilerden `requires` cümlecikleri (*requires clauses*) sentezleyerek mevcut bir bileşen (*existing component*) için bir başlangıç modül (*initial module*) deklarasyonu önerebilir.
 
 ### 1.2 Module artifacts (modül yapıları/yapıtları/artifektler)
 
-Mevcut araçlar(*tool*’lar) JAR dosyalarını zaten oluşturabilir, manipüle edebilir ve tüketebilir; bu nedenle adaptasyon ve taşıma kolaylığı için modüler JAR dosyaları tanımlıyoruz. Modüler bir JAR dosyası, kök dizininde (*root directory*) bir `module-info.class` dosyasını da içermesi dışında, tüm olası yönlerden sıradan bir JAR dosyasına benzer. Yukarıdaki `com.foo.bar` modülü için modüler bir JAR dosyası örneğin aşağıdaki içeriğe sahip olabilir:
+Mevcut araçlar(*tool*’lar) JAR dosyalarını zaten oluşturabilir, manipüle edebilir ve tüketebilir; bu nedenle adaptasyon ve taşıma (*migration*) kolaylığı için modüler JAR dosyaları tanımlıyoruz. Modüler bir JAR dosyası, kök dizininde (*root directory*) bir `module-info.class` dosyasını da içermesi dışında, tüm olası yönlerden sıradan bir JAR dosyasına benzer. Yukarıdaki `com.foo.bar` modülü için modüler bir JAR dosyası örneğin aşağıdaki içeriğe sahip olabilir:
 
 {% highlight java linenos %}
 META-INF/
@@ -116,15 +116,15 @@ com/foo/bar/alpha/Alpha.class
 ...
 {% endhighlight %}
 
-Modüler bir JAR dosyası modül olarak kullanılabilir, bu durumda `module-info.class` dosyası modülün deklarasyonunu içerecek şekilde alınır. Alternatif olarak sıradan sınıf yoluna (*class path*) yerleştirilebilir, bu durumda `module-info.class` dosyası göz ardı edilir.  Modüler JAR dosyaları, bir kütüphanenin bakımcısının (*maintainer*) hem Java SE 9 ve sonraki sürümlerde modül olarak çalışan hem de tüm sürümlerde sınıf yolunda (*class path*) normal bir JAR dosyası olarak çalışan tek bir yapıtı/artifekti (*a single artifact*) taşımasına izin verir. Bir jar aracı (*jar tool*) içeren Java SE 9 uygulamalarının, modüler JAR dosyaları oluşturmayı kolaylaştıracak şekilde bu aracı geliştireceğini bekliyoruz.
+Modüler bir JAR dosyası modül olarak kullanılabilir, bu durumda `module-info.class` dosyası modülün deklarasyonunu içerecek şekilde alınır. Alternatif olarak sıradan sınıf yoluna (*class path*) yerleştirilebilir, bu durumda `module-info.class` dosyası <u>göz ardı edilir</u>.  Modüler JAR dosyaları, bir kütüphanenin bakımcısının (*maintainer of a library*), hem Java SE 9 ve sonraki sürümlerde modül olarak çalışan hem de tüm sürümlerde sınıf yolunda (*class path*) normal bir JAR dosyası olarak çalışan tek bir yapıtı/artifekti (*a single artifact*) taşımasına izin verir. Bir jar aracı (*jar tool*) içeren Java SE 9 uygulamalarının, modüler JAR dosyaları oluşturmayı kolaylaştıracak şekilde bu aracı geliştireceğini umuyoruz.
 
-Java SE Platformunun referans uygulaması olan JDK'yı modüler hale getirmek amacıyla, yerel kodu (*native code*), yapılandırma dosyalarını (*configuration files*) ve doğal olarak uymayan diğer veri türlerini barındırmak için JAR dosyalarının ötesine geçen yeni bir yapay format (*new artifact format*) tanıtacağız, hiç değilse JAR dosyalarının içine. Bu format, modül bildirimlerinin kaynak dosyalarda (*source files*) ifade edilmesinin ve bunların sınıf dosyaları (*class files*) halinde derlenmesinin başka bir avantajından yararlanır; yani sınıf dosyaları herhangi bir özel yapıt/artifekt formatından (artifact format) bağımsızdır. Geçici olarak "JMOD" olarak adlandırılan bu yeni formatın standartlaştırılmasının gerekip gerekmediği açık bir sorudur.
+Java SE Platformunun referans uygulaması olan JDK'yı modüler hale getirmek amacıyla, yerel kodu (*native code*), yapılandırma dosyalarını (*configuration files*) ve JAR dosyalarına doğal olarak hiç sığmayan diğer veri türlerini barındırmak için, JAR dosyalarının ötesine geçen yeni bir yapay format (*new artifact format*) tanıtacağız. Bu format, modül deklarasyonlarını kaynak dosyalarda (*source files*) ifade etmenin ve bunları sınıf dosyalarına (*class files*) derlemenin başka bir avantajından yararlanır; yani sınıf dosyaları herhangi bir özel yapıt/artifekt formatından (artifact format) bağımsızdır. Geçici olarak "JMOD" olarak adlandırılan bu yeni formatın standartlaştırılmasının gerekip gerekmediği açık bir sorudur.
 
 ### 1.3 Module descriptors (modül tanımlayıcıları)
 
 Modül bildirimlerini/deklarasyonlarını sınıf dosyaları (*class files*) halinde derlemenin son avantajı, sınıf dosyalarının zaten tam olarak tanımlanmış ve genişletilebilir bir formata ([precisely-defined and extensible format](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.1)) sahip olmasıdır. Dolayısıyla `module-info.class` dosyalarını, kaynak düzeyi (*source-level*) modül deklarasyonlarının derlenmiş formlarını içeren **modül tanımlayıcıları** (*module descriptors*) olarak, aynı zamanda deklarasyonun ilk derlenmesinden sonra eklenen sınıf-dosyası özniteliklerinde (*class-file attributes*) kaydedilen ek bilgi türleri olarak da daha genel bir açıdan değerlendirebiliriz.
 
-Örneğin bir IDE veya inşa-zamanı paketleme aracı (*build-time packaging tool*), örneğin, bir modülün sürümü (*module’s version*), başlığı (*title*), açıklaması (*description*) ve lisansı gibi belgelere dayanan bilgilerini içeren nitelikleri ekleyebilir. Bu bilgiler, belgeleme (*documentation*), teşhis (*diagnosis*) ve hata ayıklamada (*debugging*) kullanılmak üzere modül sisteminin yansıtma (*module system’s reflection*) olanakları aracılığıyla derleme zamanında ve çalışma zamanında okunabilir. Ayrıca işletim sistemine özgü paket yapıtlarının (*OS-specific package artifacts*) oluşturulmasında aşağı yönlü araçlar (*downstream tools*) tarafından da kullanılabilir. Belirli bir öznitelik kümesi standartlaştırılacaktır, ancak Java sınıf dosyası formatı (*java class-file format*) genişletilebilir (*extensible*) olduğundan, diğer araçlar (*tools*) ve çerçeveler (*frameworks*) gerektiği gibi ek öznitelikler tanımlayabilecektir. Standart dışı niteliklerin (*non-standard attributes*) modül sisteminin davranışı üzerinde hiçbir etkisi olmayacaktır.
+Bir IDE veya inşa-zamanı paketleme aracı (*build-time packaging tool*), örneğin, bir modülün sürümü (*module’s version*), başlığı (*title*), açıklaması (*description*) ve lisansı gibi belgelere dayanan bilgilerini içeren nitelikleri ekleyebilir. Bu bilgiler, belgeleme (*documentation*), teşhis (*diagnosis*) ve hata ayıklamada (*debugging*) kullanılmak üzere modül sisteminin yansıtma (*module system’s reflection*) olanakları aracılığıyla derleme zamanında ve çalışma zamanında okunabilir. Ayrıca işletim sistemine özgü paket yapıtlarının (*OS-specific package artifacts*) oluşturulmasında aşağı yönlü araçlar (*downstream tools*) tarafından da kullanılabilir. Belirli bir öznitelik kümesi standartlaştırılacaktır, ancak Java sınıf dosyası formatı (*java class-file format*) genişletilebilir (*extensible*) olduğundan, diğer araçlar (*tools*) ve çerçeveler (*frameworks*) gerektiği gibi ek öznitelikler tanımlayabilecektir. Standart dışı niteliklerin (*non-standard attributes*) modül sisteminin davranışı üzerinde hiçbir etkisi olmayacaktır.
 
 ### 1.4 Platform modules (platform modülleri)
 
@@ -138,7 +138,7 @@ module java.base {
   exports java.lang;
   exports java.lang.annotation;
   exports java.lang.invoke;
-  exports java.lang.module;
+  exports <b>java.lang.module</b>;
   exports java.lang.ref;
   exports java.lang.reflect;
   exports java.math;
@@ -157,11 +157,11 @@ Bireysel modüller, modül yapılarında (*module artifacts*) tanımlanabilir ve
 
 ### 2.1 The module path (modül yolu)
 
-Yapıtlarda (*artifacts*) tanımlanan modüllerin yerini saptamak için modül sistemi, ana sistem (*host system*) tarafından tanımlanan **modül yolunu** (*module path*) arar. Modül yolu, her bir öğesi ya bir modül yapıtı (*module artifact*) ya da modül yapıtlarını içeren bir dizin (*directory containing module artifacts*) olan bir dizidir. Modül yolunun elemanları, uygun bir modülü tanımlayan ilk artifact için sırayla aranır.
+Yapıtlarda (*artifacts*) tanımlanan modüllerin yerini saptamak için modül sistemi, ana sistem (*host system*) tarafından tanımlanan **modül yolunu** (*module path*) arar. Modül yolu, her bir öğesi ya bir modül yapıtı (*module artifact*) ya da modül yapıtlarını içeren bir dizin (*directory containing module artifacts*) olan bir dizidir (*sequence*). Modül yolunun elemanları, uygun bir modülü tanımlayan ilk artifact için sırayla aranır.
 
-Modül yolu (*module path*), sınıf yolundan (*class-path*) önemli ölçüde farklıdır ve daha sağlamdır. Sınıf yolunun (*class-path*) doğal kırılganlığı, yoldaki (yani *path*’deki) tüm yapılarda (*artifacts*) birbirinden ayrı (bireysel) türleri bulmanın bir aracı olmasından ve yapıtların (yani *artifact*’lerin) kendi aralarında ayrım yapmamasından kaynaklanmaktadır. Bu, bir yapıtın (yani *artifact*’in) eksik olduğunda önceden söylemeyi imkansız hale getirir. Ayrıca, bu yapıtlar (*artifacts*) aynı mantıksal program bileşeninin farklı sürümlerini veya tamamen farklı bileşenleri temsil etse bile, aynı paketlerdeki türleri tanımlaması farklı yapılara da (*different artifacts*) izin verir.
+Modül yolu (*module path*), sınıf yolundan (*class-path*) önemli ölçüde farklıdır ve daha sağlamdır. Sınıf yolunun (*class-path*) doğal kırılganlığı, artifektlerin kendi aralarında hiçbir ayrım yapmadan, yol üzerindeki (yani *path*’deki) tüm artifektlerde bireysel/farklı (*individual*) türleri bulmanın bir yöntemi olması gerçeğinden kaynaklanmaktadır. Bu, bir yapıtın (yani *artifact*’in) eksik olup olmadığını önceden söylemeyi imkansız hale getirir. Ayrıca, bu yapıtlar (*artifacts*) aynı mantıksal program bileşeninin farklı sürümlerini veya tamamen farklı bileşenleri temsil etse bile, farklı yapıtların (*different artifacts*) aynı paketlerdeki türleri tanımlamasına da olanak tanır.
 
-Modül yolu (*module path*), aksine, tek tek türler yerine tüm modüllerin yerini saptamanın bir aracıdır. Modül sistemi, modül yolundan (*module path*) gelen bir yapıt (*artifact*) ile belirli bir bağımlılığı yerine getiremezse veya aynı dizinde aynı adı taşıyan modülleri tanımlayan iki yapıyla (*artifact*) karşılaşırsa, derleyici veya sanal makine bir hata bildirecek ve çıkış yapacaktır.
+Modül yolu (*module path*), aksine, bireysel türleri bulmak yerine tüm modüllerin yerini saptamanın bir yöntemidir. Modül sistemi, modül yolundan (*module path*) gelen bir yapıt (*artifact*) ile belirli bir bağımlılığı yerine getiremezse veya aynı dizinde aynı adı taşıyan modülleri tanımlayan iki yapıyla (*artifact*) karşılaşırsa, derleyici veya sanal makine bir hata bildirecek ve çıkış yapacaktır.
 
 Modül yolu (*module path*) üzerindeki yapılar (*artifact*) tarafından tanımlananlarla birlikte derleme zamanı veya çalışma zamanı ortamına yerleşik (*built-in*) modüller, toplu olarak gözlemlenebilir modüller evreni (*universe of observable modules*) olarak anılır.
 
