@@ -299,19 +299,19 @@ Sınıf yolundan (*class-path*’den) yüklenen türlerin adlandırılmamış mo
 
 Örneğin, yukarıda gösterilen uygulamanın başlangıçta Java SE 8 için, sınıf yoluna (*class path*) yerleştirilen bir dizi benzer şekilde adlandırılmış JAR dosyaları olarak oluşturulduğunu varsayalım. Eğer bunu, Java SE 9'da olduğu gibi çalıştırırsak, JAR dosyalarındaki türler, adlandırılmamış modülde (*unnamed module*) tanımlanacaktır. Bu modül, tüm yerleşik platform modülleri de dahil olmak üzere diğer tüm modülleri okuyacaktır; Basitlik açısından, bunların daha önce gösterilen `java.sql`, `java.xml`, `java.logging` ve `java.base` modülleriyle sınırlı olduğunu varsayalım. Böylece (aşağıdaki) modül grafiğini elde ederiz:
 
-<br/>{% picture 2023-12-28-java-module-system/module-4.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-4.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) - unnamed module (adlandırılmamış modül) --img width="100%" height="100%" %}<br/>
 
-`org-baz-qux.jar`’ı hemen *named* bir modüle dönüştürebiliriz, çünkü onun diğer iki JAR dosyasındaki herhangi bir türe başvuruda bulunmadığını biliyoruz, bu nedenle *named* bir modül olarak *unnamed* modülde geride bırakılacak türlerin hiçbirine başvuruda/atıfta bulunmayacaktır. (Bunu tesadüfen de olsa orijinal örnekten biliyoruz, ancak zaten bilmiyorsak, **[jdeps](https://docs.oracle.com/en/java/javase/11/tools/jdeps.html)** gibi bir araç yardımıyla keşfedebiliriz. ) `org.baz.qux` için bir modül deklarasyonu yazıyoruz, bunu modülün kaynak koduna ekliyoruz, derliyoruz ve sonucu modüler bir JAR dosyası olarak paketliyoruz. Daha sonra o JAR dosyasını modül yoluna (*module path*) yerleştirirsek ve diğerlerini sınıf yolunda (*class path*) bırakırsak, geliştirilmiş modül grafiğini elde ederiz.
+`org-baz-qux.jar`’ı hemen bir adlandırılmış modüle (*named module*) dönüştürebiliriz, çünkü onun, diğer iki JAR dosyasındaki herhangi bir türe başvuruda bulunmadığını biliyoruz, bu nedenle adlandırılmış bir modül (*named module*) olarak, adlandırılmamış modülde (*unnamed module*) geride bırakılacak türlerin hiçbirine başvuruda/atıfta bulunmayacaktır. (Bunu tesadüfen de olsa orijinal örnekten biliyoruz, ancak zaten bilmiyor olsaydık, **[jdeps](https://docs.oracle.com/en/java/javase/11/tools/jdeps.html)** gibi bir araç yardımıyla keşfedebilirdik.) `org.baz.qux` için bir modül deklarasyonu yazıyoruz, bunu modülün kaynak koduna ekliyoruz, (akabinde bunu) derliyoruz ve sonucu modüler bir JAR dosyası olarak paketliyoruz. Daha sonra o JAR dosyasını modül yoluna (*module path*) yerleştirirsek ve diğerlerini sınıf yolunda (*class path*) bırakırsak, (aşağıdaki) geliştirilmiş modül grafiğini elde ederiz.
 
-<br/>{% picture 2023-12-28-java-module-system/module-5.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-5.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) - named module (adlandırılmış modül) --img width="100%" height="100%" %}<br/>
 
-`com-foo-bar.jar` ve `com-foo-app.jar` içindeki kod çalışmaya devam ediyor çünkü *unnamed* modül, artık yeni `org.baz.qux` modülünü de içeren her *named* modülü okuyor.
+Adlandırılmamış modül (*unnamed module*), artık yeni `org.baz.qux` modülünü de içeren her adlandırılmış modülü (*named module*) okuduğundan, `com-foo-bar.jar` ve `com-foo-app.jar` içindeki kod çalışmaya devam eder.
 
-`com-foo-bar.jar`'ı ve ardından `com-foo-app.jar`'ı modüler hale getirmek için benzer şekilde ilerleyebiliriz, sonunda daha önce gösterilerek amaçlanan modül grafiği elde edilir:
+`com-foo-bar.jar`'ı ve ardından `com-foo-app.jar`'ı modüler hale getirmek için benzer şekilde ilerleyebiliriz, sonunda daha önce gösterilen, "amaçlanan modül grafiği" elde edilir:
 
 <br/>{% picture 2023-12-28-java-module-system/module-6.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) --img width="100%" height="100%" %}<br/>
 
-Orijinal JAR dosyalarındaki türler hakkında ne yaptığımızı bilerek, elbette üçünü de tek bir adımda modüler hale getirebiliriz. Bununla birlikte, `org-baz-qux.jar` bağımsız olarak, belki de tamamen farklı bir ekip veya organizasyon tarafından korunursa, o zaman diğer iki bileşenden önce modüler hale getirilebilir ve aynı şekilde `com-foo-bar.jar`, `com-foo-app.jar`’dan önce modüler hale getirilebilir.
+Orijinal JAR dosyalarındaki türler hakkında ne yaptığımızı bilerek, elbette üçünü de tek bir adımda modüler hale getirebiliriz. Bununla birlikte, `org-baz-qux.jar`'ın bakımı, bağımsız olarak, belki de tamamen farklı bir ekip veya organizasyon tarafından yapılıyorsa, o zaman diğer iki bileşenden önce modüler hale getirilebilir ve aynı şekilde `com-foo-bar.jar` da, `com-foo-app.jar`’dan önce modüler hale getirilebilir.
 
 ### 3.3 Automatic modules (otomatik modüller)
 
