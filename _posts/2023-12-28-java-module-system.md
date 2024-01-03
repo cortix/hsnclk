@@ -1,7 +1,7 @@
 ---
-title: "The State of the Java Module System - Mark Reinhold (Java Modül Sisteminin Durumu) (ÇEVİRİ)"
+title: "Java Modül Sisteminin Durumu - Mark Reinhold (ÇEVİRİ)"
 comments: false
-excerpt: "Arkadaşlar bu yazı Mark Reinhold'un, Java'da modül sistemi ile ilgili kaleme aldığı meşhur bir makaledir. Çevirisini bizzat kendim yaptım."
+excerpt: "Arkadaşlar bu yazı Mark Reinhold'un, Java'da modül sistemi ile ilgili kaleme aldığı 'The State of the Module System' isimli meşhur bir makaledir."
 header:
   teaser: "/assets/images/svg-book6.svg"
   og_image: /assets/images/svg-book6.svg
@@ -16,6 +16,8 @@ categories:
   - recommends
 tags:
   - Java modül sistemi
+  - principle of least surprise
+  - implied readability (requires transitive)
 #last_modified_at: 2023-01-06T15:12:19-04:00
 last_modified_at:
 toc: true
@@ -138,7 +140,7 @@ module java.base {
   exports java.lang;
   exports java.lang.annotation;
   exports java.lang.invoke;
-  exports <b>java.lang.module</b>;
+  exports java.lang.module;
   exports java.lang.ref;
   exports java.lang.reflect;
   exports java.math;
@@ -153,7 +155,7 @@ Geriye kalan platform modülleri **“java.”** isim önekini paylaşacak ve mu
 
 ## 2 USING MODULES (modülleri kullanma)
 
-Bireysel modüller, modül yapılarında (*module artifacts*) tanımlanabilir veyahut derleme zamanı veya çalışma zamanı ortamında yerleşik (*built-in*) olarak tanımlanabilir. Her iki fazda da bunlardan faydalanmak için modül sisteminin bunları yerleştirmesi ve ardından güvenilir konfigürasyon (*reliable configuration*) ve güçlü kapsülleme (*strong encapsulation*) sağlayacak şekilde birbirleriyle nasıl ilişki kurduklarını belirlemesi gerekir.
+Bireysel modüller(*individual modules*), modül yapılarında (*module artifacts*) tanımlanabilir veyahut derleme zamanı veya çalışma zamanı ortamında yerleşik (*built-in*) olarak tanımlanabilir. Her iki fazda da bunlardan faydalanmak için modül sisteminin bunları yerleştirmesi ve ardından güvenilir konfigürasyon (*reliable configuration*) ve güçlü kapsülleme (*strong encapsulation*) sağlayacak şekilde birbirleriyle nasıl ilişki kurduklarını belirlemesi gerekir.
 
 ### 2.1 The module path (modül yolu)
 
@@ -176,7 +178,7 @@ module com.foo.app {
 }
 {% endhighlight %}
 
-Bu ilk uygulama modülü göz önüne alındığında, modül sistemi, bu bağımlılıkları yerine getirmek (*fulfill*) için ek gözlemlenebilir modüller (*observable modules*) yerleştirerek `requires` clause’larla ifade edilen bağımlılıkları çözer ve ardından her modülün her bağımlılığı yerine getirilene (karşılanana kadar) kadar bu modüllerin bağımlılıklarını vb. şeyleri çözer. Bu geçişli-kapatma (*transitive-closure*) hesaplamasının sonucu, başka bir modül tarafından yerine getirilen bir bağımlılığa sahip her modül için, ilk modülden ikinciye yönlendirilmiş bir kenar (*directed edge*) içeren bir modül grafiğidir (*module graph*).
+Bu ilk uygulama modülü göz önüne alındığında, modül sistemi, bu bağımlılıkları yerine getirmek (*fulfill*) için ek gözlemlenebilir modüller (*observable modules*) yerleştirerek `requires` clause’larla ifade edilen bağımlılıkları çözer ve ardından her modülün her bağımlılığı yerine getirilene (karşılanana kadar) kadar bu modüllerin bağımlılıklarını, vb. şeyleri çözer. Bu geçişli-kapatma (*transitive-closure*) hesaplamasının sonucu, başka bir modül tarafından yerine getirilen bir bağımlılığa sahip her modül için, ilk modülden ikinciye yönlendirilmiş bir kenar (*directed edge*) içeren bir modül grafiğidir (*module graph*).
 
 Modül sistemi, `com.foo.app` modülü için bir modül grafiği oluşturmak amacıyla, `java.sql` modülünün bildirimini inceler:
 
@@ -195,17 +197,17 @@ Ayrıca yukarıda gösterilen `com.foo.bar` modülünün ve ayrıca `org.baz.qux
 Tüm bu modül bildirimlerine dayanarak `com.foo.app` modülü için hesaplanan grafik aşağıdaki düğümleri (*nodes*) ve kenarları (*edges*) içerir:
 
 
-<br/>{% picture 2023-12-28-java-module-system/module-1.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-1.png --alt Java'da Modül Sistemi - Resolution (çözünme) --img width="100%" height="100%" %}<br/>
 
-Bu şekilde koyu mavi çizgiler, `requires` cümleciklerinde ifade edildiği gibi açık (*explicit*) bağımlılık ilişkilerini temsil ederken, açık mavi (aslında grimsi) çizgiler her modülün temel modül (*base module*) üzerindeki örtülü (*implicit*) bağımlılıklarını temsil eder.
+Bu şekilde koyu mavi çizgiler, `requires` cümleciklerinde ifade edildiği gibi açık (*explicit*) bağımlılık ilişkilerini temsil ederken, açık mavi (daha çok grimsi) çizgiler her modülün temel modül (*base module*) üzerindeki örtülü (*implicit*) bağımlılıklarını temsil eder.
 
 ### 2.3 Readability (okunabilirlik)
 
-Modül grafiğinde bir modül doğrudan diğerine bağlı/bağımlı olduğunda, ilk modüldeki kod, ikinci modüldeki türlere başvurabilecektir. Bu nedenle, ilk modülün ikinciyi okuduğunu veya eşdeğer olarak ikinci modülün birinci tarafından okunabilir olduğunu söylüyoruz. Dolayısıyla, yukarıdaki grafikte `com.foo.app` modülü `com.foo.bar` ve `java.sql` modüllerini okur, ancak `org.baz.qux`, `java.xml` veya `java.logging` modüllerini okumaz. `java.logging` modülü `java.sql` modülü tarafından okunabilir, ancak diğerleri tarafından okunamaz. (Her modül tanımı gereği kendini okur.)
+Modül grafiğinde bir modül doğrudan diğerine bağlı/bağımlı olduğunda, ilk modüldeki kod, ikinci modüldeki türlere başvurabilecektir. Bu nedenle, ilk modülün ikinciyi okuduğunu veya eşdeğer olarak ikinci modülün birinci tarafından okunabilir olduğunu söylüyoruz. Dolayısıyla, yukarıdaki grafikte `com.foo.app` modülü, `com.foo.bar` ve `java.sql` modüllerini okur, ancak `org.baz.qux`, `java.xml` veya `java.logging` modüllerini okumaz. `java.logging` modülü `java.sql` modülü tarafından okunabilir, ancak diğerleri tarafından okunamaz. (Her modül tanımı gereği kendini okur.)
 
 Bir modül grafiğinde tanımlanan okunabilirlik ilişkileri **güvenilir konfigürasyonun** (*reliable configuration*) temelini oluşturur: Modül sistemi, her bağımlılığın tam olarak başka bir modül tarafından karşılanmasını, modül grafiğinin <u>döngüsel olmamasını</u> (*acyclic*), her modülün belirli bir paketi tanımlayan en fazla bir modülü okumasını ve aynı adlı paketleri (*identically-named packages*) tanımlayan modüllerin birbirine müdahale etmemesini sağlar.
 
-Güvenilir konfigürasyon (*reliable configuration*) yalnızca daha güvenilir olmakla kalmaz; aynı zamanda daha hızlı da olabilir. Bir modüldeki kod, bir paketteki bir türe başvuruda bulunduğunda, o paketin ya o modülde ya da tam olarak o modül tarafından okunan modüllerden birinde tanımlanacağı garanti edilir. Belirli bir türün tanımını ararken, bu nedenle onu birden fazla modülde veya daha kötüsü tüm sınıf yolu (*class path*) boyunca aramaya gerek yoktur.
+Güvenilir konfigürasyon (*reliable configuration*) yalnızca daha güvenilir olmakla kalmaz; aynı zamanda daha hızlı da olabilir. Bir modüldeki kod, bir paketteki bir türe başvuruda bulunduğunda, o paketin, ya o modülde, ya da tam olarak o modül tarafından okunan modüllerden birinde tanımlanacağı garanti edilir. Belirli bir türün tanımını ararken, bu nedenle onu birden fazla modülde veya daha kötüsü tüm sınıf yolu (*class path*) boyunca aramaya gerek yoktur.
 
 ### 2.4 Accessibility (erişilebilirlik)
 
@@ -214,19 +216,19 @@ Bir modül grafiğinde tanımlanan okunabilirlik ilişkileri, modül deklarasyon
 * S'nin modülü T'nin modülünü okuyorsa ve
 * T'nin modülü T'nin paketini dışa aktarıyorsa (*export*).
 
-Bu şekilde erişilemeyen modül sınırları (*module boundaries*) arasında başvurulan bir tür, `private` bir yöntem veya alanın (*field*) kullanılamaz olduğu gibi kullanılamaz: Bunu kullanmaya yönelik herhangi bir girişim, derleyici tarafından bir hatanın bildirilmesine veya Java sanal makinesi tarafından bir `IllegalAccessError` atılmasına veya *reflective* çalışma zamanı API'leri tarafından bir `IllegalAccessException` atılmasına neden olacaktır. Bu nedenle, bir tür `public` olarak bildirildiğinde bile, eğer paketi modül bildiriminde dışa aktarılmamışsa (yani *export* edilmemişse), yalnızca o modüldeki kodla erişilebilir olacaktır.
+Bu şekilde erişilemeyen, modül sınırları (*module boundaries*) genelinde/boyunca başvurulan bir tür, `private` bir yöntem veya alanın (*field*) kullanılamaz olduğu gibi kullanılamaz: Bunu kullanmaya yönelik herhangi bir girişim, derleyici tarafından bir hatanın bildirilmesine veya Java sanal makinesi tarafından bir `IllegalAccessError` atılmasına veya *reflective* çalışma zamanı API'leri tarafından bir `IllegalAccessException` atılmasına neden olacaktır. Bu nedenle, bir tür `public` olarak bildirildiğinde bile, eğer paketi, modül bildiriminde dışa aktarılmamışsa (yani *export* edilmemişse), yalnızca o modüldeki kodla erişilebilir olacaktır.
 
-Modül sınırları (*module boundaries*) boyunca başvurulan bir yöntem veya alan (*field*), bu anlamda çevreleyen türü (*enclosing type*) erişilebilirse ve üyenin kendisinin beyanı da erişime izin veriyorsa erişilebilir.
+Modül sınırları (*module boundaries*) genelinde/boyunca başvurulan bir yöntem veya alan (*field*), bu anlamda çevreleyen türü (*enclosing type*) erişilebilirse ve üyenin (*member*) kendisinin beyanı da erişime izin veriyorsa erişilebilir.
 
 Yukarıdaki modül grafiği açısından <u>güçlü kapsüllemenin</u> (*strong encapsulation*) nasıl çalıştığını görmek için, her modülü dışa aktardığı (*exports* ettiği) paketlerle etiketliyoruz:
 
-<br/>{% picture 2023-12-28-java-module-system/module-2.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-2.png --alt Java'da Modül Sistemi - Accessibility (erişilebilirlik), exports clauses --img width="100%" height="100%" %}<br/>
 
-`com.foo.app` modülündeki kod, `com.foo.bar.alpha` paketinde bildirilen `public` türlere erişebilir çünkü `com.foo.app`, `com.foo.bar` modülüne bağımlı olduğundan ve dolayısıyla `com.foo.bar`, `com.foo.bar.alpha` paketini dışa aktardığından (yani *export* ettiği için) onu okur. Eğer `com.foo.bar` dahili bir `com.foo.bar.internal` paketi içeriyorsa, `com.foo.app` içindeki kod, `com.foo.bar` onu dışa aktarmadığından (*export* etmediğinden) bu paketteki hiçbir türe erişemez. `com.foo.app` içindeki kod, `org.baz.qux` paketindeki türlere başvuruda bulunamaz çünkü `com.foo.app`, `org.baz.qux` modülüne bağımlı değildir ve bu nedenle onu okumaz(okuyamaz).
+`com.foo.app` modülündeki kod, `com.foo.bar.alpha` paketinde bildirilen `public` türlere erişebilir çünkü `com.foo.app`, `com.foo.bar` modülüne bağımlı olduğundan ve dolayısıyla `com.foo.bar`, `com.foo.bar.alpha` paketini dışa aktardığından (yani *export* ettiği için) onu okur. Eğer `com.foo.bar` dahili (*internal*) bir `com.foo.bar.internal` paketi içeriyorsa, `com.foo.app` içindeki kod, `com.foo.bar` onu dışa aktarmadığından (*export* etmediğinden) bu paketteki hiçbir türe erişemez. `com.foo.app` içindeki kod, `org.baz.qux` paketindeki türlere başvuruda bulunamaz çünkü `com.foo.app`, `org.baz.qux` modülüne bağımlı değildir ve bu nedenle onu okumaz(okuyamaz).
 
 ### 2.5 Implied readability (zımni/örtük/örtülü okunabilirlik)
 
-Bir modül başka bir modül okuyorsa, bazı durumlarda mantıksal olarak diğer bazı modülleri de okuması gerekir.
+Bir modül diğerini (yani başka bir modülü) okuyorsa, bazı durumlarda mantıksal olarak diğer bazı modülleri de okuması gerekir.
 
 Örneğin platformun `java.sql` modülü `java.logging` ve `java.xml` modüllerine bağımlıdır; bunun nedeni yalnızca bu modüllerdeki türleri kullanan uygulama kodunu içermesi değil, aynı zamanda imzaları bu modüllerdeki türlere başvuruda bulunan türleri tanımlamasıdır (*it defines types whose signatures refer to types in those modules*).
 
@@ -269,7 +271,7 @@ module java.sql {
 
 `transitive` değiştiriciler, `java.sql` modülüne bağımlı herhangi bir modülün yalnızca `java.sql` modülünü değil aynı zamanda `java.logging` ve `java.xml` modüllerini de okuyacağı anlamına gelir. Bu nedenle, yukarıda gösterilen `com.foo.app` modülü için modül grafiği, bu modül tarafından ima edildiğinden `java.sql` modülüne yeşil kenarlarla bağlanan iki ek koyu mavi kenar içerir:
 
-<br/>{% picture 2023-12-28-java-module-system/module-3.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-3.png --alt Java'da Modül Sistemi - Implied readability (zımni/örtük/örtülü okunabilirlik), requires transitive clauses --img width="100%" height="100%" %}<br/>
 
 `com.foo.app` modülü artık `java.logging` ve `java.xml` modüllerinin dışa aktarılan (*export* edilen) paketlerindeki tüm `public` türlere erişen kodu içerebilir, her ne kadar deklarasyonunda bu modüllerden bahsedilmese de.
 
@@ -277,37 +279,37 @@ Genel olarak, eğer bir modül, imzası ikinci modüldeki bir pakete başvuruda 
 
 ## 3 COMPATIBILITY & MIGRATION (uyumluluk ve migrasyon/taşıma)
 
-Şu ana kadar modülleri sıfırdan nasıl tanımlayacağımızı, bunları modül artifekleri halinde nasıl paketleyeceğimizi ve bunları platformda yerleşik olan veya artifeklerde tanımlanan diğer modüllerle birlikte nasıl kullanacağımızı gördük.
+Şu ana kadar modülleri sıfırdan nasıl tanımlayacağımızı, modül artifekleri halinde nasıl paketleyeceğimizi ve platformda yerleşik olan veya artifeklerde tanımlanan diğer modüllerle birlikte nasıl kullanacağımızı gördük.
 
-Çoğu Java kodu, elbette, modül sisteminin tanıtımından önce yazılmıştır ve bugün olduğu gibi, değişmeden çalışmaya devam etmelidir. Bu nedenle modül sistemi, platformun kendisi modüllerden oluşsa bile, sınıf yolunda (*class path*) JAR dosyalarından oluşan uygulamaları derleyebilir ve çalıştırabilir. Ayrıca mevcut uygulamaların esnek ve kademeli bir şekilde modüler forma taşınmasını da sağlar.
+Çoğu Java kodu, elbette, modül sisteminin tanıtımından önce yazılmıştır ve bugün olduğu gibi, değişmeden çalışmaya devam etmelidir. Bu nedenle modül sistemi, platformun kendisi modüllerden oluşsa bile, sınıf yolunda (*class path*) JAR dosyalarından oluşan uygulamaları derleyebilir ve çalıştırabilir. Ayrıca mevcut uygulamaların esnek ve kademeli bir şekilde modüler forma taşınmasını/migrasyonunu da sağlar.
 
 ### 3.1 The unnamed module (isimsiz/adlandırılmamış modül)
 
-Bilinen hiçbir bir modülde paketi tanımlanmayan bir türün yüklenmesi için bir talepte bulunulursa, modül sistemi onu sınıf yolundan (*class path*) yüklemeye çalışacaktır. Bu başarılı olursa, her türün bir modülle ilişkili olmasını sağlamak için tür, isimsiz modül (*unnamed module*) olarak bilinen özel bir modülün üyesi olarak kabul edilir. *unnamed* modül, yüksek düzeyde, mevcut isimsiz paket (*[unnamed package](https://docs.oracle.com/javase/specs/jls/se8/html/jls-7.html#jls-7.4.2)*) kavramına benzer. Diğer tüm modüllerin elbette isimleri vardır, dolayısıyla bundan sonra bunlara isimli modüller (*named module*) diyeceğiz.
+Paketi bilinen herhangi bir modülde <u>tanımlanmayan bir türün</u>, yüklenmesi için bir talepte bulunulursa, modül sistemi onu sınıf yolundan (*class path*) yüklemeye çalışacaktır. Bu başarılı olursa, her türün bir modülle ilişkili olmasını sağlamak için, tür, isimsiz modül (*unnamed module*) olarak bilinen özel bir modülün üyesi olarak kabul edilir. İsimsiz modül (*unnamed module*), yüksek düzeyde, mevcut olan isimsiz paket (*[unnamed package](https://docs.oracle.com/javase/specs/jls/se8/html/jls-7.html#jls-7.4.2)*) kavramına benzer. Diğer tüm modüllerin elbette isimleri vardır, dolayısıyla bundan sonra bunlara isimli/adlandırılmış modüller (*named module*) diyeceğiz.
 
-*unnamed* modül diğer tüm modülleri okur. Sınıf yolundan (*class path*’den) yüklenen herhangi bir türdeki kod, böylece diğer tüm okunabilir modüllerin dışa aktarılan (*exported*) türlerine erişebilecektir; bunlar varsayılan olarak tüm *named* yerleşik platform modüllerini içerecektir. Bu nedenle, Java SE 8 üzerinde derleyen ve çalışan mevcut bir sınıf yolu (*class-path*) uygulaması, yalnızca standart, kullanımdan kaldırılmamış (*non-deprecated*) Java SE API'lerini kullandığı sürece Java SE 9 üzerinde tam olarak aynı şekilde derlenecek ve çalışacaktır.
+<u>İsimsiz modül (<em>unnamed module</em>) diğer tüm modülleri okur</u>. Sınıf yolundan (*class path*’den) yüklenen herhangi bir türdeki kod, böylece diğer tüm okunabilir modüllerin dışa aktarılan (*export* edilen) türlerine erişebilecektir; bunlar varsayılan olarak tüm adlandırılmış (*named*) yerleşik platform modüllerini içerecektir. Bu nedenle, Java SE 8 üzerinde derlenen ve çalışan mevcut bir sınıf yolu (*class-path*) uygulaması, yalnızca standart, kullanımdan kaldırılmamış (*non-deprecated*) Java SE API'lerini kullandığı sürece Java SE 9 üzerinde tam olarak aynı şekilde derlenecek ve çalışacaktır.
 
-*unnamed* modül tüm paketlerini dışa aktarır (*export* eder). Bu, aşağıda göreceğimiz gibi esnek migrasyona/taşıma (*flexible migration*) olanak sağlar. Ancak bu, *named* modülündeki kodun *unnamed* modülündeki türlere erişebileceği anlamına gelmez. Aslında bir *named* modülü, *unnamed* modülüne bağımlılık bile beyan edemez. Bu kısıtlama kasıtlıdır, çünkü *named* modüllerinin sınıf yolunun (*class path*) keyfi içeriğine bağlı/bağımlı olmasına izin vermek <u>güvenilir konfigürasyonu</u> (*reliable configuration*) imkansız hale getirecektir.
+<u>İsimsiz modül (<em>unnamed module</em>) tüm paketlerini dışa aktarır</u> (*export* eder). Bu, aşağıda göreceğimiz gibi esnek migrasyona/taşımaya (*flexible migration*) olanak sağlar. Ancak bu, adlandırılmış modüldeki (*named module*) kodun adlandırılmamış modüldeki (*unnamed module*) türlere erişebileceği anlamına gelmez. Aslında bir adlandırılmış modül (*named module*), adlandırılmamış bir modüle (*unnamed module*) bağımlılık bile beyan edemez. <u>Bu kısıtlama kasıtlıdır</u>, çünkü adlandırılmış modüllerin (*named module*), sınıf yolunun (*class path*'in) keyfi içeriğine bağlı/bağımlı olmasına izin vermek, <u>güvenilir konfigürasyonu</u> (*reliable configuration*) imkansız hale getirecektir.
 
-Bir paket hem *named* modülde hem de *unnamed* modülde tanımlanmışsa, *unnamed* modüldeki paket dikkate alınmaz. Bu, sınıf yolunun (*class-path*’in) kaosu karşısında bile <u>güvenilir yapılandırmayı</u> (*reliable configuration*) korur, hâlâ her modülün belirli/verilen bir paketi tanımlayan en fazla bir modülü okumasını sağlar. Yukarıdaki örneğimizde, sınıf yolundaki (*class-path*’deki) bir JAR dosyası, `com/foo/bar/alpha/AlphaFactory.class` adında bir sınıf (*class*) dosyası içeriyorsa, `com.foo.bar.alpha` paketi `com.foo.bar` modülü tarafından dışa aktarıldığından (yani `export` edildiğinden) bu dosya hiçbir zaman yüklenmeyecektir.
+Bir paket hem adlandırılmış (*named*) modülde hem de adlandırılmamış (*unnamed*) modülde tanımlanmışsa, adlandırılmamış (*unnamed*) modüldeki paket <u>dikkate alınmaz</u>. Bu, hâlâ her modülün belirli bir paketi tanımlayan en fazla bir modülü okumasını sağlarken, sınıf yolunun (*class-path*’in) kaosu karşısında bile <u>güvenilir yapılandırmayı</u> (*reliable configuration*) korur. Yukarıdaki örneğimizde, sınıf yolundaki (*class-path*’deki) bir JAR dosyası, `com/foo/bar/alpha/AlphaFactory.class` adında bir sınıf (*class*) dosyası içeriyorsa, `com.foo.bar.alpha` paketi `com.foo.bar` modülü tarafından dışa aktarıldığından (yani `export` edildiğinden), bu dosya hiçbir zaman yüklenmeyecektir.
 
 ### 3.2 Bottom-up migration (aşağıdan yukarı migrasyon/taşıma)
 
-Sınıf yolundan (*class-path*’den) yüklenen türlerin *unnamed* modülün üyeleri olarak işlenmesi, mevcut bir uygulamanın bileşenlerini JAR dosyalarından modüllere inkremental, <u>aşağıdan-yukarı</u> (*bottom-up* fashion) bir şekilde taşımamıza (*migrate*) olanak tanır.
+Sınıf yolundan (*class-path*’den) yüklenen türlerin adlandırılmamış modülün (*unnamed module*) üyeleri olarak ele alınması/işlenmesi, mevcut bir uygulamanın bileşenlerini, JAR dosyalarından modüllere inkremental, (yani) <u>aşağıdan-yukarı</u> (*bottom-up* fashion) bir şekilde taşımamıza (*migrate*) olanak tanır.
 
-Örneğin, yukarıda gösterilen uygulamanın başlangıçta Java SE 8 için, sınıf yoluna (*class path*) yerleştirilen bir dizi benzer şekilde adlandırılmış JAR dosyaları olarak oluşturulduğunu varsayalım. Eğer bunu Java SE 9'da olduğu gibi çalıştırırsak, JAR dosyalarındaki türler *unnamed* modülde tanımlanacaktır. Bu modül, tüm yerleşik platform modülleri de dahil olmak üzere diğer tüm modülleri okuyacaktır; Basitlik açısından, bunların daha önce gösterilen `java.sql`, `java.xml`, `java.logging` ve `java.base` modülleriyle sınırlı olduğunu varsayalım. Böylece modül grafiğini elde ederiz:
+Örneğin, yukarıda gösterilen uygulamanın başlangıçta Java SE 8 için, sınıf yoluna (*class path*) yerleştirilen bir dizi benzer şekilde adlandırılmış JAR dosyaları olarak oluşturulduğunu varsayalım. Eğer bunu, Java SE 9'da olduğu gibi çalıştırırsak, JAR dosyalarındaki türler, adlandırılmamış modülde (*unnamed module*) tanımlanacaktır. Bu modül, tüm yerleşik platform modülleri de dahil olmak üzere diğer tüm modülleri okuyacaktır; Basitlik açısından, bunların daha önce gösterilen `java.sql`, `java.xml`, `java.logging` ve `java.base` modülleriyle sınırlı olduğunu varsayalım. Böylece (aşağıdaki) modül grafiğini elde ederiz:
 
-<br/>{% picture 2023-12-28-java-module-system/module-4.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-4.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) --img width="100%" height="100%" %}<br/>
 
 `org-baz-qux.jar`’ı hemen *named* bir modüle dönüştürebiliriz, çünkü onun diğer iki JAR dosyasındaki herhangi bir türe başvuruda bulunmadığını biliyoruz, bu nedenle *named* bir modül olarak *unnamed* modülde geride bırakılacak türlerin hiçbirine başvuruda/atıfta bulunmayacaktır. (Bunu tesadüfen de olsa orijinal örnekten biliyoruz, ancak zaten bilmiyorsak, **[jdeps](https://docs.oracle.com/en/java/javase/11/tools/jdeps.html)** gibi bir araç yardımıyla keşfedebiliriz. ) `org.baz.qux` için bir modül deklarasyonu yazıyoruz, bunu modülün kaynak koduna ekliyoruz, derliyoruz ve sonucu modüler bir JAR dosyası olarak paketliyoruz. Daha sonra o JAR dosyasını modül yoluna (*module path*) yerleştirirsek ve diğerlerini sınıf yolunda (*class path*) bırakırsak, geliştirilmiş modül grafiğini elde ederiz.
 
-<br/>{% picture 2023-12-28-java-module-system/module-5.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-5.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) --img width="100%" height="100%" %}<br/>
 
 `com-foo-bar.jar` ve `com-foo-app.jar` içindeki kod çalışmaya devam ediyor çünkü *unnamed* modül, artık yeni `org.baz.qux` modülünü de içeren her *named* modülü okuyor.
 
 `com-foo-bar.jar`'ı ve ardından `com-foo-app.jar`'ı modüler hale getirmek için benzer şekilde ilerleyebiliriz, sonunda daha önce gösterilerek amaçlanan modül grafiği elde edilir:
 
-<br/>{% picture 2023-12-28-java-module-system/module-6.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-6.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) --img width="100%" height="100%" %}<br/>
 
 Orijinal JAR dosyalarındaki türler hakkında ne yaptığımızı bilerek, elbette üçünü de tek bir adımda modüler hale getirebiliriz. Bununla birlikte, `org-baz-qux.jar` bağımsız olarak, belki de tamamen farklı bir ekip veya organizasyon tarafından korunursa, o zaman diğer iki bileşenden önce modüler hale getirilebilir ve aynı şekilde `com-foo-bar.jar`, `com-foo-app.jar`’dan önce modüler hale getirilebilir.
 
@@ -321,27 +323,27 @@ O halde bir şekilde `org-baz-qux.jar`’ın *named* bir modül olarak görünme
 
 Bunun yerine `org-baz-qux.jar`'ı, sınıf yolu (*class path*) yerine modül yoluna (*module path*) değiştirilmeden yerleştirerek otomatik bir modül (*automatic module*) olarak işleyebiliriz. Bu, adı `org.baz.qux` olan, JAR dosyasından türetilen bir gözlemlenebilir modül (*observable module*) tanımlayacaktır, böylece diğer otomatik olmayan modüller (*non-automatic modules*) alışılmış şekilde ona bağlı olabilir/bağlanabilir:
 
-<br/>{% picture 2023-12-28-java-module-system/module-7.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-7.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
 Bir otomatik modül (*automatic module*), bir modül deklarasyonuna sahip olmadığından örtülü (*implicitly*) olarak tanımlanan *named* bir modüldür. Bunun aksine, tipik bir *named* modül, bir modül bildirimiyle açıkça (*explicitly*) tanımlanır; bundan sonra bunlara **açık modüller** (*explicit modules*) olarak değineceğiz.
 
 Bir otomatik modülün (*automatic module*) hangi diğer modüllere bağlı olabileceğini önceden söylemenin pratik bir yolu yoktur. Bu nedenle, bir modül grafiği çözümlendikten sonra, ister otomatik (*automatic*) ister açık (*explicit*) olsun, diğer tüm *named* modülleri okumak için bir otomatik modül (*automatic module*) yapılır.
 
-<br/>{% picture 2023-12-28-java-module-system/module-8.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-8.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
 (Bu yeni okunabilirlik kenarları (*readability edges*) modül grafiğinde döngüler (*cycles*) yaratır ve bu da mantık yürütmeyi biraz daha zorlaştırır, ancak biz bunları daha esnek migrasyona/taşımaya (*more-flexible migration*) olanak sağlamanın tolere edilebilir ve genellikle geçici bir sonucu olarak görüyoruz.)
 
 Benzer şekilde, bir otomatik modüldeki (*automatic module*) paketlerden hangisinin diğer modüller tarafından veya hala sınıf yolunda (*class path*) bulunan sınıflar tarafından kullanılmak üzere tasarlandığını söylemenin pratik bir yolu yoktur. Bu nedenle, otomatik bir modüldeki (*automatic module*) her paket, gerçekte yalnızca dahili kullanım (*internal use*) için tasarlanmış olsa bile dışa aktarılmış (*export* edilmiş) olarak kabul edilir:
 
-<br/>{% picture 2023-12-28-java-module-system/module-9.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-9.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
 Son olarak, otomatik bir modüldeki (*automatic module*) dışa aktarılan (*export* edilen) paketlerden birinin, imzası başka bir otomatik modülde tanımlanan bir türe başvuruda bulunan bir tür içerip içermediğini söylemenin pratik bir yolu yoktur. Örneğin; önce `com.foo.app`’i modüler hale getirirsek ve hem `com.foo.bar` hem de `org.baz.qux`’u otomatik modüller (*automatic modules*) olarak işlersek/ele alırsak, o zaman aşağıdaki grafiği elde ederiz
 
-<br/>{% picture 2023-12-28-java-module-system/module-10.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-10.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
 Karşılık gelen her iki JAR dosyasındaki tüm sınıf dosyalarını okumadan, `com.foo.bar`’daki "`public`" bir türün, dönüş tipi `org.baz.qux`'ta tanımlanan "`public`" bir yöntemi bildirip bildirmediğini bilmek imkansızdır. Bu nedenle otomatik bir modül (*automatic module*), diğer tüm otomatik modüllere (*automatic module*) zımni/örtük okunabilirlik (*implied readability*) sağlar:
 
-<br/>{% picture 2023-12-28-java-module-system/module-11.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-11.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
 Artık `com.foo.app` içindeki kod `org.baz.qux` içindeki türlere erişebilir, ancak aslında öyle olmadığını biliyoruz.
 
@@ -353,7 +355,7 @@ Mevcut JAR dosyalarının çoğu otomatik modül (*automatic modules*) olarak ku
 
 Bazı JAR dosyaları otomatik modüller (*automatic modules*) olarak kullanılamadığında bile migrasyonu etkinleştirmek için, otomatik modüllerin (*automatic modules*) açık modüllerdeki (*explicit modules*) kod ile hâlâ sınıf yolunda (*class path*) bulunan kod arasında köprü görevi görmesini sağlıyoruz: Diğer tüm *named* modüllerin okunmasına ek olarak, *unnamed* modülün okunması için bir otomatik modül (*automatic module*) de yapılır. Uygulamamızın orijinal sınıf yolu (*class path*), örneğin, aynı zamanda `org-baz-fiz.jar` ve `org-baz-fuz.jar` JAR dosyalarını da içerseydi, o zaman (aşağıdaki) grafiğe sahip olurduk.
 
-<br/>{% picture 2023-12-28-java-module-system/module-12.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-12.png --alt Java'da Modül Sistemi - Bridges to the class path (sınıf yoluna köprüler) --img width="100%" height="100%" %}<br/>
 
 *unnamed* modül, daha önce de belirtildiği gibi tüm paketlerini dışa aktarır (*export* eder), böylece otomatik modüllerdeki (*automatic modules*) kod, sınıf yolundan (*class path*) yüklenen herhangi bir `public` türe erişebilecektir.
 
@@ -378,7 +380,7 @@ deklarasyonuna sahip gözlemlenebilir bir modülde (*observable module*) bir MyS
 
 `java.sql` modülünün bu sürücüyü (*driver*) kullanabilmesi için, `ServiceLoader` sınıfının sürücü (*driver*) sınıfını, yansıma (*reflection*) yoluyla başlatabilmesi (*instantiate* edebilmesi) gerekir; bunun gerçekleşmesi için modül sisteminin sürücü (*driver*) modülünü modül grafiğine eklemesi ve bağımlılıklarını çözmesi gerekir, böylece:
 
-<br/>{% picture 2023-12-28-java-module-system/module-13.png --alt Java'da Modül Sistemi --img width="100%" height="100%" %}<br/>
+<br/>{% picture 2023-12-28-java-module-system/module-13.png --alt Java'da Modül Sistemi - SERVICES (servisler/hizmetler) --img width="100%" height="100%" %}<br/>
 
 Bunu başarmak için modül sistemi, önceden-çözümlenmiş modüller aracılığıyla servislerin herhangi bir kullanımını (*uses of services*) tanımlayabilmeli ve ardından gözlemlenebilir modüller (*observable modules*) kümesi içinden sağlayıcıların (*providers*) yerini tespit edip, çözebilmelidir.
 
