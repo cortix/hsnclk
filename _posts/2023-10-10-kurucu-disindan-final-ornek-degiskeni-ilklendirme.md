@@ -42,5 +42,16 @@ Bu videoyu Java’da Hafıza Yönetim Serisinin bir parçası olarak düşünebi
 * Java'da final anahtar kelimesine sahip değişkenlerin ilklendirilmesiyle ilgili kararlar ne zaman verilir?
 * Java constant nedir? 
 
+<figure class="half">
+  <a href="https://youtu.be/h-MPSkUk414" >{% picture 2023-10-05-Java-statik-ilklendirici-1/java-static-initializer.png --alt Java'da Static Initializer nedir? (Java statik ilklendirici) Management %}</a>
+  <a href="https://youtu.be/TNsdmcYCckw" >{% picture 2023-10-06-Java-örnek-ilklendirici-2/java-instance-initializer.png --alt Java'da Instance Initializer Nedir? (Java örnek ilklendirici) Management %}</a>
+  <figcaption></figcaption>
+</figure>
 
+<figure class="third">
+  <a href="https://youtu.be/kJEaDx6dPWk" >{% picture 2023-10-07-Java-metot-yerine-ilklendirici-kullanmak-3/neden-initializer.png --alt Java'da BAZI Durumlarda Metot Yerine Initializer Kullanmak? Management %}</a>
+  <a href="https://youtu.be/1jdo_04jHI4" >{% picture 2023-10-08-Java-kurucudan-gecersiz-kilinan-metot-cagirma/efektif-java-item-19.jpg --alt Java'da Constructor İçinden Overridable Metot Çağrılır mı? - Efektif Java Kitabı Item 19'dan Bir Kesit %}</a>
+  <a href="https://youtu.be/eZg0rbJE_Os" >{% picture 2023-10-09-kurucu-disindan-non-final-ornek-degiskeni-ilklendirme/non-final-initialize.jpg --alt Java'da Constructor Dışından Non-final Örnek Değişkeni İlklendirme - Efektif Java Kitabı Item 19'dan Bir Kesit %}</a>
+  <figcaption></figcaption>
+</figure>
 

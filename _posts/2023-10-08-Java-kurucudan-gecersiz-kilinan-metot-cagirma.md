@@ -43,4 +43,15 @@ Bunun yanı sıra video içinde Robert C. Martin'in polimorfizm tanımı ve obje
 * NullPointerException hatasına bir örnek
 * Java'da Kurucu İçinden Geçersiz kılınabilen bir metot çağırmanın getirdiği riskler nelerdir? Joshua Bloch Efektif Java Kitabında bu duruma işaret ediyor.
 
+<figure class="half">
+  <a href="https://youtu.be/h-MPSkUk414" >{% picture 2023-10-05-Java-statik-ilklendirici-1/java-static-initializer.png --alt Java'da Static Initializer nedir? (Java statik ilklendirici) Management %}</a>
+  <a href="https://youtu.be/TNsdmcYCckw" >{% picture 2023-10-06-Java-örnek-ilklendirici-2/java-instance-initializer.png --alt Java'da Instance Initializer Nedir? (Java örnek ilklendirici) Management %}</a>
+  <figcaption></figcaption>
+</figure>
 
+<figure class="third">
+  <a href="https://youtu.be/kJEaDx6dPWk" >{% picture 2023-10-07-Java-metot-yerine-ilklendirici-kullanmak-3/neden-initializer.png --alt Java'da BAZI Durumlarda Metot Yerine Initializer Kullanmak? Management %}</a>
+  <a href="https://youtu.be/eZg0rbJE_Os" >{% picture 2023-10-09-kurucu-disindan-non-final-ornek-degiskeni-ilklendirme/non-final-initialize.jpg --alt Java'da Constructor Dışından Non-final Örnek Değişkeni İlklendirme - Efektif Java Kitabı Item 19'dan Bir Kesit %}</a>
+  <a href="https://www.youtube.com/watch?v=5LH2bZdnYE4" >{% picture 2023-10-10-kurucu-disindan-final-ornek-degiskeni-ilklendirme/final-initialize.jpg --alt Java'da Constructor Dışından Final Örnek Değişkeni İlklendirme - Efektif Java Kitabı Item 19'dan Bir Kesit %}</a>
+  <figcaption></figcaption>
+</figure>
