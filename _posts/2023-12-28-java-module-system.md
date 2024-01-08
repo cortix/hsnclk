@@ -101,7 +101,7 @@ Paket adları gibi modül adları da <u>çakışmamalıdır</u>. Bir modülü ad
 
 Bir modülün deklarasyonu bir sürüm dizesi (*version string*) içermediği gibi, bağlı olduğu modüllerin sürüm dizeleri üzerinde de kısıtlamalar içermez. <u>Bu kasıtlıdır:</u> sürüm-seçimi (*version-selection*) sorununu çözmek modül sisteminin [bir amacı değildir](https://openjdk.org/projects/jigsaw/spec/reqs/02#version-selection); bu sorunu inşa-araçları (*build tools*) ve konteyner (*container*) uygulamalarına bırakmak en iyisidir.
 
-Modül deklarasyonları çeşitli nedenlerden dolayı kendilerine ait bir dil veya notasyon/gösterim yerine Java programlama dilinin bir parçasıdır. En önemlilerinden biri, [fazlar arasında aslına uygunluğu](https://openjdk.org/projects/jigsaw/spec/reqs/02#fidelity-across-all-phases) (*fidelity across phases*) sağlamak için modül bilgilerinin hem derleme zamanında hem de çalışma zamanında mevcut olması gerektiğidir, başka bir deyişle, modül sisteminin hem derleme zamanında hem de çalışma zamanında aynı şekilde çalışmasını sağlamaktır. Bu da, birçok hata türünün önlenmesine veya en azından, teşhis edilmesi ve onarılması daha kolay olduğunda, daha erken - derleme zamanında - bildirilmesine olanak tanır.
+Modül deklarasyonları çeşitli nedenlerden dolayı kendilerine ait bir dil veya notasyon/gösterim yerine Java programlama dilinin bir parçasıdır. En önemlilerinden biri, [fazlar arasında aslına uygunluğu](https://openjdk.org/projects/jigsaw/spec/reqs/02#fidelity-across-all-phases) (*fidelity across phases*) sağlamak için modül bilgilerinin hem derleme zamanında hem de çalışma zamanında mevcut olması gerektiğidir, başka bir deyişle, modül sisteminin hem derleme zamanında hem de çalışma zamanında aynı şekilde çalışmasını sağlamaktır. Sonuç olarak bu, birçok hata türünün önlenmesine veya en azından, teşhis edilmesi ve onarılması daha kolay olduğunda, daha erken - derleme zamanında - bildirilmesine olanak tanır.
 
 Modül deklarasyonlarının, bir modüldeki diğer kaynak dosyalarla (*source files*) birlikte, Java sanal makinesinin tüketimi için bir sınıf dosyasına (*class file*) derlenen bir kaynak dosyada (*source file*) ifade edilmesi, aslına uygunluğu (*fidelity*) sağlamanın doğal yoludur. Bu yaklaşım geliştiricilere hemen tanıdık gelecek, ve IDE'ler ve inşa araçları (*build tools*) tarafından desteklenmesi zor olmayacaktır. Özellikle bir IDE, bileşenin proje açıklamasında (*component’s project description*) zaten mevcut olan bilgilerden `requires` cümlecikleri (*requires clauses*) sentezleyerek mevcut bir bileşen (*existing component*) için bir başlangıç modül (*initial module*) deklarasyonu önerebilir.
 
@@ -161,7 +161,7 @@ Bireysel modüller(*individual modules*), modül yapılarında (*module artifact
 
 Yapıtlarda (*artifacts*) tanımlanan modüllerin yerini saptamak için modül sistemi, ana sistem (*host system*) tarafından tanımlanan **modül yolunu** (*module path*) arar. Modül yolu, her bir öğesi ya bir modül yapıtı (*module artifact*) ya da modül yapıtlarını içeren bir dizin (*directory containing module artifacts*) olan bir dizidir (*sequence*). Modül yolunun elemanları, uygun bir modülü tanımlayan ilk artifact için sırayla aranır.
 
-Modül yolu (*module path*), sınıf yolundan (*class-path*) önemli ölçüde farklıdır ve daha sağlamdır. Sınıf yolunun (*class-path*) doğal kırılganlığı, artifektlerin kendi aralarında hiçbir ayrım yapmadan, yol üzerindeki (yani *path*’deki) tüm artifektlerde bireysel/farklı (*individual*) türleri bulmanın bir yöntemi olması gerçeğinden kaynaklanmaktadır. Bu, bir yapıtın (yani *artifact*’in) eksik olup olmadığını önceden söylemeyi imkansız hale getirir. Ayrıca, bu yapıtlar (*artifacts*) aynı mantıksal program bileşeninin farklı sürümlerini veya tamamen farklı bileşenleri temsil etse bile, farklı yapıtların (*different artifacts*) aynı paketlerdeki türleri tanımlamasına da olanak tanır.
+Modül yolu (*module path*), sınıf yolundan (*class-path*) önemli ölçüde farklıdır ve daha sağlamdır. Sınıf yolunun (*class-path*) doğal kırılganlığı, yol üzerindeki (yani *path*’deki) tüm artifektlerde bireysel türleri bulmanın bir aracı/yöntemi olmasından kaynaklanmaktadır, bu da eserlerin kendileri arasında ayrım yapmaz. Bu, bir yapıtın (yani *artifact*’in) eksik olup olmadığını önceden söylemeyi imkansız hale getirir. Ayrıca, bu yapıtlar (*artifacts*) aynı mantıksal program bileşeninin farklı sürümlerini veya tamamen farklı bileşenleri temsil etse bile, farklı yapıtların (*different artifacts*) aynı paketlerdeki türleri tanımlamasına da olanak tanır.
 
 Modül yolu (*module path*), aksine, bireysel türleri bulmak yerine tüm modüllerin yerini saptamanın bir yöntemidir. Modül sistemi, modül yolundan (*module path*) gelen bir yapıt (*artifact*) ile belirli bir bağımlılığı yerine getiremezse veya aynı dizinde aynı adı taşıyan modülleri tanımlayan iki yapıyla (*artifact*) karşılaşırsa, derleyici veya sanal makine bir hata bildirecek ve çıkış yapacaktır.
 
@@ -307,7 +307,7 @@ Sınıf yolundan (*class-path*’den) yüklenen türlerin adlandırılmamış mo
 
 Adlandırılmamış modül (*unnamed module*), artık yeni `org.baz.qux` modülünü de içeren her adlandırılmış modülü (*named module*) okuduğundan, `com-foo-bar.jar` ve `com-foo-app.jar` içindeki kod çalışmaya devam eder.
 
-`com-foo-bar.jar`'ı ve ardından `com-foo-app.jar`'ı modüler hale getirmek için benzer şekilde ilerleyebiliriz, sonunda daha önce gösterilen, "amaçlanan modül grafiği" elde edilir:
+`com-foo-bar.jar`'ı ve ardından `com-foo-app.jar`'ı modüler hale getirmek için benzer şekilde ilerleyebiliriz, bu da sonunda daha önce gösterilen "amaçlanan modül grafiği" ile sonuçlanır:
 
 <br/>{% picture 2023-12-28-java-module-system/module-6.png --alt Java'da Modül Sistemi - Bottom-up migration (aşağıdan yukarı migrasyon/taşıma) --img width="100%" height="100%" %}<br/>
 
@@ -315,33 +315,64 @@ Orijinal JAR dosyalarındaki türler hakkında ne yaptığımızı bilerek, elbe
 
 ### 3.3 Automatic modules (otomatik modüller)
 
-<u>Aşağıdan-yukarıya migrasyon/taşıma</u> (*bottom-up migration*) basittir, ancak her zaman mümkün değildir. `org-baz-qux.jar`’ın bakımcısı (*maintainer*) onu henüz uygun bir modüle dönüştürmemiş olsa bile (ya da belki hiçbir zaman dönüştürmeyecek) `com-foo-app.jar` ve `com-foo-bar.jar` bileşenlerimizi yine de modüler hale getirmek isteyebiliriz.
+<u>Aşağıdan-yukarıya migrasyon/taşıma</u> (*bottom-up migration*) basittir, ancak her zaman mümkün değildir. `org-baz-qux.jar`’ın geliştiricisi/bakımcısı (*maintainer*) onu henüz uygun bir modüle dönüştürmemiş olsa bile (ya da belki hiçbir zaman dönüştürmeyecek), biz, `com-foo-app.jar` ve `com-foo-bar.jar` bileşenlerimizi yine de modüler hale getirmek isteyebiliriz.
 
-`com-foo-bar.jar` içindeki kodun `org-baz-qux.jar` içindeki türlere başvuruda bulunduğunu zaten biliyoruz. `org-baz-qux.jar`’ı sınıf yolunda (*class path*) bırakır, `com-foo-bar.jar`’ı `com.foo.bar` adlı *named* modüle dönüştürürsek, fakat o zaman bu kod artık çalışmaz:  `org-baz-qux.jar` içindeki türler *unnamed* modülde tanımlanmaya devam edecek ancak *named* bir modül olan `com.foo.bar`, *unnamed* modüle bağımlılık bildiremez.
+<div class="notice--warning" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Benim notum :</h4>
+---
+Burada Mark Reinhold, `com-foo-app.jar` ve `com-foo-bar.jar`bileşenlerinin bizim tarafımızdan geliştirildiğini ama  `org-baz-qux.jar`'ının başka bir geliştiriciye ait olduğunu düşünmemizi istiyor. Böyle bir senaryoda, `org-baz-qux.jar`'ın geliştiricisi, bu projesini modüler hale getirmeye yanaşmayabilir.
 
-O halde bir şekilde `org-baz-qux.jar`’ın *named* bir modül olarak görünmesini ayarlamalıyız, böylece `com.foo.bar` ona bağlı olabilir. `org.baz.qux`’un kaynak kodunu çatallayabilir (*fork* edebilir) ve onu kendimiz modüler hale getirebiliriz, ancak eğer bakımcı (*maintainer*) bu değişikliği *upstream repository* ile birleştirmek istemezse, o zaman *fork*’a ihtiyacımız olduğu sürece onu korumak zorunda kalacağız.
+Biz ise kendi bileşenlerimiz olan `com-foo-app.jar` ve `com-foo-bar.jar`'ı modüler hale getirdiğimizde, haliyle bunları adlandırılmış modül (yani *named module*) haline getirmiş olacağız. Hatırlarsanız, adlandırılmış modülden (yani *named module*'den) adlandırılmamış modüle (yani *unnamed module*'e) bağımlılık bildiremiyorduk. Haliyle bu durum bir sorun teşkil ediyor.
+</div>
 
-Bunun yerine `org-baz-qux.jar`'ı, sınıf yolu (*class path*) yerine modül yoluna (*module path*) değiştirilmeden yerleştirerek otomatik bir modül (*automatic module*) olarak işleyebiliriz. Bu, adı `org.baz.qux` olan, JAR dosyasından türetilen bir gözlemlenebilir modül (*observable module*) tanımlayacaktır, böylece diğer otomatik olmayan modüller (*non-automatic modules*) alışılmış şekilde ona bağlı olabilir/bağlanabilir:
+
+`com-foo-bar.jar` içindeki kodun `org-baz-qux.jar` içindeki türlere başvuruda bulunduğunu zaten biliyoruz. `org-baz-qux.jar`’ı sınıf yolunda (*class path*) bırakır, `com-foo-bar.jar`’ı `com.foo.bar` adlı bir adlandırılmış modüle (*named module*) dönüştürürsek, ancak o zaman bu kod artık çalışmayacaktır:  `org-baz-qux.jar` içindeki türler, adlandırılmamış modülde (*unnamed module*) tanımlanmaya devam edecektir, ancak adlandırılmış bir modül (*named module*) olan `com.foo.bar`, adlandırılmamış modüle (*unnamed module*) bağımlılık bildiremez.
+
+O halde bir şekilde `org-baz-qux.jar`’ın adlandırılmış bir modül (*named module*) olarak görünmesini ayarlamalıyız, böylece `com.foo.bar` ona bağlı/bağımlı olabilir. `org.baz.qux`’un kaynak kodunu çatallayabilir (*fork* edebilir) ve onu kendimiz modüler hale getirebiliriz, ancak eğer geliştiricisi/bakımcısı (*maintainer*) (yani burada yazar, `org.baz.qux`’un geliştiricisini kastediyor) bu değişikliği *upstream repository* ile birleştirmek istemezse (*merge* etmek istemezse), o zaman bu *fork*’a ihtiyacımız olduğu sürece onun bakımını yapmak zorunda kalacağız.
+
+<div class="notice--warning" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Benim notum :</h4>
+---
+Mark Reinhold'un burada ne yaptığını anladığınızı düşünüyorum. Anlamayanlar için küçük bir özet geçmem gerekirse, Mark, `org.baz.qux`’un geliştiricisinin, bu projeyi modüler yapmaya yanaşmadığı bir senaryoda, projeyi (yani `org.baz.qux`) bizim çatallayabileceğimizi (yani fork edebileceğimizi) ve akabinde modüler hale getirebileceğimizi söylüyor.
+
+Belki sonrasında yaptığımız bu değişklikleri, `org.baz.qux`’un geliştiricise merge etmesi için gönderebiliriz. Yine kabul etmezse, çatalladığımız bu projenin bakımını, ona ihtiyacımız olduğu sürece yapmamız gerekeceğinden bahsediyor. Bu karşılaşacağımız senaryonun çözümlerinden sadece biri.
+</div>
+
+Bunun yerine `org-baz-qux.jar`'ı, sınıf yolu (*class path*) yerine modül yoluna (*module path*), değiştirilmeden yerleştirerek otomatik bir modül (*automatic module*) olarak işleyebiliriz/ele alabiliriz. Bu, diğer otomatik olmayan modüllerin (*non-automatic modules*) her zamanki gibi ona bağlı/bağımlı olabilmesi için, JAR dosyasından türetilen, adı `org.baz.qux` olan gözlemlenebilir bir modül (*observable module*) tanımlayacaktır:
 
 <br/>{% picture 2023-12-28-java-module-system/module-7.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
-Bir otomatik modül (*automatic module*), bir modül deklarasyonuna sahip olmadığından örtülü (*implicitly*) olarak tanımlanan *named* bir modüldür. Bunun aksine, tipik bir *named* modül, bir modül bildirimiyle açıkça (*explicitly*) tanımlanır; bundan sonra bunlara **açık modüller** (*explicit modules*) olarak değineceğiz.
+Bir otomatik modül (*automatic module*), bir modül deklarasyonuna (*module declaration*) sahip olmadığından örtülü (*implicitly*) olarak tanımlanan bir adlandırılmış modüldür (*named module*). Bunun aksine, tipik bir adlandırılmış modül (*named module*), bir modül bildirimiyle açıkça (*explicitly*) tanımlanır; bundan sonra bunlara **açık modüller** (*explicit modules*) olarak değineceğiz.
 
-Bir otomatik modülün (*automatic module*) hangi diğer modüllere bağlı olabileceğini önceden söylemenin pratik bir yolu yoktur. Bu nedenle, bir modül grafiği çözümlendikten sonra, ister otomatik (*automatic*) ister açık (*explicit*) olsun, diğer tüm *named* modülleri okumak için bir otomatik modül (*automatic module*) yapılır.
+<div class="notice--warning" markdown="1">
+<h4 class="no_toc"><i class="fas fa-lightbulb"></i> Benim notum :</h4>
+---
+Otomatik modüllerin modül deklarasyonuna sahip olmaması ile kastedilen, bu modüllerin, tipik adlandırılmış modüller gibi `module-info.java` dosyasına sahip olmadığıdır. Yukarıda da belirtildiği gibi ilgili jar dosyasını sınıf yolu yerine modül yoluna yerleştirmek, otomatik modül yapmak için yeterlidir.
+</div>
+
+Bir otomatik modülün (*automatic module*) diğer hangi modüllere bağlı/bağımlı olabileceğini önceden söylemenin pratik bir yolu yoktur. Bu nedenle, bir modül grafiği çözümlendikten sonra, ister otomatik (*automatic*) ister açık (*explicit*) olsun, diğer tüm adlandırılmış modülleri (*named modules*) okumak için bir otomatik modül (*automatic module*) yapılır.
 
 <br/>{% picture 2023-12-28-java-module-system/module-8.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
 (Bu yeni okunabilirlik kenarları (*readability edges*) modül grafiğinde döngüler (*cycles*) yaratır ve bu da mantık yürütmeyi biraz daha zorlaştırır, ancak biz bunları daha esnek migrasyona/taşımaya (*more-flexible migration*) olanak sağlamanın tolere edilebilir ve genellikle geçici bir sonucu olarak görüyoruz.)
 
-Benzer şekilde, bir otomatik modüldeki (*automatic module*) paketlerden hangisinin diğer modüller tarafından veya hala sınıf yolunda (*class path*) bulunan sınıflar tarafından kullanılmak üzere tasarlandığını söylemenin pratik bir yolu yoktur. Bu nedenle, otomatik bir modüldeki (*automatic module*) her paket, gerçekte yalnızca dahili kullanım (*internal use*) için tasarlanmış olsa bile dışa aktarılmış (*export* edilmiş) olarak kabul edilir:
+Benzer şekilde, bir otomatik modüldeki (*automatic module*) paketlerden hangisinin diğer modüller tarafından veya hala sınıf yolunda (*class path*) bulunan sınıflar tarafından kullanılmak üzere tasarlandığını söylemenin pratik bir yolu yoktur. Bu nedenle, otomatik bir modüldeki (*automatic module*) her paket, gerçekte yalnızca dahili kullanım (*internal use*) için tasarlanmış bile olsa dışa aktarılmış (*export* edilmiş) olarak kabul edilir:
 
 <br/>{% picture 2023-12-28-java-module-system/module-9.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
+
+<div class="notice--warning" markdown="1">
+  <h4 class="no_toc"><i class="fas fa-lightbulb"></i> Benim notum :</h4>
+  ---
+  Hatırlarsanız adlandırılmamış modüller de (*unnamed modules*) bütün paketlerini dışa aktarıyordu (yani *export* ediyordu). Benzer şekilde otomatik modüller de (*automatic module*) sahip oldukları bütün paketleri varsayılan olarak dışa aktarır(*export* eder). Yalnız ikisi arasındaki fark, adlandırılmış modüller (*named modules*), adlandırılmamış modüllere (*unnamed modules*) bağımlılık bildiremezken, otomatik modüller de bir adlandırılmış modül sayıldığı için, tipik bir adlandırılmış modül, otomatik modüllere bağımlılık bildirebilir.
+
+  Burada tipik bir adlandırılmış modülden kastedilen aslında açık modüllerdir (yani *explicit modules*). Çünkü açık modüllerin *modül deklarasyonlarını* bildirebileceği bir `module-info.java` dosyasına sahip olduğunu hatırlayalım. Bu dosya, adlandırılmış bir modül olmasına rağmen, otomatik modüllerde bulunmaz.
+</div>
 
 Son olarak, otomatik bir modüldeki (*automatic module*) dışa aktarılan (*export* edilen) paketlerden birinin, imzası başka bir otomatik modülde tanımlanan bir türe başvuruda bulunan bir tür içerip içermediğini söylemenin pratik bir yolu yoktur. Örneğin; önce `com.foo.app`’i modüler hale getirirsek ve hem `com.foo.bar` hem de `org.baz.qux`’u otomatik modüller (*automatic modules*) olarak işlersek/ele alırsak, o zaman aşağıdaki grafiği elde ederiz
 
 <br/>{% picture 2023-12-28-java-module-system/module-10.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
-Karşılık gelen her iki JAR dosyasındaki tüm sınıf dosyalarını okumadan, `com.foo.bar`’daki "`public`" bir türün, dönüş tipi `org.baz.qux`'ta tanımlanan "`public`" bir yöntemi bildirip bildirmediğini bilmek imkansızdır. Bu nedenle otomatik bir modül (*automatic module*), diğer tüm otomatik modüllere (*automatic module*) zımni/örtük okunabilirlik (*implied readability*) sağlar:
+Karşılık gelen her iki JAR dosyasındaki tüm sınıf dosyalarını okumadan, `com.foo.bar`’daki `public` bir türün, dönüş tipi `org.baz.qux`'ta tanımlanan `public` bir yöntemi bildirip bildirmediğini bilmek imkansızdır. Bu nedenle otomatik bir modül (*automatic module*), diğer tüm otomatik modüllere (*automatic module*) zımni/örtük okunabilirlik (*implied readability*) sağlar:
 
 <br/>{% picture 2023-12-28-java-module-system/module-11.png --alt Java'da Modül Sistemi - Automatic modules (otomatik modüller) --img width="100%" height="100%" %}<br/>
 
@@ -351,15 +382,15 @@ Otomatik modüller (*automatic modules*), sınıf yolunun (*class path*) kaosu i
 
 ### 3.4 Bridges to the class path (sınıf yoluna köprüler)
 
-Mevcut JAR dosyalarının çoğu otomatik modül (*automatic modules*) olarak kullanılabilir, ancak bazıları kullanılamaz. Sınıf yolundaki (*class path*) iki veya daha fazla "JAR dosyası" aynı pakette türler içeriyorsa, o zaman bunlardan en fazla biri otomatik bir modül (*automatic module*) olarak kullanılabilir, çünkü modül sistemi hâlâ, her *named* modülün belirli bir paketi tanımlayan en fazla bir *named* modülü okuduğunu ve benzer şekilde adlandırılmış/aynı isimli paketleri tanımlayan bu *named* modüllerin birbirine müdahale etmediğini garanti eder. Bu gibi durumlarda, genellikle JAR dosyalarından yalnızca birine gerçekten ihtiyaç duyulduğu ortaya çıkar. Eğer diğerleri kopya (*duplicates*) veya neredeyse kopya/taslak (*near-duplicates* buna *draft* denilebilir) ise ve bir şekilde yanlışlıkla sınıf yoluna (*class path*) yerleştirilmişse, o zaman biri otomatik modül (*automatic module*) olarak kullanılabilir ve diğerleri atılabilir. Bununla birlikte, sınıf yolundaki (*class path*) birden fazla JAR dosyası kasıtlı olarak aynı pakette tür içeriyorsa, o zaman bunların sınıf yolunda (*class path*) kalmaları gerekir.
+Mevcut JAR dosyalarının çoğu otomatik modül (*automatic modules*) olarak kullanılabilir, ancak bazıları kullanılamaz. Sınıf yolundaki (*class path*) iki veya daha fazla "JAR dosyası" aynı paketteki türleri içeriyorsa, o zaman bunlardan en fazla biri otomatik bir modül (*automatic module*) olarak kullanılabilir, çünkü modül sistemi hâlâ, her adlandırılmış modülün (*named module*) belirli bir paketi tanımlayan en fazla bir adlandırılmış modülü (*named module*) okuduğunu ve "benzer şekilde adlandırılmış/aynı isimli" paketleri tanımlayan bu adlandırılmış modüllerin (*named modules*) birbirine müdahale etmediğini garanti eder. Bu gibi durumlarda, genellikle JAR dosyalarından yalnızca birine gerçekten ihtiyaç duyulduğu ortaya çıkar. Eğer diğerleri kopya (*duplicates*) veya neredeyse kopya/taslak (*near-duplicates* buna *draft* da denilebilir) ise ve bir şekilde yanlışlıkla sınıf yoluna (*class path*) yerleştirilmişse, o zaman biri otomatik modül (*automatic module*) olarak kullanılabilir ve diğerleri atılabilir. Bununla birlikte, sınıf yolundaki (*class path*) birden fazla JAR dosyası kasıtlı olarak aynı pakette türler içeriyorsa, o zaman bunların sınıf yolunda (*class path*) kalmaları gerekir.
 
-Bazı JAR dosyaları otomatik modüller (*automatic modules*) olarak kullanılamadığında bile migrasyonu etkinleştirmek için, otomatik modüllerin (*automatic modules*) açık modüllerdeki (*explicit modules*) kod ile hâlâ sınıf yolunda (*class path*) bulunan kod arasında köprü görevi görmesini sağlıyoruz: Diğer tüm *named* modüllerin okunmasına ek olarak, *unnamed* modülün okunması için bir otomatik modül (*automatic module*) de yapılır. Uygulamamızın orijinal sınıf yolu (*class path*), örneğin, aynı zamanda `org-baz-fiz.jar` ve `org-baz-fuz.jar` JAR dosyalarını da içerseydi, o zaman (aşağıdaki) grafiğe sahip olurduk.
+Bazı JAR dosyaları otomatik modüller (*automatic modules*) olarak kullanılamadığında bile migrasyonu etkinleştirmek için, otomatik modüllerin (*automatic modules*) açık modüllerdeki (*explicit modules*) kod ile hâlâ sınıf yolunda (*class path*) bulunan kod arasında köprü görevi görmesini sağlıyoruz: Diğer tüm adlandırılmış modüllerin (*named modules*) okunmasına ek olarak, adlandırılmamış modülün (*unnamed module*) okunması için bir otomatik modül (*automatic module*) de yapılır. Uygulamamızın orijinal sınıf yolu (*class path*), örneğin, aynı zamanda `org-baz-fiz.jar` ve `org-baz-fuz.jar` JAR dosyalarını da içerseydi, o zaman (aşağıdaki) grafiğe sahip olurduk.
 
 <br/>{% picture 2023-12-28-java-module-system/module-12.png --alt Java'da Modül Sistemi - Bridges to the class path (sınıf yoluna köprüler) --img width="100%" height="100%" %}<br/>
 
-*unnamed* modül, daha önce de belirtildiği gibi tüm paketlerini dışa aktarır (*export* eder), böylece otomatik modüllerdeki (*automatic modules*) kod, sınıf yolundan (*class path*) yüklenen herhangi bir `public` türe erişebilecektir.
+Adlandırılmamış modül (*unnamed module*), daha önce de belirtildiği gibi tüm paketlerini dışa aktarır (*export* eder), böylece otomatik modüllerdeki (*automatic modules*) kod, sınıf yolundan (*class path*) yüklenen herhangi bir `public` türe erişebilecektir.
 
-Sınıf yolundaki (*class path*) türleri kullanan otomatik bir modül (*automatic module*), bu türleri ona bağlı olan açık modüllere (*explicit modules*) maruz bırakmamalıdır, çünkü açık (*explicit*) modüller *unnamed* modüle bağımlılık beyan edemez. Açık modül (*explicit module*) olan `com.foo.app`'teki kod, örneğin, `com.foo.bar`'daki `public` bir türe başvuruyorsa ve bu türün imzası, hala sınıf yolunda (*class path*’te) bulunan JAR dosyalarından birindeki bir türe atıfta/başvuruda bulunuyorsa, o zaman `com.foo.app`'teki kod bu türe erişemeyecektir, çünkü `com.foo.app` *unnamed* modüle bağımlı/bağlı olamaz. Bu durum, `com.foo.app`'in geçici olarak otomatik bir modül (*automatic module*) olarak ele alınmasıyla/işlenmesiyle giderilebilir, böylece kodu (`com.foo.app`’in kodu), sınıf yolundaki (*class path*’deki) ilgili JAR dosyası otomatik bir modül (*automatic module*) olarak ele alınıncaya veya açık bir modüle (*explicit module*) dönüştürülene kadar, sınıf yolundan (*class path*) türlere erişebilir.
+Sınıf yolundaki (*class path*) türleri kullanan otomatik bir modül (*automatic module*), bu türleri ona bağlı/bağımlı olan açık modüllere (*explicit modules*) maruz bırakmamalıdır, çünkü açık modüller (*explicit modules*), adlandırılmamış modüle (*unnamed module*) bağımlılık beyan edemez. Açık modül (*explicit module*) olan `com.foo.app`'teki kod, örneğin, `com.foo.bar`'daki `public` bir türe başvuruyorsa ve bu türün imzası, hala sınıf yolunda (*class path*’te) bulunan JAR dosyalarından birindeki bir türe atıfta/başvuruda bulunuyorsa, o zaman `com.foo.app`'teki kod bu türe erişemeyecektir, çünkü `com.foo.app` adlandırılmamış modüle (*unnamed module*) bağımlı/bağlı olamaz. Bu durum, `com.foo.app`'in geçici olarak otomatik bir modül (*automatic module*) olarak ele alınmasıyla/işlenmesiyle giderilebilir, böylece kodu (`com.foo.app`’in kodu), sınıf yolundaki (*class path*’deki) ilgili JAR dosyası otomatik bir modül (*automatic module*) olarak ele alınıncaya veya açık bir modüle (*explicit module*) dönüştürülene kadar, sınıf yolundan (*class path*) türlere erişebilir.
 
 ## 4 SERVICES (servisler/hizmetler)
 

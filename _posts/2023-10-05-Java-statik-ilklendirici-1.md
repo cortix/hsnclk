@@ -52,7 +52,17 @@ Java’da Hafıza Yönetim Serisinin önemli bir parçası olan statik ilklendir
 
 <br/>{% picture 2023-10-05-Java-statik-ilklendirici-1/java-static-initializer.png --alt Java'da Static Initializer nedir? (Java statik ilklendirici) Management --img width="100%" height="100%" --link https://youtu.be/h-MPSkUk414 %}<br/>
 
-Diğer videolara ulaşmak için aşağıdaki resimlere ya da bu [2](https://youtu.be/TNsdmcYCckw), [3](https://youtu.be/kJEaDx6dPWk) linklere tıklayabilirsiniz
+Diğer videolara ulaşmak için aşağıdaki resimlere ya da bu [2](https://youtu.be/TNsdmcYCckw), [3](https://youtu.be/kJEaDx6dPWk), [4](https://youtu.be/1jdo_04jHI4), [5](https://youtu.be/eZg0rbJE_Os), [6](https://www.youtube.com/watch?v=5LH2bZdnYE4) linklere tıklayabilirsiniz
 
-<br/>{% picture 2023-10-06-Java-örnek-ilklendirici-2/java-instance-initializer.png --alt Java'da Instance Initializer Nedir? (Java örnek ilklendirici) Management --img width="30%" height="30%" --link https://youtu.be/TNsdmcYCckw %}<br/>
-<br/>{% picture 2023-10-07-Java-metot-yerine-ilklendirici-kullanmak-3/neden-initializer.png --alt Java'da BAZI Durumlarda Metot Yerine Initializer Kullanmak? Management --img width="30%" height="30%" --link https://youtu.be/kJEaDx6dPWk %}<br/>
+<figure class="half">
+  <a href="https://youtu.be/TNsdmcYCckw" >{% picture 2023-10-06-Java-örnek-ilklendirici-2/java-instance-initializer.png --alt Java'da Instance Initializer Nedir? (Java örnek ilklendirici) Management %}</a>
+  <a href="https://youtu.be/kJEaDx6dPWk" >{% picture 2023-10-07-Java-metot-yerine-ilklendirici-kullanmak-3/neden-initializer.png --alt Java'da BAZI Durumlarda Metot Yerine Initializer Kullanmak? Management %}</a>
+  <figcaption></figcaption>
+</figure>
+
+<figure class="third">
+  <a href="https://youtu.be/1jdo_04jHI4" >{% picture 2023-10-08-Java-kurucudan-gecersiz-kilinan-metot-cagirma/efektif-java-item-19.jpg --alt Java'da Constructor İçinden Overridable Metot Çağrılır mı? - Efektif Java Kitabı Item 19'dan Bir Kesit %}</a>
+  <a href="https://youtu.be/eZg0rbJE_Os" >{% picture 2023-10-09-kurucu-disindan-non-final-ornek-degiskeni-ilklendirme/non-final-initialize.jpg --alt Java'da Constructor Dışından Non-final Örnek Değişkeni İlklendirme - Efektif Java Kitabı Item 19'dan Bir Kesit %}</a>
+  <a href="https://www.youtube.com/watch?v=5LH2bZdnYE4" >{% picture 2023-10-10-kurucu-disindan-final-ornek-degiskeni-ilklendirme/final-initialize.jpg --alt Java'da Constructor Dışından Final Örnek Değişkeni İlklendirme - Efektif Java Kitabı Item 19'dan Bir Kesit %}</a>
+  <figcaption></figcaption>
+</figure>
