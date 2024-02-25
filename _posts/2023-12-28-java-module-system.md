@@ -19,7 +19,7 @@ tags:
   - principle of least surprise
   - implied readability (requires transitive)
 #last_modified_at: 2023-01-06T15:12:19-04:00
-last_modified_at:
+last_modified_at: 2024-01-28T15:12:19-04:00
 toc: true
 toc_label: "SAYFA İÇERİĞİ"
 toc_sticky: true
@@ -407,7 +407,7 @@ module com.mysql.jdbc {
 }
 {% endhighlight %}
 
-deklarasyonuna sahip gözlemlenebilir bir modülde (*observable module*) bir MySQL JDBC sürücüsü (*driver*) sağlandığını varsayalım:  burada `org.slf4j`, sürücü (*driver*) tarafından kullanılan bir günlük tutma kütüphanesidir (*logging library*) ve `com.mysql.jdbc` ise, `java.sql.Driver` servis arayüzü (*service interface*) implementasyonunu içeren bir pakettir. (Sürücü (*driver*) paketini dışa aktarmak (*export* etmek) aslında gerekli değildir ancak bunu netlik sağlamak amacıyla burada yapıyoruz.)
+deklarasyonuna sahip gözlemlenebilir bir modülde (*observable module*), bir MySQL JDBC sürücüsünün (*driver*) sağlandığını varsayalım:  burada `org.slf4j`, sürücü (*driver*) tarafından kullanılan bir günlük tutma kütüphanesidir (*logging library*) ve `com.mysql.jdbc` ise, `java.sql.Driver` servis arayüzü (*service interface*) implementasyonunu içeren bir pakettir. (Sürücü (*driver*) paketini dışa aktarmak (*export* etmek) aslında gerekli değildir ancak bunu netlik sağlamak amacıyla burada yapıyoruz.)
 
 `java.sql` modülünün bu sürücüyü (*driver*) kullanabilmesi için, `ServiceLoader` sınıfının sürücü (*driver*) sınıfını, yansıma (*reflection*) yoluyla başlatabilmesi (*instantiate* edebilmesi) gerekir; bunun gerçekleşmesi için modül sisteminin sürücü (*driver*) modülünü modül grafiğine eklemesi ve bağımlılıklarını çözmesi gerekir, böylece:
 
