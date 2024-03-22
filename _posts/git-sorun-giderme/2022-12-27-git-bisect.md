@@ -3,20 +3,19 @@ title: "Git Sorun Giderme (Git Troubleshooting) Bölüm 2 - Git Bisect Kullanım
 comments: false
 excerpt: "Git bisect komutu nedir? Commit geçmişinizde hataya ilk neden olan taahhüdü(commit) nasıl bulunur?"
 header:
-  teaser: "/assets/images/svg-book22.svg"
-  og_image: /assets/images/svg-book22.svg
-  overlay_image: /assets/images/svg-book22.svg
+  teaser: "/assets/images/git-sorun-giderme/git.svg"
+  og_image: /assets/images/git-sorun-giderme/git.svg
+  overlay_image: /assets/images/git-sorun-giderme/git.svg
   overlay_color: "#000"
   overlay_filter: "0.3"
-  caption: "background by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)"
+  caption: "background by [git-scm.com](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg)"
 categories:
   - git-sorun-giderme
 tags:
   - git
   - git troubleshooting
   - git bisect
-#last_modified_at: 2023-01-06T15:12:19-04:00
-last_modified_at:
+last_modified_at: 2024-02-11T15:12:19-04:00
 toc: true
 toc_sticky: true
 toc_label: "SAYFA İÇERİĞİ"
